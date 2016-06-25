@@ -9,8 +9,8 @@
           = gettext "Check"
 
     p
-      | #{gettext "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."} 
+      | #{gettext "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "}
       = link gettext("Read more."), to: site_path(@conn, :about, @conn.assigns.locale)
 
     p
-      = gettext(~s|<em>Please note that this service is still under development. Some sites (sometimes) don't work; sometimes results are incorrect. We're working on it! <a href="mailto:info@dataskydd.net">Feedback</a> is appreciated.</em>|) |> raw
+      = gettext(~s|<em>Please note that this service is still under development. Some sites (sometimes) don't work; sometimes results are incorrect. We're working on it! <strong>Also note</strong> that the backend is currently running on only one server with very limited resources, so in case of usage spikes, waiting times can be long. (But you can <a href="https://github.com/andersju/webbkoll">run your own instance</a>!) <a href="mailto:info@dataskydd.net">Feedback</a> is appreciated.</em>|) |> raw

@@ -528,7 +528,7 @@ msgstr ""
 msgid "Read more."
 msgstr ""
 
-#: web/controllers/site_controller.ex:21 web/templates/site/index.html.slime:1
+#: web/controllers/site_controller.ex:21
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."
 msgstr ""
 
@@ -724,10 +724,6 @@ msgstr ""
 msgid "In modern web development, it’s become common for a website not to be run from only one location. When you visit a website, you’re not only entering into contact with those running the website, but also all the businesses and organisations which collaborate with the managers of the websites. These may be internet service providers, script providers, font providers, analytics tools providers and a range of other providers. If the manager of the websites hands over information about visitors to any of these third-parties, it is a form of gossiping since it is usually not evident to the visitors that this type of information is being handed over."
 msgstr ""
 
-#: web/templates/site/index.html.slime:1
-msgid "<em>Please note that this service is still under development. Some sites (sometimes) don't work; sometimes results are incorrect. We're working on it! <a href=\"mailto:info@dataskydd.net\">Feedback</a> is appreciated.</em>"
-msgstr ""
-
 #: web/templates/site/results.html.slime:1
 msgid "No third-party requests."
 msgstr ""
@@ -782,4 +778,12 @@ msgstr ""
 
 #: web/templates/site/tech.html.slime:1
 msgid "We don't provide an API as we have limited resources and PhantomJS is rather resource-intensive, but <a href=\"https://github.com/andersju/webbkoll\">the code is available</a> under the MIT license."
+msgstr ""
+
+#: web/templates/site/index.html.slime:1
+msgid "<em>Please note that this service is still under development. Some sites (sometimes) don't work; sometimes results are incorrect. We're working on it! <strong>Also note</strong> that the backend is currently running on only one server with very limited resources, so in case of usage spikes, waiting times can be long. (But you can <a href=\"https://github.com/andersju/webbkoll\">run your own instance</a>!) <a href=\"mailto:info@dataskydd.net\">Feedback</a> is appreciated.</em>"
+msgstr ""
+
+#: web/templates/site/index.html.slime:1
+msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
 msgstr ""
