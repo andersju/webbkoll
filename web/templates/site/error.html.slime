@@ -1,0 +1,5 @@
+section
+  h2
+    gettext "An error occurred"
+
+  p #{@error_message}

@@ -1,0 +1,6 @@
+source 'https://rubygems.org'
+
+gem 'faraday', '~>0.9.2'
+gem 'public_suffix', '~>1.5.3'
+gem 'nokogiri', '~>1.6.7'
+gem 'addressable', '~>2.4.0'

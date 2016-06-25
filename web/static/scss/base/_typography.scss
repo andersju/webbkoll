@@ -1,0 +1,108 @@
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: modular-scale(1);
+  font-weight: normal;
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
+}
+
+h1 {
+  font-size: modular-scale(4);
+}
+
+h2 {
+  font-size: modular-scale(3);
+}
+
+h3 {
+  font-size: modular-scale(2);
+}
+
+h4 {
+  font-size: modular-scale(1);
+}
+
+/*abbr {
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+}*/
+
+p,
+table,
+ul {
+  margin: 0 0 $paragraph-spacing;
+}
+
+span[title] {
+  border-bottom: 1px dotted;
+}
+
+pre {
+  max-width: 100%;
+  overflow-y: scroll;
+  padding: 1rem;
+}
+
+code {
+  //background-color: #e6e6e6;
+  //border: 1px solid #cacaca;
+  color: #0a0a0a;
+  font-family: $font-stack-code;
+  font-size: 0.9em;
+  hyphens: none;
+  page-break-inside: avoid;
+  //padding: .125rem .3125rem .0625rem;
+}
+
+em em {
+  font-style: normal;
+}
+
+@include media($mobile) {
+  h2 {
+    font-size: modular-scale(2);
+  }
+
+  h3 {
+    font-size: modular-scale(1);
+  }
+
+  p,
+  ul,
+  table td {
+    font-size: 16px;
+  }
+}
+
+a {
+  color: $action-color;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}

@@ -1,0 +1,1039 @@
+{
+    "content": "<!DOCTYPE html><html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"sv\" lang=\"sv\"><head><title>Foo</title></head>\n    <body>\n Foo</body></html>",
+    "cookies": [
+        {
+            "domain": "col001.ip-label.net",
+            "httponly": true,
+            "name": "ipltrack2",
+            "path": "/",
+            "secure": false,
+            "value": "3tvgrzrhw0t5nbwnzaxvin2y"
+        },
+        {
+            "domain": "sdc.example.com",
+            "expires": "Sun, 21 Jun 2026 00:42:57 GMT",
+            "expiry": 1782002577,
+            "httponly": false,
+            "name": "WEBTRENDS_ID",
+            "path": "/",
+            "secure": false,
+            "value": "89.159.95.161-805035984.30526696"
+        },
+        {
+            "domain": "statse.webtrendslive.com",
+            "expires": "Sat, 23 Jun 2018 00:42:57 GMT",
+            "expiry": 1529714577,
+            "httponly": true,
+            "name": "ACOOKIE",
+            "path": "/",
+            "secure": false,
+            "value": "C8ctADY1YjAyYzU2LTRiN2UtNDJjYy1iMTVkLTlkNzQwOGZhMmQ4NwAAAAABAAAAc4sBAJEwa1eRMGtXAQAAACBcAACRMGtXkTBrVwAAAAA-"
+        },
+        {
+            "domain": ".example.com",
+            "expires": "Sat, 23 Jun 2018 12:20:28 GMT",
+            "expiry": 1529756428,
+            "httponly": false,
+            "name": "WT_FPC",
+            "path": "/",
+            "secure": false,
+            "value": "id=65b02c56-4b7e-42cc-b15d-9d7408fa2d87:lv=1466638977653:ss=1466638977589"
+        },
+        {
+            "domain": ".example.com",
+            "httponly": false,
+            "name": "rdmvalidation",
+            "path": "/",
+            "secure": false,
+            "value": "1"
+        },
+        {
+            "domain": "www.example.com",
+            "expires": "Thu, 23 Jun 2016 00:44:57 GMT",
+            "expiry": 1466642697,
+            "httponly": false,
+            "name": "sitesterDelayId2102",
+            "path": "/",
+            "secure": false,
+            "value": "true"
+        },
+        {
+            "domain": "www.example.com",
+            "expires": "Thu, 23 Jun 2016 00:52:57 GMT",
+            "expiry": 1466643177,
+            "httponly": false,
+            "name": "sitesterActiveUserId2102",
+            "path": "/",
+            "secure": false,
+            "value": "true"
+        },
+        {
+            "domain": "www.example.com",
+            "httponly": false,
+            "name": "sitesterReferrer2102",
+            "path": "/",
+            "secure": false,
+            "value": ""
+        },
+        {
+            "domain": "www.example.com",
+            "httponly": false,
+            "name": "sitesterNth2102",
+            "path": "/",
+            "secure": false,
+            "value": "true"
+        },
+        {
+            "domain": ".example.com",
+            "expires": "Thu, 22 Dec 2016 12:42:56 GMT",
+            "expiry": 1482410576,
+            "httponly": false,
+            "name": "__utmz",
+            "path": "/",
+            "secure": false,
+            "value": "38636001.1466642577.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)"
+        },
+        {
+            "domain": ".example.com",
+            "httponly": false,
+            "name": "__utmc",
+            "path": "/",
+            "secure": false,
+            "value": "38636001"
+        },
+        {
+            "domain": ".example.com",
+            "expires": "Thu, 23 Jun 2016 01:12:56 GMT",
+            "expiry": 1466644376,
+            "httponly": false,
+            "name": "__utmb",
+            "path": "/",
+            "secure": false,
+            "value": "38636001.1.10.1466642577"
+        },
+        {
+            "domain": ".example.com",
+            "expires": "Sat, 23 Jun 2018 00:42:56 GMT",
+            "expiry": 1529714576,
+            "httponly": false,
+            "name": "__utma",
+            "path": "/",
+            "secure": false,
+            "value": "38636001.488789627.1466642577.1466642577.1466642577.1"
+        },
+        {
+            "domain": ".example.com",
+            "expires": "Thu, 23 Jun 2016 00:52:56 GMT",
+            "expiry": 1466643176,
+            "httponly": false,
+            "name": "__utmt",
+            "path": "/",
+            "secure": false,
+            "value": "1"
+        },
+        {
+            "domain": "www.example.com",
+            "httponly": false,
+            "name": "BIGipServerpool_www.example.com",
+            "path": "/",
+            "secure": false,
+            "value": "1155798956.20480.0000"
+        }
+    ],
+    "final_url": "http://www.example.com/",
+    "had_js_errors": false,
+    "input_url": "http://www.example.com",
+    "request_headers": {},
+    "requests": [
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 1,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.030Z",
+            "url": "http://www.example.com/"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "text/css,*/*;q=0.1"
+                },
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 2,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.472Z",
+            "url": "http://www.example.com/Web/Core/UI/Skins/Responsive/css/masternoie_4.6.13.0.css"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 3,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.473Z",
+            "url": "http://www.example.com/Web/Core/UI/Skins/Responsive/js/headskin_4.6.13.0.js"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 4,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.528Z",
+            "url": "https://cdn.example.com/js/SitesterSurvey_2102_se.min.js"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 5,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.528Z",
+            "url": "http://www.example.com/Web/Core/UI/js/clobs.js?id=stockholms_stad&i=9&v=1&20140303"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 6,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.528Z",
+            "url": "http://www.example.com/Web/Core/UI/Skins/Responsive/js/skin_4.6.13.0.js?tidsstampel=636011744410100000"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 7,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.600Z",
+            "url": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 8,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.600Z",
+            "url": "http://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 9,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.601Z",
+            "url": "http://www.google-analytics.com/ga.js"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 10,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.613Z",
+            "url": "http://www.example.com/Web/Core/UI/Skins/responsive/img/logo_print.png?version=4.6.13.0"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 11,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.614Z",
+            "url": "http://www.example.com/PageFiles/751740/stockholmsbyggnad%202016%20banner_340x960.jpg"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 12,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.614Z",
+            "url": "http://www.example.com/PageFiles/1238267/nyhetsbild_stjulian_sse_liten.png"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 13,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.614Z",
+            "url": "http://www.example.com/PageFiles/1236791/bilaga-306x200.jpg"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 14,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.614Z",
+            "url": "http://www.example.com/PageFiles/1235341/Biosalong306x200.jpg"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 15,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.615Z",
+            "url": "http://www.example.com/PageFiles/1240556/liten-puff-trygghet.jpg"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 16,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.615Z",
+            "url": "http://www.example.com/PageFiles/109228/_storaskuggan_Orion_small.gif"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 17,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.615Z",
+            "url": "http://www.example.com/PageFiles/1240193/Blomma306.jpg"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 18,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.615Z",
+            "url": "http://www.example.com/PageFiles/712880/stockholm_vaxer.png"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 19,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.615Z",
+            "url": "http://www.example.com/PageFiles/93800/beslut.gif"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 20,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.616Z",
+            "url": "http://www.example.com/PageFiles/100516/kalendarium.gif"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 21,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.616Z",
+            "url": "http://www.example.com/PageFiles/712950/for_foretagare.png"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 22,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.616Z",
+            "url": "http://www.example.com/PageFiles/712936/international.png"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 23,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.616Z",
+            "url": "http://www.example.com/PageFiles/450234/sign-language.png"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 24,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.616Z",
+            "url": "http://www.example.com/PageFiles/450234/listen.png"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 25,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.616Z",
+            "url": "http://www.example.com/PageFiles/450234/easy-read.png"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 26,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.617Z",
+            "url": "http://www.example.com/PageFiles/257708/01_finska.png"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 27,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.617Z",
+            "url": "http://www.example.com/PageFiles/257706/tycktill_banner.png"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 28,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.617Z",
+            "url": "http://www.example.com/Web/Core/UI/Skins/Standard2/img/Icons/Weather/Night_Overcast.png?version=4.6.13.0"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "text/css,*/*;q=0.1"
+                },
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 29,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.621Z",
+            "url": "http://www.example.com/Web/Core/UI/Skins/responsive/css/icons.data.svg.css?version=4.6.13.0"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "text/css,*/*;q=0.1"
+                },
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 30,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.677Z",
+            "url": "http://fonts.googleapis.com/css?family=Open+Sans:400italic,300,400,600&subset=latin"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "text/css,*/*;q=0.1"
+                },
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 31,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.678Z",
+            "url": "http://font.example.com/css/stockholm-type.css"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 32,
+            "method": "GET",
+            "time": "2016-06-23T00:42:56.918Z",
+            "url": "http://www.google-analytics.com/r/__utm.gif?utmwv=5.6.7&utms=1&utmn=862590499&utmhn=www.example.com&utmcs=UTF-8&utmsr=1024x768&utmvp=400x300&utmsc=32-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=Startsidan%20-%20example.com&utmhid=940775115&utmr=-&utmp=%2F&utmht=1466642576917&utmac=UA-13301983-1&utmcc=__utma%3D38636001.488789627.1466642577.1466642577.1466642577.1%3B%2B__utmz%3D38636001.1466642577.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=1108428306&utmredir=1&utmu=qACAAAAAAAAAAAAAAAAAAAAE~"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 48,
+            "method": "GET",
+            "time": "2016-06-23T00:42:57.371Z",
+            "url": "http://www.example.com/Web/Core/UI/js/minified/webtrends.min.js"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 50,
+            "method": "GET",
+            "time": "2016-06-23T00:42:57.411Z",
+            "url": "http://www.example.com/Web/Core/UI/Skins/responsive/img/logo_print.svg?version=4.6.13.0"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 51,
+            "method": "GET",
+            "time": "2016-06-23T00:42:57.412Z",
+            "url": "http://font.example.com/fonts/stockholm-type/StockholmType-Bold.woff"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 52,
+            "method": "GET",
+            "time": "2016-06-23T00:42:57.412Z",
+            "url": "http://font.example.com/fonts/stockholm-type/StockholmType-Regular.woff"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 53,
+            "method": "GET",
+            "time": "2016-06-23T00:42:57.433Z",
+            "url": "http://sdc.example.com/dcsggn6ew00000o69il7xxbb4_4g2d/wtid.js?callback=Webtrends.dcss.dcsobj_0.dcsGetIdCallback"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 54,
+            "method": "GET",
+            "time": "2016-06-23T00:42:57.434Z",
+            "url": "http://s.webtrends.com/js/webtrends.hm.min.js"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 55,
+            "method": "GET",
+            "time": "2016-06-23T00:42:57.434Z",
+            "url": "http://statse.webtrendslive.com/dcs222a6nl1cli42qla5ek6c8_7w4q/wtid.js?callback=Webtrends.dcss.dcsobj_1.dcsGetIdCallback"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 62,
+            "method": "GET",
+            "time": "2016-06-23T00:42:57.591Z",
+            "url": "http://statse.webtrendslive.com/dcs222a6nl1cli42qla5ek6c8_7w4q/dcs.gif?&dcsdat=1466642577588&dcssip=www.example.com&dcsuri=/&WT.tz=2&WT.bh=2&WT.ul=en-US&WT.cd=32&WT.sr=1024x768&WT.jo=No&WT.ti=example.com&WT.js=Yes&WT.jv=1.5&WT.ct=unknown&WT.bs=400x300&WT.fv=Not%2520enabled&WT.slv=Not%2520enabled&WT.le=iso-8859-1&WT.tv=10.4.1&WT.dl=0&WT.ssl=0&WT.es=www.example.com%252F&WT.cg_n=example.com&WT.cg_s=example.com&WT.ce=2&WT.vt_f_tlv=0&WT.vt_f_tlh=0&WT.vt_f_d=1&WT.vt_f_s=1&WT.vt_f_a=1&WT.vt_f=1&WT.vtvs=1466642577589&WT.vtid=65b02c56-4b7e-42cc-b15d-9d7408fa2d87&WT.co_f=65b02c56-4b7e-42cc-b15d-9d7408fa2d87&administration=Stadsledningskontoret&WT.dep=administration"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 63,
+            "method": "GET",
+            "time": "2016-06-23T00:42:57.634Z",
+            "url": "http://statse.webtrendslive.com/dcs222a6nl1cli42qla5ek6c8_7w4q/dcs.gif?dcsredirect=126&dcstlh=0&dcstlv=0&dcsdat=1466642577588&dcssip=www.example.com&dcsuri=/&WT.tz=2&WT.bh=2&WT.ul=en-US&WT.cd=32&WT.sr=1024x768&WT.jo=No&WT.ti=example.com&WT.js=Yes&WT.jv=1.5&WT.ct=unknown&WT.bs=400x300&WT.fv=Not%2520enabled&WT.slv=Not%2520enabled&WT.le=iso-8859-1&WT.tv=10.4.1&WT.dl=0&WT.ssl=0&WT.es=www.example.com%252F&WT.cg_n=example.com&WT.cg_s=example.com&WT.ce=2&WT.vt_f_tlv=0&WT.vt_f_tlh=0&WT.vt_f_d=1&WT.vt_f_s=1&WT.vt_f_a=1&WT.vt_f=1&WT.vtvs=1466642577589&WT.vtid=65b02c56-4b7e-42cc-b15d-9d7408fa2d87&WT.co_f=65b02c56-4b7e-42cc-b15d-9d7408fa2d87&administration=Stadsledningskontoret&WT.dep=administration"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 64,
+            "method": "GET",
+            "time": "2016-06-23T00:42:57.654Z",
+            "url": "http://sdc.example.com/dcsggn6ew00000o69il7xxbb4_4g2d/dcs.gif?&dcsdat=1466642577653&dcssip=www.example.com&dcsuri=/&WT.tz=2&WT.bh=2&WT.ul=en-US&WT.cd=32&WT.sr=1024x768&WT.jo=No&WT.ti=example.com&WT.js=Yes&WT.jv=1.5&WT.ct=unknown&WT.bs=400x300&WT.fv=Not%2520enabled&WT.slv=Not%2520enabled&WT.le=iso-8859-1&WT.tv=10.4.1&WT.dl=0&WT.ssl=0&WT.es=www.example.com%252F&WT.cg_n=example.com&WT.cg_s=example.com&WT.ce=2&WT.vt_f_tlh=1466642577&WT.vtvs=1466642577589&WT.vtid=65b02c56-4b7e-42cc-b15d-9d7408fa2d87&WT.co_f=65b02c56-4b7e-42cc-b15d-9d7408fa2d87&administration=Stadsledningskontoret&WT.dep=administration"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 65,
+            "method": "GET",
+            "time": "2016-06-23T00:42:57.760Z",
+            "url": "http://sdc.example.com/dcsggn6ew00000o69il7xxbb4_4g2d/dcs.gif?dcsredirect=1&dcsdat=1466642577653&dcssip=www.example.com&dcsuri=/&WT.tz=2&WT.bh=2&WT.ul=en-US&WT.cd=32&WT.sr=1024x768&WT.jo=No&WT.ti=example.com&WT.js=Yes&WT.jv=1.5&WT.ct=unknown&WT.bs=400x300&WT.fv=Not%2520enabled&WT.slv=Not%2520enabled&WT.le=iso-8859-1&WT.tv=10.4.1&WT.dl=0&WT.ssl=0&WT.es=www.example.com%252F&WT.cg_n=example.com&WT.cg_s=example.com&WT.ce=2&WT.vt_f_tlh=1466642577&WT.vtvs=1466642577589&WT.vtid=65b02c56-4b7e-42cc-b15d-9d7408fa2d87&WT.co_f=65b02c56-4b7e-42cc-b15d-9d7408fa2d87&administration=Stadsledningskontoret&WT.dep=administration"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Referer",
+                    "value": "http://www.example.com/"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 66,
+            "method": "GET",
+            "time": "2016-06-23T00:42:57.876Z",
+            "url": "http://col001.ip-label.net/Data/coll.aspx?uZRSgX3kvvBH15bI0AkRhN%2Blashl8ZR0aODh2FDA0uLOSKs1xrKtpjJ%2FpoiAmRBM5I5F1kyAWaVvMeTcjEI7gyxnfGW%2BWSjuCdb%2BDCG%2B12DZxVXTn%2BbUtW4ODNieroIuP6Z1YGjkGtQMZuHttWZXC54gYbGmk%2FD%2BK6Xbv%2F1LO0t%2Bni%2BlSepx2yzIPAISC0YRC6w8bTrZkmY%3D"
+        }
+    ],
+    "response_headers": {
+        "cache-control": "private",
+        "connection": "Keep-Alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Thu, 23 Jun 2016 00:42:55 GMT",
+        "expires": "Wed, 22 Jun 2016 00:42:56 GMT",
+        "m": "02",
+        "server": "Microsoft-IIS/7.5",
+        "set-cookie": "BIGipServerpool_www.example.com=1155798956.20480.0000; path=/",
+        "vary": "Accept-Encoding",
+        "x-powered-by": "ASP.NET"
+    },
+    "success": true
+}

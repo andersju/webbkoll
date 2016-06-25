@@ -1,0 +1,214 @@
+header.navigation {
+  $base-border-color: gainsboro !default;
+  $base-border-radius: 3px !default;
+  $action-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $large-screen: em(860) !default;
+  $navigation-padding: 1em;
+  $navigation-background: #353231; //5c5857
+  $navigation-color: transparentize(white, 0.3);
+  $navigation-color-hover: white;
+  $navigation-height: 60px;
+  $navigation-nav-button-background: $action-color;
+  $navigation-nav-button-background-hover: lighten($navigation-background, 10%);
+  $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20%);
+  $navigation-search-background: lighten($navigation-background, 5);
+  $navigation-search-border: 1px solid darken($navigation-background, 5);
+  $navigation-active-link-color: transparentize(white, 0.5);
+  $navigation-submenu-padding: 1em;
+  $navigation-submenu-width: 12em;
+
+  background-color: $navigation-background;
+  border-bottom: 1px solid darken($navigation-background, 10);
+  //flex-shrink: 0;
+  min-height: $navigation-height;
+  width: 100%;
+  z-index: 999;
+
+  .icon-eye-slash,
+  .icon-search {
+    color: $navigation-color;
+  }
+
+  .navigation-wrapper {
+    @include clearfix;
+    @include outer-container;
+    position: relative;
+    z-index: 9999;
+  }
+
+  // Nav menu
+
+  nav {
+    float: left;
+    min-height: $navigation-height;
+    padding-left: 0.5em;
+    z-index: 9999999;
+  }
+
+  ul.navigation-menu {
+    clear: both;
+    display: inline;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+
+  // The nav items
+
+  ul li.nav-link {
+    background: transparent;
+    display: inline;
+    line-height: $navigation-height;
+    overflow: hidden;
+    padding-right: 0.8em;
+    text-align: right;
+    text-decoration: none;
+    width: auto;
+    z-index: 9999;
+
+    a,
+    i {
+      color: $navigation-color;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      padding-right: 1em;
+
+      &:focus,
+      &:hover {
+        color: $navigation-color-hover;
+      }
+    }
+
+    &.logo a {
+      color: white;
+    }
+
+    .icon-eye-slash {
+      font-style: normal;
+      font-size: modular-scale(2);
+      padding-right: 0.5rem;
+      vertical-align: sub;
+    }
+  }
+
+  @include media($mobile) {
+    ul li.nav-link.logo {
+      display: block;
+    }
+  }
+
+  // Elements on the far right
+
+  .navigation-tools {
+    background: transparent;
+    clear: none;
+    display: block;
+    float: right;
+    height: $navigation-height;
+
+    @include media($mobile) {
+      float: none;
+    }
+  }
+
+  // Search bar
+
+  .search-bar {
+    $search-bar-border-color: $base-border-color;
+    $search-bar-border: 1px solid $search-bar-border-color;
+    $search-bar-background: lighten($search-bar-border-color, 10%);
+
+    display: inline-block;
+    float: left;
+    padding: 0.6em 0.5em 0.7em 0.6em;
+    position: relative;
+    width: 16em;
+
+    input {
+      box-sizing: border-box;
+      display: block;
+    }
+
+    form {
+      position: relative;
+
+      input[type=search] {
+        background: $navigation-search-background;
+        border: $navigation-search-border;
+        border-radius: $base-border-radius * 2;
+        box-sizing: border-box;
+        color: $navigation-color;
+        font-size: 0.9em;
+        font-style: italic;
+        margin: 0;
+        padding: 0.5em 0.8em;
+        width: 100%;
+      }
+
+      button[type=submit] {
+        background: $navigation-search-background;
+        border: none;
+        bottom: 0.3em;
+        left: auto;
+        outline: none;
+        padding: 0 9px;
+        position: absolute;
+        right: 0.3em;
+        top: 0.3em;
+      }
+    }
+  }
+}
+
+form.search-bar {  
+  @include span-columns(6);
+  @include shift(3);
+
+  @include media($mobile) {
+    @include span-columns(4);
+    @include shift(0);
+  }
+  ///////////////////////////////////////////////////////////////////////////////////
+  $base-spacing: 1.5em !default;
+  $base-border-color: gainsboro !default;
+  $base-line-height: 1.5em !default;
+  //////////////////////////////////////////////////////////////////////////////////
+
+  $search-bar-border-color: $base-border-color;
+  $search-bar-border: 1px solid $search-bar-border-color;
+  $search-bar-background: lighten($search-bar-border-color, 10%);
+
+  position: relative;
+
+  input[type=search] {
+    @include appearance(none);
+    @include transition(border-color);
+    background-color: white;
+    border: 1px solid $base-border-color;
+    box-sizing: border-box;
+    display: block;
+    font-size: 1em;
+    font-style: italic;
+    margin: 0;
+    padding: ($base-spacing / 3) ($base-spacing / 3);
+    position: relative;
+    width: 100%;
+  }
+
+  button[type=submit] {
+    @include position(absolute, 0em 0em 0em null);
+    outline: none;
+    padding: 5px 10px;
+
+    img {
+      height: 12px;
+      opacity: 0.7;
+    }
+  }
+}

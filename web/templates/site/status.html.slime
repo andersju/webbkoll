@@ -1,0 +1,20 @@
+section
+  h2
+    = gettext "Hang tight..."
+
+  p
+    img src="/images/ajax-loader.gif"
+
+  ul
+    li
+      strong>
+        gettext "ID:"
+      = @site.id
+    li
+      strong>
+        = gettext "Input URL:"
+      = @site.input_url
+    li
+      strong>
+        = gettext "Status:"
+      = @site.status

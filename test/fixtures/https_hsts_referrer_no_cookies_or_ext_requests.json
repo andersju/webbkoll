@@ -1,0 +1,122 @@
+{
+    "content": "<!DOCTYPE html><html lang=\"en-US\"><head>\n\t<meta charset=\"UTF-8\">\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\t<meta name=\"referrer\" content=\"never\">\n\t<meta name=\"description\" content=\"Foobar.\">\n\t<title>Testing testing</title>\n\t<link rel=\"stylesheet\" href=\"https://example.com/css/style.css\">\n\t\n</head>\n\n<body>\n\nFoo\n\n</body></html>",
+    "cookies": [],
+    "final_url": "https://example.com/",
+    "had_js_errors": false,
+    "input_url": "http://example.com/",
+    "request_headers": {},
+    "requests": [
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 1,
+            "method": "GET",
+            "time": "2016-06-22T15:42:13.698Z",
+            "url": "http://example.com/"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 2,
+            "method": "GET",
+            "time": "2016-06-22T15:42:13.962Z",
+            "url": "https://example.com/"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "text/css,*/*;q=0.1"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 3,
+            "method": "GET",
+            "time": "2016-06-22T15:42:14.081Z",
+            "url": "https://example.com/css/hedera.css?v=l1462329463"
+        },
+        {
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 4,
+            "method": "GET",
+            "time": "2016-06-22T15:42:14.295Z",
+            "url": "https://example.com/fonts/ebgaramond12-regular-webfont.woff"
+        },
+        {
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 5,
+            "method": "GET",
+            "time": "2016-06-22T15:42:14.296Z",
+            "url": "https://example.com/fonts/ebgaramondsc12-regular-webfont.woff"
+        },
+        {
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                }
+            ],
+            "id": 6,
+            "method": "GET",
+            "time": "2016-06-22T15:42:14.296Z",
+            "url": "https://example.com/fonts/ebgaramond12-italic-webfont.woff"
+        }
+    ],
+    "response_headers": {
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-security-policy": "default-src 'self'",
+        "content-type": "text/html",
+        "date": "Wed, 22 Jun 2016 15:42:14 GMT",
+        "last-modified": "Wed, 04 May 2016 02:37:43 GMT",
+        "server": "nginx",
+        "strict-transport-security": "max-age=10886400; includeSubDomains; preload",
+        "transfer-encoding": "chunked",
+        "vary": "Accept-Encoding",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "x-xss-protection": "1; mode=block"
+    },
+    "success": true
+}

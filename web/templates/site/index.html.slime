@@ -1,0 +1,16 @@
+.index-search
+  section
+    h1
+      = gettext "How privacy-friendly is your site?"
+
+    form.search-bar role="search" method="get" action="/#{@conn.assigns.locale}/check"
+        input name="url" type="search" required=true placeholder="http://www.example.com/" aria-describedby="urlHelpText"
+        button type="submit"
+          = gettext "Check"
+
+    p
+      | #{gettext "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."} 
+      = link gettext("Read more."), to: site_path(@conn, :about, @conn.assigns.locale)
+
+    p
+      = gettext(~s|<em>Please note that this service is still under development. Some sites (sometimes) don't work; sometimes results are incorrect. We're working on it! <a href="mailto:info@dataskydd.net">Feedback</a> is appreciated.</em>|) |> raw

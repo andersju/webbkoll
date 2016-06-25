@@ -1,0 +1,36 @@
+/ TODO: Move logic to helper?
+
+.header-item.heading
+  .alpha
+    = gettext "Header"
+  .beta
+    = gettext "Set?"
+
+= for {header, description} <- headers_to_check do
+  .header-item
+    .alpha
+      | #{header}
+    .beta
+      = if @headers[String.downcase(header)] do
+        = if header == "Strict-Transport-Security" and @headers[String.downcase(header)] =~ ~r/max-age=0/i do
+          span
+            i> class="icon-times"
+            = gettext "NO, header is set to"
+            code<
+              = @headers[String.downcase(header)]
+            = gettext "which disables HSTS"
+        - else
+          span
+            i> class="icon-check"
+            = gettext "YES,"
+            code<
+              = @headers[String.downcase(header)]
+          = if header == "Content-Security-Policy" and @headers[String.downcase(header)] =~ ~r/unsafe/i do
+            p
+              = gettext "However, unsafe attributes are used."
+      - else
+        span
+          i> class="icon-times"
+          = gettext "NO"
+      p
+        = raw(description)

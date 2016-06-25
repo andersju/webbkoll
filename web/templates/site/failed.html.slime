@@ -1,0 +1,12 @@
+section
+  h2
+    = gettext "Failed"
+
+  p
+    = gettext "Processing %{url} failed at %{time}.", url: @site.input_url, time: @site.updated_at
+
+  p
+    = gettext "Error: %{error_message}", error_message: @site.status_message
+
+  p
+    = link gettext("Try again?"), to: site_path(@conn, :check, @conn.assigns.locale, url: @site.input_url, refresh: "on")

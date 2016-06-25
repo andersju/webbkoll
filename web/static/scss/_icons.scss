@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'icomoon';
+    src:    url('../fonts/icomoon.eot?m4725m');
+    src:    url('../fonts/icomoon.eot?m4725m#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?m4725m') format('truetype'),
+        url('../fonts/icomoon.woff?m4725m') format('woff'),
+        url('../fonts/icomoon.svg?m4725m#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+    content: "\f002";
+}
+.icon-check:before {
+    content: "\f00c";
+}
+.icon-close:before {
+    content: "\f00d";
+}
+.icon-remove:before {
+    content: "\f00d";
+}
+.icon-times:before {
+    content: "\f00d";
+}
+.icon-clock-o:before {
+    content: "\f017";
+}
+.icon-refresh:before {
+    content: "\f021";
+}
+.icon-lock:before {
+    content: "\f023";
+}
+.icon-flag:before {
+    content: "\f024";
+}
+.icon-eye-slash:before {
+    content: "\f070";
+}
+.icon-unlock-alt:before {
+    content: "\f13e";
+}
+.icon-umbrella2:before {
+    content: "\e903";
+}
+.icon-raindrops2:before {
+    content: "\e905";
+}
+

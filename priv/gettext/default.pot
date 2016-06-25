@@ -1,0 +1,785 @@
+## This file is a PO Template file. `msgid`s here are often extracted from
+## source code; add new translations manually only if they're dynamic
+## translations that can't be statically extracted. Run `mix
+## gettext.extract` to bring this file up to date. Leave `msgstr`s empty as
+## changing them here as no effect; edit them in PO (`.po`) files instead.
+#: web/templates/site/index.html.slime:1
+msgid "Check"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "%{count} insecure"
+msgid_plural "%{count} insecure"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/templates/site/results.html.slime:1
+msgid "1 secure"
+msgid_plural "%{count} secure"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Cookie"
+msgid_plural "Cookies"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Third-party request"
+msgid_plural "Third-party requests"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/templates/site/results.html.slime:1
+msgid "host"
+msgid_plural "hosts"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/templates/site/results.html.slime:1
+msgid "request"
+msgid_plural "requests"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/templates/site/results.html.slime:1
+msgid "unique"
+msgid_plural "unique"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/templates/site/results.html.slime:1
+msgid "...but it's not fully secure"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Check again"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Classification"
+msgstr ""
+
+#: web/templates/layout/app.html.slime:1
+msgid "Developed by"
+msgstr ""
+
+#: web/templates/layout/app.html.slime:1
+msgid "Feedback? Questions? <a href=\"mailto:info@dataskydd.net\">info@dataskydd.net</a>"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "HTTP headers"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Insecure"
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:100
+msgid "Referrers leaked"
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:92
+msgid "Referrers not leaked"
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:96
+msgid "Referrers partially leaked"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Results for"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Secure"
+msgstr ""
+
+#: web/templates/layout/app.html.slime:1
+msgid "Test results are stored in our database for a week. We don't show a list of tested URLs. We don't use URLs or test results. We don't log accesses and we don't use cookies."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "We use Disconnect's <a href=\"%{url}\">open source list of trackers</a> to classify hosts."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "to"
+msgstr ""
+
+#: web/templates/layout/app.html.slime:1
+msgid "with funding from"
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:60
+msgid "Content Security Policy is an effective measure to protect your site from XSS attacks. By whitelisting sources of approved content, you can prevent the browser from loading malicious assets."
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:62
+msgid "HTTP Public Key Pinning protects your site from MiTM attacks using rogue X.509 certificates. By whitelisting only the identities that the browser should trust, your users are protected in the event a certificate authority is compromised."
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:58
+msgid "HTTP Strict Transport Security is an excellent feature to support on your site and strengthens your implementation of TLS by getting the User Agent to enforce the use of HTTPS."
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:68
+msgid "X-Content-Type-Options stops a browser from trying to MIME-sniff the content type and forces it to stick with the declared content-type. This helps to reduce the danger of drive-by downloads. The only valid value for this header is \"X-Content-Type-Options: nosniff\"."
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:64
+msgid "X-Frame-Options tells the browser whether you want to allow your site to be framed or not. By preventing a browser from framing your site you can defend against attacks like clickjacking."
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:66
+msgid "X-XSS-Protection sets the configuration for the cross-site scripting filters built into most browsers. The best configuration is \"X-XSS-Protection: 1; mode=block\"."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "<strong>One</strong> first-party cookie."
+msgid_plural "<strong>%{count}</strong> first-party cookies."
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/templates/site/results.html.slime:1
+msgid "<strong>One</strong> third-party cookie."
+msgid_plural "<strong>%{count}</strong> third-party cookies."
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/templates/site/results.html.slime:1
+msgid "The page loads one resource through insecure HTTP."
+msgid_plural "The page loads some resources through insecure HTTP."
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Third-party contacted"
+msgid_plural "Third-parties contacted"
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/templates/site/results.html.slime:1
+msgid "<code>%{domain}</code> does <strong>not</strong> use HTTPS by default."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "<code>%{domain}</code> uses HTTPS by default."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+#: web/templates/site/results.html.slime:1
+msgid "A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains."
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:36
+msgid "Consider a self-hosted platform."
+msgstr ""
+
+#: web/templates/site/failed.html.slime:1
+msgid "Failed"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+#: web/templates/site/results.html.slime:1
+msgid "First-party cookies"
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:46
+msgid "Fonts can easily be self-hosted. The tool <a href=\"https://google-webfonts-helper.herokuapp.com/fonts\">google-webfonts-helper</a> lets you select one or more fonts, generates the proper CSS and prepares a zip file with the fonts. For a command-line alternative, the shell script <a href=\"https://github.com/neverpanic/google-font-download\">google-font-download</a> provides similar functionality."
+msgstr ""
+
+#: web/templates/site/_headers.html.slime:1
+msgid "However, unsafe attributes are used."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Insecure connection"
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:51
+msgid "Install Piwik on your own server. It's easy to install and easy to upgrade."
+msgstr ""
+
+#: web/controllers/site_controller.ex:143
+msgid "Invalid domain: %{domain}"
+msgstr ""
+
+#: web/templates/site/_headers.html.slime:1
+msgid "NO"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "No first-party cookies without consent."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "No third-party cookies without consent."
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:41
+msgid "Piwik is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
+msgstr ""
+
+#: web/controllers/site_controller.ex:93
+msgid "Results for %{url}"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Secure connection"
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:31
+msgid "Self-host the files."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Strict Transport Security enabled"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Strict Transport Security not enabled"
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:30
+msgid "The site is loading libraries from one or more CDN:s."
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:40
+msgid "The site is using Google Analytics. While this is a powerful tool, we think you should respect your users' privacy and not tell Google about them &mdash; at least not without your users' consent."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+#: web/templates/site/results.html.slime:1
+msgid "Third-party cookies"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+#: web/templates/site/results.html.slime:1
+msgid "Third-party requests"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Third-party services"
+msgstr ""
+
+#: web/controllers/site_controller.ex:196
+msgid "Trying same host too frequently. Try again in a minute."
+msgstr ""
+
+#: web/templates/site/_headers.html.slime:1
+msgid "YES,"
+msgstr ""
+
+#: web/controllers/site_controller.ex:183
+msgid "You're requesting too frequently. Install locally?"
+msgstr ""
+
+#: web/templates/site/status.html.slime:1
+msgid "Hang tight..."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "See which."
+msgid_plural "See which."
+msgstr[0] ""
+msgstr[1] ""
+
+#: web/templates/site/results.html.slime:1
+msgid "<a href=\"https://https.cio.gov/hsts/\">Read more about HSTS</a> and how to configure it in nginx, Apache and IIS."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free <em>domain-validated</em> (<DV) certificates through an easy, automated process."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "<a href=\"https://w3c.github.io/webappsec-referrer-policy/#referrer-policies\">A few different policies are offered</a>, such as <code>origin</code> (strips everything except the <a href=\"https://tools.ietf.org/html/rfc6454#section-3.2\">origin</a>) and <code>origin-when-cross-origin</code> (sends full URL with same-origin requests, otherwise stripped). The only one we recommend is <strong><code>no-referrer</code></strong>, which kills the referrer header entirely for all requests, no matter the destination."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "<strong>Authenticity</strong>. The visitor is talking to the \"real\" website, and not to an impersonator or through a \"man-in-the-middle\"."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "<strong>Confidentiality</strong>. The visitor's connection is encrypted, obscuring URLs, cookies, and other sensitive metadata."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "<strong>Integrity</strong>. The data sent between the visitor and the website has not been tampered with or modified."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "A plain HTTP connection can be easily monitored, modified, and impersonated. Every unencrypted HTTP request reveals information about a user’s behavior, and the interception and tracking of unencrypted browsing has become commonplace."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "A user may click on an old link that mistakenly uses an <code>http://</code> URL."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "A user’s network may be hostile and actively rewrite <code>https://</code> links to <code>http://</code>."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Always uses an <code>https://</code> connection, even when clicking on an <code>http://</code> link or after typing a domain into the location bar without specifying a protocol."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Analyze %{host} on SSL Labs"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Browsers support <a href=\"https://en.wikipedia.org/wiki/HTTP/2\">HTTP/2</a> &mdash; which improves page loading speeds &mdash; <em>only</em> over encrypted connections."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "DV certificates are the most common. Let's Encrypt only issues DV certificates."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Disclaimer: The results presented here might not be 100% correct. Bugs happen. This tool is meant to be used by site owners as a starting point for improvements, not as a rigorous analysis."
+msgstr ""
+
+#: web/templates/site/_cookies.html.slime:1
+msgid "Domain"
+msgstr ""
+
+#: web/templates/site/failed.html.slime:1
+msgid "Error: %{error_message}"
+msgstr ""
+
+#: web/templates/site/_cookies.html.slime:1
+msgid "Expires on"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Google Chrome (<a href=\"https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure\">1</a>, <a href=\"https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins\">2</a>) and Mozilla Firefox (<a href=\"https://blog.mozilla.org/security/2015/04/30/deprecating-non-secure-http/\">1</a>) will mark plain HTTP as affirmatively non-secure and make powerful features impossible to use on non-secure sites."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Google has begun to <a href=\"https://googleonlinesecurity.blogspot.com/2014/08/https-as-ranking-signal_6.html\">favor HTTPS websites in search rankings</a>."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "HSTS enabled with value <code>%{value}</code>."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "HTTP Strict Transport Security (HSTS) is a simple and widely supported standard to protect visitors by ensuring that their browsers always connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from <code>http://</code> to <code>https://</code> URLs."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "HTTPS encrypts nearly all information sent between a client and a web service. Properly configured, it guarantees three things:"
+msgstr ""
+
+#: web/templates/site/_headers.html.slime:1
+msgid "Header"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "In its <strong>strongest and recommended form</strong>, the HSTS policy <strong>includes all subdomains</strong>, and indicates a willingness to be \"preloaded\" into browsers:"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "It's also possible to use protocol-relative URLs like <code>&lt;img src=\"//example.com/images/foo.png\"&gt;</code>. However, we discourage this. If a resource is available through HTTPS, you should <em>only</em> load it over HTTPS, even on insecure pages &mdash; otherwise you make man-in-the-middle attacks easier. (Loading an HTTPS resource on an HTTP page will not generate any warnings.)"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Let's say you're logged in on Facebook. You visit a page with the URL <code>http://www.some-hospital.com/some-medical-condition</code>. On that page, you click a link to their Facebook page. Your browser then sends <code>Referer: http://www.some-hospital.com/some-medical-condition</code> to <code>facebook.com</code>, along with your Facebook cookies, allowing Facebook to associate your identity with that particular page."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Make sure all resources are loaded over HTTPS. For resources loaded from the same domain as your site, use relative URLs, e.g. <code>&lt;img src=\"/images/foo.png\"&gt;</code> instead of <code>&lt;img src=\"http://example.com/images/foo.png\"&gt;</code>."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Meta referrer is set to <code>%{value}</code>."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Modern browsers typically block at least certain types of insecure content (such as iframes, JavaScript and CSS) by default. Firefox, for example, also shows a grey warning triangle next to the green lock if insecure elements have been blocked."
+msgstr ""
+
+#: web/templates/site/_headers.html.slime:1
+msgid "NO, header is set to"
+msgstr ""
+
+#: web/templates/site/_cookies.html.slime:1
+msgid "Name"
+msgstr ""
+
+#: web/templates/site/failed.html.slime:1
+msgid "Processing %{url} failed at %{time}."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Removes the ability for users to click through warnings about invalid certificates."
+msgstr ""
+
+#: web/templates/site/_headers.html.slime:1
+msgid "Set?"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Strict Transport Security was <a href=\"https://lists.w3.org/Archives/Public/www-archive/2009Sep/att-0051/draft-hodges-strict-transport-sec-05.plain.html\">proposed in 2009</a>, motivated by <a href=\"http://www.thoughtcrime.org/software/sslstrip/\">Moxie Marlinspike's demonstration</a> of how a hostile network could downgrade visitor connections and exploit insecure redirects. It was quickly adopted by several major web browsers, and <a href=\"https://tools.ietf.org/html/rfc6797\">finalized as RFC 6797 in 2012.</a>"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Thanks to a fairly recent development, <em><a href=\"https://w3c.github.io/webappsec-referrer-policy/\">Referrer Policy</a></em>, it's finally possible for websites to tell browsers to not leak referrers. It lets you specify a policy that's applied to all links clicked, as well as all other requests generated by the page (images, JS, etc.)."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "The Chrome security team allows anyone to <a href=\"https://hstspreload.appspot.com/\">submit their domain to the list</a>, provided it meets a few requirements."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "The HTTP header descriptions are based on the ones from <a href=\"https://securityheaders.io/\">securityheaders.io</a> by Scott Helme, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.en_GB\">CC-BY-SA 4.0</a>. Text about HTTPS partly adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain)."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "The goal of the Internet community is to establish encryption as the norm, and to phase out unencrypted connections. See <a href=\"https://www.w3.org/2001/tag/doc/web-https\" title=\"Securing the Web\">W3C</a>, <a href=\"https://datatracker.ietf.org/doc/rfc7258/\" title=\"Pervasive Monitoring Is an Attack\">IETF</a>, <a href=\"https://www.iab.org/2014/11/14/iab-statement-on-internet-confidentiality/\" title=\"IAB Statement on Internet Confidentiality\">IAB</a>. Also:"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "The problem is made worse by the fact that many websites load resources like images and scripts from dozens of third-parties, sending referrer information to all of them, with the typical visitor having no idea that this is happening."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "The site includes content served over insecure HTTP. Such content can be intercepted and manipulated, leaving the visitor vulnerable to attacks."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "There is no difference in encryption between DV and EV certificates, but they are typically displayed differently in browsers. EV certificates generally result in the domain owner's name appearing in the browser URL bar that visitors see."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "To get a DV certificate, you only need to prove that you <span title=\"By, for example, publishing a certain file to your web server or responding to an email sent to the contact in your domain's WHOIS record\">control the domain</span>. To get an <em>Extended Validation</em> (EV) certificate, you must pass a more thorough identity verification process."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "To solve the \"first visit\" problem, the Chrome security team created an \"HSTS preload list\": a <a href=\"https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json\">list of domains</a> baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit. Firefox, Safari, and newer versions of Internet Explorer also incorporate Chrome’s HSTS preload list."
+msgstr ""
+
+#: web/templates/site/failed.html.slime:1
+msgid "Try again?"
+msgstr ""
+
+#: web/templates/site/_cookies.html.slime:1
+msgid "Value"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "When a browser knows that a domain has enabled HSTS, it does two things:"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "When a user types \"example.com\" into the URL bar, browsers default to using <code>http://</code>."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "When you click a link, your browser will typically send the HTTP <em>referer</em> [sic] header to the webserver where the destination webpage is at. The header contains the full URL of the page you came from. This lets sites see where traffic comes from. The header is also sent when external resources (such as images, fonts, JS and CSS) are loaded."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "While still a work in progress, Referrer Policy is now <a href=\"http://caniuse.com/referrer-policy\">supported by all major browsers</a> (except Internet Explorer, although it <em>is</em> supported by Edge, the new browser in Windows 10)."
+msgstr ""
+
+#: web/templates/site/_headers.html.slime:1
+msgid "which disables HSTS"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Final URL:"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+#: web/templates/site/status.html.slime:1
+msgid "Input URL:"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning)."
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:50
+msgid "The site appears to use Piwik, but not self-hosted. This means visitors are exposed to a third party."
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:35
+msgid "The site is using the Disqus comment system."
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:45
+msgid "The site loads fonts from Google Fonts. While these are hosted on resource-specific domains and no cookies are sent, Google <em>could</em> possibly cross-reference the data (IP and browser fingerprint) with other Google services to identify visitors. Do they? Their own <a href=\"https://developers.google.com/fonts/faq?hl=en#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users\">FAQ</a> is vague: <em>\"We do log records of the CSS and the font file requests, and access to this data is on a need-to-know basis and kept secure.\"</em> What \"need-to-know basis\" means is not explained."
+msgstr ""
+
+#: web/templates/layout/app.html.slime:1
+msgid "FAQ"
+msgstr ""
+
+#: web/templates/site/index.html.slime:1
+msgid "How privacy-friendly is your site?"
+msgstr ""
+
+#: web/templates/site/index.html.slime:1
+msgid "Read more."
+msgstr ""
+
+#: web/controllers/site_controller.ex:21 web/templates/site/index.html.slime:1
+msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "A referrer policy can easily be set with a <code>&lt;meta&gt;</code> element in your HTML. Simply include this inside the <code>&lt;head&gt;</code> section:"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "The referrer header is privacy nightmare as it allows websites and services to track you across the web and learn about your browsing habits (and thus possibly private, sensitive information), particularly when combined with cookies."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Host"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Full list of third-party requests:"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Please note that this tool only checks whether HTTPS is used by default. Next step is to ensure that the server is configured correctly and not susceptible to attacks due to out-of-date software, weak ciphers, etc."
+msgstr ""
+
+#: web/templates/site/status.html.slime:1
+msgid "Status:"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Such things are out of scope for this tool, but Qualys SSL Labs provides an excellent free service that lets you check how a server is doing:"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "External files such as images, scripts and CSS are loaded, but the tool performs no interactions with the page &mdash; no links are clicked, no forms are submitted."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "This tool attempts to simulate what happens when a user visits a specified page with a typical browser. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled, since this is the default setting in most browsers."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "What this tool checks (and doesn't check)"
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "A webstore may for instance hand over the task of profiling visitors to an advertisement agency, and a public authority may have constructed its website in a way that automatically hands over behavioural data to advertisers. Advertisers are the most common and least transparent form of third parties."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Accountability"
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Accuracy"
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "An individual should be able to understand the terms of interactions with others. (5(1)(a))."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "As little data as possible to achieve the purpose should be collected .(5(1)(c))"
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Behavioural monitoring, or ”profiling”, is when someone monitors how a given person, or set of persons, typically behave. This includes monitoring whether a particular group, say young people or women of a median income, frequently visit certain deeplinks, have to look up certain vocabulary or that they end up on the website through using a particular search engine or social platform. Behavioural monitoring is used to discover what certain classes of people may be assumed to find interesting, difficult or funny."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Data collection should occur only for specific and limited purposes. These purposes should be explicit and understandable. (5(1)(b))"
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Data minimisation"
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Data protection is a human right in the European Union. It’s a collection of administrative and formal requirements for how to collect, process and use data relating to individuals. The purpose of this protection is to provide individuals with the means necessary to exercise their right to privacy. Data protection law guarantees transparency, choice and knowledge for individuals with regards to who influences them, and under which conditions."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Data should be processed in a secure way, both organisatorially and technically."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Depending on the purposes for collecting personal data, data minimisation may mean different things. The Web Privacy Check makes it easy to find out how not to collect personal data and how not to inadvertently leak personal data. Should one want to collect personal data anyway, one needs to be transparent about such collection and one also needs to follow the rules in chapter 4 of the regulation. The rules of how to collect and process personal data are in place to ensure that anyone who chooses a purpose for data collection also reflects on the consequences of such choices."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "In May 2018 a new law about data protection will enter into force in the European Union. It is a regulation and will apply equally in all the 28 member states."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Integrity and confidentiality"
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "It is also the categorisation of individuals into these groups. Once a web visitor is stuffed into a particular category, they may be positively or negatively discriminated against because of the categorisation."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Lawfulness, fairness and transparency"
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Personal data shall be accurate, and if they aren’t, there must be a procedure to correct them."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Personal data should not be saved or stored longer than necessary."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Profiling is mostly used in the advertisement industry to decide which type of advertisements a particular individual should be exposed to. Parents of small children, or people who know parents of small children, may receive ads for nappies, prams or family vacations. Increasingly, profiling is used to determine what contents are served by newspapers. The above mentioned groups may for instance receive short articles about new-borns if they are queueing (and have little time) or longer articles about new-borns if they are on a train (and have more time)."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Profiling may additionally be used to shape political opinions, for instance through targetting specific groups with political information, or to enact measures against groups based on their assumed characteristics. This form of political work is called ”nudging” and may also be deployed to increase acceptance of specific measures (like the construction of a public park) in specific groups (such as the individuals living near the envisaged park)."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Purpose limitation"
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Since responsibility can be a difficult burden, the Web Privacy Check of Dataskydd.net has a large set of recommendations for data protection which may go further than what one could be legally liable for. We want to enable the best possible data protection with the least amount of administrative burdens. One of the reasons the rules of the data protection regulation make it seem bureaucratic and boring not to data minimise, is so that each actor in society who wishes to influence others has to consider carefully the way in which they use such power."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Storage limitation"
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "The <a href=\"http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679\">general data protection regulation of the European Union</a> enters into force on the 25th of May 2018 and concerns the balancing of power being those influencing individuals (typically companies and public authorities) and the individuals themselves. The Web Privacy Check is a tool to find out who is collecting information about individuals, and what can be done to stop invisible tracking."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "The Dataskydd.net Web Privacy Check makes it easy to see which technical protection mechanisms for data protection are in place in a given website. We have identified measures which should not require large organisational changes, or increase web management costs. Most of our recommendations are simple enough to implement, and they are cost neutral. Our goal is to make it as easy as possible for individuals to exercise their rights to privacy and data protection, and also to provide web designers and managers with simple ”rules of thumb” to help individuals exercise these rights."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "The Dataskydd.net Web Privacy Check see lawfulness, fairness and transparency as a requirement that individuals should understand with whom they are in contact by visiting a website. If an advertisement agency or some other company, such as an internet service provider, has easy access to behavioural data the individual should know. If an individual may be influenced by these parties, again they should be able to know. An individual should not have to master web development or  have a need for advanced technical tools to find this out. While the principle of transparency is simple, permissible deviations from transparency are listed in articles 13-20 of the regulation."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "The one responsible for the website is responsible for adherence to these principles."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "The purpose for collecting data may be interpreted broadly, and means anything from marketing to improving the web. At Dataskydd.net Web Privacy Check we prefer methods of improving the web that do not include collecting data from private persons. That’s why we’ve compiled a large number of recommendations and tools which minimise data collection."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "This principle above all concerns information registered by public authorities or companies, for instance in the credit check industry. In web development, it is more common with ”fuzzy” data sets, and the consequences of being erroneously categorised in a given profiling operation is normally not worse than that one receives online advertisement which is not specifically targetted to ones own group."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "This right ties into purpose limitation and data minisation. If one follows the recommendation of the Dataskydd.net Web Privacy Check, one does not have to concern oneself so much with this principle."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Transparency also means a right to find out when something gone wrong: if you’ve collected information about individuals which have leaked or disappeared, the individual has a right to know. This is called ”personal data breach notification” and specific rules are in article 34 of the regulation."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "We use the word gossiping to mean that information about somebody’s behaviour, reading habits or preferences is handed over to somebody other than the actor responsible for the website."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Web Privacy Check monitors privacy enhancing features on websites, and helps you find out who is letting you exercise control over your privacy. We check to what extent a website monitors your behaviour and how much they gossip about the monitoring to third parties. We’ve also compiled a set of recommendations for web designers and managers on how to not track or gossip in digital environments. We also suggest questions and feature requests from users of websites who want to alert webmasters to the opportunity of improvement."
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "Welcome to the Web Privacy Check by Dataskydd.net!"
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "What are the principles of the EU general data protection regulation?"
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "What do you mean by ”gossiping to third-parties”?"
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "What is data protection?"
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "What is ”behavioural monitoring”?"
+msgstr ""
+
+#: web/templates/site/about.html.slime:1
+msgid "In modern web development, it’s become common for a website not to be run from only one location. When you visit a website, you’re not only entering into contact with those running the website, but also all the businesses and organisations which collaborate with the managers of the websites. These may be internet service providers, script providers, font providers, analytics tools providers and a range of other providers. If the manager of the websites hands over information about visitors to any of these third-parties, it is a form of gossiping since it is usually not evident to the visitors that this type of information is being handed over."
+msgstr ""
+
+#: web/templates/site/index.html.slime:1
+msgid "<em>Please note that this service is still under development. Some sites (sometimes) don't work; sometimes results are incorrect. We're working on it! <a href=\"mailto:info@dataskydd.net\">Feedback</a> is appreciated.</em>"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "No third-party requests."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "The basic problem that HSTS solves is that even after a website turns on HTTPS, visitors may still end up trying to connect over plain HTTP. For example:"
+msgstr ""
+
+#: web/templates/site/tech.html.slime:1
+msgid "Please note, however, that this tool is mainly meant to be used as a starting point for web developers. For more rigorous and systematic testing we recommend that you check out <a href=\"https://github.com/citp/OpenWPM\">OpenWPM</a>, which we used to analyze the websites of Sweden's municipalities (<a href=\"https://dataskydd.net/kommuner/\">site</a>, <a href=\"https://github.com/andersju/municipality-privacy\">code</a>)."
+msgstr ""
+
+#: web/controllers/site_controller.ex:30 web/templates/layout/app.html.slime:1
+msgid "Tech"
+msgstr ""
+
+#: web/templates/site/tech.html.slime:1
+msgid "This tool attempts to simulate what happens when a user visits a specified page with a typical browser, without clicking on anything. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled, since this is the default setting in most browsers."
+msgstr ""
+
+#: web/templates/site/tech.html.slime:1
+msgid "We built the tool with <a href=\"http://www.phoenixframework.org/\">Phoenix Framework</a> and <a href=\"https://github.com/Tomtomgo/phearjs\">PhearJS</a> (which in turn uses <a href=\"http://phantomjs.org/\">PhantomJS</a>)."
+msgstr ""
+
+#: web/controllers/site_controller.ex:25
+msgid "About"
+msgstr ""
+
+#: web/controllers/site_controller.ex:31
+msgid "How our web privacy check tool works and how you can run your own instance."
+msgstr ""
+
+#: web/controllers/site_controller.ex:94
+msgid "How this website is doing with regards to privacy."
+msgstr ""
+
+#: web/controllers/site_controller.ex:90
+msgid "Processing failed"
+msgstr ""
+
+#: web/controllers/site_controller.ex:109
+msgid "Sorry, bots aren't allowed."
+msgstr ""
+
+#: web/templates/site/tech.html.slime:1
+msgid "Technology we use"
+msgstr ""
+
+#: web/controllers/site_controller.ex:26
+msgid "The what and why of data protection and the principles of the EU general data protection regulation."
+msgstr ""
+
+#: web/templates/site/tech.html.slime:1
+msgid "We don't provide an API as we have limited resources and PhantomJS is rather resource-intensive, but <a href=\"https://github.com/andersju/webbkoll\">the code is available</a> under the MIT license."
+msgstr ""

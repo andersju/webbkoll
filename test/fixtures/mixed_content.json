@@ -1,0 +1,120 @@
+{
+    "content": "<!DOCTYPE html><html><head>\n    <title>Simple mixed content example</title>\n  </head>\n  <body>\n    <div role=\"main\">\n      <h1>\n        Simple mixed content example!\n      </h1>\n      \n\n      \n\n\n</div></body></html>",
+    "cookies": [],
+    "final_url": "https://example.com/etc/mixed-content.html",
+    "had_js_errors": false,
+    "input_url": "http://example.com/etc/mixed-content.html",
+    "request_headers": {},
+    "requests": [
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                },
+                {
+                    "name": "If-None-Match",
+                    "value": "\"11a-535e04f23c843-gzip\""
+                },
+                {
+                    "name": "If-Modified-Since",
+                    "value": "Wed, 22 Jun 2016 16:20:00 GMT"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 1,
+            "method": "GET",
+            "time": "2016-06-23T00:30:18.386Z",
+            "url": "http://example.com/etc/mixed-content.html"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                },
+                {
+                    "name": "If-None-Match",
+                    "value": "\"11a-535e04f23c843-gzip\""
+                },
+                {
+                    "name": "If-Modified-Since",
+                    "value": "Wed, 22 Jun 2016 16:20:00 GMT"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 2,
+            "method": "GET",
+            "time": "2016-06-23T00:30:18.646Z",
+            "url": "https://example.com/etc/mixed-content.html"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "If-None-Match",
+                    "value": "\"0-535e049dce387\""
+                },
+                {
+                    "name": "If-Modified-Since",
+                    "value": "Wed, 22 Jun 2016 16:18:31 GMT"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 3,
+            "method": "GET",
+            "time": "2016-06-23T00:30:18.790Z",
+            "url": "http://example.com/etc/simple-example.js"
+        },
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*"
+                },
+                {
+                    "name": "If-None-Match",
+                    "value": "\"0-535e049dce387\""
+                },
+                {
+                    "name": "If-Modified-Since",
+                    "value": "Wed, 22 Jun 2016 16:18:31 GMT"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 4,
+            "method": "GET",
+            "time": "2016-06-23T00:30:18.809Z",
+            "url": "https://example.com/etc/simple-example.js"
+        }
+    ],
+    "response_headers": {
+        "accept-ranges": "bytes",
+        "connection": "Keep-Alive",
+        "content-encoding": "gzip",
+        "content-type": "text/html",
+        "date": "Thu, 23 Jun 2016 00:30:18 GMT",
+        "etag": "\"11a-535e04f23c843-gzip\"",
+        "keep-alive": "timeout=5, max=100",
+        "last-modified": "Wed, 22 Jun 2016 16:20:00 GMT",
+        "server": "Apache/2.4.7 (Ubuntu)",
+        "vary": "Accept-Encoding",
+        "x-content-type-options": "nosniff"
+    },
+    "success": true
+}

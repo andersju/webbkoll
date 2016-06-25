@@ -1,0 +1,10 @@
+section.text
+  h2 = gettext "Technology we use"
+
+  p = gettext "This tool attempts to simulate what happens when a user visits a specified page with a typical browser, without clicking on anything. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled, since this is the default setting in most browsers."
+
+  p = gettext(~s|We built the tool with <a href="http://www.phoenixframework.org/">Phoenix Framework</a> and <a href="https://github.com/Tomtomgo/phearjs">PhearJS</a> (which in turn uses <a href="http://phantomjs.org/">PhantomJS</a>).|) |> raw
+
+  p = gettext(~s|We don't provide an API as we have limited resources and PhantomJS is rather resource-intensive, but <a href="https://github.com/andersju/webbkoll">the code is available</a> under the MIT license.|) |> raw
+
+  p = gettext(~s|Please note, however, that this tool is mainly meant to be used as a starting point for web developers. For more rigorous and systematic testing we recommend that you check out <a href="https://github.com/citp/OpenWPM">OpenWPM</a>, which we used to analyze the websites of Sweden's municipalities (<a href="https://dataskydd.net/kommuner/">site</a>, <a href="https://github.com/andersju/municipality-privacy">code</a>).|) |> raw
