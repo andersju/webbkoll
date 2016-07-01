@@ -764,31 +764,31 @@ msgstr "Vi byggde verktyget med <a href=\"http://www.phoenixframework.org/\">Pho
 
 #: web/controllers/site_controller.ex:25
 msgid "About"
-msgstr ""
+msgstr "Om"
 
 #: web/controllers/site_controller.ex:31
 msgid "How our web privacy check tool works and how you can run your own instance."
-msgstr ""
+msgstr "Hur vårt testverktyg fungerar och hur du kan köra din egen instans."
 
 #: web/controllers/site_controller.ex:94
 msgid "How this website is doing with regards to privacy."
-msgstr ""
+msgstr "Hur den här webbplatsen hjälper dig utöva makt över ditt privatliv (eller inte)."
 
 #: web/controllers/site_controller.ex:90
 msgid "Processing failed"
-msgstr ""
+msgstr "Körningen misslyckades"
 
 #: web/controllers/site_controller.ex:109
 msgid "Sorry, bots aren't allowed."
-msgstr ""
+msgstr "Beklagar, men botar är inte tillåtna."
 
 #: web/templates/site/tech.html.slime:1
 msgid "Technology we use"
-msgstr ""
+msgstr "Teknik vi använder"
 
 #: web/controllers/site_controller.ex:26
 msgid "The what and why of data protection and the principles of the EU general data protection regulation."
-msgstr ""
+msgstr "Dataskyddets hur och varför, och principerna bakom EU:s dataskyddsförordning."
 
 #: web/templates/site/tech.html.slime:1
 msgid "We don't provide an API as we have limited resources and PhantomJS is rather resource-intensive, but <a href=\"https://github.com/andersju/webbkoll\">the code is available</a> under the MIT license."
@@ -800,4 +800,16 @@ msgstr "<em>Vänligen notera att den här tjänsten fortfarande är under utveck
 
 #: web/templates/site/index.html.slime:1
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
-msgstr ""
+msgstr "Det här verktyget hjälper dig ta reda på vilka dataskyddande funktioner en sajt använder för att hjälpa dig utöva makt över ditt privatliv. "
+
+#: web/controllers/site_controller.ex:202
+msgid "Error"
+msgstr "Fel"
+
+#: web/controllers/site_controller.ex:20
+msgid "Search"
+msgstr "Sök"
+
+#: web/controllers/site_controller.ex:61 web/controllers/site_controller.ex:62
+msgid "Status"
+msgstr "Status"

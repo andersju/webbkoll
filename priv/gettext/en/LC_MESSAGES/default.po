@@ -790,3 +790,15 @@ msgstr ""
 #: web/templates/site/index.html.slime:1
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
 msgstr ""
+
+#: web/controllers/site_controller.ex:202
+msgid "Error"
+msgstr ""
+
+#: web/controllers/site_controller.ex:20
+msgid "Search"
+msgstr ""
+
+#: web/controllers/site_controller.ex:61 web/controllers/site_controller.ex:62
+msgid "Status"
+msgstr ""

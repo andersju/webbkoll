@@ -17,7 +17,7 @@ defmodule Webbkoll.SiteController do
   plug :check_rate_url_host  when action in [:check]
 
   def index(conn, _params) do
-    render(conn, "index.html", locale: conn.assigns.locale, page_title: "Search",
+    render(conn, "index.html", locale: conn.assigns.locale, page_title: gettext("Search"),
            page_description: gettext("This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."))
   end
 
@@ -58,8 +58,8 @@ defmodule Webbkoll.SiteController do
   end
   defp handle_status(site, conn) do
     case site.status do
-      "queue"      -> render(conn, "status.html", site: site, page_title: "Status")
-      "processing" -> render(conn, "status.html", site: site, page_title: "Status")
+      "queue"      -> render(conn, "status.html", site: site, page_title: gettext("Status"))
+      "processing" -> render(conn, "status.html", site: site, page_title: gettext("Status"))
       "failed"     -> redirect(conn, to: site_path(conn, :results,
                                                    conn.assigns.locale,
                                                    url: site.input_url))
@@ -199,7 +199,7 @@ defmodule Webbkoll.SiteController do
   defp render_error(conn, error_message) do
     conn
     |> put_status(400)
-    |> render(:error, error_message: error_message, page_title: "Error")
+    |> render(:error, error_message: error_message, page_title: gettext("Error"))
     |> halt
   end
 end
