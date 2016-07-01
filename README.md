@@ -3,7 +3,7 @@
 This is the code that powers https://webbkoll.dataskydd.net/en - an
 online tool that checks how a webpage is doing with regards to privacy.
 
-It attempts to simulate what happens when a user visits a specified page 
+It attempts to simulate what happens when a user visits a specified page
 with a typical browser, without clicking on anything, and with the
 browser having no particular extensions installed, and with Do Not Track
 (DNT) disabled - as this is the default in most browsers.
@@ -26,8 +26,12 @@ Cleanup is underway!
 
 **Also note** that this tool is mainly meant to be used as a _starting point_
 for web developers. For more rigorous and systematic testing we
-recommend that you check out [OpenWPM](https://github.com/citp/OpenWPM), which we used to analyze the
-websites of Sweden's municipalities ([site](https://dataskydd.net/kommuner/), [code](https://github.com/andersju/municipality-privacy)).
+recommend that you check out [OpenWPM](https://github.com/citp/OpenWPM),
+which we used to analyze the websites of Sweden's municipalities
+([site](https://dataskydd.net/kommuner/), [code](https://github.com/andersju/municipality-privacy)).
+
+This is a project by [Dataskydd.net](https://dataskydd.net). We received funding from
+[Internetfonden](https://www.internetfonden.se/) / [IIS](https://www.iis.se) (The Internet Foundation in Sweden).
 
 ## Backend
   * Get PhearJS running - see https://github.com/Tomtomgo/phearjs/blob/master/README.md. (Clone https://github.com/andersju/phearjs/ to get the one that Dataskydd.net is running.)
