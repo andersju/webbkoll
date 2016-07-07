@@ -5,10 +5,13 @@
 # is restricted to this project.
 use Mix.Config
 
+# General application configuration
+config :webbkoll,
+  ecto_repos: [Webbkoll.Repo]
+
 # Configures the endpoint
 config :webbkoll, Webbkoll.Endpoint,
   url: [host: "localhost"],
-  root: Path.dirname(__DIR__),
   secret_key_base: "Yk9QpNTp3jg15sA4KFDjBq4hgfp0eYV0o1bYO6Hxf0BUV5deh4HkwMks/Z541bCR",
   render_errors: [accepts: ~w(html json)],
   pubsub: [name: Webbkoll.PubSub,
