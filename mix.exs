@@ -4,7 +4,7 @@ defmodule Webbkoll.Mixfile do
   def project do
     [app: :webbkoll,
      version: "0.0.1",
-     elixir: "~> 1.2",
+     elixir: "~> 1.3",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
@@ -44,7 +44,7 @@ defmodule Webbkoll.Mixfile do
      {:ex_rated, "~> 1.2"},
      {:timex, "~> 2.1"},
      {:quantum, ">= 1.7.0"},
-     {:ex_machina, "~> 0.6.1", only: :test},
+     {:ex_machina, "~> 1.0", only: :test},
      {:public_suffix, "~> 0.3"},
      {:phoenix_slime, "~> 0.6"}]
   end

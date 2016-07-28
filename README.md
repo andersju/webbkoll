@@ -48,7 +48,7 @@ PhearJS and the simple client written in Ruby in `misc/ruby-client`:
   * Please note that it's currently _very_ basic.
 
 ## Frontend (this app!)
-  * Install Erlang (18) and Elixir (>= 1.2.4) -- see http://elixir-lang.org/install.html
+  * Install Erlang (18) and Elixir (>= 1.3) -- see http://elixir-lang.org/install.html
   * Have [redis](http://redis.io/) running (needed for exq job handling)
   * Make sure you have a working [PostgreSQL](http://www.postgresql.org/) installation
   * Install dependencies with `mix deps.get`

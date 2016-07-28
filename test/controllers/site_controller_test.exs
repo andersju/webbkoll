@@ -1,52 +1,51 @@
 defmodule Webbkoll.SiteControllerTest do
   use Webbkoll.ConnCase
   alias Webbkoll.Factory
-  alias Webbkoll.Site
   import Webbkoll.Helpers
 
   @default_locale Application.get_env(:webbkoll, :default_locale)
   @locales Application.get_env(:webbkoll, :locales)
 
   test "/ redirects to default locale" do
-    conn = get conn, "/"
+    conn = get build_conn, "/"
     assert redirected_to(conn) =~ "/#{@default_locale}/"
   end
 
   test "index page" do
-    conn = get conn, "/en/"
+    conn = get build_conn, "/en/"
     assert html_response(conn, 200) =~ "How privacy-friendly is your site?"
   end
 
   test "about page" do
-    conn = get conn, "/en/about"
+    conn = get build_conn, "/en/about"
     assert html_response(conn, 200) =~ "Welcome to the Web Privacy Check"
   end
 
   test "tech page" do
-    conn = get conn, "/en/tech"
+    conn = get build_conn, "/en/tech"
     assert html_response(conn, 200) =~ "Technology we use"
   end
 
   test "returns error on domain with TLD not in Public Suffix list" do
-    conn = get conn, "/en/check?url=foobar.invalidtld"
+    conn = get build_conn, "/en/check?url=foobar.invalidtld"
     assert html_response(conn, 400) =~ "Error"
   end
 
   test "returns 302 redirect to status when given valid URL" do
-    conn = get conn, "/en/check?url=http://example.com"
+    conn = get build_conn, "/en/check?url=http://example.com"
     assert List.to_string(Plug.Conn.get_resp_header(conn, "location")) =~ "status"
     assert conn.status == 302
   end
 
   test "returns 302 redirect to status when given valid domain" do
-    conn = get conn, "/en/check?url=example.com"
+    conn = get build_conn, "/en/check?url=example.com"
     assert List.to_string(Plug.Conn.get_resp_header(conn, "location")) =~ "status"
     assert conn.status == 302
   end
 
   test "analysis+HTML of site with HTTPS, HSTS, referrer policy, no cookies/external requests" do
     data = read_and_analyze_json("test/fixtures/https_hsts_referrer_no_cookies_or_ext_requests.json")
-    site = Factory.create(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
+    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
     site_meta = get_site_meta(site)
 
     assert site.data["scheme"] == "https"
@@ -59,7 +58,7 @@ defmodule Webbkoll.SiteControllerTest do
     assert site_meta["hsts"] =~ "max-age=10886400;"
     assert site_meta["services"] == []
 
-    conn = get conn, "/en/results?url=https%3A%2F%2Fexample.com%2F"
+    conn = get build_conn, "/en/results?url=https%3A%2F%2Fexample.com%2F"
     assert html_response(conn, 200) =~ "Results for https://example.com/"
     assert html_response(conn, 200) =~ "Referrers not leaked"
     assert html_response(conn, 200) =~ "uses HTTPS by default"

@@ -42,8 +42,7 @@ defmodule Webbkoll.SiteController do
   def handle_insert({:ok, site}, conn, proper_url) do
       {queue, _}  = Enum.random(@backend_urls)
       {:ok, _ack} = Exq.enqueue(Exq, queue, Webbkoll.Worker,
-                                [site.id, proper_url, conn.params["refresh"],
-                                @backend_urls[queue]])
+                                [site.id, proper_url, conn.params["refresh"], @backend_urls[queue]])
       redirect(conn, to: site_path(conn, :status, conn.assigns.locale, id: site.id))
   end
 
@@ -89,7 +88,7 @@ defmodule Webbkoll.SiteController do
       "processing" -> redirect(conn, to: site_path(conn, :status, conn.assigns.locale, id: site.id))
       "failed"     -> render(conn, :failed, site: site, page_title: gettext("Processing failed"))
       "done"       -> render(conn, :results, site: site,
-                             meta: site |> get_site_meta,
+                             meta: get_site_meta(site),
                              page_title: gettext("Results for %{url}", url: truncate(site.final_url, 50)),
                              page_description: gettext("How this website is doing with regards to privacy."))
     end
@@ -113,20 +112,17 @@ defmodule Webbkoll.SiteController do
   defp check_user_agent([], conn), do: conn
 
   defp get_proper_url(url = %URI{}) do
-    path =
-      if url.path == nil, do: "/", else: url.path
+    path = url.path || "/"
     case @validate_urls do
       true  -> "http://#{String.downcase(url.host)}#{path}"
       false -> "http://#{String.downcase(url.authority)}#{path}"
     end
   end
   defp get_proper_url(conn, _params) do
-    initial_url = conn.params["url"]
     url =
-      if String.starts_with?(initial_url, ["http://", "https://"]) do
-        initial_url |> URI.parse |> get_proper_url
-      else
-        "http://#{initial_url}" |> URI.parse |> get_proper_url
+      case String.starts_with?(conn.params["url"], ["http://", "https://"]) do
+        true -> conn.params["url"] |> URI.parse |> get_proper_url
+        false -> "http://#{conn.params["url"]}" |> URI.parse |> get_proper_url
       end
     assign(conn, :input_url, url)
   end
@@ -136,19 +132,16 @@ defmodule Webbkoll.SiteController do
     |> URI.parse
     |> Map.get(:host)
     |> PublicSuffix.matches_explicit_rule?
-    |> handle_validate_url(conn)
+    |> case do
+         true -> conn
+         false -> render_error(conn, gettext("Invalid domain: %{domain}", domain: conn.assigns.input_url))
+       end
   end
-
-  defp handle_validate_url(false, conn) do
-    render_error(conn, gettext("Invalid domain: %{domain}", domain: conn.assigns.input_url))
-  end
-  defp handle_validate_url(true, conn), do: conn
 
   defp check_if_site_exists(%Plug.Conn{assigns: %{input_url: proper_url}} = conn, _params) do
-    if conn.params["refresh"] == "on" do
-      conn
-    else
-      check_site_in_db(conn, proper_url)
+    cond do
+      conn.params["refresh"] == "on" -> conn
+      true -> check_site_in_db(conn, proper_url)
     end
   end
 
@@ -175,12 +168,10 @@ defmodule Webbkoll.SiteController do
     |> Tuple.to_list
     |> Enum.join(".")
     |> ExRated.check_rate(@rate_limit_client["scale"], @rate_limit_client["limit"])
-    |> handle_check_rate_ip(conn)
-  end
-
-  defp handle_check_rate_ip({:ok, _}, conn), do: conn
-  defp handle_check_rate_ip({:error, _}, conn) do
-    render_error(conn, gettext("You're requesting too frequently. Install locally?"))
+    |> case do
+         {:ok, _} -> conn
+         {:error, _} -> render_error(conn, gettext("You're requesting too frequently. Install locally?"))
+       end
   end
 
   defp check_rate_url_host(conn, _params) do
@@ -188,12 +179,10 @@ defmodule Webbkoll.SiteController do
     |> URI.parse
     |> Map.get(:host)
     |> ExRated.check_rate(@rate_limit_host["scale"], @rate_limit_host["limit"])
-    |> handle_check_rate_url_host(conn)
-  end
-
-  defp handle_check_rate_url_host({:ok, _}, conn), do: conn
-  defp handle_check_rate_url_host({:error, _}, conn) do
-    render_error(conn, gettext("Trying same host too frequently. Try again in a minute."))
+    |> case do
+         {:ok, _} -> conn
+         {:error, _} -> render_error(conn, gettext("Trying same host too frequently. Try again in a minute."))
+       end
   end
 
   defp render_error(conn, error_message) do

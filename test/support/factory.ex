@@ -1,7 +1,7 @@
 defmodule Webbkoll.Factory do
   use ExMachina.Ecto, repo: Webbkoll.Repo
 
-  def factory(:site) do
+  def site_factory do
     %Webbkoll.Site{
       input_url: "example.com",
       final_url: "https://example.com/",
