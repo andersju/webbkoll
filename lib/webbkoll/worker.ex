@@ -148,7 +148,10 @@ defmodule Webbkoll.Worker do
   end
 
   defp get_cookies(cookies, registerable_domain) do
-    {first, third} = Enum.partition(cookies, &(String.ends_with?(&1["domain"], registerable_domain)))
+    {first, third} =
+      Enum.partition(cookies, fn(x) ->
+        (x["domain"] |> String.trim(".") |> get_registerable_domain) == registerable_domain
+      end)
     %{"first_party" => first, "third_party" => third}
   end
 
