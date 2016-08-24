@@ -77,15 +77,15 @@ msgstr ""
 msgid "Insecure"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:100
+#: lib/webbkoll/helpers.ex:122
 msgid "Referrers leaked"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:92
+#: lib/webbkoll/helpers.ex:114
 msgid "Referrers not leaked"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:96
+#: lib/webbkoll/helpers.ex:118
 msgid "Referrers partially leaked"
 msgstr ""
 
@@ -203,7 +203,7 @@ msgstr ""
 msgid "Install Piwik on your own server. It's easy to install and easy to upgrade."
 msgstr ""
 
-#: web/controllers/site_controller.ex:143
+#: web/controllers/site_controller.ex:137
 msgid "Invalid domain: %{domain}"
 msgstr ""
 
@@ -223,7 +223,7 @@ msgstr ""
 msgid "Piwik is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
 msgstr ""
 
-#: web/controllers/site_controller.ex:93
+#: web/controllers/site_controller.ex:92
 msgid "Results for %{url}"
 msgstr ""
 
@@ -265,7 +265,7 @@ msgstr ""
 msgid "Third-party services"
 msgstr ""
 
-#: web/controllers/site_controller.ex:196
+#: web/controllers/site_controller.ex:184
 msgid "Trying same host too frequently. Try again in a minute."
 msgstr ""
 
@@ -273,7 +273,7 @@ msgstr ""
 msgid "YES,"
 msgstr ""
 
-#: web/controllers/site_controller.ex:183
+#: web/controllers/site_controller.ex:173
 msgid "You're requesting too frequently. Install locally?"
 msgstr ""
 
@@ -756,15 +756,15 @@ msgstr ""
 msgid "How our web privacy check tool works and how you can run your own instance."
 msgstr ""
 
-#: web/controllers/site_controller.ex:94
+#: web/controllers/site_controller.ex:93
 msgid "How this website is doing with regards to privacy."
 msgstr ""
 
-#: web/controllers/site_controller.ex:90
+#: web/controllers/site_controller.ex:89
 msgid "Processing failed"
 msgstr ""
 
-#: web/controllers/site_controller.ex:109
+#: web/controllers/site_controller.ex:108
 msgid "Sorry, bots aren't allowed."
 msgstr ""
 
@@ -788,7 +788,7 @@ msgstr ""
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
 msgstr ""
 
-#: web/controllers/site_controller.ex:202
+#: web/controllers/site_controller.ex:191
 msgid "Error"
 msgstr ""
 
@@ -796,6 +796,18 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: web/controllers/site_controller.ex:61 web/controllers/site_controller.ex:62
+#: web/controllers/site_controller.ex:60 web/controllers/site_controller.ex:61
 msgid "Status"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "<em>If a referrer policy is delivered via both CSP and a meta element, the meta element's policy takes precedence.</em>"
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:126
+msgid "Referrers are (probably) leaked"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Referrer directive is set to <code>%{value}</code> in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer\">Content-Security-Policy (CSP) header</a>."
 msgstr ""

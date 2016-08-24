@@ -77,10 +77,29 @@ defmodule Webbkoll.SiteControllerTest do
     data = read_and_analyze_json("test/fixtures/http_with_cookies_and_ext_requests.json")
 
     assert data["scheme"] == "http"
-    assert data["meta_referrer"] == ""
+    assert data["meta_referrer"] == nil
     assert data["cookie_count"]["first_party"] == 13
     assert data["cookie_count"]["third_party"] == 2
     assert data["third_party_request_types"]["insecure"] == 9
+  end
+
+  test "site with Referrer Policy set in CSP header" do
+    data = read_and_analyze_json("test/fixtures/csp_referrer.json")
+    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
+    site_meta = get_site_meta(site)
+
+    assert site_meta["referrer_policy"]["status"] == "success"
+    assert site_meta["csp_referrer"] == "no-referrer"
+  end
+
+  test "site with Referrer Policy set in both CSP and meta element (meta should take precedence)" do
+    data = read_and_analyze_json("test/fixtures/csp_and_meta_referrer.json")
+    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
+    site_meta = get_site_meta(site)
+
+    assert site_meta["referrer_policy"]["status"] == "success"
+    assert site_meta["csp_referrer"] == "unsafe-url"
+    assert site_meta["meta_referrer"] == "no-referrer"
   end
 
   defp read_and_analyze_json(file) do

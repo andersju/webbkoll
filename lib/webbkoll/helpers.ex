@@ -70,8 +70,19 @@ defmodule Webbkoll.Helpers do
   end
 
   def get_site_meta(site) do
+    csp_referrer = check_csp_referrer(site.data["headers"])
+    meta_referrer = site.data["meta_referrer"]
+    referrer_policy_in_use =  cond do
+      meta_referrer && csp_referrer -> meta_referrer
+      meta_referrer -> meta_referrer
+      csp_referrer -> csp_referrer
+      true -> nil
+    end
+
     %{"services" => check_services(site.data["third_party_requests"]),
-      "referrer" => check_meta_referrer(site.data["meta_referrer"]),
+      "referrer_policy" => check_referrer_policy(referrer_policy_in_use),
+      "meta_referrer" => meta_referrer,
+      "csp_referrer" => csp_referrer,
       "host" => URI.parse(site.final_url).host,
       "reg_domain" => PublicSuffix.registrable_domain(URI.parse(site.final_url).host),
       "hsts" => site.data["headers"]["strict-transport-security"]
@@ -84,24 +95,35 @@ defmodule Webbkoll.Helpers do
     |> Enum.uniq
   end
 
-  def check_meta_referrer(referrer) do
+  def check_csp_referrer(headers) do
+    if Map.has_key?(headers, "content-security-policy") do
+      case Regex.run(~r/\breferrer ([\w-]+)\b/, headers["content-security-policy"]) do
+           [_, value] -> value
+           nil -> nil
+      end
+    else
+      nil
+    end
+  end
+
+  defp check_referrer_policy(referrer) do
     cond do
       referrer in ["never", "no-referrer"] ->
         %{"status" => "success",
           "icon"   => "icon-umbrella2 success",
-          "text"   => gettext "Referrers not leaked"}
+          "text"   => gettext("Referrers not leaked")}
       referrer in ["origin", "origin-when-cross-origin", "origin-when-crossorigin"] ->
         %{"status" => "warning",
           "icon"   => "icon-raindrops2 warning",
-           "text"  => gettext "Referrers partially leaked"}
-      referrer in ["no-referrer-when-down-grade", "default", "unsafe-url", "always", ""] ->
+           "text"  => gettext("Referrers partially leaked")}
+      referrer in ["no-referrer-when-down-grade", "default", "unsafe-url", "always", "", nil] ->
         %{"status" => "alert",
           "icon" => "icon-raindrops2 alert",
-           "text" => gettext "Referrers leaked"}
+           "text" => gettext("Referrers leaked")}
       true ->
         %{"status" => "other",
           "icon" => "",
-          "text" => "Referrers are (probably) leaked"}
+          "text" => gettext("Referrers are (probably) leaked")}
     end
   end
 

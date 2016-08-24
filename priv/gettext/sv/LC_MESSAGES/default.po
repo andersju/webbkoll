@@ -91,15 +91,15 @@ msgstr "HTTP-headers"
 msgid "Insecure"
 msgstr "Osäker"
 
-#: lib/webbkoll/helpers.ex:100
+#: lib/webbkoll/helpers.ex:122
 msgid "Referrers leaked"
 msgstr "Referrers läcks"
 
-#: lib/webbkoll/helpers.ex:92
+#: lib/webbkoll/helpers.ex:114
 msgid "Referrers not leaked"
 msgstr "Referrers läcks inte"
 
-#: lib/webbkoll/helpers.ex:96
+#: lib/webbkoll/helpers.ex:118
 msgid "Referrers partially leaked"
 msgstr "Referrers läcks delvis"
 
@@ -217,7 +217,7 @@ msgstr "Osäker anslutning"
 msgid "Install Piwik on your own server. It's easy to install and easy to upgrade."
 msgstr "Kör Piwik på din egen server. Det är lätt att installera och lätt att uppgradera."
 
-#: web/controllers/site_controller.ex:143
+#: web/controllers/site_controller.ex:137
 msgid "Invalid domain: %{domain}"
 msgstr "Ogiltig domän: %{domain}"
 
@@ -237,7 +237,7 @@ msgstr "Inga tredjepartskakor utan medgivande."
 msgid "Piwik is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
 msgstr "Piwik är ett utmärkt alternativ. Det är fri mjukvara (PHP & MySQL) och du kör det på din egen server, vilket betyder att <em>du</em> har kontroll över din data. Piwik har olika integritetsinställningar och kan, till skillnad från Google Analytics, användas utan kakor. <em>(Medan analysverktyg kanske anses nödvändiga för vissa sajter så är ett annat alternativ att <em>inte spåra människor bara för att du kan</em>. Besökare har faktiskt inte någon skyldighet att hjälpa webbutvecklare att optimera saker.)</em>"
 
-#: web/controllers/site_controller.ex:93
+#: web/controllers/site_controller.ex:92
 msgid "Results for %{url}"
 msgstr "Resultat för %{url}"
 
@@ -279,7 +279,7 @@ msgstr "Tredjepartsförfrågningar"
 msgid "Third-party services"
 msgstr "Tredjepartstjänster"
 
-#: web/controllers/site_controller.ex:196
+#: web/controllers/site_controller.ex:184
 msgid "Trying same host too frequently. Try again in a minute."
 msgstr "Samma värd provas för ofta. Prova igen om en minut."
 
@@ -287,7 +287,7 @@ msgstr "Samma värd provas för ofta. Prova igen om en minut."
 msgid "YES,"
 msgstr "JA,"
 
-#: web/controllers/site_controller.ex:183
+#: web/controllers/site_controller.ex:173
 msgid "You're requesting too frequently. Install locally?"
 msgstr "Du skickar lite för många förfrågningar. Vad sägs om att installera verktyget lokalt istället?"
 
@@ -770,15 +770,15 @@ msgstr "Om"
 msgid "How our web privacy check tool works and how you can run your own instance."
 msgstr "Hur vårt testverktyg fungerar och hur du kan köra din egen instans."
 
-#: web/controllers/site_controller.ex:94
+#: web/controllers/site_controller.ex:93
 msgid "How this website is doing with regards to privacy."
 msgstr "Hur den här webbplatsen hjälper dig utöva makt över ditt privatliv (eller inte)."
 
-#: web/controllers/site_controller.ex:90
+#: web/controllers/site_controller.ex:89
 msgid "Processing failed"
 msgstr "Körningen misslyckades"
 
-#: web/controllers/site_controller.ex:109
+#: web/controllers/site_controller.ex:108
 msgid "Sorry, bots aren't allowed."
 msgstr "Beklagar, men botar är inte tillåtna."
 
@@ -802,7 +802,7 @@ msgstr "<em>Vänligen notera att den här tjänsten fortfarande är under utveck
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
 msgstr "Det här verktyget hjälper dig ta reda på vilka dataskyddande funktioner en sajt använder för att hjälpa dig utöva makt över ditt privatliv. "
 
-#: web/controllers/site_controller.ex:202
+#: web/controllers/site_controller.ex:191
 msgid "Error"
 msgstr "Fel"
 
@@ -810,6 +810,18 @@ msgstr "Fel"
 msgid "Search"
 msgstr "Sök"
 
-#: web/controllers/site_controller.ex:61 web/controllers/site_controller.ex:62
+#: web/controllers/site_controller.ex:60 web/controllers/site_controller.ex:61
 msgid "Status"
 msgstr "Status"
+
+#: web/templates/site/results.html.slime:1
+msgid "<em>If a referrer policy is delivered via both CSP and a meta element, the meta element's policy takes precedence.</em>"
+msgstr "<em>Om en referrer-policy anges genom både CSP och ett meta-element så har meta-elementets policy företräde.</em>"
+
+#: lib/webbkoll/helpers.ex:126
+msgid "Referrers are (probably) leaked"
+msgstr "Referrers läcks (antagligen)"
+
+#: web/templates/site/results.html.slime:1
+msgid "Referrer directive is set to <code>%{value}</code> in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer\">Content-Security-Policy (CSP) header</a>."
+msgstr "Referrer-direktivet är satt till <code>%{value}</code> i <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer\">Content-Security-Policy-headern (CSP)</a>."

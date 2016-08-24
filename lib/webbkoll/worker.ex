@@ -165,6 +165,10 @@ defmodule Webbkoll.Worker do
     |> Floki.find("meta[name='referrer']")
     |> Floki.attribute("content")
     |> List.to_string
+    |> case do
+         "" -> nil
+         value -> value
+       end
   end
 end
 

@@ -37,12 +37,12 @@
             .label
               a href="#https" #{gettext "Insecure"}
         li
-          = if @meta["referrer"]["status"] != "other" do
+          = if @meta["referrer_policy"]["status"] != "other" do
             .value
-              i class="#{@meta["referrer"]["icon"]}"
+              i class="#{@meta["referrer_policy"]["icon"]}"
             .label
               a href="#referrers"
-                = @meta["referrer"]["text"]
+                = @meta["referrer_policy"]["text"]
         li
           .value
             = @site.data["cookie_count"]["first_party"] + @site.data["cookie_count"]["third_party"]
@@ -206,13 +206,21 @@
         p
           = gettext(~s|<a href="https://https.cio.gov/hsts/">Read more about HSTS</a> and how to configure it in nginx, Apache and IIS.|) |> raw
 
-  section class="result #{@meta["referrer"]["status"]}"
+  section class="result #{@meta["referrer_policy"]["status"]}"
     h3#referrers
-      = @meta["referrer"]["text"]
+      = @meta["referrer_policy"]["text"]
     .alpha
-      = if @site.data["meta_referrer"] != "" do
-        p
-          = gettext("Meta referrer is set to <code>%{value}</code>.", value: @site.data["meta_referrer"]) |> raw
+      = if @meta["meta_referrer"] || @meta["csp_referrer"] do
+        = if @meta["meta_referrer"] do
+          p
+            = gettext("Meta referrer is set to <code>%{value}</code>.", value: @meta["meta_referrer"]) |> raw
+        = if @meta["csp_referrer"] do
+          p
+            = gettext(~s|Referrer directive is set to <code>%{value}</code> in <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer">Content-Security-Policy (CSP) header</a>.|, value: @meta["csp_referrer"]) |> raw
+        = if @meta["meta_referrer"] && @meta["csp_referrer"] do
+          p
+            = gettext("<em>If a referrer policy is delivered via both CSP and a meta element, the meta element's policy takes precedence.</em>") |> raw
+
       p
         = gettext(~s|When you click a link, your browser will typically send the HTTP <em>referer</em> [sic] header to the webserver where the destination webpage is at. The header contains the full URL of the page you came from. This lets sites see where traffic comes from. The header is also sent when external resources (such as images, fonts, JS and CSS) are loaded.|) |> raw
       
