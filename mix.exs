@@ -42,10 +42,9 @@ defmodule Webbkoll.Mixfile do
      {:floki, "~> 0.8"},
      {:exq, "~> 0.7"},
      {:ex_rated, "~> 1.2"},
-     {:timex, "~> 2.1"},
-     {:quantum, ">= 1.7.0"},
+     {:quantum, ">= 1.7.1"},
      {:ex_machina, "~> 1.0", only: :test},
-     {:public_suffix, "~> 0.3"},
+     {:public_suffix, "~> 0.4"},
      {:phoenix_slime, "~> 0.6"}]
   end
 

@@ -15,8 +15,6 @@ html lang="en"
     link rel="stylesheet" href="#{static_path(@conn, "/css/app.css")}"
 
   body
-    .corner-ribbon.top-right.sticky.blue Beta
-
     header.navigation role="banner"
       .navigation-wrapper
         nav role="navigation"
