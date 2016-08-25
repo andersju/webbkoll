@@ -15,7 +15,8 @@ config :webbkoll, Webbkoll.Endpoint,
   secret_key_base: "Yk9QpNTp3jg15sA4KFDjBq4hgfp0eYV0o1bYO6Hxf0BUV5deh4HkwMks/Z541bCR",
   render_errors: [accepts: ~w(html json)],
   pubsub: [name: Webbkoll.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+           adapter: Phoenix.PubSub.PG2],
+  server: true
 
 # Configures Elixir's Logger
 config :logger, :console,

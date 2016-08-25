@@ -19,7 +19,8 @@ defmodule Webbkoll.Mixfile do
   def application do
     [mod: {Webbkoll, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :httpoison, :tzdata, :ex_rated, :quantum]]
+                    :phoenix_ecto, :postgrex, :httpoison, :tzdata, :ex_rated, :quantum],
+     included_applications: [:ex2ms, :exq, :floki, :phoenix_slime, :public_suffix]]
   end
 
   # Specifies which paths to compile per environment.
@@ -45,7 +46,8 @@ defmodule Webbkoll.Mixfile do
      {:quantum, ">= 1.7.1"},
      {:ex_machina, "~> 1.0", only: :test},
      {:public_suffix, "~> 0.4"},
-     {:phoenix_slime, "~> 0.6"}]
+     {:phoenix_slime, "~> 0.6"},
+     {:distillery, "~> 0.9"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.
