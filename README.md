@@ -92,23 +92,39 @@ Compile application:
 
   * `MIX_ENV=prod mix compile`
 
-Finally, start the server:
+Finally, start the server (listens on port 4001 by default):
 
-  * `PORT=4001 MIX_ENV=prod mix phoenix.server`
+  * `MIX_ENV=prod mix phoenix.server`
 
 Or start the server in an interactive shell:
 
-  * `PORT=4001 MIX_ENV=prod iex -S mix phoenix.server`
+  * `MIX_ENV=prod iex -S mix phoenix.server`
 
 See also the official [Phoenix deployment guides](http://www.phoenixframework.org/docs/deployment).
 
+## TODO/ideas
+  * Optionally visit a number of randomly selected internal pages and let the results be based on the collective data from all the pages
+  * Availability over Tor (e.g. does the visitor have to solve a Cloudflare captcha?)
+  * HTTPS Everywhere: check for requests that _could_ have been secure
+  * Possibility to check sites that listen _only_ on port 443
+  * Check localStorage (Web Storage)
+  * SSL Labs integration
+  * DNSSEC?
+  * IPv6 support
+  * More? Let me know!
+
 ## Credits & things used
+  Frontend:
   * [Phoenix Framework](http://www.phoenixframework.org/) (MIT license) by Chris McCord
   * [Bourbon](https://github.com/thoughtbot/bourbon), [Neat](https://github.com/thoughtbot/neat), [Bitters](https://github.com/thoughtbot/bitters), [Refills](https://github.com/thoughtbot/refills) (MIT license) by thoughtbot
   * [Sortable](https://github.com/HubSpot/sortable) (MIT license) by Adam Schwartz
   * [Font Awesome](https://fortawesome.github.io/Font-Awesome/) (SIL OFL 1.1) by Dave Gandy
   * [Source Sans Pro](https://github.com/adobe-fonts/source-sans-pro) (SIL OFL 1.1) by Adobe Systems
   * [Disconnect's open source list of trackers](https://github.com/disconnectme/disconnect-tracking-protection) (GPLv3) by Disconnect, Inc.
+
+  Backend:
+  * [PhearJS](https://github.com/Tomtomgo/phearjs) (MIT license) by Tom Aizenberg and Marcel Gonzalez Corso
+  * [PhantomJS](http://phantomjs.org/) (BSD license)
 
 ## License
     The MIT License (MIT)
