@@ -31,7 +31,7 @@ msgstr[1] "%{count} osäkra"
 msgid "1 secure"
 msgid_plural "%{count} secure"
 msgstr[0] "%{count} säker"
-msgstr[1] "%{count} osäkra"
+msgstr[1] "%{count} säkra"
 
 #: web/templates/site/results.html.slime:1
 msgid "Cookie"
