@@ -58,5 +58,7 @@ html lang="en"
         .beta
           p
             = gettext("Feedback? Questions? <a href=\"mailto:info@dataskydd.net\">info@dataskydd.net</a>") |> raw
+          p
+            = gettext("All text, except quotes and where noted, is available under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>.") |> raw
 
     script src="#{static_path(@conn, "/js/app.js")}"

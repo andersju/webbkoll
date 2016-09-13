@@ -772,7 +772,7 @@ msgstr "Vi tillhandahåller inget API eftersom vi har begränsade resurser och P
 
 #: web/templates/site/index.html.slime:1
 msgid "<em>Please note that this service is still under development. Some sites (sometimes) don't work; sometimes results are incorrect. We're working on it! <strong>Also note</strong> that the backend is currently running on only one server with very limited resources, so in case of usage spikes, waiting times can be long. (But you can <a href=\"https://github.com/andersju/webbkoll\">run your own instance</a>!) <a href=\"mailto:info@dataskydd.net\">Feedback</a> is appreciated.</em>"
-msgstr "<em>Vänligen notera att den här tjänsten fortfarande är under utveckling. Vissa sajter funkar (ibland) inte; ibland är resultaten inkorrekta. Vi jobbar på det! <strong>Observera också</strong> att backend just nu körs på en enda väldigt begränsad server, så i fall många använder tjänsten samtidigt kan väntetiderna bli långa. (Men du kan <a href=\"https://github.com/andersju/webbkoll\">köra din egen instans</a>!) <a href=\"mailto:info@dataskydd.net\">Feedback</a> uppskattas."
+msgstr "<em>Vänligen notera att den här tjänsten fortfarande är under utveckling. Vissa sajter funkar (ibland) inte; ibland är resultaten inkorrekta. Vi jobbar på det! <strong>Observera också</strong> att backend just nu körs på en enda väldigt begränsad server, så i fall många använder tjänsten samtidigt kan väntetiderna bli långa. (Men du kan <a href=\"https://github.com/andersju/webbkoll\">köra din egen instans</a>!) <a href=\"mailto:info@dataskydd.net\">Feedback</a> uppskattas.</em>"
 
 #: web/templates/site/index.html.slime:1
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
@@ -825,3 +825,7 @@ msgstr "<a href=\"https://developer.mozilla.org/en/docs/Web/Security/Public_Key_
 #: lib/webbkoll/helpers.ex:60
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP\">Content Security Policy</a> is an effective measure to protect your site from <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting\">XSS</a> attacks. By whitelisting sources of approved content, you can prevent the browser from loading malicious assets. It can also help prevent information leakage."
 msgstr "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP\">Content Security Policy</a> är en effektiv åtgärd för att skydda din sajt mot <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting\">XSS</a>-attacker. Genom att vitlista godkända innehållskällor kan du förhindra webbläsaren från att ladda skadliga filer. Det kan också hjälpa till med att förhindra informationsläckage."
+
+#: web/templates/layout/app.html.slime:1
+msgid "All text, except quotes and where noted, is available under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>."
+msgstr "All text, förutom citat och där annat anges, är tillgänglig under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>."

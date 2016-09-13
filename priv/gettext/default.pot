@@ -811,3 +811,7 @@ msgstr ""
 #: lib/webbkoll/helpers.ex:60
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP\">Content Security Policy</a> is an effective measure to protect your site from <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting\">XSS</a> attacks. By whitelisting sources of approved content, you can prevent the browser from loading malicious assets. It can also help prevent information leakage."
 msgstr ""
+
+#: web/templates/layout/app.html.slime:1
+msgid "All text, except quotes and where noted, is available under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>."
+msgstr ""

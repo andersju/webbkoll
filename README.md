@@ -111,6 +111,8 @@ See also the official [Phoenix deployment guides](http://www.phoenixframework.or
   * SSL Labs integration
   * DNSSEC?
   * IPv6 support
+  * Check whether site is in HSTS preload list?
+  * More translations?
   * More? Let me know!
 
 ## Credits & things used

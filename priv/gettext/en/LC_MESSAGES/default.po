@@ -811,7 +811,11 @@ msgstr ""
 msgid "<a href=\"https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning\">HTTP Public Key Pinning</a> protects your site from <a href=\"https://en.wikipedia.org/wiki/Man-in-the-middle_attack\">MiTM attacks</a> using rogue X.509 certificates. By whitelisting only the identities that the browser should trust, your users are protected in the event a certificate authority is compromised."
 msgstr ""
 
-#, fuzzy
 #: lib/webbkoll/helpers.ex:60
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP\">Content Security Policy</a> is an effective measure to protect your site from <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting\">XSS</a> attacks. By whitelisting sources of approved content, you can prevent the browser from loading malicious assets. It can also help prevent information leakage."
+msgstr ""
+
+#, fuzzy
+#: web/templates/layout/app.html.slime:1
+msgid "All text, except quotes and where noted, is available under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>."
 msgstr ""
