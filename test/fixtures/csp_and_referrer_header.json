@@ -1,0 +1,43 @@
+{
+    "success": true,
+    "input_url": "http://www.example.com/",
+    "final_url": "http://www.example.com/",
+    "request_headers": {},
+    "response_headers": {
+        "date": "Wed, 24 Aug 2016 13:37:15 GMT",
+        "server": "Apache",
+        "x-content-type-options": "nosniff",
+        "last-modified": "Wed, 24 Aug 2016 13:35:23 GMT",
+        "etag": "\"42-53ad15a724042\"",
+        "accept-ranges": "bytes",
+        "content-length": "66",
+        "cache-control": "max-age=1209600",
+        "expires": "Wed, 07 Sep 2016 13:37:15 GMT",
+        "content-security-policy": "referrer unsafe-url",
+        "referrer-policy": "no-referrer",
+        "keep-alive": "timeout=5, max=100",
+        "connection": "Keep-Alive",
+        "content-type": "text/html; charset=UTF-8"
+    },
+    "requests": [
+        {
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+                }
+            ],
+            "id": 1,
+            "method": "GET",
+            "time": "2016-08-24T13:37:15.088Z",
+            "url": "http://www.example.com/"
+        }
+    ],
+    "cookies": [],
+    "had_js_errors": false,
+    "content": "<!DOCTYPE html><html><head>\n  </head>\n  <body>\n\n</body></html>"
+}

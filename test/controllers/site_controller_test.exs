@@ -83,7 +83,7 @@ defmodule Webbkoll.SiteControllerTest do
     assert data["third_party_request_types"]["insecure"] == 9
   end
 
-  test "site with Referrer Policy set in CSP header" do
+  test "site with Referrer Policy set in Content-Security-Policy header" do
     data = read_and_analyze_json("test/fixtures/csp_referrer.json")
     site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
     site_meta = get_site_meta(site)
@@ -92,7 +92,26 @@ defmodule Webbkoll.SiteControllerTest do
     assert site_meta["csp_referrer"] == "no-referrer"
   end
 
-  test "site with Referrer Policy set in both CSP and meta element (meta should take precedence)" do
+  test "site with Referrer Policy set in Referrer-Policy header" do
+    data = read_and_analyze_json("test/fixtures/referrer_header.json")
+    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
+    site_meta = get_site_meta(site)
+
+    assert site_meta["referrer_policy"]["status"] == "success"
+    assert site_meta["referrer_header"] == "no-referrer"
+  end
+
+  test "site with Referrer Policy set in both Referrer-Policy and Content-Security-Policy headers (CSP should take precedence)" do
+    data = read_and_analyze_json("test/fixtures/csp_and_referrer_header.json")
+    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
+    site_meta = get_site_meta(site)
+
+    assert site_meta["referrer_policy"]["status"] == "alert"
+    assert site_meta["csp_referrer"] == "unsafe-url"
+    assert site_meta["referrer_header"] == "no-referrer"
+  end
+
+  test "site with Referrer Policy set in both Content-Security-Policy header and meta element (meta should take precedence)" do
     data = read_and_analyze_json("test/fixtures/csp_and_meta_referrer.json")
     site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
     site_meta = get_site_meta(site)
