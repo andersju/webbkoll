@@ -12,7 +12,7 @@ defmodule Webbkoll.Locale do
   end
   def call(conn, default) do
     path =
-      if conn.params["locale"] != nil and String.downcase(conn.params["locale"]) in ietf_codes do
+      if conn.params["locale"] != nil and String.downcase(conn.params["locale"]) in ietf_codes() do
         ~r/(\/)#{conn.params["locale"]}(\/(?:.+)?|\?(?:.+)?|$)/
         |> Regex.replace(conn.request_path, "\\1#{default}\\2")
       else

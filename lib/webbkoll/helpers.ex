@@ -5,7 +5,7 @@ defmodule Webbkoll.Helpers do
   def check_services(requests) do
     requests
     |> Enum.reduce([], fn(request, acc) ->
-      Enum.reduce(services, acc, fn({k, v}, acc) ->
+      Enum.reduce(services(), acc, fn({k, v}, acc) ->
         case String.contains?(request["url"], v["pattern"]) do
           true -> acc ++ [k]
           false -> acc
@@ -16,8 +16,8 @@ defmodule Webbkoll.Helpers do
   end
 
   def get_service(service, key) do
-    if Map.has_key?(services, service) do
-      services[service][key]
+    if Map.has_key?(services(), service) do
+      services()[service][key]
     end
   end
 

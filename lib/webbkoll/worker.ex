@@ -149,7 +149,7 @@ defmodule Webbkoll.Worker do
 
   defp get_cookies(cookies, registerable_domain) do
     {first, third} =
-      Enum.partition(cookies, fn(x) ->
+      Enum.split_with(cookies, fn(x) ->
         (x["domain"] |> String.trim(".") |> get_registerable_domain) == registerable_domain
       end)
     %{"first_party" => first, "third_party" => third}

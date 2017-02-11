@@ -1,7 +1,6 @@
 defmodule Webbkoll.Router do
   use Webbkoll.Web, :router
   @default_locale Application.get_env(:webbkoll, :default_locale)
-  @locales Application.get_env(:webbkoll, :locales)
 
   pipeline :browser do
     plug :accepts, ["html"]

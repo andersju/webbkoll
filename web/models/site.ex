@@ -11,7 +11,7 @@ defmodule Webbkoll.Site do
     field :data, :map
     field :try_count, :integer
 
-    timestamps
+    timestamps()
   end
 
   @required_fields ~w(input_url)

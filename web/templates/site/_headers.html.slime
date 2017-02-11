@@ -6,7 +6,7 @@
   .beta
     = gettext "Set?"
 
-= for {header, description} <- headers_to_check do
+= for {header, description} <- headers_to_check() do
   .header-item
     .alpha
       | #{header}

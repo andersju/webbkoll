@@ -36,17 +36,6 @@ This is a project by [Dataskydd.net](https://dataskydd.net). We received funding
 ## Backend
   * Get PhearJS running - see https://github.com/Tomtomgo/phearjs/blob/master/README.md. (Clone https://github.com/andersju/phearjs/ to get the one that Dataskydd.net is running.)
 
-## Ruby client
-If you just want the data in a machine-readable form, you only need
-PhearJS and the simple client written in Ruby in `misc/ruby-client`:
-
-  * Make sure Ruby is installed on your system and that PhearJS is running. Then, in `misc/ruby-client`:
-  * Install dependencies: `bundle install`
-  * To see possible options, run `ruby webbkoll.rb --help`
-  * Example: `ruby webbkoll.rb http://www.example.com`
-  * By default the backend is `http://localhost:8100` and the program will output JSON to STDOUT.
-  * Please note that it's currently _very_ basic.
-
 ## Frontend (this app!)
   * Install Erlang (18) and Elixir (>= 1.3) -- see http://elixir-lang.org/install.html
   * Have [redis](http://redis.io/) running (needed for exq job handling)
