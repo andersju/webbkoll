@@ -36,7 +36,8 @@ config :phoenix, :template_engines,
   slim: PhoenixSlime.Engine,
   slime: PhoenixSlime.Engine
 
-config :quantum, cron: [
-    "@daily":       {Webbkoll.CronJobs, :remove_old_records},
-    "@hourly":      {Webbkoll.CronJobs, :remove_stuck_records}
-]
+config :quantum, :webbkoll,
+  cron: [
+    "@daily": {Webbkoll.CronJobs, :remove_old_records},
+    "@hourly": {Webbkoll.CronJobs, :remove_stuck_records}
+  ]

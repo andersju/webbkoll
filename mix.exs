@@ -38,7 +38,7 @@ defmodule Webbkoll.Mixfile do
      {:phoenix_html, "~> 2.6"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
-     {:cowboy, "~> 1.0"},
+     {:cowboy, "~> 1.1"},
      {:httpoison, "~> 0.8"},
      {:floki, "~> 0.8"},
      {:exq, "~> 0.7"},
@@ -47,7 +47,7 @@ defmodule Webbkoll.Mixfile do
      {:ex_machina, "~> 1.0", only: :test},
      {:public_suffix, "~> 0.4"},
      {:phoenix_slime, "~> 0.8"},
-     {:distillery, "~> 1.0"}]
+     {:hackney, "~> 1.6.5"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.

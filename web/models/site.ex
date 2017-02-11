@@ -14,17 +14,12 @@ defmodule Webbkoll.Site do
     timestamps()
   end
 
-  @required_fields ~w(input_url)
-  @optional_fields ~w(final_url status status_message data try_count)
-
   @doc """
-  Creates a changeset based on the `model` and `params`.
-
-  If no params are provided, an invalid changeset is returned
-  with no validation performed.
+  Builds a changeset based on the `struct` and `params`.
   """
-  def changeset(model, params \\ :empty) do
-    model
-    |> cast(params, @required_fields, @optional_fields)
+  def changeset(struct, params \\ %{}) do
+    struct
+    |> cast(params, [:input_url, :final_url, :status, :status_message, :data, :try_count])
+    |> validate_required([:input_url])
   end
 end
