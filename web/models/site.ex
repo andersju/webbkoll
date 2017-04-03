@@ -9,7 +9,6 @@ defmodule Webbkoll.Site do
     field :status, :string
     field :status_message, :string
     field :data, :map
-    field :try_count, :integer
 
     timestamps()
   end
@@ -19,7 +18,7 @@ defmodule Webbkoll.Site do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:input_url, :final_url, :status, :status_message, :data, :try_count])
+    |> cast(params, [:input_url, :final_url, :status, :status_message, :data])
     |> validate_required([:input_url])
   end
 end

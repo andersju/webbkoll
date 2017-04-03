@@ -1,19 +1,11 @@
 defmodule Webbkoll.Worker do
   alias Webbkoll.{Site, Repo}
-  import Ecto.Query
   import Webbkoll.Helpers
 
   @max_retries Application.get_env(:exq, :max_retries)
 
   def perform(id, url, refresh, backend_url) do
     update_site(id, %{status: "processing"})
-
-    # TODO: Stop having try_count in db once exq gets
-    # job introspection (https://github.com/akira/exq/issues/155)
-    Site
-    |> where(id: ^id)
-    |> update(inc: [try_count: 1])
-    |> Repo.update_all([])
 
     url
     |> fetch(refresh, backend_url)
@@ -63,11 +55,19 @@ defmodule Webbkoll.Worker do
   end
 
   defp handle_error(reason, id) do
-    site = Repo.get(Site, id)
-    if site.try_count > @max_retries ||
+    job = Exq.worker_job()
+
+    # Usually we should try again because PhantomJS sometimes randomly fails,
+    # but sometimes - e.g. when user has entered an invalid domain name - it's
+    # better not to, and to give feedback right away. Ideally (?) we should then
+    # remove the job from exq's queue, but that doesn't appear to work (or I'm
+    # missing something) -- so in certain cases exq will try again, even after
+    # user has been shown the Failed page.
+    if job.retry_count == @max_retries ||
     String.ends_with?(reason, ["not found", "Connection refused"]) do
       update_site(id, %{status: "failed", status_message: reason})
     end
+
     raise WorkerError, message: reason
   end
 

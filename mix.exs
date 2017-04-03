@@ -41,7 +41,7 @@ defmodule Webbkoll.Mixfile do
      {:cowboy, "~> 1.1"},
      {:httpoison, "~> 0.8"},
      {:floki, "~> 0.8"},
-     {:exq, "~> 0.7"},
+     {:exq, "~> 0.8.5"},
      {:ex_rated, "~> 1.2"},
      {:quantum, ">= 1.7.1"},
      {:ex_machina, "~> 1.0", only: :test},

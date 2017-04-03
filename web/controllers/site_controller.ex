@@ -33,7 +33,7 @@ defmodule Webbkoll.SiteController do
 
   def check(%Plug.Conn{assigns: %{input_url: proper_url}} = conn, _params) do
     %Site{}
-    |> Site.changeset(%{input_url: proper_url, status: "queue", try_count: 0})
+    |> Site.changeset(%{input_url: proper_url, status: "queue"})
     |> Repo.insert
     |> handle_insert(conn, proper_url)
   end
