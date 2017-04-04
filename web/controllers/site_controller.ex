@@ -139,9 +139,10 @@ defmodule Webbkoll.SiteController do
   end
 
   defp check_if_site_exists(%Plug.Conn{assigns: %{input_url: proper_url}} = conn, _params) do
-    cond do
-      conn.params["refresh"] == "on" -> conn
-      true -> check_site_in_db(conn, proper_url)
+    if conn.params["refresh"] == "on" do
+      conn
+    else
+      check_site_in_db(conn, proper_url)
     end
   end
 

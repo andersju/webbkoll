@@ -95,7 +95,6 @@ See also the official [Phoenix deployment guides](http://www.phoenixframework.or
   * Optionally visit a number of randomly selected internal pages and let the results be based on the collective data from all the pages
   * Availability over Tor (e.g. does the visitor have to solve a Cloudflare captcha?)
   * HTTPS Everywhere: check for requests that _could_ have been secure
-  * Possibility to check sites that listen _only_ on port 443
   * Check localStorage (Web Storage)
   * SSL Labs integration
   * DNSSEC?

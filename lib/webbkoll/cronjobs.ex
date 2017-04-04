@@ -1,5 +1,6 @@
 defmodule Webbkoll.CronJobs do
-  alias Webbkoll.{Site, Repo}
+  alias Webbkoll.Site
+  alias Webbkoll.Repo
   import Ecto.Query
 
   def remove_old_records do

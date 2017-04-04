@@ -8,11 +8,32 @@ defmodule Webbkoll.Worker do
     update_site(id, %{status: "processing"})
 
     url
+    |> check_if_https_only
     |> fetch(refresh, backend_url)
     |> handle_response(id)
     |> decode_response(id)
     |> process_json
     |> save(id)
+  end
+
+  # By default, the get_proper_url plug in SiteController makes sure all URLs are
+  # http:// no matter what (even if user enters https:// in our form); this is to
+  # check whether a site redirects to HTTPS by default. However, a small (but
+  # probably increasing) amount of sites don't do insecure HTTP *at all*. This is
+  # a somewhat crude way to deal with that edge case.
+  defp check_if_https_only(url) do
+    case HTTPoison.head(url) do
+      {:error, %{reason: :econnrefused}} -> get_https_url(url)
+      _ -> url
+    end
+  end
+
+  defp get_https_url(url) do
+    url
+    |> URI.parse
+    |> Map.put(:scheme, "https")
+    |> Map.put(:port, 443)
+    |> URI.to_string
   end
 
   defp update_site(id, params) do
@@ -29,12 +50,12 @@ defmodule Webbkoll.Worker do
   def fetch(url, refresh, backend_url) do
     params =
       case refresh do
-        "on" -> %{fetch_url: url, parse_delay: 10000, get_requests: "true",
+        "on" -> %{fetch_url: url, parse_delay: 10_000, get_requests: "true",
                   get_cookies: "true", force: "true"}
-        _    -> %{fetch_url: url, parse_delay: 10000,
+        _    -> %{fetch_url: url, parse_delay: 10_000,
                   get_requests: "true", get_cookies: "true"}
       end
-    HTTPoison.get(backend_url, [], recv_timeout: 30000, params: params)
+    HTTPoison.get(backend_url, [], recv_timeout: 30_000, params: params)
   end
 
   defp handle_response({:ok, %{status_code: 200, body: body}}, _id) do
@@ -96,7 +117,7 @@ defmodule Webbkoll.Worker do
   end
 
   defp save(data, id) do
-    update_site(id, %{status: "done", final_url: data["final_url"], data: data})
+    update_site(id, %{status: "done", input_url: data["input_url"], final_url: data["final_url"], data: data})
   end
 
   defp get_registerable_domain(host) do
