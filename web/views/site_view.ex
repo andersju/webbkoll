@@ -6,4 +6,8 @@ defmodule Webbkoll.SiteView do
     |> DateTime.from_unix!
     |> DateTime.to_string
   end
+
+  def format_naivedatetime(naivedatetime) do
+    Timex.format!(naivedatetime, "%Y-%m-%d %H:%M:%S", :strftime)
+  end
 end

@@ -12,7 +12,7 @@
         i.icon-refresh
         = gettext("Check again")
       i.icon-clock-o
-      = @site.updated_at
+      = format_naivedatetime(@site.updated_at)
 
   section#input-url
     p
