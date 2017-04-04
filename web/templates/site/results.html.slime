@@ -182,7 +182,7 @@
 
       .beta
         p
-          gettext "In its simplest form, the policy tells a browser to enable HSTS for that exact domain or subdomain, and to remember it for a given number of seconds (the policy is refreshed every time browser sees the header again):""
+          = gettext "In its simplest form, the policy tells a browser to enable HSTS for that exact domain or subdomain, and to remember it for a given number of seconds (the policy is refreshed every time browser sees the header again):"
 
         p
           code Strict-Transport-Security: max-age=31536000;
@@ -192,10 +192,10 @@
           code Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
         p
-          gettext "Since it's just an HTTP header, HSTS is very easy to add to a domain.""
+          = gettext "Since it's just an HTTP header, HSTS is very easy to add to a domain."
 
         p
-          gettext "However, to enable HSTS for a domain via the HTTP header, the browser does have to see the header at least once. This means that users are not protected until after their first successful secure connection to a given domain."
+          = gettext "However, to enable HSTS for a domain via the HTTP header, the browser does have to see the header at least once. This means that users are not protected until after their first successful secure connection to a given domain."
 
         p
           = gettext(~s|To solve the "first visit" problem, the Chrome security team created an "HSTS preload list": a <a href="https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json">list of domains</a> baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit. Firefox, Safari, and newer versions of Internet Explorer also incorporate Chrome’s HSTS preload list.|) |> raw

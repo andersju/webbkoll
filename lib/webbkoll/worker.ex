@@ -1,5 +1,6 @@
 defmodule Webbkoll.Worker do
-  alias Webbkoll.{Site, Repo}
+  alias Webbkoll.Site
+  alias Webbkoll.Repo
   import Webbkoll.Helpers
 
   @max_retries Application.get_env(:exq, :max_retries)

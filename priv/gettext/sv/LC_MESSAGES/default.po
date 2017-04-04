@@ -91,15 +91,15 @@ msgstr "HTTP-headers"
 msgid "Insecure"
 msgstr "Osäker"
 
-#: lib/webbkoll/helpers.ex:122
+#: lib/webbkoll/helpers.ex:137
 msgid "Referrers leaked"
 msgstr "Referrers läcks"
 
-#: lib/webbkoll/helpers.ex:114
+#: lib/webbkoll/helpers.ex:129
 msgid "Referrers not leaked"
 msgstr "Referrers läcks inte"
 
-#: lib/webbkoll/helpers.ex:118
+#: lib/webbkoll/helpers.ex:133
 msgid "Referrers partially leaked"
 msgstr "Referrers läcks delvis"
 
@@ -255,7 +255,7 @@ msgstr "Tredjepartsförfrågningar"
 msgid "Third-party services"
 msgstr "Tredjepartstjänster"
 
-#: web/controllers/site_controller.ex:184
+#: web/controllers/site_controller.ex:185
 msgid "Trying same host too frequently. Try again in a minute."
 msgstr "Samma värd provas för ofta. Prova igen om en minut."
 
@@ -263,7 +263,7 @@ msgstr "Samma värd provas för ofta. Prova igen om en minut."
 msgid "YES,"
 msgstr "JA,"
 
-#: web/controllers/site_controller.ex:173
+#: web/controllers/site_controller.ex:174
 msgid "You're requesting too frequently. Install locally?"
 msgstr "Du skickar lite för många förfrågningar. Vad sägs om att installera verktyget lokalt istället?"
 
@@ -778,7 +778,7 @@ msgstr "<em>Vänligen notera att den här tjänsten fortfarande är under utveck
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
 msgstr "Det här verktyget hjälper dig ta reda på vilka dataskyddande funktioner en sajt använder för att hjälpa dig utöva makt över ditt privatliv. "
 
-#: web/controllers/site_controller.ex:191
+#: web/controllers/site_controller.ex:192
 msgid "Error"
 msgstr "Fel"
 
@@ -794,7 +794,7 @@ msgstr "Status"
 msgid "<em>If a referrer policy is delivered via both CSP and a meta element, the meta element's policy takes precedence.</em>"
 msgstr "<em>Om en referrer-policy anges genom både CSP och ett meta-element så har meta-elementets policy företräde.</em>"
 
-#: lib/webbkoll/helpers.ex:126
+#: lib/webbkoll/helpers.ex:141
 msgid "Referrers are (probably) leaked"
 msgstr "Referrers läcks (antagligen)"
 
@@ -829,3 +829,15 @@ msgstr "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP\">Co
 #: web/templates/layout/app.html.slime:1
 msgid "All text, except quotes and where noted, is available under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>."
 msgstr "All text, förutom citat och där annat anges, är tillgänglig under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>."
+
+#: web/templates/site/results.html.slime:1
+msgid "In its simplest form, the policy tells a browser to enable HSTS for that exact domain or subdomain, and to remember it for a given number of seconds (the policy is refreshed every time browser sees the header again):"
+msgstr "I dess enklaste form säger policyn åt webbläsaren att aktivera HSTS för den exakta domänen eller underdomänen och komma ihåg detta i ett givet antal sekunder (policyn laddas om varje gång webbläsaren ser headern igen):"
+
+#: web/templates/site/results.html.slime:1
+msgid "Since it's just an HTTP header, HSTS is very easy to add to a domain."
+msgstr "Eftersom det bara är en HTTP-header är det enkelt att lägga till i en domän."
+
+#: web/templates/site/results.html.slime:1
+msgid "However, to enable HSTS for a domain via the HTTP header, the browser does have to see the header at least once. This means that users are not protected until after their first successful secure connection to a given domain."
+msgstr "För att aktivera HSTS för en domän genom HTTP-headern måste webbläsaren dock se headern minst en gång. Det betyder att användare inte är skyddade förrän deras första framgångsrika säkra anslutning till en given domän."

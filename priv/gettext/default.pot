@@ -77,15 +77,15 @@ msgstr ""
 msgid "Insecure"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:122
+#: lib/webbkoll/helpers.ex:137
 msgid "Referrers leaked"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:114
+#: lib/webbkoll/helpers.ex:129
 msgid "Referrers not leaked"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:118
+#: lib/webbkoll/helpers.ex:133
 msgid "Referrers partially leaked"
 msgstr ""
 
@@ -241,7 +241,7 @@ msgstr ""
 msgid "Third-party services"
 msgstr ""
 
-#: web/controllers/site_controller.ex:184
+#: web/controllers/site_controller.ex:185
 msgid "Trying same host too frequently. Try again in a minute."
 msgstr ""
 
@@ -249,7 +249,7 @@ msgstr ""
 msgid "YES,"
 msgstr ""
 
-#: web/controllers/site_controller.ex:173
+#: web/controllers/site_controller.ex:174
 msgid "You're requesting too frequently. Install locally?"
 msgstr ""
 
@@ -764,7 +764,7 @@ msgstr ""
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
 msgstr ""
 
-#: web/controllers/site_controller.ex:191
+#: web/controllers/site_controller.ex:192
 msgid "Error"
 msgstr ""
 
@@ -780,7 +780,7 @@ msgstr ""
 msgid "<em>If a referrer policy is delivered via both CSP and a meta element, the meta element's policy takes precedence.</em>"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:126
+#: lib/webbkoll/helpers.ex:141
 msgid "Referrers are (probably) leaked"
 msgstr ""
 
@@ -814,4 +814,16 @@ msgstr ""
 
 #: web/templates/layout/app.html.slime:1
 msgid "All text, except quotes and where noted, is available under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "In its simplest form, the policy tells a browser to enable HSTS for that exact domain or subdomain, and to remember it for a given number of seconds (the policy is refreshed every time browser sees the header again):"
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "Since it's just an HTTP header, HSTS is very easy to add to a domain."
+msgstr ""
+
+#: web/templates/site/results.html.slime:1
+msgid "However, to enable HSTS for a domain via the HTTP header, the browser does have to see the header at least once. This means that users are not protected until after their first successful secure connection to a given domain."
 msgstr ""
