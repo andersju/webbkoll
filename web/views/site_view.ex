@@ -8,6 +8,8 @@ defmodule Webbkoll.SiteView do
   end
 
   def format_naivedatetime(naivedatetime) do
-    Timex.format!(naivedatetime, "%Y-%m-%d %H:%M:%S", :strftime)
+    naivedatetime
+    |> DateTime.from_naive!("Etc/UTC")
+    |> Timex.format!("%Y-%m-%d %H:%M:%S %Z", :strftime)
   end
 end
