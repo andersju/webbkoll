@@ -11,7 +11,7 @@ defmodule Webbkoll.Repo.Migrations.CreateSite do
       add :status_message, :string
       add :data, :map
 
-      timestamps
+      timestamps()
     end
 
   end
