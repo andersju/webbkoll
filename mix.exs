@@ -19,7 +19,7 @@ defmodule Webbkoll.Mixfile do
   def application do
     [mod: {Webbkoll, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :httpoison, :tzdata, :ex_rated, :quantum, :timex],
+                    :phoenix_ecto, :postgrex, :httpoison, :tzdata, :ex_rated, :quantum, :timex, :geolix],
      included_applications: [:ex2ms, :exq, :floki, :phoenix_slime, :public_suffix]]
   end
 
@@ -48,7 +48,8 @@ defmodule Webbkoll.Mixfile do
      {:public_suffix, "~> 0.4"},
      {:phoenix_slime, "~> 0.8"},
      {:timex, "~> 3.0"},
-     {:hackney, "~> 1.6.5"}]
+     {:hackney, "~> 1.6.5"},
+     {:geolix, "~> 0.13"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.

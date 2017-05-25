@@ -41,3 +41,12 @@ config :quantum, :webbkoll,
     "@daily": {Webbkoll.CronJobs, :remove_old_records},
     "@hourly": {Webbkoll.CronJobs, :remove_stuck_records}
   ]
+
+config :geolix,
+  databases: [
+    %{
+      id:      :country,
+      adapter: Geolix.Adapter.MMDB2,
+      source:  Path.relative_to_cwd("priv/GeoLite2-Country.mmdb")
+    }
+  ]

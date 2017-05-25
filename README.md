@@ -44,6 +44,7 @@ This is a project by [Dataskydd.net](https://dataskydd.net). We received funding
   * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
   * Install Node.js dependencies with `npm install`
   * Make sure PhearJS and redis are running on the hosts/ports specified in `config/dev.exs`
+  * Download the [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2/geolite2/) in MaxMind DB binary format, extract it, and make sure it's available as `priv/GeoLite2-Country.mmdb` (or as specified in `config/config.exs`).
   * Start Phoenix endpoint with `mix phoenix.server` (or in an interactive shell: `iex -S mix phoenix.server`)
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
@@ -109,8 +110,8 @@ See also the official [Phoenix deployment guides](http://www.phoenixframework.or
   * [Bourbon](https://github.com/thoughtbot/bourbon), [Neat](https://github.com/thoughtbot/neat), [Bitters](https://github.com/thoughtbot/bitters), [Refills](https://github.com/thoughtbot/refills) (MIT license) by thoughtbot
   * [Sortable](https://github.com/HubSpot/sortable) (MIT license) by Adam Schwartz
   * [Font Awesome](https://fortawesome.github.io/Font-Awesome/) (SIL OFL 1.1) by Dave Gandy
-  * [Source Sans Pro](https://github.com/adobe-fonts/source-sans-pro) (SIL OFL 1.1) by Adobe Systems
   * [Disconnect's open source list of trackers](https://github.com/disconnectme/disconnect-tracking-protection) (GPLv3) by Disconnect, Inc.
+  * GeoLite2 data created by MaxMind (CC BY-SA 4.0), available from [http://www.maxmind.com](http://www.maxmind.com)
 
   Backend:
   * [PhearJS](https://github.com/Tomtomgo/phearjs) (MIT license) by Tom Aizenberg and Marcel Gonzalez Corso

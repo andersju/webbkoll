@@ -1,6 +1,6 @@
 defmodule Webbkoll.Trackers do
   # Make sure trackers.ex is recompiled if services.json changes
-  @external_resource "services.json"
+  @external_resource Application.app_dir(:webbkoll, "priv/services.json")
 
   # We want to be able to match domains against Disconnect's open source list
   # of trackers (https://github.com/disconnectme/disconnect-tracking-protection),
@@ -10,7 +10,7 @@ defmodule Webbkoll.Trackers do
   # ensure that this is only done at compile time.
 
   @hosts (fn ->
-    "services.json"
+    Application.app_dir(:webbkoll, "priv/services.json")
     |> File.read!
     |> Poison.decode!
     |> Map.get("categories")

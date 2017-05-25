@@ -64,6 +64,12 @@
               = ngettext("Third-party contacted", "Third-parties contacted", @site.data["third_party_request_count"]["unique_hosts"])
 
 #results
+  = if @site.data["geolocation"] do
+    section class="result"
+      .alpha
+        p
+          = gettext(~s|The server <strong>%{domain}</strong> (%{host_ip}) appears to be located in <strong>%{country}</strong>.|, domain: @meta["host"], host_ip: @site.data["host_ip"], country: @site.data["geolocation"]) |> raw
+
   section class="result #{if @site.data["scheme"] == "https", do: "success", else: "alert"}"
     h3#https
       = if @site.data["scheme"] == "https" do

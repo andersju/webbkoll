@@ -99,7 +99,8 @@ defmodule Webbkoll.Worker do
          cookies = get_cookies(json["cookies"], reg_domain),
          third_party_requests = get_third_party_requests(json["requests"], reg_domain),
          insecure_first_party_requests = get_insecure_first_party_requests(json["requests"], reg_domain),
-         third_party_request_types = get_request_types(third_party_requests)
+         third_party_request_types = get_request_types(third_party_requests),
+         host_ip = get_ip_by_host(url.host)
     do
       %{"input_url" => json["input_url"],
         "final_url" => json["final_url"],
@@ -113,7 +114,9 @@ defmodule Webbkoll.Worker do
         "third_party_request_count" => get_request_count(third_party_requests),
         "insecure_requests_count" => third_party_request_types["insecure"] + Enum.count(insecure_first_party_requests),
         "meta_referrer" => get_meta_referrer(json["content"]),
-        "headers" => json["response_headers"]}
+        "headers" => json["response_headers"],
+        "host_ip" => host_ip,
+        "geolocation" => get_geolocation_by_ip(host_ip)}
      end
   end
 
@@ -190,6 +193,25 @@ defmodule Webbkoll.Worker do
     |> case do
          "" -> nil
          value -> value
+       end
+  end
+
+  defp get_geolocation_by_ip(nil) do
+    nil
+  end
+  defp get_geolocation_by_ip(ip) do
+    ip
+    |> Geolix.lookup([as: :raw, where: :country, locale: :en])
+    |> get_in([:country, :iso_code])
+  end
+
+  defp get_ip_by_host(host) do
+    host
+    |> String.to_charlist
+    |> :inet.gethostbyname
+    |> case do
+         {:error, _} -> nil
+         {:ok, hostent} -> hostent |> elem(5) |> hd |> Tuple.to_list |> Enum.join(".")
        end
   end
 end
