@@ -112,6 +112,8 @@ See also the official [Phoenix deployment guides](http://www.phoenixframework.or
   * [Font Awesome](https://fortawesome.github.io/Font-Awesome/) (SIL OFL 1.1) by Dave Gandy
   * [Disconnect's open source list of trackers](https://github.com/disconnectme/disconnect-tracking-protection) (GPLv3) by Disconnect, Inc.
   * GeoLite2 data created by MaxMind (CC BY-SA 4.0), available from [http://www.maxmind.com](http://www.maxmind.com)
+  * JSON for ISO 3166-1 country code i18n from [node-i18n-iso-countries
+](https://github.com/michaelwittig/node-i18n-iso-countries) (MIT license)
 
   Backend:
   * [PhearJS](https://github.com/Tomtomgo/phearjs) (MIT license) by Tom Aizenberg and Marcel Gonzalez Corso

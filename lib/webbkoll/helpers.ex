@@ -1,6 +1,22 @@
 defmodule Webbkoll.Helpers do
   import Webbkoll.Gettext
 
+  @countries (fn ->
+    Enum.reduce(Application.get_env(:webbkoll, :locales), %{}, fn(lang, acc) ->
+      Application.app_dir(:webbkoll, "priv/#{lang}.json")
+      |> File.read!
+      |> Poison.decode!
+      |> fn(x) -> Map.put_new(acc, lang, x) end.()
+    end)
+  end).()
+
+  def country_from_iso(locale, country_code) do
+    case Map.fetch(@countries[locale], country_code) do
+      :error -> nil
+      {:ok, country} -> country
+    end
+  end
+
   def check_services(nil), do: []
   def check_services(requests) do
     requests

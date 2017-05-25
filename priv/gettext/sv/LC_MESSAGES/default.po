@@ -91,15 +91,15 @@ msgstr "HTTP-headers"
 msgid "Insecure"
 msgstr "Osäker"
 
-#: lib/webbkoll/helpers.ex:137
+#: lib/webbkoll/helpers.ex:153
 msgid "Referrers leaked"
 msgstr "Referrers läcks"
 
-#: lib/webbkoll/helpers.ex:129
+#: lib/webbkoll/helpers.ex:145
 msgid "Referrers not leaked"
 msgstr "Referrers läcks inte"
 
-#: lib/webbkoll/helpers.ex:133
+#: lib/webbkoll/helpers.ex:149
 msgid "Referrers partially leaked"
 msgstr "Referrers läcks delvis"
 
@@ -164,7 +164,7 @@ msgstr "<code>%{domain}</code> använder HTTPS som standard."
 msgid "A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains."
 msgstr "En tredjepartsförfrågan är en förfrågan som inte gjorts till <code>%{domain}</code> eller dess underdomäner."
 
-#: lib/webbkoll/helpers.ex:36
+#: lib/webbkoll/helpers.ex:52
 msgid "Consider a self-hosted platform."
 msgstr "Överväg att använda en självhostad plattform."
 
@@ -177,7 +177,7 @@ msgstr "Misslyckades"
 msgid "First-party cookies"
 msgstr "Förstapartskakor"
 
-#: lib/webbkoll/helpers.ex:46
+#: lib/webbkoll/helpers.ex:62
 msgid "Fonts can easily be self-hosted. The tool <a href=\"https://google-webfonts-helper.herokuapp.com/fonts\">google-webfonts-helper</a> lets you select one or more fonts, generates the proper CSS and prepares a zip file with the fonts. For a command-line alternative, the shell script <a href=\"https://github.com/neverpanic/google-font-download\">google-font-download</a> provides similar functionality."
 msgstr "Typsnitt kan enkelt hostas på egen server. Den fria tjänsten <a href=\"https://google-webfonts-helper.herokuapp.com/fonts\">google-webfonts-helper</a> låter dig välja ett eller flera typsnitt från Google Fonts, genererar lämplig CSS och förbereder en zip.fil med de valda typsnitten. För ett kommandoradsalternativ erbjuder bash-skriptet  <a href=\"https://github.com/neverpanic/google-font-download\">google-font-download</a> liknande funktionalitet."
 
@@ -189,7 +189,7 @@ msgstr "Osäkra attribut används dock."
 msgid "Insecure connection"
 msgstr "Osäker anslutning"
 
-#: lib/webbkoll/helpers.ex:51
+#: lib/webbkoll/helpers.ex:67
 msgid "Install Piwik on your own server. It's easy to install and easy to upgrade."
 msgstr "Kör Piwik på din egen server. Det är lätt att installera och lätt att uppgradera."
 
@@ -209,7 +209,7 @@ msgstr "Inga förstapartskakor utan medgivande."
 msgid "No third-party cookies without consent."
 msgstr "Inga tredjepartskakor utan medgivande."
 
-#: lib/webbkoll/helpers.ex:41
+#: lib/webbkoll/helpers.ex:57
 msgid "Piwik is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
 msgstr "Piwik är ett utmärkt alternativ. Det är fri mjukvara (PHP & MySQL) och du kör det på din egen server, vilket betyder att <em>du</em> har kontroll över din data. Piwik har olika integritetsinställningar och kan, till skillnad från Google Analytics, användas utan kakor. <em>(Medan analysverktyg kanske anses nödvändiga för vissa sajter så är ett annat alternativ att <em>inte spåra människor bara för att du kan</em>. Besökare har faktiskt inte någon skyldighet att hjälpa webbutvecklare att optimera saker.)</em>"
 
@@ -221,7 +221,7 @@ msgstr "Resultat för %{url}"
 msgid "Secure connection"
 msgstr "Säker anslutning"
 
-#: lib/webbkoll/helpers.ex:31
+#: lib/webbkoll/helpers.ex:47
 msgid "Self-host the files."
 msgstr "Självhosta filerna."
 
@@ -233,11 +233,11 @@ msgstr "Strict Transport Security används"
 msgid "Strict Transport Security not enabled"
 msgstr "Strict Transport Security används inte"
 
-#: lib/webbkoll/helpers.ex:30
+#: lib/webbkoll/helpers.ex:46
 msgid "The site is loading libraries from one or more CDN:s."
 msgstr "Sajten laddar en eller flera resurser från CDN:er."
 
-#: lib/webbkoll/helpers.ex:40
+#: lib/webbkoll/helpers.ex:56
 msgid "The site is using Google Analytics. While this is a powerful tool, we think you should respect your users' privacy and not tell Google about them &mdash; at least not without your users' consent."
 msgstr "Sajten använder Google Analytics. Det är förvisso ett kraftfullt verktyg, men vi tycker att du bör respektera dina användares integritet och inte berätta om dem för Google &mdash; åtminstone inte utan deras medgivande."
 
@@ -494,15 +494,15 @@ msgstr "Ingångs-URL:"
 msgid "To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning)."
 msgstr "För att använda HTTPS på en sajt behöver ett <strong>certifikat</strong> för domänen installeras på webbservern. För att få ett certifikat som webbläsare litar på behöver du ett som är utfärdat av en betrodd \"certificate authority\" (annars kommer besökarens webbläsare att visa en varning)."
 
-#: lib/webbkoll/helpers.ex:50
+#: lib/webbkoll/helpers.ex:66
 msgid "The site appears to use Piwik, but not self-hosted. This means visitors are exposed to a third party."
 msgstr "Sajten verkar använda Piwik, men inte självhostad. Det innebär att besökare exponeras till en tredjepart."
 
-#: lib/webbkoll/helpers.ex:35
+#: lib/webbkoll/helpers.ex:51
 msgid "The site is using the Disqus comment system."
 msgstr "Sajten använder kommentarsplattformen Disqus."
 
-#: lib/webbkoll/helpers.ex:45
+#: lib/webbkoll/helpers.ex:61
 msgid "The site loads fonts from Google Fonts. While these are hosted on resource-specific domains and no cookies are sent, Google <em>could</em> possibly cross-reference the data (IP and browser fingerprint) with other Google services to identify visitors. Do they? Their own <a href=\"https://developers.google.com/fonts/faq?hl=en#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users\">FAQ</a> is vague: <em>\"We do log records of the CSS and the font file requests, and access to this data is on a need-to-know basis and kept secure.\"</em> What \"need-to-know basis\" means is not explained."
 msgstr "Sajten laddar typsnitt från Google Fonts. Dessa hostas förvisså på resursspecifika domäner och inga kakor skickas, men Google <em>skulle</em> kunna korsreferera informationen (IP-adress och webbläsarens \"fingeravtryck\") med andra Google-tjänster för att identifiera användare. Gör Google det? Deras egen <a href=\"https://developers.google.com/fonts/faq?hl=en#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users\">FAQ</a> är vag: <em>\"We do log records of the CSS and the font file requests, and access to this data is on a need-to-know basis and kept secure.\"</em> Vad \"need-to-know basis\" innebär förklaras inte."
 
@@ -794,7 +794,7 @@ msgstr "Status"
 msgid "<em>If a referrer policy is delivered via both CSP and a meta element, the meta element's policy takes precedence.</em>"
 msgstr "<em>Om en referrer-policy anges genom både CSP och ett meta-element så har meta-elementets policy företräde.</em>"
 
-#: lib/webbkoll/helpers.ex:141
+#: lib/webbkoll/helpers.ex:157
 msgid "Referrers are (probably) leaked"
 msgstr "Referrers läcks (antagligen)"
 
@@ -802,27 +802,27 @@ msgstr "Referrers läcks (antagligen)"
 msgid "Referrer directive is set to <code>%{value}</code> in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer\">Content-Security-Policy (CSP) header</a>."
 msgstr "Referrer-direktivet är satt till <code>%{value}</code> i <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer\">Content-Security-Policy-headern (CSP)</a>."
 
-#: lib/webbkoll/helpers.ex:68
+#: lib/webbkoll/helpers.ex:84
 msgid "<a href=\"http://stackoverflow.com/questions/18337630/what-is-x-content-type-options-nosniff\">X-Content-Type-Options</a> stops a browser from trying to MIME-sniff the content type and forces it to stick with the declared content-type. This helps to reduce the danger of drive-by downloads. The only valid value for this header is \"X-Content-Type-Options: nosniff\"."
 msgstr "<a href=\"http://stackoverflow.com/questions/18337630/what-is-x-content-type-options-nosniff\">X-Content-Type-Options</a> hindrar webbläsaren från att MIME-sniffa en fils innehållstyp och tvingar den att hålla sig till den deklarerade innehållstypen. Detta hjälper till att reducera faran med \"drive by\"-nedladdningar. Det enda giltiga värdet för den här headern är \"X-Content-Type-Options: nosniff\"."
 
-#: lib/webbkoll/helpers.ex:66
+#: lib/webbkoll/helpers.ex:82
 msgid "<a href=\"http://stackoverflow.com/questions/9090577/what-is-the-http-header-x-xss-protection\">X-XSS-Protection</a> sets the configuration for the cross-site scripting filters built into most browsers. The best configuration is \"X-XSS-Protection: 1; mode=block\"."
 msgstr "<a href=\"http://stackoverflow.com/questions/9090577/what-is-the-http-header-x-xss-protection\">X-XSS-Protection</a> sätter inställningarna för XSS-filtren som är inbyggda i de flesta webbläsare. Den bästa inställningen är \"X-XSS-Protection: 1; mode=block\"."
 
-#: lib/webbkoll/helpers.ex:64
+#: lib/webbkoll/helpers.ex:80
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options\">X-Frame-Options</a> tells the browser whether you want to allow your site to be framed or not. By preventing a browser from framing your site you can defend against attacks like clickjacking."
 msgstr "<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options\">X-Frame-Options</a> berättar för webbläsaren huruvida du vill att din sajt ska kunna laddas i en frame. Genom att förhindra en webbläsare från att frame:a din sajt skyddar du mot attacker såsom clickjacking."
 
-#: lib/webbkoll/helpers.ex:58
+#: lib/webbkoll/helpers.ex:74
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security\">HTTP Strict Transport Security</a> is an excellent feature to support on your site and strengthens your implementation of TLS by getting the User Agent to enforce the use of HTTPS."
 msgstr "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security\">HTTP Strict Transport Security</a> är en utmärkt funktion att stöda på din sajt. Den stärker din implementation av TLS genom att få webbläsaren att tvinga användandet av HTTPS."
 
-#: lib/webbkoll/helpers.ex:62
+#: lib/webbkoll/helpers.ex:78
 msgid "<a href=\"https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning\">HTTP Public Key Pinning</a> protects your site from <a href=\"https://en.wikipedia.org/wiki/Man-in-the-middle_attack\">MiTM attacks</a> using rogue X.509 certificates. By whitelisting only the identities that the browser should trust, your users are protected in the event a certificate authority is compromised."
 msgstr "<a href=\"https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning\">HTTP Public Key Pinning</a> skyddar din sajt från <a href=\"https://en.wikipedia.org/wiki/Man-in-the-middle_attack\">man-in-the-middle-attacker</a> som använder bedrägliga/förfalskade X.509-certifikat. Genom att vitlista enbart de identiteter som webbläsaren bör lita på skyddar du dina användare i fall en certifikatutfärdare skulle komprometteras."
 
-#: lib/webbkoll/helpers.ex:60
+#: lib/webbkoll/helpers.ex:76
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP\">Content Security Policy</a> is an effective measure to protect your site from <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting\">XSS</a> attacks. By whitelisting sources of approved content, you can prevent the browser from loading malicious assets. It can also help prevent information leakage."
 msgstr "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP\">Content Security Policy</a> är en effektiv åtgärd för att skydda din sajt mot <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting\">XSS</a>-attacker. Genom att vitlista godkända innehållskällor kan du förhindra webbläsaren från att ladda skadliga filer. Det kan också hjälpa till med att förhindra informationsläckage."
 
@@ -841,3 +841,11 @@ msgstr "Eftersom det bara är en HTTP-header är det enkelt att lägga till i en
 #: web/templates/site/results.html.slime:1
 msgid "However, to enable HSTS for a domain via the HTTP header, the browser does have to see the header at least once. This means that users are not protected until after their first successful secure connection to a given domain."
 msgstr "För att aktivera HSTS för en domän genom HTTP-headern måste webbläsaren dock se headern minst en gång. Det betyder att användare inte är skyddade förrän deras första framgångsrika säkra anslutning till en given domän."
+
+#: web/templates/site/results.html.slime:1
+msgid "Please note that some sites use CDNs &ndash; <a href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in London, UK."
+msgstr "Observera att en del sajter använder CDN:er &ndash; <a href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; i vilket fall serverplatsen kan variera beroende på var besökaren befinner sig. Det här verktyget, Webbkoll, körs just nu från en server i London, UK."
+
+#: web/templates/site/results.html.slime:1
+msgid "The server <strong>%{domain}</strong> (%{host_ip}) appears to have been located in <strong>%{country}</strong> during our test."
+msgstr "Servern <strong>%{domain}</strong> (%{host_ip}) verkade vara belägen i <strong>%{country}</strong> under vårt test."
