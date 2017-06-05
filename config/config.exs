@@ -39,7 +39,8 @@ config :phoenix, :template_engines,
 config :quantum, :webbkoll,
   cron: [
     "@daily": {Webbkoll.CronJobs, :remove_old_records},
-    "@hourly": {Webbkoll.CronJobs, :remove_stuck_records}
+    "@hourly": {Webbkoll.CronJobs, :remove_stuck_records},
+    "0 6 8 * *": &Geolix.reload_databases/0
   ]
 
 config :geolix,

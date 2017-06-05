@@ -426,10 +426,6 @@ msgid "The Chrome security team allows anyone to <a href=\"https://hstspreload.a
 msgstr "Chromes säkerhetsteam låter vem som helst <a href=\"https://hstspreload.appspot.com/\">skicka sin domän till listan</a>, under förutsättning att den uppfyller vissa kriterier."
 
 #: web/templates/site/results.html.slime:1
-msgid "The HTTP header descriptions are based on the ones from <a href=\"https://securityheaders.io/\">securityheaders.io</a> by Scott Helme, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.en_GB\">CC-BY-SA 4.0</a>. Text about HTTPS partly adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain)."
-msgstr "Beskrivningarna av HTTP-headers är baserade på dem från <a href=\"https://securityheaders.io/\">securityheaders.io</a> av Scott Helme, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.en_GB\">CC-BY-SA 4.0</a>. Texter om HTTPS delvis anpassade från CIO Councils <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain; ingen upphovsrätt)."
-
-#: web/templates/site/results.html.slime:1
 msgid "The goal of the Internet community is to establish encryption as the norm, and to phase out unencrypted connections. See <a href=\"https://www.w3.org/2001/tag/doc/web-https\" title=\"Securing the Web\">W3C</a>, <a href=\"https://datatracker.ietf.org/doc/rfc7258/\" title=\"Pervasive Monitoring Is an Attack\">IETF</a>, <a href=\"https://www.iab.org/2014/11/14/iab-statement-on-internet-confidentiality/\" title=\"IAB Statement on Internet Confidentiality\">IAB</a>. Also:"
 msgstr "Målet för internetgemenskapen är att etablera kryptering som normen, och fasa ut okrypterade anslutningar. Se <a href=\"https://www.w3.org/2001/tag/doc/web-https\" title=\"Securing the Web\">W3C</a>, <a href=\"https://datatracker.ietf.org/doc/rfc7258/\" title=\"Pervasive Monitoring Is an Attack\">IETF</a>, <a href=\"https://www.iab.org/2014/11/14/iab-statement-on-internet-confidentiality/\" title=\"IAB Statement on Internet Confidentiality\">IAB</a>. Dessutom:"
 
@@ -849,3 +845,7 @@ msgstr "Observera att en del sajter använder CDN:er &ndash; <a href=\"https://e
 #: web/templates/site/results.html.slime:1
 msgid "The server <strong>%{domain}</strong> (%{host_ip}) appears to have been located in <strong>%{country}</strong> during our test."
 msgstr "Servern <strong>%{domain}</strong> (%{host_ip}) verkade vara belägen i <strong>%{country}</strong> under vårt test."
+
+#: web/templates/site/results.html.slime:1
+msgid "The HTTP header descriptions are based on the ones from <a href=\"https://securityheaders.io/\">securityheaders.io</a> by Scott Helme, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.en_GB\">CC-BY-SA 4.0</a>. Text about HTTPS partly adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain). <a href=\"http://www.maxmind.com\">MaxMind's</a> GeoLite2 country database (CC-BY-SA 4.0) is used for GeoIP lookups."
+msgstr "Beskrivningarna av HTTP-headers är baserade på dem från <a href=\"https://securityheaders.io/\">securityheaders.io</a> av Scott Helme, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.en_GB\">CC-BY-SA 4.0</a>. Texter om HTTPS delvis anpassade från CIO Councils <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain; ingen upphovsrätt). <a href=\"http://www.maxmind.com\">MaxMinds</a> GeoLite2-landdatabas (CC-BY-SA 4.0) används för GeoIP-lookups."

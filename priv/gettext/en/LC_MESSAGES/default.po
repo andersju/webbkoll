@@ -415,10 +415,6 @@ msgid "The Chrome security team allows anyone to <a href=\"https://hstspreload.a
 msgstr ""
 
 #: web/templates/site/results.html.slime:1
-msgid "The HTTP header descriptions are based on the ones from <a href=\"https://securityheaders.io/\">securityheaders.io</a> by Scott Helme, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.en_GB\">CC-BY-SA 4.0</a>. Text about HTTPS partly adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain)."
-msgstr ""
-
-#: web/templates/site/results.html.slime:1
 msgid "The goal of the Internet community is to establish encryption as the norm, and to phase out unencrypted connections. See <a href=\"https://www.w3.org/2001/tag/doc/web-https\" title=\"Securing the Web\">W3C</a>, <a href=\"https://datatracker.ietf.org/doc/rfc7258/\" title=\"Pervasive Monitoring Is an Attack\">IETF</a>, <a href=\"https://www.iab.org/2014/11/14/iab-statement-on-internet-confidentiality/\" title=\"IAB Statement on Internet Confidentiality\">IAB</a>. Also:"
 msgstr ""
 
@@ -835,7 +831,11 @@ msgstr ""
 msgid "Please note that some sites use CDNs &ndash; <a href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in London, UK."
 msgstr ""
 
-#, fuzzy
 #: web/templates/site/results.html.slime:1
 msgid "The server <strong>%{domain}</strong> (%{host_ip}) appears to have been located in <strong>%{country}</strong> during our test."
+msgstr ""
+
+#, fuzzy
+#: web/templates/site/results.html.slime:1
+msgid "The HTTP header descriptions are based on the ones from <a href=\"https://securityheaders.io/\">securityheaders.io</a> by Scott Helme, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.en_GB\">CC-BY-SA 4.0</a>. Text about HTTPS partly adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain). <a href=\"http://www.maxmind.com\">MaxMind's</a> GeoLite2 country database (CC-BY-SA 4.0) is used for GeoIP lookups."
 msgstr ""
