@@ -42,7 +42,7 @@ defmodule Webbkoll.SiteControllerTest do
     assert conn.status == 302
   end
 
-  test "analysis+HTML of site with HTTPS, HSTS, referrer policy, no cookies/external requests" do
+  test "analysis+HTML of site with HTTPS, HSTS, CSP, referrer policy, no cookies/external requests" do
     data = read_and_analyze_json("test/fixtures/https_hsts_referrer_no_cookies_or_ext_requests.json")
     site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
     site_meta = get_site_meta(site)
@@ -65,6 +65,7 @@ defmodule Webbkoll.SiteControllerTest do
     assert html_response(conn, 200) =~ "No first-party cookies"
     assert html_response(conn, 200) =~ "No third-party cookies"
     assert html_response(conn, 200) =~ "No third-party requests"
+    assert html_response(conn, 200) =~ "Content-Security-Policy enabled"
   end
 
   test "site with HTTPS and insecure first-party resource" do
@@ -72,14 +73,21 @@ defmodule Webbkoll.SiteControllerTest do
     assert data["insecure_requests_count"] == 1
   end
 
-  test "site with HTTP, first and third-party cookies/requests, no referrer policy" do
+  test "site with HTTP, first and third-party cookies/requests, no referrer policy, no CSP" do
     data = read_and_analyze_json("test/fixtures/http_with_cookies_and_ext_requests.json")
+    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
 
     assert data["scheme"] == "http"
     assert data["meta_referrer"] == nil
+    assert data["header_csp"] == nil
     assert data["cookie_count"]["first_party"] == 13
     assert data["cookie_count"]["third_party"] == 2
     assert data["third_party_request_types"]["insecure"] == 9
+
+    conn = get build_conn(), "/en/results?url=https%3A%2F%2Fexample.com%2F"
+    assert html_response(conn, 200) =~ "Insecure connection"
+    assert html_response(conn, 200) =~ "Referrers leaked"
+    assert html_response(conn, 200) =~ "Content-Security-Policy not enabled"
   end
 
   test "site with Referrer Policy set in Content-Security-Policy header" do
@@ -118,6 +126,46 @@ defmodule Webbkoll.SiteControllerTest do
     assert site_meta["referrer_policy"]["status"] == "success"
     assert site_meta["csp_referrer"] == "unsafe-url"
     assert site_meta["meta_referrer"] == "no-referrer"
+  end
+
+  test "site with Content-Security-Policy set in header" do
+    data = read_and_analyze_json("test/fixtures/header_csp.json")
+    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
+
+    assert data["header_csp"] == "default-src 'self'"
+
+    conn = get build_conn(), "/en/results?url=https%3A%2F%2Fexample.com%2F"
+    assert html_response(conn, 200) =~ "Content-Security-Policy enabled"
+    assert html_response(conn, 200) =~ "Content-Security-Policy HTTP header is set"
+    assert html_response(conn, 200) =~ "default-src 'self'"
+  end
+
+  test "site with Content-Security-Policy set in meta element" do
+    data = read_and_analyze_json("test/fixtures/meta_csp.json")
+    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
+
+    assert data["meta_csp"] == "default-src 'none'"
+
+    conn = get build_conn(), "/en/results?url=https%3A%2F%2Fexample.com%2F"
+    assert html_response(conn, 200) =~ "Content-Security-Policy enabled"
+    assert html_response(conn, 200) =~ "Content-Security-Policy meta element is set"
+    assert html_response(conn, 200) =~ "default-src 'none'"
+  end
+
+  test "site with Content-Security-Policy set in both header and meta element (header should take precedence)" do
+    data = read_and_analyze_json("test/fixtures/header_csp_and_meta_csp.json")
+    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
+
+    assert data["header_csp"] == "default-src 'self'"
+    assert data["meta_csp"] == "default-src 'none'"
+
+    conn = get build_conn(), "/en/results?url=https%3A%2F%2Fexample.com%2F"
+    assert html_response(conn, 200) =~ "Content-Security-Policy enabled"
+    assert html_response(conn, 200) =~ "Content-Security-Policy meta element is set"
+    assert html_response(conn, 200) =~ "Content-Security-Policy HTTP header is set"
+    assert html_response(conn, 200) =~ "default-src 'self'"
+    assert html_response(conn, 200) =~ "default-src 'none'"
+    assert html_response(conn, 200) =~ "The HTTP header's policy takes precedence"
   end
 
   defp read_and_analyze_json(file) do

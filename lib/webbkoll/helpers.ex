@@ -72,8 +72,6 @@ defmodule Webbkoll.Helpers do
     %{
       "Strict-Transport-Security" =>
         gettext(~s{<a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a> is an excellent feature to support on your site and strengthens your implementation of TLS by getting the User Agent to enforce the use of HTTPS.}),
-      "Content-Security-Policy" =>
-        gettext(~s{<a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP">Content Security Policy</a> is an effective measure to protect your site from <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">XSS</a> attacks. By whitelisting sources of approved content, you can prevent the browser from loading malicious assets. It can also help prevent information leakage.}),
       "Public-Key-Pins" =>
         gettext(~s{<a href="https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning">HTTP Public Key Pinning</a> protects your site from <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">MiTM attacks</a> using rogue X.509 certificates. By whitelisting only the identities that the browser should trust, your users are protected in the event a certificate authority is compromised.}),
       "X-Frame-Options" =>

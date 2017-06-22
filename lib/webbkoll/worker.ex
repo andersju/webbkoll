@@ -113,8 +113,10 @@ defmodule Webbkoll.Worker do
         "third_party_request_types" => third_party_request_types,
         "third_party_request_count" => get_request_count(third_party_requests),
         "insecure_requests_count" => third_party_request_types["insecure"] + Enum.count(insecure_first_party_requests),
-        "meta_referrer" => get_meta_referrer(json["content"]),
+        "meta_referrer" => get_meta(json["content"], "name", "referrer"),
+        "meta_csp" => get_meta(json["content"], "http-equiv", "content-security-policy"),
         "headers" => json["response_headers"],
+        "header_csp" => get_header(json["response_headers"], "content-security-policy"),
         "host_ip" => host_ip,
         "geolocation" => get_geolocation_by_ip(host_ip)}
      end
@@ -185,15 +187,24 @@ defmodule Webbkoll.Worker do
       "third_party" => Enum.count(cookies["third_party"])}
   end
 
-  defp get_meta_referrer(content) do
+  defp get_meta(content, attribute, name) do
     content
-    |> Floki.find("meta[name='referrer']")
+    |> String.downcase
+    |> Floki.find("meta[#{attribute}='#{name}']")
     |> Floki.attribute("content")
     |> List.to_string
     |> case do
          "" -> nil
          value -> value
        end
+  end
+
+  defp get_header(headers, header) do
+    if Map.has_key?(headers, header) do
+      Map.get(headers, header)
+    else
+      nil
+    end
   end
 
   defp get_geolocation_by_ip(nil) do
