@@ -1,5 +1,5 @@
-defmodule Webbkoll.Site do
-  use Webbkoll.Web, :model
+defmodule WebbkollWeb.Site do
+  use WebbkollWeb, :model
 
   @primary_key {:id, :binary_id, autogenerate: true}
 

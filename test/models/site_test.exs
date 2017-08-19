@@ -1,7 +1,7 @@
 defmodule Webbkoll.SiteTest do
   use Webbkoll.ModelCase
 
-  alias Webbkoll.Site
+  alias WebbkollWeb.Site
 
   @valid_attrs %{data: %{}, input_url: "some content", session_id: "some content", status: "some content", status_message: "some content"}
   @invalid_attrs %{}

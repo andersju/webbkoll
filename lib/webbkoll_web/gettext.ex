@@ -1,4 +1,4 @@
-defmodule Webbkoll.Gettext do
+defmodule WebbkollWeb.Gettext do
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 

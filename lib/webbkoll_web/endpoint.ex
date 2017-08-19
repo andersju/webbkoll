@@ -1,7 +1,7 @@
-defmodule Webbkoll.Endpoint do
+defmodule WebbkollWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :webbkoll
 
-  socket "/socket", Webbkoll.UserSocket
+  socket "/socket", WebbkollWeb.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -35,5 +35,5 @@ defmodule Webbkoll.Endpoint do
     key: "_webbkoll_key",
     signing_salt: "4ZOjrKOO"
 
-  plug Webbkoll.Router
+  plug WebbkollWeb.Router
 end

@@ -1,3 +1,3 @@
 defmodule Webbkoll.PageViewTest do
-  use Webbkoll.ConnCase, async: true
+  use WebbkollWeb.ConnCase, async: true
 end

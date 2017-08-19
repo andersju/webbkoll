@@ -1,5 +1,5 @@
-defmodule Webbkoll.Router do
-  use Webbkoll.Web, :router
+defmodule WebbkollWeb.Router do
+  use WebbkollWeb, :router
   @default_locale Application.get_env(:webbkoll, :default_locale)
 
   pipeline :browser do
@@ -16,13 +16,13 @@ defmodule Webbkoll.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", Webbkoll do
+  scope "/", WebbkollWeb do
     pipe_through :browser
 
     get "/", SiteController, :index
   end
 
-  scope "/:locale", Webbkoll do
+  scope "/:locale", WebbkollWeb do
     pipe_through :browser # Use the default browser stack
 
     get "/about", SiteController, :about

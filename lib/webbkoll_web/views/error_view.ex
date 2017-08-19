@@ -1,5 +1,5 @@
-defmodule Webbkoll.ErrorView do
-  use Webbkoll.Web, :view
+defmodule WebbkollWeb.ErrorView do
+  use WebbkollWeb, :view
 
   def render("404.html", _assigns) do
     "Page not found"

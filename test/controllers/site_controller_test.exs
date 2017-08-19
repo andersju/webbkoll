@@ -1,5 +1,5 @@
 defmodule Webbkoll.SiteControllerTest do
-  use Webbkoll.ConnCase
+  use WebbkollWeb.ConnCase
   alias Webbkoll.Factory
 
   @default_locale Application.get_env(:webbkoll, :default_locale)

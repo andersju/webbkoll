@@ -1,5 +1,5 @@
-defmodule Webbkoll.SiteView do
-  use Webbkoll.Web, :view
+defmodule WebbkollWeb.SiteView do
+  use WebbkollWeb, :view
 
   def format_timestamp(time) do
     time

@@ -1,4 +1,4 @@
-defmodule Webbkoll.ErrorHelpers do
+defmodule WebbkollWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """

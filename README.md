@@ -45,7 +45,7 @@ This is a project by [Dataskydd.net](https://dataskydd.net). We received funding
   * Install Node.js dependencies with `npm install`
   * Make sure PhearJS and redis are running on the hosts/ports specified in `config/dev.exs`
   * Download the [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2/geolite2/) in MaxMind DB binary format, extract it, and make sure it's available as `priv/GeoLite2-Country.mmdb` (or as specified in `config/config.exs`).
-  * Start Phoenix endpoint with `mix phoenix.server` (or in an interactive shell: `iex -S mix phoenix.server`)
+  * Start Phoenix endpoint with `mix phx.server` (or in an interactive shell: `iex -S mix phx.server`)
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
@@ -76,7 +76,7 @@ Create and migrate database:
 Compile static assets:
 
   * `node_modules/brunch/bin/brunch build --production`
-  * `MIX_ENV=prod mix phoenix.digest`
+  * `MIX_ENV=prod mix phx.digest`
 
 Compile application:
 
@@ -84,11 +84,11 @@ Compile application:
 
 Finally, start the server (listens on port 4001 by default):
 
-  * `MIX_ENV=prod mix phoenix.server`
+  * `MIX_ENV=prod mix phx.server`
 
 Or start the server in an interactive shell:
 
-  * `MIX_ENV=prod iex -S mix phoenix.server`
+  * `MIX_ENV=prod iex -S mix phx.server`
 
 See also the official [Phoenix deployment guides](http://www.phoenixframework.org/docs/deployment).
 

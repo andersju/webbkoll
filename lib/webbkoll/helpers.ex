@@ -1,5 +1,5 @@
 defmodule Webbkoll.Helpers do
-  import Webbkoll.Gettext
+  import WebbkollWeb.Gettext
 
   @countries (fn ->
     Enum.reduce(Application.get_env(:webbkoll, :locales), %{}, fn(lang, acc) ->

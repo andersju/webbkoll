@@ -1,4 +1,4 @@
-defmodule Webbkoll.ConnCase do
+defmodule WebbkollWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -25,10 +25,10 @@ defmodule Webbkoll.ConnCase do
       import Ecto.Changeset
       import Ecto.Query, only: [from: 1, from: 2]
 
-      import Webbkoll.Router.Helpers
+      import WebbkollWeb.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint Webbkoll.Endpoint
+      @endpoint WebbkollWeb.Endpoint
     end
   end
 

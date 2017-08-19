@@ -1,6 +1,6 @@
-defmodule Webbkoll.SiteController do
-  use Webbkoll.Web, :controller
-  alias Webbkoll.Site
+defmodule WebbkollWeb.SiteController do
+  use WebbkollWeb, :controller
+  alias WebbkollWeb.Site
   import Ecto.Query
 
   @backend_urls      Application.get_env(:webbkoll, :backend_urls)

@@ -1,4 +1,4 @@
-defmodule Webbkoll.UserSocket do
+defmodule WebbkollWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels

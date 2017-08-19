@@ -10,7 +10,7 @@ config :webbkoll,
   ecto_repos: [Webbkoll.Repo]
 
 # Configures the endpoint
-config :webbkoll, Webbkoll.Endpoint,
+config :webbkoll, WebbkollWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "Yk9QpNTp3jg15sA4KFDjBq4hgfp0eYV0o1bYO6Hxf0BUV5deh4HkwMks/Z541bCR",
   render_errors: [accepts: ~w(html json)],

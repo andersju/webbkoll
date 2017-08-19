@@ -1,4 +1,4 @@
-defmodule Webbkoll do
+defmodule Webbkoll.Application do
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
@@ -8,7 +8,7 @@ defmodule Webbkoll do
 
     children = [
       # Start the endpoint when the application starts
-      supervisor(Webbkoll.Endpoint, []),
+      supervisor(WebbkollWeb.Endpoint, []),
       # Start the Ecto repository
       supervisor(Webbkoll.Repo, []),
       # Add the Exq supervisor
@@ -26,7 +26,7 @@ defmodule Webbkoll do
   # Tell Phoenix to update the endpoint configuration
   # whenever the application is updated.
   def config_change(changed, _new, removed) do
-    Webbkoll.Endpoint.config_change(changed, removed)
+    WebbkollWeb.Endpoint.config_change(changed, removed)
     :ok
   end
 end
