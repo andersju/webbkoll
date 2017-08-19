@@ -714,10 +714,6 @@ msgstr "Inga tredjepartsförfrågningar."
 msgid "The basic problem that HSTS solves is that even after a website turns on HTTPS, visitors may still end up trying to connect over plain HTTP. For example:"
 msgstr "Det grundläggande problemet som HSTS löser är att även efter att en webbplats aktiverat HTTPS så kan det hända att besökare försöker ansluta över vanlig HTTP. Till exempel:"
 
-#: lib/webbkoll_web/templates/site/tech.html.slime:1
-msgid "Please note, however, that this tool is mainly meant to be used as a starting point for web developers. For more rigorous and systematic testing we recommend that you check out <a href=\"https://github.com/citp/OpenWPM\">OpenWPM</a>, which we used to analyze the websites of Sweden's municipalities (<a href=\"https://dataskydd.net/kommuner/\">site</a>, <a href=\"https://github.com/andersju/municipality-privacy\">code</a>)."
-msgstr "Notera dock att detta verktyg främst är menat att användas som en startpunkt för webbutvecklare. För att testa på mer systematiskt och rigoröst vis rekommenderar vi det fria verktyget <a href=\"https://github.com/citp/OpenWPM\">OpenWPM</a>, som vi använde i vår kartläggning av Sveriges kommuners webbplatser (<a href=\"https://dataskydd.net/kommuner/\">sajt</a>, <a href=\"https://github.com/andersju/municipality-privacy\">kod</a>)."
-
 #: lib/webbkoll_web/controllers/site_controller.ex:30
 #: lib/webbkoll_web/templates/layout/app.html.slime:1
 msgid "Tech"
@@ -879,3 +875,7 @@ msgstr "Ursprungligen finansierat av"
 #: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Insecure first-party requests"
 msgstr ""
+
+#: lib/webbkoll_web/templates/site/tech.html.slime:1
+msgid "Please note, however, that this tool is mainly meant to be used as a starting point for web developers. For more rigorous and systematic testing we recommend that you check out <a href=\"https://github.com/citp/OpenWPM\">OpenWPM</a>, which we used to analyze the websites of Sweden's municipalities (<a href=\"https://dataskydd.net/kommuner/\">site</a>, <a href=\"https://github.com/andersju/municipality-privacy\">code</a>). You might also want to have a look at <a href=\"https://privacyscore.org/\">PrivacyScore</a>, which is a bit more comprehensive than Webbkoll (additionally checks e.g. email and TLS/SSL configuration) and also lets you compare/rank lists of sites."
+msgstr "Notera dock att detta verktyg främst är menat att användas som en startpunkt för webbutvecklare. För att testa på mer systematiskt och rigoröst vis rekommenderar vi det fria verktyget <a href=\"https://github.com/citp/OpenWPM\">OpenWPM</a>, som vi använde i vår kartläggning av Sveriges kommuners webbplatser (<a href=\"https://dataskydd.net/kommuner/\">sajt</a>, <a href=\"https://github.com/andersju/municipality-privacy\">kod</a>). Kolla också in gratistjänsten <a href=\"https://privacyscore.org/\">PrivacyScore</a>, som är lite mer omfattande än Webbkoll (kollar t.ex. även mejl- och TLS/SSL-konfiguration) och låter dig jämföra/ranka listor av sajter."

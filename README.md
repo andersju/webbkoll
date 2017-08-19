@@ -29,6 +29,9 @@ for web developers. For more rigorous and systematic testing we
 recommend that you check out [OpenWPM](https://github.com/citp/OpenWPM),
 which we used to analyze the websites of Sweden's municipalities
 ([site](https://dataskydd.net/kommuner/), [code](https://github.com/andersju/municipality-privacy)).
+You might also want to have a look at [PrivacyScore](https://privacyscore.org/),
+which is a bit more comprehensive than Webbkoll (additionally checks e.g. email and TLS/SSL
+configuration) and also lets you compare/rank lists of sites.
 
 This is a project by [Dataskydd.net](https://dataskydd.net). We received funding from
 [Internetfonden](https://www.internetfonden.se/) / [IIS](https://www.iis.se) (The Internet Foundation in Sweden).
@@ -86,10 +89,6 @@ Create and migrate database:
 
   * `MIX_ENV=prod mix ecto.create`
   * `MIX_ENV=prod mix ecto.migrate`
-
-Compile application:
-
-  * `MIX_ENV=prod mix compile`
 
 Start the server (listens on port 4001 by default; prefix the following with PORT=XXXX to change):
 

@@ -700,10 +700,6 @@ msgstr ""
 msgid "The basic problem that HSTS solves is that even after a website turns on HTTPS, visitors may still end up trying to connect over plain HTTP. For example:"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/tech.html.slime:1
-msgid "Please note, however, that this tool is mainly meant to be used as a starting point for web developers. For more rigorous and systematic testing we recommend that you check out <a href=\"https://github.com/citp/OpenWPM\">OpenWPM</a>, which we used to analyze the websites of Sweden's municipalities (<a href=\"https://dataskydd.net/kommuner/\">site</a>, <a href=\"https://github.com/andersju/municipality-privacy\">code</a>)."
-msgstr ""
-
 #: lib/webbkoll_web/controllers/site_controller.ex:30
 #: lib/webbkoll_web/templates/layout/app.html.slime:1
 msgid "Tech"
@@ -864,4 +860,8 @@ msgstr ""
 
 #: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Insecure first-party requests"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/tech.html.slime:1
+msgid "Please note, however, that this tool is mainly meant to be used as a starting point for web developers. For more rigorous and systematic testing we recommend that you check out <a href=\"https://github.com/citp/OpenWPM\">OpenWPM</a>, which we used to analyze the websites of Sweden's municipalities (<a href=\"https://dataskydd.net/kommuner/\">site</a>, <a href=\"https://github.com/andersju/municipality-privacy\">code</a>). You might also want to have a look at <a href=\"https://privacyscore.org/\">PrivacyScore</a>, which is a bit more comprehensive than Webbkoll (additionally checks e.g. email and TLS/SSL configuration) and also lets you compare/rank lists of sites."
 msgstr ""
