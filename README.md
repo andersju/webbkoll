@@ -37,17 +37,18 @@ This is a project by [Dataskydd.net](https://dataskydd.net). We received funding
   * Get PhearJS running - see https://github.com/Tomtomgo/phearjs/blob/master/README.md. (Clone https://github.com/andersju/phearjs/ to get the one that Dataskydd.net is running.)
 
 ## Frontend (this app!)
-  * Install Erlang (18) and Elixir (>= 1.3) -- see http://elixir-lang.org/install.html
-  * Have [redis](http://redis.io/) running (needed for exq job handling)
+  * Install Erlang (>= 20) and Elixir (>= 1.4) -- see http://elixir-lang.org/install.html
+  * Have [Redis](http://redis.io/) running (needed for exq job handling)
   * Make sure you have a working [PostgreSQL](http://www.postgresql.org/) installation
-  * Install dependencies with `mix deps.get`
-  * Create and migrate your database with `mix ecto.create && mix ecto.migrate`
-  * Install Node.js dependencies with `npm install`
-  * Make sure PhearJS and redis are running on the hosts/ports specified in `config/dev.exs`
+  * Clone this repository, cd into it
+  * Install dependencies: `mix deps.get`
+  * Create and migrate your database: `mix ecto.create && mix ecto.migrate`
+  * Install Node.js dependencies: `cd assets; npm install; cd ..`
+  * Make sure PhearJS and Redis are running on the hosts/ports specified in `config/dev.exs`
   * Download the [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2/geolite2/) in MaxMind DB binary format, extract it, and make sure it's available as `priv/GeoLite2-Country.mmdb` (or as specified in `config/config.exs`).
-  * Start Phoenix endpoint with `mix phx.server` (or in an interactive shell: `iex -S mix phx.server`)
+  * Start the Phoenix endpoint with `mix phx.server` (or to get an interactive shell: `iex -S mix phx.server`)
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Now you can visit [`localhost:4000`](http://localhost:4000) in your browser.
 
 To run in production, create `config/prod.secret.exs` and enter something like the following (edit `secret_key_base` and change database configuration as necessary):
 ```
@@ -56,7 +57,7 @@ use Mix.Config
 # In this file, we keep production configuration that
 # you likely want to automate and keep it away from
 # your version control system.
-config :webbkoll, Webbkoll.Endpoint,
+config :webbkoll, WebbkollWeb.Endpoint,
   secret_key_base: "somelongrandomstring"
 
 # Configure your database
@@ -68,21 +69,29 @@ config :webbkoll, Webbkoll.Repo,
   pool_size: 20
 ```
 
+Get dependencies, compile:
+
+  * `mix deps.get --only prod`
+  * `MIX_ENV=prod mix compile`
+
+Compile static assets:
+
+  * `cd assets`
+  * `npm install` # (if you haven't done that already)
+  * `node_modules/brunch/bin/brunch build --production`
+  * `cd ..`
+  * `MIX_ENV=prod mix phx.digest`
+
 Create and migrate database:
 
   * `MIX_ENV=prod mix ecto.create`
   * `MIX_ENV=prod mix ecto.migrate`
 
-Compile static assets:
-
-  * `node_modules/brunch/bin/brunch build --production`
-  * `MIX_ENV=prod mix phx.digest`
-
 Compile application:
 
   * `MIX_ENV=prod mix compile`
 
-Finally, start the server (listens on port 4001 by default):
+Start the server (listens on port 4001 by default; prefix the following with PORT=XXXX to change):
 
   * `MIX_ENV=prod mix phx.server`
 
@@ -90,7 +99,7 @@ Or start the server in an interactive shell:
 
   * `MIX_ENV=prod iex -S mix phx.server`
 
-See also the official [Phoenix deployment guides](http://www.phoenixframework.org/docs/deployment).
+See also the official [Phoenix deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
 ## TODO/ideas
   * Optionally visit a number of randomly selected internal pages and let the results be based on the collective data from all the pages

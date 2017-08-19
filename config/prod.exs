@@ -24,7 +24,7 @@ config :logger, level: :info
 # To get SSL working, you will need to add the `https` key
 # to the previous section and set your `:url` port to 443:
 #
-#     config :webbkoll, Webbkoll.Endpoint,
+#     config :webbkoll, WebbkollWeb.Endpoint,
 #       ...
 #       url: [host: "example.com", port: 443],
 #       https: [port: 443,
@@ -38,7 +38,7 @@ config :logger, level: :info
 # We also recommend setting `force_ssl`, ensuring no data is
 # ever sent via http, always redirecting to https:
 #
-#     config :webbkoll, Webbkoll.Endpoint,
+#     config :webbkoll, WebbkollWeb.Endpoint,
 #       force_ssl: [hsts: true]
 #
 # Check `Plug.SSL` for all available options in `force_ssl`.
@@ -53,12 +53,12 @@ config :logger, level: :info
 # Alternatively, you can configure exactly which server to
 # start per endpoint:
 #
-#     config :webbkoll, Webbkoll.Endpoint, server: true
+#     config :webbkoll, WebbkollWeb.Endpoint, server: true
 #
 # You will also need to set the application root to `.` in order
 # for the new static assets to be served after a hot upgrade:
 #
-#     config :webbkoll, Webbkoll.Endpoint, root: "."
+#     config :webbkoll, WebbkollWeb.Endpoint, root: "."
 
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
