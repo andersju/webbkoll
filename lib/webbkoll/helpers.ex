@@ -83,77 +83,10 @@ defmodule Webbkoll.Helpers do
     }
   end
 
-  def get_site_meta(site) do
-    csp_referrer = check_csp_referrer(site.data["headers"])
-    referrer_header = check_referrer_header(site.data["headers"])
-    meta_referrer = site.data["meta_referrer"]
-
-    # Precedence in Firefox 50
-    referrer_policy_in_use =  cond do
-      meta_referrer -> meta_referrer
-      csp_referrer -> csp_referrer
-      referrer_header -> referrer_header
-      true -> nil
-    end
-
-    %{"services" => check_services(site.data["third_party_requests"]),
-      "referrer_policy" => check_referrer_policy(referrer_policy_in_use),
-      "meta_referrer" => meta_referrer,
-      "csp_referrer" => csp_referrer,
-      "referrer_header" => referrer_header,
-      "host" => URI.parse(site.final_url).host,
-      "reg_domain" => PublicSuffix.registrable_domain(URI.parse(site.final_url).host),
-      "hsts" => site.data["headers"]["strict-transport-security"]
-    }
-  end
-
   def get_unique_hosts(data, field_name) do
     data
     |> Enum.reduce([], fn(%{^field_name => host}, acc) -> acc ++ [host] end)
     |> Enum.uniq
-  end
-
-  def check_csp_referrer(headers) do
-    if Map.has_key?(headers, "content-security-policy") do
-      case Regex.run(~r/\breferrer ([\w-]+)\b/, headers["content-security-policy"]) do
-           [_, value] -> value
-           nil -> nil
-      end
-    else
-      nil
-    end
-  end
-
-  def check_referrer_header(headers) do
-    if Map.has_key?(headers, "referrer-policy") do
-      case Regex.run(~r/^([\w-]+)$/i, headers["referrer-policy"]) do
-           [_, value] -> value
-           nil -> nil
-      end
-    else
-      nil
-    end
-  end
-
-  defp check_referrer_policy(referrer) do
-    cond do
-      referrer in ["never", "no-referrer"] ->
-        %{"status" => "success",
-          "icon"   => "icon-umbrella2 success",
-          "text"   => gettext("Referrers not leaked")}
-      referrer in ["origin", "origin-when-cross-origin", "origin-when-crossorigin"] ->
-        %{"status" => "warning",
-          "icon"   => "icon-raindrops2 warning",
-           "text"  => gettext("Referrers partially leaked")}
-      referrer in ["no-referrer-when-down-grade", "default", "unsafe-url", "always", "", nil] ->
-        %{"status" => "alert",
-          "icon" => "icon-raindrops2 alert",
-           "text" => gettext("Referrers leaked")}
-      true ->
-        %{"status" => "other",
-          "icon" => "",
-          "text" => gettext("Referrers are (probably) leaked")}
-    end
   end
 
   def truncate(string, maximum) do

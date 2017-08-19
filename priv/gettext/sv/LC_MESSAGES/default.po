@@ -91,15 +91,15 @@ msgstr "HTTP-headers"
 msgid "Insecure"
 msgstr "Osäker"
 
-#: lib/webbkoll/helpers.ex:151
+#: lib/webbkoll/worker.ex:285
 msgid "Referrers leaked"
 msgstr "Referrers läcks"
 
-#: lib/webbkoll/helpers.ex:143
+#: lib/webbkoll/worker.ex:277
 msgid "Referrers not leaked"
 msgstr "Referrers läcks inte"
 
-#: lib/webbkoll/helpers.ex:147
+#: lib/webbkoll/worker.ex:281
 msgid "Referrers partially leaked"
 msgstr "Referrers läcks delvis"
 
@@ -122,10 +122,6 @@ msgstr "Vi använder Disconnects <a href=\"%{url}\">spårningslista</a> (open so
 #: web/templates/site/results.html.slime:1
 msgid "to"
 msgstr "till"
-
-#: web/templates/layout/app.html.slime:1
-msgid "with funding from"
-msgstr "med finansiering från"
 
 #: web/templates/site/results.html.slime:1
 msgid "<strong>One</strong> first-party cookie."
@@ -193,7 +189,7 @@ msgstr "Osäker anslutning"
 msgid "Install Piwik on your own server. It's easy to install and easy to upgrade."
 msgstr "Kör Piwik på din egen server. Det är lätt att installera och lätt att uppgradera."
 
-#: web/controllers/site_controller.ex:137
+#: web/controllers/site_controller.ex:136
 msgid "Invalid domain: %{domain}"
 msgstr "Ogiltig domän: %{domain}"
 
@@ -213,7 +209,7 @@ msgstr "Inga tredjepartskakor utan medgivande."
 msgid "Piwik is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
 msgstr "Piwik är ett utmärkt alternativ. Det är fri mjukvara (PHP & MySQL) och du kör det på din egen server, vilket betyder att <em>du</em> har kontroll över din data. Piwik har olika integritetsinställningar och kan, till skillnad från Google Analytics, användas utan kakor. <em>(Medan analysverktyg kanske anses nödvändiga för vissa sajter så är ett annat alternativ att <em>inte spåra människor bara för att du kan</em>. Besökare har faktiskt inte någon skyldighet att hjälpa webbutvecklare att optimera saker.)</em>"
 
-#: web/controllers/site_controller.ex:92
+#: web/controllers/site_controller.ex:91
 msgid "Results for %{url}"
 msgstr "Resultat för %{url}"
 
@@ -255,7 +251,7 @@ msgstr "Tredjepartsförfrågningar"
 msgid "Third-party services"
 msgstr "Tredjepartstjänster"
 
-#: web/controllers/site_controller.ex:185
+#: web/controllers/site_controller.ex:184
 msgid "Trying same host too frequently. Try again in a minute."
 msgstr "Samma värd provas för ofta. Prova igen om en minut."
 
@@ -263,7 +259,7 @@ msgstr "Samma värd provas för ofta. Prova igen om en minut."
 msgid "YES,"
 msgstr "JA,"
 
-#: web/controllers/site_controller.ex:174
+#: web/controllers/site_controller.ex:173
 msgid "You're requesting too frequently. Install locally?"
 msgstr "Du skickar lite för många förfrågningar. Vad sägs om att installera verktyget lokalt istället?"
 
@@ -742,7 +738,7 @@ msgstr "Om"
 msgid "How our web privacy check tool works and how you can run your own instance."
 msgstr "Hur vårt testverktyg fungerar och hur du kan köra din egen instans."
 
-#: web/controllers/site_controller.ex:93
+#: web/controllers/site_controller.ex:92
 msgid "How this website is doing with regards to privacy."
 msgstr "Hur den här webbplatsen hjälper dig utöva makt över ditt privatliv (eller inte)."
 
@@ -750,7 +746,7 @@ msgstr "Hur den här webbplatsen hjälper dig utöva makt över ditt privatliv (
 msgid "Processing failed"
 msgstr "Körningen misslyckades"
 
-#: web/controllers/site_controller.ex:108
+#: web/controllers/site_controller.ex:107
 msgid "Sorry, bots aren't allowed."
 msgstr "Beklagar, men botar är inte tillåtna."
 
@@ -774,13 +770,9 @@ msgstr "<em>Vänligen notera att den här tjänsten fortfarande är under utveck
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
 msgstr "Det här verktyget hjälper dig ta reda på vilka dataskyddande funktioner en sajt använder för att hjälpa dig utöva makt över ditt privatliv. "
 
-#: web/controllers/site_controller.ex:192
+#: web/controllers/site_controller.ex:191
 msgid "Error"
 msgstr "Fel"
-
-#: web/controllers/site_controller.ex:20
-msgid "Search"
-msgstr "Sök"
 
 #: web/controllers/site_controller.ex:60 web/controllers/site_controller.ex:61
 msgid "Status"
@@ -790,7 +782,7 @@ msgstr "Status"
 msgid "<em>If a referrer policy is delivered via both CSP and a meta element, the meta element's policy takes precedence.</em>"
 msgstr "<em>Om en referrer-policy anges genom både CSP och ett meta-element så har meta-elementets policy företräde.</em>"
 
-#: lib/webbkoll/helpers.ex:155
+#: lib/webbkoll/worker.ex:289
 msgid "Referrers are (probably) leaked"
 msgstr "Referrers läcks (antagligen)"
 
@@ -873,3 +865,11 @@ msgstr "Content-Security-Policy i meta-element är satt till <code>%{value}</cod
 #: web/templates/site/results.html.slime:1
 msgid "Content-Security-Policy not enabled"
 msgstr "Content-Security-Policy ej aktiverat"
+
+#: web/controllers/site_controller.ex:20
+msgid "Analyze"
+msgstr ""
+
+#: web/templates/layout/app.html.slime:1
+msgid "Originally funded by"
+msgstr "Ursprungligen finansierat av"

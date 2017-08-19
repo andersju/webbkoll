@@ -50,7 +50,7 @@ html lang="en"
             = gettext "Test results are stored in our database for a week. We don't show a list of tested URLs. We don't use URLs or test results. We don't log accesses and we don't use cookies."
         .alpha
           p
-            | <%= gettext "Developed by" %> <a href="https://dataskydd.net/"><span class="ds-orange">dataskydd</span><span class="semibold black">.net</a></span> <%= gettext "with funding from" %> <a href="https://www.internetfonden.se">Internetfonden</a> / <a href="https://www.iis.se">IIS</a>.
+            | <%= gettext "Developed by" %> <a href="https://dataskydd.net/"><span class="ds-orange">dataskydd</span><span class="semibold black">.net</a></span>. <%= gettext "Originally funded by" %> <a href="https://www.internetfonden.se">Internetfonden</a> / <a href="https://www.iis.se">IIS</a>.
           a href="https://www.internetfonden.se/"
             img src="/images/internetfonden.png"
           a href="https://www.iis.se/"

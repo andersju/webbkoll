@@ -77,15 +77,15 @@ msgstr ""
 msgid "Insecure"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:151
+#: lib/webbkoll/worker.ex:285
 msgid "Referrers leaked"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:143
+#: lib/webbkoll/worker.ex:277
 msgid "Referrers not leaked"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:147
+#: lib/webbkoll/worker.ex:281
 msgid "Referrers partially leaked"
 msgstr ""
 
@@ -107,10 +107,6 @@ msgstr ""
 
 #: web/templates/site/results.html.slime:1
 msgid "to"
-msgstr ""
-
-#: web/templates/layout/app.html.slime:1
-msgid "with funding from"
 msgstr ""
 
 #: web/templates/site/results.html.slime:1
@@ -179,7 +175,7 @@ msgstr ""
 msgid "Install Piwik on your own server. It's easy to install and easy to upgrade."
 msgstr ""
 
-#: web/controllers/site_controller.ex:137
+#: web/controllers/site_controller.ex:136
 msgid "Invalid domain: %{domain}"
 msgstr ""
 
@@ -199,7 +195,7 @@ msgstr ""
 msgid "Piwik is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
 msgstr ""
 
-#: web/controllers/site_controller.ex:92
+#: web/controllers/site_controller.ex:91
 msgid "Results for %{url}"
 msgstr ""
 
@@ -241,7 +237,7 @@ msgstr ""
 msgid "Third-party services"
 msgstr ""
 
-#: web/controllers/site_controller.ex:185
+#: web/controllers/site_controller.ex:184
 msgid "Trying same host too frequently. Try again in a minute."
 msgstr ""
 
@@ -249,7 +245,7 @@ msgstr ""
 msgid "YES,"
 msgstr ""
 
-#: web/controllers/site_controller.ex:174
+#: web/controllers/site_controller.ex:173
 msgid "You're requesting too frequently. Install locally?"
 msgstr ""
 
@@ -728,7 +724,7 @@ msgstr ""
 msgid "How our web privacy check tool works and how you can run your own instance."
 msgstr ""
 
-#: web/controllers/site_controller.ex:93
+#: web/controllers/site_controller.ex:92
 msgid "How this website is doing with regards to privacy."
 msgstr ""
 
@@ -736,7 +732,7 @@ msgstr ""
 msgid "Processing failed"
 msgstr ""
 
-#: web/controllers/site_controller.ex:108
+#: web/controllers/site_controller.ex:107
 msgid "Sorry, bots aren't allowed."
 msgstr ""
 
@@ -760,12 +756,8 @@ msgstr ""
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
 msgstr ""
 
-#: web/controllers/site_controller.ex:192
+#: web/controllers/site_controller.ex:191
 msgid "Error"
-msgstr ""
-
-#: web/controllers/site_controller.ex:20
-msgid "Search"
 msgstr ""
 
 #: web/controllers/site_controller.ex:60 web/controllers/site_controller.ex:61
@@ -776,7 +768,7 @@ msgstr ""
 msgid "<em>If a referrer policy is delivered via both CSP and a meta element, the meta element's policy takes precedence.</em>"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:155
+#: lib/webbkoll/worker.ex:289
 msgid "Referrers are (probably) leaked"
 msgstr ""
 
@@ -858,4 +850,12 @@ msgstr ""
 
 #: web/templates/site/results.html.slime:1
 msgid "Content-Security-Policy not enabled"
+msgstr ""
+
+#: web/controllers/site_controller.ex:20
+msgid "Analyze"
+msgstr ""
+
+#: web/templates/layout/app.html.slime:1
+msgid "Originally funded by"
 msgstr ""

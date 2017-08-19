@@ -6,7 +6,7 @@
         span> class="light"
           = gettext "Results for"
         span.semibold
-          = @meta["host"]
+          = @site.data["host"]
     .beta
       a.button href="#{site_path(@conn, :check, @conn.assigns.locale, url: @site.final_url, refresh: "on")}"
         i.icon-refresh
@@ -37,12 +37,12 @@
             .label
               a href="#https" #{gettext "Insecure"}
         li
-          = if @meta["referrer_policy"]["status"] != "other" do
+          = if @site.data["referrer_policy"]["status"] != "other" do
             .value
-              i class="#{@meta["referrer_policy"]["icon"]}"
+              i class="#{@site.data["referrer_policy"]["icon"]}"
             .label
               a href="#referrers"
-                = @meta["referrer_policy"]["text"]
+                = @site.data["referrer_policy"]["text"]
         li
           .value
             = @site.data["cookie_count"]["first_party"] + @site.data["cookie_count"]["third_party"]
@@ -68,7 +68,7 @@
     section class="result"
       .alpha
         p
-          = gettext(~s|The server <strong>%{domain}</strong> (%{host_ip}) appears to have been located in <strong>%{country}</strong> during our test.|, domain: @meta["host"], host_ip: @site.data["host_ip"], country: country_from_iso(@conn.assigns.locale, @site.data["geolocation"])) |> raw
+          = gettext(~s|The server <strong>%{domain}</strong> (%{host_ip}) appears to have been located in <strong>%{country}</strong> during our test.|, domain: @site.data["host"], host_ip: @site.data["host_ip"], country: country_from_iso(@conn.assigns.locale, @site.data["geolocation"])) |> raw
       .beta
         p
           = gettext(~s|Please note that some sites use CDNs &ndash; <a href="https://en.wikipedia.org/wiki/Content_delivery_network">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in London, UK.|) |> raw
@@ -83,9 +83,9 @@
     .alpha
       p
         = if @site.data["scheme"] == "https" do
-          = raw(gettext "<code>%{domain}</code> uses HTTPS by default.", domain: @meta["host"])
+          = raw(gettext "<code>%{domain}</code> uses HTTPS by default.", domain: @site.data["host"])
         - else
-          = raw(gettext "<code>%{domain}</code> does <strong>not</strong> use HTTPS by default.", domain: @meta["host"])
+          = raw(gettext "<code>%{domain}</code> does <strong>not</strong> use HTTPS by default.", domain: @site.data["host"])
       p
         = gettext "HTTPS encrypts nearly all information sent between a client and a web service. Properly configured, it guarantees three things:"
       
@@ -118,7 +118,7 @@
           = gettext "Such things are out of scope for this tool, but Qualys SSL Labs provides an excellent free service that lets you check how a server is doing:"
         
         p
-          = link gettext("Analyze %{host} on SSL Labs", host: @meta["host"]), to: "https://www.ssllabs.com/ssltest/analyze.html?d=#{@meta["host"]}"
+          = link gettext("Analyze %{host} on SSL Labs", host: @site.data["host"]), to: "https://www.ssllabs.com/ssltest/analyze.html?d=#{@site.data["host"]}"
       - else
         p
           = gettext(~s|To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning).|) |> raw
@@ -156,14 +156,14 @@
           = gettext(~s|It's also possible to use protocol-relative URLs like <code>&lt;img src="//example.com/images/foo.png"&gt;</code>. However, we discourage this. If a resource is available through HTTPS, you should <em>only</em> load it over HTTPS, even on insecure pages &mdash; otherwise you make man-in-the-middle attacks easier. (Loading an HTTPS resource on an HTTP page will not generate any warnings.)|) |> raw
 
   = if @site.data["scheme"] == "https" do
-    section class="result #{if @meta["hsts"], do: "success", else: "warning"}"
+    section class="result #{if @site.data["header_hsts"], do: "success", else: "warning"}"
       h3#hsts
-        = if @meta["hsts"], do: gettext("Strict Transport Security enabled"), else: gettext("Strict Transport Security not enabled")
+        = if @site.data["header_hsts"], do: gettext("Strict Transport Security enabled"), else: gettext("Strict Transport Security not enabled")
 
       .alpha
-        = if @meta["hsts"] do
+        = if @site.data["header_hsts"] do
             p
-              = gettext(~s|HSTS enabled with value <code>%{value}</code>.|, value: @meta["hsts"]) |> raw
+              = gettext(~s|HSTS enabled with value <code>%{value}</code>.|, value: @site.data["header_hsts"]) |> raw
         p
           = gettext(~s|HTTP Strict Transport Security (HSTS) is a simple and widely supported standard to protect visitors by ensuring that their browsers always connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from <code>http://</code> to <code>https://</code> URLs.|) |> raw
 
@@ -215,18 +215,18 @@
         p
           = gettext(~s|<a href="https://https.cio.gov/hsts/">Read more about HSTS</a> and how to configure it in nginx, Apache and IIS.|) |> raw
 
-  section class="result #{@meta["referrer_policy"]["status"]}"
+  section class="result #{@site.data["referrer_policy"]["status"]}"
     h3#referrers
-      = @meta["referrer_policy"]["text"]
+      = @site.data["referrer_policy"]["text"]
     .alpha
-      = if @meta["meta_referrer"] || @meta["csp_referrer"] do
-        = if @meta["meta_referrer"] do
+      = if @site.data["meta_referrer"] || @site.data["header_csp_referrer"] do
+        = if @site.data["meta_referrer"] do
           p
-            = gettext("Meta referrer is set to <code>%{value}</code>.", value: @meta["meta_referrer"]) |> raw
-        = if @meta["csp_referrer"] do
+            = gettext("Meta referrer is set to <code>%{value}</code>.", value: @site.data["meta_referrer"]) |> raw
+        = if @site.data["header_csp_referrer"] do
           p
-            = gettext(~s|Referrer directive is set to <code>%{value}</code> in <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer">Content-Security-Policy (CSP) header</a>.|, value: @meta["csp_referrer"]) |> raw
-        = if @meta["meta_referrer"] && @meta["csp_referrer"] do
+            = gettext(~s|Referrer directive is set to <code>%{value}</code> in <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer">Content-Security-Policy (CSP) header</a>.|, value: @site.data["header_csp_referrer"]) |> raw
+        = if @site.data["meta_referrer"] && @site.data["header_csp_referrer"] do
           p
             = gettext("<em>If a referrer policy is delivered via both CSP and a meta element, the meta element's policy takes precedence.</em>") |> raw
 
@@ -256,11 +256,11 @@
       p
         = gettext(~s|While still a work in progress, Referrer Policy is now <a href="http://caniuse.com/referrer-policy">supported by all major browsers</a> (except Internet Explorer, although it <em>is</em> supported by Edge, the new browser in Windows 10).|) |> raw
 
-  = if Enum.count(@meta["services"]) > 0 do
+  = if Enum.count(@site.data["services"]) > 0 do
     section.result.third-party
       h3
         = gettext "Third-party services"
-    = for service <- @meta["services"] do
+    = for service <- @site.data["services"] do
       section.result.alert
         .alpha
           p = get_service(service, "description") |> raw
@@ -290,20 +290,30 @@
       = render "_cookies.html", cookies: @site.data["cookies"]["third_party"]
 
   section.result
+    = if @site.data["scheme"] == "https" && Enum.count(@site.data["insecure_first_party_requests"]) > 0 do
+      h3#insecure-first-party-requests
+        = gettext "Insecure first-party requests"
+      ul.no-bullet.requests-list
+        = for req <- @site.data["insecure_first_party_requests"] do
+          li
+            i.icon-unlock-alt
+            = req["host"]
+            = link " (#{truncate(req["url"], 50)})", to: req["url"]
+
     = if @site.data["third_party_request_count"]["total"] == 0 do
       h3#requests
         = gettext "Third-party requests"
       p
         = gettext "No third-party requests."
       p
-        = gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @meta["reg_domain"]) |> raw
+        = gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.data["reg_domain"]) |> raw
     - else
       h3#requests
         = gettext "Third-party requests"
       p
         | <strong><%= @site.data["third_party_request_count"]["total"] %></strong> <%= ngettext "request", "requests", @site.data["third_party_request_count"]["total"] %> (<%= ngettext "1 secure", "%{count} secure", @site.data["third_party_request_types"]["secure"] %>, <%= ngettext "%{count} insecure", "%{count} insecure", @site.data["third_party_request_types"]["insecure"] %>) <%= gettext "to" %> <strong><%= @site.data["third_party_request_count"]["unique_hosts"] %></strong> <%= ngettext "unique", "unique", @site.data["third_party_request_count"]["unique_hosts"] %> <%= ngettext "host", "hosts", @site.data["third_party_request_count"]["unique_hosts"] %>.
       p
-        = gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @meta["reg_domain"]) |> raw
+        = gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.data["reg_domain"]) |> raw
 
       table.requests.data data-sortable="true"
         thead

@@ -1,7 +1,6 @@
 defmodule Webbkoll.Worker do
-  alias Webbkoll.Site
-  alias Webbkoll.Repo
-  import Webbkoll.Helpers
+  alias Webbkoll.{Site, Repo}
+  import Webbkoll.{Helpers, Gettext}
 
   @max_retries Application.get_env(:exq, :max_retries)
 
@@ -96,15 +95,25 @@ defmodule Webbkoll.Worker do
   def process_json(json) do
     with url = URI.parse(json["final_url"]),
          reg_domain = get_registerable_domain(url.host),
+         headers = json["response_headers"],
          cookies = get_cookies(json["cookies"], reg_domain),
          third_party_requests = get_third_party_requests(json["requests"], reg_domain),
          insecure_first_party_requests = get_insecure_first_party_requests(json["requests"], reg_domain),
          third_party_request_types = get_request_types(third_party_requests),
-         host_ip = get_ip_by_host(url.host)
+         host_ip = get_ip_by_host(url.host),
+         meta_referrer = get_meta(json["content"], "name", "referrer"),
+         header_csp_referrer = check_csp_referrer(headers),
+         header_referrer = check_referrer_header(headers),
+         referrer_policy_in_use = check_referrer_policy_in_use(meta_referrer, header_csp_referrer, header_referrer)
     do
       %{"input_url" => json["input_url"],
         "final_url" => json["final_url"],
+        "reg_domain" => reg_domain,
+        "host" => url.host,
+        "host_ip" => host_ip,
+        "geolocation" => get_geolocation_by_ip(host_ip),
         "scheme" => url.scheme,
+        "headers" => headers,
         "cookies" => cookies,
         "cookie_count" => get_cookie_count(cookies),
         "cookie_domains" => Enum.count(get_unique_hosts(cookies["third_party"], "domain")),
@@ -113,12 +122,14 @@ defmodule Webbkoll.Worker do
         "third_party_request_types" => third_party_request_types,
         "third_party_request_count" => get_request_count(third_party_requests),
         "insecure_requests_count" => third_party_request_types["insecure"] + Enum.count(insecure_first_party_requests),
-        "meta_referrer" => get_meta(json["content"], "name", "referrer"),
+        "meta_referrer" => meta_referrer,
         "meta_csp" => get_meta(json["content"], "http-equiv", "content-security-policy"),
-        "headers" => json["response_headers"],
-        "header_csp" => get_header(json["response_headers"], "content-security-policy"),
-        "host_ip" => host_ip,
-        "geolocation" => get_geolocation_by_ip(host_ip)}
+        "header_csp" => get_header(headers, "content-security-policy"),
+        "header_csp_referrer" => header_csp_referrer,
+        "header_hsts" => headers["strict-transport-security"],
+        "header_referrer" => check_referrer_header(headers),
+        "referrer_policy" => check_referrer_policy(referrer_policy_in_use),
+        "services" => check_services(third_party_requests)}
      end
   end
 
@@ -224,6 +235,59 @@ defmodule Webbkoll.Worker do
          {:error, _} -> nil
          {:ok, hostent} -> hostent |> elem(5) |> hd |> Tuple.to_list |> Enum.join(".")
        end
+  end
+
+  defp check_referrer_policy_in_use(meta, csp, referrer_header) do
+    # Precedence in Firefox 50
+    cond do
+      meta -> meta
+      csp -> csp
+      referrer_header -> referrer_header
+      true -> nil
+    end
+  end
+
+  defp check_csp_referrer(headers) do
+    if Map.has_key?(headers, "content-security-policy") do
+      case Regex.run(~r/\breferrer ([\w-]+)\b/, headers["content-security-policy"]) do
+           [_, value] -> value
+           nil -> nil
+      end
+    else
+      nil
+    end
+  end
+
+  defp check_referrer_header(headers) do
+    if Map.has_key?(headers, "referrer-policy") do
+      case Regex.run(~r/^([\w-]+)$/i, headers["referrer-policy"]) do
+           [_, value] -> value
+           nil -> nil
+      end
+    else
+      nil
+    end
+  end
+
+  defp check_referrer_policy(referrer) do
+    cond do
+      referrer in ["never", "no-referrer"] ->
+        %{"status" => "success",
+          "icon"   => "icon-umbrella2 success",
+          "text"   => gettext("Referrers not leaked")}
+      referrer in ["origin", "origin-when-cross-origin", "origin-when-crossorigin"] ->
+        %{"status" => "warning",
+          "icon"   => "icon-raindrops2 warning",
+           "text"  => gettext("Referrers partially leaked")}
+      referrer in ["no-referrer-when-down-grade", "default", "unsafe-url", "always", "", nil] ->
+        %{"status" => "alert",
+          "icon" => "icon-raindrops2 alert",
+           "text" => gettext("Referrers leaked")}
+      true ->
+        %{"status" => "other",
+          "icon" => "",
+          "text" => gettext("Referrers are (probably) leaked")}
+    end
   end
 end
 
