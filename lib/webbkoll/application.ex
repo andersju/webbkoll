@@ -12,7 +12,9 @@ defmodule Webbkoll.Application do
       # Start the Ecto repository
       supervisor(Webbkoll.Repo, []),
       # Add the Exq supervisor
-      supervisor(Exq, [])
+      supervisor(Exq, []),
+      # Add the Quantum supervisor
+      worker(Webbkoll.Scheduler, [])
       # Here you could define other workers and supervisors as children
       # worker(Webbkoll.Worker, [arg1, arg2, arg3]),
     ]

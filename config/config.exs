@@ -36,11 +36,11 @@ config :phoenix, :template_engines,
   slim: PhoenixSlime.Engine,
   slime: PhoenixSlime.Engine
 
-config :quantum, :webbkoll,
-  cron: [
-    "@daily": {Webbkoll.CronJobs, :remove_old_records},
-    "@hourly": {Webbkoll.CronJobs, :remove_stuck_records},
-    "0 6 8 * *": &Geolix.reload_databases/0
+config :webbkoll, Webbkoll.Scheduler,
+  jobs: [
+    {"@daily", {Webbkoll.CronJobs, :remove_old_records, []}},
+    {"@hourly", {Webbkoll.CronJobs, :remove_stuck_records, []}},
+    {"0 6 8 * *", {Geolix, :reload_databases, []}}
   ]
 
 config :geolix,

@@ -17,146 +17,146 @@ msgstr ""
 "X-Generator: Poedit 1.8.7.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: web/templates/site/index.html.slime:1
+#: lib/webbkoll_web/templates/site/index.html.slime:1
 msgid "Check"
 msgstr "Kolla"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "%{count} insecure"
 msgid_plural "%{count} insecure"
 msgstr[0] "%{count} osäker"
 msgstr[1] "%{count} osäkra"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "1 secure"
 msgid_plural "%{count} secure"
 msgstr[0] "%{count} säker"
 msgstr[1] "%{count} säkra"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Cookie"
 msgid_plural "Cookies"
 msgstr[0] "Kaka"
 msgstr[1] "Kakor"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Third-party request"
 msgid_plural "Third-party requests"
 msgstr[0] "Tredjepartsförfrågan"
 msgstr[1] "Tredjepartsförfrågningar"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "host"
 msgid_plural "hosts"
 msgstr[0] "värd"
 msgstr[1] "värdar"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "request"
 msgid_plural "requests"
 msgstr[0] "förfrågan"
 msgstr[1] "förfrågningar"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "unique"
 msgid_plural "unique"
 msgstr[0] "unik"
 msgstr[1] "unika"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "...but it's not fully secure"
 msgstr "...men den är inte helt säker"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Check again"
 msgstr "Kolla igen"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Classification"
 msgstr "Klassificering"
 
-#: web/templates/layout/app.html.slime:1
+#: lib/webbkoll_web/templates/layout/app.html.slime:1
 msgid "Developed by"
 msgstr "Utvecklat av"
 
-#: web/templates/layout/app.html.slime:1
+#: lib/webbkoll_web/templates/layout/app.html.slime:1
 msgid "Feedback? Questions? <a href=\"mailto:info@dataskydd.net\">info@dataskydd.net</a>"
 msgstr "Kommentarer? Frågor? <a href=\"mailto:info@dataskydd.net\">info@dataskydd.net</a>"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "HTTP headers"
 msgstr "HTTP-headers"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Insecure"
 msgstr "Osäker"
 
-#: lib/webbkoll/worker.ex:285
+#: lib/webbkoll/worker.ex:287
 msgid "Referrers leaked"
 msgstr "Referrers läcks"
 
-#: lib/webbkoll/worker.ex:277
+#: lib/webbkoll/worker.ex:279
 msgid "Referrers not leaked"
 msgstr "Referrers läcks inte"
 
-#: lib/webbkoll/worker.ex:281
+#: lib/webbkoll/worker.ex:283
 msgid "Referrers partially leaked"
 msgstr "Referrers läcks delvis"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Results for"
 msgstr "Resultat för"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Secure"
 msgstr "Säker"
 
-#: web/templates/layout/app.html.slime:1
+#: lib/webbkoll_web/templates/layout/app.html.slime:1
 msgid "Test results are stored in our database for a week. We don't show a list of tested URLs. We don't use URLs or test results. We don't log accesses and we don't use cookies."
 msgstr "Testresultat lagras i vår databas i en vecka. Vi har ingen offentlig lista över testade URL:er. Vi använder inte URL:erna eller testresultaten. Vi loggar inte åtkomster och vi använder inte kakor."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "We use Disconnect's <a href=\"%{url}\">open source list of trackers</a> to classify hosts."
 msgstr "Vi använder Disconnects <a href=\"%{url}\">spårningslista</a> (open source) för att klassificera domäner."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "to"
 msgstr "till"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<strong>One</strong> first-party cookie."
 msgid_plural "<strong>%{count}</strong> first-party cookies."
 msgstr[0] "<strong>%{count}</strong> förstapartskaka."
 msgstr[1] "<strong>%{count}</strong> förstapartskakor."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<strong>One</strong> third-party cookie."
 msgid_plural "<strong>%{count}</strong> third-party cookies."
 msgstr[0] "<strong>%{count}</strong> tredjepartskaka."
 msgstr[1] "<strong>%{count}</strong> tredjepartskakor."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "The page loads one resource through insecure HTTP."
 msgid_plural "The page loads some resources through insecure HTTP."
 msgstr[0] "Sidan laddar en resurs genom osäker HTTP."
 msgstr[1] "Sidan laddar vissa resurser genom osäker HTTP."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Third-party contacted"
 msgid_plural "Third-parties contacted"
 msgstr[0] "Tredjepart kontaktad"
 msgstr[1] "Tredjeparter kontaktade"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<code>%{domain}</code> does <strong>not</strong> use HTTPS by default."
 msgstr "<code>%{domain}</code> använder <strong>inte</strong> HTTPS som standard."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<code>%{domain}</code> uses HTTPS by default."
 msgstr "<code>%{domain}</code> använder HTTPS som standard."
 
-#: web/templates/site/results.html.slime:1
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains."
 msgstr "En tredjepartsförfrågan är en förfrågan som inte gjorts till <code>%{domain}</code> eller dess underdomäner."
 
@@ -164,12 +164,12 @@ msgstr "En tredjepartsförfrågan är en förfrågan som inte gjorts till <code>
 msgid "Consider a self-hosted platform."
 msgstr "Överväg att använda en självhostad plattform."
 
-#: web/templates/site/failed.html.slime:1
+#: lib/webbkoll_web/templates/site/failed.html.slime:1
 msgid "Failed"
 msgstr "Misslyckades"
 
-#: web/templates/site/results.html.slime:1
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "First-party cookies"
 msgstr "Förstapartskakor"
 
@@ -177,11 +177,11 @@ msgstr "Förstapartskakor"
 msgid "Fonts can easily be self-hosted. The tool <a href=\"https://google-webfonts-helper.herokuapp.com/fonts\">google-webfonts-helper</a> lets you select one or more fonts, generates the proper CSS and prepares a zip file with the fonts. For a command-line alternative, the shell script <a href=\"https://github.com/neverpanic/google-font-download\">google-font-download</a> provides similar functionality."
 msgstr "Typsnitt kan enkelt hostas på egen server. Den fria tjänsten <a href=\"https://google-webfonts-helper.herokuapp.com/fonts\">google-webfonts-helper</a> låter dig välja ett eller flera typsnitt från Google Fonts, genererar lämplig CSS och förbereder en zip.fil med de valda typsnitten. För ett kommandoradsalternativ erbjuder bash-skriptet  <a href=\"https://github.com/neverpanic/google-font-download\">google-font-download</a> liknande funktionalitet."
 
-#: web/templates/site/_headers.html.slime:1
+#: lib/webbkoll_web/templates/site/_headers.html.slime:1
 msgid "However, unsafe attributes are used."
 msgstr "Osäkra attribut används dock."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Insecure connection"
 msgstr "Osäker anslutning"
 
@@ -189,19 +189,19 @@ msgstr "Osäker anslutning"
 msgid "Install Piwik on your own server. It's easy to install and easy to upgrade."
 msgstr "Kör Piwik på din egen server. Det är lätt att installera och lätt att uppgradera."
 
-#: web/controllers/site_controller.ex:136
+#: lib/webbkoll_web/controllers/site_controller.ex:136
 msgid "Invalid domain: %{domain}"
 msgstr "Ogiltig domän: %{domain}"
 
-#: web/templates/site/_headers.html.slime:1
+#: lib/webbkoll_web/templates/site/_headers.html.slime:1
 msgid "NO"
 msgstr "NEJ"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "No first-party cookies without consent."
 msgstr "Inga förstapartskakor utan medgivande."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "No third-party cookies without consent."
 msgstr "Inga tredjepartskakor utan medgivande."
 
@@ -209,11 +209,11 @@ msgstr "Inga tredjepartskakor utan medgivande."
 msgid "Piwik is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
 msgstr "Piwik är ett utmärkt alternativ. Det är fri mjukvara (PHP & MySQL) och du kör det på din egen server, vilket betyder att <em>du</em> har kontroll över din data. Piwik har olika integritetsinställningar och kan, till skillnad från Google Analytics, användas utan kakor. <em>(Medan analysverktyg kanske anses nödvändiga för vissa sajter så är ett annat alternativ att <em>inte spåra människor bara för att du kan</em>. Besökare har faktiskt inte någon skyldighet att hjälpa webbutvecklare att optimera saker.)</em>"
 
-#: web/controllers/site_controller.ex:91
+#: lib/webbkoll_web/controllers/site_controller.ex:91
 msgid "Results for %{url}"
 msgstr "Resultat för %{url}"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Secure connection"
 msgstr "Säker anslutning"
 
@@ -221,11 +221,11 @@ msgstr "Säker anslutning"
 msgid "Self-host the files."
 msgstr "Självhosta filerna."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Strict Transport Security enabled"
 msgstr "Strict Transport Security används"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Strict Transport Security not enabled"
 msgstr "Strict Transport Security används inte"
 
@@ -237,252 +237,252 @@ msgstr "Sajten laddar en eller flera resurser från CDN:er."
 msgid "The site is using Google Analytics. While this is a powerful tool, we think you should respect your users' privacy and not tell Google about them &mdash; at least not without your users' consent."
 msgstr "Sajten använder Google Analytics. Det är förvisso ett kraftfullt verktyg, men vi tycker att du bör respektera dina användares integritet och inte berätta om dem för Google &mdash; åtminstone inte utan deras medgivande."
 
-#: web/templates/site/results.html.slime:1
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Third-party cookies"
 msgstr "Tredjepartskakor"
 
-#: web/templates/site/results.html.slime:1
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Third-party requests"
 msgstr "Tredjepartsförfrågningar"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Third-party services"
 msgstr "Tredjepartstjänster"
 
-#: web/controllers/site_controller.ex:184
+#: lib/webbkoll_web/controllers/site_controller.ex:184
 msgid "Trying same host too frequently. Try again in a minute."
 msgstr "Samma värd provas för ofta. Prova igen om en minut."
 
-#: web/templates/site/_headers.html.slime:1
+#: lib/webbkoll_web/templates/site/_headers.html.slime:1
 msgid "YES,"
 msgstr "JA,"
 
-#: web/controllers/site_controller.ex:173
+#: lib/webbkoll_web/controllers/site_controller.ex:173
 msgid "You're requesting too frequently. Install locally?"
 msgstr "Du skickar lite för många förfrågningar. Vad sägs om att installera verktyget lokalt istället?"
 
-#: web/templates/site/status.html.slime:1
+#: lib/webbkoll_web/templates/site/status.html.slime:1
 msgid "Hang tight..."
 msgstr "Håll i hatten..."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "See which."
 msgid_plural "See which."
 msgstr[0] "Se vilken."
 msgstr[1] "Se vilka."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<a href=\"https://https.cio.gov/hsts/\">Read more about HSTS</a> and how to configure it in nginx, Apache and IIS."
 msgstr "<a href=\"https://https.cio.gov/hsts/\">Läs mer om HSTS</a> och om hur du konfigurerar det i nginx, Apache och IIS."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free <em>domain-validated</em> (<DV) certificates through an easy, automated process."
 msgstr "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> är en ej vinstdrivande certifikatutfärdare (sponsrad av Mozilla, EFF, Cisco, Facebook och andra) som tillhandahåller gratis <em>domänvaliderade</em> (\"domain-validated\", DV) certifikat genom en enkel, automatiserad process."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<a href=\"https://w3c.github.io/webappsec-referrer-policy/#referrer-policies\">A few different policies are offered</a>, such as <code>origin</code> (strips everything except the <a href=\"https://tools.ietf.org/html/rfc6454#section-3.2\">origin</a>) and <code>origin-when-cross-origin</code> (sends full URL with same-origin requests, otherwise stripped). The only one we recommend is <strong><code>no-referrer</code></strong>, which kills the referrer header entirely for all requests, no matter the destination."
 msgstr "<a href=\"https://w3c.github.io/webappsec-referrer-policy/#referrer-policies\">Några olika policyer</a>, till exempel <code>origin</code> (tar bort allt förutom <a href=\"https://tools.ietf.org/html/rfc6454#section-3.2\">origin</a>) och <code>origin-when-cross-origin</code> (skickar hela URL:en med förfrågningar till samma <em>origin</em>, annars bara <em>origin</em>). Den enda vi rekommenderar är <strong><code>no-referrer</code></strong>, som tar bort referrers helt, oavsett destination."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<strong>Authenticity</strong>. The visitor is talking to the \"real\" website, and not to an impersonator or through a \"man-in-the-middle\"."
 msgstr "<strong>Autenticitet</strong>. Besökaren pratar med den \"riktiga\" sajten och inte en imitatör eller genom en \"man-in-the-middle\"."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<strong>Confidentiality</strong>. The visitor's connection is encrypted, obscuring URLs, cookies, and other sensitive metadata."
 msgstr "<strong>Konfidentialitet</strong>. Besökarens anslutning är krypterad, vilket döljer URL:er, kakor och annan känslig metadata."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<strong>Integrity</strong>. The data sent between the visitor and the website has not been tampered with or modified."
 msgstr "<strong>Integritet</strong>. Informationen skickad mellan besökaren och webbplatsen har inte manipulerats eller modifierats."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "A plain HTTP connection can be easily monitored, modified, and impersonated. Every unencrypted HTTP request reveals information about a user’s behavior, and the interception and tracking of unencrypted browsing has become commonplace."
 msgstr "En vanlig HTTP-anslutning kan enkelt bli avlyssnad, modifierad och imiterad. Varje okrypterad HTTP-förfrågan avslöjar information om en användares vanor, och uppsnappande och spårning av okrypterat surfande har blivit vanligt."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "A user may click on an old link that mistakenly uses an <code>http://</code> URL."
 msgstr "En användare kan klicka på en gammal länk som av misstag använder en <code>http://</code>-URL."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "A user’s network may be hostile and actively rewrite <code>https://</code> links to <code>http://</code>."
 msgstr "En användares nätverk kan vara fientligt och aktivt skriva om <code>https://</code>-länkar till <code>http://</code>."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Always uses an <code>https://</code> connection, even when clicking on an <code>http://</code> link or after typing a domain into the location bar without specifying a protocol."
 msgstr "Använder alltid en <code>https://</code>-anslutning, även vid klick på en <code>http://</code>-länk eller efter att ha skrivit domänen i adressfältet utan att ha specificerat ett protokoll."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Analyze %{host} on SSL Labs"
 msgstr "Analysera %{host} på SSL Labs"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Browsers support <a href=\"https://en.wikipedia.org/wiki/HTTP/2\">HTTP/2</a> &mdash; which improves page loading speeds &mdash; <em>only</em> over encrypted connections."
 msgstr "Webbläsare stöder <a href=\"https://en.wikipedia.org/wiki/HTTP/2\">HTTP/2</a> &mdash; som förbättrar sidladdningshastigheter &mdash; <em>enbart</em> över krypterade anslutningar."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "DV certificates are the most common. Let's Encrypt only issues DV certificates."
 msgstr "DV-certifikat är vanligast. Let's Encrypt utfärdar bara DV-certifikat."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Disclaimer: The results presented here might not be 100% correct. Bugs happen. This tool is meant to be used by site owners as a starting point for improvements, not as a rigorous analysis."
 msgstr "Observera: Det är möjligt att resultaten som presenteras här inte är korrekta. Buggar händer. Verktyget är främst menat att användas av webbplatsinnehavare som en startpunkt för förbättringar, inte för att göra rigorösa analyser."
 
-#: web/templates/site/_cookies.html.slime:1
+#: lib/webbkoll_web/templates/site/_cookies.html.slime:1
 msgid "Domain"
 msgstr "Domän"
 
-#: web/templates/site/failed.html.slime:1
+#: lib/webbkoll_web/templates/site/failed.html.slime:1
 msgid "Error: %{error_message}"
 msgstr "Fel: %{error_message}"
 
-#: web/templates/site/_cookies.html.slime:1
+#: lib/webbkoll_web/templates/site/_cookies.html.slime:1
 msgid "Expires on"
 msgstr "Utgångstid"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Google Chrome (<a href=\"https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure\">1</a>, <a href=\"https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins\">2</a>) and Mozilla Firefox (<a href=\"https://blog.mozilla.org/security/2015/04/30/deprecating-non-secure-http/\">1</a>) will mark plain HTTP as affirmatively non-secure and make powerful features impossible to use on non-secure sites."
 msgstr "Google Chrome (<a href=\"https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure\">1</a>, <a href=\"https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins\">2</a>) och Mozilla Firefox (<a href=\"https://blog.mozilla.org/security/2015/04/30/deprecating-non-secure-http/\">1</a>) kommer båda att synligt markera vanlig HTTP som osäkert och göra kraftfulla funktioner omöjliga att använda på osäkra sajter."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Google has begun to <a href=\"https://googleonlinesecurity.blogspot.com/2014/08/https-as-ranking-signal_6.html\">favor HTTPS websites in search rankings</a>."
 msgstr "Google har börjat <a href=\"https://googleonlinesecurity.blogspot.com/2014/08/https-as-ranking-signal_6.html\">favorisera HTTPS-sajter i sökresultaten</a>."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "HSTS enabled with value <code>%{value}</code>."
 msgstr "HSTS aktiverat med värde <code>%{value}</code>."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "HTTP Strict Transport Security (HSTS) is a simple and widely supported standard to protect visitors by ensuring that their browsers always connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from <code>http://</code> to <code>https://</code> URLs."
 msgstr "HTTP Strict Transport Security (HSTS) är en enkel standard med brett stöd som skyddar besökare genom att se till att deras webbläsare alltid ansluter till en webbplats över HTTPS. HSTS existerar för att undvika behovet av den vanliga, osäkra metoden där användare omdirigeras från <code>http://</code>-URL:er till <code>https://</code>-URL:er."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "HTTPS encrypts nearly all information sent between a client and a web service. Properly configured, it guarantees three things:"
 msgstr "HTTPS krypterar nästan all information skickad mellan en klient och en webbtjänst. Rätt konfigurerat garanterar det tre saker:"
 
-#: web/templates/site/_headers.html.slime:1
+#: lib/webbkoll_web/templates/site/_headers.html.slime:1
 msgid "Header"
 msgstr "Header"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "In its <strong>strongest and recommended form</strong>, the HSTS policy <strong>includes all subdomains</strong>, and indicates a willingness to be \"preloaded\" into browsers:"
 msgstr "I dess <strong>starkaste och rekommenderade variant</strong> så inkluderar HSTS-policyn <strong>alla underdomäner</strong> och indikerar en vilja att \"förladdas\" i webbläsare:"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "It's also possible to use protocol-relative URLs like <code>&lt;img src=\"//example.com/images/foo.png\"&gt;</code>. However, we discourage this. If a resource is available through HTTPS, you should <em>only</em> load it over HTTPS, even on insecure pages &mdash; otherwise you make man-in-the-middle attacks easier. (Loading an HTTPS resource on an HTTP page will not generate any warnings.)"
 msgstr "Det är också möjligt att använda protokollrelativa URL:er som <code>&lt;img src=\"//example.com/bilder/hej.png\"&gt;</code>. Vi avråder dock från detta. Om en resurs är tillgänglig över HTTPS bör du <em>enbart</em> ladda den över HTTPS, även på osäkra sidor &mdash; annars gör du \"man-in-the-middle\"-attacker enklare. (Att ladda en HTTPS-resurs på en HTTP-sida orsakar inga varningar.)"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Let's say you're logged in on Facebook. You visit a page with the URL <code>http://www.some-hospital.com/some-medical-condition</code>. On that page, you click a link to their Facebook page. Your browser then sends <code>Referer: http://www.some-hospital.com/some-medical-condition</code> to <code>facebook.com</code>, along with your Facebook cookies, allowing Facebook to associate your identity with that particular page."
 msgstr "Låt säga att du är inloggad på Facebook. Du besöker en sida med URL:en <code>http://www.något-sjukhus.se/någon-medicinsk-åkomma</code>. På den sidan klickar du på en länk till deras Facebook-sida. Din webbläsare skickar då <code>Referer: http://www.något-sjukhus.se/någon-medicinsk-åkomma</code> till <code>facebook.com</code>, tillsammans med dina Facebook-kakor, vilket gör att Facebook kan associera din identitet med den specifika sidan."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Make sure all resources are loaded over HTTPS. For resources loaded from the same domain as your site, use relative URLs, e.g. <code>&lt;img src=\"/images/foo.png\"&gt;</code> instead of <code>&lt;img src=\"http://example.com/images/foo.png\"&gt;</code>."
 msgstr "Försäkra dig om att alla resurser laddas över HTTPS. För resurser laddade från samma domän som din sajt kan du använda relativa URL:er, till exempel <code>&lt;img src=\"/bilder/hej.png\"&gt;</code> i stället för <code>&lt;img src=\"http://example.com/bilder/hej.png\"&gt;</code>."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Meta referrer is set to <code>%{value}</code>."
 msgstr "Meta referrer är satt till <code>%{value}</code>."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Modern browsers typically block at least certain types of insecure content (such as iframes, JavaScript and CSS) by default. Firefox, for example, also shows a grey warning triangle next to the green lock if insecure elements have been blocked."
 msgstr "Moderna webbläsare blockerar vanligtvis åtminstone vissa typer av osäkert innehåll (till exempel iframes, skript och CSS) som standard. Firefox, till exempel, visar också en grå varningstriangel bredvid det gröna låset om osäkra element har blockerats."
 
-#: web/templates/site/_headers.html.slime:1
+#: lib/webbkoll_web/templates/site/_headers.html.slime:1
 msgid "NO, header is set to"
 msgstr "NEJ, header satt till"
 
-#: web/templates/site/_cookies.html.slime:1
+#: lib/webbkoll_web/templates/site/_cookies.html.slime:1
 msgid "Name"
 msgstr "Namn"
 
-#: web/templates/site/failed.html.slime:1
+#: lib/webbkoll_web/templates/site/failed.html.slime:1
 msgid "Processing %{url} failed at %{time}."
 msgstr "Försök att testa %{url} misslyckades %{time}."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Removes the ability for users to click through warnings about invalid certificates."
 msgstr "Tar bort möjligheten för användare att klicka sig igenom varningar om ogiltiga certifikat."
 
-#: web/templates/site/_headers.html.slime:1
+#: lib/webbkoll_web/templates/site/_headers.html.slime:1
 msgid "Set?"
 msgstr "Satt?"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Strict Transport Security was <a href=\"https://lists.w3.org/Archives/Public/www-archive/2009Sep/att-0051/draft-hodges-strict-transport-sec-05.plain.html\">proposed in 2009</a>, motivated by <a href=\"http://www.thoughtcrime.org/software/sslstrip/\">Moxie Marlinspike's demonstration</a> of how a hostile network could downgrade visitor connections and exploit insecure redirects. It was quickly adopted by several major web browsers, and <a href=\"https://tools.ietf.org/html/rfc6797\">finalized as RFC 6797 in 2012.</a>"
 msgstr "Strict Transport Security <a href=\"https://lists.w3.org/Archives/Public/www-archive/2009Sep/att-0051/draft-hodges-strict-transport-sec-05.plain.html\">föreslogs 2009</a>, motiverat av <a href=\"http://www.thoughtcrime.org/software/sslstrip/\">Moxie Marlinspikes demonstration</a> av hur ett fientligt nätverk kunde nedgradera besökarnas anslutningar och exploatera osäkra omdirigeringar. Det anammades snabbt av flera stora webbläsare och <a href=\"https://tools.ietf.org/html/rfc6797\">fastställdes i RFC 6797 år 2012.</a>"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Thanks to a fairly recent development, <em><a href=\"https://w3c.github.io/webappsec-referrer-policy/\">Referrer Policy</a></em>, it's finally possible for websites to tell browsers to not leak referrers. It lets you specify a policy that's applied to all links clicked, as well as all other requests generated by the page (images, JS, etc.)."
 msgstr "Tack vare en relativt ny utveckling, <em><a href=\"https://w3c.github.io/webappsec-referrer-policy/\">Referrer Policy</a></em>, är det äntligen möjligt för webbplatser att säga åt webbläsare att inte läcka referrers. Det låter dig specificera en policy som tillämpas på såväl alla länkklick som alla förfrågningar genererade av sidan (bilder, JS, osv)."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "The Chrome security team allows anyone to <a href=\"https://hstspreload.appspot.com/\">submit their domain to the list</a>, provided it meets a few requirements."
 msgstr "Chromes säkerhetsteam låter vem som helst <a href=\"https://hstspreload.appspot.com/\">skicka sin domän till listan</a>, under förutsättning att den uppfyller vissa kriterier."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "The goal of the Internet community is to establish encryption as the norm, and to phase out unencrypted connections. See <a href=\"https://www.w3.org/2001/tag/doc/web-https\" title=\"Securing the Web\">W3C</a>, <a href=\"https://datatracker.ietf.org/doc/rfc7258/\" title=\"Pervasive Monitoring Is an Attack\">IETF</a>, <a href=\"https://www.iab.org/2014/11/14/iab-statement-on-internet-confidentiality/\" title=\"IAB Statement on Internet Confidentiality\">IAB</a>. Also:"
 msgstr "Målet för internetgemenskapen är att etablera kryptering som normen, och fasa ut okrypterade anslutningar. Se <a href=\"https://www.w3.org/2001/tag/doc/web-https\" title=\"Securing the Web\">W3C</a>, <a href=\"https://datatracker.ietf.org/doc/rfc7258/\" title=\"Pervasive Monitoring Is an Attack\">IETF</a>, <a href=\"https://www.iab.org/2014/11/14/iab-statement-on-internet-confidentiality/\" title=\"IAB Statement on Internet Confidentiality\">IAB</a>. Dessutom:"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "The problem is made worse by the fact that many websites load resources like images and scripts from dozens of third-parties, sending referrer information to all of them, with the typical visitor having no idea that this is happening."
 msgstr "Problemen förvärras av faktumet att många webbplatser laddar resurser såsom bilder och skript från dussintals olika tredjeparter och skickar referrer-information till dem alla, helt utan de allra flesta besökares vetskap."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "The site includes content served over insecure HTTP. Such content can be intercepted and manipulated, leaving the visitor vulnerable to attacks."
 msgstr "Sajten inkluderar innehåll som skickas genom osäker HTTP. Sådant innehåll kan snappas upp och manipuleras, vilket gör att besökaren är sårbar för attacker."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "There is no difference in encryption between DV and EV certificates, but they are typically displayed differently in browsers. EV certificates generally result in the domain owner's name appearing in the browser URL bar that visitors see."
 msgstr "Det är ingen skillnad i kryptering mellan DV- och EV-certifikat, men de visas vanligen på olika sätt i webbläsare. EV-certifikat gör normalt att domänägarens namn syns bredvid webbläsarens adressfält."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "To get a DV certificate, you only need to prove that you <span title=\"By, for example, publishing a certain file to your web server or responding to an email sent to the contact in your domain's WHOIS record\">control the domain</span>. To get an <em>Extended Validation</em> (EV) certificate, you must pass a more thorough identity verification process."
 msgstr "För att få ett DV-certifikat behöver du bara visa att du <span title=\"Genom att, till exempel, publicera en viss fil på webbservern eller svara på ett mejl skickat till kontaktadressen i domänens WHOIS-record\">har kontroll över domänen</span>. För att få ett <em>Extended Validation</em>-certifikat (EV) behöver du genomgå en mer ingående verifieringsprocess."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "To solve the \"first visit\" problem, the Chrome security team created an \"HSTS preload list\": a <a href=\"https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json\">list of domains</a> baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit. Firefox, Safari, and newer versions of Internet Explorer also incorporate Chrome’s HSTS preload list."
 msgstr "För att lösa \"första besök\"-problemet har Chromes säkerhetsteam skapat en \"HSTS preload list\": en <a href=\"https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json\">list över domäner</a> inbakad i Chrome som får Strict Transport Security aktiverat automatiskt, även för första besöket. Firefox, Safari och nyare versioner av Internet Explorer använder också Chromes lista."
 
-#: web/templates/site/failed.html.slime:1
+#: lib/webbkoll_web/templates/site/failed.html.slime:1
 msgid "Try again?"
 msgstr "Försök igen?"
 
-#: web/templates/site/_cookies.html.slime:1
+#: lib/webbkoll_web/templates/site/_cookies.html.slime:1
 msgid "Value"
 msgstr "Värde"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "When a browser knows that a domain has enabled HSTS, it does two things:"
 msgstr "När en webbläsare vet att en domän aktiverat HSTS så gör den två saker:"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "When a user types \"example.com\" into the URL bar, browsers default to using <code>http://</code>."
 msgstr "När en användare skriver \"example.com\" i adressfältet så använder webbläsare <code>http://</code> som standard."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "When you click a link, your browser will typically send the HTTP <em>referer</em> [sic] header to the webserver where the destination webpage is at. The header contains the full URL of the page you came from. This lets sites see where traffic comes from. The header is also sent when external resources (such as images, fonts, JS and CSS) are loaded."
 msgstr "När du klickar på en länk så skickar din webbläsare vanligtvis HTTP-headern <em>referer</em> [sic] till destinationssidans webbserver. Headern innehåller adressen till sidan du kom från, vilket alltså avslöjas för webbservern du kommer till. Headern skickas också när externa resurser (såsom bilder, typsnitt, skript och CSS) laddas."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "While still a work in progress, Referrer Policy is now <a href=\"http://caniuse.com/referrer-policy\">supported by all major browsers</a> (except Internet Explorer, although it <em>is</em> supported by Edge, the new browser in Windows 10)."
 msgstr "Även om specifikationen för Referrer Policy inte är fastställd så <a href=\"http://caniuse.com/referrer-policy\">stöds det av alla stora webbläsare</a> (förutom Internet Explorer; dock stöds det av Edge, webbläsaren i Windows 10)."
 
-#: web/templates/site/_headers.html.slime:1
+#: lib/webbkoll_web/templates/site/_headers.html.slime:1
 msgid "which disables HSTS"
 msgstr "vilket inaktiverar HSTS"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Final URL:"
 msgstr "Slutgiltig URL:"
 
-#: web/templates/site/results.html.slime:1
-#: web/templates/site/status.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/status.html.slime:1
 msgid "Input URL:"
 msgstr "Ingångs-URL:"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning)."
 msgstr "För att använda HTTPS på en sajt behöver ett <strong>certifikat</strong> för domänen installeras på webbservern. För att få ett certifikat som webbläsare litar på behöver du ett som är utfärdat av en betrodd \"certificate authority\" (annars kommer besökarens webbläsare att visa en varning)."
 
@@ -498,295 +498,297 @@ msgstr "Sajten använder kommentarsplattformen Disqus."
 msgid "The site loads fonts from Google Fonts. While these are hosted on resource-specific domains and no cookies are sent, Google <em>could</em> possibly cross-reference the data (IP and browser fingerprint) with other Google services to identify visitors. Do they? Their own <a href=\"https://developers.google.com/fonts/faq?hl=en#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users\">FAQ</a> is vague: <em>\"We do log records of the CSS and the font file requests, and access to this data is on a need-to-know basis and kept secure.\"</em> What \"need-to-know basis\" means is not explained."
 msgstr "Sajten laddar typsnitt från Google Fonts. Dessa hostas förvisså på resursspecifika domäner och inga kakor skickas, men Google <em>skulle</em> kunna korsreferera informationen (IP-adress och webbläsarens \"fingeravtryck\") med andra Google-tjänster för att identifiera användare. Gör Google det? Deras egen <a href=\"https://developers.google.com/fonts/faq?hl=en#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users\">FAQ</a> är vag: <em>\"We do log records of the CSS and the font file requests, and access to this data is on a need-to-know basis and kept secure.\"</em> Vad \"need-to-know basis\" innebär förklaras inte."
 
-#: web/templates/layout/app.html.slime:1
+#: lib/webbkoll_web/templates/layout/app.html.slime:1
 msgid "FAQ"
 msgstr "Frågor och svar"
 
-#: web/templates/site/index.html.slime:1
+#: lib/webbkoll_web/templates/site/index.html.slime:1
 msgid "How privacy-friendly is your site?"
 msgstr "Hur dataskyddsvänlig är din sajt?"
 
-#: web/templates/site/index.html.slime:1
+#: lib/webbkoll_web/templates/site/index.html.slime:1
 msgid "Read more."
 msgstr "Läs mer."
 
-#: web/controllers/site_controller.ex:21
+#: lib/webbkoll_web/controllers/site_controller.ex:21
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."
 msgstr "Webbkollen hjälper dig ta reda på vilka dataskyddande funktioner en sajt använder för att hjälpa dig utöva makt över ditt privatliv."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "A referrer policy can easily be set with a <code>&lt;meta&gt;</code> element in your HTML. Simply include this inside the <code>&lt;head&gt;</code> section:"
 msgstr "En <em>referrer policy</em> kan enkelt sättas med ett <code>&lt;meta&gt;</code>-element i din HTML-kod. Inkludera helt enkelt den här raden i <code>&lt;head&gt;</code>-sektionen:"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "The referrer header is privacy nightmare as it allows websites and services to track you across the web and learn about your browsing habits (and thus possibly private, sensitive information), particularly when combined with cookies."
 msgstr "Referrer-headern är en integritetsmardröm då den låter sajter och tjänster spåra dig omkring webben och lära sig om dina surfvanor (och således potentiellt känslig information om dig), speciellt i kombination med kakor."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Host"
 msgstr "Domän"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Full list of third-party requests:"
 msgstr "Hela listan över tredjepartsförfrågningar:"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Please note that this tool only checks whether HTTPS is used by default. Next step is to ensure that the server is configured correctly and not susceptible to attacks due to out-of-date software, weak ciphers, etc."
 msgstr "Notera att detta verktyg bara kollar huruvida HTTPS används som standard. Nästa steg är att försäkra dig om att servern är korrekt konfigurerad och inte sårbar för attacker på grund av för gammal mjukvara, svag kryptering, etc."
 
-#: web/templates/site/status.html.slime:1
+#: lib/webbkoll_web/templates/site/status.html.slime:1
 msgid "Status:"
 msgstr ""
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Such things are out of scope for this tool, but Qualys SSL Labs provides an excellent free service that lets you check how a server is doing:"
 msgstr "Sådana saker täcker inte det här verktyget, men Qualys SSL Labs tillhandahåller en utmärkt gratis tjänst som låter dig analysera en servers konfiguration:"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "External files such as images, scripts and CSS are loaded, but the tool performs no interactions with the page &mdash; no links are clicked, no forms are submitted."
 msgstr "Externa filer som bilder, skript och CSS laddas, men verktyget interagerar inte med sidan &mdash; inga länkar klickas, inga formulär skickas."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "This tool attempts to simulate what happens when a user visits a specified page with a typical browser. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled, since this is the default setting in most browsers."
 msgstr "Det här verktyget försöker simulera vad som händer när en användare besöker en viss sida med en vanlig webbläsare. Webbläsaren har inga tillägg installerade, och Do Not Track (DNT) är inte aktiverat, eftersom det är standardinställningen i de flesta webbläsare."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "What this tool checks (and doesn't check)"
 msgstr "Vad verktyget kollar (och inte kollar)"
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "A webstore may for instance hand over the task of profiling visitors to an advertisement agency, and a public authority may have constructed its website in a way that automatically hands over behavioural data to advertisers. Advertisers are the most common and least transparent form of third parties."
 msgstr "Det kan till exempel handla om att en webbutik lämnat över uppdraget att profilera besökare till ett reklamföretag, eller att en myndighet byggt sin webbplats så att man automatiskt lämnar information om sitt beteende till ett reklamföretag. Oftast är det reklamföretag som är tredjeparter och mottagare av skvaller."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Accountability"
 msgstr "Ansvarsskyldighet"
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Accuracy"
 msgstr "Korrekthet"
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "An individual should be able to understand the terms of interactions with others. (5(1)(a))."
 msgstr "Det ska vara tydligt för en enskild vad som gäller vid behandlingar av personuppgifter. (5(1)(a))"
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "As little data as possible to achieve the purpose should be collected .(5(1)(c))"
 msgstr "Man ska inte samla in fler uppgifter än vad som är absolut nödvändigt för ändamålet. (5(1)(c))"
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Behavioural monitoring, or ”profiling”, is when someone monitors how a given person, or set of persons, typically behave. This includes monitoring whether a particular group, say young people or women of a median income, frequently visit certain deeplinks, have to look up certain vocabulary or that they end up on the website through using a particular search engine or social platform. Behavioural monitoring is used to discover what certain classes of people may be assumed to find interesting, difficult or funny."
 msgstr "Beteendekartläggning är när man tittar på hur en viss person, eller grupp av personer, typiskt beter sig. Till exempel att de ofta besöker vissa undersidor, behöver slå upp vissa ord i en ordbok eller att de hamnat på webbplatsen genom att använda någon särskild sökmotor. Beteendekartläggning används för att förutsäga vad olika kategorier av människor kan antas tycka är intressant, svårt eller lustigt."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Data collection should occur only for specific and limited purposes. These purposes should be explicit and understandable. (5(1)(b))"
 msgstr "Personuppgifter ska samlas in för specifika och angivna syften. Dessa syften ska vara tydliga och begripliga för enskilda. Artikel 13-20. (5(1)(b))"
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Data minimisation"
 msgstr "Dataminimering"
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Data protection is a human right in the European Union. It’s a collection of administrative and formal requirements for how to collect, process and use data relating to individuals. The purpose of this protection is to provide individuals with the means necessary to exercise their right to privacy. Data protection law guarantees transparency, choice and knowledge for individuals with regards to who influences them, and under which conditions."
 msgstr "Dataskydd, eller ”skydd av personuppgifter”, är en mänsklig rättighet i Europeiska unionen. Det är en samling administrativa och formella krav på hur personuppgifter behandlas. Syftet med skyddet är att ge individen förutsättningar att utöva sin rätt till privatliv. Dataskyddslagstiftningen garanterar transparens, insyn och valfrihet kring vem man blir påverkad av och på vilket sätt och på vilka villkor denna påverkan äger rum."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Data should be processed in a secure way, both organisatorially and technically."
 msgstr "Personuppgifter ska behandlas på ett säkert sätt, både organisatoriskt och tekniskt."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Depending on the purposes for collecting personal data, data minimisation may mean different things. The Web Privacy Check makes it easy to find out how not to collect personal data and how not to inadvertently leak personal data. Should one want to collect personal data anyway, one needs to be transparent about such collection and one also needs to follow the rules in chapter 4 of the regulation. The rules of how to collect and process personal data are in place to ensure that anyone who chooses a purpose for data collection also reflects on the consequences of such choices."
 msgstr "Beroende på vilket ändamål man har valt, kan det här innebära olika mängder personuppgifter. Dataskydd.net:s webbkoll gör det enkelt att ta reda på hur man kan låta bli att både samla in och att läcka information om privatpersoner. Vill man ändå samla in personuppgifter i större eller mindre utsträckning, behöver man dels vara öppen med det (individen ska förstå vilka uppgifter som samlas in och varför de är viktiga för ändamålet), och så behöver man förhålla sig till reglerna i dataskyddsförordningens kapitel 4. Baktanken med detta regelverk är att den som vill kartlägga och spåra andra ska behöva tänka igenom varför och på vilket sätt den vill göra detta, så att det inte sker bara för att det går."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "In May 2018 a new law about data protection will enter into force in the European Union. It is a regulation and will apply equally in all the 28 member states."
 msgstr "Från och med 2018 kommer en ny lag om dataskydd för EU, som kommer vara likadan i hela EU. Fram tills 2018 gäller personuppgiftslagen, en svensk lag som stiftades till följd av EU:s tidigare dataskyddslagstiftning från 1995."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Integrity and confidentiality"
 msgstr "Integritet och konfidentialitet"
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "It is also the categorisation of individuals into these groups. Once a web visitor is stuffed into a particular category, they may be positively or negatively discriminated against because of the categorisation."
 msgstr "Profilering är när man använder beteendekartläggning för att sortera in människor i olika grupper. Vanligtvis särbehandlar man sedan den kartlagda gruppen baserat på dess förväntade preferens."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Lawfulness, fairness and transparency"
 msgstr "Laglighet, korrekthet och öppenhet"
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Personal data shall be accurate, and if they aren’t, there must be a procedure to correct them."
 msgstr "Personuppgifter ska vara stämma överens med verkligheten och uppdateras om de är felaktiga."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Personal data should not be saved or stored longer than necessary."
 msgstr "Man ska inte spara uppgifter längre än nödvändigt."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Profiling is mostly used in the advertisement industry to decide which type of advertisements a particular individual should be exposed to. Parents of small children, or people who know parents of small children, may receive ads for nappies, prams or family vacations. Increasingly, profiling is used to determine what contents are served by newspapers. The above mentioned groups may for instance receive short articles about new-borns if they are queueing (and have little time) or longer articles about new-borns if they are on a train (and have more time)."
 msgstr "Både profilering och beteendekartläggning är vanligt i reklamindustrin. Det används för att bestämma vilken sorts reklam man får se på olika webbplatser. Till exempel kan småbarnsföräldrar eller personer som känner småbarnsföräldrar i högre utsträckning än andra få se reklam för nappflaskor, barnvagnar eller charterresor. I ökad utsträckning används profilering även för att bestämma vilket tidningsinnehåll man får se när man besöker en dagstidning. Man kan till exempel få korta artiklar om nyfödda barn ifall man står i en kö (och har ont om tid) och samtidigt är i ”rätt ålder” för att gå i barntankar, eller långa artiklar om nyfödda barn ifall man sitter på ett tåg (och därför har mer tid)."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Profiling may additionally be used to shape political opinions, for instance through targetting specific groups with political information, or to enact measures against groups based on their assumed characteristics. This form of political work is called ”nudging” and may also be deployed to increase acceptance of specific measures (like the construction of a public park) in specific groups (such as the individuals living near the envisaged park)."
 msgstr "Profilering också användas för att utforma politiska åtgärder, till exempel genom att utforma samhällsinformation för särskilda grupper eller områden, eller vidta åtgärder mot eller för en särskild grupp baserat på dess förväntade egenskaper. Denna sorts politiska påverkansarbete kallas för ”nudging”, och kan också användas för att öka acceptansen i olika sociala grupper för vissa typer av åtgärder."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Purpose limitation"
 msgstr "Ändamålsbegränsning"
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Since responsibility can be a difficult burden, the Web Privacy Check of Dataskydd.net has a large set of recommendations for data protection which may go further than what one could be legally liable for. We want to enable the best possible data protection with the least amount of administrative burdens. One of the reasons the rules of the data protection regulation make it seem bureaucratic and boring not to data minimise, is so that each actor in society who wishes to influence others has to consider carefully the way in which they use such power."
 msgstr ""
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Storage limitation"
 msgstr "Lagringsminimering"
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "The <a href=\"http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679\">general data protection regulation of the European Union</a> enters into force on the 25th of May 2018 and concerns the balancing of power being those influencing individuals (typically companies and public authorities) and the individuals themselves. The Web Privacy Check is a tool to find out who is collecting information about individuals, and what can be done to stop invisible tracking."
 msgstr "<a href=\"http://eur-lex.europa.eu/legal-content/SV/TXT/HTML/?uri=CELEX:32016R0679&from=EN\">Den allmänna dataskyddsförordningen från EU</a> träder i kraft 25 maj 2018 och handlar om att balansera makten mellan de som påverkar individer (typiskt sett företag och myndigheter) och individerna själva. Dataskydd.net:s webbkoll är ett verktyg för att ta reda på vem som försöker samla in information om enskilda, och vad man kan göra för att hindra osynliga kartläggningar."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "The Dataskydd.net Web Privacy Check makes it easy to see which technical protection mechanisms for data protection are in place in a given website. We have identified measures which should not require large organisational changes, or increase web management costs. Most of our recommendations are simple enough to implement, and they are cost neutral. Our goal is to make it as easy as possible for individuals to exercise their rights to privacy and data protection, and also to provide web designers and managers with simple ”rules of thumb” to help individuals exercise these rights."
 msgstr "Dataskydd.net:s webbkoll gör det enkelt att se vilka tekniska skyddsåtgärder för dataskydd som finns på plats. Vi har identifierat åtgärder som inte borde kräva några större organisatoriska förändringar: de flesta av våra tips går snabbt att genomföra, och de kostar lite. Vår målsättning är att göra det så enkelt för privatpersoner som möjligt att utöva sina rättigheter, samtidigt som de som bygger webbplatser får enkla tumregler att ge privatpersoner denna möjlighet."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "The Dataskydd.net Web Privacy Check see lawfulness, fairness and transparency as a requirement that individuals should understand with whom they are in contact by visiting a website. If an advertisement agency or some other company, such as an internet service provider, has easy access to behavioural data the individual should know. If an individual may be influenced by these parties, again they should be able to know. An individual should not have to master web development or  have a need for advanced technical tools to find this out. While the principle of transparency is simple, permissible deviations from transparency are listed in articles 13-20 of the regulation."
 msgstr "På Dataskydd.net:s webbkoll ser vi detta som att privatpersoner ska ha en möjlighet att förstå vilka tredjeparter de ställs i kontakt med genom att besöka en webbplats. Om ett reklamföretag eller något annat företag får del av personuppgifter, och möjlighet att påverka privatpersonen genom den tillgången, ska privatpersonen kunna ta reda på det. Man ska inte behöva ha en Master i Webbutveckling eller använda särskilda tekniska verktyg för att kunna förstå vem som får möjlighet att påverka en själv. Principen om öppenhet är lätt, men vill man inte vara helt transparent finns bestämmelser om vad man inte får låta bli att berätta i förordningens artiklar 13-20."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "The one responsible for the website is responsible for adherence to these principles."
 msgstr "Den som är ansvarig för webbplatsen är ansvarig för att principerna följs."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "The purpose for collecting data may be interpreted broadly, and means anything from marketing to improving the web. At Dataskydd.net Web Privacy Check we prefer methods of improving the web that do not include collecting data from private persons. That’s why we’ve compiled a large number of recommendations and tools which minimise data collection."
 msgstr "Ändamål med insamlingen är ett ganska vitt begrepp, och kan innefatta allt från marknadsföring till att ”förbättra webben”. På Dataskydd.net:s webbkoll föredrar vi metoder att förbättra webben och webbplatsen som inte kräver datainsamling från enskilda. Därför har vi en massa tips på hur man kan förbättra sin webb i en dataskyddande riktning."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "This principle above all concerns information registered by public authorities or companies, for instance in the credit check industry. In web development, it is more common with ”fuzzy” data sets, and the consequences of being erroneously categorised in a given profiling operation is normally not worse than that one receives online advertisement which is not specifically targetted to ones own group."
 msgstr "Den här principen rör i första hand information som registreras av myndigheter eller företag till exempel i kreditgivningsindustrin. I webbutveckling och marknadsföring är det vanligare att man arbetar med ”luddiga” mängder av personuppgifter, och konsekvensen av att man felklassificeras av sin webbspårare är vanligen inte värre än att man får felaktigt riktad reklam när man rör sig i onlinemiljöer."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "This right ties into purpose limitation and data minisation. If one follows the recommendation of the Dataskydd.net Web Privacy Check, one does not have to concern oneself so much with this principle."
 msgstr "Den här rättigheten anknyter till ändamålsbegränsning och dataminimering.  Dataskydd.net:s webbkoll gör det enkelt att inte behöva tänka så mycket på den här principen."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Transparency also means a right to find out when something gone wrong: if you’ve collected information about individuals which have leaked or disappeared, the individual has a right to know. This is called ”personal data breach notification” and specific rules are in article 34 of the regulation."
 msgstr "Det innebär också att privatpersoner ska få reda på när saker går fel: om man har samlat in information om privatpersonen som sedan riskerar att ha läckt, bör enskilda få reda på det. I förordningen heter detta ”information till den registrerade om personuppgiftsincident” och reglerna finns i artikel 34."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "We use the word gossiping to mean that information about somebody’s behaviour, reading habits or preferences is handed over to somebody other than the actor responsible for the website."
 msgstr "Skvaller innebär att information om någons beteende, läsning eller preferenser lämnas över till någon annan än den som driver webbplatsen."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Web Privacy Check monitors privacy enhancing features on websites, and helps you find out who is letting you exercise control over your privacy. We check to what extent a website monitors your behaviour and how much they gossip about the monitoring to third parties. We’ve also compiled a set of recommendations for web designers and managers on how to not track or gossip in digital environments. We also suggest questions and feature requests from users of websites who want to alert webmasters to the opportunity of improvement."
 msgstr "Webbkollen hjälper dig ta reda på vilka dataskyddande funktioner en webbplats använder för att hjälpa dig utöva makt över ditt privatliv. Vi hjälper dig ta reda på i vilken utsträckning en webbplats kartlägger ditt beteende, och om webbplatsen skvallrar till andra, tredjeparter, om hur ditt beteende kartläggs. Vi ger tips till dem som driver webbplatser på hur man kan sluta ägna sig åt spårning och skvaller i digitala miljöer. Vi har också rekommendationer för vad man ska efterfråga om man vill att en viss webbplats ska bli bättre på dataskydd."
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "Welcome to the Web Privacy Check by Dataskydd.net!"
 msgstr "Välkommen till Dataskydd.net:s webbkoll!"
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "What are the principles of the EU general data protection regulation?"
 msgstr "Vad är den allmänna dataskyddsförordningens principer?"
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "What do you mean by ”gossiping to third-parties”?"
 msgstr "Vad menar ni med att en webbplats ”skvallrar” till tredjeparter?"
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "What is data protection?"
 msgstr "Vad är dataskydd?"
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "What is ”behavioural monitoring”?"
 msgstr "Vad är ”beteendekartläggning” och ”profilering”?"
 
-#: web/templates/site/about.html.slime:1
+#: lib/webbkoll_web/templates/site/about.html.slime:1
 msgid "In modern web development, it’s become common for a website not to be run from only one location. When you visit a website, you’re not only entering into contact with those running the website, but also all the businesses and organisations which collaborate with the managers of the websites. These may be internet service providers, script providers, font providers, analytics tools providers and a range of other providers. If the manager of the websites hands over information about visitors to any of these third-parties, it is a form of gossiping since it is usually not evident to the visitors that this type of information is being handed over."
 msgstr "På den moderna webben har det blivit vanligt att webbplatser inte drivs från en och samma plats. När man besöker en webbplats på webben kommer man inte bara i kontakt med den som driver webbplatsen, utan även med alla de företag och organisationer som den som driver webbplatsen har samarbeten med. Det kan vara internetleverantörer, skriptleverantörer, typsnittsleverantörer, analysverktyg och en rad andra leverantörer och tjänster. Om den som driver webbplatsen lämnar över uppgifter om en besökare till någon av dessa tredjeparter är det skvaller, eftersom det vanligtvis inte framgår för besökaren att något överlämnande sker."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "No third-party requests."
 msgstr "Inga tredjepartsförfrågningar."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "The basic problem that HSTS solves is that even after a website turns on HTTPS, visitors may still end up trying to connect over plain HTTP. For example:"
 msgstr "Det grundläggande problemet som HSTS löser är att även efter att en webbplats aktiverat HTTPS så kan det hända att besökare försöker ansluta över vanlig HTTP. Till exempel:"
 
-#: web/templates/site/tech.html.slime:1
+#: lib/webbkoll_web/templates/site/tech.html.slime:1
 msgid "Please note, however, that this tool is mainly meant to be used as a starting point for web developers. For more rigorous and systematic testing we recommend that you check out <a href=\"https://github.com/citp/OpenWPM\">OpenWPM</a>, which we used to analyze the websites of Sweden's municipalities (<a href=\"https://dataskydd.net/kommuner/\">site</a>, <a href=\"https://github.com/andersju/municipality-privacy\">code</a>)."
 msgstr "Notera dock att detta verktyg främst är menat att användas som en startpunkt för webbutvecklare. För att testa på mer systematiskt och rigoröst vis rekommenderar vi det fria verktyget <a href=\"https://github.com/citp/OpenWPM\">OpenWPM</a>, som vi använde i vår kartläggning av Sveriges kommuners webbplatser (<a href=\"https://dataskydd.net/kommuner/\">sajt</a>, <a href=\"https://github.com/andersju/municipality-privacy\">kod</a>)."
 
-#: web/controllers/site_controller.ex:30 web/templates/layout/app.html.slime:1
+#: lib/webbkoll_web/controllers/site_controller.ex:30
+#: lib/webbkoll_web/templates/layout/app.html.slime:1
 msgid "Tech"
 msgstr "Teknik"
 
-#: web/templates/site/tech.html.slime:1
+#: lib/webbkoll_web/templates/site/tech.html.slime:1
 msgid "This tool attempts to simulate what happens when a user visits a specified page with a typical browser, without clicking on anything. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled, since this is the default setting in most browsers."
 msgstr "Det här verktyget försöker simulera vad som händer när en person besöker en viss sida med en typisk webbläsare, utan att klicka på något. Webbläsaren har inga tillägg installerade och Do Not Track (DNT) är inte aktiverat, eftersom det är standardinställningen i de flesta webbläsare."
 
-#: web/templates/site/tech.html.slime:1
+#: lib/webbkoll_web/templates/site/tech.html.slime:1
 msgid "We built the tool with <a href=\"http://www.phoenixframework.org/\">Phoenix Framework</a> and <a href=\"https://github.com/Tomtomgo/phearjs\">PhearJS</a> (which in turn uses <a href=\"http://phantomjs.org/\">PhantomJS</a>)."
 msgstr "Vi byggde verktyget med <a href=\"http://www.phoenixframework.org/\">Phoenix Framework</a> och <a href=\"https://github.com/Tomtomgo/phearjs\">PhearJS</a> (som i sin tur använder <a href=\"http://phantomjs.org/\">PhantomJS</a>)."
 
-#: web/controllers/site_controller.ex:25
+#: lib/webbkoll_web/controllers/site_controller.ex:25
 msgid "About"
 msgstr "Om"
 
-#: web/controllers/site_controller.ex:31
+#: lib/webbkoll_web/controllers/site_controller.ex:31
 msgid "How our web privacy check tool works and how you can run your own instance."
 msgstr "Hur vårt testverktyg fungerar och hur du kan köra din egen instans."
 
-#: web/controllers/site_controller.ex:92
+#: lib/webbkoll_web/controllers/site_controller.ex:92
 msgid "How this website is doing with regards to privacy."
 msgstr "Hur den här webbplatsen hjälper dig utöva makt över ditt privatliv (eller inte)."
 
-#: web/controllers/site_controller.ex:89
+#: lib/webbkoll_web/controllers/site_controller.ex:89
 msgid "Processing failed"
 msgstr "Körningen misslyckades"
 
-#: web/controllers/site_controller.ex:107
+#: lib/webbkoll_web/controllers/site_controller.ex:107
 msgid "Sorry, bots aren't allowed."
 msgstr "Beklagar, men botar är inte tillåtna."
 
-#: web/templates/site/tech.html.slime:1
+#: lib/webbkoll_web/templates/site/tech.html.slime:1
 msgid "Technology we use"
 msgstr "Teknik vi använder"
 
-#: web/controllers/site_controller.ex:26
+#: lib/webbkoll_web/controllers/site_controller.ex:26
 msgid "The what and why of data protection and the principles of the EU general data protection regulation."
 msgstr "Dataskyddets hur och varför, och principerna bakom EU:s dataskyddsförordning."
 
-#: web/templates/site/tech.html.slime:1
+#: lib/webbkoll_web/templates/site/tech.html.slime:1
 msgid "We don't provide an API as we have limited resources and PhantomJS is rather resource-intensive, but <a href=\"https://github.com/andersju/webbkoll\">the code is available</a> under the MIT license."
 msgstr "Vi tillhandahåller inget API eftersom vi har begränsade resurser och PhantomJS är tämligen resurskrävande, men <a href=\"https://github.com/andersju/webbkoll\">koden är tillgänglig</a> (MIT-licens)."
 
-#: web/templates/site/index.html.slime:1
+#: lib/webbkoll_web/templates/site/index.html.slime:1
 msgid "<em>Please note that this service is still under development. Some sites (sometimes) don't work; sometimes results are incorrect. We're working on it! <strong>Also note</strong> that the backend is currently running on only one server with very limited resources, so in case of usage spikes, waiting times can be long. (But you can <a href=\"https://github.com/andersju/webbkoll\">run your own instance</a>!) <a href=\"mailto:info@dataskydd.net\">Feedback</a> is appreciated.</em>"
 msgstr "<em>Vänligen notera att den här tjänsten fortfarande är under utveckling. Vissa sajter funkar (ibland) inte; ibland är resultaten inkorrekta. Vi jobbar på det! <strong>Observera också</strong> att backend just nu körs på en enda väldigt begränsad server, så i fall många använder tjänsten samtidigt kan väntetiderna bli långa. (Men du kan <a href=\"https://github.com/andersju/webbkoll\">köra din egen instans</a>!) <a href=\"mailto:info@dataskydd.net\">Feedback</a> uppskattas.</em>"
 
-#: web/templates/site/index.html.slime:1
+#: lib/webbkoll_web/templates/site/index.html.slime:1
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
 msgstr "Det här verktyget hjälper dig ta reda på vilka dataskyddande funktioner en sajt använder för att hjälpa dig utöva makt över ditt privatliv. "
 
-#: web/controllers/site_controller.ex:191
+#: lib/webbkoll_web/controllers/site_controller.ex:191
 msgid "Error"
 msgstr "Fel"
 
-#: web/controllers/site_controller.ex:60 web/controllers/site_controller.ex:61
+#: lib/webbkoll_web/controllers/site_controller.ex:60
+#: lib/webbkoll_web/controllers/site_controller.ex:61
 msgid "Status"
 msgstr "Status"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<em>If a referrer policy is delivered via both CSP and a meta element, the meta element's policy takes precedence.</em>"
 msgstr "<em>Om en referrer-policy anges genom både CSP och ett meta-element så har meta-elementets policy företräde.</em>"
 
-#: lib/webbkoll/worker.ex:289
+#: lib/webbkoll/worker.ex:291
 msgid "Referrers are (probably) leaked"
 msgstr "Referrers läcks (antagligen)"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Referrer directive is set to <code>%{value}</code> in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer\">Content-Security-Policy (CSP) header</a>."
 msgstr "Referrer-direktivet är satt till <code>%{value}</code> i <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer\">Content-Security-Policy-headern (CSP)</a>."
 
@@ -810,66 +812,70 @@ msgstr "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_str
 msgid "<a href=\"https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning\">HTTP Public Key Pinning</a> protects your site from <a href=\"https://en.wikipedia.org/wiki/Man-in-the-middle_attack\">MiTM attacks</a> using rogue X.509 certificates. By whitelisting only the identities that the browser should trust, your users are protected in the event a certificate authority is compromised."
 msgstr "<a href=\"https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning\">HTTP Public Key Pinning</a> skyddar din sajt från <a href=\"https://en.wikipedia.org/wiki/Man-in-the-middle_attack\">man-in-the-middle-attacker</a> som använder bedrägliga/förfalskade X.509-certifikat. Genom att vitlista enbart de identiteter som webbläsaren bör lita på skyddar du dina användare i fall en certifikatutfärdare skulle komprometteras."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP\">Content Security Policy</a> is an effective measure to protect your site from <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting\">XSS</a> attacks. By whitelisting sources of approved content, you can prevent the browser from loading malicious assets. It can also help prevent information leakage."
 msgstr "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP\">Content Security Policy</a> är en effektiv åtgärd för att skydda din sajt mot <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting\">XSS</a>-attacker. Genom att vitlista godkända innehållskällor kan du förhindra webbläsaren från att ladda skadliga filer. Det kan också hjälpa till med att förhindra informationsläckage."
 
-#: web/templates/layout/app.html.slime:1
+#: lib/webbkoll_web/templates/layout/app.html.slime:1
 msgid "All text, except quotes and where noted, is available under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>."
 msgstr "All text, förutom citat och där annat anges, är tillgänglig under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "In its simplest form, the policy tells a browser to enable HSTS for that exact domain or subdomain, and to remember it for a given number of seconds (the policy is refreshed every time browser sees the header again):"
 msgstr "I dess enklaste form säger policyn åt webbläsaren att aktivera HSTS för den exakta domänen eller underdomänen och komma ihåg detta i ett givet antal sekunder (policyn laddas om varje gång webbläsaren ser headern igen):"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Since it's just an HTTP header, HSTS is very easy to add to a domain."
 msgstr "Eftersom det bara är en HTTP-header är det enkelt att lägga till i en domän."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "However, to enable HSTS for a domain via the HTTP header, the browser does have to see the header at least once. This means that users are not protected until after their first successful secure connection to a given domain."
 msgstr "För att aktivera HSTS för en domän genom HTTP-headern måste webbläsaren dock se headern minst en gång. Det betyder att användare inte är skyddade förrän deras första framgångsrika säkra anslutning till en given domän."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Please note that some sites use CDNs &ndash; <a href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in London, UK."
 msgstr "Observera att en del sajter använder CDN:er &ndash; <a href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; i vilket fall serverplatsen kan variera beroende på var besökaren befinner sig. Det här verktyget, Webbkoll, körs just nu från en server i London, UK."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "The server <strong>%{domain}</strong> (%{host_ip}) appears to have been located in <strong>%{country}</strong> during our test."
 msgstr "Servern <strong>%{domain}</strong> (%{host_ip}) verkade vara belägen i <strong>%{country}</strong> under vårt test."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "The HTTP header descriptions are based on the ones from <a href=\"https://securityheaders.io/\">securityheaders.io</a> by Scott Helme, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.en_GB\">CC-BY-SA 4.0</a>. Text about HTTPS partly adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain). <a href=\"http://www.maxmind.com\">MaxMind's</a> GeoLite2 country database (CC-BY-SA 4.0) is used for GeoIP lookups."
 msgstr "Beskrivningarna av HTTP-headers är baserade på dem från <a href=\"https://securityheaders.io/\">securityheaders.io</a> av Scott Helme, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.en_GB\">CC-BY-SA 4.0</a>. Texter om HTTPS delvis anpassade från CIO Councils <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain; ingen upphovsrätt). <a href=\"http://www.maxmind.com\">MaxMinds</a> GeoLite2-landdatabas (CC-BY-SA 4.0) används för GeoIP-lookups."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<a href=\"https://report-uri.io/home/tools\">report-uri.io</a> has excellent (free) tools with which you can build or analyze a Content Security Policy."
 msgstr "<a href=\"https://report-uri.io/home/tools\">report-uri.io</a> har utmärkta (gratis) verktyg med vilka du kan bygga eller analysera en Content Security Policy."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<em>The Content-Security-Policy is delivered via both HTTP header and meta element. The HTTP header's policy takes precedence.</em>"
 msgstr "<em>Sajtens Content-Security-Policy förmedelas genom både HTTP-header och meta-element. HTTP-headerns policy har företräde."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Content-Security-Policy HTTP header is set to <code>%{value}</code>."
 msgstr "Content-Security-Policy i HTTP-header är satt till <code>%{value}</code>."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Content-Security-Policy enabled"
 msgstr "Content-Security-Policy aktiverat"
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Content-Security-Policy meta element is set to <code>%{value}</code>."
 msgstr "Content-Security-Policy i meta-element är satt till <code>%{value}</code>."
 
-#: web/templates/site/results.html.slime:1
+#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Content-Security-Policy not enabled"
 msgstr "Content-Security-Policy ej aktiverat"
 
-#: web/controllers/site_controller.ex:20
+#: lib/webbkoll_web/controllers/site_controller.ex:20
 msgid "Analyze"
 msgstr ""
 
-#: web/templates/layout/app.html.slime:1
+#: lib/webbkoll_web/templates/layout/app.html.slime:1
 msgid "Originally funded by"
 msgstr "Ursprungligen finansierat av"
+
+#: lib/webbkoll_web/templates/site/results.html.slime:1
+msgid "Insecure first-party requests"
+msgstr ""

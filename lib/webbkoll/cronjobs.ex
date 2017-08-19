@@ -1,5 +1,5 @@
 defmodule Webbkoll.CronJobs do
-  alias Webbkoll.Site
+  alias WebbkollWeb.Site
   alias Webbkoll.Repo
   import Ecto.Query
 
