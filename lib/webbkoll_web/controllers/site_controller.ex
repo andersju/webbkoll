@@ -20,6 +20,7 @@ defmodule WebbkollWeb.SiteController do
     render(conn, "index.html", locale: conn.assigns.locale, page_title: gettext("Analyze"),
            page_description: gettext("This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."))
   end
+  def indexi18n(conn, params), do: index(conn, params)
 
   def about(conn, _params) do
     render(conn, "about.html", locale: conn.assigns.locale, page_title: gettext("About"),
@@ -47,13 +48,17 @@ defmodule WebbkollWeb.SiteController do
   end
 
   def status(conn, %{"id" => id}) do
-    Site
-    |> Repo.get(id)
-    |> handle_status(conn)
+    if Ecto.UUID.cast(id) == :error do
+      handle_status(nil, conn)
+    else
+      Site
+      |> Repo.get(id)
+      |> handle_status(conn)
+    end
   end
 
   defp handle_status(nil, conn) do
-    redirect(conn, to: site_path(conn, :index, conn.assigns.locale))
+    redirect(conn, to: site_path(conn, :indexi18n, conn.assigns.locale))
   end
   defp handle_status(site, conn) do
     case site.status do

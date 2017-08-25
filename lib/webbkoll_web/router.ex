@@ -31,7 +31,7 @@ defmodule WebbkollWeb.Router do
     get "/status", SiteController, :status
     get "/results", SiteController, :results
 
-    get "/", SiteController, :index
+    get "/", SiteController, :indexi18n
   end
 
   # Other scopes may use custom stacks.
