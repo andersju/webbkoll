@@ -77,15 +77,15 @@ msgstr ""
 msgid "Insecure"
 msgstr ""
 
-#: lib/webbkoll/worker.ex:288
+#: lib/webbkoll_web/views/site_view.ex:20
 msgid "Referrers leaked"
 msgstr ""
 
-#: lib/webbkoll/worker.ex:279
+#: lib/webbkoll_web/views/site_view.ex:18
 msgid "Referrers not leaked"
 msgstr ""
 
-#: lib/webbkoll/worker.ex:284
+#: lib/webbkoll_web/views/site_view.ex:19
 msgid "Referrers partially leaked"
 msgstr ""
 
@@ -766,7 +766,7 @@ msgstr ""
 msgid "<em>If a referrer policy is delivered via both CSP and a meta element, the meta element's policy takes precedence.</em>"
 msgstr ""
 
-#: lib/webbkoll/worker.ex:292
+#: lib/webbkoll_web/views/site_view.ex:21
 msgid "Referrers are (probably) leaked"
 msgstr ""
 

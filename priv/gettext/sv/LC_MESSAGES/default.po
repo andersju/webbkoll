@@ -91,15 +91,15 @@ msgstr "HTTP-headers"
 msgid "Insecure"
 msgstr "Osäker"
 
-#: lib/webbkoll/worker.ex:288
+#: lib/webbkoll_web/views/site_view.ex:20
 msgid "Referrers leaked"
 msgstr "Referrers läcks"
 
-#: lib/webbkoll/worker.ex:279
+#: lib/webbkoll_web/views/site_view.ex:18
 msgid "Referrers not leaked"
 msgstr "Referrers läcks inte"
 
-#: lib/webbkoll/worker.ex:284
+#: lib/webbkoll_web/views/site_view.ex:19
 msgid "Referrers partially leaked"
 msgstr "Referrers läcks delvis"
 
@@ -780,7 +780,7 @@ msgstr "Status"
 msgid "<em>If a referrer policy is delivered via both CSP and a meta element, the meta element's policy takes precedence.</em>"
 msgstr "<em>Om en referrer-policy anges genom både CSP och ett meta-element så har meta-elementets policy företräde.</em>"
 
-#: lib/webbkoll/worker.ex:292
+#: lib/webbkoll_web/views/site_view.ex:21
 msgid "Referrers are (probably) leaked"
 msgstr "Referrers läcks (antagligen)"
 
@@ -882,7 +882,7 @@ msgstr "1. Observera att <code>Public-Key-Pins</code> kan göra din sajt oåtkom
 
 #: lib/webbkoll/helpers.ex:76
 msgid "<a href=\"https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning\">HTTP Public Key Pinning</a> protects your site from <a href=\"https://en.wikipedia.org/wiki/Man-in-the-middle_attack\">MiTM attacks</a> using rogue X.509 certificates. By whitelisting only the identities that the browser should trust, your users are protected in the event a certificate authority is compromised.<sup>1</sup>"
-msgstr "<a href=\"https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning\">HTTP Public Key Pinning</a> skyddar din sajt från <a href=\"https://en.wikipedia.org/wiki/Man-in-the-middle_attack\">man-in-the-middle-attacker</a> som använder bedrägliga/förfalskade X.509-certifikat. Genom att vitlista enbart de identiteter som webbläsaren bör lita på skyddar du dina användare i fall en certifikatutfärdare skulle komprometteras."
+msgstr "<a href=\"https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning\">HTTP Public Key Pinning</a> skyddar din sajt från <a href=\"https://en.wikipedia.org/wiki/Man-in-the-middle_attack\">man-in-the-middle-attacker</a> som använder bedrägliga/förfalskade X.509-certifikat. Genom att vitlista enbart de identiteter som webbläsaren bör lita på skyddar du dina användare i fall en certifikatutfärdare skulle komprometteras.<sup>1</sup>"
 
 #: lib/webbkoll/helpers.ex:84
 msgid "<a href=\"https://scotthelme.co.uk/a-new-security-header-referrer-policy/\">Referrer-Policy</a> is a new header that allows a site to control how much information the browser includes with navigations away from a document (or when loading external resources) and should be set by all sites. (It can also be set using a meta element; see above.)"
