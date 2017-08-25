@@ -80,7 +80,7 @@ msgstr ""
 msgid "Insecure"
 msgstr ""
 
-#: lib/webbkoll/worker.ex:287
+#: lib/webbkoll/worker.ex:288
 msgid "Referrers leaked"
 msgstr ""
 
@@ -88,7 +88,7 @@ msgstr ""
 msgid "Referrers not leaked"
 msgstr ""
 
-#: lib/webbkoll/worker.ex:283
+#: lib/webbkoll/worker.ex:284
 msgid "Referrers partially leaked"
 msgstr ""
 
@@ -769,7 +769,7 @@ msgstr ""
 msgid "<em>If a referrer policy is delivered via both CSP and a meta element, the meta element's policy takes precedence.</em>"
 msgstr ""
 
-#: lib/webbkoll/worker.ex:291
+#: lib/webbkoll/worker.ex:292
 msgid "Referrers are (probably) leaked"
 msgstr ""
 
@@ -791,10 +791,6 @@ msgstr ""
 
 #: lib/webbkoll/helpers.ex:74
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security\">HTTP Strict Transport Security</a> is an excellent feature to support on your site and strengthens your implementation of TLS by getting the User Agent to enforce the use of HTTPS."
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:76
-msgid "<a href=\"https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning\">HTTP Public Key Pinning</a> protects your site from <a href=\"https://en.wikipedia.org/wiki/Man-in-the-middle_attack\">MiTM attacks</a> using rogue X.509 certificates. By whitelisting only the identities that the browser should trust, your users are protected in the event a certificate authority is compromised."
 msgstr ""
 
 #: lib/webbkoll_web/templates/site/results.html.slime:1
@@ -865,7 +861,19 @@ msgstr ""
 msgid "Insecure first-party requests"
 msgstr ""
 
-#, fuzzy
 #: lib/webbkoll_web/templates/site/tech.html.slime:1
 msgid "Please note, however, that this tool is mainly meant to be used as a starting point for web developers. For more rigorous and systematic testing we recommend that you check out <a href=\"https://github.com/citp/OpenWPM\">OpenWPM</a>, which we used to analyze the websites of Sweden's municipalities (<a href=\"https://dataskydd.net/kommuner/\">site</a>, <a href=\"https://github.com/andersju/municipality-privacy\">code</a>). You might also want to have a look at <a href=\"https://privacyscore.org/\">PrivacyScore</a>, which is a bit more comprehensive than Webbkoll (additionally checks e.g. email and TLS/SSL configuration) and also lets you compare/rank lists of sites."
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/results.html.slime:1
+msgid "1. Note that <code>Public-Key-Pins</code> can brick your site if something goes wrong and should only be used with great caution, if at all. See <a href=\"https://community.letsencrypt.org/t/hpkp-best-practices-if-you-choose-to-implement/4625\">1</a>, <a href=\"https://scotthelme.co.uk/im-giving-up-on-hpkp/\">2</a>, <a href=\"https://www.smashingmagazine.com/be-afraid-of-public-key-pinning/\">3</a>."
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:76
+msgid "<a href=\"https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning\">HTTP Public Key Pinning</a> protects your site from <a href=\"https://en.wikipedia.org/wiki/Man-in-the-middle_attack\">MiTM attacks</a> using rogue X.509 certificates. By whitelisting only the identities that the browser should trust, your users are protected in the event a certificate authority is compromised.<sup>1</sup>"
+msgstr ""
+
+#, fuzzy
+#: lib/webbkoll/helpers.ex:84
+msgid "<a href=\"https://scotthelme.co.uk/a-new-security-header-referrer-policy/\">Referrer-Policy</a> is a new header that allows a site to control how much information the browser includes with navigations away from a document (or when loading external resources) and should be set by all sites. (It can also be set using a meta element; see above.)"
 msgstr ""

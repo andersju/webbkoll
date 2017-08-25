@@ -9,6 +9,7 @@ defmodule Webbkoll.Trackers do
   # unique host is a key. Additionally, by making this a module attribute, we
   # ensure that this is only done at compile time.
 
+  # TODO: Clean up this mess
   @hosts (fn ->
     Application.app_dir(:webbkoll, "priv/services.json")
     |> File.read!
@@ -20,9 +21,14 @@ defmodule Webbkoll.Trackers do
          else
            Enum.reduce(sites, hosts, fn(site, hosts) ->
              Enum.reduce(site, hosts, fn({name, url}, hosts) ->
-               Enum.reduce((url |> Map.values |> List.first), hosts, fn(host, hosts) ->
-                 Map.put_new(hosts, host, "#{category} (#{name})")
-               end)
+               url
+               |> Enum.filter(fn({x, _y}) -> String.starts_with?(x, ["http", "www."]) end)
+               |> Enum.into(%{})
+               |> Map.values
+               |> List.first
+               |> Enum.reduce(hosts, fn(host, hosts) ->
+                    Map.put_new(hosts, host, "#{category} (#{name})")
+                  end)
              end)
            end)
          end

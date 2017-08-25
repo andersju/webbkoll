@@ -277,7 +277,8 @@ defmodule Webbkoll.Worker do
         %{"status" => "success",
           "icon"   => "icon-umbrella2 success",
           "text"   => gettext("Referrers not leaked")}
-      referrer in ["origin", "origin-when-cross-origin", "origin-when-crossorigin"] ->
+      referrer in ["origin", "origin-when-cross-origin", "origin-when-crossorigin",
+                   "strict-origin", "strict-origin-when-cross-origin"] ->
         %{"status" => "warning",
           "icon"   => "icon-raindrops2 warning",
            "text"  => gettext("Referrers partially leaked")}

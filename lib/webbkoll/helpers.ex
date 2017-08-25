@@ -73,13 +73,15 @@ defmodule Webbkoll.Helpers do
       "Strict-Transport-Security" =>
         gettext(~s{<a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a> is an excellent feature to support on your site and strengthens your implementation of TLS by getting the User Agent to enforce the use of HTTPS.}),
       "Public-Key-Pins" =>
-        gettext(~s{<a href="https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning">HTTP Public Key Pinning</a> protects your site from <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">MiTM attacks</a> using rogue X.509 certificates. By whitelisting only the identities that the browser should trust, your users are protected in the event a certificate authority is compromised.}),
+        gettext(~s{<a href="https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning">HTTP Public Key Pinning</a> protects your site from <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">MiTM attacks</a> using rogue X.509 certificates. By whitelisting only the identities that the browser should trust, your users are protected in the event a certificate authority is compromised.<sup>1</sup>}),
       "X-Frame-Options" =>
         gettext(~s{<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">X-Frame-Options</a> tells the browser whether you want to allow your site to be framed or not. By preventing a browser from framing your site you can defend against attacks like clickjacking.}),
       "X-Xss-Protection" =>
         gettext(~s{<a href="http://stackoverflow.com/questions/9090577/what-is-the-http-header-x-xss-protection">X-XSS-Protection</a> sets the configuration for the cross-site scripting filters built into most browsers. The best configuration is "X-XSS-Protection: 1; mode=block".}),
       "X-Content-Type-Options" =>
-        gettext(~s{<a href="http://stackoverflow.com/questions/18337630/what-is-x-content-type-options-nosniff">X-Content-Type-Options</a> stops a browser from trying to MIME-sniff the content type and forces it to stick with the declared content-type. This helps to reduce the danger of drive-by downloads. The only valid value for this header is "X-Content-Type-Options: nosniff".})
+        gettext(~s{<a href="http://stackoverflow.com/questions/18337630/what-is-x-content-type-options-nosniff">X-Content-Type-Options</a> stops a browser from trying to MIME-sniff the content type and forces it to stick with the declared content-type. This helps to reduce the danger of drive-by downloads. The only valid value for this header is "X-Content-Type-Options: nosniff".}),
+      "Referrer-Policy" =>
+        gettext(~s{<a href="https://scotthelme.co.uk/a-new-security-header-referrer-policy/">Referrer-Policy</a> is a new header that allows a site to control how much information the browser includes with navigations away from a document (or when loading external resources) and should be set by all sites. (It can also be set using a meta element; see above.)})
     }
   end
 

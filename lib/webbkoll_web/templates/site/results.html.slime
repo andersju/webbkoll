@@ -364,6 +364,9 @@
     h3#headers = gettext "HTTP headers"
     = render "_headers.html", headers: @site.data["headers"]
 
+    p
+      = gettext(~s{1. Note that <code>Public-Key-Pins</code> can brick your site if something goes wrong and should only be used with great caution, if at all. See <a href="https://community.letsencrypt.org/t/hpkp-best-practices-if-you-choose-to-implement/4625">1</a>, <a href="https://scotthelme.co.uk/im-giving-up-on-hpkp/">2</a>, <a href="https://www.smashingmagazine.com/be-afraid-of-public-key-pinning/">3</a>.}) |> raw
+
   section.result
     h3#info = gettext "What this tool checks (and doesn't check)"
 
