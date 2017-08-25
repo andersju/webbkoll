@@ -2,7 +2,6 @@ defmodule Webbkoll.Worker do
   alias WebbkollWeb.Site
   alias Webbkoll.Repo
   import Webbkoll.Helpers
-  import WebbkollWeb.Gettext
 
   @max_retries Application.get_env(:exq, :max_retries)
 
@@ -275,21 +274,17 @@ defmodule Webbkoll.Worker do
     cond do
       referrer in ["never", "no-referrer"] ->
         %{"status" => "success",
-          "icon"   => "icon-umbrella2 success",
-          "text"   => gettext("Referrers not leaked")}
+          "icon"   => "icon-umbrella2 success"}
       referrer in ["origin", "origin-when-cross-origin", "origin-when-crossorigin",
                    "strict-origin", "strict-origin-when-cross-origin"] ->
         %{"status" => "warning",
-          "icon"   => "icon-raindrops2 warning",
-           "text"  => gettext("Referrers partially leaked")}
+          "icon"   => "icon-raindrops2 warning"}
       referrer in ["no-referrer-when-down-grade", "default", "unsafe-url", "always", "", nil] ->
         %{"status" => "alert",
-          "icon" => "icon-raindrops2 alert",
-           "text" => gettext("Referrers leaked")}
+          "icon" => "icon-raindrops2 alert"}
       true ->
         %{"status" => "other",
-          "icon" => "",
-          "text" => gettext("Referrers are (probably) leaked")}
+          "icon" => ""}
     end
   end
 end

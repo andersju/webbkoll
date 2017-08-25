@@ -42,7 +42,7 @@
               i class="#{@site.data["referrer_policy"]["icon"]}"
             .label
               a href="#referrers"
-                = @site.data["referrer_policy"]["text"]
+                = get_referrer_string(@site.data["referrer_policy"]["status"])
         li
           .value
             = @site.data["cookie_count"]["first_party"] + @site.data["cookie_count"]["third_party"]
@@ -217,7 +217,7 @@
 
   section class="result #{@site.data["referrer_policy"]["status"]}"
     h3#referrers
-      = @site.data["referrer_policy"]["text"]
+      = get_referrer_string(@site.data["referrer_policy"]["status"])
     .alpha
       = if @site.data["meta_referrer"] || @site.data["header_csp_referrer"] do
         = if @site.data["meta_referrer"] do
