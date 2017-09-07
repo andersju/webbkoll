@@ -272,7 +272,7 @@ defmodule Webbkoll.Worker do
 
   defp check_referrer_policy(referrer) do
     cond do
-      referrer in ["never", "no-referrer"] ->
+      referrer in ["never", "no-referrer", "same-origin"] ->
         %{"status" => "success",
           "icon"   => "icon-umbrella2 success"}
       referrer in ["origin", "origin-when-cross-origin", "origin-when-crossorigin",

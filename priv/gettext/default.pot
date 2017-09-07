@@ -175,7 +175,7 @@ msgstr ""
 msgid "Install Piwik on your own server. It's easy to install and easy to upgrade."
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:136
+#: lib/webbkoll_web/controllers/site_controller.ex:141
 msgid "Invalid domain: %{domain}"
 msgstr ""
 
@@ -195,7 +195,7 @@ msgstr ""
 msgid "Piwik is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:91
+#: lib/webbkoll_web/controllers/site_controller.ex:96
 msgid "Results for %{url}"
 msgstr ""
 
@@ -237,7 +237,7 @@ msgstr ""
 msgid "Third-party services"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:184
+#: lib/webbkoll_web/controllers/site_controller.ex:189
 msgid "Trying same host too frequently. Try again in a minute."
 msgstr ""
 
@@ -245,7 +245,7 @@ msgstr ""
 msgid "YES,"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:173
+#: lib/webbkoll_web/controllers/site_controller.ex:178
 msgid "You're requesting too frequently. Install locally?"
 msgstr ""
 
@@ -265,10 +265,6 @@ msgstr ""
 
 #: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free <em>domain-validated</em> (<DV) certificates through an easy, automated process."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "<a href=\"https://w3c.github.io/webappsec-referrer-policy/#referrer-policies\">A few different policies are offered</a>, such as <code>origin</code> (strips everything except the <a href=\"https://tools.ietf.org/html/rfc6454#section-3.2\">origin</a>) and <code>origin-when-cross-origin</code> (sends full URL with same-origin requests, otherwise stripped). The only one we recommend is <strong><code>no-referrer</code></strong>, which kills the referrer header entirely for all requests, no matter the destination."
 msgstr ""
 
 #: lib/webbkoll_web/templates/site/results.html.slime:1
@@ -700,7 +696,7 @@ msgstr ""
 msgid "The basic problem that HSTS solves is that even after a website turns on HTTPS, visitors may still end up trying to connect over plain HTTP. For example:"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:30
+#: lib/webbkoll_web/controllers/site_controller.ex:31
 #: lib/webbkoll_web/templates/layout/app.html.slime:1
 msgid "Tech"
 msgstr ""
@@ -713,23 +709,23 @@ msgstr ""
 msgid "We built the tool with <a href=\"http://www.phoenixframework.org/\">Phoenix Framework</a> and <a href=\"https://github.com/Tomtomgo/phearjs\">PhearJS</a> (which in turn uses <a href=\"http://phantomjs.org/\">PhantomJS</a>)."
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:25
+#: lib/webbkoll_web/controllers/site_controller.ex:26
 msgid "About"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:31
+#: lib/webbkoll_web/controllers/site_controller.ex:32
 msgid "How our web privacy check tool works and how you can run your own instance."
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:92
+#: lib/webbkoll_web/controllers/site_controller.ex:97
 msgid "How this website is doing with regards to privacy."
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:89
+#: lib/webbkoll_web/controllers/site_controller.ex:94
 msgid "Processing failed"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:107
+#: lib/webbkoll_web/controllers/site_controller.ex:112
 msgid "Sorry, bots aren't allowed."
 msgstr ""
 
@@ -737,7 +733,7 @@ msgstr ""
 msgid "Technology we use"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:26
+#: lib/webbkoll_web/controllers/site_controller.ex:27
 msgid "The what and why of data protection and the principles of the EU general data protection regulation."
 msgstr ""
 
@@ -753,12 +749,12 @@ msgstr ""
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:191
+#: lib/webbkoll_web/controllers/site_controller.ex:196
 msgid "Error"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:60
-#: lib/webbkoll_web/controllers/site_controller.ex:61
+#: lib/webbkoll_web/controllers/site_controller.ex:65
+#: lib/webbkoll_web/controllers/site_controller.ex:66
 msgid "Status"
 msgstr ""
 
@@ -872,4 +868,8 @@ msgstr ""
 
 #: lib/webbkoll/helpers.ex:84
 msgid "<a href=\"https://scotthelme.co.uk/a-new-security-header-referrer-policy/\">Referrer-Policy</a> is a new header that allows a site to control how much information the browser includes with navigations away from a document (or when loading external resources) and should be set by all sites. (It can also be set using a meta element; see above.)"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/results.html.slime:1
+msgid "<a href=\"https://w3c.github.io/webappsec-referrer-policy/#referrer-policies\">A few different policies are offered</a>, such as <code>origin</code> (strips everything except the <a href=\"https://tools.ietf.org/html/rfc6454#section-3.2\">origin</a>) and <code>origin-when-cross-origin</code> (sends full URL with same-origin requests, otherwise stripped). We recommend <strong><code>no-referrer</code></strong>, which kills the referrer header entirely for all requests, no matter the destination; or <strong><code>same-origin</code></strong>, which kills the referrer for third-party requests but not for requests to the same origin."
 msgstr ""
