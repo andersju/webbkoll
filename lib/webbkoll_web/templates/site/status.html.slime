@@ -9,7 +9,7 @@ section
     li
       strong>
         gettext "ID:"
-      = @site.id
+      = @id
     li
       strong>
         = gettext "Input URL:"

@@ -33,15 +33,6 @@ config :logger, :console, format: "[$level] $message\n"
 # and calculating stacktraces is usually expensive.
 config :phoenix, :stacktrace_depth, 20
 
-# Configure your database
-config :webbkoll, Webbkoll.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "webbkoll_dev",
-  hostname: "localhost",
-  pool_size: 10
-
 config :exq,
   name: Exq,
   host: "127.0.0.1",

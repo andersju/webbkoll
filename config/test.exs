@@ -10,15 +10,6 @@ config :webbkoll, WebbkollWeb.Endpoint,
 # Print only warnings and errors during test
 config :logger, level: :warn
 
-# Configure your database
-config :webbkoll, Webbkoll.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "webbkoll_test",
-  hostname: "localhost",
-  pool: Ecto.Adapters.SQL.Sandbox
-
 # backend_urls keys must match exq queues keys
 config :webbkoll,
   backend_urls: %{"q1" => "http://localhost:8100/"},

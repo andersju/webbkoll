@@ -18,11 +18,12 @@ The frontend is multilingual and currently supports English and Swedish.
 
 [exq](https://github.com/akira/exq) is used for job processing, and
 some basic rate limiting is done with [ex_rated](https://github.com/grempe/ex_rated).
-Multiple backends can be configured.
+Multiple backends can be configured. [ConCache](https://github.com/sasa1977/con_cache)
+is used to store results in an in-memory [ETS](http://erlang.org/doc/man/ets.html) table
+for a limited time.
 
 **Please note** that this is still a work in progress. Expect bugs and
 messy code in places. Only a few basic tests are in place.
-Cleanup is underway!
 
 **Also note** that this tool is mainly meant to be used as a _starting point_
 for web developers. For more rigorous and systematic testing we
@@ -42,10 +43,8 @@ This is a project by [Dataskydd.net](https://dataskydd.net). We received funding
 ## Frontend (this app!)
   * Install Erlang (>= 20) and Elixir (>= 1.4) -- see http://elixir-lang.org/install.html
   * Have [Redis](http://redis.io/) running (needed for exq job handling)
-  * Make sure you have a working [PostgreSQL](http://www.postgresql.org/) installation
   * Clone this repository, cd into it
   * Install dependencies: `mix deps.get`
-  * Create and migrate your database: `mix ecto.create && mix ecto.migrate`
   * Install Node.js dependencies: `cd assets; npm install; cd ..`
   * Make sure PhearJS and Redis are running on the hosts/ports specified in `config/dev.exs`
   * Download the [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2/geolite2/) in MaxMind DB binary format, extract it, and make sure it's available as `priv/GeoLite2-Country.mmdb` (or as specified in `config/config.exs`).
@@ -53,26 +52,7 @@ This is a project by [Dataskydd.net](https://dataskydd.net). We received funding
 
 Now you can visit [`localhost:4000`](http://localhost:4000) in your browser.
 
-To run in production, create `config/prod.secret.exs` and enter something like the following (edit `secret_key_base` and change database configuration as necessary):
-```
-use Mix.Config
-
-# In this file, we keep production configuration that
-# you likely want to automate and keep it away from
-# your version control system.
-config :webbkoll, WebbkollWeb.Endpoint,
-  secret_key_base: "somelongrandomstring"
-
-# Configure your database
-config :webbkoll, Webbkoll.Repo,
-  adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
-  database: "webbkoll_prod",
-  pool_size: 20
-```
-
-Get dependencies, compile:
+To run in production, first get and compile dependencies:
 
   * `mix deps.get --only prod`
   * `MIX_ENV=prod mix compile`
@@ -80,15 +60,10 @@ Get dependencies, compile:
 Compile static assets:
 
   * `cd assets`
-  * `npm install` # (if you haven't done that already)
+  * `npm install`
   * `node_modules/brunch/bin/brunch build --production`
   * `cd ..`
   * `MIX_ENV=prod mix phx.digest`
-
-Create and migrate database:
-
-  * `MIX_ENV=prod mix ecto.create`
-  * `MIX_ENV=prod mix ecto.migrate`
 
 Start the server (listens on port 4001 by default; prefix the following with PORT=XXXX to change):
 

@@ -1,7 +1,6 @@
 defmodule WebbkollWeb.SiteController do
   use WebbkollWeb, :controller
   alias WebbkollWeb.Site
-  import Ecto.Query
 
   @backend_urls      Application.get_env(:webbkoll, :backend_urls)
   @rate_limit_client Application.get_env(:webbkoll, :rate_limit_client)
@@ -33,37 +32,30 @@ defmodule WebbkollWeb.SiteController do
   end
 
   def check(%Plug.Conn{assigns: %{input_url: proper_url}} = conn, _params) do
-    %Site{}
-    |> Site.changeset(%{input_url: proper_url, status: "queue"})
-    |> Repo.insert
-    |> handle_insert(conn, proper_url)
-  end
+    site = %Site{input_url: proper_url, status: "queue", inserted_at: System.system_time(:microsecond)}
+    id = UUID.uuid4()
 
-  def handle_insert({:error, changeset}), do: IO.inspect changeset
-  def handle_insert({:ok, site}, conn, proper_url) do
-      {queue, _}  = Enum.random(@backend_urls)
-      {:ok, _ack} = Exq.enqueue(Exq, queue, Webbkoll.Worker,
-                                [site.id, proper_url, conn.params["refresh"], @backend_urls[queue]])
-      redirect(conn, to: site_path(conn, :status, conn.assigns.locale, id: site.id))
+    ConCache.put(:site_cache, id, site)
+    {queue, _}  = Enum.random(@backend_urls)
+    {:ok, _ack} = Exq.enqueue(Exq, queue, Webbkoll.Worker,
+                              [id, proper_url, conn.params["refresh"], @backend_urls[queue]])
+    redirect(conn, to: site_path(conn, :status, conn.assigns.locale, id: id))
   end
 
   def status(conn, %{"id" => id}) do
-    if Ecto.UUID.cast(id) == :error do
-      handle_status(nil, conn)
-    else
-      Site
-      |> Repo.get(id)
-      |> handle_status(conn)
+    case UUID.info(id) do
+      {:error, _} -> handle_status(nil, id, conn)
+      {:ok, _} -> ConCache.get(:site_cache, id) |> handle_status(id, conn)
     end
   end
 
-  defp handle_status(nil, conn) do
+  defp handle_status(nil, _id, conn) do
     redirect(conn, to: site_path(conn, :indexi18n, conn.assigns.locale))
   end
-  defp handle_status(site, conn) do
+  defp handle_status(site, id, conn) do
     case site.status do
-      "queue"      -> render(conn, "status.html", site: site, page_title: gettext("Status"))
-      "processing" -> render(conn, "status.html", site: site, page_title: gettext("Status"))
+      "queue"      -> render(conn, "status.html", id: id, site: site, page_title: gettext("Status"))
+      "processing" -> render(conn, "status.html", id: id, site: site, page_title: gettext("Status"))
       "failed"     -> redirect(conn, to: site_path(conn, :results,
                                                    conn.assigns.locale,
                                                    url: site.input_url))
@@ -74,28 +66,33 @@ defmodule WebbkollWeb.SiteController do
   end
 
   def results(conn, %{"url" => url}) do
-    Site
-    |> where([s], s.final_url == ^url or s.input_url == ^url)
-    |> order_by(desc: :updated_at)
-    |> limit(1)
-    |> select([s], s)
-    |> Repo.all
-    |> List.first
+    url
+    |> get_latest_from_cache()
     |> handle_results(conn, url)
   end
 
   defp handle_results(nil, conn, url) do
     redirect(conn, to: site_path(conn, :check, conn.assigns.locale, url: url))
   end
-  defp handle_results(site, conn, _url) do
+  defp handle_results({id, site}, conn, _url) do
     case site.status do
-      "queue"      -> redirect(conn, to: site_path(conn, :status, conn.assigns.locale, id: site.id))
-      "processing" -> redirect(conn, to: site_path(conn, :status, conn.assigns.locale, id: site.id))
+      "queue"      -> redirect(conn, to: site_path(conn, :status, conn.assigns.locale, id: id, site: site))
+      "processing" -> redirect(conn, to: site_path(conn, :status, conn.assigns.locale, id: id, site: site))
       "failed"     -> render(conn, :failed, site: site, page_title: gettext("Processing failed"))
       "done"       -> render(conn, :results, site: site,
                              page_title: gettext("Results for %{url}", url: truncate(site.final_url, 50)),
                              page_description: gettext("How this website is doing with regards to privacy."))
     end
+  end
+
+  defp get_latest_from_cache(url) do
+    input = :ets.match_object(ConCache.ets(:site_cache), {:_, %{input_url: url}})
+    final = :ets.match_object(ConCache.ets(:site_cache), {:_, %{final_url: url}})
+
+    input ++ final
+    |> Enum.filter(&is_tuple/1)
+    |> Enum.sort(fn(x, y) -> (elem(x, 1) |> Map.get(:inserted_at)) > (elem(y, 1) |> Map.get(:inserted_at)) end)
+    |> List.first
   end
 
   # Plugs
@@ -146,27 +143,22 @@ defmodule WebbkollWeb.SiteController do
     if conn.params["refresh"] == "on" do
       conn
     else
-      check_site_in_db(conn, proper_url)
+      check_site_in_cache(conn, proper_url)
     end
   end
 
-  defp check_site_in_db(conn, proper_url) do
-    Site
-    |> where([s], s.input_url == ^proper_url or s.final_url == ^proper_url)
-    |> order_by(desc: :inserted_at)
-    |> limit(1)
-    |> select([s], s.id)
-    |> Repo.all
-    |> List.first
-    |> handle_check_site_in_db(conn)
+  defp check_site_in_cache(conn, proper_url) do
+    proper_url
+    |> get_latest_from_cache()
+    |> handle_check_site_in_cache(conn)
   end
 
-  defp handle_check_site_in_db(nil, conn), do: conn
-  defp handle_check_site_in_db(site_id, conn) do
+  defp handle_check_site_in_cache({id, _site}, conn) do
     conn
-    |> redirect(to: site_path(conn, :status, conn.assigns.locale, id: site_id))
+    |> redirect(to: site_path(conn, :status, conn.assigns.locale, id: id))
     |> halt
   end
+  defp handle_check_site_in_cache(_, conn), do: conn
 
   defp check_rate_ip(conn, _params) do
     conn.remote_ip

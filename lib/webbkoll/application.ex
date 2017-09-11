@@ -9,14 +9,12 @@ defmodule Webbkoll.Application do
     children = [
       # Start the endpoint when the application starts
       supervisor(WebbkollWeb.Endpoint, []),
-      # Start the Ecto repository
-      supervisor(Webbkoll.Repo, []),
       # Add the Exq supervisor
       supervisor(Exq, []),
       # Add the Quantum supervisor
-      worker(Webbkoll.Scheduler, [])
-      # Here you could define other workers and supervisors as children
-      # worker(Webbkoll.Worker, [arg1, arg2, arg3]),
+      worker(Webbkoll.Scheduler, []),
+      # Add the ConCache ETS key/value store
+      supervisor(ConCache, [[ttl_check: :timer.seconds(60), ttl: :timer.seconds(604800)], [name: :site_cache]])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

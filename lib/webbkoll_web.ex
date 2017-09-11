@@ -16,23 +16,9 @@ defmodule WebbkollWeb do
   below.
   """
 
-  def model do
-    quote do
-      use Ecto.Schema
-
-      import Ecto
-      import Ecto.Changeset
-      import Ecto.Query, only: [from: 1, from: 2]
-    end
-  end
-
   def controller do
     quote do
       use Phoenix.Controller, namespace: WebbkollWeb
-
-      alias Webbkoll.Repo
-      import Ecto
-      import Ecto.Query, only: [from: 1, from: 2]
 
       import WebbkollWeb.Router.Helpers
       import WebbkollWeb.Gettext
@@ -68,9 +54,6 @@ defmodule WebbkollWeb do
     quote do
       use Phoenix.Channel
 
-      alias Webbkoll.Repo
-      import Ecto
-      import Ecto.Query, only: [from: 1, from: 2]
       import WebbkollWeb.Gettext
     end
   end

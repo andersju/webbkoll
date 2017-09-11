@@ -1,6 +1,4 @@
 defmodule Webbkoll.Worker do
-  alias WebbkollWeb.Site
-  alias Webbkoll.Repo
   import Webbkoll.Helpers
 
   @max_retries Application.get_env(:exq, :max_retries)
@@ -38,15 +36,10 @@ defmodule Webbkoll.Worker do
   end
 
   defp update_site(id, params) do
-    Site
-    |> Repo.get(id)
-    |> Site.changeset(params)
-    |> Repo.update
-    |> handle_update
+    ConCache.update(:site_cache, id, fn(old) ->
+      {:ok, old |> Map.merge(params) |> Map.merge(%{updated_at: System.system_time(:microsecond)})}
+    end)
   end
-
-  defp handle_update({:ok, site}), do: site
-  defp handle_update({:error, changeset}), do: IO.inspect changeset
 
   def fetch(url, refresh, backend_url) do
     params =

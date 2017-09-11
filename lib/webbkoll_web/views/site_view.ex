@@ -7,9 +7,9 @@ defmodule WebbkollWeb.SiteView do
     |> DateTime.to_string
   end
 
-  def format_naivedatetime(naivedatetime) do
-    naivedatetime
-    |> DateTime.from_naive!("Etc/UTC")
+  def format_site_time(timestamp) do
+    timestamp
+    |> DateTime.from_unix!(:microsecond)
     |> Timex.format!("%Y-%m-%d %H:%M:%S %Z", :strftime)
   end
 

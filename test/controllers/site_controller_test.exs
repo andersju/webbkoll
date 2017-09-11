@@ -1,6 +1,6 @@
 defmodule Webbkoll.SiteControllerTest do
   use WebbkollWeb.ConnCase
-  alias Webbkoll.Factory
+  import Webbkoll.Factory
 
   @default_locale Application.get_env(:webbkoll, :default_locale)
 
@@ -43,7 +43,8 @@ defmodule Webbkoll.SiteControllerTest do
 
   test "analysis+HTML of site with HTTPS, HSTS, CSP, referrer policy, no cookies/external requests" do
     data = read_and_analyze_json("test/fixtures/https_hsts_referrer_no_cookies_or_ext_requests.json")
-    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
+    site = build(:site, data: data)
+    ConCache.put(:site_cache, UUID.uuid4(), site)
 
     assert data["scheme"] == "https"
     assert data["meta_referrer"] =~ "never"
@@ -72,7 +73,8 @@ defmodule Webbkoll.SiteControllerTest do
 
   test "site with HTTP, first and third-party cookies/requests, no referrer policy, no CSP" do
     data = read_and_analyze_json("test/fixtures/http_with_cookies_and_ext_requests.json")
-    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
+    site = build(:site, data: data)
+    ConCache.put(:site_cache, UUID.uuid4(), site)
 
     assert data["scheme"] == "http"
     assert data["meta_referrer"] == nil
@@ -89,7 +91,6 @@ defmodule Webbkoll.SiteControllerTest do
 
   test "site with Referrer Policy set in Content-Security-Policy header" do
     data = read_and_analyze_json("test/fixtures/csp_referrer.json")
-    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
 
     assert data["referrer_policy"]["status"] == "success"
     assert data["header_csp_referrer"] == "no-referrer"
@@ -97,7 +98,6 @@ defmodule Webbkoll.SiteControllerTest do
 
   test "site with Referrer Policy set in Referrer-Policy header" do
     data = read_and_analyze_json("test/fixtures/referrer_header.json")
-    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
 
     assert data["referrer_policy"]["status"] == "success"
     assert data["header_referrer"] == "no-referrer"
@@ -105,7 +105,6 @@ defmodule Webbkoll.SiteControllerTest do
 
   test "site with Referrer Policy set in both Referrer-Policy and Content-Security-Policy headers (CSP should take precedence)" do
     data = read_and_analyze_json("test/fixtures/csp_and_referrer_header.json")
-    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
 
     assert data["referrer_policy"]["status"] == "alert"
     assert data["header_csp_referrer"] == "unsafe-url"
@@ -114,7 +113,6 @@ defmodule Webbkoll.SiteControllerTest do
 
   test "site with Referrer Policy set in both Content-Security-Policy header and meta element (meta should take precedence)" do
     data = read_and_analyze_json("test/fixtures/csp_and_meta_referrer.json")
-    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
 
     assert data["referrer_policy"]["status"] == "success"
     assert data["header_csp_referrer"] == "unsafe-url"
@@ -123,7 +121,8 @@ defmodule Webbkoll.SiteControllerTest do
 
   test "site with Content-Security-Policy set in header" do
     data = read_and_analyze_json("test/fixtures/header_csp.json")
-    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
+    site = build(:site, data: data)
+    ConCache.put(:site_cache, UUID.uuid4(), site)
 
     assert data["header_csp"] == "default-src 'self'"
 
@@ -135,7 +134,8 @@ defmodule Webbkoll.SiteControllerTest do
 
   test "site with Content-Security-Policy set in meta element" do
     data = read_and_analyze_json("test/fixtures/meta_csp.json")
-    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
+    site = build(:site, data: data)
+    ConCache.put(:site_cache, UUID.uuid4(), site)
 
     assert data["meta_csp"] == "default-src 'none'"
 
@@ -147,7 +147,8 @@ defmodule Webbkoll.SiteControllerTest do
 
   test "site with Content-Security-Policy set in both header and meta element (header should take precedence)" do
     data = read_and_analyze_json("test/fixtures/header_csp_and_meta_csp.json")
-    site = Factory.insert(:site, input_url: "example.com", final_url: "https://example.com/", data: data)
+    site = build(:site, data: data)
+    ConCache.put(:site_cache, UUID.uuid4(), site)
 
     assert data["header_csp"] == "default-src 'self'"
     assert data["meta_csp"] == "default-src 'none'"

@@ -19,7 +19,7 @@ defmodule Webbkoll.Mixfile do
   def application do
     [mod: {Webbkoll.Application, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :httpoison, :tzdata, :ex_rated, :quantum, :timex, :geolix],
+                    :httpoison, :tzdata, :ex_rated, :quantum, :timex, :geolix, :con_cache],
      included_applications: [:ex2ms, :exq, :floki, :phoenix_slime, :public_suffix]]
   end
 
@@ -33,8 +33,6 @@ defmodule Webbkoll.Mixfile do
   defp deps do
     [{:phoenix, "~> 1.3.0"},
      {:phoenix_pubsub, "~> 1.0"},
-     {:postgrex, ">= 0.0.0"},
-     {:phoenix_ecto, "~> 3.2"},
      {:phoenix_html, "~> 2.10"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
@@ -50,7 +48,9 @@ defmodule Webbkoll.Mixfile do
      {:timex, "~> 3.0"},
      {:hackney, "~> 1.8"},
      {:geolix, "~> 0.13"},
-     {:idna, "~> 5.0", override: true}]
+     {:idna, "~> 5.0", override: true},
+     {:con_cache, "~> 0.12.1"},
+     {:uuid, "~> 1.1"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.
@@ -60,8 +60,6 @@ defmodule Webbkoll.Mixfile do
   #
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
-    ["ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
-     "ecto.reset": ["ecto.drop", "ecto.setup"],
-     "test": ["ecto.create --quiet", "ecto.migrate", "test"]]
+    #["test": ["ecto.create --quiet", "ecto.migrate", "test"]]
   end
 end

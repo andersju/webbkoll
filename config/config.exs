@@ -12,6 +12,8 @@ config :webbkoll,
 # Configures the endpoint
 config :webbkoll, WebbkollWeb.Endpoint,
   url: [host: "localhost"],
+  # secret_key_base is not actually used for anything at the moment, as Webbkoll doesn't
+  # use cookies at all.
   secret_key_base: "Yk9QpNTp3jg15sA4KFDjBq4hgfp0eYV0o1bYO6Hxf0BUV5deh4HkwMks/Z541bCR",
   render_errors: [accepts: ~w(html json)],
   pubsub: [name: Webbkoll.PubSub,
@@ -38,8 +40,6 @@ config :phoenix, :template_engines,
 
 config :webbkoll, Webbkoll.Scheduler,
   jobs: [
-    {"@daily", {Webbkoll.CronJobs, :remove_old_records, []}},
-    {"@hourly", {Webbkoll.CronJobs, :remove_stuck_records, []}},
     {"0 6 8 * *", {Geolix, :reload_databases, []}}
   ]
 
