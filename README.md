@@ -9,7 +9,7 @@ browser having no particular extensions installed, and with Do Not Track
 (DNT) disabled (as this is the default setting in most browsers).
 
 In short: this tool, which runs the user-facing web service (built with
-[Elixir](https://elixir-lang.org/) and [Phoenix](http://phoenixframework.org/),
+[Elixir](https://elixir-lang.org/) and [Phoenix](http://phoenixframework.org/)),
 asks a [PhearJS](https://github.com/Tomtomgo/phearjs) server to visit a page
 using [PhantomJS](https://github.com/ariya/phantomjs). PhearJS/PhantomJS
 visits and renders the page, collects various data (requests made, cookies,
@@ -38,7 +38,7 @@ You might also want to have a look at [PrivacyScore](https://privacyscore.org/),
 which is a bit more comprehensive than Webbkoll (additionally checks e.g. email and TLS/SSL
 configuration) and also lets you compare/rank lists of sites.
 
-This is a project by [Dataskydd.net](https://dataskydd.net). We received funding from
+This is a project by [Dataskydd.net](https://dataskydd.net). We received initial funding from
 [Internetfonden](https://www.internetfonden.se/) / [IIS](https://www.iis.se) (The Internet Foundation in Sweden).
 
 ## Backend
@@ -80,6 +80,7 @@ See also the official [Phoenix deployment guides](https://hexdocs.pm/phoenix/dep
 
 ## TODO/ideas
   * **Switch from PhantomJS to headless Chrome ([Puppeteer](https://github.com/GoogleChrome/puppeteer))**
+  * Add more suggestions for privacy-friendly alternatives to popular services
   * Optionally visit a number of randomly selected internal pages and let the results be based on the collective data from all the pages
   * Availability over Tor (e.g. does the visitor have to solve a Cloudflare captcha?)
   * HTTPS Everywhere: check for requests that _could_ have been secure
