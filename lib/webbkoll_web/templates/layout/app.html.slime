@@ -57,6 +57,8 @@ html lang="en"
             img src="/images/iis.png"
         .beta
           p
+            = gettext("The code is <a href=\"https://github.com/andersju/webbkoll\">available on GitHub</a>.") |> raw
+          p
             = gettext("Feedback? Questions? <a href=\"mailto:info@dataskydd.net\">info@dataskydd.net</a>") |> raw
           p
             = gettext("All text, except quotes and where noted, is available under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>.") |> raw

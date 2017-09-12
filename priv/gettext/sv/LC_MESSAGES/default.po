@@ -189,7 +189,7 @@ msgstr "Osäker anslutning"
 msgid "Install Piwik on your own server. It's easy to install and easy to upgrade."
 msgstr "Kör Piwik på din egen server. Det är lätt att installera och lätt att uppgradera."
 
-#: lib/webbkoll_web/controllers/site_controller.ex:141
+#: lib/webbkoll_web/controllers/site_controller.ex:137
 msgid "Invalid domain: %{domain}"
 msgstr "Ogiltig domän: %{domain}"
 
@@ -209,7 +209,7 @@ msgstr "Inga tredjepartskakor utan medgivande."
 msgid "Piwik is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
 msgstr "Piwik är ett utmärkt alternativ. Det är fri mjukvara (PHP & MySQL) och du kör det på din egen server, vilket betyder att <em>du</em> har kontroll över din data. Piwik har olika integritetsinställningar och kan, till skillnad från Google Analytics, användas utan kakor. <em>(Medan analysverktyg kanske anses nödvändiga för vissa sajter så är ett annat alternativ att <em>inte spåra människor bara för att du kan</em>. Besökare har faktiskt inte någon skyldighet att hjälpa webbutvecklare att optimera saker.)</em>"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:96
+#: lib/webbkoll_web/controllers/site_controller.ex:82
 msgid "Results for %{url}"
 msgstr "Resultat för %{url}"
 
@@ -251,7 +251,7 @@ msgstr "Tredjepartsförfrågningar"
 msgid "Third-party services"
 msgstr "Tredjepartstjänster"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:189
+#: lib/webbkoll_web/controllers/site_controller.ex:180
 msgid "Trying same host too frequently. Try again in a minute."
 msgstr "Samma värd provas för ofta. Prova igen om en minut."
 
@@ -259,7 +259,7 @@ msgstr "Samma värd provas för ofta. Prova igen om en minut."
 msgid "YES,"
 msgstr "JA,"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:178
+#: lib/webbkoll_web/controllers/site_controller.ex:169
 msgid "You're requesting too frequently. Install locally?"
 msgstr "Du skickar lite för många förfrågningar. Vad sägs om att installera verktyget lokalt istället?"
 
@@ -506,7 +506,7 @@ msgstr "Hur dataskyddsvänlig är din sajt?"
 msgid "Read more."
 msgstr "Läs mer."
 
-#: lib/webbkoll_web/controllers/site_controller.ex:21
+#: lib/webbkoll_web/controllers/site_controller.ex:20
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."
 msgstr "Webbkollen hjälper dig ta reda på vilka dataskyddande funktioner en sajt använder för att hjälpa dig utöva makt över ditt privatliv."
 
@@ -710,7 +710,7 @@ msgstr "Inga tredjepartsförfrågningar."
 msgid "The basic problem that HSTS solves is that even after a website turns on HTTPS, visitors may still end up trying to connect over plain HTTP. For example:"
 msgstr "Det grundläggande problemet som HSTS löser är att även efter att en webbplats aktiverat HTTPS så kan det hända att besökare försöker ansluta över vanlig HTTP. Till exempel:"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:31
+#: lib/webbkoll_web/controllers/site_controller.ex:30
 #: lib/webbkoll_web/templates/layout/app.html.slime:1
 msgid "Tech"
 msgstr "Teknik"
@@ -723,23 +723,23 @@ msgstr "Det här verktyget försöker simulera vad som händer när en person be
 msgid "We built the tool with <a href=\"http://www.phoenixframework.org/\">Phoenix Framework</a> and <a href=\"https://github.com/Tomtomgo/phearjs\">PhearJS</a> (which in turn uses <a href=\"http://phantomjs.org/\">PhantomJS</a>)."
 msgstr "Vi byggde verktyget med <a href=\"http://www.phoenixframework.org/\">Phoenix Framework</a> och <a href=\"https://github.com/Tomtomgo/phearjs\">PhearJS</a> (som i sin tur använder <a href=\"http://phantomjs.org/\">PhantomJS</a>)."
 
-#: lib/webbkoll_web/controllers/site_controller.ex:26
+#: lib/webbkoll_web/controllers/site_controller.ex:25
 msgid "About"
 msgstr "Om"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:32
+#: lib/webbkoll_web/controllers/site_controller.ex:31
 msgid "How our web privacy check tool works and how you can run your own instance."
 msgstr "Hur vårt testverktyg fungerar och hur du kan köra din egen instans."
 
-#: lib/webbkoll_web/controllers/site_controller.ex:97
+#: lib/webbkoll_web/controllers/site_controller.ex:83
 msgid "How this website is doing with regards to privacy."
 msgstr "Hur den här webbplatsen hjälper dig utöva makt över ditt privatliv (eller inte)."
 
-#: lib/webbkoll_web/controllers/site_controller.ex:94
+#: lib/webbkoll_web/controllers/site_controller.ex:80
 msgid "Processing failed"
 msgstr "Körningen misslyckades"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:112
+#: lib/webbkoll_web/controllers/site_controller.ex:108
 msgid "Sorry, bots aren't allowed."
 msgstr "Beklagar, men botar är inte tillåtna."
 
@@ -747,7 +747,7 @@ msgstr "Beklagar, men botar är inte tillåtna."
 msgid "Technology we use"
 msgstr "Teknik vi använder"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:27
+#: lib/webbkoll_web/controllers/site_controller.ex:26
 msgid "The what and why of data protection and the principles of the EU general data protection regulation."
 msgstr "Dataskyddets hur och varför, och principerna bakom EU:s dataskyddsförordning."
 
@@ -763,12 +763,12 @@ msgstr "<em>Vänligen notera att den här tjänsten fortfarande är under utveck
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
 msgstr "Det här verktyget hjälper dig ta reda på vilka dataskyddande funktioner en sajt använder för att hjälpa dig utöva makt över ditt privatliv. "
 
-#: lib/webbkoll_web/controllers/site_controller.ex:196
+#: lib/webbkoll_web/controllers/site_controller.ex:187
 msgid "Error"
 msgstr "Fel"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:65
-#: lib/webbkoll_web/controllers/site_controller.ex:66
+#: lib/webbkoll_web/controllers/site_controller.ex:56
+#: lib/webbkoll_web/controllers/site_controller.ex:57
 msgid "Status"
 msgstr "Status"
 
@@ -856,7 +856,7 @@ msgstr "Content-Security-Policy i meta-element är satt till <code>%{value}</cod
 msgid "Content-Security-Policy not enabled"
 msgstr "Content-Security-Policy ej aktiverat"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:20
+#: lib/webbkoll_web/controllers/site_controller.ex:19
 msgid "Analyze"
 msgstr ""
 
@@ -887,3 +887,7 @@ msgstr "<a href=\"https://scotthelme.co.uk/a-new-security-header-referrer-policy
 #: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<a href=\"https://w3c.github.io/webappsec-referrer-policy/#referrer-policies\">A few different policies are offered</a>, such as <code>origin</code> (strips everything except the <a href=\"https://tools.ietf.org/html/rfc6454#section-3.2\">origin</a>) and <code>origin-when-cross-origin</code> (sends full URL with same-origin requests, otherwise stripped). We recommend <strong><code>no-referrer</code></strong>, which kills the referrer header entirely for all requests, no matter the destination; or <strong><code>same-origin</code></strong>, which kills the referrer for third-party requests but not for requests to the same origin."
 msgstr "<a href=\"https://w3c.github.io/webappsec-referrer-policy/#referrer-policies\">Några olika policyer</a>, till exempel <code>origin</code> (tar bort allt förutom <a href=\"https://tools.ietf.org/html/rfc6454#section-3.2\">origin</a>) och <code>origin-when-cross-origin</code> (skickar hela URL:en med förfrågningar till samma <em>origin</em>, annars bara <em>origin</em>). Vi rekommenderar <strong><code>no-referrer</code></strong>, som tar bort referrers helt, oavsett destination; eller <strong><code>same-origin</code></strong>, som tar bort referrers för tredjepartsförfrågningar men inte för förfrågningar till ursprungssajten."
+
+#: lib/webbkoll_web/templates/layout/app.html.slime:1
+msgid "The code is <a href=\"https://github.com/andersju/webbkoll\">available on GitHub</a>."
+msgstr "Koden är <a href=\"https://github.com/andersju/webbkoll\">tillgänglig på GitHub</a>."

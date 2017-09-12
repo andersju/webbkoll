@@ -20,7 +20,7 @@ defmodule Webbkoll.Mixfile do
     [mod: {Webbkoll.Application, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
                     :httpoison, :tzdata, :ex_rated, :quantum, :timex, :geolix, :con_cache],
-     included_applications: [:ex2ms, :exq, :floki, :phoenix_slime, :public_suffix]]
+     included_applications: [:ex2ms, :floki, :phoenix_slime, :public_suffix]]
   end
 
   # Specifies which paths to compile per environment.
@@ -39,7 +39,6 @@ defmodule Webbkoll.Mixfile do
      {:cowboy, "~> 1.1"},
      {:httpoison, "~> 0.13"},
      {:floki, "~> 0.8"},
-     {:exq, "~> 0.9"},
      {:ex_rated, "~> 1.2"},
      {:quantum, ">= 2.0.0"},
      {:ex_machina, "~> 2.0", only: :test},
@@ -50,7 +49,8 @@ defmodule Webbkoll.Mixfile do
      {:geolix, "~> 0.13"},
      {:idna, "~> 5.0", override: true},
      {:con_cache, "~> 0.12.1"},
-     {:uuid, "~> 1.1"}]
+     {:uuid, "~> 1.1"},
+     {:jumbo, "~> 1.0"}]
   end
 
   # Aliases are shortcut or tasks specific to the current project.

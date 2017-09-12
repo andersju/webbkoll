@@ -10,9 +10,11 @@ config :webbkoll, WebbkollWeb.Endpoint,
 # Print only warnings and errors during test
 config :logger, level: :warn
 
-# backend_urls keys must match exq queues keys
 config :webbkoll,
-  backend_urls: %{"q1" => "http://localhost:8100/"},
+  backends: [
+    {Webbkoll.Queue.Q1, %{concurrency: 5, logger_tag: "queue 1", url: "http://localhost:8100/"}},
+  ],
+  max_attempts: 2,
   locales: ~w(en sv),
   default_locale: "sv",
   # validate_urls: If true, only check URLs with a valid domain name

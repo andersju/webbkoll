@@ -64,21 +64,11 @@ config :logger, level: :info
 # which should be versioned separately.
 #import_config "prod.secret.exs"
 
-config :exq,
-  name: Exq,
-  host: "127.0.0.1",
-  port: 6379,
-  #password: "optional_redis_auth",
-  namespace: "exq",
-  queues: [{"q1", 5}],
-  poll_timeout: 50,
-  scheduler_poll_timeout: 200,
-  scheduler_enable: true,
-  max_retries: 1
-
-# backend_urls keys must match exq queues keys
 config :webbkoll,
-  backend_urls: %{"q1" => "http://localhost:8100/"},
+  backends: [
+    {Webbkoll.Queue.Q1, %{concurrency: 7, logger_tag: "queue 1", url: "http://localhost:8100/"}},
+  ],
+  max_attempts: 2,
   locales: ~w(en sv),
   default_locale: "en",
   # validate_urls: If true, only check URLs with a valid domain name

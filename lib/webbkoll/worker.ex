@@ -1,10 +1,14 @@
 defmodule Webbkoll.Worker do
   import Webbkoll.Helpers
 
-  @max_retries Application.get_env(:exq, :max_retries)
+  @max_attempts Application.get_env(:webbkoll, :max_attempts)
 
   def perform(id, url, refresh, backend_url) do
     update_site(id, %{status: "processing"})
+
+    ConCache.update(:site_cache, id, fn(old) ->
+      {:ok, old |>  Map.update(:try_count, 0, &(&1+1))}
+    end)
 
     url
     |> check_if_https_only
@@ -70,15 +74,12 @@ defmodule Webbkoll.Worker do
   end
 
   defp handle_error(reason, id) do
-    job = Exq.worker_job()
+    site = ConCache.get(:site_cache, id)
 
     # Usually we should try again because PhantomJS sometimes randomly fails,
     # but sometimes - e.g. when user has entered an invalid domain name - it's
-    # better not to, and to give feedback right away. Ideally (?) we should then
-    # remove the job from exq's queue, but that doesn't appear to work (or I'm
-    # missing something) -- so in certain cases exq will try again, even after
-    # user has been shown the Failed page.
-    if job.retry_count == @max_retries ||
+    # better not to, and to instead give feedback right away.
+    if site.try_count >= @max_attempts ||
     String.ends_with?(reason, ["not found", "Connection refused"]) do
       update_site(id, %{status: "failed", status_message: reason})
     end

@@ -1,26 +1,30 @@
 # Webbkoll
 
-This is the code that powers https://webbkoll.dataskydd.net/en - an
+This is the code that powers https://webbkoll.dataskydd.net – an
 online tool that checks how a webpage is doing with regards to privacy.
 
 It attempts to simulate what happens when a user visits a specified page
-with a typical browser, without clicking on anything, and with the
+with a typical browser without clicking on anything, with the
 browser having no particular extensions installed, and with Do Not Track
-(DNT) disabled - as this is the default in most browsers.
+(DNT) disabled (as this is the default setting in most browsers).
 
-In short: frontend (Phoenix) asks backend (PhearJS) to visit a page with
-PhantomJS. Backend visits and renders page, collects various data
-(requests made, cookies, response headers, etc.), and sends it back as
-JSON to the frontend which analyzes the data and presents the results
-on a webpage along with explanations and advice.
+In short: this tool, which runs the user-facing web service (built with
+[Elixir](https://elixir-lang.org/) and [Phoenix](http://phoenixframework.org/),
+asks a [PhearJS](https://github.com/Tomtomgo/phearjs) server to visit a page
+using [PhantomJS](https://github.com/ariya/phantomjs). PhearJS/PhantomJS
+visits and renders the page, collects various data (requests made, cookies,
+response headers, etc.), and sends it back as JSON to this tool which
+then analyzes the data and presents the results on a webpage along with
+explanations and advice.
 
-The frontend is multilingual and currently supports English and Swedish.
+Webbkoll is multilingual and currently supports English and Swedish.
 
-[exq](https://github.com/akira/exq) is used for job processing, and
+[Jumbo](https://github.com/mspanc/jumbo) is used for job processing, and
 some basic rate limiting is done with [ex_rated](https://github.com/grempe/ex_rated).
-Multiple backends can be configured. [ConCache](https://github.com/sasa1977/con_cache)
+Multiple PhearJS backends can be configured. [ConCache](https://github.com/sasa1977/con_cache)
 is used to store results in an in-memory [ETS](http://erlang.org/doc/man/ets.html) table
-for a limited time.
+for a limited time. Other than PhearJS, there are no external dependencies, and nothing is
+saved to disk.
 
 **Please note** that this is still a work in progress. Expect bugs and
 messy code in places. Only a few basic tests are in place.
@@ -42,11 +46,10 @@ This is a project by [Dataskydd.net](https://dataskydd.net). We received funding
 
 ## Frontend (this app!)
   * Install Erlang (>= 20) and Elixir (>= 1.4) -- see http://elixir-lang.org/install.html
-  * Have [Redis](http://redis.io/) running (needed for exq job handling)
   * Clone this repository, cd into it
   * Install dependencies: `mix deps.get`
   * Install Node.js dependencies: `cd assets; npm install; cd ..`
-  * Make sure PhearJS and Redis are running on the hosts/ports specified in `config/dev.exs`
+  * Make sure PhearJS is running on the host/port specified in `config/dev.exs`
   * Download the [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2/geolite2/) in MaxMind DB binary format, extract it, and make sure it's available as `priv/GeoLite2-Country.mmdb` (or as specified in `config/config.exs`).
   * Start the Phoenix endpoint with `mix phx.server` (or to get an interactive shell: `iex -S mix phx.server`)
 
@@ -76,6 +79,7 @@ Or start the server in an interactive shell:
 See also the official [Phoenix deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
 ## TODO/ideas
+  * **Switch from PhantomJS to headless Chrome ([Puppeteer](https://github.com/GoogleChrome/puppeteer))**
   * Optionally visit a number of randomly selected internal pages and let the results be based on the collective data from all the pages
   * Availability over Tor (e.g. does the visitor have to solve a Cloudflare captcha?)
   * HTTPS Everywhere: check for requests that _could_ have been secure

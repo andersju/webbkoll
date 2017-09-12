@@ -2,7 +2,7 @@ defmodule WebbkollWeb.SiteController do
   use WebbkollWeb, :controller
   alias WebbkollWeb.Site
 
-  @backend_urls      Application.get_env(:webbkoll, :backend_urls)
+  @backends          Application.get_env(:webbkoll, :backends)
   @rate_limit_client Application.get_env(:webbkoll, :rate_limit_client)
   @rate_limit_host   Application.get_env(:webbkoll, :rate_limit_host)
   @validate_urls     Application.get_env(:webbkoll, :validate_urls)
@@ -32,13 +32,12 @@ defmodule WebbkollWeb.SiteController do
   end
 
   def check(%Plug.Conn{assigns: %{input_url: proper_url}} = conn, _params) do
-    site = %Site{input_url: proper_url, status: "queue", inserted_at: System.system_time(:microsecond)}
+    site = %Site{input_url: proper_url, try_count: 0, status: "queue", inserted_at: System.system_time(:microsecond)}
     id = UUID.uuid4()
 
     ConCache.put(:site_cache, id, site)
-    {queue, _}  = Enum.random(@backend_urls)
-    {:ok, _ack} = Exq.enqueue(Exq, queue, Webbkoll.Worker,
-                              [id, proper_url, conn.params["refresh"], @backend_urls[queue]])
+    {queue, settings}  = Enum.random(@backends)
+    Jumbo.Queue.enqueue(queue, Webbkoll.Worker, [id, proper_url, conn.params["refresh"], settings.url])
     redirect(conn, to: site_path(conn, :status, conn.assigns.locale, id: id))
   end
 
