@@ -36,8 +36,10 @@ defmodule WebbkollWeb.SiteController do
     id = UUID.uuid4()
 
     ConCache.put(:site_cache, id, site)
-    {queue, settings}  = Enum.random(@backends)
+
+    {queue, settings} = Enum.random(@backends)
     Jumbo.Queue.enqueue(queue, Webbkoll.Worker, [id, proper_url, conn.params["refresh"], settings.url])
+
     redirect(conn, to: site_path(conn, :status, conn.assigns.locale, id: id))
   end
 
@@ -139,10 +141,9 @@ defmodule WebbkollWeb.SiteController do
   end
 
   defp check_if_site_exists(%Plug.Conn{assigns: %{input_url: proper_url}} = conn, _params) do
-    if conn.params["refresh"] == "on" do
-      conn
-    else
-      check_site_in_cache(conn, proper_url)
+    case conn.params["refresh"] do
+      "on" -> conn
+      _ -> check_site_in_cache(conn, proper_url)
     end
   end
 

@@ -97,8 +97,8 @@ defmodule Webbkoll.Worker do
          third_party_request_types = get_request_types(third_party_requests),
          host_ip = get_ip_by_host(url.host),
          meta_referrer = get_meta(json["content"], "name", "referrer"),
-         header_csp_referrer = check_csp_referrer(headers),
-         header_referrer = check_referrer_header(headers),
+         header_csp_referrer = get_header(headers, "content-security-policy") |> get_by_regex(~r/\breferrer ([\w-]+)\b/),
+         header_referrer = get_header(headers, "referrer-policy") |> get_by_regex(~r/^([\w-]+)$/i),
          referrer_policy_in_use = check_referrer_policy_in_use(meta_referrer, header_csp_referrer, header_referrer)
     do
       %{"input_url" => json["input_url"],
@@ -122,7 +122,7 @@ defmodule Webbkoll.Worker do
         "header_csp" => get_header(headers, "content-security-policy"),
         "header_csp_referrer" => header_csp_referrer,
         "header_hsts" => headers["strict-transport-security"],
-        "header_referrer" => check_referrer_header(headers),
+        "header_referrer" => header_referrer,
         "referrer_policy" => check_referrer_policy(referrer_policy_in_use),
         "services" => check_services(third_party_requests)}
      end
@@ -140,28 +140,37 @@ defmodule Webbkoll.Worker do
   end
 
   defp get_insecure_first_party_requests(requests, registerable_domain) do
-    Enum.reduce(requests, [], fn(x, acc) ->
-      parsed_url = URI.parse(x["url"])
-      if parsed_url.host !== nil && get_registerable_domain(parsed_url.host) == registerable_domain &&
-      parsed_url.scheme == "http" do
-        acc ++ [Map.put(x, "host", parsed_url.host)]
-      else
-        acc
-      end
-    end)
-    |> case do
-         [] -> []
-         list -> tl(list) # We force the first request to be insecure, so remove it
-       end
+    requests
+    |> Enum.reduce([], fn(x, acc) -> check_insecure_first_party(x, acc, registerable_domain) end)
+    |> get_insecure_first_party_requests()
+  end
+  defp get_insecure_first_party_requests([]), do: []
+  # We force the first request to be insecure, so remove it
+  defp get_insecure_first_party_requests(list) when is_list(list), do: tl(list)
+
+  def check_insecure_first_party(x, acc, registerable_domain) do
+    parsed_url = URI.parse(x["url"])
+    case is_insecure_first_party?(parsed_url, registerable_domain) do
+      true -> acc ++ [Map.put(x, "host", parsed_url.host)]
+      false -> acc
+    end
+  end
+
+  defp is_insecure_first_party?(parsed_url, registerable_domain) do
+    case parsed_url.host !== nil && get_registerable_domain(parsed_url.host) == registerable_domain
+         && parsed_url.scheme == "http"
+    do
+      true -> true
+      false -> false
+    end
   end
 
   defp get_third_party_requests(requests, registerable_domain) do
     Enum.reduce(requests, [], fn(x, acc) ->
       host = URI.parse(x["url"]).host
-      if host !== nil && get_registerable_domain(host) !== registerable_domain do
-        acc ++ [Map.put(x, "host", host)]
-      else
-        acc
+      case host !== nil && get_registerable_domain(host) !== registerable_domain do
+        true -> acc ++ [Map.put(x, "host", host)]
+        false -> acc
       end
     end)
   end
@@ -176,16 +185,18 @@ defmodule Webbkoll.Worker do
   end
 
   def get_request_count(requests) do
-    %{"total"         => Enum.count(requests),
-      "unique_hosts"  => requests |> get_unique_hosts("host") |> Enum.count}
+    %{"total" => Enum.count(requests), "unique_hosts"  => requests |> get_unique_hosts("host") |> Enum.count}
   end
 
   defp get_cookies(cookies, registerable_domain) do
-    {first, third} =
-      Enum.split_with(cookies, fn(x) ->
-        (x["domain"] |> String.trim(".") |> get_registerable_domain) == registerable_domain
-      end)
-    %{"first_party" => first, "third_party" => third}
+    cookies
+    |> Enum.split_with(fn(x) -> split_by_domain(x, registerable_domain) end)
+    |> get_cookies()
+  end
+  defp get_cookies({first, third}), do: %{"first_party" => first, "third_party" => third}
+
+  defp split_by_domain(x, registerable_domain) do
+    (x["domain"] |> String.trim(".") |> get_registerable_domain()) == registerable_domain
   end
 
   defp get_cookie_count(cookies) do
@@ -199,23 +210,27 @@ defmodule Webbkoll.Worker do
     |> Floki.find("meta[#{attribute}='#{name}']")
     |> Floki.attribute("content")
     |> List.to_string
-    |> case do
-         "" -> nil
-         value -> value
-       end
+    |> get_meta()
   end
+  defp get_meta(""), do: nil
+  defp get_meta(value), do: value
 
   defp get_header(headers, header) do
-    if Map.has_key?(headers, header) do
-      Map.get(headers, header)
-    else
-      nil
+    case Map.has_key?(headers, header) do
+      true -> Map.get(headers, header)
+      false -> nil
     end
   end
 
-  defp get_geolocation_by_ip(nil) do
-    nil
+  defp get_by_regex(nil, _), do: nil
+  defp get_by_regex(string, regex) do
+    case Regex.run(regex, string) do
+      [_, value] -> value
+      nil -> nil
+    end
   end
+
+  defp get_geolocation_by_ip(nil), do: nil
   defp get_geolocation_by_ip(ip) do
     ip
     |> Geolix.lookup([as: :raw, where: :country, locale: :en])
@@ -239,28 +254,6 @@ defmodule Webbkoll.Worker do
       csp -> csp
       referrer_header -> referrer_header
       true -> nil
-    end
-  end
-
-  defp check_csp_referrer(headers) do
-    if Map.has_key?(headers, "content-security-policy") do
-      case Regex.run(~r/\breferrer ([\w-]+)\b/, headers["content-security-policy"]) do
-           [_, value] -> value
-           nil -> nil
-      end
-    else
-      nil
-    end
-  end
-
-  defp check_referrer_header(headers) do
-    if Map.has_key?(headers, "referrer-policy") do
-      case Regex.run(~r/^([\w-]+)$/i, headers["referrer-policy"]) do
-           [_, value] -> value
-           nil -> nil
-      end
-    else
-      nil
     end
   end
 

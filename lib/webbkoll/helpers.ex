@@ -21,13 +21,13 @@ defmodule Webbkoll.Helpers do
   def check_services(requests) do
     requests
     |> Enum.reduce([], fn(request, acc) ->
-      Enum.reduce(services(), acc, fn({k, v}, acc) ->
-        case String.contains?(request["url"], v["pattern"]) do
-          true -> acc ++ [k]
-          false -> acc
-        end
-      end)
-    end)
+         Enum.reduce(services(), acc, fn({k, v}, acc) ->
+           case String.contains?(request["url"], v["pattern"]) do
+             true -> acc ++ [k]
+             false -> acc
+           end
+         end)
+       end)
     |> Enum.uniq
   end
 

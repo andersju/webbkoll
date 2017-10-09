@@ -19,8 +19,8 @@ defmodule Webbkoll.Mixfile do
   def application do
     [mod: {Webbkoll.Application, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :httpoison, :tzdata, :ex_rated, :quantum, :timex, :geolix, :con_cache],
-     included_applications: [:ex2ms, :floki, :phoenix_slime, :public_suffix]]
+                    :httpoison, :tzdata, :ex_rated, :quantum, :timex, :geolix, :con_cache, :jumbo],
+     included_applications: [:ex2ms, :floki, :phoenix_slime, :public_suffix, :uuid, :exactor]]
   end
 
   # Specifies which paths to compile per environment.

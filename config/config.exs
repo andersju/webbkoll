@@ -48,6 +48,6 @@ config :geolix,
     %{
       id:      :country,
       adapter: Geolix.Adapter.MMDB2,
-      source:  Path.relative_to_cwd("priv/GeoLite2-Country.mmdb")
+      source:  "priv/GeoLite2-Country.mmdb"
     }
   ]

@@ -26,6 +26,10 @@ defmodule Webbkoll.Application do
       supervisor(Jumbo.QueueSupervisor, [jumbo_queues, [name: Webbkoll.QueueSupervisor]]),
     ]
 
+    # Workaround to make Geolix play nicer with Distillery
+    [%{adapter: adapter, id: id, source: source}] = Application.get_env(:geolix, :databases)
+    Geolix.load_database(%{adapter: adapter, id: id, source: Application.app_dir(:webbkoll, source)})
+
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: Webbkoll.Supervisor]
