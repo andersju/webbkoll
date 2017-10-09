@@ -3,8 +3,8 @@ defmodule WebbkollWeb.SiteView do
 
   def format_timestamp(time) do
     time
-    |> DateTime.from_unix!
-    |> DateTime.to_string
+    |> DateTime.from_unix!()
+    |> DateTime.to_string()
   end
 
   def format_site_time(timestamp) do
@@ -17,7 +17,7 @@ defmodule WebbkollWeb.SiteView do
     case status do
       "success" -> gettext("Referrers not leaked")
       "warning" -> gettext("Referrers partially leaked")
-      "alert"   -> gettext("Referrers leaked")
+      "alert" -> gettext("Referrers leaked")
       _ -> gettext("Referrers are (probably) leaked")
     end
   end

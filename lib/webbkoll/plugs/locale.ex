@@ -10,6 +10,7 @@ defmodule Webbkoll.Locale do
     Gettext.put_locale(WebbkollWeb.Gettext, loc)
     assign(conn, :locale, loc)
   end
+
   def call(conn, default) do
     path =
       if conn.params["locale"] != nil and String.downcase(conn.params["locale"]) in ietf_codes() do
@@ -18,12 +19,14 @@ defmodule Webbkoll.Locale do
       else
         "/#{default}#{conn.request_path}"
       end
+
     path =
       if conn.query_string == "" do
         path
       else
         path <> "?#{conn.query_string}"
       end
+
     Phoenix.Controller.redirect(conn, to: path) |> halt
   end
 

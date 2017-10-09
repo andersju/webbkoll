@@ -3,35 +3,36 @@ defmodule WebbkollWeb.Router do
   @default_locale Application.get_env(:webbkoll, :default_locale)
 
   pipeline :browser do
-    plug :accepts, ["html"]
-    plug :fetch_session
-    plug :fetch_flash
-    plug :protect_from_forgery
-    plug :put_secure_browser_headers
-    plug Webbkoll.MoreSecureHeaders
-    plug Webbkoll.Locale, @default_locale
+    plug(:accepts, ["html"])
+    plug(:fetch_session)
+    plug(:fetch_flash)
+    plug(:protect_from_forgery)
+    plug(:put_secure_browser_headers)
+    plug(Webbkoll.MoreSecureHeaders)
+    plug(Webbkoll.Locale, @default_locale)
   end
 
   pipeline :api do
-    plug :accepts, ["json"]
+    plug(:accepts, ["json"])
   end
 
   scope "/", WebbkollWeb do
-    pipe_through :browser
+    pipe_through(:browser)
 
-    get "/", SiteController, :index
+    get("/", SiteController, :index)
   end
 
   scope "/:locale", WebbkollWeb do
-    pipe_through :browser # Use the default browser stack
+    # Use the default browser stack
+    pipe_through(:browser)
 
-    get "/about", SiteController, :about
-    get "/tech", SiteController, :tech
-    get "/check",  SiteController, :check
-    get "/status", SiteController, :status
-    get "/results", SiteController, :results
+    get("/about", SiteController, :about)
+    get("/tech", SiteController, :tech)
+    get("/check", SiteController, :check)
+    get("/status", SiteController, :status)
+    get("/results", SiteController, :results)
 
-    get "/", SiteController, :indexi18n
+    get("/", SiteController, :indexi18n)
   end
 
   # Other scopes may use custom stacks.
