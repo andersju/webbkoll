@@ -42,39 +42,64 @@ This is a project by [Dataskydd.net](https://dataskydd.net). We received initial
 [Internetfonden](https://www.internetfonden.se/) / [IIS](https://www.iis.se) (The Internet Foundation in Sweden).
 
 ## Backend
-  * Get PhearJS running - see https://github.com/Tomtomgo/phearjs/blob/master/README.md. (Clone https://github.com/andersju/phearjs/ to get the one that Dataskydd.net is running.)
+
+Get PhearJS running - see https://github.com/Tomtomgo/phearjs/blob/master/README.md.
 
 ## Frontend (this app!)
-  * Install Erlang (>= 20) and Elixir (>= 1.4) -- see http://elixir-lang.org/install.html
-  * Clone this repository, cd into it
-  * Install dependencies: `mix deps.get`
-  * Install Node.js dependencies: `cd assets; npm install; cd ..`
-  * Make sure PhearJS is running on the host/port specified in `config/dev.exs`
-  * Download the [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2/geolite2/) in MaxMind DB binary format, extract it, and make sure it's available as `priv/GeoLite2-Country.mmdb` (or as specified in `config/config.exs`).
-  * Start the Phoenix endpoint with `mix phx.server` (or to get an interactive shell: `iex -S mix phx.server`)
+
+Install Erlang (>= 20) and Elixir (>= 1.4) -- see http://elixir-lang.org/install.html.
+
+Clone this repository, cd into it.
+
+Install dependencies:
+
+```
+mix deps.get
+```
+
+Make sure PhearJS is running on the host/port specified in `config/dev.exs`
+
+Download the [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2/geolite2/) in MaxMind DB binary format, extract it, and make sure it's available as `priv/GeoLite2-Country.mmdb` (or as specified in `config/config.exs`).
+
+Compile CSS with sassc and copy static assets (this replaces brunch and 340 node dependencies),
+digest and compress:
+
+```
+sassc assets/scss/style.scss assets/static/css/app.css
+mkdir -p priv/static/css priv/static/fonts priv/static/images priv/static/js
+rsync -av assets/static/*  priv/static
+```
+
+Start the Phoenix endpoint with `mix phx.server` (or to get an interactive shell: `iex -S mix phx.server`)
 
 Now you can visit [`localhost:4000`](http://localhost:4000) in your browser.
 
-To run in production, first get and compile dependencies:
+### Production
 
-  * `mix deps.get --only prod`
-  * `MIX_ENV=prod mix compile`
+To run in production, get and compile dependencies:
 
-Compile static assets:
+```
+mix deps.get --only prod
+MIX_ENV=prod mix compile
+```
 
-  * `cd assets`
-  * `npm install`
-  * `node_modules/brunch/bin/brunch build --production`
-  * `cd ..`
-  * `MIX_ENV=prod mix phx.digest`
+Do the compile CSS/copy files step from above, and then:
+
+```
+MIX_ENV=prod mix phx.digest`
+```
 
 Start the server (listens on port 4001 by default; prefix the following with PORT=XXXX to change):
 
-  * `MIX_ENV=prod mix phx.server`
+```
+MIX_ENV=prod mix phx.server
+```
 
 Or start the server in an interactive shell:
 
-  * `MIX_ENV=prod iex -S mix phx.server`
+```
+MIX_ENV=prod iex -S mix phx.server
+```
 
 See also the official [Phoenix deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
