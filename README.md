@@ -61,8 +61,7 @@ Make sure PhearJS is running on the host/port specified in `config/dev.exs`
 
 Download the [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2/geolite2/) in MaxMind DB binary format, extract it, and make sure it's available as `priv/GeoLite2-Country.mmdb` (or as specified in `config/config.exs`).
 
-Compile CSS with sassc and copy static assets (this replaces brunch and 340 node dependencies),
-digest and compress:
+Compile CSS with sassc and copy static assets (this replaces brunch and 340 node dependencies):
 
 ```
 mkdir -p priv/static/css priv/static/fonts priv/static/images priv/static/js
@@ -83,7 +82,7 @@ mix deps.get --only prod
 MIX_ENV=prod mix compile
 ```
 
-Do the compile CSS/copy files step from above, and then:
+Do the compile CSS/rsync files step from above, and then digest and compress static files:
 
 ```
 MIX_ENV=prod mix phx.digest`
