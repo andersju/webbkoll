@@ -65,8 +65,8 @@ Compile CSS with sassc and copy static assets (this replaces brunch and 340 node
 digest and compress:
 
 ```
-sassc assets/scss/style.scss assets/static/css/app.css
 mkdir -p priv/static/css priv/static/fonts priv/static/images priv/static/js
+sassc --style compressed assets/scss/style.scss priv/static/css/app.css
 rsync -av assets/static/*  priv/static
 ```
 
