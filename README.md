@@ -85,19 +85,19 @@ MIX_ENV=prod mix compile
 Do the compile CSS/rsync files step from above, and then digest and compress static files:
 
 ```
-MIX_ENV=prod mix phx.digest`
+MIX_ENV=prod mix phx.digest
 ```
 
-Start the server (listens on port 4001 by default; prefix the following with PORT=XXXX to change):
+Start the server (port must be specified):
 
 ```
-MIX_ENV=prod mix phx.server
+MIX_ENV=prod PORT=4001 mix phx.server
 ```
 
 Or start the server in an interactive shell:
 
 ```
-MIX_ENV=prod iex -S mix phx.server
+MIX_ENV=prod PORT=4001 iex -S mix phx.server
 ```
 
 See also the official [Phoenix deployment guides](https://hexdocs.pm/phoenix/deployment.html).
