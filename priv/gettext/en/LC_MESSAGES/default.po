@@ -149,7 +149,7 @@ msgstr ""
 msgid "A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains."
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:52
+#: lib/webbkoll/helpers.ex:59
 msgid "Consider a self-hosted platform."
 msgstr ""
 
@@ -162,7 +162,7 @@ msgstr ""
 msgid "First-party cookies"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:62
+#: lib/webbkoll/helpers.ex:75
 msgid "Fonts can easily be self-hosted. The tool <a href=\"https://google-webfonts-helper.herokuapp.com/fonts\">google-webfonts-helper</a> lets you select one or more fonts, generates the proper CSS and prepares a zip file with the fonts. For a command-line alternative, the shell script <a href=\"https://github.com/neverpanic/google-font-download\">google-font-download</a> provides similar functionality."
 msgstr ""
 
@@ -174,11 +174,11 @@ msgstr ""
 msgid "Insecure connection"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:67
+#: lib/webbkoll/helpers.ex:84
 msgid "Install Piwik on your own server. It's easy to install and easy to upgrade."
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:137
+#: lib/webbkoll_web/controllers/site_controller.ex:201
 msgid "Invalid domain: %{domain}"
 msgstr ""
 
@@ -194,11 +194,11 @@ msgstr ""
 msgid "No third-party cookies without consent."
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:57
+#: lib/webbkoll/helpers.ex:66
 msgid "Piwik is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:82
+#: lib/webbkoll_web/controllers/site_controller.ex:133
 msgid "Results for %{url}"
 msgstr ""
 
@@ -206,7 +206,7 @@ msgstr ""
 msgid "Secure connection"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:47
+#: lib/webbkoll/helpers.ex:54
 msgid "Self-host the files."
 msgstr ""
 
@@ -218,11 +218,11 @@ msgstr ""
 msgid "Strict Transport Security not enabled"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:46
+#: lib/webbkoll/helpers.ex:53
 msgid "The site is loading libraries from one or more CDN:s."
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:56
+#: lib/webbkoll/helpers.ex:63
 msgid "The site is using Google Analytics. While this is a powerful tool, we think you should respect your users' privacy and not tell Google about them &mdash; at least not without your users' consent."
 msgstr ""
 
@@ -240,7 +240,7 @@ msgstr ""
 msgid "Third-party services"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:180
+#: lib/webbkoll_web/controllers/site_controller.ex:251
 msgid "Trying same host too frequently. Try again in a minute."
 msgstr ""
 
@@ -248,7 +248,7 @@ msgstr ""
 msgid "YES,"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:169
+#: lib/webbkoll_web/controllers/site_controller.ex:237
 msgid "You're requesting too frequently. Install locally?"
 msgstr ""
 
@@ -471,15 +471,15 @@ msgstr ""
 msgid "To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning)."
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:66
+#: lib/webbkoll/helpers.ex:81
 msgid "The site appears to use Piwik, but not self-hosted. This means visitors are exposed to a third party."
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:51
+#: lib/webbkoll/helpers.ex:58
 msgid "The site is using the Disqus comment system."
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:61
+#: lib/webbkoll/helpers.ex:72
 msgid "The site loads fonts from Google Fonts. While these are hosted on resource-specific domains and no cookies are sent, Google <em>could</em> possibly cross-reference the data (IP and browser fingerprint) with other Google services to identify visitors. Do they? Their own <a href=\"https://developers.google.com/fonts/faq?hl=en#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users\">FAQ</a> is vague: <em>\"We do log records of the CSS and the font file requests, and access to this data is on a need-to-know basis and kept secure.\"</em> What \"need-to-know basis\" means is not explained."
 msgstr ""
 
@@ -495,7 +495,7 @@ msgstr ""
 msgid "Read more."
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:20
+#: lib/webbkoll_web/controllers/site_controller.ex:24
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."
 msgstr ""
 
@@ -699,7 +699,7 @@ msgstr ""
 msgid "The basic problem that HSTS solves is that even after a website turns on HTTPS, visitors may still end up trying to connect over plain HTTP. For example:"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:30
+#: lib/webbkoll_web/controllers/site_controller.ex:49
 #: lib/webbkoll_web/templates/layout/app.html.slime:1
 msgid "Tech"
 msgstr ""
@@ -712,23 +712,23 @@ msgstr ""
 msgid "We built the tool with <a href=\"http://www.phoenixframework.org/\">Phoenix Framework</a> and <a href=\"https://github.com/Tomtomgo/phearjs\">PhearJS</a> (which in turn uses <a href=\"http://phantomjs.org/\">PhantomJS</a>)."
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:25
+#: lib/webbkoll_web/controllers/site_controller.ex:37
 msgid "About"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:31
+#: lib/webbkoll_web/controllers/site_controller.ex:50
 msgid "How our web privacy check tool works and how you can run your own instance."
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:83
+#: lib/webbkoll_web/controllers/site_controller.ex:134
 msgid "How this website is doing with regards to privacy."
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:80
+#: lib/webbkoll_web/controllers/site_controller.ex:126
 msgid "Processing failed"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:108
+#: lib/webbkoll_web/controllers/site_controller.ex:163
 msgid "Sorry, bots aren't allowed."
 msgstr ""
 
@@ -736,7 +736,7 @@ msgstr ""
 msgid "Technology we use"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:26
+#: lib/webbkoll_web/controllers/site_controller.ex:38
 msgid "The what and why of data protection and the principles of the EU general data protection regulation."
 msgstr ""
 
@@ -752,12 +752,12 @@ msgstr ""
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:187
+#: lib/webbkoll_web/controllers/site_controller.ex:258
 msgid "Error"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:56
-#: lib/webbkoll_web/controllers/site_controller.ex:57
+#: lib/webbkoll_web/controllers/site_controller.ex:94
+#: lib/webbkoll_web/controllers/site_controller.ex:97
 msgid "Status"
 msgstr ""
 
@@ -773,19 +773,19 @@ msgstr ""
 msgid "Referrer directive is set to <code>%{value}</code> in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer\">Content-Security-Policy (CSP) header</a>."
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:82
+#: lib/webbkoll/helpers.ex:105
 msgid "<a href=\"http://stackoverflow.com/questions/18337630/what-is-x-content-type-options-nosniff\">X-Content-Type-Options</a> stops a browser from trying to MIME-sniff the content type and forces it to stick with the declared content-type. This helps to reduce the danger of drive-by downloads. The only valid value for this header is \"X-Content-Type-Options: nosniff\"."
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:80
+#: lib/webbkoll/helpers.ex:102
 msgid "<a href=\"http://stackoverflow.com/questions/9090577/what-is-the-http-header-x-xss-protection\">X-XSS-Protection</a> sets the configuration for the cross-site scripting filters built into most browsers. The best configuration is \"X-XSS-Protection: 1; mode=block\"."
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:78
+#: lib/webbkoll/helpers.ex:99
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options\">X-Frame-Options</a> tells the browser whether you want to allow your site to be framed or not. By preventing a browser from framing your site you can defend against attacks like clickjacking."
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:74
+#: lib/webbkoll/helpers.ex:93
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security\">HTTP Strict Transport Security</a> is an excellent feature to support on your site and strengthens your implementation of TLS by getting the User Agent to enforce the use of HTTPS."
 msgstr ""
 
@@ -807,10 +807,6 @@ msgstr ""
 
 #: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "However, to enable HSTS for a domain via the HTTP header, the browser does have to see the header at least once. This means that users are not protected until after their first successful secure connection to a given domain."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Please note that some sites use CDNs &ndash; <a href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in London, UK."
 msgstr ""
 
 #: lib/webbkoll_web/templates/site/results.html.slime:1
@@ -845,7 +841,7 @@ msgstr ""
 msgid "Content-Security-Policy not enabled"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:19
+#: lib/webbkoll_web/controllers/site_controller.ex:23
 msgid "Analyze"
 msgstr ""
 
@@ -865,11 +861,11 @@ msgstr ""
 msgid "1. Note that <code>Public-Key-Pins</code> can brick your site if something goes wrong and should only be used with great caution, if at all. See <a href=\"https://community.letsencrypt.org/t/hpkp-best-practices-if-you-choose-to-implement/4625\">1</a>, <a href=\"https://scotthelme.co.uk/im-giving-up-on-hpkp/\">2</a>, <a href=\"https://www.smashingmagazine.com/be-afraid-of-public-key-pinning/\">3</a>."
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:76
+#: lib/webbkoll/helpers.ex:96
 msgid "<a href=\"https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning\">HTTP Public Key Pinning</a> protects your site from <a href=\"https://en.wikipedia.org/wiki/Man-in-the-middle_attack\">MiTM attacks</a> using rogue X.509 certificates. By whitelisting only the identities that the browser should trust, your users are protected in the event a certificate authority is compromised.<sup>1</sup>"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:84
+#: lib/webbkoll/helpers.ex:108
 msgid "<a href=\"https://scotthelme.co.uk/a-new-security-header-referrer-policy/\">Referrer-Policy</a> is a new header that allows a site to control how much information the browser includes with navigations away from a document (or when loading external resources) and should be set by all sites. (It can also be set using a meta element; see above.)"
 msgstr ""
 
@@ -879,4 +875,9 @@ msgstr ""
 
 #: lib/webbkoll_web/templates/layout/app.html.slime:1
 msgid "The code is <a href=\"https://github.com/andersju/webbkoll\">available on GitHub</a>."
+msgstr ""
+
+#, fuzzy
+#: lib/webbkoll_web/templates/site/results.html.slime:1
+msgid "Please note that some sites use CDNs &ndash; <a href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France."
 msgstr ""

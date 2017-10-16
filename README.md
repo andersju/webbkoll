@@ -59,7 +59,7 @@ mix deps.get
 
 Make sure PhearJS is running on the host/port specified in `config/dev.exs`
 
-Download the [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2/geolite2/) in MaxMind DB binary format, extract it, and make sure it's available as `priv/GeoLite2-Country.mmdb` (or as specified in `config/config.exs`).
+Download the [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2/geolite2/) in MaxMind DB binary format, extract it, and make sure it's available as `priv/GeoLite2-Country.mmdb` (or as specified in `config/config.exs`). (All you need to keep it fresh is [geoipupdate](https://github.com/maxmind/geoipupdate); Webbkoll reloads the database at certain intervals, see `config/config.exs`.)
 
 Compile CSS with sassc and copy static assets (this replaces brunch and 340 node dependencies):
 
@@ -88,13 +88,19 @@ Do the compile CSS/rsync files step from above, and then digest and compress sta
 MIX_ENV=prod mix phx.digest
 ```
 
-Start the server (port must be specified):
+Start the server in the foreground (port must be specified):
 
 ```
 MIX_ENV=prod PORT=4001 mix phx.server
 ```
 
-Or start the server in an interactive shell:
+Or detached:
+
+```
+MIX_ENV=prod PORT=4001 elixir --detached -S mix phx.server
+```
+
+Or in an interactive shell:
 
 ```
 MIX_ENV=prod PORT=4001 iex -S mix phx.server
@@ -109,7 +115,7 @@ See also the official [Phoenix deployment guides](https://hexdocs.pm/phoenix/dep
   * Availability over Tor (e.g. does the visitor have to solve a Cloudflare captcha?)
   * HTTPS Everywhere: check for requests that _could_ have been secure
   * Check localStorage (Web Storage)
-  * SSL Labs integration
+  * SSL Labs integration (or testssl.sh?)
   * DNSSEC?
   * IPv6 support
   * Check whether site is in HSTS preload list?

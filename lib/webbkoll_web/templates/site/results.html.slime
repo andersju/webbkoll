@@ -71,7 +71,7 @@
           = gettext(~s|The server <strong>%{domain}</strong> (%{host_ip}) appears to have been located in <strong>%{country}</strong> during our test.|, domain: @site.data["host"], host_ip: @site.data["host_ip"], country: country_from_iso(@conn.assigns.locale, @site.data["geolocation"])) |> raw
       .beta
         p
-          = gettext(~s|Please note that some sites use CDNs &ndash; <a href="https://en.wikipedia.org/wiki/Content_delivery_network">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in London, UK.|) |> raw
+          = gettext(~s|Please note that some sites use CDNs &ndash; <a href="https://en.wikipedia.org/wiki/Content_delivery_network">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France.|) |> raw
 
   section class="result #{if @site.data["scheme"] == "https", do: "success", else: "alert"}"
     h3#https
