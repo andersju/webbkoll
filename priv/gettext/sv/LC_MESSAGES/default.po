@@ -111,10 +111,6 @@ msgstr "Resultat för"
 msgid "Secure"
 msgstr "Säker"
 
-#: lib/webbkoll_web/templates/layout/app.html.slime:1
-msgid "Test results are stored in our database for a week. We don't show a list of tested URLs. We don't use URLs or test results. We don't log accesses and we don't use cookies."
-msgstr "Testresultat lagras i vår databas i en vecka. Vi har ingen offentlig lista över testade URL:er. Vi använder inte URL:erna eller testresultaten. Vi loggar inte åtkomster och vi använder inte kakor."
-
 #: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "We use Disconnect's <a href=\"%{url}\">open source list of trackers</a> to classify hosts."
 msgstr "Vi använder Disconnects <a href=\"%{url}\">spårningslista</a> (open source) för att klassificera domäner."
@@ -888,7 +884,11 @@ msgstr "<a href=\"https://w3c.github.io/webappsec-referrer-policy/#referrer-poli
 msgid "The code is <a href=\"https://github.com/andersju/webbkoll\">available on GitHub</a>."
 msgstr "Koden är <a href=\"https://github.com/andersju/webbkoll\">tillgänglig på GitHub</a>."
 
-#, fuzzy
 #: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Please note that some sites use CDNs &ndash; <a href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France."
 msgstr "Observera att en del sajter använder CDN:er &ndash; <a href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; i vilket fall serverplatsen kan variera beroende på var besökaren befinner sig. Det här verktyget, Webbkoll, körs just nu på en server i Frankrike."
+
+#, fuzzy
+#: lib/webbkoll_web/templates/layout/app.html.slime:1
+msgid "Test results are stored in memory on our server for a week. We don't show a list of tested URLs. We don't use URLs or test results. We don't log accesses and we don't use cookies."
+msgstr "Testresultat lagras i minnet på vår server i en vecka. Vi visar ingen lista över testade URL:er. Vi använder inte URL:erna eller testresultaten. Vi loggar inte åtkomster och vi använder inte kakor."

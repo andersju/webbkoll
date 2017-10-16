@@ -97,10 +97,6 @@ msgstr ""
 msgid "Secure"
 msgstr ""
 
-#: lib/webbkoll_web/templates/layout/app.html.slime:1
-msgid "Test results are stored in our database for a week. We don't show a list of tested URLs. We don't use URLs or test results. We don't log accesses and we don't use cookies."
-msgstr ""
-
 #: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "We use Disconnect's <a href=\"%{url}\">open source list of trackers</a> to classify hosts."
 msgstr ""
@@ -876,4 +872,8 @@ msgstr ""
 
 #: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Please note that some sites use CDNs &ndash; <a href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France."
+msgstr ""
+
+#: lib/webbkoll_web/templates/layout/app.html.slime:1
+msgid "Test results are stored in memory on our server for a week. We don't show a list of tested URLs. We don't use URLs or test results. We don't log accesses and we don't use cookies."
 msgstr ""
