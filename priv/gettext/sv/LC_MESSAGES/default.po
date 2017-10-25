@@ -185,7 +185,7 @@ msgstr "Osäker anslutning"
 msgid "Install Piwik on your own server. It's easy to install and easy to upgrade."
 msgstr "Kör Piwik på din egen server. Det är lätt att installera och lätt att uppgradera."
 
-#: lib/webbkoll_web/controllers/site_controller.ex:201
+#: lib/webbkoll_web/controllers/site_controller.ex:200
 msgid "Invalid domain: %{domain}"
 msgstr "Ogiltig domän: %{domain}"
 
@@ -247,7 +247,7 @@ msgstr "Tredjepartsförfrågningar"
 msgid "Third-party services"
 msgstr "Tredjepartstjänster"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:251
+#: lib/webbkoll_web/controllers/site_controller.ex:250
 msgid "Trying same host too frequently. Try again in a minute."
 msgstr "Samma värd provas för ofta. Prova igen om en minut."
 
@@ -255,7 +255,7 @@ msgstr "Samma värd provas för ofta. Prova igen om en minut."
 msgid "YES,"
 msgstr "JA,"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:237
+#: lib/webbkoll_web/controllers/site_controller.ex:236
 msgid "You're requesting too frequently. Install locally?"
 msgstr "Du skickar lite för många förfrågningar. Vad sägs om att installera verktyget lokalt istället?"
 
@@ -735,7 +735,7 @@ msgstr "Hur den här webbplatsen hjälper dig utöva makt över ditt privatliv (
 msgid "Processing failed"
 msgstr "Körningen misslyckades"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:163
+#: lib/webbkoll_web/controllers/site_controller.ex:162
 msgid "Sorry, bots aren't allowed."
 msgstr "Beklagar, men botar är inte tillåtna."
 
@@ -752,14 +752,10 @@ msgid "We don't provide an API as we have limited resources and PhantomJS is rat
 msgstr "Vi tillhandahåller inget API eftersom vi har begränsade resurser och PhantomJS är tämligen resurskrävande, men <a href=\"https://github.com/andersju/webbkoll\">koden är tillgänglig</a> (MIT-licens)."
 
 #: lib/webbkoll_web/templates/site/index.html.slime:1
-msgid "<em>Please note that this service is still under development. Some sites (sometimes) don't work; sometimes results are incorrect. We're working on it! <strong>Also note</strong> that the backend is currently running on only one server with very limited resources, so in case of usage spikes, waiting times can be long. (But you can <a href=\"https://github.com/andersju/webbkoll\">run your own instance</a>!) <a href=\"mailto:info@dataskydd.net\">Feedback</a> is appreciated.</em>"
-msgstr "<em>Vänligen notera att den här tjänsten fortfarande är under utveckling. Vissa sajter funkar (ibland) inte; ibland är resultaten inkorrekta. Vi jobbar på det! <strong>Observera också</strong> att backend just nu körs på en enda väldigt begränsad server, så i fall många använder tjänsten samtidigt kan väntetiderna bli långa. (Men du kan <a href=\"https://github.com/andersju/webbkoll\">köra din egen instans</a>!) <a href=\"mailto:info@dataskydd.net\">Feedback</a> uppskattas.</em>"
-
-#: lib/webbkoll_web/templates/site/index.html.slime:1
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
 msgstr "Det här verktyget hjälper dig ta reda på vilka dataskyddande funktioner en sajt använder för att hjälpa dig utöva makt över ditt privatliv. "
 
-#: lib/webbkoll_web/controllers/site_controller.ex:258
+#: lib/webbkoll_web/controllers/site_controller.ex:257
 msgid "Error"
 msgstr "Fel"
 
@@ -888,7 +884,30 @@ msgstr "Koden är <a href=\"https://github.com/andersju/webbkoll\">tillgänglig 
 msgid "Please note that some sites use CDNs &ndash; <a href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France."
 msgstr "Observera att en del sajter använder CDN:er &ndash; <a href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; i vilket fall serverplatsen kan variera beroende på var besökaren befinner sig. Det här verktyget, Webbkoll, körs just nu på en server i Frankrike."
 
-#, fuzzy
 #: lib/webbkoll_web/templates/layout/app.html.slime:1
-msgid "Test results are stored in memory on our server for a week. We don't show a list of tested URLs. We don't use URLs or test results. We don't log accesses and we don't use cookies."
-msgstr "Testresultat lagras i minnet på vår server i en vecka. Vi visar ingen lista över testade URL:er. Vi använder inte URL:erna eller testresultaten. Vi loggar inte åtkomster och vi använder inte kakor."
+msgid "Test results are stored in memory on our server for 48 hours. We don't show a list of tested URLs. We don't use URLs or test results. We don't log accesses and we don't use cookies."
+msgstr "Testresultat lagras i minnet på vår server i 48 timmar. Vi visar ingen lista över testade URL:er. Vi använder inte URL:erna eller testresultaten. Vi loggar inte åtkomster och vi använder inte kakor."
+
+#: lib/webbkoll_web/templates/site/index.html.slime:1
+msgid "Even if you enter https://, http:// will be checked, to see if it redirects to https:// automatically (redirects are followed)."
+msgstr "Även om du skriver https:// så kommer http:// att kollas, för att se om automatisk omdirigering till https:// sker (omdirigeringar följs)."
+
+#: lib/webbkoll_web/templates/site/index.html.slime:1
+msgid "Feedback is appreciated: send <a href=\"mailto:info@dataskydd.net\">email</a> or <a href=\"https://github.com/andersju/webbkoll\">open an issue</a>."
+msgstr "Feedback uppskattas: <a href=\"mailto:info@dataskydd.net\">mejla</a> eller <a href=\"https://github.com/andersju/webbkoll\">öppna en issue på GitHub</a>."
+
+#: lib/webbkoll_web/templates/site/index.html.slime:1
+msgid "Generally things work, but some sites (sometimes) don't work for various reasons."
+msgstr "Vanligtvis fungerar allt, men ibland kan det vara problem med vissa sajter av olika skäl."
+
+#: lib/webbkoll_web/templates/site/index.html.slime:1
+msgid "The backend is currently running on a single server with limited resources, so in case of usage spikes, waiting times can be long. (But you can <a href=\"https://github.com/andersju/webbkoll\">run your own instance</a>!)"
+msgstr "Backend-servern körs just nu på en enda server med begränsade resurser, så i fall många använder tjänsten samtidigt kan väntetiderna bli långa. (Men du kan <a href=\"https://github.com/andersju/webbkoll\">din egen instans</a>!)"
+
+#: lib/webbkoll_web/templates/site/index.html.slime:1
+msgid "This tool simulates a normal browser visit with Do Not Track disabled (browser default) and with no add-ons."
+msgstr "Det här verktyget simulerar ett vanligt webbläsarbesök med Do Not Track inaktiverat (standardinställning) och utan webbläsartillägg."
+
+#: lib/webbkoll_web/templates/site/index.html.slime:1
+msgid "Please note:"
+msgstr "Vänligen observera:"

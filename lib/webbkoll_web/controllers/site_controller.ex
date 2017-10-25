@@ -100,7 +100,7 @@ defmodule WebbkollWeb.SiteController do
         redirect(conn, to: site_path(conn, :results, conn.assigns.locale, url: site.input_url))
 
       "done" ->
-        redirect(conn, to: site_path(conn, :results, conn.assigns.locale, url: site.final_url))
+        redirect(conn, to: site_path(conn, :results, conn.assigns.locale, url: site.input_url))
     end
   end
 
@@ -138,12 +138,11 @@ defmodule WebbkollWeb.SiteController do
 
   defp get_latest_from_cache(url) do
     input = :ets.match_object(ConCache.ets(:site_cache), {:_, %{input_url: url}})
-    final = :ets.match_object(ConCache.ets(:site_cache), {:_, %{final_url: url}})
 
-    (input ++ final)
+    input
     |> Enum.filter(&is_tuple/1)
     |> Enum.sort(fn x, y ->
-         elem(x, 1) |> Map.get(:inserted_at) > elem(y, 1) |> Map.get(:inserted_at)
+         (elem(x, 1) |> Map.get(:inserted_at)) > (elem(y, 1) |> Map.get(:inserted_at))
        end)
     |> List.first()
   end

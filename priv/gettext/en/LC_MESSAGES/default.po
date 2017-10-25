@@ -174,7 +174,7 @@ msgstr ""
 msgid "Install Piwik on your own server. It's easy to install and easy to upgrade."
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:201
+#: lib/webbkoll_web/controllers/site_controller.ex:200
 msgid "Invalid domain: %{domain}"
 msgstr ""
 
@@ -236,7 +236,7 @@ msgstr ""
 msgid "Third-party services"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:251
+#: lib/webbkoll_web/controllers/site_controller.ex:250
 msgid "Trying same host too frequently. Try again in a minute."
 msgstr ""
 
@@ -244,7 +244,7 @@ msgstr ""
 msgid "YES,"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:237
+#: lib/webbkoll_web/controllers/site_controller.ex:236
 msgid "You're requesting too frequently. Install locally?"
 msgstr ""
 
@@ -724,7 +724,7 @@ msgstr ""
 msgid "Processing failed"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:163
+#: lib/webbkoll_web/controllers/site_controller.ex:162
 msgid "Sorry, bots aren't allowed."
 msgstr ""
 
@@ -741,14 +741,10 @@ msgid "We don't provide an API as we have limited resources and PhantomJS is rat
 msgstr ""
 
 #: lib/webbkoll_web/templates/site/index.html.slime:1
-msgid "<em>Please note that this service is still under development. Some sites (sometimes) don't work; sometimes results are incorrect. We're working on it! <strong>Also note</strong> that the backend is currently running on only one server with very limited resources, so in case of usage spikes, waiting times can be long. (But you can <a href=\"https://github.com/andersju/webbkoll\">run your own instance</a>!) <a href=\"mailto:info@dataskydd.net\">Feedback</a> is appreciated.</em>"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/index.html.slime:1
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:258
+#: lib/webbkoll_web/controllers/site_controller.ex:257
 msgid "Error"
 msgstr ""
 
@@ -877,7 +873,30 @@ msgstr ""
 msgid "Please note that some sites use CDNs &ndash; <a href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France."
 msgstr ""
 
-#, fuzzy
 #: lib/webbkoll_web/templates/layout/app.html.slime:1
-msgid "Test results are stored in memory on our server for a week. We don't show a list of tested URLs. We don't use URLs or test results. We don't log accesses and we don't use cookies."
+msgid "Test results are stored in memory on our server for 48 hours. We don't show a list of tested URLs. We don't use URLs or test results. We don't log accesses and we don't use cookies."
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/index.html.slime:1
+msgid "Even if you enter https://, http:// will be checked, to see if it redirects to https:// automatically (redirects are followed)."
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/index.html.slime:1
+msgid "Feedback is appreciated: send <a href=\"mailto:info@dataskydd.net\">email</a> or <a href=\"https://github.com/andersju/webbkoll\">open an issue</a>."
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/index.html.slime:1
+msgid "Generally things work, but some sites (sometimes) don't work for various reasons."
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/index.html.slime:1
+msgid "The backend is currently running on a single server with limited resources, so in case of usage spikes, waiting times can be long. (But you can <a href=\"https://github.com/andersju/webbkoll\">run your own instance</a>!)"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/index.html.slime:1
+msgid "This tool simulates a normal browser visit with Do Not Track disabled (browser default) and with no add-ons."
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/index.html.slime:1
+msgid "Please note:"
 msgstr ""
