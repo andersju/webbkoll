@@ -27,6 +27,7 @@ defmodule Webbkoll.Worker do
   defp check_if_https_only(url) do
     case HTTPoison.head(url) do
       {:error, %{reason: :econnrefused}} -> get_https_url(url)
+      {:error, %{reason: :connect_timeout}} -> get_https_url(url)
       _ -> url
     end
   end
