@@ -55,7 +55,7 @@ defmodule Webbkoll.SiteControllerTest do
     assert data["header_hsts"] =~ "max-age=10886400;"
     assert data["services"] == []
 
-    conn = get build_conn(), "/en/results?url=https%3A%2F%2Fexample.com%2F"
+    conn = get build_conn(), "/en/results?url=example.com"
     assert html_response(conn, 200) =~ "Results for https://example.com/"
     assert html_response(conn, 200) =~ "Referrers not leaked"
     assert html_response(conn, 200) =~ "uses HTTPS by default"
@@ -83,7 +83,7 @@ defmodule Webbkoll.SiteControllerTest do
     assert data["cookie_count"]["third_party"] == 2
     assert data["third_party_request_types"]["insecure"] == 9
 
-    conn = get build_conn(), "/en/results?url=https%3A%2F%2Fexample.com%2F"
+    conn = get build_conn(), "/en/results?url=example.com"
     assert html_response(conn, 200) =~ "Insecure connection"
     assert html_response(conn, 200) =~ "Referrers leaked"
     assert html_response(conn, 200) =~ "Content-Security-Policy not enabled"
@@ -126,7 +126,7 @@ defmodule Webbkoll.SiteControllerTest do
 
     assert data["header_csp"] == "default-src 'self'"
 
-    conn = get build_conn(), "/en/results?url=https%3A%2F%2Fexample.com%2F"
+    conn = get build_conn(), "/en/results?url=example.com"
     assert html_response(conn, 200) =~ "Content-Security-Policy enabled"
     assert html_response(conn, 200) =~ "Content-Security-Policy HTTP header is set"
     assert html_response(conn, 200) =~ "default-src 'self'"
@@ -139,7 +139,7 @@ defmodule Webbkoll.SiteControllerTest do
 
     assert data["meta_csp"] == "default-src 'none'"
 
-    conn = get build_conn(), "/en/results?url=https%3A%2F%2Fexample.com%2F"
+    conn = get build_conn(), "/en/results?url=example.com"
     assert html_response(conn, 200) =~ "Content-Security-Policy enabled"
     assert html_response(conn, 200) =~ "Content-Security-Policy meta element is set"
     assert html_response(conn, 200) =~ "default-src 'none'"
@@ -153,7 +153,7 @@ defmodule Webbkoll.SiteControllerTest do
     assert data["header_csp"] == "default-src 'self'"
     assert data["meta_csp"] == "default-src 'none'"
 
-    conn = get build_conn(), "/en/results?url=https%3A%2F%2Fexample.com%2F"
+    conn = get build_conn(), "/en/results?url=example.com"
     assert html_response(conn, 200) =~ "Content-Security-Policy enabled"
     assert html_response(conn, 200) =~ "Content-Security-Policy meta element is set"
     assert html_response(conn, 200) =~ "Content-Security-Policy HTTP header is set"

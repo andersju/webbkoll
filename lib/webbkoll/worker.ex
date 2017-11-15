@@ -189,12 +189,9 @@ defmodule Webbkoll.Worker do
   end
 
   defp is_insecure_first_party?(parsed_url, registerable_domain) do
-    case parsed_url.host !== nil &&
-           get_registerable_domain(parsed_url.host) == registerable_domain &&
-           parsed_url.scheme == "http" do
-      true -> true
-      false -> false
-    end
+    parsed_url.host !== nil &&
+      get_registerable_domain(parsed_url.host) == registerable_domain &&
+      parsed_url.scheme == "http"
   end
 
   defp get_third_party_requests(requests, registerable_domain) do
