@@ -274,10 +274,6 @@ msgid "<a href=\"https://https.cio.gov/hsts/\">Read more about HSTS</a> and how 
 msgstr "<a href=\"https://https.cio.gov/hsts/\">Läs mer om HSTS</a> och om hur du konfigurerar det i nginx, Apache och IIS."
 
 #: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free <em>domain-validated</em> (<DV) certificates through an easy, automated process."
-msgstr "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> är en ej vinstdrivande certifikatutfärdare (sponsrad av Mozilla, EFF, Cisco, Facebook och andra) som tillhandahåller gratis <em>domänvaliderade</em> (\"domain-validated\", DV) certifikat genom en enkel, automatiserad process."
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<strong>Authenticity</strong>. The visitor is talking to the \"real\" website, and not to an impersonator or through a \"man-in-the-middle\"."
 msgstr "<strong>Autenticitet</strong>. Besökaren pratar med den \"riktiga\" sajten och inte en imitatör eller genom en \"man-in-the-middle\"."
 
@@ -911,3 +907,8 @@ msgstr "Det här verktyget simulerar ett vanligt webbläsarbesök med Do Not Tra
 #: lib/webbkoll_web/templates/site/index.html.slime:1
 msgid "Please note:"
 msgstr "Vänligen observera:"
+
+#, fuzzy
+#: lib/webbkoll_web/templates/site/results.html.slime:1
+msgid "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free <em>domain-validated</em> (DV) certificates through an easy, automated process."
+msgstr "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> är en ej vinstdrivande certifikatutfärdare (sponsrad av Mozilla, EFF, Cisco, Facebook och andra) som tillhandahåller gratis <em>domänvaliderade</em> (\"domain-validated\", DV) certifikat genom en enkel, automatiserad process."

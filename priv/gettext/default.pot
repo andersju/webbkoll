@@ -260,10 +260,6 @@ msgid "<a href=\"https://https.cio.gov/hsts/\">Read more about HSTS</a> and how 
 msgstr ""
 
 #: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free <em>domain-validated</em> (<DV) certificates through an easy, automated process."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<strong>Authenticity</strong>. The visitor is talking to the \"real\" website, and not to an impersonator or through a \"man-in-the-middle\"."
 msgstr ""
 
@@ -896,4 +892,8 @@ msgstr ""
 
 #: lib/webbkoll_web/templates/site/index.html.slime:1
 msgid "Please note:"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/results.html.slime:1
+msgid "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free <em>domain-validated</em> (DV) certificates through an easy, automated process."
 msgstr ""
