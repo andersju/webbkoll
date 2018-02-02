@@ -64,11 +64,11 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
-#import_config "prod.secret.exs"
+# import_config "prod.secret.exs"
 
 config :webbkoll,
   backends: [
-    {Webbkoll.Queue.Q1, %{concurrency: 7, logger_tag: "queue 1", url: "http://localhost:8100/"}},
+    {Webbkoll.Queue.Q1, %{concurrency: 7, logger_tag: "queue 1", url: "http://localhost:8100/"}}
   ],
   max_attempts: 2,
   locales: ~w(en sv),

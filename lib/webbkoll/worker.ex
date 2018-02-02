@@ -114,7 +114,7 @@ defmodule Webbkoll.Worker do
          host_ip = get_ip_by_host(url.host),
          meta_referrer = get_meta(json["content"], "name", "referrer"),
          header_csp_referrer =
-           headers 
+           headers
            |> get_header("content-security-policy")
            |> get_by_regex(~r/\breferrer ([\w-]+)\b/),
          header_referrer =
@@ -139,8 +139,8 @@ defmodule Webbkoll.Worker do
         "third_party_requests" => third_party_requests,
         "third_party_request_types" => third_party_request_types,
         "third_party_request_count" => get_request_count(third_party_requests),
-        "insecure_requests_count" => third_party_request_types["insecure"] +
-          Enum.count(insecure_first_party_requests),
+        "insecure_requests_count" =>
+          third_party_request_types["insecure"] + Enum.count(insecure_first_party_requests),
         "meta_referrer" => meta_referrer,
         "meta_csp" => get_meta(json["content"], "http-equiv", "content-security-policy"),
         "header_csp" => get_header(headers, "content-security-policy"),
@@ -189,8 +189,7 @@ defmodule Webbkoll.Worker do
   end
 
   defp is_insecure_first_party?(parsed_url, registerable_domain) do
-    parsed_url.host !== nil &&
-      get_registerable_domain(parsed_url.host) == registerable_domain &&
+    parsed_url.host !== nil && get_registerable_domain(parsed_url.host) == registerable_domain &&
       parsed_url.scheme == "http"
   end
 
@@ -281,9 +280,9 @@ defmodule Webbkoll.Worker do
     |> String.to_charlist()
     |> :inet.gethostbyname()
     |> case do
-         {:error, _} -> nil
-         {:ok, hostent} -> hostent |> elem(5) |> hd |> Tuple.to_list() |> Enum.join(".")
-       end
+      {:error, _} -> nil
+      {:ok, hostent} -> hostent |> elem(5) |> hd |> Tuple.to_list() |> Enum.join(".")
+    end
   end
 
   defp check_referrer_policy_in_use(meta, csp, referrer_header) do

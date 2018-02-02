@@ -7,7 +7,7 @@ defmodule Webbkoll.Factory do
       final_url: "https://example.com/",
       status: "done",
       inserted_at: System.system_time(:microsecond),
-      updated_at: System.system_time(:microsecond),
+      updated_at: System.system_time(:microsecond)
     }
   end
 end

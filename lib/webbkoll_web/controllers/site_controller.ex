@@ -21,9 +21,10 @@ defmodule WebbkollWeb.SiteController do
       "index.html",
       locale: conn.assigns.locale,
       page_title: gettext("Analyze"),
-      page_description: gettext(
-        "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."
-      )
+      page_description:
+        gettext(
+          "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."
+        )
     )
   end
 
@@ -35,9 +36,10 @@ defmodule WebbkollWeb.SiteController do
       "about.html",
       locale: conn.assigns.locale,
       page_title: gettext("About"),
-      page_description: gettext(
-        "The what and why of data protection and the principles of the EU general data protection regulation."
-      )
+      page_description:
+        gettext(
+          "The what and why of data protection and the principles of the EU general data protection regulation."
+        )
     )
   end
 
@@ -47,9 +49,8 @@ defmodule WebbkollWeb.SiteController do
       "tech.html",
       locale: conn.assigns.locale,
       page_title: gettext("Tech"),
-      page_description: gettext(
-        "How our web privacy check tool works and how you can run your own instance."
-      )
+      page_description:
+        gettext("How our web privacy check tool works and how you can run your own instance.")
     )
   end
 
@@ -142,8 +143,8 @@ defmodule WebbkollWeb.SiteController do
     input
     |> Enum.filter(&is_tuple/1)
     |> Enum.sort(fn x, y ->
-         (elem(x, 1) |> Map.get(:inserted_at)) > (elem(y, 1) |> Map.get(:inserted_at))
-       end)
+      elem(x, 1) |> Map.get(:inserted_at) > elem(y, 1) |> Map.get(:inserted_at)
+    end)
     |> List.first()
   end
 
@@ -191,15 +192,15 @@ defmodule WebbkollWeb.SiteController do
     |> Map.get(:host)
     |> PublicSuffix.matches_explicit_rule?()
     |> case do
-         true ->
-           conn
+      true ->
+        conn
 
-         false ->
-           render_error(
-             conn,
-             gettext("Invalid domain: %{domain}", domain: conn.assigns.input_url)
-           )
-       end
+      false ->
+        render_error(
+          conn,
+          gettext("Invalid domain: %{domain}", domain: conn.assigns.input_url)
+        )
+    end
   end
 
   defp check_if_site_exists(%Plug.Conn{assigns: %{input_url: proper_url}} = conn, _params) do
@@ -229,12 +230,12 @@ defmodule WebbkollWeb.SiteController do
     |> Enum.join(".")
     |> ExRated.check_rate(@rate_limit_client["scale"], @rate_limit_client["limit"])
     |> case do
-         {:ok, _} ->
-           conn
+      {:ok, _} ->
+        conn
 
-         {:error, _} ->
-           render_error(conn, gettext("You're requesting too frequently. Install locally?"))
-       end
+      {:error, _} ->
+        render_error(conn, gettext("You're requesting too frequently. Install locally?"))
+    end
   end
 
   defp check_rate_url_host(conn, _params) do
@@ -243,12 +244,12 @@ defmodule WebbkollWeb.SiteController do
     |> Map.get(:host)
     |> ExRated.check_rate(@rate_limit_host["scale"], @rate_limit_host["limit"])
     |> case do
-         {:ok, _} ->
-           conn
+      {:ok, _} ->
+        conn
 
-         {:error, _} ->
-           render_error(conn, gettext("Trying same host too frequently. Try again in a minute."))
-       end
+      {:error, _} ->
+        render_error(conn, gettext("Trying same host too frequently. Try again in a minute."))
+    end
   end
 
   defp render_error(conn, error_message) do

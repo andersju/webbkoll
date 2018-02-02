@@ -11,29 +11,29 @@ defmodule Webbkoll.Trackers do
 
   # TODO: Clean up this mess
   @hosts (fn ->
-    Application.app_dir(:webbkoll, "priv/services.json")
-    |> File.read!()
-    |> Poison.decode!()
-    |> Map.get("categories")
-    |> Enum.reduce(%{}, fn {category, sites}, hosts ->
-         if String.starts_with?(category, "Legacy") do
-           hosts
-         else
-           Enum.reduce(sites, hosts, fn site, hosts ->
-             Enum.reduce(site, hosts, fn {name, url}, hosts ->
-               url
-               |> Enum.filter(fn {x, _y} -> String.starts_with?(x, ["http", "www."]) end)
-               |> Enum.into(%{})
-               |> Map.values()
-               |> List.first()
-               |> Enum.reduce(hosts, fn host, hosts ->
-                    Map.put_new(hosts, host, "#{category} (#{name})")
+            Application.app_dir(:webbkoll, "priv/services.json")
+            |> File.read!()
+            |> Poison.decode!()
+            |> Map.get("categories")
+            |> Enum.reduce(%{}, fn {category, sites}, hosts ->
+              if String.starts_with?(category, "Legacy") do
+                hosts
+              else
+                Enum.reduce(sites, hosts, fn site, hosts ->
+                  Enum.reduce(site, hosts, fn {name, url}, hosts ->
+                    url
+                    |> Enum.filter(fn {x, _y} -> String.starts_with?(x, ["http", "www."]) end)
+                    |> Enum.into(%{})
+                    |> Map.values()
+                    |> List.first()
+                    |> Enum.reduce(hosts, fn host, hosts ->
+                      Map.put_new(hosts, host, "#{category} (#{name})")
+                    end)
                   end)
-             end)
-           end)
-         end
-       end)
-  end).()
+                end)
+              end
+            end)
+          end).()
 
   def check(host) do
     case Map.fetch(@hosts, host) do

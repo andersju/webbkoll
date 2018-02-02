@@ -6,8 +6,7 @@
 use Mix.Config
 
 # General application configuration
-config :webbkoll,
-  ecto_repos: [Webbkoll.Repo]
+config :webbkoll, ecto_repos: [Webbkoll.Repo]
 
 # Configures the endpoint
 config :webbkoll, WebbkollWeb.Endpoint,
@@ -16,8 +15,7 @@ config :webbkoll, WebbkollWeb.Endpoint,
   # use cookies at all.
   secret_key_base: "Yk9QpNTp3jg15sA4KFDjBq4hgfp0eYV0o1bYO6Hxf0BUV5deh4HkwMks/Z541bCR",
   render_errors: [accepts: ~w(html json)],
-  pubsub: [name: Webbkoll.PubSub,
-           adapter: Phoenix.PubSub.PG2],
+  pubsub: [name: Webbkoll.PubSub, adapter: Phoenix.PubSub.PG2],
   server: true
 
 # Configures Elixir's Logger
@@ -28,7 +26,7 @@ config :logger, :console,
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
-import_config "#{Mix.env}.exs"
+import_config "#{Mix.env()}.exs"
 
 # Configure phoenix generators
 config :phoenix, :generators,
@@ -47,8 +45,8 @@ config :webbkoll, Webbkoll.Scheduler,
 config :geolix,
   databases: [
     %{
-      id:      :country,
+      id: :country,
       adapter: Geolix.Adapter.MMDB2,
-      source:  "priv/GeoLite2-Country.mmdb"
+      source: "priv/GeoLite2-Country.mmdb"
     }
   ]

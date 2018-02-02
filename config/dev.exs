@@ -34,7 +34,7 @@ config :phoenix, :stacktrace_depth, 20
 
 config :webbkoll,
   backends: [
-    {Webbkoll.Queue.Q1, %{concurrency: 5, logger_tag: "queue 1", url: "http://localhost:8100/"}},
+    {Webbkoll.Queue.Q1, %{concurrency: 5, logger_tag: "queue 1", url: "http://localhost:8100/"}}
   ],
   max_attempts: 2,
   locales: ~w(en sv),

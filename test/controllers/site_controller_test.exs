@@ -5,44 +5,46 @@ defmodule Webbkoll.SiteControllerTest do
   @default_locale Application.get_env(:webbkoll, :default_locale)
 
   test "/ redirects to default locale" do
-    conn = get build_conn(), "/"
+    conn = get(build_conn(), "/")
     assert redirected_to(conn) =~ "/#{@default_locale}/"
   end
 
   test "index page" do
-    conn = get build_conn(), "/en/"
+    conn = get(build_conn(), "/en/")
     assert html_response(conn, 200) =~ "How privacy-friendly is your site?"
   end
 
   test "about page" do
-    conn = get build_conn(), "/en/about"
+    conn = get(build_conn(), "/en/about")
     assert html_response(conn, 200) =~ "Welcome to the Web Privacy Check"
   end
 
   test "tech page" do
-    conn = get build_conn(), "/en/tech"
+    conn = get(build_conn(), "/en/tech")
     assert html_response(conn, 200) =~ "Technology we use"
   end
 
   test "returns error on domain with TLD not in Public Suffix list" do
-    conn = get build_conn(), "/en/check?url=foobar.invalidtld"
+    conn = get(build_conn(), "/en/check?url=foobar.invalidtld")
     assert html_response(conn, 400) =~ "Error"
   end
 
   test "returns 302 redirect to status when given valid URL" do
-    conn = get build_conn(), "/en/check?url=http://example.com"
+    conn = get(build_conn(), "/en/check?url=http://example.com")
     assert List.to_string(Plug.Conn.get_resp_header(conn, "location")) =~ "status"
     assert conn.status == 302
   end
 
   test "returns 302 redirect to status when given valid domain" do
-    conn = get build_conn(), "/en/check?url=example.com"
+    conn = get(build_conn(), "/en/check?url=example.com")
     assert List.to_string(Plug.Conn.get_resp_header(conn, "location")) =~ "status"
     assert conn.status == 302
   end
 
   test "analysis+HTML of site with HTTPS, HSTS, CSP, referrer policy, no cookies/external requests" do
-    data = read_and_analyze_json("test/fixtures/https_hsts_referrer_no_cookies_or_ext_requests.json")
+    data =
+      read_and_analyze_json("test/fixtures/https_hsts_referrer_no_cookies_or_ext_requests.json")
+
     site = build(:site, data: data)
     ConCache.put(:site_cache, UUID.uuid4(), site)
 
@@ -55,7 +57,7 @@ defmodule Webbkoll.SiteControllerTest do
     assert data["header_hsts"] =~ "max-age=10886400;"
     assert data["services"] == []
 
-    conn = get build_conn(), "/en/results?url=example.com"
+    conn = get(build_conn(), "/en/results?url=example.com")
     assert html_response(conn, 200) =~ "Results for https://example.com/"
     assert html_response(conn, 200) =~ "Referrers not leaked"
     assert html_response(conn, 200) =~ "uses HTTPS by default"
@@ -83,7 +85,7 @@ defmodule Webbkoll.SiteControllerTest do
     assert data["cookie_count"]["third_party"] == 2
     assert data["third_party_request_types"]["insecure"] == 9
 
-    conn = get build_conn(), "/en/results?url=example.com"
+    conn = get(build_conn(), "/en/results?url=example.com")
     assert html_response(conn, 200) =~ "Insecure connection"
     assert html_response(conn, 200) =~ "Referrers leaked"
     assert html_response(conn, 200) =~ "Content-Security-Policy not enabled"
@@ -126,7 +128,7 @@ defmodule Webbkoll.SiteControllerTest do
 
     assert data["header_csp"] == "default-src 'self'"
 
-    conn = get build_conn(), "/en/results?url=example.com"
+    conn = get(build_conn(), "/en/results?url=example.com")
     assert html_response(conn, 200) =~ "Content-Security-Policy enabled"
     assert html_response(conn, 200) =~ "Content-Security-Policy HTTP header is set"
     assert html_response(conn, 200) =~ "default-src 'self'"
@@ -139,7 +141,7 @@ defmodule Webbkoll.SiteControllerTest do
 
     assert data["meta_csp"] == "default-src 'none'"
 
-    conn = get build_conn(), "/en/results?url=example.com"
+    conn = get(build_conn(), "/en/results?url=example.com")
     assert html_response(conn, 200) =~ "Content-Security-Policy enabled"
     assert html_response(conn, 200) =~ "Content-Security-Policy meta element is set"
     assert html_response(conn, 200) =~ "default-src 'none'"
@@ -153,7 +155,7 @@ defmodule Webbkoll.SiteControllerTest do
     assert data["header_csp"] == "default-src 'self'"
     assert data["meta_csp"] == "default-src 'none'"
 
-    conn = get build_conn(), "/en/results?url=example.com"
+    conn = get(build_conn(), "/en/results?url=example.com")
     assert html_response(conn, 200) =~ "Content-Security-Policy enabled"
     assert html_response(conn, 200) =~ "Content-Security-Policy meta element is set"
     assert html_response(conn, 200) =~ "Content-Security-Policy HTTP header is set"
@@ -164,8 +166,8 @@ defmodule Webbkoll.SiteControllerTest do
 
   defp read_and_analyze_json(file) do
     file
-    |> File.read!
-    |> Poison.decode!
-    |> Webbkoll.Worker.process_json
+    |> File.read!()
+    |> Poison.decode!()
+    |> Webbkoll.Worker.process_json()
   end
 end
