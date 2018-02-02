@@ -181,10 +181,6 @@ msgstr "Osäkra attribut används dock."
 msgid "Insecure connection"
 msgstr "Osäker anslutning"
 
-#: lib/webbkoll/helpers.ex:84
-msgid "Install Piwik on your own server. It's easy to install and easy to upgrade."
-msgstr "Kör Piwik på din egen server. Det är lätt att installera och lätt att uppgradera."
-
 #: lib/webbkoll_web/controllers/site_controller.ex:200
 msgid "Invalid domain: %{domain}"
 msgstr "Ogiltig domän: %{domain}"
@@ -200,10 +196,6 @@ msgstr "Inga förstapartskakor utan medgivande."
 #: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "No third-party cookies without consent."
 msgstr "Inga tredjepartskakor utan medgivande."
-
-#: lib/webbkoll/helpers.ex:66
-msgid "Piwik is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
-msgstr "Piwik är ett utmärkt alternativ. Det är fri mjukvara (PHP & MySQL) och du kör det på din egen server, vilket betyder att <em>du</em> har kontroll över din data. Piwik har olika integritetsinställningar och kan, till skillnad från Google Analytics, användas utan kakor. <em>(Medan analysverktyg kanske anses nödvändiga för vissa sajter så är ett annat alternativ att <em>inte spåra människor bara för att du kan</em>. Besökare har faktiskt inte någon skyldighet att hjälpa webbutvecklare att optimera saker.)</em>"
 
 #: lib/webbkoll_web/controllers/site_controller.ex:133
 msgid "Results for %{url}"
@@ -473,10 +465,6 @@ msgstr "Ingångs-URL:"
 #: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning)."
 msgstr "För att använda HTTPS på en sajt behöver ett <strong>certifikat</strong> för domänen installeras på webbservern. För att få ett certifikat som webbläsare litar på behöver du ett som är utfärdat av en betrodd \"certificate authority\" (annars kommer besökarens webbläsare att visa en varning)."
-
-#: lib/webbkoll/helpers.ex:81
-msgid "The site appears to use Piwik, but not self-hosted. This means visitors are exposed to a third party."
-msgstr "Sajten verkar använda Piwik, men inte självhostad. Det innebär att besökare exponeras till en tredjepart."
 
 #: lib/webbkoll/helpers.ex:58
 msgid "The site is using the Disqus comment system."
@@ -908,7 +896,20 @@ msgstr "Det här verktyget simulerar ett vanligt webbläsarbesök med Do Not Tra
 msgid "Please note:"
 msgstr "Vänligen observera:"
 
-#, fuzzy
 #: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free <em>domain-validated</em> (DV) certificates through an easy, automated process."
 msgstr "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> är en ej vinstdrivande certifikatutfärdare (sponsrad av Mozilla, EFF, Cisco, Facebook och andra) som tillhandahåller gratis <em>domänvaliderade</em> (\"domain-validated\", DV) certifikat genom en enkel, automatiserad process."
+
+#, fuzzy
+#: lib/webbkoll/helpers.ex:66
+msgid "<a href=\"https://matomo.org/\">Matomo</a> (formerly Piwik) is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
+msgstr "Matomo (f.d. Piwik) är ett utmärkt alternativ. Det är fri mjukvara (PHP & MySQL) och du kör det på din egen server, vilket betyder att <em>du</em> har kontroll över din data. Piwik har olika integritetsinställningar och kan, till skillnad från Google Analytics, användas utan kakor. <em>(Medan analysverktyg kanske anses nödvändiga för vissa sajter så är ett annat alternativ att <em>inte spåra människor bara för att du kan</em>. Besökare har faktiskt inte någon skyldighet att hjälpa webbutvecklare att optimera saker.)</em>"
+
+#: lib/webbkoll/helpers.ex:84
+msgid "Install <a href=\"https://matomo.org/\">Matomo</a> (formerly Piwik) on your own server. It's easy to install and easy to upgrade."
+msgstr "Installera <a href=\"https://matomo.org/\">Matomo</a> (f.d. Piwik) på din egen server. Det är enkelt att installera, underhålla och uppdatera."
+
+#, fuzzy
+#: lib/webbkoll/helpers.ex:81
+msgid "The site appears to use Matomo/Piwik, but not self-hosted. This means visitors are exposed to a third party."
+msgstr "Sajten verkar använda Matomo/Piwik, men inte självhostad. Det innebär att besökare exponeras till en tredjepart."

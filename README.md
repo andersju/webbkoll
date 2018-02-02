@@ -108,6 +108,22 @@ MIX_ENV=prod PORT=4001 iex -S mix phx.server
 
 See also the official [Phoenix deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
+### Keeping PhearJS running
+
+To make sure PhearJS keeps running, you might want to use supervisord and a `/etc/supervisor/conf.d/phearjs.conf` like this:
+
+```
+[program:phearjs]
+command=/usr/bin/nodejs /home/foobar/phearjs/phear.js
+autostart=true
+autorestart=true
+stderr_logfile=/home/foobar/phearjs/err.log
+stdout_logfile=/home/foobar/phearjs/out.log
+user=foobar
+environment=HOME="/home/foobar",USER="foobar"
+directory=/home/foobar/phearjs
+```
+
 ## TODO/ideas
   * **Switch from PhantomJS to headless Chrome ([Puppeteer](https://github.com/GoogleChrome/puppeteer))**
   * Add more suggestions for privacy-friendly alternatives to popular services

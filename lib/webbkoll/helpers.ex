@@ -64,7 +64,7 @@ defmodule Webbkoll.Helpers do
           ~s{The site is using Google Analytics. While this is a powerful tool, we think you should respect your users' privacy and not tell Google about them &mdash; at least not without your users' consent.}
         ),
         "alternative" => gettext(
-          ~s{Piwik is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>}
+          ~s{<a href="https://matomo.org/">Matomo</a> (formerly Piwik) is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>}
         )
       },
       "google-fonts" => %{
@@ -79,10 +79,10 @@ defmodule Webbkoll.Helpers do
       "piwik" => %{
         "pattern" => ["piwik.php", "piwik.js"],
         "description" => gettext(
-          ~s{The site appears to use Piwik, but not self-hosted. This means visitors are exposed to a third party.}
+          ~s{The site appears to use Matomo/Piwik, but not self-hosted. This means visitors are exposed to a third party.}
         ),
         "alternative" => gettext(
-          ~s{Install Piwik on your own server. It's easy to install and easy to upgrade.}
+          ~s{Install <a href="https://matomo.org/">Matomo</a> (formerly Piwik) on your own server. It's easy to install and easy to upgrade.}
         )
       }
     }

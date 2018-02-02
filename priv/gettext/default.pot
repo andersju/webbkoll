@@ -167,10 +167,6 @@ msgstr ""
 msgid "Insecure connection"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:84
-msgid "Install Piwik on your own server. It's easy to install and easy to upgrade."
-msgstr ""
-
 #: lib/webbkoll_web/controllers/site_controller.ex:200
 msgid "Invalid domain: %{domain}"
 msgstr ""
@@ -185,10 +181,6 @@ msgstr ""
 
 #: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "No third-party cookies without consent."
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:66
-msgid "Piwik is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
 msgstr ""
 
 #: lib/webbkoll_web/controllers/site_controller.ex:133
@@ -458,10 +450,6 @@ msgstr ""
 
 #: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning)."
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:81
-msgid "The site appears to use Piwik, but not self-hosted. This means visitors are exposed to a third party."
 msgstr ""
 
 #: lib/webbkoll/helpers.ex:58
@@ -896,4 +884,16 @@ msgstr ""
 
 #: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free <em>domain-validated</em> (DV) certificates through an easy, automated process."
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:66
+msgid "<a href=\"https://matomo.org/\">Matomo</a> (formerly Piwik) is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:84
+msgid "Install <a href=\"https://matomo.org/\">Matomo</a> (formerly Piwik) on your own server. It's easy to install and easy to upgrade."
+msgstr ""
+
+#: lib/webbkoll/helpers.ex:81
+msgid "The site appears to use Matomo/Piwik, but not self-hosted. This means visitors are exposed to a third party."
 msgstr ""
