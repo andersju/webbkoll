@@ -119,8 +119,7 @@ defmodule Webbkoll.Worker do
            |> get_by_regex(~r/\breferrer ([\w-]+)\b/),
          header_referrer =
            headers
-           |> get_header("referrer-policy")
-           |> get_by_regex(~r/^([\w-]+)$/i),
+           |> get_header("referrer-policy"),
          referrer_policy_in_use =
            check_referrer_policy_in_use(meta_referrer, header_csp_referrer, header_referrer) do
       %{
@@ -295,7 +294,18 @@ defmodule Webbkoll.Worker do
     end
   end
 
-  defp check_referrer_policy(referrer) do
+  defp check_referrer_policy(referrer_string) do
+    # If multiple policy values are specified, use the last one
+    # (https://www.w3.org/TR/referrer-policy/#parse-referrer-policy-from-header)
+    referrer =
+      if referrer_string do
+        String.split(referrer_string)
+        |> List.last()
+        |> get_by_regex(~r/^([\w-]+);?$/i)
+      else
+        ""
+      end
+
     cond do
       referrer in ["never", "no-referrer", "same-origin"] ->
         %{"status" => "success", "icon" => "icon-umbrella2 success"}

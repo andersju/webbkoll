@@ -169,7 +169,7 @@ msgstr "Misslyckades"
 msgid "First-party cookies"
 msgstr "Förstapartskakor"
 
-#: lib/webbkoll/helpers.ex:75
+#: lib/webbkoll/helpers.ex:79
 msgid "Fonts can easily be self-hosted. The tool <a href=\"https://google-webfonts-helper.herokuapp.com/fonts\">google-webfonts-helper</a> lets you select one or more fonts, generates the proper CSS and prepares a zip file with the fonts. For a command-line alternative, the shell script <a href=\"https://github.com/neverpanic/google-font-download\">google-font-download</a> provides similar functionality."
 msgstr "Typsnitt kan enkelt hostas på egen server. Den fria tjänsten <a href=\"https://google-webfonts-helper.herokuapp.com/fonts\">google-webfonts-helper</a> låter dig välja ett eller flera typsnitt från Google Fonts, genererar lämplig CSS och förbereder en zip.fil med de valda typsnitten. För ett kommandoradsalternativ erbjuder bash-skriptet  <a href=\"https://github.com/neverpanic/google-font-download\">google-font-download</a> liknande funktionalitet."
 
@@ -181,7 +181,7 @@ msgstr "Osäkra attribut används dock."
 msgid "Insecure connection"
 msgstr "Osäker anslutning"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:200
+#: lib/webbkoll_web/controllers/site_controller.ex:201
 msgid "Invalid domain: %{domain}"
 msgstr "Ogiltig domän: %{domain}"
 
@@ -197,7 +197,7 @@ msgstr "Inga förstapartskakor utan medgivande."
 msgid "No third-party cookies without consent."
 msgstr "Inga tredjepartskakor utan medgivande."
 
-#: lib/webbkoll_web/controllers/site_controller.ex:133
+#: lib/webbkoll_web/controllers/site_controller.ex:134
 msgid "Results for %{url}"
 msgstr "Resultat för %{url}"
 
@@ -221,7 +221,7 @@ msgstr "Strict Transport Security används inte"
 msgid "The site is loading libraries from one or more CDN:s."
 msgstr "Sajten laddar en eller flera resurser från CDN:er."
 
-#: lib/webbkoll/helpers.ex:63
+#: lib/webbkoll/helpers.ex:64
 msgid "The site is using Google Analytics. While this is a powerful tool, we think you should respect your users' privacy and not tell Google about them &mdash; at least not without your users' consent."
 msgstr "Sajten använder Google Analytics. Det är förvisso ett kraftfullt verktyg, men vi tycker att du bör respektera dina användares integritet och inte berätta om dem för Google &mdash; åtminstone inte utan deras medgivande."
 
@@ -239,7 +239,7 @@ msgstr "Tredjepartsförfrågningar"
 msgid "Third-party services"
 msgstr "Tredjepartstjänster"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:250
+#: lib/webbkoll_web/controllers/site_controller.ex:251
 msgid "Trying same host too frequently. Try again in a minute."
 msgstr "Samma värd provas för ofta. Prova igen om en minut."
 
@@ -247,7 +247,7 @@ msgstr "Samma värd provas för ofta. Prova igen om en minut."
 msgid "YES,"
 msgstr "JA,"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:236
+#: lib/webbkoll_web/controllers/site_controller.ex:237
 msgid "You're requesting too frequently. Install locally?"
 msgstr "Du skickar lite för många förfrågningar. Vad sägs om att installera verktyget lokalt istället?"
 
@@ -470,7 +470,7 @@ msgstr "För att använda HTTPS på en sajt behöver ett <strong>certifikat</str
 msgid "The site is using the Disqus comment system."
 msgstr "Sajten använder kommentarsplattformen Disqus."
 
-#: lib/webbkoll/helpers.ex:72
+#: lib/webbkoll/helpers.ex:75
 msgid "The site loads fonts from Google Fonts. While these are hosted on resource-specific domains and no cookies are sent, Google <em>could</em> possibly cross-reference the data (IP and browser fingerprint) with other Google services to identify visitors. Do they? Their own <a href=\"https://developers.google.com/fonts/faq?hl=en#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users\">FAQ</a> is vague: <em>\"We do log records of the CSS and the font file requests, and access to this data is on a need-to-know basis and kept secure.\"</em> What \"need-to-know basis\" means is not explained."
 msgstr "Sajten laddar typsnitt från Google Fonts. Dessa hostas förvisså på resursspecifika domäner och inga kakor skickas, men Google <em>skulle</em> kunna korsreferera informationen (IP-adress och webbläsarens \"fingeravtryck\") med andra Google-tjänster för att identifiera användare. Gör Google det? Deras egen <a href=\"https://developers.google.com/fonts/faq?hl=en#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users\">FAQ</a> är vag: <em>\"We do log records of the CSS and the font file requests, and access to this data is on a need-to-know basis and kept secure.\"</em> Vad \"need-to-know basis\" innebär förklaras inte."
 
@@ -486,7 +486,7 @@ msgstr "Hur dataskyddsvänlig är din sajt?"
 msgid "Read more."
 msgstr "Läs mer."
 
-#: lib/webbkoll_web/controllers/site_controller.ex:24
+#: lib/webbkoll_web/controllers/site_controller.ex:25
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."
 msgstr "Webbkollen hjälper dig ta reda på vilka dataskyddande funktioner en sajt använder för att hjälpa dig utöva makt över ditt privatliv."
 
@@ -690,7 +690,7 @@ msgstr "Inga tredjepartsförfrågningar."
 msgid "The basic problem that HSTS solves is that even after a website turns on HTTPS, visitors may still end up trying to connect over plain HTTP. For example:"
 msgstr "Det grundläggande problemet som HSTS löser är att även efter att en webbplats aktiverat HTTPS så kan det hända att besökare försöker ansluta över vanlig HTTP. Till exempel:"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:49
+#: lib/webbkoll_web/controllers/site_controller.ex:51
 #: lib/webbkoll_web/templates/layout/app.html.slime:1
 msgid "Tech"
 msgstr "Teknik"
@@ -703,23 +703,23 @@ msgstr "Det här verktyget försöker simulera vad som händer när en person be
 msgid "We built the tool with <a href=\"http://www.phoenixframework.org/\">Phoenix Framework</a> and <a href=\"https://github.com/Tomtomgo/phearjs\">PhearJS</a> (which in turn uses <a href=\"http://phantomjs.org/\">PhantomJS</a>)."
 msgstr "Vi byggde verktyget med <a href=\"http://www.phoenixframework.org/\">Phoenix Framework</a> och <a href=\"https://github.com/Tomtomgo/phearjs\">PhearJS</a> (som i sin tur använder <a href=\"http://phantomjs.org/\">PhantomJS</a>)."
 
-#: lib/webbkoll_web/controllers/site_controller.ex:37
+#: lib/webbkoll_web/controllers/site_controller.ex:38
 msgid "About"
 msgstr "Om"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:50
+#: lib/webbkoll_web/controllers/site_controller.ex:53
 msgid "How our web privacy check tool works and how you can run your own instance."
 msgstr "Hur vårt testverktyg fungerar och hur du kan köra din egen instans."
 
-#: lib/webbkoll_web/controllers/site_controller.ex:134
+#: lib/webbkoll_web/controllers/site_controller.ex:135
 msgid "How this website is doing with regards to privacy."
 msgstr "Hur den här webbplatsen hjälper dig utöva makt över ditt privatliv (eller inte)."
 
-#: lib/webbkoll_web/controllers/site_controller.ex:126
+#: lib/webbkoll_web/controllers/site_controller.ex:127
 msgid "Processing failed"
 msgstr "Körningen misslyckades"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:162
+#: lib/webbkoll_web/controllers/site_controller.ex:163
 msgid "Sorry, bots aren't allowed."
 msgstr "Beklagar, men botar är inte tillåtna."
 
@@ -727,7 +727,7 @@ msgstr "Beklagar, men botar är inte tillåtna."
 msgid "Technology we use"
 msgstr "Teknik vi använder"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:38
+#: lib/webbkoll_web/controllers/site_controller.ex:40
 msgid "The what and why of data protection and the principles of the EU general data protection regulation."
 msgstr "Dataskyddets hur och varför, och principerna bakom EU:s dataskyddsförordning."
 
@@ -739,12 +739,12 @@ msgstr "Vi tillhandahåller inget API eftersom vi har begränsade resurser och P
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
 msgstr "Det här verktyget hjälper dig ta reda på vilka dataskyddande funktioner en sajt använder för att hjälpa dig utöva makt över ditt privatliv. "
 
-#: lib/webbkoll_web/controllers/site_controller.ex:257
+#: lib/webbkoll_web/controllers/site_controller.ex:258
 msgid "Error"
 msgstr "Fel"
 
-#: lib/webbkoll_web/controllers/site_controller.ex:94
-#: lib/webbkoll_web/controllers/site_controller.ex:97
+#: lib/webbkoll_web/controllers/site_controller.ex:95
+#: lib/webbkoll_web/controllers/site_controller.ex:98
 msgid "Status"
 msgstr "Status"
 
@@ -760,19 +760,19 @@ msgstr "Referrers läcks (antagligen)"
 msgid "Referrer directive is set to <code>%{value}</code> in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer\">Content-Security-Policy (CSP) header</a>."
 msgstr "Referrer-direktivet är satt till <code>%{value}</code> i <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer\">Content-Security-Policy-headern (CSP)</a>."
 
-#: lib/webbkoll/helpers.ex:105
+#: lib/webbkoll/helpers.ex:116
 msgid "<a href=\"http://stackoverflow.com/questions/18337630/what-is-x-content-type-options-nosniff\">X-Content-Type-Options</a> stops a browser from trying to MIME-sniff the content type and forces it to stick with the declared content-type. This helps to reduce the danger of drive-by downloads. The only valid value for this header is \"X-Content-Type-Options: nosniff\"."
 msgstr "<a href=\"http://stackoverflow.com/questions/18337630/what-is-x-content-type-options-nosniff\">X-Content-Type-Options</a> hindrar webbläsaren från att MIME-sniffa en fils innehållstyp och tvingar den att hålla sig till den deklarerade innehållstypen. Detta hjälper till att reducera faran med \"drive by\"-nedladdningar. Det enda giltiga värdet för den här headern är \"X-Content-Type-Options: nosniff\"."
 
-#: lib/webbkoll/helpers.ex:102
+#: lib/webbkoll/helpers.ex:112
 msgid "<a href=\"http://stackoverflow.com/questions/9090577/what-is-the-http-header-x-xss-protection\">X-XSS-Protection</a> sets the configuration for the cross-site scripting filters built into most browsers. The best configuration is \"X-XSS-Protection: 1; mode=block\"."
 msgstr "<a href=\"http://stackoverflow.com/questions/9090577/what-is-the-http-header-x-xss-protection\">X-XSS-Protection</a> sätter inställningarna för XSS-filtren som är inbyggda i de flesta webbläsare. Den bästa inställningen är \"X-XSS-Protection: 1; mode=block\"."
 
-#: lib/webbkoll/helpers.ex:99
+#: lib/webbkoll/helpers.ex:108
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options\">X-Frame-Options</a> tells the browser whether you want to allow your site to be framed or not. By preventing a browser from framing your site you can defend against attacks like clickjacking."
 msgstr "<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options\">X-Frame-Options</a> berättar för webbläsaren huruvida du vill att din sajt ska kunna laddas i en frame. Genom att förhindra en webbläsare från att frame:a din sajt skyddar du mot attacker såsom clickjacking."
 
-#: lib/webbkoll/helpers.ex:93
+#: lib/webbkoll/helpers.ex:100
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security\">HTTP Strict Transport Security</a> is an excellent feature to support on your site and strengthens your implementation of TLS by getting the User Agent to enforce the use of HTTPS."
 msgstr "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security\">HTTP Strict Transport Security</a> är en utmärkt funktion att stöda på din sajt. Den stärker din implementation av TLS genom att få webbläsaren att tvinga användandet av HTTPS."
 
@@ -848,11 +848,11 @@ msgstr "Notera dock att detta verktyg främst är menat att användas som en sta
 msgid "1. Note that <code>Public-Key-Pins</code> can brick your site if something goes wrong and should only be used with great caution, if at all. See <a href=\"https://community.letsencrypt.org/t/hpkp-best-practices-if-you-choose-to-implement/4625\">1</a>, <a href=\"https://scotthelme.co.uk/im-giving-up-on-hpkp/\">2</a>, <a href=\"https://www.smashingmagazine.com/be-afraid-of-public-key-pinning/\">3</a>."
 msgstr "1. Observera att <code>Public-Key-Pins</code> kan göra din sajt oåtkomlig om något går fel och bör, om alls, användast endast med största försiktighet. Se <a href=\"https://community.letsencrypt.org/t/hpkp-best-practices-if-you-choose-to-implement/4625\">1</a>, <a href=\"https://scotthelme.co.uk/im-giving-up-on-hpkp/\">2</a>, <a href=\"https://www.smashingmagazine.com/be-afraid-of-public-key-pinning/\">3</a>."
 
-#: lib/webbkoll/helpers.ex:96
+#: lib/webbkoll/helpers.ex:104
 msgid "<a href=\"https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning\">HTTP Public Key Pinning</a> protects your site from <a href=\"https://en.wikipedia.org/wiki/Man-in-the-middle_attack\">MiTM attacks</a> using rogue X.509 certificates. By whitelisting only the identities that the browser should trust, your users are protected in the event a certificate authority is compromised.<sup>1</sup>"
 msgstr "<a href=\"https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning\">HTTP Public Key Pinning</a> skyddar din sajt från <a href=\"https://en.wikipedia.org/wiki/Man-in-the-middle_attack\">man-in-the-middle-attacker</a> som använder bedrägliga/förfalskade X.509-certifikat. Genom att vitlista enbart de identiteter som webbläsaren bör lita på skyddar du dina användare i fall en certifikatutfärdare skulle komprometteras.<sup>1</sup>"
 
-#: lib/webbkoll/helpers.ex:108
+#: lib/webbkoll/helpers.ex:120
 msgid "<a href=\"https://scotthelme.co.uk/a-new-security-header-referrer-policy/\">Referrer-Policy</a> is a new header that allows a site to control how much information the browser includes with navigations away from a document (or when loading external resources) and should be set by all sites. (It can also be set using a meta element; see above.)"
 msgstr "<a href=\"https://scotthelme.co.uk/a-new-security-header-referrer-policy/\">Referrer-Policy</a> är en ny header som låter en sajt kontrollera hur mycket information webbläsaren inkluderar vid navigation bort från sajten (eller då externa resurser laddas). Det bör användas av alla sajter. (Det kan också sättas i ett meta-element; se ovan.)"
 
@@ -900,16 +900,24 @@ msgstr "Vänligen observera:"
 msgid "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free <em>domain-validated</em> (DV) certificates through an easy, automated process."
 msgstr "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> är en ej vinstdrivande certifikatutfärdare (sponsrad av Mozilla, EFF, Cisco, Facebook och andra) som tillhandahåller gratis <em>domänvaliderade</em> (\"domain-validated\", DV) certifikat genom en enkel, automatiserad process."
 
-#, fuzzy
-#: lib/webbkoll/helpers.ex:66
+#: lib/webbkoll/helpers.ex:68
 msgid "<a href=\"https://matomo.org/\">Matomo</a> (formerly Piwik) is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
-msgstr "Matomo (f.d. Piwik) är ett utmärkt alternativ. Det är fri mjukvara (PHP & MySQL) och du kör det på din egen server, vilket betyder att <em>du</em> har kontroll över din data. Piwik har olika integritetsinställningar och kan, till skillnad från Google Analytics, användas utan kakor. <em>(Medan analysverktyg kanske anses nödvändiga för vissa sajter så är ett annat alternativ att <em>inte spåra människor bara för att du kan</em>. Besökare har faktiskt inte någon skyldighet att hjälpa webbutvecklare att optimera saker.)</em>"
+msgstr "Matomo (f.d. Piwik) är ett utmärkt alternativ. Det är fri mjukvara (PHP & MySQL) och du kör det på din egen server, vilket betyder att <em>du</em> har kontroll över din data. Matomo har olika integritetsinställningar och kan, till skillnad från Google Analytics, användas utan kakor. <em>(Medan analysverktyg kanske anses nödvändiga för vissa sajter så är ett annat alternativ att <em>inte spåra människor bara för att du kan</em>. Besökare har faktiskt inte någon skyldighet att hjälpa webbutvecklare att optimera saker.)</em>"
 
-#: lib/webbkoll/helpers.ex:84
+#: lib/webbkoll/helpers.ex:90
 msgid "Install <a href=\"https://matomo.org/\">Matomo</a> (formerly Piwik) on your own server. It's easy to install and easy to upgrade."
 msgstr "Installera <a href=\"https://matomo.org/\">Matomo</a> (f.d. Piwik) på din egen server. Det är enkelt att installera, underhålla och uppdatera."
 
-#, fuzzy
-#: lib/webbkoll/helpers.ex:81
+#: lib/webbkoll/helpers.ex:86
 msgid "The site appears to use Matomo/Piwik, but not self-hosted. This means visitors are exposed to a third party."
 msgstr "Sajten verkar använda Matomo/Piwik, men inte självhostad. Det innebär att besökare exponeras till en tredjepart."
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/results.html.slime:1
+msgid "<em>If a referrer policy is delivered via both CSP/Referrer-Policy header and a meta element, the meta element's policy takes precedence. If multiple policy values are specified, the browser will use the last one, ignoring unknown values (fallback values should thus appear first).</em>"
+msgstr "<em>Om en referrer policy levereras genom både CSP-/Referrer Policy-header och ett meta-element så kommer meta-elementets policy ha företräde. Om flera policy-värden specificeras så kommer webbläsaren att använda det sista värdet och ignorera okända värden (fallback-värden bör alltså listas först).</em>"
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/results.html.slime:1
+msgid "Referrer Policy is set to <code>%{value}</code> in <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy\">Referrer-Policy header</a>."
+msgstr "Referrer Policy är satt till <code>%{value}</code> i <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy\">Referrer-Policy-headern</a>."

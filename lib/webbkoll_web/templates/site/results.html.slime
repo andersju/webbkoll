@@ -163,7 +163,7 @@
       .alpha
         = if @site.data["header_hsts"] do
             p
-              = gettext(~s|HSTS enabled with value <code>%{value}</code>.|, value: @site.data["header_hsts"]) |> raw
+              = gettext(~s|HSTS enabled with value <code>%{value}</code>.|, value: safe_to_string(html_escape(@site.data["header_hsts"]))) |> raw
         p
           = gettext(~s|HTTP Strict Transport Security (HSTS) is a simple and widely supported standard to protect visitors by ensuring that their browsers always connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from <code>http://</code> to <code>https://</code> URLs.|) |> raw
 
@@ -219,17 +219,18 @@
     h3#referrers
       = get_referrer_string(@site.data["referrer_policy"]["status"])
     .alpha
-      = if @site.data["meta_referrer"] || @site.data["header_csp_referrer"] do
+      = if @site.data["meta_referrer"] || @site.data["header_csp_referrer"] || @site.data["header_referrer"] do
         = if @site.data["meta_referrer"] do
           p
-            = gettext("Meta referrer is set to <code>%{value}</code>.", value: @site.data["meta_referrer"]) |> raw
+            = gettext("Meta referrer is set to <code>%{value}</code>.", value: safe_to_string(html_escape(@site.data["meta_referrer"]))) |> raw
         = if @site.data["header_csp_referrer"] do
           p
-            = gettext(~s|Referrer directive is set to <code>%{value}</code> in <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer">Content-Security-Policy (CSP) header</a>.|, value: @site.data["header_csp_referrer"]) |> raw
-        = if @site.data["meta_referrer"] && @site.data["header_csp_referrer"] do
+            = gettext(~s|Referrer directive is set to <code>%{value}</code> in <a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer">Content-Security-Policy (CSP) header</a>.|, value: safe_to_string(html_escape(@site.data["header_csp_referrer"]))) |> raw
+        = if @site.data["header_referrer"] do
           p
-            = gettext("<em>If a referrer policy is delivered via both CSP and a meta element, the meta element's policy takes precedence.</em>") |> raw
-
+            = gettext(~s|Referrer Policy is set to <code>%{value}</code> in <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Referrer-Policy header</a>.|, value: safe_to_string(html_escape(@site.data["header_referrer"]))) |> raw
+          p
+            = gettext("<em>If a referrer policy is delivered via both CSP/Referrer-Policy header and a meta element, the meta element's policy takes precedence. If multiple policy values are specified, the browser will use the last one, ignoring unknown values (fallback values should thus appear first).</em>") |> raw
       p
         = gettext(~s|When you click a link, your browser will typically send the HTTP <em>referer</em> [sic] header to the webserver where the destination webpage is at. The header contains the full URL of the page you came from. This lets sites see where traffic comes from. The header is also sent when external resources (such as images, fonts, JS and CSS) are loaded.|) |> raw
       
@@ -346,9 +347,9 @@
       h3#csp
         = gettext("Content-Security-Policy enabled")
       = if @site.data["header_csp"] do
-        = gettext("Content-Security-Policy HTTP header is set to <code>%{value}</code>.", value: @site.data["header_csp"]) |> raw
+        = gettext("Content-Security-Policy HTTP header is set to <code>%{value}</code>.", value: safe_to_string(html_escape(@site.data["header_csp"]))) |> raw
       = if @site.data["meta_csp"] do
-        = gettext("Content-Security-Policy meta element is set to <code>%{value}</code>.", value: @site.data["meta_csp"]) |> raw
+        = gettext("Content-Security-Policy meta element is set to <code>%{value}</code>.", value: safe_to_string(html_escape(@site.data["meta_csp"]))) |> raw
       = if @site.data["header_csp"] && @site.data["meta_csp"] do
         p
           = gettext("<em>The Content-Security-Policy is delivered via both HTTP header and meta element. The HTTP header's policy takes precedence.</em>") |> raw
