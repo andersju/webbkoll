@@ -5,19 +5,19 @@
 # Disallow: /
 
 User-agent: *
-Disallow: /en/check/
+Disallow: /en/check
 
 User-agent: *
-Disallow: /en/status/
+Disallow: /en/status
 
 User-agent: *
-Disallow: /en/result/
+Disallow: /en/results
 
 User-agent: *
-Disallow: /sv/check/
+Disallow: /sv/check
 
 User-agent: *
-Disallow: /sv/status/
+Disallow: /sv/status
 
 User-agent: *
-Disallow: /sv/result/
+Disallow: /sv/results
