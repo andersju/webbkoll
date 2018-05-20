@@ -130,8 +130,7 @@ defmodule Webbkoll.SiteControllerTest do
 
     conn = get(build_conn(), "/en/results?url=example.com")
     assert html_response(conn, 200) =~ "Content-Security-Policy enabled"
-    assert html_response(conn, 200) =~ "Content-Security-Policy HTTP header is set"
-    assert html_response(conn, 200) =~ "default-src 'self'"
+    assert html_response(conn, 200) =~ "Content-Security-Policy HTTP header is set to <code>default-src &#39;self&#39;"
   end
 
   test "site with Content-Security-Policy set in meta element" do
@@ -143,8 +142,7 @@ defmodule Webbkoll.SiteControllerTest do
 
     conn = get(build_conn(), "/en/results?url=example.com")
     assert html_response(conn, 200) =~ "Content-Security-Policy enabled"
-    assert html_response(conn, 200) =~ "Content-Security-Policy meta element is set"
-    assert html_response(conn, 200) =~ "default-src 'none'"
+    assert html_response(conn, 200) =~ "Content-Security-Policy meta element is set to <code>default-src &#39;none&#39;</code>"
   end
 
   test "site with Content-Security-Policy set in both header and meta element (header should take precedence)" do
@@ -157,10 +155,8 @@ defmodule Webbkoll.SiteControllerTest do
 
     conn = get(build_conn(), "/en/results?url=example.com")
     assert html_response(conn, 200) =~ "Content-Security-Policy enabled"
-    assert html_response(conn, 200) =~ "Content-Security-Policy meta element is set"
-    assert html_response(conn, 200) =~ "Content-Security-Policy HTTP header is set"
-    assert html_response(conn, 200) =~ "default-src 'self'"
-    assert html_response(conn, 200) =~ "default-src 'none'"
+    assert html_response(conn, 200) =~ "Content-Security-Policy HTTP header is set to <code>default-src &#39;self&#39;</code>"
+    assert html_response(conn, 200) =~ "Content-Security-Policy meta element is set to <code>default-src &#39;none&#39;</code>"
     assert html_response(conn, 200) =~ "The HTTP header's policy takes precedence"
   end
 

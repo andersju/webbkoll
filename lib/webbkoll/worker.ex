@@ -243,7 +243,7 @@ defmodule Webbkoll.Worker do
     |> String.downcase()
     |> Floki.find("meta[#{attribute}='#{name}']")
     |> Floki.attribute("content")
-    |> List.to_string()
+    |> List.last()
     |> get_meta()
   end
 
