@@ -100,10 +100,6 @@ defmodule Webbkoll.Helpers do
         gettext(
           ~s{<a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a> is an excellent feature to support on your site and strengthens your implementation of TLS by getting the User Agent to enforce the use of HTTPS.}
         ),
-      "Public-Key-Pins" =>
-        gettext(
-          ~s{<a href="https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning">HTTP Public Key Pinning</a> protects your site from <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack">MiTM attacks</a> using rogue X.509 certificates. By whitelisting only the identities that the browser should trust, your users are protected in the event a certificate authority is compromised.<sup>1</sup>}
-        ),
       "X-Frame-Options" =>
         gettext(
           ~s{<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">X-Frame-Options</a> tells the browser whether you want to allow your site to be framed or not. By preventing a browser from framing your site you can defend against attacks like clickjacking.}
