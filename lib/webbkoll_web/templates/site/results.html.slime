@@ -6,7 +6,7 @@
         span> class="light"
           = gettext "Results for"
         span.semibold
-          = if String.contains?(@site.data["host"], ".xn--") do
+          = if String.contains?(@site.data["host"], "xn--") do
             = idna_from_punycode(@site.data["host"])
           - else
             = @site.data["host"]
