@@ -171,8 +171,8 @@ defmodule WebbkollWeb.SiteController do
     path = url.path || "/"
 
     case @validate_urls do
-      true -> "http://#{String.downcase(url.host)}#{path}"
-      false -> "http://#{String.downcase(url.authority)}#{path}"
+      true -> "http://#{url.host |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase()}#{path}"
+      false -> "http://#{url.authority |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase()}#{path}"
     end
   end
 

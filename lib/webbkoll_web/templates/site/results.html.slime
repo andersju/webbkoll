@@ -6,7 +6,10 @@
         span> class="light"
           = gettext "Results for"
         span.semibold
-          = @site.data["host"]
+          = if String.contains?(@site.data["host"], ".xn--") do
+            = idna_from_punycode(@site.data["host"])
+          - else
+            = @site.data["host"]
     .beta
       a.button href="#{site_path(@conn, :check, @conn.assigns.locale, url: @site.input_url, refresh: "on")}"
         i.icon-refresh

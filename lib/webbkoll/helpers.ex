@@ -131,4 +131,11 @@ defmodule Webbkoll.Helpers do
       false -> string
     end
   end
+
+  def idna_from_punycode(host) do
+    host
+    |> String.to_charlist()
+    |> :idna.from_ascii()
+    |> List.to_string()
+  end
 end
