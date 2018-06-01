@@ -28,6 +28,7 @@ defmodule WebbkollWeb.Router do
 
     get("/about", SiteController, :about)
     get("/tech", SiteController, :tech)
+    get("/donate", SiteController, :donate)
     get("/check", SiteController, :check)
     get("/status", SiteController, :status)
     get("/results", SiteController, :results)

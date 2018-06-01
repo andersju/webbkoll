@@ -1,0 +1,36 @@
+section.text
+  h2 = gettext "Donate"
+
+  p = gettext(~s|Webbkoll is a project by <a href="https://dataskydd.net/">Dataskydd.net Sverige</a>, a Swedish non-governmental organization (organization number 802495-4797) working on making data protection easy in law and in practice. We are not affiliated with any political party.|) |> raw
+
+  p = gettext "We operate on a very small budget, and servers are usually our main expense; most work is done in our free time. Every euro (or krona) counts!"
+
+  p = gettext "If you would like to make a contribution to the general funds of Dataskydd.net (helping both Webbkoll and our other activities), you can transfer money to the following bank account:"
+
+  ul
+    li Bank: SEB (Skandinaviska Enskilda Banken)
+    li BIC/SWIFT: ESSESESS 
+    li IBAN: SE2150000000052031057715
+
+  p = gettext "Please write \"Donation\" in the message field. Any amount is much appreciated! (From a Swedish bank account, the number would be 52031057715.)"
+
+  p = gettext "Our address (if necessary):"
+
+  p
+    | Dataskydd.net Sverige
+    br =
+    | Alsnogatan 18
+    br =
+    | 11641 Stockholm
+    br =
+    | Sweden
+
+  p = gettext "Our bank's address (if necessary):"
+  p
+    | SEB
+    br =
+    | 106 40 Stockholm
+    br =
+    | Sweden
+
+  p = gettext "At the moment we cannot accept Bitcoin or any other cryptocurrency."

@@ -54,6 +54,17 @@ defmodule WebbkollWeb.SiteController do
     )
   end
 
+  def donate(conn, _params) do
+    render(
+      conn,
+      "donate.html",
+      locale: conn.assigns.locale,
+      page_title: gettext("Donate"),
+      page_description:
+        gettext("How you can support our work.")
+    )
+  end
+
   def check(%Plug.Conn{assigns: %{input_url: proper_url}} = conn, _params) do
     site = %Site{
       input_url: proper_url,

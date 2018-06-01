@@ -28,6 +28,8 @@ html lang="en"
             li.nav-link
               = link gettext("Tech"), to: site_path(@conn, :tech, @conn.assigns.locale)
             li.nav-link
+              = link gettext("Donate"), to: site_path(@conn, :donate, @conn.assigns.locale)
+            li.nav-link
               i> class="icon-flag"
               = if @conn.assigns.locale == "en" do
                 = link "Svenska", to: site_path(@conn, @conn.private[:phoenix_action], "sv", @conn.query_params)
