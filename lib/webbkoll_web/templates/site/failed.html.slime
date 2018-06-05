@@ -10,3 +10,6 @@ section
 
   p
     = link gettext("Try again?"), to: site_path(@conn, :check, @conn.assigns.locale, url: @site.input_url, refresh: "on")
+
+  p
+    = gettext(~s|<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this is probably our fault. Some sites cannot be checked at the moment due to technical problems on our side. We are working on a solution. <a href="https://privacyscore.org/">PrivacyScore</a> is a good alternative service.|) |> raw

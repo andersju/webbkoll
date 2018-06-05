@@ -167,7 +167,7 @@ msgstr ""
 msgid "Insecure connection"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:201
+#: lib/webbkoll_web/controllers/site_controller.ex:212
 msgid "Invalid domain: %{domain}"
 msgstr ""
 
@@ -183,7 +183,7 @@ msgstr ""
 msgid "No third-party cookies without consent."
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:134
+#: lib/webbkoll_web/controllers/site_controller.ex:145
 msgid "Results for %{url}"
 msgstr ""
 
@@ -225,7 +225,7 @@ msgstr ""
 msgid "Third-party services"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:251
+#: lib/webbkoll_web/controllers/site_controller.ex:262
 msgid "Trying same host too frequently. Try again in a minute."
 msgstr ""
 
@@ -233,7 +233,7 @@ msgstr ""
 msgid "YES,"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:237
+#: lib/webbkoll_web/controllers/site_controller.ex:248
 msgid "You're requesting too frequently. Install locally?"
 msgstr ""
 
@@ -697,15 +697,15 @@ msgstr ""
 msgid "How our web privacy check tool works and how you can run your own instance."
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:135
+#: lib/webbkoll_web/controllers/site_controller.ex:146
 msgid "How this website is doing with regards to privacy."
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:127
+#: lib/webbkoll_web/controllers/site_controller.ex:138
 msgid "Processing failed"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:163
+#: lib/webbkoll_web/controllers/site_controller.ex:174
 msgid "Sorry, bots aren't allowed."
 msgstr ""
 
@@ -725,12 +725,12 @@ msgstr ""
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:258
+#: lib/webbkoll_web/controllers/site_controller.ex:269
 msgid "Error"
 msgstr ""
 
-#: lib/webbkoll_web/controllers/site_controller.ex:95
-#: lib/webbkoll_web/controllers/site_controller.ex:98
+#: lib/webbkoll_web/controllers/site_controller.ex:106
+#: lib/webbkoll_web/controllers/site_controller.ex:109
 msgid "Status"
 msgstr ""
 
@@ -746,15 +746,15 @@ msgstr ""
 msgid "Referrer directive is set to <code>%{value}</code> in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer\">Content-Security-Policy (CSP) header</a>."
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:116
+#: lib/webbkoll/helpers.ex:112
 msgid "<a href=\"http://stackoverflow.com/questions/18337630/what-is-x-content-type-options-nosniff\">X-Content-Type-Options</a> stops a browser from trying to MIME-sniff the content type and forces it to stick with the declared content-type. This helps to reduce the danger of drive-by downloads. The only valid value for this header is \"X-Content-Type-Options: nosniff\"."
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:112
+#: lib/webbkoll/helpers.ex:108
 msgid "<a href=\"http://stackoverflow.com/questions/9090577/what-is-the-http-header-x-xss-protection\">X-XSS-Protection</a> sets the configuration for the cross-site scripting filters built into most browsers. The best configuration is \"X-XSS-Protection: 1; mode=block\"."
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:108
+#: lib/webbkoll/helpers.ex:104
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options\">X-Frame-Options</a> tells the browser whether you want to allow your site to be framed or not. By preventing a browser from framing your site you can defend against attacks like clickjacking."
 msgstr ""
 
@@ -838,7 +838,7 @@ msgstr ""
 msgid "<a href=\"https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning\">HTTP Public Key Pinning</a> protects your site from <a href=\"https://en.wikipedia.org/wiki/Man-in-the-middle_attack\">MiTM attacks</a> using rogue X.509 certificates. By whitelisting only the identities that the browser should trust, your users are protected in the event a certificate authority is compromised.<sup>1</sup>"
 msgstr ""
 
-#: lib/webbkoll/helpers.ex:120
+#: lib/webbkoll/helpers.ex:116
 msgid "<a href=\"https://scotthelme.co.uk/a-new-security-header-referrer-policy/\">Referrer-Policy</a> is a new header that allows a site to control how much information the browser includes with navigations away from a document (or when loading external resources) and should be set by all sites. (It can also be set using a meta element; see above.)"
 msgstr ""
 
@@ -898,12 +898,53 @@ msgstr ""
 msgid "The site appears to use Matomo/Piwik, but not self-hosted. This means visitors are exposed to a third party."
 msgstr ""
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "<em>If a referrer policy is delivered via both CSP/Referrer-Policy header and a meta element, the meta element's policy takes precedence. If multiple policy values are specified, the browser will use the last one, ignoring unknown values (fallback values should thus appear first).</em>"
 msgstr ""
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/results.html.slime:1
 msgid "Referrer Policy is set to <code>%{value}</code> in <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy\">Referrer-Policy header</a>."
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/donate.html.slime:1
+msgid "At the moment we cannot accept Bitcoin or any other cryptocurrency."
+msgstr ""
+
+#: lib/webbkoll_web/controllers/site_controller.ex:62
+#: lib/webbkoll_web/templates/layout/app.html.slime:1
+#: lib/webbkoll_web/templates/site/donate.html.slime:1
+msgid "Donate"
+msgstr ""
+
+#: lib/webbkoll_web/controllers/site_controller.ex:64
+msgid "How you can support our work."
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/donate.html.slime:1
+msgid "If you would like to make a contribution to the general funds of Dataskydd.net (helping both Webbkoll and our other activities), you can transfer money to the following bank account:"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/donate.html.slime:1
+msgid "Our address (if necessary):"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/donate.html.slime:1
+msgid "Our bank's address (if necessary):"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/donate.html.slime:1
+msgid "Please write \"Donation\" in the message field. Any amount is much appreciated! (From a Swedish bank account, the number would be 52031057715.)"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/donate.html.slime:1
+msgid "We operate on a very small budget, and servers are usually our main expense; most work is done in our free time. Every euro (or krona) counts!"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/donate.html.slime:1
+msgid "Webbkoll is a project by <a href=\"https://dataskydd.net/\">Dataskydd.net Sverige</a>, a Swedish non-governmental organization (organization number 802495-4797) working on making data protection easy in law and in practice. We are not affiliated with any political party."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/failed.html.slime:1
+msgid "<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this is probably our fault. Some sites cannot be checked at the moment due to technical problems on our side. We are working on a solution. <a href=\"https://privacyscore.org/\">PrivacyScore</a> is a good alternative service."
 msgstr ""
