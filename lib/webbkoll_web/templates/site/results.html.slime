@@ -121,7 +121,7 @@
           = gettext "Such things are out of scope for this tool, but Qualys SSL Labs provides an excellent free service that lets you check how a server is doing:"
         
         p
-          = link gettext("Analyze %{host} on SSL Labs", host: @site.data["host"]), to: "https://www.ssllabs.com/ssltest/analyze.html?d=#{@site.data["host"]}"
+          = link gettext("Analyze %{host} on SSL Labs", host: @site.data["host"]), to: "https://www.ssllabs.com/ssltest/analyze.html?d=#{@site.data["host"]}&hideResults=on"
       - else
         p
           = gettext(~s|To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning).|) |> raw
