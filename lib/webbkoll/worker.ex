@@ -40,7 +40,7 @@ defmodule Webbkoll.Worker do
     |> URI.to_string()
   end
 
-  defp update_site(id, params) do
+  def update_site(id, params) do
     ConCache.update(:site_cache, id, fn old ->
       {
         :ok,

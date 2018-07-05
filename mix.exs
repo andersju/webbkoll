@@ -37,7 +37,7 @@ defmodule Webbkoll.Mixfile do
         :con_cache,
         :jumbo
       ],
-      included_applications: [:ex2ms, :floki, :phoenix_slime, :public_suffix, :uuid, :exactor]
+      included_applications: [:ex2ms, :floki, :phoenix_slime, :public_suffix, :uuid]
     ]
   end
 
@@ -67,7 +67,7 @@ defmodule Webbkoll.Mixfile do
       {:hackney, "~> 1.8"},
       {:geolix, "~> 0.13"},
       {:idna, "~> 5.0", override: true},
-      {:con_cache, "~> 0.12.1"},
+      {:con_cache, "~> 0.13"},
       {:uuid, "~> 1.1"},
       {:jumbo, "~> 1.0"}
     ]

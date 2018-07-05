@@ -39,7 +39,8 @@ config :phoenix, :template_engines,
 
 config :webbkoll, Webbkoll.Scheduler,
   jobs: [
-    {"0 6 8 * *", {Geolix, :reload_databases, []}}
+    {"0 6 8 * *", {Geolix, :reload_databases, []}},
+    {"* * * * *", {Webbkoll.CronJobs, :remove_stuck_records, []}},
   ]
 
 config :geolix,

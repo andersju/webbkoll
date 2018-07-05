@@ -3,6 +3,7 @@ defmodule WebbkollWeb.SiteView do
 
   def format_timestamp(time) do
     time
+    |> Kernel.round()
     |> DateTime.from_unix!()
     |> DateTime.to_string()
   end
