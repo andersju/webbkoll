@@ -47,7 +47,7 @@ Get PhearJS running - see https://github.com/Tomtomgo/phearjs/blob/master/README
 
 ## Frontend (this app!)
 
-Install Erlang (>= 20) and Elixir (>= 1.4) -- see http://elixir-lang.org/install.html.
+Install Erlang (>= 20) and Elixir (>= 1.5) -- see http://elixir-lang.org/install.html.
 
 Clone this repository, cd into it.
 
@@ -108,20 +108,48 @@ MIX_ENV=prod PORT=4001 iex -S mix phx.server
 
 See also the official [Phoenix deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
-### Keeping PhearJS running
-
-To make sure PhearJS keeps running, you might want to use supervisord and a `/etc/supervisor/conf.d/phearjs.conf` like this:
+To run it as a systemd service (automatic start/restart on boot/crash/..), put something like this in e.g. `/etc/systemd/system/webbkoll.service` (make sure to adjust User, Group, WorkingDirectory, etc.):
 
 ```
-[program:phearjs]
-command=/usr/bin/nodejs /home/foobar/phearjs/phear.js
-autostart=true
-autorestart=true
-stderr_logfile=/home/foobar/phearjs/err.log
-stdout_logfile=/home/foobar/phearjs/out.log
-user=foobar
-environment=HOME="/home/foobar",USER="foobar"
-directory=/home/foobar/phearjs
+[Unit]
+Description=Webbkoll
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/mix phx.server
+WorkingDirectory=/home/foobar/webbkoll
+Environment=MIX_ENV=prod
+Environment=PORT=4001
+User=foobar
+Group=foobar
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Run `systemctl daemon-reload` for good measure, and then try `systemctl start webbkoll`. (And `systemctl enable webbkoll` to have it started automatically.)
+
+### Keeping PhearJS running
+
+To make sure PhearJS keeps running, you can have systemd unit file like this (remove the `StandardOutput` and `StandardError` lines if you don't have systemd 236 or newer):
+
+```
+[Unit]
+Description=PhearJS
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node phear.js
+WorkingDirectory=/home/foobar/phearjs
+User=foobar
+Group=foobar
+Restart=always
+StandardOutput=file:/home/foobar/phearjs/out.log
+StandardError=file:/home/foobar/phearjs/err.log
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 ## TODO/ideas
