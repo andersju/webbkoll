@@ -81,7 +81,7 @@ app.get('/', async (request, response) => {
     });
 
     await page._client.send('Network.enable');
-    await page.goto(url, {
+    const pageResponse = await page.goto(url, {
       waitUntil: ['load', 'domcontentloaded', 'networkidle0'],
       timeout: timeout,
     });
@@ -91,22 +91,13 @@ app.get('/', async (request, response) => {
     let cookies = await page._client.send('Network.getAllCookies');
     let title = await page.title();
     let finalUrl = await page.url();
-    let hashIndex = finalUrl.indexOf('#');
-    if (hashIndex > 0) {
-      finalUrl = finalUrl.substr(0, finalUrl.indexOf('#'));
-    }
 
-    // We're only interested in the response headers for the final URL
-    responses.forEach(function(response) {
-      if (response.url == finalUrl) {
-        responseHeaders = response.headers;
-        responseHeaders['status'] = response.status;
-      }
-    });
+    responseHeaders = pageResponse.headers();
+    responseHeaders.status = pageResponse.status();
 
     let webbkollStatus = 200;
     let results = {};
-    if (responseHeaders['status'] >= 200 && responseHeaders['status'] <= 299) {
+    if (responseHeaders.status >= 200 && responseHeaders.status <= 299) {
       logger.info('Successfully checked ' + url);
       results = {
         'success': true,
