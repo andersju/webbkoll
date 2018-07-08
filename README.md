@@ -47,7 +47,7 @@ We've switched from PhearJS/PhantomJS to a tiny script that makes use of [Puppet
 
 Make sure you have all necessary system dependencies; see [Puppeteer's troubleshooting page](https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md) for e.g. a list of necessary Ubuntu/Debian packages.
 
-The backend listens to port 8100 by default. Note that this script should be considered highly experimental. It has NO throttling whatsoever -- this needs to be handled elsewhere (for Webbkoll the frontend handles this).
+The backend listens to port 8100 by default. Output is logged to `webbkoll-backend.log`. Note that this script should be considered highly experimental, and it has NO throttling whatsoever -- this needs to be handled elsewhere (for Webbkoll the frontend handles this).
 
 Inspired by [Puppeteer as a Service](https://github.com/GoogleChromeLabs/pptraas.com).
 
@@ -138,7 +138,7 @@ Run `systemctl daemon-reload` for good measure, and then try `systemctl start we
 
 ### Keeping the backend running
 
-To make sure the backend keeps running, you can have systemd unit file like this (remove the `StandardOutput` and `StandardError` lines if you don't have systemd 236 or newer):
+To make sure the backend keeps running, you can have systemd unit file like this:
 
 ```
 [Unit]
@@ -151,8 +151,6 @@ WorkingDirectory=/home/foobar/webbkoll/misc/backend
 User=foobar
 Group=foobar
 Restart=always
-StandardOutput=file:/home/foobar/backend-out.log
-StandardError=file:/home/foobar/backend-err.log
 
 [Install]
 WantedBy=multi-user.target
