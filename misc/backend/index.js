@@ -103,6 +103,7 @@ app.get('/', async (request, response) => {
     let webbkollStatus = 200;
     let results = {};
     if (responseHeaders['status'] >= 200 && responseHeaders['status'] <= 299) {
+      logger.info('Successfully checked ' + url);
       results = {
         'success': true,
         'input_url': url,
@@ -113,6 +114,7 @@ app.get('/', async (request, response) => {
         'content': content,
       };
     } else {
+      logger.warn('Failed checking ' + url + ': ' + responseHeaders.status);
       results = {
         'success': false,
         'reason': 'Failed to fetch this URL: ' + responseHeaders.status + ' (' + title + ')',
@@ -123,6 +125,7 @@ app.get('/', async (request, response) => {
     response.status(webbkollStatus).type('application/json').send(JSON.stringify(results));
     await context.close();
   } catch (err) {
+    logger.warn('Failed checking ' + url + ': ' + err.toString());
     response.status(500).type('application/json').send(JSON.stringify({
       'success': false,
       'reason': 'Failed to fetch this URL: ' + err.toString(),
