@@ -21,6 +21,7 @@ erl_crash.dump
 /config/prod.secret.exs
 
 *.swp
+*.log
 
 /rel/webbkoll
 /priv/*.mmdb

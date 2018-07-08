@@ -3,7 +3,16 @@
 const express = require('express');
 const puppeteer = require('puppeteer');
 const {URL} = require('url');
-require('console-stamp')(console, 'HH:MM:ss.l');
+const log4js = require('log4js');
+log4js.configure({
+  appenders: {
+    out: { type: 'stdout' },
+    app: { type: 'file', filename: 'webbkoll-backend.log' }
+  },
+  categories: { default: { appenders: ['out', 'app'], level: 'info' } }
+});
+
+const logger = log4js.getLogger();
 
 const PORT = process.env.PORT || 8100;
 const app = express();
@@ -20,7 +29,7 @@ app.get('/', async (request, response) => {
     return response.status(500).send('Invalid URL.');
   }
 
-  console.log('Trying ' + url);
+  logger.info('Trying ' + url);
 
   const timeout = request.query.timeout || 15000;
   const browser = await puppeteer.launch({headless: true});
@@ -89,7 +98,7 @@ app.get('/', async (request, response) => {
     await context.close();
     response.type('application/json').send(JSON.stringify(results));
   } catch (err) {
-    console.log(err.toString());
+    logger.error(err.toString());
     let results = {
       'success': false,
       'reason': err.toString(),
@@ -97,7 +106,7 @@ app.get('/', async (request, response) => {
     response.status(500).send(JSON.stringify(results));
   }
   await browser.close();
-  console.log('Finished with ' + url);
+  logger.info('Finished with ' + url);
 });
 
 app.get('/status', async (request, response) => {
@@ -105,5 +114,5 @@ app.get('/status', async (request, response) => {
 });
 
 app.listen(PORT, function() {
-  console.log(`Webkoll backend listening on port ${PORT}`);
+  logger.info(`Webkoll backend listening on port ${PORT}`);
 });
