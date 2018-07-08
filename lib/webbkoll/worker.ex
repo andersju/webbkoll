@@ -4,19 +4,23 @@ defmodule Webbkoll.Worker do
   @max_attempts Application.get_env(:webbkoll, :max_attempts)
 
   def perform(id, url, refresh, backend_url) do
-    update_site(id, %{status: "processing"})
+    %{status: status} = ConCache.get(:site_cache, id)
 
-    ConCache.update(:site_cache, id, fn old ->
-      {:ok, old |> Map.update(:try_count, 0, &(&1 + 1))}
-    end)
+    if status != "failed" do
+      update_site(id, %{status: "processing"})
 
-    url
-    |> check_if_https_only
-    |> fetch(refresh, backend_url)
-    |> handle_response(id)
-    |> decode_response(id)
-    |> process_json
-    |> save(id)
+      ConCache.update(:site_cache, id, fn old ->
+        {:ok, old |> Map.update(:try_count, 0, &(&1 + 1))}
+      end)
+
+      url
+      |> check_if_https_only
+      |> fetch(refresh, backend_url)
+      |> handle_response(id)
+      |> decode_response(id)
+      |> process_json
+      |> save(id)
+    end
   end
 
   # By default, the get_proper_url plug in SiteController makes sure all URLs are
@@ -92,7 +96,7 @@ defmodule Webbkoll.Worker do
     # but sometimes - e.g. when user has entered an invalid domain name - it's
     # better not to, and to instead give feedback right away.
     if site.try_count >= @max_attempts ||
-         String.contains?(reason, ["ERR_CONNECTION_REFUSED", "ERR_NAME_NOT_RESOLVED"]) do
+         String.contains?(reason, ["404", "ERR_CONNECTION_REFUSED", "ERR_NAME_NOT_RESOLVED"]) do
       update_site(id, %{status: "failed", status_message: reason})
     end
 

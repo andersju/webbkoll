@@ -6,10 +6,15 @@ const {URL} = require('url');
 const log4js = require('log4js');
 log4js.configure({
   appenders: {
-    out: { type: 'stdout' },
-    app: { type: 'file', filename: 'webbkoll-backend.log' }
+    out: {type: 'stdout'},
+    app: {type: 'file', filename: 'webbkoll-backend.log'},
   },
-  categories: { default: { appenders: ['out', 'app'], level: 'info' } }
+  categories: {
+    default: {
+      appenders: ['out', 'app'],
+      level: 'info',
+    },
+  },
 });
 
 const logger = log4js.getLogger();
@@ -21,12 +26,18 @@ app.get('/', async (request, response) => {
   const url = request.query.fetch_url;
 
   try {
-    const url_parsed = new URL(request.query.fetch_url);
-    if (!['http:', 'https:'].includes(url_parsed.protocol)) {
-      return response.status(500).send('Invalid URL.');
+    const parsedUrl = new URL(request.query.fetch_url);
+    if (!['http:', 'https:'].includes(parsedUrl.protocol)) {
+      return response.status(500).type('application/json').send(JSON.stringify({
+        'success': false,
+        'reason': 'Failed to fetch this URL: invalid URL',
+      }));
     }
   } catch (err) {
-    return response.status(500).send('Invalid URL.');
+    return response.status(500).type('application/json').send(JSON.stringify({
+      'success': false,
+      'reason': 'Failed to fetch this URL: invalid URL',
+    }));
   }
 
   logger.info('Trying ' + url);
@@ -47,10 +58,14 @@ app.get('/', async (request, response) => {
 
     let requests = [];
     let responses = [];
-    let response_headers = {};
+    let responseHeaders = {};
 
     page.on('response', (response) => {
-      responses.push({'url': response.url(), 'headers': response.headers()});
+      responses.push({
+        'url': response.url(),
+        'status': response.status(),
+        'headers': response.headers(),
+      });
     });
 
     page.on('request', (request) => {
@@ -66,44 +81,52 @@ app.get('/', async (request, response) => {
     });
 
     await page._client.send('Network.enable');
-    await page.goto(url, {waitUntil: ['load', 'domcontentloaded', 'networkidle0'], timeout: timeout});
+    await page.goto(url, {
+      waitUntil: ['load', 'domcontentloaded', 'networkidle0'],
+      timeout: timeout,
+    });
 
     let content = await page.content();
     // Necessary to get *ALL* cookies
     let cookies = await page._client.send('Network.getAllCookies');
-    let final_url = await page.url();
+    let finalUrl = await page.url();
+    let title = await page.title();
 
     // We're only interested in the response headers for the final URL
     responses.forEach(function(response) {
-      if (response.url == final_url) {
-        response_headers = response.headers;
+      if (response.url == finalUrl) {
+        responseHeaders = response.headers;
+        responseHeaders['status'] = response.status;
       }
     });
 
-    let success = false;
-    if (response_headers['status'] >= 200 && response_headers['status'] <= 299) {
-      success = true;
+    let webbkollStatus = 200;
+    let results = {};
+    if (responseHeaders['status'] >= 200 && responseHeaders['status'] <= 299) {
+      results = {
+        'success': true,
+        'input_url': url,
+        'final_url': finalUrl,
+        'requests': requests,
+        'response_headers': responseHeaders,
+        'cookies': cookies.cookies,
+        'content': content,
+      };
+    } else {
+      results = {
+        'success': false,
+        'reason': 'Failed to fetch this URL: ' + responseHeaders.status + ' (' + title + ')',
+      };
+      webbkollStatus = 500;
     }
 
-    let results = {
-      'success': success,
-      'input_url': url,
-      'final_url': final_url,
-      'requests': requests,
-      'response_headers': response_headers,
-      'cookies': cookies.cookies,
-      'content': content,
-    };
-
+    response.status(webbkollStatus).type('application/json').send(JSON.stringify(results));
     await context.close();
-    response.type('application/json').send(JSON.stringify(results));
   } catch (err) {
-    logger.error(err.toString());
-    let results = {
+    response.status(500).type('application/json').send(JSON.stringify({
       'success': false,
-      'reason': err.toString(),
-    };
-    response.status(500).send(JSON.stringify(results));
+      'reason': 'Failed to fetch this URL: ' + err.toString(),
+    }));
   }
   await browser.close();
   logger.info('Finished with ' + url);
