@@ -1,5 +1,5 @@
 defmodule Webbkoll.CronJobs do
-  def remove_stuck_records do
+  def find_stuck_records do
     IO.puts "Checking for stuck records"
     sites_processing = :ets.match_object(ConCache.ets(:site_cache), {:_, %{status: "processing"}})
 

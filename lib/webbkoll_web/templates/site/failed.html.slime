@@ -6,10 +6,10 @@ section
     = gettext "Processing %{url} failed at %{time}.", url: @site.input_url, time: format_site_time(@site.updated_at)
 
   p
-    = gettext "Error: %{error_message}", error_message: @site.status_message
+    = gettext "%{error_message}", error_message: @site.status_message
 
   p
     = link gettext("Try again?"), to: site_path(@conn, :check, @conn.assigns.locale, url: @site.input_url, refresh: "on")
 
   p
-    = gettext(~s|<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this is probably our fault. Some sites cannot be checked at the moment due to technical problems on our side. We are working on a solution. <a href="https://privacyscore.org/">PrivacyScore</a> is a good alternative service.|) |> raw
+    = gettext(~s|<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href="mailto:info@dataskydd.net">send us an email</a> (and tell us what URL you tried)! You can also try <a href="https://privacyscore.org/">PrivacyScore</a> as an alternative.|) |> raw

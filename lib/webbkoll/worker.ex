@@ -55,14 +55,11 @@ defmodule Webbkoll.Worker do
         "on" ->
           %{
             fetch_url: url,
-            parse_delay: 10000,
-            get_requests: "true",
-            get_cookies: "true",
-            force: "true"
+            timeout: 15000
           }
 
         _ ->
-          %{fetch_url: url, parse_delay: 10000, get_requests: "true", get_cookies: "true"}
+          %{fetch_url: url, timeout: 15000}
       end
 
     HTTPoison.get(backend_url, [], recv_timeout: 30000, params: params)
@@ -91,11 +88,11 @@ defmodule Webbkoll.Worker do
   defp handle_error(reason, id) do
     site = ConCache.get(:site_cache, id)
 
-    # Usually we should try again because PhantomJS sometimes randomly fails,
+    # Usually we should try again because Chrome/Chromium might not be totally stable,
     # but sometimes - e.g. when user has entered an invalid domain name - it's
     # better not to, and to instead give feedback right away.
     if site.try_count >= @max_attempts ||
-         String.ends_with?(reason, ["not found", "Connection refused"]) do
+         String.contains?(reason, ["ERR_CONNECTION_REFUSED", "ERR_NAME_NOT_RESOLVED"]) do
       update_site(id, %{status: "failed", status_message: reason})
     end
 

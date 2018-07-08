@@ -12,4 +12,4 @@ table.cookies.data data-sortable="true"
         td #{cookie["name"]}
         td #{truncate(cookie["value"], 20)}
         td
-          = if cookie["expires"] == nil, do: "session", else: format_timestamp(cookie["expiry"])
+          = if cookie["session"] == true, do: "session", else: format_timestamp(cookie["expires"])
