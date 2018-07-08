@@ -82,7 +82,7 @@ app.get('/', async (request, response) => {
 
     await page._client.send('Network.enable');
     const pageResponse = await page.goto(url, {
-      waitUntil: ['load', 'domcontentloaded', 'networkidle0'],
+      waitUntil: ['load', 'domcontentloaded', 'networkidle2'],
       timeout: timeout,
     });
 
