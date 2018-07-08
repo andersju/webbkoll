@@ -80,15 +80,15 @@ msgstr ""
 msgid "Insecure"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:20
+#: lib/webbkoll_web/views/site_view.ex:21
 msgid "Referrers leaked"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:18
+#: lib/webbkoll_web/views/site_view.ex:19
 msgid "Referrers not leaked"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:19
+#: lib/webbkoll_web/views/site_view.ex:20
 msgid "Referrers partially leaked"
 msgstr ""
 
@@ -741,7 +741,7 @@ msgstr ""
 msgid "<em>If a referrer policy is delivered via both CSP and a meta element, the meta element's policy takes precedence.</em>"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:21
+#: lib/webbkoll_web/views/site_view.ex:22
 msgid "Referrers are (probably) leaked"
 msgstr ""
 
@@ -947,7 +947,19 @@ msgstr ""
 msgid "Webbkoll is a project by <a href=\"https://dataskydd.net/\">Dataskydd.net Sverige</a>, a Swedish non-governmental organization (organization number 802495-4797) working on making data protection easy in law and in practice. We are not affiliated with any political party."
 msgstr ""
 
-#, elixir-format, fuzzy
 #: lib/webbkoll_web/templates/site/failed.html.slime:1
-msgid "<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this is probably our fault. Some sites cannot be checked at the moment due to technical problems on our side. We are working on a solution. <a href=\"https://privacyscore.org/\">PrivacyScore</a> is a good alternative service."
+msgid "%{error_message}"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/failed.html.slime:1
+msgid "<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href=\"mailto:info@dataskydd.net\">send us an email</a> (and tell us what URL you tried)! You can also try <a href=\"https://privacyscore.org/\">PrivacyScore</a> as an alternative."
+msgstr ""
+
+#: lib/webbkoll_web/templates/layout/app.html.slime:1
+msgid "Test results are stored in memory on our server for 24 hours. We don't show a list of tested URLs. We don't use URLs or test results. We don't log accesses and we don't use cookies."
+msgstr ""
+
+#, elixir-format, fuzzy
+#: lib/webbkoll_web/templates/site/tech.html.slime:1
+msgid "We built the tool with <a href=\"http://www.phoenixframework.org/\">Phoenix Framework</a> and <a href=\"https://github.com/GoogleChrome/puppeteer\">Puppeteer</a> (we previously used <a href=\"https://github.com/Tomtomgo/phearjs\">PhearJS</a>+<a href=\"http://phantomjs.org/\">PhantomJS</a> instead of Puppeteer)."
 msgstr ""

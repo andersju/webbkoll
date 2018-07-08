@@ -10,8 +10,8 @@ browser having no particular extensions installed, and with Do Not Track
 
 In short: this tool, which runs the user-facing web service (built with
 [Elixir](https://elixir-lang.org/) and [Phoenix](http://phoenixframework.org/)),
-asks a [PhearJS](https://github.com/Tomtomgo/phearjs) server to visit a page
-using [PhantomJS](https://github.com/ariya/phantomjs). PhearJS/PhantomJS
+asks a simple Node.js backend to visit a page with Chromium. The Node.js backend
+uses [Puppeteer](https://github.com/GoogleChrome/puppeteer) to control Chromium; it
 visits and renders the page, collects various data (requests made, cookies,
 response headers, etc.), and sends it back as JSON to this tool which
 then analyzes the data and presents the results on a webpage along with
@@ -21,10 +21,10 @@ Webbkoll is multilingual and currently supports English and Swedish.
 
 [Jumbo](https://github.com/mspanc/jumbo) is used for job processing, and
 some basic rate limiting is done with [ex_rated](https://github.com/grempe/ex_rated).
-Multiple PhearJS backends can be configured. [ConCache](https://github.com/sasa1977/con_cache)
+Multiple backends can be configured. [ConCache](https://github.com/sasa1977/con_cache)
 is used to store results in an in-memory [ETS](http://erlang.org/doc/man/ets.html) table
-for a limited time. Other than PhearJS, there are no external dependencies, and nothing is
-saved to disk.
+for a limited time. Other than the Node.js backend, there are no external dependencies,
+and nothing is saved to disk.
 
 **Please note** that this is still a work in progress. Expect bugs and
 messy code in places. Only a few basic tests are in place.
@@ -43,7 +43,13 @@ This is a project by [Dataskydd.net](https://dataskydd.net). We received initial
 
 ## Backend
 
-Get PhearJS running - see https://github.com/Tomtomgo/phearjs/blob/master/README.md.
+We've switched from PhearJS/PhantomJS to a tiny script that makes use of [Puppeteer](https://github.com/GoogleChrome/puppeteer). You'll find it in `misc/backend`. Node.js 8.x LTS required. Simply run `npm install`, which should install everything necessary, including a local copy of Chromium; and then `npm start` or (`nodejs index.js`) to start.
+
+Make sure you have all necessary system dependencies; see [Puppeteer's troubleshooting page](https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md) for e.g. a list of necessary Ubuntu/Debian packages.
+
+The backend listens to port 8100 by default. Note that this script should be considered highly experimental. It has NO throttling whatsoever -- this needs to be handled elsewhere (for Webbkoll the frontend handles this).
+
+Inspired by [Puppeteer as a Service](https://github.com/GoogleChromeLabs/pptraas.com).
 
 ## Frontend (this app!)
 
@@ -57,7 +63,7 @@ Install dependencies:
 mix deps.get
 ```
 
-Make sure PhearJS is running on the host/port specified in `config/dev.exs`
+Make sure the backend is running on the host/port specified in `config/dev.exs`
 
 Download the [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2/geolite2/) in MaxMind DB binary format, extract it, and make sure it's available as `priv/GeoLite2-Country.mmdb` (or as specified in `config/config.exs`). (All you need to keep it fresh is [geoipupdate](https://github.com/maxmind/geoipupdate); Webbkoll reloads the database at certain intervals, see `config/config.exs`.)
 
@@ -130,30 +136,29 @@ WantedBy=multi-user.target
 
 Run `systemctl daemon-reload` for good measure, and then try `systemctl start webbkoll`. (And `systemctl enable webbkoll` to have it started automatically.)
 
-### Keeping PhearJS running
+### Keeping the backend running
 
-To make sure PhearJS keeps running, you can have systemd unit file like this (remove the `StandardOutput` and `StandardError` lines if you don't have systemd 236 or newer):
+To make sure the backend keeps running, you can have systemd unit file like this (remove the `StandardOutput` and `StandardError` lines if you don't have systemd 236 or newer):
 
 ```
 [Unit]
-Description=PhearJS
+Description=Webbkoll-backend
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/node phear.js
-WorkingDirectory=/home/foobar/phearjs
+ExecStart=/usr/bin/npm start
+WorkingDirectory=/home/foobar/webbkoll/misc/backend
 User=foobar
 Group=foobar
 Restart=always
-StandardOutput=file:/home/foobar/phearjs/out.log
-StandardError=file:/home/foobar/phearjs/err.log
+StandardOutput=file:/home/foobar/backend-out.log
+StandardError=file:/home/foobar/backend-err.log
 
 [Install]
 WantedBy=multi-user.target
 ```
 
 ## TODO/ideas
-  * **Switch from PhantomJS to headless Chrome ([Puppeteer](https://github.com/GoogleChrome/puppeteer))**
   * Add more suggestions for privacy-friendly alternatives to popular services
   * Optionally visit a number of randomly selected internal pages and let the results be based on the collective data from all the pages
   * Availability over Tor (e.g. does the visitor have to solve a Cloudflare captcha?)
@@ -178,8 +183,8 @@ WantedBy=multi-user.target
 ](https://github.com/michaelwittig/node-i18n-iso-countries) (MIT license)
 
   Backend:
-  * [PhearJS](https://github.com/Tomtomgo/phearjs) (MIT license) by Tom Aizenberg and Marcel Gonzalez Corso
-  * [PhantomJS](http://phantomjs.org/) (BSD license)
+  * [Puppeteer](https://github.com/GoogleChrome/puppeteer) (Apache License 2.0) by the Chrome DevTools team
+  * [Express](https://github.com/expressjs) (MIT license)
 
 ## License
     The MIT License (MIT)

@@ -1,0 +1,20 @@
+{
+  "name": "webbkoll-backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "test": "npm run lint",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "console-stamp": "^0.2.6",
+    "express": "^4.16.3",
+    "puppeteer": "1.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.0.1",
+    "eslint-config-google": "^0.9.1"
+  },
+  "license": "MIT"
+}
