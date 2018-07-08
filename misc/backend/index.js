@@ -89,8 +89,12 @@ app.get('/', async (request, response) => {
     let content = await page.content();
     // Necessary to get *ALL* cookies
     let cookies = await page._client.send('Network.getAllCookies');
-    let finalUrl = await page.url();
     let title = await page.title();
+    let finalUrl = await page.url();
+    let hashIndex = finalUrl.indexOf('#');
+    if (hashIndex > 0) {
+      finalUrl = finalUrl.substr(0, finalUrl.indexOf('#'));
+    }
 
     // We're only interested in the response headers for the final URL
     responses.forEach(function(response) {
