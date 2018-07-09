@@ -81,8 +81,9 @@ app.get('/', async (request, response) => {
     });
 
     await page._client.send('Network.enable');
+    // On some broken pages the load event is never fired, so we don't wait for that
     const pageResponse = await page.goto(url, {
-      waitUntil: ['load', 'domcontentloaded', 'networkidle2'],
+      waitUntil: ['domcontentloaded', 'networkidle2'],
       timeout: timeout,
     });
 
