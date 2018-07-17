@@ -8,6 +8,10 @@ section
   p
     = gettext "%{error_message}", error_message: @site.status_message
 
+  = if String.contains?(@site.status_message, "ERR_CERT_AUTHORITY_INVALID") do
+    p
+      = gettext(~s|If you get the error ERR_CERT_AUTHORITY_INVALID, a common issue is that the checked server has an incomplete certificate chain. <a href="https://www.ssllabs.com/ssltest/analyze.html?d=%{url}&hideResults=on">Analyze the host on SSL Labs</a> for more information.|, url: @site.input_url) |> raw
+
   p
     = link gettext("Try again?"), to: site_path(@conn, :check, @conn.assigns.locale, url: @site.input_url, refresh: "on")
 
