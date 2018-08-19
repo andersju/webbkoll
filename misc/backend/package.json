@@ -9,11 +9,11 @@
   },
   "dependencies": {
     "express": "^4.16.3",
-    "log4js": "^3.0.0",
-    "puppeteer": "1.6.0"
+    "log4js": "^3.0.5",
+    "puppeteer": "1.7.0"
   },
   "devDependencies": {
-    "eslint": "^5.0.1",
+    "eslint": "^5.4.0",
     "eslint-config-google": "^0.9.1"
   },
   "license": "MIT"
