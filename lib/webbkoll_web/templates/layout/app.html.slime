@@ -55,7 +55,7 @@ html lang="en"
         .navigation-tools
           .search-bar
            form role="search" method="get" action="/#{@conn.assigns.locale}/check"
-              input name="url" type="search" placeholder="http://www.example.com/"
+              input name="url" type="search" placeholder="example.com"
               button type="submit"
                 i.icon-search
 

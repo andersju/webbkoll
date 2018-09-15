@@ -39,8 +39,9 @@ config :phoenix, :template_engines,
 
 config :webbkoll, Webbkoll.Scheduler,
   jobs: [
-    {"0 6 8 * *", {Geolix, :reload_databases, []}},
-    {"* * * * *", {Webbkoll.CronJobs, :find_stuck_records, []}},
+    {"@reboot", {Webbkoll.CronJobs, :download_geoip_if_not_exists, []}},
+    {"@weekly", {Webbkoll.CronJobs, :update_geoip, []}},
+    {"* * * * *", {Webbkoll.CronJobs, :find_and_remove_stuck_records, []}},
   ]
 
 config :geolix,
@@ -48,6 +49,6 @@ config :geolix,
     %{
       id: :country,
       adapter: Geolix.Adapter.MMDB2,
-      source: "priv/GeoLite2-Country.mmdb"
+      source: "priv/GeoLite2-Country.mmdb.gz"
     }
   ]

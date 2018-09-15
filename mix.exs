@@ -5,12 +5,11 @@ defmodule Webbkoll.Mixfile do
     [
       app: :webbkoll,
       version: "0.0.1",
-      elixir: "~> 1.4",
+      elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
-      aliases: aliases(),
       deps: deps()
     ]
   end
@@ -35,7 +34,8 @@ defmodule Webbkoll.Mixfile do
         :timex,
         :geolix,
         :con_cache,
-        :jumbo
+        :jumbo,
+        :download
       ],
       included_applications: [:ex2ms, :floki, :phoenix_slime, :public_suffix, :uuid]
     ]
@@ -69,17 +69,9 @@ defmodule Webbkoll.Mixfile do
       {:idna, "~> 5.0", override: true},
       {:con_cache, "~> 0.13"},
       {:uuid, "~> 1.1"},
-      {:jumbo, "~> 1.0"}
+      {:jumbo, "~> 1.0"},
+      {:download, "~> 0.0.4"},
+      {:stream_gzip, "~> 0.3.1"}
     ]
-  end
-
-  # Aliases are shortcut or tasks specific to the current project.
-  # For example, to create, migrate and run the seeds file at once:
-  #
-  #     $ mix ecto.setup
-  #
-  # See the documentation for `Mix` for more info on aliases.
-  defp aliases do
-    # ["test": ["ecto.create --quiet", "ecto.migrate", "test"]]
   end
 end

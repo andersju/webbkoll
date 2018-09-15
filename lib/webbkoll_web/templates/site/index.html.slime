@@ -4,7 +4,7 @@
       = gettext "How privacy-friendly is your site?"
 
     form.search-bar role="search" method="get" action="/#{@conn.assigns.locale}/check"
-        input name="url" type="search" required=true placeholder="http://www.example.com/" aria-describedby="urlHelpText"
+        input name="url" type="search" required=true placeholder="example.com" aria-describedby="urlHelpText"
         button type="submit"
           = gettext "Check"
 

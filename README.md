@@ -53,7 +53,7 @@ Inspired by [Puppeteer as a Service](https://github.com/GoogleChromeLabs/pptraas
 
 ## Frontend (this app!)
 
-Install Erlang (>= 20) and Elixir (>= 1.5) -- see http://elixir-lang.org/install.html.
+Install Erlang (>= 20) and Elixir (>= 1.7) -- see http://elixir-lang.org/install.html.
 
 Clone this repository, cd into it.
 
@@ -64,8 +64,6 @@ mix deps.get
 ```
 
 Make sure the backend is running on the host/port specified in `config/dev.exs`
-
-Download the [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2/geolite2/) in MaxMind DB binary format, extract it, and make sure it's available as `priv/GeoLite2-Country.mmdb` (or as specified in `config/config.exs`). (All you need to keep it fresh is [geoipupdate](https://github.com/maxmind/geoipupdate); Webbkoll reloads the database at certain intervals, see `config/config.exs`.)
 
 Compile CSS with sassc and copy static assets (this replaces brunch and 340 node dependencies):
 
@@ -78,6 +76,8 @@ rsync -av assets/static/*  priv/static
 Start the Phoenix endpoint with `mix phx.server` (or to get an interactive shell: `iex -S mix phx.server`)
 
 Now you can visit [`localhost:4000`](http://localhost:4000) in your browser.
+
+The [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2/geolite2/) (for GeoIP lookups) is downloaded automatically from MaxMind (to change source, edit `config/dev.exs` and/or `config/prod.exs`) upon start if the file doesn't already exist. It is then refreshed once per week (interval can be changed in `config/config.exs`).
 
 ### Production
 

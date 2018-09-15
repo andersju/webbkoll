@@ -54,7 +54,7 @@ app.get('/', async (request, response) => {
     const page = await context.newPage();
 
     await page.setViewport(viewport);
-    await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36 webbkoll.dataskydd.net');
+    await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36');
 
     let requests = [];
     let responses = [];
