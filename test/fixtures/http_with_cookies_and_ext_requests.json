@@ -11,8 +11,7 @@
         },
         {
             "domain": "sdc.example.com",
-            "expires": "Sun, 21 Jun 2026 00:42:57 GMT",
-            "expiry": 1782002577,
+            "expires": 1782002577,
             "httponly": false,
             "name": "WEBTRENDS_ID",
             "path": "/",
@@ -21,8 +20,7 @@
         },
         {
             "domain": "statse.webtrendslive.com",
-            "expires": "Sat, 23 Jun 2018 00:42:57 GMT",
-            "expiry": 1529714577,
+            "expires": 1529714577,
             "httponly": true,
             "name": "ACOOKIE",
             "path": "/",
@@ -31,8 +29,7 @@
         },
         {
             "domain": ".example.com",
-            "expires": "Sat, 23 Jun 2018 12:20:28 GMT",
-            "expiry": 1529756428,
+            "expires": 1529756428,
             "httponly": false,
             "name": "WT_FPC",
             "path": "/",
@@ -49,8 +46,7 @@
         },
         {
             "domain": "www.example.com",
-            "expires": "Thu, 23 Jun 2016 00:44:57 GMT",
-            "expiry": 1466642697,
+            "expires": 1466642697,
             "httponly": false,
             "name": "sitesterDelayId2102",
             "path": "/",
@@ -59,8 +55,7 @@
         },
         {
             "domain": "www.example.com",
-            "expires": "Thu, 23 Jun 2016 00:52:57 GMT",
-            "expiry": 1466643177,
+            "expires": 1466643177,
             "httponly": false,
             "name": "sitesterActiveUserId2102",
             "path": "/",
@@ -85,8 +80,7 @@
         },
         {
             "domain": ".example.com",
-            "expires": "Thu, 22 Dec 2016 12:42:56 GMT",
-            "expiry": 1482410576,
+            "expires": 1482410576,
             "httponly": false,
             "name": "__utmz",
             "path": "/",
@@ -103,8 +97,7 @@
         },
         {
             "domain": ".example.com",
-            "expires": "Thu, 23 Jun 2016 01:12:56 GMT",
-            "expiry": 1466644376,
+            "expires": 1466644376,
             "httponly": false,
             "name": "__utmb",
             "path": "/",
@@ -113,8 +106,7 @@
         },
         {
             "domain": ".example.com",
-            "expires": "Sat, 23 Jun 2018 00:42:56 GMT",
-            "expiry": 1529714576,
+            "expires": 1529714576,
             "httponly": false,
             "name": "__utma",
             "path": "/",
@@ -123,8 +115,7 @@
         },
         {
             "domain": ".example.com",
-            "expires": "Thu, 23 Jun 2016 00:52:56 GMT",
-            "expiry": 1466643176,
+            "expires": 1466643176,
             "httponly": false,
             "name": "__utmt",
             "path": "/",

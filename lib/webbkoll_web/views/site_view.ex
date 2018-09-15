@@ -1,6 +1,10 @@
 defmodule WebbkollWeb.SiteView do
   use WebbkollWeb, :view
 
+  def format_timestamp(nil) do
+    "session"
+  end
+
   def format_timestamp(time) do
     time
     |> Kernel.round()
