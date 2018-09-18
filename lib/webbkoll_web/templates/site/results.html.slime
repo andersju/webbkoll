@@ -54,17 +54,17 @@
               = ngettext("Cookie", "Cookies", (@site.data["cookie_count"]["first_party"] + @site.data["cookie_count"]["third_party"]))
         li
           .value
-            = @site.data["third_party_request_count"]["total"]
+            = @site.data["third_party_request_types"]["total"]
           .label
             a href="#requests"
-              = ngettext("Third-party request", "Third-party requests", @site.data["third_party_request_count"]["total"])
+              = ngettext("Third-party request", "Third-party requests", @site.data["third_party_request_types"]["total"])
             </a>
         li
           .value
-            = @site.data["third_party_request_count"]["unique_hosts"]
+            = @site.data["third_party_request_types"]["unique_hosts"]
           .label
             a href="#requests"
-              = ngettext("Third-party contacted", "Third-parties contacted", @site.data["third_party_request_count"]["unique_hosts"])
+              = ngettext("Third-party contacted", "Third-parties contacted", @site.data["third_party_request_types"]["unique_hosts"])
 
 #results
   = if @site.data["geolocation"] do
@@ -304,7 +304,7 @@
             = req["host"]
             = link " (#{truncate(req["url"], 50)})", to: req["url"]
 
-    = if @site.data["third_party_request_count"]["total"] == 0 do
+    = if @site.data["third_party_request_types"]["total"] == 0 do
       h3#requests
         = gettext "Third-party requests"
       p
@@ -315,7 +315,7 @@
       h3#requests
         = gettext "Third-party requests"
       p
-        | <strong><%= @site.data["third_party_request_count"]["total"] %></strong> <%= ngettext "request", "requests", @site.data["third_party_request_count"]["total"] %> (<%= ngettext "1 secure", "%{count} secure", @site.data["third_party_request_types"]["secure"] %>, <%= ngettext "%{count} insecure", "%{count} insecure", @site.data["third_party_request_types"]["insecure"] %>) <%= gettext "to" %> <strong><%= @site.data["third_party_request_count"]["unique_hosts"] %></strong> <%= ngettext "unique", "unique", @site.data["third_party_request_count"]["unique_hosts"] %> <%= ngettext "host", "hosts", @site.data["third_party_request_count"]["unique_hosts"] %>.
+        | <strong><%= @site.data["third_party_request_types"]["total"] %></strong> <%= ngettext "request", "requests", @site.data["third_party_request_types"]["total"] %> (<%= ngettext "1 secure", "%{count} secure", @site.data["third_party_request_types"]["secure"] %>, <%= ngettext "%{count} insecure", "%{count} insecure", @site.data["third_party_request_types"]["insecure"] %>) <%= gettext "to" %> <strong><%= @site.data["third_party_request_types"]["unique_hosts"] %></strong> <%= ngettext "unique", "unique", @site.data["third_party_request_types"]["unique_hosts"] %> <%= ngettext "host", "hosts", @site.data["third_party_request_types"]["unique_hosts"] %>.
       p
         = gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.data["reg_domain"]) |> raw
 

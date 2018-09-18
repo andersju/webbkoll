@@ -52,7 +52,7 @@ defmodule Webbkoll.SiteControllerTest do
     assert data["meta_referrer"] =~ "never"
     assert data["cookie_count"]["first_party"] == 0
     assert data["cookie_count"]["third_party"] == 0
-    assert data["third_party_request_count"]["total"] == 0
+    assert data["third_party_request_types"]["total"] == 0
     assert data["insecure_requests_count"] == 0
     assert data["header_hsts"] =~ "max-age=10886400;"
     assert data["services"] == []

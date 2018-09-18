@@ -100,7 +100,7 @@ defmodule Webbkoll.Worker do
       update_site(id, %{status: "failed", status_message: reason})
     end
 
-    raise WorkerError, message: reason
+    raise reason
   end
 
   def process_json(json) do
@@ -138,7 +138,6 @@ defmodule Webbkoll.Worker do
         "insecure_first_party_requests" => insecure_first_party_requests,
         "third_party_requests" => third_party_requests,
         "third_party_request_types" => third_party_request_types,
-        "third_party_request_count" => get_request_count(third_party_requests),
         "insecure_requests_count" =>
           third_party_request_types["insecure"] + Enum.count(insecure_first_party_requests),
         "meta_referrer" => meta_referrer,
@@ -171,7 +170,7 @@ defmodule Webbkoll.Worker do
 
   defp get_insecure_first_party_requests(requests, registerable_domain) do
     requests
-    |> Enum.reduce([], fn x, acc -> check_insecure_first_party(x, acc, registerable_domain) end)
+    |> Enum.reduce([], fn request, acc -> check_insecure_first_party(request, acc, registerable_domain) end)
     |> get_insecure_first_party_requests()
   end
 
@@ -179,11 +178,11 @@ defmodule Webbkoll.Worker do
   # We force the first request to be insecure, so remove it
   defp get_insecure_first_party_requests(list) when is_list(list), do: tl(list)
 
-  def check_insecure_first_party(x, acc, registerable_domain) do
-    parsed_url = URI.parse(x["url"])
+  def check_insecure_first_party(request, acc, registerable_domain) do
+    parsed_url = URI.parse(request["url"])
 
     case is_insecure_first_party?(parsed_url, registerable_domain) do
-      true -> acc ++ [Map.put(x, "host", parsed_url.host)]
+      true -> [Map.put(request, "host", parsed_url.host) | acc]
       false -> acc
     end
   end
@@ -194,42 +193,31 @@ defmodule Webbkoll.Worker do
   end
 
   defp get_third_party_requests(requests, registerable_domain) do
-    Enum.reduce(requests, [], fn x, acc ->
-      host = URI.parse(x["url"]).host
-
+    Enum.reduce(requests, [], fn request, acc ->
+      host = URI.parse(request["url"]).host
       case host !== nil && get_registerable_domain(host) !== registerable_domain do
-        true -> acc ++ [Map.put(x, "host", host)]
+        true -> [Map.put(request, "host", host) | acc]
         false -> acc
       end
     end)
   end
 
   defp get_request_types(requests) do
-    Enum.reduce(requests, %{"secure" => 0, "insecure" => 0}, fn x, acc ->
-      case String.starts_with?(x["url"], "https") do
-        true -> Map.put(acc, "secure", acc["secure"] + 1)
-        false -> Map.put(acc, "insecure", acc["insecure"] + 1)
-      end
-    end)
-  end
+    total = Enum.count(requests)
+    secure = Enum.count(requests, fn request -> String.starts_with?(request["url"], "https://") end)
+    unique_hosts = requests |> get_unique_hosts("host") |> Enum.count()
 
-  def get_request_count(requests) do
-    %{
-      "total" => Enum.count(requests),
-      "unique_hosts" => requests |> get_unique_hosts("host") |> Enum.count()
-    }
+    %{"total" => total, "secure" => secure, "insecure" => total - secure, "unique_hosts" => unique_hosts}
   end
 
   defp get_cookies(cookies, registerable_domain) do
     cookies
-    |> Enum.split_with(fn x -> split_by_domain(x, registerable_domain) end)
-    |> get_cookies()
+    |> Enum.split_with(fn cookie -> split_by_domain(cookie, registerable_domain) end)
+    |> (&(%{"first_party" => elem(&1, 0), "third_party" => elem(&1, 1)})).()
   end
 
-  defp get_cookies({first, third}), do: %{"first_party" => first, "third_party" => third}
-
   defp split_by_domain(x, registerable_domain) do
-    x["domain"] |> String.trim(".") |> get_registerable_domain() == registerable_domain
+    (x["domain"] |> String.trim(".") |> get_registerable_domain()) == registerable_domain
   end
 
   defp get_cookie_count(cookies) do
@@ -281,7 +269,7 @@ defmodule Webbkoll.Worker do
     |> :inet.gethostbyname()
     |> case do
       {:error, _} -> nil
-      {:ok, hostent} -> hostent |> elem(5) |> hd |> Tuple.to_list() |> Enum.join(".")
+      {:ok, {:hostent, _, _, :inet, 4, [ip]}} -> ip |> Tuple.to_list() |> Enum.join(".")
     end
   end
 
@@ -327,8 +315,4 @@ defmodule Webbkoll.Worker do
         %{"status" => "other", "icon" => ""}
     end
   end
-end
-
-defmodule WorkerError do
-  defexception message: "Something bad went down."
 end

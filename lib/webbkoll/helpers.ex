@@ -21,15 +21,17 @@ defmodule Webbkoll.Helpers do
 
   def check_services(requests) do
     requests
-    |> Enum.reduce([], fn request, acc ->
-      Enum.reduce(services(), acc, fn {k, v}, acc ->
+    |> Enum.reduce([], &check_services/2)
+    |> Enum.uniq()
+  end
+
+  defp check_services(request, results) do
+    Enum.reduce(services(), results, fn ({k, v}, results) ->
         case String.contains?(request["url"], v["pattern"]) do
-          true -> acc ++ [k]
-          false -> acc
+          true -> [k | results]
+          false -> results
         end
       end)
-    end)
-    |> Enum.uniq()
   end
 
   def get_service(service, key) do
@@ -121,7 +123,7 @@ defmodule Webbkoll.Helpers do
 
   def get_unique_hosts(data, field_name) do
     data
-    |> Enum.reduce([], fn %{^field_name => host}, acc -> acc ++ [host] end)
+    |> Enum.map(&(&1[field_name]))
     |> Enum.uniq()
   end
 
