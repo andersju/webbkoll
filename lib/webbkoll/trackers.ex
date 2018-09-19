@@ -8,31 +8,25 @@ defmodule Webbkoll.Trackers do
   # structure. The following parses the JSON file and creates a map where each
   # unique host is a key. Additionally, by making this a module attribute, we
   # ensure that this is only done at compile time.
-
-  # TODO: Clean up this mess
   @hosts (fn ->
-            Application.app_dir(:webbkoll, "priv/services.json")
-            |> File.read!()
-            |> Poison.decode!()
-            |> Map.get("categories")
-            |> Enum.reduce(%{}, fn {category, sites}, hosts ->
-              if String.starts_with?(category, "Legacy") do
-                hosts
-              else
-                Enum.reduce(sites, hosts, fn site, hosts ->
-                  Enum.reduce(site, hosts, fn {name, url}, hosts ->
-                    url
-                    |> Enum.filter(fn {x, _y} -> String.starts_with?(x, ["http", "www."]) end)
-                    |> Enum.into(%{})
-                    |> Map.values()
-                    |> List.first()
-                    |> Enum.reduce(hosts, fn host, hosts ->
-                      Map.put_new(hosts, host, "#{category} (#{name})")
-                    end)
-                  end)
-                end)
+            categories =
+              Application.app_dir(:webbkoll, "priv/services.json")
+              |> File.read!()
+              |> Poison.decode!()
+              |> Map.get("categories")
+
+            for {category, value} <- categories, organization <- value do
+              {name, org_values} = Enum.at(organization, 0)
+
+              for {url, hosts} <- org_values, String.starts_with?(url, ["http", "www."]) and is_list(hosts) do
+                for host <- hosts do
+                  {host, "#{category} (#{name})"}
+                end
               end
-            end)
+            end
+            |> List.flatten()
+            |> Enum.reject(&is_nil/1)
+            |> Enum.into(%{})
           end).()
 
   def check(host) do

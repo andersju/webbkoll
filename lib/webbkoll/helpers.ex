@@ -2,12 +2,9 @@ defmodule Webbkoll.Helpers do
   import WebbkollWeb.Gettext
 
   @countries (fn ->
-                Enum.reduce(Application.get_env(:webbkoll, :locales), %{}, fn lang, acc ->
-                  Application.app_dir(:webbkoll, "priv/#{lang}.json")
-                  |> File.read!()
-                  |> Poison.decode!()
-                  |> (fn x -> Map.put_new(acc, lang, x) end).()
-                end)
+                for lang <- Application.get_env(:webbkoll, :locales), into: %{} do
+                  {lang, Application.app_dir(:webbkoll, "priv/#{lang}.json") |> File.read!() |> Poison.decode!()}
+                end
               end).()
 
   def country_from_iso(locale, country_code) do
@@ -22,16 +19,14 @@ defmodule Webbkoll.Helpers do
   def check_services(requests) do
     requests
     |> Enum.reduce([], &check_services/2)
+    |> List.flatten()
     |> Enum.uniq()
   end
 
   defp check_services(request, results) do
-    Enum.reduce(services(), results, fn ({k, v}, results) ->
-        case String.contains?(request["url"], v["pattern"]) do
-          true -> [k | results]
-          false -> results
-        end
-      end)
+    for {k, v} <- services(), String.contains?(request["url"], v["pattern"]), into: results do
+      [k | results]
+    end
   end
 
   def get_service(service, key) do
