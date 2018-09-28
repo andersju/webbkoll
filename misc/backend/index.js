@@ -69,15 +69,7 @@ app.get('/', async (request, response) => {
     });
 
     page.on('request', (request) => {
-      let tmpHeaders = request.headers();
-      let headersArr = [];
-
-      // A little ugly, but the Webbkoll frontend expects headers in this format
-      Object.keys(tmpHeaders).forEach(function(key, index) {
-        headersArr.push({'name': key, 'value': tmpHeaders[key]});
-      });
-
-      requests.push({'url': request.url(), 'headers': headersArr});
+      requests.push({'url': request.url(), 'method': request.method(), 'headers': request.headers()});
     });
 
     await page._client.send('Network.enable');
