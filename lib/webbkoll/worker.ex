@@ -108,7 +108,9 @@ defmodule Webbkoll.Worker do
          reg_domain = get_registerable_domain(url.host),
          headers = json["response_headers"],
          cookies = get_cookies(json["cookies"], reg_domain),
-         third_party_requests = get_third_party_requests(json["requests"], reg_domain),
+         # Ignore first request in requests list, as it's by definition a first-party request;
+         # fixes issue with IDN domains
+         third_party_requests = get_third_party_requests(tl(json["requests"]), reg_domain),
          insecure_first_party_requests =
            get_insecure_first_party_requests(json["requests"], reg_domain),
          third_party_request_types = get_request_types(third_party_requests),
