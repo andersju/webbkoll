@@ -179,11 +179,13 @@ defmodule WebbkollWeb.SiteController do
   defp check_user_agent([], conn), do: conn
 
   defp get_proper_url(url = %URI{}) do
-    path = url.path || "/"
-
     case @validate_urls do
-      true -> "http://#{url.host |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase()}#{path}"
-      false -> "http://#{url.authority |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase()}#{path}"
+      true -> URI.to_string(
+        %URI{host: (url.host |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase()),
+             path: url.path, query: url.query, scheme: "http"})
+      false -> URI.to_string(
+        %URI{host: (url.authority |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase()),
+             path: url.path, query: url.query, scheme: "http"})
     end
   end
 
