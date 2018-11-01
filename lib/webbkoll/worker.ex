@@ -271,7 +271,9 @@ defmodule Webbkoll.Worker do
     |> :inet.gethostbyname()
     |> case do
       {:error, _} -> nil
-      {:ok, {:hostent, _, _, :inet, 4, [ip]}} -> ip |> Tuple.to_list() |> Enum.join(".")
+      # TODO: If host resolves to multiple IPs, we currently only show the first one.
+      # Should be fixed.
+      {:ok, {:hostent, _, _, :inet, 4, ip}} -> List.first(ip) |> Tuple.to_list() |> Enum.join(".")
     end
   end
 
