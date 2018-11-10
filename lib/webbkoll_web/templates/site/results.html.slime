@@ -11,7 +11,7 @@
           - else
             = @site.data["host"]
     .beta
-      a.button href="#{site_path(@conn, :check, @conn.assigns.locale, url: @site.input_url, refresh: "on")}"
+      a.button href="#{Routes.site_path(@conn, :check, @conn.assigns.locale, url: @site.input_url, refresh: "on")}"
         i.icon-refresh
         = gettext("Check again")
       i.icon-clock-o

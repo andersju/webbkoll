@@ -7,12 +7,12 @@ html lang="en"
     meta name="description" content="#{assigns[:page_description]}"
     meta name="author" content="Dataskydd.net"
     meta name="referrer" content="no-referrer"
-    meta property="og:image" content="#{static_path(@conn, "/images/dataskydd_eye2.png")}"
+    meta property="og:image" content="#{Routes.static_path(@conn, "/images/dataskydd_eye2.png")}"
     = if @view_template == "status.html" do
       meta http-equiv="refresh" content="5"
     title
       = "#{assigns[:page_title]} | Webbkoll - dataskydd.net"
-    link rel="stylesheet" href="#{static_path(@conn, "/css/app.css")}"
+    link rel="stylesheet" href="#{Routes.static_path(@conn, "/css/app.css")}"
     link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png"
     link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png"
     link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png"
@@ -40,17 +40,17 @@ html lang="en"
                 i.icon-eye-slash 
                 <span>webbkoll</span> | <span>dataskydd</span><span class="semibold">.net</span></a>
             li.nav-link
-              = link gettext("FAQ"), to: site_path(@conn, :about, @conn.assigns.locale)
+              = link gettext("FAQ"), to: Routes.site_path(@conn, :about, @conn.assigns.locale)
             li.nav-link
-              = link gettext("Tech"), to: site_path(@conn, :tech, @conn.assigns.locale)
+              = link gettext("Tech"), to: Routes.site_path(@conn, :tech, @conn.assigns.locale)
             li.nav-link
-              = link gettext("Donate"), to: site_path(@conn, :donate, @conn.assigns.locale)
+              = link gettext("Donate"), to: Routes.site_path(@conn, :donate, @conn.assigns.locale)
             li.nav-link
               i> class="icon-flag"
               = if @conn.assigns.locale == "en" do
-                = link "Svenska", to: site_path(@conn, @conn.private[:phoenix_action], "sv", @conn.query_params)
+                = link "Svenska", to: Routes.site_path(@conn, @conn.private[:phoenix_action], "sv", @conn.query_params)
               - else
-                = link "English", to: site_path(@conn, @conn.private[:phoenix_action], "en", @conn.query_params)
+                = link "English", to: Routes.site_path(@conn, @conn.private[:phoenix_action], "en", @conn.query_params)
 
         .navigation-tools
           .search-bar
@@ -81,4 +81,4 @@ html lang="en"
           p
             = gettext("All text, except quotes and where noted, is available under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>.") |> raw
 
-    script src="#{static_path(@conn, "/js/app.js")}"
+    script src="#{Routes.static_path(@conn, "/js/app.js")}"

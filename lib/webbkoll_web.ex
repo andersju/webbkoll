@@ -20,7 +20,7 @@ defmodule WebbkollWeb do
     quote do
       use Phoenix.Controller, namespace: WebbkollWeb
 
-      import WebbkollWeb.Router.Helpers
+      alias WebbkollWeb.Router.Helpers, as: Routes
       import WebbkollWeb.Gettext
       import Webbkoll.Helpers
     end
@@ -36,7 +36,7 @@ defmodule WebbkollWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import WebbkollWeb.Router.Helpers
+      alias WebbkollWeb.Router.Helpers, as: Routes
       import WebbkollWeb.ErrorHelpers
       import WebbkollWeb.Gettext
       import Webbkoll.Helpers

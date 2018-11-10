@@ -86,7 +86,7 @@ defmodule WebbkollWeb.SiteController do
       settings.url
     ])
 
-    redirect(conn, to: site_path(conn, :status, conn.assigns.locale, id: id))
+    redirect(conn, to: Routes.site_path(conn, :status, conn.assigns.locale, id: id))
   end
 
   def status(conn, %{"id" => id}) do
@@ -97,7 +97,7 @@ defmodule WebbkollWeb.SiteController do
   end
 
   defp handle_status(nil, _id, conn) do
-    redirect(conn, to: site_path(conn, :indexi18n, conn.assigns.locale))
+    redirect(conn, to: Routes.site_path(conn, :indexi18n, conn.assigns.locale))
   end
 
   defp handle_status(site, id, conn) do
@@ -109,10 +109,10 @@ defmodule WebbkollWeb.SiteController do
         render(conn, "status.html", id: id, site: site, page_title: gettext("Status"))
 
       "failed" ->
-        redirect(conn, to: site_path(conn, :results, conn.assigns.locale, url: site.input_url))
+        redirect(conn, to: Routes.site_path(conn, :results, conn.assigns.locale, url: site.input_url))
 
       "done" ->
-        redirect(conn, to: site_path(conn, :results, conn.assigns.locale, url: site.input_url))
+        redirect(conn, to: Routes.site_path(conn, :results, conn.assigns.locale, url: site.input_url))
     end
   end
 
@@ -123,16 +123,16 @@ defmodule WebbkollWeb.SiteController do
   end
 
   defp handle_results(nil, conn, url) do
-    redirect(conn, to: site_path(conn, :check, conn.assigns.locale, url: url))
+    redirect(conn, to: Routes.site_path(conn, :check, conn.assigns.locale, url: url))
   end
 
   defp handle_results({id, site}, conn, _url) do
     case site.status do
       "queue" ->
-        redirect(conn, to: site_path(conn, :status, conn.assigns.locale, id: id, site: site))
+        redirect(conn, to: Routes.site_path(conn, :status, conn.assigns.locale, id: id, site: site))
 
       "processing" ->
-        redirect(conn, to: site_path(conn, :status, conn.assigns.locale, id: id, site: site))
+        redirect(conn, to: Routes.site_path(conn, :status, conn.assigns.locale, id: id, site: site))
 
       "failed" ->
         render(conn, :failed, site: site, page_title: gettext("Processing failed"))
@@ -231,7 +231,7 @@ defmodule WebbkollWeb.SiteController do
 
   defp handle_check_site_in_cache({id, _site}, conn) do
     conn
-    |> redirect(to: site_path(conn, :status, conn.assigns.locale, id: id))
+    |> redirect(to: Routes.site_path(conn, :status, conn.assigns.locale, id: id))
     |> halt
   end
 

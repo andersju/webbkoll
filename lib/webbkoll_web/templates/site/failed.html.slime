@@ -17,7 +17,7 @@ section
       = gettext(~s|If you get the error ERR_CERT_SYMANTEC_LEGACY, it's because the site uses a Symantec certificate (includes Thawte, RapidSSL and GeoTrust) that is, or soon will be, distrusted by Chrome and Firefox. More information: <a href="https://security.googleblog.com/2018/03/distrust-of-symantec-pki-immediate.html">Google</a>, <a href="https://blog.mozilla.org/security/2018/07/30/update-on-the-distrust-of-symantec-tls-certificates/">Mozilla</a>, <a href="https://blog.qualys.com/ssllabs/2017/09/26/google-and-mozilla-deprecating-existing-symantec-certificates">Qualys</a>|) |> raw
 
   p
-    = link gettext("Try again?"), to: site_path(@conn, :check, @conn.assigns.locale, url: @site.input_url, refresh: "on")
+    = link gettext("Try again?"), to: Routes.site_path(@conn, :check, @conn.assigns.locale, url: @site.input_url, refresh: "on")
 
   p
     = gettext(~s|<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href="mailto:info@dataskydd.net">send us an email</a> (and tell us what URL you tried)! You can also try <a href="https://privacyscore.org/">PrivacyScore</a> as an alternative.|) |> raw

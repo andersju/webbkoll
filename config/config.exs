@@ -28,6 +28,9 @@ config :logger, :console,
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"
 
+# Use Jason for JSON parsing in Phoenix
+config :phoenix, :json_library, Jason
+
 # Configure phoenix generators
 config :phoenix, :generators,
   migration: true,
