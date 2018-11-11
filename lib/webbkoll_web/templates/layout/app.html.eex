@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%= assigns[:page_description] %>">
+    <meta name="author" content="Dataskydd.net">
+    <meta name="referrer" content="no-referrer">
+    <meta property="og:image" content="<%= Routes.static_path(@conn, "/images/dataskydd_eye2.png") %>">
+    <%= if @view_template == "status.html" do %>
+      <meta http-equiv="refresh" content="5">
+    <% end %>
+    <title><%= assigns[:page_title] %> | Webbkoll - dataskydd.net</title>
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>">
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/images/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="/images/mstile-144x144.png">
+
+  <body>
+    <header class="navigation" role="banner">
+      <div class="navigation-wrapper">
+        <nav role="navigation">
+          <ul id="js-navigation-menu" class="navigation-menu show">
+            <li class="nav-link logo">
+              <a href="/<%= @conn.assigns.locale %>">
+                <i class="icon-eye-slash"></i>
+                <span>webbkoll</span> | <span>dataskydd</span><span class="semibold">.net</span>
+              </a>
+            </li>
+            <li class="nav-link">
+              <%= link gettext("FAQ"), to: Routes.site_path(@conn, :about, @conn.assigns.locale) %>
+            </li>
+            <li class="nav-link">
+              <%= link gettext("Tech"), to: Routes.site_path(@conn, :tech, @conn.assigns.locale) %>
+            </li>
+            <li class="nav-link">
+              <%= link gettext("Donate"), to: Routes.site_path(@conn, :donate, @conn.assigns.locale) %>
+            </li>
+            <li class="nav-link">
+              <i class="icon-flag"></i>
+              <%= if @conn.assigns.locale == "en" do %>
+                <%= link "Svenska", to: Routes.site_path(@conn, @conn.private[:phoenix_action], "sv", @conn.query_params) %>
+              <% else %>
+                <%= link "English", to: Routes.site_path(@conn, @conn.private[:phoenix_action], "en", @conn.query_params) %>
+              <% end %>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="navigation-tools">
+          <div class="search-bar">
+           <form role="search" method="get" action="/<%= @conn.assigns.locale %>/check">
+              <input name="url" type="search" placeholder="example.com">
+              <button type="submit">
+                <i class="icon-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+      <%= render @view_module, @view_template, assigns %>
+
+    <div class="footer-outer">
+      <footer>
+        <p id="disclaimer">
+          <%= gettext "Test results are stored in memory on our server for 24 hours. We don't show a list of tested URLs. We don't use URLs or test results. We don't log accesses and we don't use cookies." %>
+        </p>
+        <div class="alpha">
+          <p>
+            <%= gettext "Developed by" %> <a href="https://dataskydd.net/"><span class="ds-orange">dataskydd</span><span class="semibold black">.net</a></span>. <%= gettext "Originally funded by" %> <a href="https://www.internetfonden.se">Internetfonden</a> / <a href="https://www.iis.se">IIS</a>.
+          </p>
+          <a href="https://www.internetfonden.se/">
+            <img src="/images/internetfonden.png" />
+          </a>
+          <a href="https://www.iis.se/">
+            <img src="/images/iis.png" />
+          </a>
+        </div>
+
+        <div class="beta">
+          <p><%= gettext("The code is <a href=\"https://github.com/andersju/webbkoll\">available on GitHub</a>.") |> raw %></p>
+          <p><%= gettext("Feedback? Questions? <a href=\"mailto:info@dataskydd.net\">info@dataskydd.net</a>") |> raw %></p>
+          <p><%= gettext("All text, except quotes and where noted, is available under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>.") |> raw %></p>
+        </div>
+
+        <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>

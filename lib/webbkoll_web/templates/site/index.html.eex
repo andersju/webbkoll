@@ -1,0 +1,26 @@
+<div class="index-search">
+  <section>
+    <h1><%= gettext "How privacy-friendly is your site?" %></h1>
+
+    <form class="search-bar" role="search" method="get" action="/<%= @conn.assigns.locale %>/check">
+      <input name="url" type="search" required=true placeholder="example.com" aria-describedby="urlHelpText">
+      <button type="submit"><%= gettext "Check" %></button>
+    </form>
+
+    <p class="desc">
+      <%= gettext "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. " %>
+      <%= link gettext("Read more."), to: Routes.site_path(@conn, :about, @conn.assigns.locale) %>
+    </p>
+
+    <p class="notes">
+      <%= gettext(~s|Please note:|) %>
+      <ol>
+        <li><%= gettext(~s|This tool simulates a normal browser visit with Do Not Track disabled (browser default) and with no add-ons.|) %></li>
+        <li><%= gettext(~s|Even if you enter https://, http:// will be checked, to see if it redirects to https:// automatically (redirects are followed).|) %></li>
+        <li><%= gettext(~s|Generally things work, but some sites (sometimes) don't work for various reasons.|) %></li>
+        <li><%= gettext(~s|The backend is currently running on a single server with limited resources, so in case of usage spikes, waiting times can be long. (But you can <a href="https://github.com/andersju/webbkoll">run your own instance</a>!)|) |> raw() %></li>
+        <li><%= gettext(~s|Feedback is appreciated: send <a href="mailto:info@dataskydd.net">email</a> or <a href="https://github.com/andersju/webbkoll">open an issue</a>.|) |> raw() %></li>
+      </ol>
+    </p>
+  </section>
+</div>

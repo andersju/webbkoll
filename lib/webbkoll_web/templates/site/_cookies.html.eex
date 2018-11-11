@@ -1,0 +1,22 @@
+<table class="cookies data" data-sortable="true">
+  <thead>
+    <tr>
+      <th width="200" data-default-sort="true"><%= gettext "Domain" %></th>
+      <th width="200"><%= gettext "Name" %></th>
+      <th width="150"><%= gettext "Value" %></th>
+      <th width="150"><%= gettext "Expires on" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= for cookie <- @cookies do %>
+      <tr>
+        <td><%= cookie["domain"] %></td>
+        <td><%= cookie["name"] %></td>
+        <td><%= truncate(cookie["value"], 20) %></td>
+        <td>
+          <%= if cookie["session"] == true, do: "session", else: format_timestamp(cookie["expires"]) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

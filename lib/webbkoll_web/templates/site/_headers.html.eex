@@ -1,0 +1,40 @@
+<%# TODO: Move logic to helper? %>
+
+<div class="header-item heading">
+  <div class="alpha">
+    <%= gettext "Header" %>
+  </div>
+  <div class="beta">
+    <%= gettext "Set?" %>
+  </div>
+</div>
+
+<%= for {header, description} <- headers_to_check() do %>
+  <div class="header-item">
+    <div class="alpha">
+      <%= header %>
+    </div>
+    <div class="beta">
+      <%= if @headers[String.downcase(header)] do %>
+        <%= if header == "Strict-Transport-Security" and @headers[String.downcase(header)] =~ ~r/max-age=0/i do %>
+          <span>
+            <i class="icon-times"></i><%= gettext "NO, header is set to" %> <code><%= @headers[String.downcase(header)] %></code> <%= gettext "which disables HSTS" %>
+          </span>
+        <% else %>
+          <span>
+            <i class="icon-check"></i><%= gettext "YES," %> <code><%= @headers[String.downcase(header)] %></code>
+          </span>
+          <%= if header == "Content-Security-Policy" and @headers[String.downcase(header)] =~ ~r/unsafe/i do %>
+            <p><%= gettext "However, unsafe attributes are used." %></p>
+          <% end %>
+        <% end %>
+      <% else %>
+        <span>
+          <i class="icon-times"></i>
+          <%= gettext "NO" %>
+        </span>
+      <% end %>
+      <p><%= raw(description) %></p>
+    </div>
+  </div>
+<% end %>
