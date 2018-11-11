@@ -187,8 +187,6 @@ form.search-bar {
   position: relative;
 
   input[type=search] {
-    @include appearance(none);
-    @include transition(border-color);
     background-color: white;
     border: 1px solid $base-border-color;
     box-sizing: border-box;
