@@ -70,11 +70,11 @@ defmodule Webbkoll.Worker do
   end
 
   defp handle_response({:ok, %{status_code: 200, body: body}}, _id) do
-    {:ok, Poison.decode!(body)}
+    {:ok, Jason.decode!(body)}
   end
 
   defp handle_response({:ok, %{status_code: _, body: body}}, _id) do
-    {:error, Poison.decode!(body)}
+    {:error, Jason.decode!(body)}
   end
 
   defp handle_response({:error, %{reason: reason}}, id) do

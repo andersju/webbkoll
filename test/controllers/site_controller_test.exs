@@ -163,7 +163,7 @@ defmodule Webbkoll.SiteControllerTest do
   defp read_and_analyze_json(file) do
     file
     |> File.read!()
-    |> Poison.decode!()
+    |> Jason.decode!()
     |> Webbkoll.Worker.process_json()
   end
 end

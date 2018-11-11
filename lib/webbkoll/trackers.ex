@@ -12,7 +12,7 @@ defmodule Webbkoll.Trackers do
             categories =
               Application.app_dir(:webbkoll, "priv/services.json")
               |> File.read!()
-              |> Poison.decode!()
+              |> Jason.decode!()
               |> Map.get("categories")
 
             for {category, value} <- categories, organization <- value do

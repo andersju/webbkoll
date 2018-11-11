@@ -3,7 +3,7 @@ defmodule Webbkoll.Helpers do
 
   @countries (fn ->
                 for lang <- Application.get_env(:webbkoll, :locales), into: %{} do
-                  {lang, Application.app_dir(:webbkoll, "priv/#{lang}.json") |> File.read!() |> Poison.decode!()}
+                  {lang, Application.app_dir(:webbkoll, "priv/#{lang}.json") |> File.read!() |> Jason.decode!()}
                 end
               end).()
 
