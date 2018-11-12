@@ -50,6 +50,7 @@
             <li class="nav-link">
               <%= link gettext("Donate"), to: Routes.site_path(@conn, :donate, @conn.assigns.locale) %>
             </li>
+            <!--
             <li class="nav-link">
               <i class="icon-flag"></i>
               <%= if @conn.assigns.locale == "en" do %>
@@ -57,6 +58,14 @@
               <% else %>
                 <%= link "English", to: Routes.site_path(@conn, @conn.private[:phoenix_action], "en", @conn.query_params) %>
               <% end %>
+            </li>
+          -->
+            <li id="js-navigation-more" class="nav-link more"><a href="javascript:void(0)"><i class="icon-flag"></i> Language</a>
+              <ul class="submenu">
+                <li><a href="javascript:void(0)">English</a></li>
+                <li><a href="javascript:void(0)">Svenska</a></li>
+                <li><a href="javascript:void(0)">Français</a></li>
+              </ul>
             </li>
           </ul>
         </nav>
@@ -76,6 +85,7 @@
 
     <main role="main">
       <%= render @view_module, @view_template, assigns %>
+    </main>
 
     <div class="footer-outer">
       <footer>
@@ -99,5 +109,7 @@
           <p><%= gettext("Feedback? Questions? <a href=\"mailto:info@dataskydd.net\">info@dataskydd.net</a>") |> raw %></p>
           <p><%= gettext("All text, except quotes and where noted, is available under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>.") |> raw %></p>
         </div>
+      </footer>
+    </div>
 
-        <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>

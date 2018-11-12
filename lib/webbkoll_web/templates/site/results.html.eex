@@ -1,0 +1,71 @@
+<div id="results-header">
+  <section id="results-title">
+    <div class="alpha">
+      <h2>
+        <span class="light"><%= gettext "Results for" %></span>
+        <span class="semibold">
+            <%= if String.contains?(@site.data["host"], "xn--") do %>
+              <%= idna_from_punycode(@site.data["host"]) %>
+            <% else %>
+              <%= @site.data["host"] %>
+            <% end %>
+        </span>
+      </h2>
+    </div>
+    <div class="beta">
+      <a class="button" href="<%= Routes.site_path(@conn, :check, @conn.assigns.locale, url: @site.input_url, refresh: "on") %>"><i class="icon-refresh"></i><%= gettext("Check again") %></a>
+      <i class="icon-clock-o"></i><%= format_site_time(@site.updated_at) %>
+    </div>
+  </section>
+
+  <section id="input-url">
+    <p><%= gettext "Input URL:" %> <%= link @site.input_url, to: @site.input_url, rel: "nofollow" %></p>
+    <p><%= gettext "Final URL:" %> <%= link @site.final_url, to: @site.final_url, rel: "nofollow" %></p>
+  </section>
+
+  <section>
+    <div class="stats">
+      <ul>
+        <li>
+          <%= if @site.data["scheme"] == "https" do %>
+            <div class="value"><i class="icon-lock success"></i></div>
+            <div class="label"><a href="#https"><%= gettext("HTTPS") %></a></div>
+          <% else %>
+            <div class="value"><i class="icon-unlock-alt alert"></i></div>
+            <div class="label"><a href="#https"><%= gettext("Insecure") %></a></div>
+          <% end %>
+        </li>
+        <li>
+          <%= if @site.data["referrer_policy"]["status"] != "other" do %>
+            <div class="value"><i class="<%= @site.data["referrer_policy"]["icon"] %>"></i></div>
+            <div class="label"><a href="#referrers"><%= get_referrer_string(@site.data["referrer_policy"]["status"]) %></a></div>
+          <% end %>
+        </li>
+        <li>
+          <div class="value"><%= @site.data["cookie_count"]["first_party"] + @site.data["cookie_count"]["third_party"] %></div>
+          <div class="label"><a href="#cookies"><%= ngettext("Cookie", "Cookies", (@site.data["cookie_count"]["first_party"] + @site.data["cookie_count"]["third_party"])) %></a></div>
+        </li>
+        <li>
+          <div class="value"><%= @site.data["third_party_request_types"]["total"] %></div>
+          <div class="label"><a href="#requests"><%= ngettext("Third-party request", "Third-party requests", @site.data["third_party_request_types"]["total"]) %></a></div>
+        </li>
+        <li>
+          <div class="value"><%= @site.data["third_party_request_types"]["unique_hosts"] %></div>
+          <div class="label"><a href="#requests"><%= ngettext("Unique third-party", "Unique third-parties", @site.data["third_party_request_types"]["unique_hosts"]) %></a></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+<div class="results">
+  <%= if @site.data["geolocation"] do %>
+    <section class="result">
+      <div class="alpha">
+        <p><%= gettext(~s|The server <strong>%{domain}</strong> (%{host_ip}) appears to have been located in <strong>%{country}</strong> during our test.|, domain: @site.data["host"], host_ip: @site.data["host_ip"], country: country_from_iso(@conn.assigns.locale, @site.data["geolocation"])) |> raw %></p>
+      </div>
+      <div class="beta">
+        <p><%= gettext(~s|Please note that some sites use CDNs &ndash; <a href="https://en.wikipedia.org/wiki/Content_delivery_network">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France.|) |> raw %></p>
+      </div>
+    </section>
+  <% end %>
+</div>

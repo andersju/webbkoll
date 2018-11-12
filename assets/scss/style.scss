@@ -1,4 +1,3 @@
-@import "compatibility"; /* Remove after upgrading to Bourbon 5.0 */
 @import "bourbon/bourbon";
 @import "grid-settings";
 @import "neat/neat";
@@ -9,7 +8,6 @@
 @import "icons";
 
 body {
-  background-color: #f8f8f8;
   margin: 0;
 }
 
@@ -24,7 +22,7 @@ section {
 }
 
 .index-search {
-  background-color: #f5f5f5;
+  //background-color: #f5f5f5;
   margin-bottom: 2rem;
   margin-top: -1rem;
   padding-bottom: 4em;
@@ -50,10 +48,52 @@ section {
     text-align: center;
   }
 
-  .search-bar {
-    float: none;
+  form.search-bar {
+    ///////////////////////////////////////////////////////////////////////////////////
+    $base-spacing: 1.5em !default;
+    $base-border-color: gainsboro !default;
+    $base-line-height: 1.5em !default;
+    //////////////////////////////////////////////////////////////////////////////////
+
+    $search-bar-border-color: $base-border-color;
+    $search-bar-border: 1px solid $search-bar-border-color;
+    $search-bar-background: lighten($search-bar-border-color, 10%);
+
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 2rem;
+
+    max-width: 30rem;
+
+    position: relative;
+
+    input[type=search] {
+      appearance: none;
+      background-color: white;
+      border: 1px solid $base-border-color;
+      box-sizing: border-box;
+      display: block;
+      font-size: 1em;
+      font-style: italic;
+      margin: 0;
+      padding: ($base-spacing / 3) ($base-spacing / 3);
+      position: relative;
+      transition: border-color;
+      width: 100%;
+    }
+
+    button[type=submit] {
+      @include position(absolute, 0 0 0 null);
+      outline: none;
+      padding: 5px 10px;
+
+      img {
+        height: 12px;
+        opacity: 0.7;
+      }
+    }
   }
+
 
   @include media($mobile) {
     padding-bottom: 2rem;
@@ -66,7 +106,7 @@ section {
 }
 
 #results-header {
-  background-color: #5c5857;
+  background-color: #3b4255; // #5c5857;
   border-bottom: 1px solid #2f2e2d;
   color: white;
   margin-top: -1rem;
@@ -346,6 +386,8 @@ table.requests {
 }
 
 .footer-outer {
+  background-color: #f5f5f5;
+  padding-top: 2rem;
   //flex-shrink: 0;
   width: 100%;
 }
