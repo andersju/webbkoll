@@ -1,7 +1,7 @@
-body {
+html {
   color: $base-font-color;
   font-family: $base-font-family;
-  font-size: $base-font-size;
+  font-size: 100%;
   line-height: $base-line-height;
 }
 
@@ -34,68 +34,22 @@ h4 {
   font-size: modular-scale(1);
 }
 
-/*abbr {
-  font-variant: small-caps;
-  letter-spacing: 1px;
-  text-transform: lowercase;
-}*/
-
-p,
-table,
-ul {
-  margin: 0 0 $paragraph-spacing;
-}
-
-span[title] {
-  border-bottom: 1px dotted;
-}
-
-pre {
-  max-width: 100%;
-  overflow-y: scroll;
-  padding: 1rem;
-}
-
-code {
-  //background-color: #e6e6e6;
-  //border: 1px solid #cacaca;
-  color: #0a0a0a;
-  font-family: $font-stack-code;
-  font-size: 0.9em;
-  hyphens: none;
-  page-break-inside: avoid;
-  //padding: .125rem .3125rem .0625rem;
-}
-
-em em {
-  font-style: normal;
-}
-
-@include media($mobile) {
-  h2 {
-    font-size: modular-scale(2);
-  }
-
-  h3 {
-    font-size: modular-scale(1);
-  }
-
-  p,
-  ul,
-  table td {
-    font-size: 16px;
-  }
+p {
+  margin: 0 0 $small-spacing;
 }
 
 a {
   color: $action-color;
-  text-decoration: none;
+  text-decoration-skip: ink;
   transition: color $base-duration $base-timing;
 
-  &:active,
-  &:focus,
   &:hover {
     color: shade($action-color, 25%);
+  }
+
+  &:focus {
+    outline: $focus-outline;
+    outline-offset: $focus-outline-offset;
   }
 }
 

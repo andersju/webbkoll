@@ -4,39 +4,9 @@
 .semibold { font-weight: 600; }
 .bold { font-weight: 700; }
 
-$font-stack-ds: (
-  -apple-system,
-  BlinkMacSystemFont,
-  "Segoe UI",
-  "Roboto",
-  "Oxygen",
-  "Ubuntu",
-  "Cantarell",
-  "Fira Sans",
-  "Droid Sans",
-  "Helvetica Neue",
-  sans-serif,
-);
-
-$font-stack-code: (
-  "Menlo",
-  "Consolas",
-  "DejaVu Sans Mono",
-  "Monaco",
-  monospace
-);
-
-// Breakpoints
-$medium-screen: 600px;
-$large-screen: 900px;
-
 // Typography
-$base-font-family: $font-stack-ds;
+$base-font-family: $font-stack-system;
 $heading-font-family: $base-font-family;
-
-// Font Sizes
-$base-font-size: 1.125em;
-$paragraph-font-size: 20px;
 
 // Line height
 $base-line-height: 1.5;
@@ -44,9 +14,8 @@ $heading-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 3px;
-$base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 4;
-$paragraph-spacing: $base-spacing / 2;
+$base-spacing: 1.5em;
+$small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
 // Colors
@@ -64,12 +33,13 @@ $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-$base-background-color: #fff;
-$secondary-background-color: tint($base-border-color, 75%);
+$viewport-background-color: #fff;
 
-// Forms
-$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
-$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+// Focus
+$focus-outline-color: transparentize($action-color, 0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
 
 // Animations
 $base-duration: 150ms;
