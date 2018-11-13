@@ -18,44 +18,50 @@
     </div>
   </section>
 
-  <section id="input-url">
-    <p><%= gettext "Input URL:" %> <%= link @site.input_url, to: @site.input_url, rel: "nofollow" %></p>
-    <p><%= gettext "Final URL:" %> <%= link @site.final_url, to: @site.final_url, rel: "nofollow" %></p>
-  </section>
-
   <section>
-    <div class="stats">
+    <div class="summary">
       <ul>
         <li>
+          <span>HTTPS by default:</span>
           <%= if @site.data["scheme"] == "https" do %>
-            <div class="value"><i class="icon-lock success"></i></div>
-            <div class="label"><a href="#https"><%= gettext("HTTPS") %></a></div>
+            <i class="icon-check icon-fixed success"></i> Yes, redirects http:// -> https://
           <% else %>
-            <div class="value"><i class="icon-unlock-alt alert"></i></div>
-            <div class="label"><a href="#https"><%= gettext("Insecure") %></a></div>
+            <i class="icon-times icon-fixed alert"></i> No. Insecure; does not redirect http:// -> https://
           <% end %>
         </li>
         <li>
-          <%= if @site.data["referrer_policy"]["status"] != "other" do %>
-            <div class="value"><i class="<%= @site.data["referrer_policy"]["icon"] %>"></i></div>
-            <div class="label"><a href="#referrers"><%= get_referrer_string(@site.data["referrer_policy"]["status"]) %></a></div>
+          <span>Referrers:</span>
+
+          <%= case @site.data["referrer_policy"]["status"] do %>
+            <%= "success" -> %> <i class="icon-check icon-fixed success"></i> Not leaked
+            <%= "warning" -> %> <i class="icon-times icon-fixed warning"></i> Partially leaked
+            <%= "alert" -> %> <i class="icon-times icon-fixed alert"></i> Leaked
+            <%= _ -> %> Unknown
           <% end %>
         </li>
         <li>
-          <div class="value"><%= @site.data["cookie_count"]["first_party"] + @site.data["cookie_count"]["third_party"] %></div>
-          <div class="label"><a href="#cookies"><%= ngettext("Cookie", "Cookies", (@site.data["cookie_count"]["first_party"] + @site.data["cookie_count"]["third_party"])) %></a></div>
+          <span>Cookies:</span>
+          <strong><%= @site.data["cookie_count"]["first_party"] + @site.data["cookie_count"]["third_party"] %></strong>
+          (<%= @site.data["cookie_count"]["first_party"] %> first-party; <%= @site.data["cookie_count"]["third_party"] %> third-party)
         </li>
         <li>
-          <div class="value"><%= @site.data["third_party_request_types"]["total"] %></div>
-          <div class="label"><a href="#requests"><%= ngettext("Third-party request", "Third-party requests", @site.data["third_party_request_types"]["total"]) %></a></div>
+          <span>Third-party requests:</span>
+          <strong><%= @site.data["third_party_request_types"]["total"] %></strong> requests to <%= @site.data["third_party_request_types"]["unique_hosts"] %> unique hosts
         </li>
         <li>
-          <div class="value"><%= @site.data["third_party_request_types"]["unique_hosts"] %></div>
-          <div class="label"><a href="#requests"><%= ngettext("Unique third-party", "Unique third-parties", @site.data["third_party_request_types"]["unique_hosts"]) %></a></div>
+          <span>Server location:</span>
+          <%= country_from_iso(@conn.assigns.locale, @site.data["geolocation"]) %> &mdash; <%= @site.data["host_ip"] %><sup><a href="https://tools.keycdn.com/geo?host=<%= @site.data["host_ip"] %>">Look up</a></sup>
         </li>
       </ul>
     </div>
+    <div class="url">
+      <ul>
+        <li><%= gettext "Input URL:" %> <%= link @site.input_url, to: @site.input_url, rel: "nofollow" %></li>
+        <li><%= gettext "Final URL:" %> <%= link @site.final_url, to: @site.final_url, rel: "nofollow" %></li>
+      </ul>
+    </div>
   </section>
+</div>
 
 <div class="results">
   <%= if @site.data["geolocation"] do %>
@@ -68,4 +74,59 @@
       </div>
     </section>
   <% end %>
+
+  <%= if @site.data["cookie_count"]["first_party"] == 0 do %>
+    <section class="result">
+      <h3 id="cookies"><%= gettext "First-party cookies" %></h3>
+      <p><%= gettext "No first-party cookies without consent." %></p>
+    </section>
+  <% else %>
+    <section class="result">
+      <h3 id="cookies"><%= gettext "Cookies" %></h3>
+      <p><%= ngettext("<strong>One</strong> first-party cookie.", "<strong>%{count}</strong> first-party cookies.", @site.data["cookie_count"]["first_party"]) |> raw %></p>
+      <p><%= ngettext("<strong>One</strong> third-party cookie.", "<strong>%{count}</strong> third-party cookies.", @site.data["cookie_count"]["third_party"]) |> raw %></p>
+
+      <p><button class="expander" type="button" data-a11y-toggle="cookies-first">Show first-party cookies</button></p>
+
+      <%= render "_cookies.html", cookies: @site.data["cookies"]["first_party"], id: "cookies-first", extra_option: "" %>
+
+      <p><button class="expander" type="button" data-a11y-toggle="cookies-third">Show third-party cookies</button></p>
+
+      <%= render "_cookies.html", cookies: @site.data["cookies"]["third_party"], id: "cookies-third", extra_option: "data-a11y-toggle-open" %>
+    </section>
+  <% end %>
+
+  <section class="result">
+    <%= if @site.data["scheme"] == "https" && Enum.count(@site.data["insecure_first_party_requests"]) > 0 do %>
+      <h3 id="insecure-first-party-requests"><%= gettext "Insecure first-party requests" %></h3>
+      <ul class="no-bullet requests-list">
+        <%= for req <- @site.data["insecure_first_party_requests"] do %>
+          <li>
+            <i class="icon-unlock-alt"></i>
+            <%= req["host"] %>
+            <%= link " (#{truncate(req["url"], 50)})", to: req["url"] %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <%= if @site.data["third_party_request_types"]["total"] == 0 do %>
+      <h3 id"requests"><%= gettext "Third-party requests" %></h3>
+      <p><%= gettext "No third-party requests." %></p>
+      <p><%= gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.data["reg_domain"]) |> raw %></p>
+    <% else %>
+      <h3 id"requests"><%= gettext "Third-party requests" %></h3>
+      <p><strong><%= @site.data["third_party_request_types"]["total"] %></strong> <%= ngettext "request", "requests", @site.data["third_party_request_types"]["total"] %> (<%= ngettext "1 secure", "%{count} secure", @site.data["third_party_request_types"]["secure"] %>, <%= ngettext "%{count} insecure", "%{count} insecure", @site.data["third_party_request_types"]["insecure"] %>) <%= gettext "to" %> <strong><%= @site.data["third_party_request_types"]["unique_hosts"] %></strong> <%= ngettext "unique", "unique", @site.data["third_party_request_types"]["unique_hosts"] %> <%= ngettext "host", "hosts", @site.data["third_party_request_types"]["unique_hosts"] %>.</p>
+      <p><%= gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.data["reg_domain"]) |> raw %></p>
+
+      <p><button class="expander" type="button" data-a11y-toggle="table-requests">Show third-party hosts contacted</button></p>
+
+      <%= render "_requests.html", requests: @site.data["third_party_requests"], id: "table-requests" %>
+
+      <p><button class="expander" type="button" data-a11y-toggle="requests-list">Show full list of third-party requests</button></p>
+
+      <%= render "_request_urls.html", requests: @site.data["third_party_requests"], id: "requests-list" %>
+
+    <% end %>
+  </section>
 </div>

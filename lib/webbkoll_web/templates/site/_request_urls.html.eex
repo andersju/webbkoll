@@ -1,0 +1,13 @@
+<ul class="no-bullet requests-list" id="<%= @id %>">
+  <%= for req <- @requests do %>
+    <li>
+      <%= if String.starts_with?(req["url"], "https") do %>
+        <i class="icon-lock"></i>
+      <% else %>
+        <i class="icon-unlock-alt"></i>
+      <% end %>
+      <%= req["host"] %>
+      <%= link " (#{truncate(req["url"], 50)})", to: req["url"] %>
+    </li>
+  <% end %>
+</ul>

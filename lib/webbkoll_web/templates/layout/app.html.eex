@@ -27,13 +27,20 @@
     <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+
+
+    <!-- Temporary during development -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+    
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="/images/mstile-144x144.png">
 
   <body>
-    <header class="navigation" role="banner">
+    <header class="navigation">
       <div class="navigation-wrapper">
-        <nav role="navigation">
+        <nav>
           <ul id="js-navigation-menu" class="navigation-menu show">
             <li class="nav-link logo">
               <a href="/<%= @conn.assigns.locale %>">
@@ -83,7 +90,7 @@
       </div>
     </header>
 
-    <main role="main">
+    <main>
       <%= render @view_module, @view_template, assigns %>
     </main>
 
@@ -94,13 +101,13 @@
         </p>
         <div class="alpha">
           <p>
-            <%= gettext "Developed by" %> <a href="https://dataskydd.net/"><span class="ds-orange">dataskydd</span><span class="semibold black">.net</a></span>. <%= gettext "Originally funded by" %> <a href="https://www.internetfonden.se">Internetfonden</a> / <a href="https://www.iis.se">IIS</a>.
+            <%= gettext "Developed by" %> <a href="https://dataskydd.net/"><span class="ds-orange">dataskydd</span><span class="semibold black">.net</span></a>. <%= gettext "Originally funded by" %> <a href="https://www.internetfonden.se">Internetfonden</a> / <a href="https://www.iis.se">IIS</a>.
           </p>
           <a href="https://www.internetfonden.se/">
-            <img src="/images/internetfonden.png" />
+            <img src="/images/internetfonden.png" alt="Internetfonden logo" />
           </a>
           <a href="https://www.iis.se/">
-            <img src="/images/iis.png" />
+            <img src="/images/iis.png" alt="Internetfonden logo" />
           </a>
         </div>
 
@@ -113,3 +120,4 @@
     </div>
 
     <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <script src="<%= Routes.static_path(@conn, "/js/a11y-toggle.min.js") %>"></script>

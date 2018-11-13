@@ -6,6 +6,7 @@
 
 @import "navigation";
 @import "icons";
+@import "tooltip";
 
 body {
   margin: 0;
@@ -13,6 +14,67 @@ body {
 
 main {
   padding-top: 1rem;
+}
+
+sup {
+  font-size: 0.6rem;
+}
+
+/*
+.expander {
+  background-color: inherit;
+  border: none;
+  color: inherit;
+  padding: 0;
+
+  &:hover {
+    background-color: inherit;
+    color: inherit;
+  }
+}
+*/
+
+[aria-hidden='true'],
+[data-a11y-toggle]:not([aria-controls]) {
+  display: none;
+}
+
+button[data-a11y-toggle][aria-expanded="false"] {
+  &::before {
+    content: "\25BA";
+    margin-right: 0.5em;
+  }
+}
+
+button[data-a11y-toggle][aria-expanded="true"] {
+  &::before {
+    content: "\25BC";
+    margin-right: 0.5em;
+  }
+}
+
+.icon-fixed {
+  display: inline-block;
+  text-align: center;
+  width: 1.25em;
+}
+
+.icon-empty {
+  display: inline-block;
+  text-align: center;
+  width: 1.25em;
+}
+
+.success {
+  color: #00d900;
+}
+
+.alert {
+  color: red;
+}
+
+.warning {
+  color: gold;
 }
 
 section {
@@ -109,6 +171,7 @@ section {
   background-color: #3b4255; // #5c5857;
   border-bottom: 1px solid #2f2e2d;
   color: white;
+  margin-bottom: 2rem;
   margin-top: -1rem;
   padding-bottom: 2rem;
   padding-top: 1rem;
@@ -119,17 +182,8 @@ section {
     color: white;
   }
 
-  #results-title a,
-  #input-url a {
+  #results-title a {
     text-decoration: underline;
-  }
-}
-
-#input-url {
-  padding-bottom: 0.75em;
-
-  p {
-    margin-bottom: 0.2em;
   }
 }
 
@@ -167,66 +221,30 @@ section {
   }
 }
 
-.stats {
-  $base-spacing: 1.5em !default;
-  $base-font-color: white;
-  $action-color: #477dca !default;
-
-  padding: $base-spacing / 2;
-  padding-left: 0;
-
-  .success {
-    color: #00d900;
-  }
-
-  .alert {
-    color: red;
-  }
-
-  .warning {
-    color: gold;
-  }
-
-  ul {
-    padding: 0;
+section > .summary {
+  @include span-columns(8);
+  span {
+    display: inline-block;
+    width: 10rem;
   }
 
   li {
-    border-right: 1px solid transparentize($base-font-color, 0.8);
-    display: inline;
-    float: left;
-    font-size: modular-scale(4);
-    font-weight: 600;
-    line-height: 1.2; // 1.em
-    padding: 0 0.375em;
-
-    &:first-child {
-      padding-left: 0;
-    }
-
-    &:last-child {
-      border-right: 0;
-    }
-
-    .label {
-      color: $base-font-color;
-      display: block;
-      font-size: 0.4em;
-      font-weight: normal;
-      margin-top: -0.5rem;
-
-      > a {
-        text-decoration: none;
-      }
-    }
+    border-bottom: 1px solid transparentize(white, 0.9);
+    padding-bottom: 0.2rem;
+    padding-top: 0.2rem;
   }
 
-  @include media($mobile) {
-    li {
-      border-right: 0;
-      padding-left: 0;
-    }
+  li:last-child {
+    border-bottom: none;
   }
+}
+
+
+section > .url {
+  @include span-columns(4);
+  color: transparentize(white, 0.4);
+  padding-top: 1rem;
+  text-align: right;
 }
 
 #results {

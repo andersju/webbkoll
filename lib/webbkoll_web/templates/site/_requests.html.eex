@@ -1,0 +1,20 @@
+<div id="<%= @id %>" data-a11y-toggle-open>
+  <table class="requests data" data-sortable="true">
+    <thead>
+      <tr>
+        <th data-default-sort="true"><%= gettext "Host" %></th>
+        <th><%= gettext "Classification" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for host <- get_unique_hosts(@requests, "host") do %>
+        <tr>
+          <td><%= host %></td>
+          <td><%= Webbkoll.Trackers.check(PublicSuffix.registrable_domain(host, ignore_private: true)) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <p><%= gettext(~s|We use Disconnect's <a href="%{url}">open source list of trackers</a> to classify hosts.|, url: "https://github.com/disconnectme/disconnect-tracking-protection") |> raw %></p>
+</div>

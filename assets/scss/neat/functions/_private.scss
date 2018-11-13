@@ -56,22 +56,26 @@
 // Generates a striped background
 @function gradient-stops($grid-columns, $color: $visual-grid-color) {
   $transparent: transparent;
+  $alt-color: darken($color, 10%);
 
   $column-width: flex-grid(1, $grid-columns);
   $gutter-width: flex-gutter($grid-columns);
   $column-offset: $column-width;
+  $alternate: false;
 
-  $values: ($transparent 0, $color 0);
+  $values: ($transparent 0, if($alternate, $color, $alt-color) 0);
 
   @for $i from 1 to $grid-columns*2 {
     @if is-even($i) {
       $values: append($values, $transparent $column-offset, comma);
-      $values: append($values, $color $column-offset, comma);
+      $values: append($values, if($alternate, $color, $alt-color) $column-offset, comma);
       $column-offset: $column-offset + $column-width;
     } @else {
-      $values: append($values, $color $column-offset, comma);
+      $values: append($values, if($alternate, $color, $alt-color) $column-offset, comma);
       $values: append($values, $transparent $column-offset, comma);
       $column-offset: $column-offset + $gutter-width;
+
+      $alternate: not $alternate;
     }
   }
 
@@ -111,4 +115,40 @@
   }
 
   @return $opposite-direction;
+}
+
+
+@function to-number($string) {
+  $string: str-replace($string, " ", "");
+  $strings: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9";
+  $numbers:  0 1 2 3 4 5 6 7 8 9;
+  $result: 0;
+
+  @for $i from 1 through str-length($string) {
+    $character: str-slice($string, $i, $i);
+    $index: index($strings, $character);
+
+    @if not $index {
+      @warn "Unknown character `#{$character}`.";
+      @return false;
+    }
+
+    $number: nth($numbers, $index);
+    $result: $result * 10 + $number;
+  }
+
+  @return $result;
+}
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    $first: str-slice($string, 1, $index - 1);
+    $last-slice: str-slice($string, $index + str-length($search));
+    $last: str-replace($last-slice, $search, $replace);
+    @return $first + $replace + $last;
+  }
+
+  @return $string;
 }

@@ -1,10 +1,10 @@
-<table class="cookies data" data-sortable="true">
+<table id="<%= @id %>" class="cookies data" data-sortable="true" <%= @extra_option %>>
   <thead>
     <tr>
-      <th width="200" data-default-sort="true"><%= gettext "Domain" %></th>
-      <th width="200"><%= gettext "Name" %></th>
-      <th width="150"><%= gettext "Value" %></th>
-      <th width="150"><%= gettext "Expires on" %></th>
+      <th class="domain" data-default-sort="true"><%= gettext "Domain" %></th>
+      <th class="name"><%= gettext "Name" %></th>
+      <th class="value"><%= gettext "Value" %></th>
+      <th class="expires"><%= gettext "Expires on" %></th>
     </tr>
   </thead>
   <tbody>
