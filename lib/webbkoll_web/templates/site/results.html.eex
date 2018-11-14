@@ -4,10 +4,10 @@
       <h2>
         <span class="light"><%= gettext "Results for" %></span>
         <span class="semibold">
-            <%= if String.contains?(@site.data["host"], "xn--") do %>
-              <%= idna_from_punycode(@site.data["host"]) %>
+            <%= if String.contains?(@site.host, "xn--") do %>
+              <%= idna_from_punycode(@site.host) %>
             <% else %>
-              <%= @site.data["host"] %>
+              <%= @site.host %>
             <% end %>
         </span>
       </h2>
@@ -23,7 +23,7 @@
       <ul>
         <li>
           <span>HTTPS by default:</span>
-          <%= if @site.data["scheme"] == "https" do %>
+          <%= if @site.scheme == "https" do %>
             <%= icon(:pass) %> Yes, redirects http:// -> https://
           <% else %>
             <%= icon(:fail) %> No. Insecure; does not redirect http:// -> https://
@@ -32,7 +32,7 @@
         <li>
           <span>Referrer Policy:</span>
 
-          <%= case @site.data["referrer_policy"]["status"] do %>
+          <%= case @site.referrer_policy.status do %>
             <% "success" -> %> <%= icon(:pass) %> Referrers not leaked
             <% "warning" -> %> <%= icon(:warn) %> Referrers partially leaked
             <% "alert" -> %> <%= icon(:fail) %> Referrers leaked
@@ -41,16 +41,20 @@
         </li>
         <li>
           <span>Cookies:</span>
-          <strong><%= @site.data["cookie_count"]["first_party"] + @site.data["cookie_count"]["third_party"] %></strong>
-          (<%= @site.data["cookie_count"]["first_party"] %> first-party; <%= @site.data["cookie_count"]["third_party"] %> third-party)
+          <strong><%= @site.cookie_count.first_party + @site.cookie_count.third_party %></strong>
+          <%= if (@site.cookie_count.first_party + @site.cookie_count.third_party) > 0 do %>
+          (<%= @site.cookie_count.first_party %> first-party; <%= @site.cookie_count.third_party %> third-party)
+          <% end %>
         </li>
         <li>
           <span>Third-party requests:</span>
-          <strong><%= @site.data["third_party_request_types"]["total"] %></strong> requests to <%= @site.data["third_party_request_types"]["unique_hosts"] %> unique hosts
+          <strong><%= @site.third_party_request_types.total %></strong>
+          <%= if @site.third_party_request_types.total > 0 do %> requests to <%= @site.third_party_request_types.unique_hosts %> unique hosts
+          <% end %>
         </li>
         <li>
           <span>Server location:</span>
-          <%= country_from_iso(@conn.assigns.locale, @site.data["geolocation"]) %> &mdash; <%= @site.data["host_ip"] %><sup><a class="external" href="https://tools.keycdn.com/geo?host=<%= @site.data["host_ip"] %>">Look up</a></sup>
+          <%= country_from_iso(@conn.assigns.locale, @site.geolocation) %> &mdash; <%= @site.host_ip %><sup><a class="external" href="https://tools.keycdn.com/geo?host=<%= @site.host_ip %>">Look up</a></sup>
         </li>
       </ul>
     </div>
@@ -67,7 +71,7 @@
 
   <%= render "_https.html", site: @site %>
 
-  <%= if @site.data["cookie_count"]["first_party"] == 0 do %>
+  <%= if @site.cookie_count.first_party == 0 do %>
     <section class="result">
       <h3 id="cookies"><i class="fas fa-cookie-bite fa-fw"></i> <%= gettext "First-party cookies" %></h3>
       <p><%= gettext "No first-party cookies without consent." %></p>
@@ -75,24 +79,24 @@
   <% else %>
     <section class="result">
       <h3 id="cookies"><i class="fas fa-cookie-bite fa-fw"></i> <%= gettext "Cookies" %></h3>
-      <p><%= ngettext("<strong>One</strong> first-party cookie.", "<strong>%{count}</strong> first-party cookies.", @site.data["cookie_count"]["first_party"]) |> raw %></p>
-      <p><%= ngettext("<strong>One</strong> third-party cookie.", "<strong>%{count}</strong> third-party cookies.", @site.data["cookie_count"]["third_party"]) |> raw %></p>
+      <p><%= ngettext("<strong>One</strong> first-party cookie.", "<strong>%{count}</strong> first-party cookies.", @site.cookie_count.first_party) |> raw %></p>
+      <p><%= ngettext("<strong>One</strong> third-party cookie.", "<strong>%{count}</strong> third-party cookies.", @site.cookie_count.third_party) |> raw %></p>
 
       <p><button class="expander" type="button" data-a11y-toggle="cookies-first">Show first-party cookies</button></p>
 
-      <%= render "_cookies.html", cookies: @site.data["cookies"]["first_party"], label: "First-party cookies", id: "cookies-first", extra_option: "" %>
+      <%= render "_cookies.html", cookies: @site.cookies.first_party, label: "First-party cookies", id: "cookies-first", extra_option: "" %>
 
       <p><button class="expander" type="button" data-a11y-toggle="cookies-third">Show third-party cookies</button></p>
 
-      <%= render "_cookies.html", cookies: @site.data["cookies"]["third_party"], label: "Third-party cookies", id: "cookies-third", extra_option: "data-a11y-toggle-open" %>
+      <%= render "_cookies.html", cookies: @site.cookies.third_party, label: "Third-party cookies", id: "cookies-third", extra_option: "data-a11y-toggle-open" %>
     </section>
   <% end %>
 
   <section class="result">
-    <%= if @site.data["scheme"] == "https" && Enum.count(@site.data["insecure_first_party_requests"]) > 0 do %>
+    <%= if @site.scheme == "https" && Enum.count(@site.insecure_first_party_requests) > 0 do %>
       <h3 id="insecure-first-party-requests"><%= gettext "Insecure first-party requests" %></h3>
       <ul class="no-bullet requests-list">
-        <%= for req <- @site.data["insecure_first_party_requests"] do %>
+        <%= for req <- @site.insecure_first_party_requests do %>
           <li>
             <i class="icon-unlock-alt"></i>
             <%= req["host"] %>
@@ -102,31 +106,31 @@
       </ul>
     <% end %>
 
-    <%= if @site.data["third_party_request_types"]["total"] == 0 do %>
+    <%= if @site.third_party_request_types.total == 0 do %>
       <h3 id="requests"><i class="fas fa-network-wired fa-fw"></i> <%= gettext "Third-party requests" %></h3>
       <p><%= gettext "No third-party requests." %></p>
-      <p><%= gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.data["reg_domain"]) |> raw %></p>
+      <p><%= gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.reg_domain) |> raw %></p>
     <% else %>
       <h3 id="requests"><i class="fas fa-network-wired fa-fw"></i> <%= gettext "Third-party requests" %></h3>
-      <p><strong><%= @site.data["third_party_request_types"]["total"] %></strong> <%= ngettext "request", "requests", @site.data["third_party_request_types"]["total"] %> (<%= ngettext "1 secure", "%{count} secure", @site.data["third_party_request_types"]["secure"] %>, <%= ngettext "%{count} insecure", "%{count} insecure", @site.data["third_party_request_types"]["insecure"] %>) <%= gettext "to" %> <strong><%= @site.data["third_party_request_types"]["unique_hosts"] %></strong> <%= ngettext "unique", "unique", @site.data["third_party_request_types"]["unique_hosts"] %> <%= ngettext "host", "hosts", @site.data["third_party_request_types"]["unique_hosts"] %>.</p>
-      <p><%= gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.data["reg_domain"]) |> raw %></p>
+      <p><strong><%= @site.third_party_request_types.total %></strong> <%= ngettext "request", "requests", @site.third_party_request_types.total %> (<%= ngettext "1 secure", "%{count} secure", @site.third_party_request_types.secure %>, <%= ngettext "%{count} insecure", "%{count} insecure", @site.third_party_request_types.insecure %>) <%= gettext "to" %> <strong><%= @site.third_party_request_types.unique_hosts %></strong> <%= ngettext "unique", "unique", @site.third_party_request_types.unique_hosts %> <%= ngettext "host", "hosts", @site.third_party_request_types.unique_hosts %>.</p>
+      <p><%= gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.reg_domain) |> raw %></p>
 
       <p><button class="expander" type="button" data-a11y-toggle="table-requests">Show third-party hosts</button></p>
 
-      <%= render "_requests.html", requests: @site.data["third_party_requests"], id: "table-requests" %>
+      <%= render "_requests.html", requests: @site.third_party_requests, id: "table-requests" %>
 
       <p><button class="expander" type="button" data-a11y-toggle="requests-list">Show full list of third-party requests</button></p>
 
-      <%= render "_request_urls.html", requests: @site.data["third_party_requests"], id: "requests-list" %>
+      <%= render "_request_urls.html", requests: @site.third_party_requests, id: "requests-list" %>
     <% end %>
   </section>
 
-  <%= if @site.data["geolocation"] do %>
+  <%= if @site.geolocation do %>
     <section class="result">
       <h3 id="server-location"><i class="fas fa-globe fa-fw"></i> <%= gettext "Server location" %></h3>
       <div class="alpha">
-        <p><%= gettext(~s|The server <strong>%{domain}</strong> (%{host_ip}) appears to have been located in <strong>%{country}</strong> during our test.|, domain: @site.data["host"], host_ip: @site.data["host_ip"], country: country_from_iso(@conn.assigns.locale, @site.data["geolocation"])) |> raw %></p>
-        <p><a class="external" href="https://tools.keycdn.com/geo?host=<%= @site.data["host_ip"] %>">See more information</a> (e.g., provider) about this IP address using KeyCDN's tool.</p>
+        <p><%= gettext(~s|The server <strong>%{domain}</strong> (%{host_ip}) appears to have been located in <strong>%{country}</strong> during our test.|, domain: @site.host, host_ip: @site.host_ip, country: country_from_iso(@conn.assigns.locale, @site.geolocation)) |> raw %></p>
+        <p><a class="external" href="https://tools.keycdn.com/geo?host=<%= @site.host_ip %>">See more information</a> (e.g., provider) about this IP address using KeyCDN's tool.</p>
       </div>
       <div class="beta">
         <p><i class="fas fa-exclamation-circle"></i> <%= gettext(~s|Some sites use CDNs &ndash; <a class="external" href="https://en.wikipedia.org/wiki/Content_delivery_network">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France.|) |> raw %></p>

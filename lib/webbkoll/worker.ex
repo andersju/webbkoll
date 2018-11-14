@@ -127,41 +127,36 @@ defmodule Webbkoll.Worker do
          referrer_policy_in_use =
            check_referrer_policy_in_use(meta_referrer, header_csp_referrer, header_referrer) do
       %{
-        "input_url" => json["input_url"],
-        "final_url" => json["final_url"],
-        "reg_domain" => reg_domain,
-        "host" => url.host,
-        "host_ip" => host_ip,
-        "geolocation" => get_geolocation_by_ip(host_ip),
-        "scheme" => url.scheme,
-        "headers" => headers,
-        "cookies" => cookies,
-        "cookie_count" => get_cookie_count(cookies),
-        "cookie_domains" => Enum.count(get_unique_hosts(cookies["third_party"], "domain")),
-        "insecure_first_party_requests" => insecure_first_party_requests,
-        "third_party_requests" => third_party_requests,
-        "third_party_request_types" => third_party_request_types,
-        "insecure_requests_count" =>
-          third_party_request_types["insecure"] + Enum.count(insecure_first_party_requests),
-        "meta_referrer" => meta_referrer,
-        "meta_csp" => get_meta(json["content"], "http-equiv", "content-security-policy"),
-        "header_csp" => get_header(headers, "content-security-policy"),
-        "header_csp_referrer" => header_csp_referrer,
-        "header_hsts" => HeaderAnalysis.hsts(headers["strict-transport-security"], url.host, reg_domain),
-        "header_referrer" => header_referrer,
-        "referrer_policy" => check_referrer_policy(referrer_policy_in_use),
-        "services" => check_services(third_party_requests)
+        input_url: json["input_url"],
+        final_url: json["final_url"],
+        reg_domain: reg_domain,
+        host: url.host,
+        host_ip: host_ip,
+        geolocation: get_geolocation_by_ip(host_ip),
+        scheme: url.scheme,
+        headers: headers,
+        cookies: cookies,
+        cookie_count: get_cookie_count(cookies),
+        cookie_domains: Enum.count(get_unique_hosts(cookies.third_party, "domain")),
+        insecure_first_party_requests: insecure_first_party_requests,
+        third_party_requests: third_party_requests,
+        third_party_request_types: third_party_request_types,
+        insecure_requests_count:
+         third_party_request_types.insecure + Enum.count(insecure_first_party_requests),
+        meta_referrer: meta_referrer,
+        meta_csp: get_meta(json["content"], "http-equiv", "content-security-policy"),
+        header_csp: get_header(headers, "content-security-policy"),
+        header_csp_referrer: header_csp_referrer,
+        header_hsts: HeaderAnalysis.hsts(headers["strict-transport-security"], url.host, reg_domain),
+        header_referrer: header_referrer,
+        referrer_policy: check_referrer_policy(referrer_policy_in_use),
+        services: check_services(third_party_requests)
       }
     end
   end
 
   defp save(data, id) do
-    update_site(id, %{
-      status: "done",
-      input_url: data["input_url"],
-      final_url: data["final_url"],
-      data: data
-    })
+    update_site(id, Map.merge(%{status: "done"}, data))
   end
 
   defp get_registerable_domain(host) do
@@ -210,13 +205,13 @@ defmodule Webbkoll.Worker do
     secure = Enum.count(requests, fn request -> String.starts_with?(request["url"], "https://") end)
     unique_hosts = requests |> get_unique_hosts("host") |> Enum.count()
 
-    %{"total" => total, "secure" => secure, "insecure" => total - secure, "unique_hosts" => unique_hosts}
+    %{total: total, secure: secure, insecure: total - secure, unique_hosts: unique_hosts}
   end
 
   defp get_cookies(cookies, registerable_domain) do
     cookies
     |> Enum.split_with(fn cookie -> split_by_domain(cookie, registerable_domain) end)
-    |> (&(%{"first_party" => elem(&1, 0), "third_party" => elem(&1, 1)})).()
+    |> (&(%{first_party: elem(&1, 0), third_party: elem(&1, 1)})).()
   end
 
   defp split_by_domain(x, registerable_domain) do
@@ -225,8 +220,8 @@ defmodule Webbkoll.Worker do
 
   defp get_cookie_count(cookies) do
     %{
-      "first_party" => Enum.count(cookies["first_party"]),
-      "third_party" => Enum.count(cookies["third_party"])
+      first_party: Enum.count(cookies.first_party),
+      third_party: Enum.count(cookies.third_party)
     }
   end
 
@@ -303,7 +298,7 @@ defmodule Webbkoll.Worker do
 
     cond do
       referrer in ["never", "no-referrer", "same-origin"] ->
-        %{"status" => "success", "icon" => "icon-umbrella2 success"}
+        %{status: "success", icon: "icon-umbrella2 success"}
 
       referrer in [
         "origin",
@@ -312,13 +307,13 @@ defmodule Webbkoll.Worker do
         "strict-origin",
         "strict-origin-when-cross-origin"
       ] ->
-        %{"status" => "warning", "icon" => "icon-raindrops2 warning"}
+        %{status: "warning", icon: "icon-raindrops2 warning"}
 
       referrer in ["no-referrer-when-down-grade", "default", "unsafe-url", "always", "", nil] ->
-        %{"status" => "alert", "icon" => "icon-raindrops2 alert"}
+        %{status: "alert", icon: "icon-raindrops2 alert"}
 
       true ->
-        %{"status" => "other", "icon" => ""}
+        %{status: "other", icon: ""}
     end
   end
 end
