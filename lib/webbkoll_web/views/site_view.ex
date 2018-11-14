@@ -26,4 +26,9 @@ defmodule WebbkollWeb.SiteView do
       _ -> gettext("Referrers are (probably) leaked")
     end
   end
+
+  def icon(:pass), do: content_tag(:i, "", class: "fas fa-check fa-fw")
+  def icon(:pass2), do: content_tag(:i, "", class: "fas fa-check-square fa-fw")
+  def icon(:fail), do: content_tag(:i, "", class: "fas fa-times fa-fw")
+  def icon(:warn), do: content_tag(:i, "", class: "fas fa-exclamation-circle fa-fw")
 end

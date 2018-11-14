@@ -1,4 +1,5 @@
 defmodule Webbkoll.Worker do
+  alias Webbkoll.HeaderAnalysis, as: HeaderAnalysis
   import Webbkoll.Helpers
 
   @max_attempts Application.get_env(:webbkoll, :max_attempts)
@@ -14,11 +15,11 @@ defmodule Webbkoll.Worker do
       end)
 
       url
-      |> check_if_https_only
+      |> check_if_https_only()
       |> fetch(refresh, backend_url)
       |> handle_response(id)
       |> decode_response(id)
-      |> process_json
+      |> process_json()
       |> save(id)
     end
   end
@@ -146,7 +147,7 @@ defmodule Webbkoll.Worker do
         "meta_csp" => get_meta(json["content"], "http-equiv", "content-security-policy"),
         "header_csp" => get_header(headers, "content-security-policy"),
         "header_csp_referrer" => header_csp_referrer,
-        "header_hsts" => headers["strict-transport-security"],
+        "header_hsts" => HeaderAnalysis.hsts(headers["strict-transport-security"], url.host, reg_domain),
         "header_referrer" => header_referrer,
         "referrer_policy" => check_referrer_policy(referrer_policy_in_use),
         "services" => check_services(third_party_requests)

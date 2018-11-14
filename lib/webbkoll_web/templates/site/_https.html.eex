@@ -19,11 +19,32 @@
 </section>
 <section class="result">
   <%= if @site.data["scheme"] == "https" do %>
-    <%= if @site.data["header_hsts"] do %>
-      <h4 id="hsts"><i class="fas fa-check fa-fw"></i> Strict Transport Security enabled</h4>
-      <p><%= gettext(~s|HSTS enabled with value <code>%{value}</code>.|, value: safe_to_string(html_escape(@site.data["header_hsts"]))) |> raw %></p>
+    <%= if @site.data["header_hsts"].host.set do %>
+      <h4 id="hsts">
+        <%= if @site.data["header_hsts"].host.pass do %>
+        <%= icon(:pass2) %>
+        <% else %>
+        <%= icon(:fail) %>
+        <% end %>
+        Strict Transport Security
+      </h4>
+
+      <%= render "_hsts_host.html", host: @site.data["host"], hsts: @site.data["header_hsts"].host %>
+
+      <%= if @site.data["host"] != @site.data["reg_domain"] do %>
+        <%= if Map.has_key?(@site.data["header_hsts"], :base) do %>
+          <%= if @site.data["header_hsts"].base.set do %>
+          <%= render "_hsts_host.html", host: @site.data["reg_domain"], hsts: @site.data["header_hsts"].base %>
+          <% else %>
+          <p><%= icon(:warn) %> HSTS not set on base domain https://<%= @site.data["reg_domain"] %>.</p>
+          <% end %>
+        <% else %>
+        <p>Base domain (https://<%= @site.data["reg_domain"] %>) HSTS status unknown.</p>
+        <% end %>
+      <% end %>
+
     <% else %>
-      <h4 id="hsts"><i class="fas fa-times fa-fw"></i> Strict Transport Security not enabled</h4>
+    <h4 id="hsts"><%= icon(:fail) %> Strict Transport Security</h4>
     <% end %>
   <% end %>
 </section>

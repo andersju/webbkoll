@@ -135,4 +135,31 @@ defmodule Webbkoll.Helpers do
     |> :idna.from_ascii()
     |> List.to_string()
   end
+
+  def get_headers(url) when is_binary(url) do
+    url
+    |> HTTPoison.head()
+    |> handle_get_headers()
+  end
+  def handle_get_headers({:ok, response}) do
+    {:ok, Enum.map(response.headers, fn {k, v} -> {String.downcase(k), v} end)}
+  end
+  def handle_get_headers({:error, reason}) do
+    {:error, reason}
+  end
+
+  def find_header(url, header) do
+    url
+    |> get_headers()
+    |> handle_find_header(header)
+  end
+  defp handle_find_header({:error, reason}, _), do: {:error, reason}
+  defp handle_find_header({:ok, headers}, header) do
+    headers
+    |> Enum.find(fn {k, _} -> k == header end)
+    |> case do
+      nil -> {:ok, nil}
+      {_, v} -> {:ok, v}
+    end
+  end
 end

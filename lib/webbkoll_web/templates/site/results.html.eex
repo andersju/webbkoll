@@ -24,19 +24,19 @@
         <li>
           <span>HTTPS by default:</span>
           <%= if @site.data["scheme"] == "https" do %>
-            <i class="icon-check icon-fixed success"></i> Yes, redirects http:// -> https://
+            <%= icon(:pass) %> Yes, redirects http:// -> https://
           <% else %>
-            <i class="icon-times icon-fixed alert"></i> No. Insecure; does not redirect http:// -> https://
+            <%= icon(:fail) %> No. Insecure; does not redirect http:// -> https://
           <% end %>
         </li>
         <li>
-          <span>Referrers:</span>
+          <span>Referrer Policy:</span>
 
           <%= case @site.data["referrer_policy"]["status"] do %>
-            <%= "success" -> %> <i class="icon-check icon-fixed success"></i> Not leaked
-            <%= "warning" -> %> <i class="icon-times icon-fixed warning"></i> Partially leaked
-            <%= "alert" -> %> <i class="icon-times icon-fixed alert"></i> Leaked
-            <%= _ -> %> Unknown
+            <% "success" -> %> <%= icon(:pass) %> Referrers not leaked
+            <% "warning" -> %> <%= icon(:warn) %> Referrers partially leaked
+            <% "alert" -> %> <%= icon(:fail) %> Referrers leaked
+            <% _ -> %> Unknown
           <% end %>
         </li>
         <li>
