@@ -34,6 +34,18 @@ sup {
 }
 */
 
+a.external::after {
+  content: "\f35d";
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-left: 4px;
+}
+
 [aria-hidden='true'],
 [data-a11y-toggle]:not([aria-controls]) {
   display: none;

@@ -1,0 +1,29 @@
+<section class="result">
+  <%= if @site.data["scheme"] == "https" do %>
+    <h3 id="https"><i class="fas fa-lock fa-fw"></i> <%= gettext "HTTPS by default" %></h3>
+  <% else %>
+    <h3 id="https"><i class="fas fa-unlock-alt fa-fw"></i> <%= gettext "Insecure: HTTPS not used by default" %></h3>
+  <% end %>
+  <div class="alpha">
+    <%= if @site.data["scheme"] == "https" do %>
+      <p><%= raw(gettext "<code>%{domain}</code> uses HTTPS by default.", domain: @site.data["host"]) %></p>
+    <% else %>
+      <p><%= raw(gettext "<code>%{domain}</code> does <strong>not</strong> use HTTPS by default.", domain: @site.data["host"]) %></p>
+    <% end %>
+    <p>
+    </p>
+  </div>
+  <div class="beta">
+    <p></p>
+  </div>
+</section>
+<section class="result">
+  <%= if @site.data["scheme"] == "https" do %>
+    <%= if @site.data["header_hsts"] do %>
+      <h4 id="hsts"><i class="fas fa-check fa-fw"></i> Strict Transport Security enabled</h4>
+      <p><%= gettext(~s|HSTS enabled with value <code>%{value}</code>.|, value: safe_to_string(html_escape(@site.data["header_hsts"]))) |> raw %></p>
+    <% else %>
+      <h4 id="hsts"><i class="fas fa-times fa-fw"></i> Strict Transport Security not enabled</h4>
+    <% end %>
+  <% end %>
+</section>

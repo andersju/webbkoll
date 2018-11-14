@@ -1,4 +1,5 @@
 <div id="<%= @id %>" data-a11y-toggle-open>
+  <h4>Third-party hosts contacted</h4>
   <table class="requests data" data-sortable="true">
     <thead>
       <tr>

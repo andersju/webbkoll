@@ -8,7 +8,7 @@ defmodule WebbkollWeb.Router do
     plug(:fetch_flash)
     plug(:protect_from_forgery)
     plug(:put_secure_browser_headers)
-    plug(Webbkoll.MoreSecureHeaders)
+    #plug(Webbkoll.MoreSecureHeaders)
     plug(Webbkoll.Locale, @default_locale)
   end
 
