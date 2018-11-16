@@ -169,22 +169,22 @@ WantedBy=multi-user.target
   * More translations?
   * More? Let me know!
 
-## Credits & things used
-  Frontend:
+## Credits & licenses
+Frontend:
   * [Phoenix Framework](http://www.phoenixframework.org/) (MIT license) by Chris McCord
-  * [Bourbon](https://github.com/thoughtbot/bourbon), [Neat](https://github.com/thoughtbot/neat), [Bitters](https://github.com/thoughtbot/bitters), [Refills](https://github.com/thoughtbot/refills) (MIT license) by thoughtbot
-  * [Sortable](https://github.com/HubSpot/sortable) (MIT license) by Adam Schwartz
-  * [Font Awesome](https://fortawesome.github.io/Font-Awesome/) (SIL OFL 1.1) by Dave Gandy
-  * [Disconnect's open source list of trackers](https://github.com/disconnectme/disconnect-tracking-protection) (GPLv3) by Disconnect, Inc.
-  * GeoLite2 data created by MaxMind (CC BY-SA 4.0), available from [http://www.maxmind.com](http://www.maxmind.com)
-  * JSON for ISO 3166-1 country code i18n from [node-i18n-iso-countries
-](https://github.com/michaelwittig/node-i18n-iso-countries) (MIT license)
+  * Header analysis code in `lib/webbkoll/header_analysis.ex` and `test/webkoll/csp_test.exs` is based on work by April King for [Mozilla HTTP Observatory](https://github.com/mozilla/http-observatory), Mozilla Public License Version 2.0
+  * [Bourbon](https://github.com/thoughtbot/bourbon), [Neat](https://github.com/thoughtbot/neat), [Bitters](https://github.com/thoughtbot/bitters), [Refills](https://github.com/thoughtbot/refills) (`assets/scss/{base,bourbon,neat}`) (MIT license) by thoughtbot
+  * [Font Awesome](https://fortawesome.github.io/Font-Awesome/) (`assets/static/fonts`) (SIL OFL 1.1) by Dave Gandy
+  * [Disconnect's open source list of trackers](https://github.com/disconnectme/disconnect-tracking-protection) (`priv/services.json`) (GPLv3) by Disconnect, Inc.
+  * GeoLite2 data created by MaxMind (CC BY-SA 4.0), available from [http://www.maxmind.com](http://www.maxmind.com). (Not included in the repository, but automatically downloaded to `priv/GeoLite2-Country.mmdb.gz`.)
+  * JSON for ISO 3166-1 country code i18n from [node-i18n-iso-countries](https://github.com/michaelwittig/node-i18n-iso-countries) (`priv/{en,sv}.json`) (MIT license)
 
-  Backend:
+Backend:
   * [Puppeteer](https://github.com/GoogleChrome/puppeteer) (Apache License 2.0) by the Chrome DevTools team
   * [Express](https://github.com/expressjs) (MIT license)
 
-## License
+For the project code in general (things not noted above):
+
     The MIT License (MIT)
 
     Copyright (c) 2016 Anders Jensen-Urstad

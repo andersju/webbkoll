@@ -147,7 +147,7 @@ defmodule Webbkoll.Worker do
         meta_csp: get_meta(json["content"], "http-equiv", "content-security-policy"),
         header_csp: get_header(headers, "content-security-policy"),
         header_csp_referrer: header_csp_referrer,
-        header_hsts: HeaderAnalysis.hsts(headers["strict-transport-security"], url.host, reg_domain),
+        header_hsts: check_hsts(headers["strict-transport-security"], url.host, reg_domain),
         header_referrer: header_referrer,
         referrer_policy: check_referrer_policy(referrer_policy_in_use),
         services: check_services(third_party_requests)
@@ -244,6 +244,19 @@ defmodule Webbkoll.Worker do
     end
   end
 
+  def get_http_equiv_csp(content) do
+    content
+    |> Floki.find("meta[http-equiv]")
+    |> Enum.reduce([], fn x, acc ->
+      if (Floki.attribute(x, "http-equiv") |> Floki.text |> String.downcase) == "content-security-policy" do
+        acc ++ Floki.attribute(x, "content")
+      else
+        acc
+      end
+    end)
+    |> Enum.join(";")
+  end
+
   defp get_by_regex(nil, _), do: nil
 
   defp get_by_regex(string, regex) do
@@ -314,6 +327,17 @@ defmodule Webbkoll.Worker do
 
       true ->
         %{status: "other", icon: ""}
+    end
+  end
+
+  defp check_hsts(header, host, reg_domain) do
+    if host == reg_domain do
+      %{host: HeaderAnalysis.hsts(header)}
+    else
+      case find_header("https://#{reg_domain}", "strict-transport-security") do
+        {:ok, reg_domain_header} -> %{host: HeaderAnalysis.hsts(header), base: HeaderAnalysis.hsts(reg_domain_header)}
+        {:error, _} -> %{host: HeaderAnalysis.hsts(header)}
+      end
     end
   end
 end
