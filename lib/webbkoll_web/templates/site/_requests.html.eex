@@ -1,21 +1,32 @@
-<div id="<%= @id %>" data-a11y-toggle-open>
-  <h4>Third-party hosts contacted</h4>
-  <table class="requests data" data-sortable>
-    <thead>
-      <tr>
-        <th data-sort-default><%= gettext "Host" %></th>
-        <th><%= gettext "Classification" %></th>
-      </tr>
-    </thead>
-    <tbody>
-      <%= for host <- get_unique_hosts(@requests, "host") do %>
-        <tr>
-          <td><%= host %></td>
-          <td><%= Webbkoll.Trackers.check(PublicSuffix.registrable_domain(host, ignore_private: true)) %></td>
-        </tr>
+<section class="result">
+  <%= if @site.scheme == "https" && Enum.count(@site.insecure_first_party_requests) > 0 do %>
+    <h3 id="insecure-first-party-requests"><%= gettext "Insecure first-party requests" %></h3>
+    <ul class="no-bullet requests-list">
+      <%= for req <- @site.insecure_first_party_requests do %>
+        <li>
+          <i class="icon-unlock-alt"></i>
+          <%= req["host"] %>
+          <%= link " (#{truncate(req["url"], 50)})", to: req["url"] %>
+        </li>
       <% end %>
-    </tbody>
-  </table>
+    </ul>
+  <% end %>
 
-  <p><%= gettext(~s|We use Disconnect's <a href="%{url}">open source list of trackers</a> to classify hosts.|, url: "https://github.com/disconnectme/disconnect-tracking-protection") |> raw %></p>
-</div>
+  <%= if @site.third_party_request_types.total == 0 do %>
+    <h3 id="requests"><i class="fas fa-network-wired fa-fw"></i> <%= gettext "Third-party requests" %></h3>
+    <p><%= gettext "No third-party requests." %></p>
+    <p><%= gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.reg_domain) |> raw %></p>
+  <% else %>
+    <h3 id="requests"><i class="fas fa-network-wired fa-fw"></i> <%= gettext "Third-party requests" %></h3>
+    <p><strong><%= @site.third_party_request_types.total %></strong> <%= ngettext "request", "requests", @site.third_party_request_types.total %> (<%= ngettext "1 secure", "%{count} secure", @site.third_party_request_types.secure %>, <%= ngettext "%{count} insecure", "%{count} insecure", @site.third_party_request_types.insecure %>) <%= gettext "to" %> <strong><%= @site.third_party_request_types.unique_hosts %></strong> <%= ngettext "unique", "unique", @site.third_party_request_types.unique_hosts %> <%= ngettext "host", "hosts", @site.third_party_request_types.unique_hosts %>.</p>
+    <p><%= gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.reg_domain) |> raw %></p>
+
+    <p><button class="expander" type="button" data-a11y-toggle="table-requests">Show third-party hosts</button></p>
+
+    <%= render "_request_table.html", requests: @site.third_party_requests, id: "table-requests" %>
+
+    <p><button class="expander" type="button" data-a11y-toggle="requests-list">Show full list of third-party requests</button></p>
+
+    <%= render "_request_urls.html", requests: @site.third_party_requests, id: "requests-list" %>
+  <% end %>
+</section>

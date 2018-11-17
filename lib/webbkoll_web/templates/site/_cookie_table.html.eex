@@ -1,0 +1,25 @@
+<div id="<%= @id %>" <%= @extra_option %>>
+  <h4><%= @label %></h4>
+  <table class="cookies data" data-sortable>
+    <thead>
+      <tr>
+        <th class="domain" data-sort-default><%= gettext "Domain" %></th>
+        <th class="name"><%= gettext "Name" %></th>
+        <th class="value"><%= gettext "Value" %></th>
+        <th class="expires"><%= gettext "Expires on" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= for cookie <- @cookies do %>
+        <tr>
+          <td><%= cookie["domain"] %></td>
+          <td><%= cookie["name"] %></td>
+          <td><%= truncate(cookie["value"], 20) %></td>
+          <td>
+            <%= if cookie["session"] == true, do: "session", else: format_timestamp(cookie["expires"]) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
