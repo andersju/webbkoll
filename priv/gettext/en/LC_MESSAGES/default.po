@@ -790,7 +790,7 @@ msgid "The server <strong>%{domain}</strong> (%{host_ip}) appears to have been l
 msgstr ""
 
 #: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "The HTTP header descriptions are based on the ones from <a href=\"https://securityheaders.io/\">securityheaders.io</a> by Scott Helme, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.en_GB\">CC-BY-SA 4.0</a>. Text about HTTPS partly adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain). <a href=\"http://www.maxmind.com\">MaxMind's</a> GeoLite2 country database (CC-BY-SA 4.0) is used for GeoIP lookups."
+msgid "The HTTP header descriptions are based on the ones from <a href=\"https://securityheaders.com/\">securityheaders.com</a> by Scott Helme, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.en_GB\">CC-BY-SA 4.0</a>. Text about HTTPS partly adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain). <a href=\"http://www.maxmind.com\">MaxMind's</a> GeoLite2 country database (CC-BY-SA 4.0) is used for GeoIP lookups."
 msgstr ""
 
 #: lib/webbkoll_web/templates/site/results.html.slime:1
