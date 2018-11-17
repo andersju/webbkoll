@@ -1,75 +1,10 @@
-<div id="results-header">
-  <section id="results-title">
-    <div class="alpha">
-      <h2>
-        <span class="light"><%= gettext "Results for" %></span>
-        <span class="semibold">
-            <%= if String.contains?(@site.host, "xn--") do %>
-              <%= idna_from_punycode(@site.host) %>
-            <% else %>
-              <%= @site.host %>
-            <% end %>
-        </span>
-      </h2>
-    </div>
-    <div class="beta">
-      <a class="button" href="<%= Routes.site_path(@conn, :check, @conn.assigns.locale, url: @site.input_url, refresh: "on") %>"><i class="icon-refresh"></i><%= gettext("Check again") %></a>
-      <i class="icon-clock-o"></i><%= format_site_time(@site.updated_at) %>
-    </div>
-  </section>
-
-  <section>
-    <div class="summary">
-      <ul>
-        <li>
-          <span>HTTPS by default:</span>
-          <%= if @site.scheme == "https" do %>
-            <%= icon(:pass) %> Yes, redirects http:// -> https://
-          <% else %>
-            <%= icon(:fail) %> No. Insecure; does not redirect http:// -> https://
-          <% end %>
-        </li>
-        <li>
-          <span>Referrer Policy:</span>
-
-          <%= case @site.referrer_policy.status do %>
-            <% "success" -> %> <%= icon(:pass) %> Referrers not leaked
-            <% "warning" -> %> <%= icon(:warn) %> Referrers partially leaked
-            <% "alert" -> %> <%= icon(:fail) %> Referrers leaked
-            <% _ -> %> Unknown
-          <% end %>
-        </li>
-        <li>
-          <span>Cookies:</span>
-          <strong><%= @site.cookie_count.first_party + @site.cookie_count.third_party %></strong>
-          <%= if (@site.cookie_count.first_party + @site.cookie_count.third_party) > 0 do %>
-          (<%= @site.cookie_count.first_party %> first-party; <%= @site.cookie_count.third_party %> third-party)
-          <% end %>
-        </li>
-        <li>
-          <span>Third-party requests:</span>
-          <strong><%= @site.third_party_request_types.total %></strong>
-          <%= if @site.third_party_request_types.total > 0 do %> requests to <%= @site.third_party_request_types.unique_hosts %> unique hosts
-          <% end %>
-        </li>
-        <li>
-          <span>Server location:</span>
-          <%= country_from_iso(@conn.assigns.locale, @site.geolocation) %> &mdash; <%= @site.host_ip %><sup><a class="external" href="https://tools.keycdn.com/geo?host=<%= @site.host_ip %>">Look up</a></sup>
-        </li>
-      </ul>
-    </div>
-    <div class="url">
-      <ul>
-        <li><%= gettext "Input URL:" %> <%= link @site.input_url, to: @site.input_url, rel: "nofollow" %></li>
-        <li><%= gettext "Final URL:" %> <%= link @site.final_url, to: @site.final_url, rel: "nofollow" %></li>
-      </ul>
-    </div>
-  </section>
-</div>
+<%= render "_results_header.html", site: @site, conn: @conn %>
 
 <div class="results">
 
   <%= render "_https.html", site: @site %>
+
+  <%= render "_csp.html", site: @site %>
 
   <%= if @site.cookie_count.first_party == 0 do %>
     <section class="result">

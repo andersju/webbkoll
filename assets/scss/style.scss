@@ -2,7 +2,7 @@
 @import "grid-settings";
 @import "neat/neat";
 @import "base/base";
-@import "sortable-theme";
+@import "tablesort";
 
 @import "navigation";
 @import "icons";
@@ -34,6 +34,12 @@ sup {
 }
 */
 
+code {
+  background-color: #f1f1f1;
+  font-size: 0.9em;
+  padding: 0.1rem 0.3rem;
+}
+
 a.external::after {
   content: "\f35d";
   display: inline-block;
@@ -51,18 +57,24 @@ a.external::after {
   display: none;
 }
 
-button[data-a11y-toggle][aria-expanded="false"] {
+button[data-a11y-toggle][aria-expanded="false"],
+.non-button-toggle[data-a11y-toggle][aria-expanded="false"] {
   &::before {
     content: "\25BA";
     margin-right: 0.5em;
   }
 }
 
-button[data-a11y-toggle][aria-expanded="true"] {
+button[data-a11y-toggle][aria-expanded="true"],
+.non-button-toggle[data-a11y-toggle][aria-expanded="true"] {
   &::before {
     content: "\25BC";
     margin-right: 0.5em;
   }
+}
+
+[role="button"] {
+  cursor: pointer;
 }
 
 .icon-fixed {
@@ -237,7 +249,7 @@ section > .summary {
   @include span-columns(8);
   span {
     display: inline-block;
-    width: 10rem;
+    width: 12rem;
   }
 
   li {
@@ -283,7 +295,7 @@ section > .url {
   }
 
   p {
-    max-width: 40em;
+    max-width: 50em;
   }
 
   strong {
@@ -346,8 +358,11 @@ section.third-party {
   margin-bottom: 0;
 }
 
+table.hsts,
 table.cookies,
-table.requests {
+table.requests,
+table.csp {
+  width: auto;
   tbody {
     font-size: 0.9em;
   }

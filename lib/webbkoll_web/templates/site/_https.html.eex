@@ -29,12 +29,12 @@
         Strict Transport Security
       </h4>
 
-      <%= render "_hsts_host.html", host: @site.host, hsts: @site.header_hsts.host %>
+      <%= render "_hsts_host.html", host: @site.host, hsts: @site.header_hsts.host, is_base: (@site.host == @site.reg_domain)  %>
 
       <%= if @site.host != @site.reg_domain do %>
         <%= if Map.has_key?(@site.header_hsts, :base) do %>
           <%= if @site.header_hsts.base.set do %>
-          <%= render "_hsts_host.html", host: @site.reg_domain, hsts: @site.header_hsts.base %>
+          <%= render "_hsts_host.html", host: @site.reg_domain, hsts: @site.header_hsts.base, is_base: true %>
           <% else %>
           <p><%= icon(:warn) %> HSTS not set on base domain https://<%= @site.reg_domain %>.</p>
           <% end %>
@@ -45,6 +45,7 @@
 
     <% else %>
     <h4 id="hsts"><%= icon(:fail) %> Strict Transport Security</h4>
+    <p>HTTP Strict Transport Security (HSTS) not implemented.</p>
     <% end %>
   <% end %>
 </section>

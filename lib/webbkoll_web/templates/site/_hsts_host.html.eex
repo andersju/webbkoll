@@ -1,19 +1,55 @@
 <p><%= gettext(~s|HSTS policy for https://%{host}: <code>%{value}</code>.|, host: @host, value: safe_to_string(html_escape(@hsts.data))) |> raw %></p>
 
-<%= if @hsts.pass do %>
-<p><%= icon(:pass) %> max-age set to at least 6 months.</p>
-<% else %>
-<p><%= icon(:fail) %> max-age should be set to at least 15768000 (6 months).</p>
-<% end %>
-
-<%= if @hsts.includesubdomains do %>
-<p><%= icon(:pass) %> Policy also applies to subdomains (<code>includeSubDomains</code>).</p>
-<% else %>
-<p><%= icon(:warn) %> Policy doesn't include subdomains (<code>includeSubDomains</code> missing).</p>
-<% end %>
-
-<%= if @hsts.preload do %>
-<p><%= icon(:pass) %> Requests inclusion in preload lists (<code>preload</code>).</p>
-<% else %>
-<p><%= icon(:warn) %> Doesn't request inclusion in preload lists (<code>preload</code> missing).</p>
-<% end %>
+<table class="hsts data">
+  <thead>
+    <tr>
+      <th class="test"><%= gettext "Test" %></th>
+      <th class="pass"><%= gettext "Pass" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <code>max-age</code> set to at least 6 months
+      </td>
+      <td>
+        <%= if @hsts.pass do %>
+        <%= icon(:pass) %>
+        <% else %>
+        <%= icon(:fail) %>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>includeSubDomains</code> &mdash; policy also applies to subdomains
+      </td>
+      <td>
+        <%= if @hsts.includesubdomains do %>
+        <%= icon(:pass) %>
+        <% else %>
+        <%= icon(:fail) %>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <code>preload</code> - requests inclusion in preload lists
+        <%= if not @is_base do %>
+          [only relevant for base domain]
+        <% end %>
+      </td>
+      <td>
+        <%= if @is_base do %>
+          <%= if @hsts.preload do %>
+          <%= icon(:pass) %>
+          <% else %>
+          <%= icon(:fail) %>
+          <% end %>
+        <% else %>
+          <%= icon(:optional) %>
+        <% end %>
+      </td>
+    </tr>
+  </tbody>
+</table>

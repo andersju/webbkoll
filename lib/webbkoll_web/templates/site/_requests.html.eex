@@ -1,9 +1,9 @@
 <div id="<%= @id %>" data-a11y-toggle-open>
   <h4>Third-party hosts contacted</h4>
-  <table class="requests data" data-sortable="true">
+  <table class="requests data" data-sortable>
     <thead>
       <tr>
-        <th data-default-sort="true"><%= gettext "Host" %></th>
+        <th data-sort-default><%= gettext "Host" %></th>
         <th><%= gettext "Classification" %></th>
       </tr>
     </thead>

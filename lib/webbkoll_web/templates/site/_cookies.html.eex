@@ -1,9 +1,9 @@
 <div id="<%= @id %>" <%= @extra_option %>>
   <h4><%= @label %></h4>
-  <table class="cookies data" data-sortable="true">
+  <table class="cookies data" data-sortable>
     <thead>
       <tr>
-        <th class="domain" data-default-sort="true"><%= gettext "Domain" %></th>
+        <th class="domain" data-sort-default><%= gettext "Domain" %></th>
         <th class="name"><%= gettext "Name" %></th>
         <th class="value"><%= gettext "Value" %></th>
         <th class="expires"><%= gettext "Expires on" %></th>

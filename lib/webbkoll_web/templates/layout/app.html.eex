@@ -119,5 +119,6 @@
       </footer>
     </div>
 
-    <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <script src="<%= Routes.static_path(@conn, "/js/tablesort.min.js") %>"></script>
     <script src="<%= Routes.static_path(@conn, "/js/a11y-toggle.min.js") %>"></script>
+    <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
