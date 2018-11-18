@@ -54,6 +54,7 @@
         </li>
         <li>
           <span>Cookies:</span>
+          
           <strong><%= @site.cookie_count.first_party + @site.cookie_count.third_party %></strong>
           <%= if (@site.cookie_count.first_party + @site.cookie_count.third_party) > 0 do %>
           (<%= @site.cookie_count.first_party %> first-party; <%= @site.cookie_count.third_party %> third-party)
@@ -61,12 +62,14 @@
         </li>
         <li>
           <span>Third-party requests:</span>
+
           <strong><%= @site.third_party_request_types.total %></strong>
           <%= if @site.third_party_request_types.total > 0 do %> requests to <%= @site.third_party_request_types.unique_hosts %> unique hosts
           <% end %>
         </li>
         <li>
           <span>Server location:</span>
+
           <%= country_from_iso(@conn.assigns.locale, @site.geolocation) %> &mdash; <%= @site.host_ip %><sup><a class="external" href="https://tools.keycdn.com/geo?host=<%= @site.host_ip %>">Look up</a></sup>
         </li>
       </ul>

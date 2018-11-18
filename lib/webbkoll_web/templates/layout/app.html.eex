@@ -31,8 +31,6 @@
 
     <!-- Temporary during development -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
-
     
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="/images/mstile-144x144.png">
@@ -45,7 +43,7 @@
             <li class="nav-link logo">
               <a href="/<%= @conn.assigns.locale %>">
                 <i class="icon-eye-slash"></i>
-                <span>webbkoll</span> | <span>dataskydd</span><span class="semibold">.net</span>
+                <span>webbkoll</span> | <span class="ds-orange">dataskydd</span><span class="semibold">.net</span>
               </a>
             </li>
             <li class="nav-link">

@@ -1,22 +1,36 @@
-<div id="<%= @id %>" <%= @extra_option %>>
+<div id="<%= @id %>">
   <h4><%= @label %></h4>
-  <table class="cookies data" data-sortable>
+  <table class="cookies data">
     <thead>
       <tr>
-        <th class="domain" data-sort-default><%= gettext "Domain" %></th>
+        <th class="domain"><%= gettext "Domain" %></th>
         <th class="name"><%= gettext "Name" %></th>
         <th class="value"><%= gettext "Value" %></th>
         <th class="expires"><%= gettext "Expires on" %></th>
+        <th class="httponly">HttpOnly</th>
+        <th class="secure">Secure</th>
+        <th class="secure">SameSite</th>
       </tr>
     </thead>
     <tbody>
       <%= for cookie <- @cookies do %>
+      <% IO.inspect cookie %>
         <tr>
           <td><%= cookie["domain"] %></td>
           <td><%= cookie["name"] %></td>
           <td><%= truncate(cookie["value"], 20) %></td>
           <td>
             <%= if cookie["session"] == true, do: "session", else: format_timestamp(cookie["expires"]) %>
+          </td>
+          <td><%= if cookie["httpOnly"], do: icon(:pass), else: icon(:fail) %></td>
+          <td><%= if cookie["secure"], do: icon(:pass), else: icon(:fail) %></td>
+          <td>
+            <%= if cookie["sameSite"] do %>
+              <%= icon(:pass) %>
+              (<code><%= cookie["sameSite"] %></code>)
+            <% else %>
+              <%= icon(:fail) %>
+            <% end %>
           </td>
         </tr>
       <% end %>

@@ -1,8 +1,8 @@
 <section class="result">
   <%= if @site.scheme == "https" do %>
-    <h3 id="https"><i class="fas fa-lock fa-fw"></i> <%= gettext "HTTPS by default" %></h3>
+    <h3 id="https"><%= icon(:pass2) %> <%= gettext "HTTPS by default" %></h3>
   <% else %>
-    <h3 id="https"><i class="fas fa-unlock-alt fa-fw"></i> <%= gettext "Insecure: HTTPS not used by default" %></h3>
+    <h3 id="https"><%= icon(:fail) %> <%= gettext "Insecure: HTTPS not used by default" %></h3>
   <% end %>
   <div class="alpha">
     <%= if @site.scheme == "https" do %>
@@ -26,7 +26,7 @@
         <% else %>
         <%= icon(:fail) %>
         <% end %>
-        Strict Transport Security
+        HTTP Strict Transport Security (HSTS)
       </h4>
 
       <%= render "_hsts_host.html", host: @site.host, hsts: @site.header_hsts.host, is_base: (@site.host == @site.reg_domain)  %>

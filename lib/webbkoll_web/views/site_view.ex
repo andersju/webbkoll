@@ -28,7 +28,7 @@ defmodule WebbkollWeb.SiteView do
   end
 
   def icon(:pass), do: content_tag(:i, "", class: "fas fa-check fa-fw success")
-  def icon(:pass2), do: content_tag(:i, "", class: "fas fa-check-square fa-fw")
+  def icon(:pass2), do: content_tag(:i, "", class: "fas fa-check-square fa-fw success")
   def icon(:fail), do: content_tag(:i, "", class: "fas fa-times fa-fw alert")
   def icon(:warn), do: content_tag(:i, "", class: "fas fa-exclamation-circle fa-fw warning")
   def icon(:optional), do: content_tag(:i, "", class: "fas fa-minus fa-fw")
