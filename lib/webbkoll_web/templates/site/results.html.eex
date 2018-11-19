@@ -5,6 +5,8 @@
 
   <%= render "_csp.html", site: @site %>
 
+  <%= render "_referrers.html", site: @site %>
+
   <%= render "_cookies.html", site: @site %>
 
   <%= render "_requests.html", site: @site %>

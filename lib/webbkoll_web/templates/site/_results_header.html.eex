@@ -45,7 +45,7 @@
         <li>
           <span>Referrer Policy:</span>
 
-          <%= case @site.referrer_policy.status do %>
+          <%= case @site.referrer.status do %>
             <% "success" -> %> <%= icon(:pass) %> Referrers not leaked
             <% "warning" -> %> <%= icon(:warn) %> Referrers partially leaked
             <% "alert" -> %> <%= icon(:fail) %> Referrers leaked

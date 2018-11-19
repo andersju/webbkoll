@@ -117,15 +117,12 @@ defmodule Webbkoll.Worker do
          third_party_request_types = get_request_types(third_party_requests),
          host_ip = get_ip_by_host(url.host),
          meta_referrer = get_meta(json["content"], "name", "referrer"),
-         header_csp_referrer =
-           headers
-           |> get_header("content-security-policy")
-           |> get_by_regex(~r/\breferrer ([\w-]+)\b/),
          header_referrer =
            headers
            |> get_header("referrer-policy"),
+         http_equiv_referrer = get_meta(json["content"], "http-equiv", "referrer-policy"),
          referrer_policy_in_use =
-           check_referrer_policy_in_use(meta_referrer, header_csp_referrer, header_referrer) do
+           check_referrer_policy_in_use(meta_referrer, http_equiv_referrer, header_referrer) do
       %{
         input_url: json["input_url"],
         final_url: json["final_url"],
@@ -143,14 +140,11 @@ defmodule Webbkoll.Worker do
         third_party_request_types: third_party_request_types,
         insecure_requests_count:
          third_party_request_types.insecure + Enum.count(insecure_first_party_requests),
-        meta_referrer: meta_referrer,
         meta_csp: get_meta(json["content"], "http-equiv", "content-security-policy"),
         header_csp: get_header(headers, "content-security-policy"),
         csp: HeaderAnalysis.csp(url.scheme, get_header(headers, "content-security-policy"), get_meta(json["content"], "http-equiv", "content-security-policy")) |> IO.inspect,
-        header_csp_referrer: header_csp_referrer,
         header_hsts: check_hsts(headers["strict-transport-security"], url.host, reg_domain),
-        header_referrer: header_referrer,
-        referrer_policy: check_referrer_policy(referrer_policy_in_use),
+        referrer: %{header: header_referrer, http_equiv: http_equiv_referrer, meta: meta_referrer, status: check_referrer_policy(referrer_policy_in_use)},
         services: check_services(third_party_requests)
       }
     end
@@ -287,11 +281,11 @@ defmodule Webbkoll.Worker do
     end
   end
 
-  defp check_referrer_policy_in_use(meta, csp, referrer_header) do
-    # Precedence in Firefox 50
+  defp check_referrer_policy_in_use(meta, http_equiv_referrer, referrer_header) do
+    # Precedence in Firefox 63
     cond do
       meta -> meta
-      csp -> csp
+      http_equiv_referrer -> http_equiv_referrer
       referrer_header -> referrer_header
       true -> nil
     end
@@ -303,6 +297,7 @@ defmodule Webbkoll.Worker do
     referrer =
       if referrer_string do
         referrer_string
+        |> String.downcase()
         |> String.split(",")
         |> Enum.map(&String.trim/1)
         |> List.last()
@@ -312,7 +307,7 @@ defmodule Webbkoll.Worker do
 
     cond do
       referrer in ["never", "no-referrer", "same-origin"] ->
-        %{status: "success", icon: "icon-umbrella2 success"}
+        "success"
 
       referrer in [
         "origin",
@@ -321,13 +316,13 @@ defmodule Webbkoll.Worker do
         "strict-origin",
         "strict-origin-when-cross-origin"
       ] ->
-        %{status: "warning", icon: "icon-raindrops2 warning"}
+        "warning"
 
       referrer in ["no-referrer-when-down-grade", "default", "unsafe-url", "always", "", nil] ->
-        %{status: "alert", icon: "icon-raindrops2 alert"}
+        "alert"
 
       true ->
-        %{status: "other", icon: ""}
+        "other"
     end
   end
 

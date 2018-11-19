@@ -1,0 +1,29 @@
+<section class="result">
+  <h3 id="referrers">
+    <%= case @site.referrer.status do %>
+      <% "success" -> %> <%= icon(:pass) %>
+      <% "warning" -> %> <%= icon(:warn) %>
+      <% "alert" -> %> <%= icon(:fail) %>
+      <% _ -> %> <%= icon(:pass) %>
+    <% end %>
+    Referrer Policy
+    </h3>
+  
+  <%= if @site.referrer.header do %>
+  <p>Referrer Policy set to <code><%= @site.referrer.header %></code> in <code>Referrer-Policy</code> HTTP header.</p>
+  <% end %>
+
+  <%= if @site.referrer.http_equiv do %>
+  <p>Referrer Policy set to <code><%= @site.referrer.http_equiv %></code> in <code>meta http-equiv</code> element.</p>
+  <% end %>
+
+  <%= if @site.referrer.meta do %>
+  <p>Referrer Policy set to <code><%= @site.referrer.meta %></code> in <code>meta</code> element.</p>
+  <% end %>
+
+  <%= if !@site.referrer.header && !@site.referrer.http_equiv && !@site.referrer.meta do %>
+  <p>Referrer Policy not set. This means that the default value <code>no-referrer-when-downgrade</code>, leaking referrers in many situations, is used.</p>
+  <% end %>
+
+  <p><em>If a referrer policy is delivered via both Referrer-Policy header and meta element, the meta element's policy takes precedence. If multiple policy values are specified, the browser will use the last one, ignoring unknown values (fallback values should thus appear first).</em></p>
+</section>
