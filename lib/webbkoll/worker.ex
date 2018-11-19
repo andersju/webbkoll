@@ -292,9 +292,10 @@ defmodule Webbkoll.Worker do
     # (https://www.w3.org/TR/referrer-policy/#parse-referrer-policy-from-header)
     referrer =
       if referrer_string do
-        String.split(referrer_string)
+        referrer_string
+        |> String.split(",")
+        |> Enum.map(&String.trim/1)
         |> List.last()
-        |> get_by_regex(~r/^([\w-]+);?$/i)
       else
         ""
       end
