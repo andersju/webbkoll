@@ -24,9 +24,13 @@
         <li>
           <span>HTTPS by default:</span>
           <%= if @site.scheme == "https" do %>
-            <%= icon(:pass) %> Yes, redirects http:// -> https://
+            <%= if @site.security["securityState"] == "secure" do %>
+              <%= icon(:pass) %> Yes
+            <% else %>
+              <%= icon(:warn) %> Yes, but has issues
+            <% end %>
           <% else %>
-            <%= icon(:fail) %> No. Insecure; does not redirect http:// -> https://
+            <%= icon(:fail) %> No; insecure
           <% end %>
         </li>
         <li>

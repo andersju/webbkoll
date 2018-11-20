@@ -32,6 +32,8 @@ defmodule WebbkollWeb.SiteView do
   def icon(:fail), do: content_tag(:i, "", class: "fas fa-times fa-fw alert")
   def icon(:warn), do: content_tag(:i, "", class: "fas fa-exclamation-circle fa-fw warning")
   def icon(:optional), do: content_tag(:i, "", class: "fas fa-minus fa-fw")
+  def icon(:info), do: content_tag(:i, "", class: "fas fa-info-circle fa-fw")
+  def icon(:unknown), do: content_tag(:i, "", class: "fas fa-question-circle fa-fw")
 
   def csp_policy(policy, value) do
     pass =

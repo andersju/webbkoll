@@ -1,7 +1,7 @@
 <section class="result">
   <h3 id="referrers">
     <%= case @site.referrer.status do %>
-      <% "success" -> %> <%= icon(:pass) %>
+      <% "success" -> %> <%= icon(:pass2) %>
       <% "warning" -> %> <%= icon(:warn) %>
       <% "alert" -> %> <%= icon(:fail) %>
       <% _ -> %> <%= icon(:pass) %>

@@ -66,6 +66,12 @@ app.get('/', async (request, response) => {
       });
     });
 
+    await client.send('Security.enable');
+    let securityInfo = {};
+    client.on('Security.securityStateChanged', state => {
+      securityInfo = state;
+    });
+
     /*
     let requests = [];
     page.on('request', (request) => {
@@ -116,7 +122,8 @@ app.get('/', async (request, response) => {
         'response_headers': responseHeaders,
         'cookies': cookies.cookies,
         'localStorage': localStorage,
-        'content': content,
+        'security_info': securityInfo,
+        'content': content
       };
     } else {
       logger.warn('Failed checking ' + url + ': ' + responseHeaders.status);

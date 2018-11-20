@@ -1,9 +1,9 @@
 <section class="result">
   <h3 id="localstorage">
-    <%= if @site.localStorage do %>
-      <%= icon(:warn) %>
-    <% else %>
+    <%= if Enum.empty?(@site.localStorage) do %>
       <%= icon(:optional) %>
+    <% else %>
+      <%= icon(:warn) %>
     <% end %>
     <%= gettext "localStorage" %>
   </h3>

@@ -147,7 +147,8 @@ defmodule Webbkoll.Worker do
         csp: HeaderAnalysis.csp(url.scheme, get_header(headers, "content-security-policy"), get_meta(json["content"], "http-equiv", "content-security-policy")),
         header_hsts: check_hsts(headers["strict-transport-security"], url.host, reg_domain),
         referrer: %{header: header_referrer, http_equiv: http_equiv_referrer, meta: meta_referrer, status: check_referrer_policy(referrer_policy_in_use)},
-        services: check_services(third_party_requests)
+        services: check_services(third_party_requests),
+        security: json["security_info"]
       }
     end
   end
