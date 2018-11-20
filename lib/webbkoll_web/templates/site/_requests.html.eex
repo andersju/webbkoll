@@ -18,12 +18,14 @@
     <p><%= gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.reg_domain) |> raw %></p>
   <% else %>
     <h3 id="requests"><i class="fas fa-network-wired fa-fw"></i> <%= gettext "Third-party requests" %></h3>
-    <p><strong><%= @site.third_party_request_types.total %></strong> <%= ngettext "request", "requests", @site.third_party_request_types.total %> (<%= ngettext "1 secure", "%{count} secure", @site.third_party_request_types.secure %>, <%= ngettext "%{count} insecure", "%{count} insecure", @site.third_party_request_types.insecure %>) <%= gettext "to" %> <strong><%= @site.third_party_request_types.unique_hosts %></strong> <%= ngettext "unique", "unique", @site.third_party_request_types.unique_hosts %> <%= ngettext "host", "hosts", @site.third_party_request_types.unique_hosts %>.</p>
+    <p>
+      <strong><%= @site.third_party_request_types.total %></strong> <%= ngettext "request", "requests", @site.third_party_request_types.total %> (<%= ngettext "1 secure", "%{count} secure", @site.third_party_request_types.secure %>, <%= ngettext "%{count} insecure", "%{count} insecure", @site.third_party_request_types.insecure %>) <%= gettext "to" %> <strong><%= @site.third_party_request_types.unique_hosts %></strong> <%= ngettext "unique", "unique", @site.third_party_request_types.unique_hosts %> <%= ngettext "host", "hosts", @site.third_party_request_types.unique_hosts %>.
+    </p>
     <p><%= gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.reg_domain) |> raw %></p>
 
     <p><button class="expander" type="button" data-a11y-toggle="table-requests">Show third-party hosts</button></p>
 
-    <%= render "_request_table.html", requests: @site.third_party_requests, id: "table-requests" %>
+    <%= render "_request_table.html", unique_third_parties: @site.unique_third_parties, id: "table-requests" %>
 
     <p><button class="expander" type="button" data-a11y-toggle="requests-list">Show full list of third-party requests</button></p>
 

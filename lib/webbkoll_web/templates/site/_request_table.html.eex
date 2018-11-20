@@ -4,13 +4,17 @@
     <thead>
       <tr>
         <th data-sort-default><%= gettext "Host" %></th>
+        <th><%= gettext "IP" %></th>
+        <th><%= gettext "Country" %></th>
         <th><%= gettext "Classification" %></th>
       </tr>
     </thead>
     <tbody>
-      <%= for host <- get_unique_hosts(@requests, "host") do %>
+      <%= for {host, data} <- @unique_third_parties do %>
         <tr>
           <td><%= host %></td>
+          <td><%= data["ip"] %></td>
+          <td><%= data["country"] %></td>
           <td><%= Webbkoll.Trackers.check(PublicSuffix.registrable_domain(host, ignore_private: true)) %></td>
         </tr>
       <% end %>

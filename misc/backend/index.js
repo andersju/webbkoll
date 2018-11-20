@@ -52,29 +52,31 @@ app.get('/', async (request, response) => {
   try {
     const context = await browser.createIncognitoBrowserContext();
     const page = await context.newPage();
+    const client = await page.target().createCDPSession();
 
     await page.setViewport(viewport);
     await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36');
 
-    let requests = [];
-    let responseHeaders = {};
-
-    /*
     let responses = [];
     page.on('response', (response) => {
       responses.push({
         'url': response.url(),
-        'status': response.status(),
-        'headers': response.headers(),
+        'remote_address': response.remoteAddress(),
+        'headers': response.headers()
+      });
+    });
+
+    /*
+    let requests = [];
+    page.on('request', (request) => {
+      requests.push({
+        'url': request.url(),
+        'method': request.method(),
+        'headers': request.headers()
       });
     });
     */
 
-    page.on('request', (request) => {
-      requests.push({'url': request.url(), 'method': request.method(), 'headers': request.headers()});
-    });
-
-    await page._client.send('Network.enable');
     // On some broken pages the load event is never fired, so we don't wait for that
     const pageResponse = await page.goto(url, {
       waitUntil: ['domcontentloaded', 'networkidle2'],
@@ -83,7 +85,7 @@ app.get('/', async (request, response) => {
 
     let content = await page.content();
     // Necessary to get *ALL* cookies
-    let cookies = await page._client.send('Network.getAllCookies');
+    let cookies = await client.send('Network.getAllCookies');
     //let localStorage = await page.evaluate(() => { return {...localStorage}; });
     // ^- prettier, but we've got to truncate things for sanity:
     let localStorage = await page.evaluate(() => {
@@ -98,7 +100,7 @@ app.get('/', async (request, response) => {
     let title = await page.title();
     let finalUrl = await page.url();
 
-    responseHeaders = pageResponse.headers();
+    let responseHeaders = pageResponse.headers();
     responseHeaders.status = pageResponse.status();
     responseHeaders.remote_address = pageResponse.remoteAddress();
 
@@ -110,7 +112,7 @@ app.get('/', async (request, response) => {
         'success': true,
         'input_url': url,
         'final_url': finalUrl,
-        'requests': requests,
+        'responses': responses,
         'response_headers': responseHeaders,
         'cookies': cookies.cookies,
         'localStorage': localStorage,

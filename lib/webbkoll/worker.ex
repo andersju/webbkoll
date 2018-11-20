@@ -112,9 +112,9 @@ defmodule Webbkoll.Worker do
          cookies = get_cookies(json["cookies"], reg_domain),
          # Ignore first request in requests list, as it's by definition a first-party request;
          # fixes issue with IDN domains
-         third_party_requests = get_third_party_requests(tl(json["requests"]), reg_domain),
+         third_party_requests = get_third_party_requests(tl(json["responses"]), reg_domain),
          insecure_first_party_requests =
-           get_insecure_first_party_requests(json["requests"], reg_domain),
+           get_insecure_first_party_requests(json["responses"], reg_domain),
          third_party_request_types = get_request_types(third_party_requests),
          meta_referrer = get_meta(json["content"], "name", "referrer"),
          header_referrer =
@@ -139,6 +139,7 @@ defmodule Webbkoll.Worker do
         insecure_first_party_requests: insecure_first_party_requests,
         third_party_requests: third_party_requests,
         third_party_request_types: third_party_request_types,
+        unique_third_parties: get_unique_third_parties(third_party_requests),
         insecure_requests_count:
          third_party_request_types.insecure + Enum.count(insecure_first_party_requests),
         meta_csp: get_meta(json["content"], "http-equiv", "content-security-policy"),
@@ -315,5 +316,11 @@ defmodule Webbkoll.Worker do
         {:error, _} -> %{host: HeaderAnalysis.hsts(header)}
       end
     end
+  end
+
+  defp get_unique_third_parties(responses) do
+    Enum.reduce(responses, %{}, fn x, acc ->
+      Map.put_new(acc, x["host"], %{"ip" => x["remote_address"]["ip"], "country" => get_geolocation_by_ip(x["remote_address"]["ip"])})
+    end)
   end
 end
