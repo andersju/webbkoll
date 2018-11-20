@@ -108,6 +108,7 @@ defmodule Webbkoll.Worker do
     with url = URI.parse(json["final_url"]),
          reg_domain = get_registerable_domain(url.host),
          headers = json["response_headers"],
+         host_ip = json["response_headers"]["remote_address"]["ip"],
          cookies = get_cookies(json["cookies"], reg_domain),
          # Ignore first request in requests list, as it's by definition a first-party request;
          # fixes issue with IDN domains
@@ -115,7 +116,6 @@ defmodule Webbkoll.Worker do
          insecure_first_party_requests =
            get_insecure_first_party_requests(json["requests"], reg_domain),
          third_party_request_types = get_request_types(third_party_requests),
-         host_ip = get_ip_by_host(url.host),
          meta_referrer = get_meta(json["content"], "name", "referrer"),
          header_referrer =
            headers
@@ -253,33 +253,12 @@ defmodule Webbkoll.Worker do
     |> Enum.join(";")
   end
 
-  defp get_by_regex(nil, _), do: nil
-
-  defp get_by_regex(string, regex) do
-    case Regex.run(regex, string) do
-      [_, value] -> value
-      nil -> nil
-    end
-  end
-
   defp get_geolocation_by_ip(nil), do: nil
 
   defp get_geolocation_by_ip(ip) do
     ip
     |> Geolix.lookup(as: :raw, where: :country, locale: :en)
     |> get_in([:country, :iso_code])
-  end
-
-  defp get_ip_by_host(host) do
-    host
-    |> String.to_charlist()
-    |> :inet.gethostbyname()
-    |> case do
-      {:error, _} -> nil
-      # TODO: If host resolves to multiple IPs, we currently only show the first one.
-      # Should be fixed.
-      {:ok, {:hostent, _, _, :inet, 4, ip}} -> ip |> List.first() |> Tuple.to_list() |> Enum.join(".")
-    end
   end
 
   defp check_referrer_policy_in_use(meta, http_equiv_referrer, referrer_header) do

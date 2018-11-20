@@ -57,9 +57,10 @@ app.get('/', async (request, response) => {
     await page.setUserAgent('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36');
 
     let requests = [];
-    let responses = [];
     let responseHeaders = {};
 
+    /*
+    let responses = [];
     page.on('response', (response) => {
       responses.push({
         'url': response.url(),
@@ -67,6 +68,7 @@ app.get('/', async (request, response) => {
         'headers': response.headers(),
       });
     });
+    */
 
     page.on('request', (request) => {
       requests.push({'url': request.url(), 'method': request.method(), 'headers': request.headers()});
@@ -98,6 +100,7 @@ app.get('/', async (request, response) => {
 
     responseHeaders = pageResponse.headers();
     responseHeaders.status = pageResponse.status();
+    responseHeaders.remote_address = pageResponse.remoteAddress();
 
     let webbkollStatus = 200;
     let results = {};
