@@ -36,7 +36,7 @@ sup {
 
 code {
   background-color: #f1f1f1;
-  font-size: 0.9em;
+  font-size: 0.95em;
   padding: 0.1rem 0.3rem;
 }
 
@@ -358,10 +358,7 @@ section.third-party {
   margin-bottom: 0;
 }
 
-table.hsts,
-table.cookies,
-table.requests,
-table.csp {
+table {
   width: auto;
   tbody {
     font-size: 0.9em;

@@ -9,6 +9,8 @@
 
   <%= render "_cookies.html", site: @site %>
 
+  <%= render "_localstorage.html", site: @site %>
+
   <%= render "_requests.html", site: @site %>
 
   <%= render "_geolocation.html", site: @site, conn: @conn %>

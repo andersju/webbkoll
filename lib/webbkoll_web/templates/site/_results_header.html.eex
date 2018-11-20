@@ -64,7 +64,8 @@
           <span>Third-party requests:</span>
 
           <strong><%= @site.third_party_request_types.total %></strong>
-          <%= if @site.third_party_request_types.total > 0 do %> requests to <%= @site.third_party_request_types.unique_hosts %> unique hosts
+          <%= if @site.third_party_request_types.total > 0 do %>
+          <%= ngettext("request to 1 unique host", "requests to %{count} unique hosts.", @site.third_party_request_types.unique_hosts) %>
           <% end %>
         </li>
         <li>

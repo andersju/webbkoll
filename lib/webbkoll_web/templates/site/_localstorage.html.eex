@@ -1,0 +1,33 @@
+<section class="result">
+  <h3 id="localstorage">
+    <%= if @site.localStorage do %>
+      <%= icon(:warn) %>
+    <% else %>
+      <%= icon(:optional) %>
+    <% end %>
+    <%= gettext "localStorage" %>
+  </h3>
+
+  <%= if Enum.empty?(@site.localStorage) do %>
+    <p>localStorage not used.</p>
+  <% else %>
+    <p>localStorage used:</p>
+
+    <table class="localstorage">
+      <thead>
+        <tr>
+          <th>Key</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= for {key, value} <- @site.localStorage do %>
+        <tr>
+          <td><%= truncate(key, 50) %></td>
+          <td><%= truncate(value, 50) %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+</section>

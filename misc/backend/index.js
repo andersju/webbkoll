@@ -82,6 +82,17 @@ app.get('/', async (request, response) => {
     let content = await page.content();
     // Necessary to get *ALL* cookies
     let cookies = await page._client.send('Network.getAllCookies');
+    //let localStorage = await page.evaluate(() => { return {...localStorage}; });
+    // ^- prettier, but we've got to truncate things for sanity:
+    let localStorage = await page.evaluate(() => {
+      let tmpObj = {};
+      let keys = Object.keys(localStorage);
+      for (let i = 0; i < keys.length; ++i) {
+        tmpObj[keys[i].substring(0,100)] = localStorage.getItem(keys[i]).substring(0,100);
+      }
+      return tmpObj;
+    });
+
     let title = await page.title();
     let finalUrl = await page.url();
 
@@ -99,6 +110,7 @@ app.get('/', async (request, response) => {
         'requests': requests,
         'response_headers': responseHeaders,
         'cookies': cookies.cookies,
+        'localStorage': localStorage,
         'content': content,
       };
     } else {

@@ -135,6 +135,7 @@ defmodule Webbkoll.Worker do
         cookies: cookies,
         cookie_count: get_cookie_count(cookies),
         cookie_domains: Enum.count(get_unique_hosts(cookies.third_party, "domain")),
+        localStorage: json["localStorage"],
         insecure_first_party_requests: insecure_first_party_requests,
         third_party_requests: third_party_requests,
         third_party_request_types: third_party_request_types,
@@ -142,7 +143,7 @@ defmodule Webbkoll.Worker do
          third_party_request_types.insecure + Enum.count(insecure_first_party_requests),
         meta_csp: get_meta(json["content"], "http-equiv", "content-security-policy"),
         header_csp: get_header(headers, "content-security-policy"),
-        csp: HeaderAnalysis.csp(url.scheme, get_header(headers, "content-security-policy"), get_meta(json["content"], "http-equiv", "content-security-policy")) |> IO.inspect,
+        csp: HeaderAnalysis.csp(url.scheme, get_header(headers, "content-security-policy"), get_meta(json["content"], "http-equiv", "content-security-policy")),
         header_hsts: check_hsts(headers["strict-transport-security"], url.host, reg_domain),
         referrer: %{header: header_referrer, http_equiv: http_equiv_referrer, meta: meta_referrer, status: check_referrer_policy(referrer_policy_in_use)},
         services: check_services(third_party_requests)

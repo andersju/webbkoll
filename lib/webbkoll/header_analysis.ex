@@ -273,12 +273,12 @@ defmodule Webbkoll.HeaderAnalysis do
 
   def csp_result_text(result) do
     case result do
-      "csp-implemented-with-no-unsafe-default-src-none" -> gettext("Content Security Policy (CSP) implemented with default-src 'none' and no 'unsafe'")
-      "csp-implemented-with-no-unsafe" -> gettext("Content Security Policy (CSP) implemented without 'unsafe-inline' or 'unsafe-eval'")
-      "csp-implemented-with-unsafe-inline-in-style-src-only" -> gettext("Content Security Policy (CSP) implemented with unsafe sources inside style-src. This includes 'unsafe-inline', data: or overly broad sources such as https:.")
+      "csp-implemented-with-no-unsafe-default-src-none" -> gettext("Content Security Policy (CSP) implemented with <code>default-src 'none'</code> and no <code>'unsafe'</code>")
+      "csp-implemented-with-no-unsafe" -> gettext("Content Security Policy (CSP) implemented without <code>'unsafe-inline'</code> or <code>'unsafe-eval'</code>")
+      "csp-implemented-with-unsafe-inline-in-style-src-only" -> gettext("Content Security Policy (CSP) implemented with unsafe sources inside <code>style-src</code>. This includes <code>'unsafe-inline'</code>, <code>data:</code> or overly broad sources such as <code>https:</code>.")
       "csp-implemented-with-insecure-scheme-in-passive-content-only" -> gettext("Content Security Policy (CSP) implemented, but secure site allows images or media to be loaded over HTTP")
-      "csp-implemented-with-unsafe-eval" -> gettext("Content Security Policy (CSP) implemented, but allows 'unsafe-eval'")
-      "csp-implemented-with-unsafe-inline" -> gettext("Content Security Policy (CSP) implemented unsafely. This includes 'unsafe-inline' or data: inside script-src, overly broad sources such as https: inside object-src or script-src, or not restricting the sources for object-src or script-src.")
+      "csp-implemented-with-unsafe-eval" -> gettext("Content Security Policy (CSP) implemented, but allows <code>'unsafe-eval'</code>")
+      "csp-implemented-with-unsafe-inline" -> gettext("Content Security Policy (CSP) implemented unsafely. This includes <code>'unsafe-inline'</code> or <code>data:</code> inside <code>script-src</code>, overly broad sources such as <code>https:</code> inside <code>object-src</code> or <code>script-src</code>, or not restricting the sources for <code>object-src</code> or <code>script-src</code>.")
       "csp-implemented-with-insecure-scheme" -> gettext("Content Security Policy (CSP) implemented, but secure site allows resources to be loaded over HTTP")
       "csp-header-invalid" -> gettext("Content Security Policy (CSP) header cannot be parsed successfully")
       "csp-not-implemented" -> gettext("Content Security Policy (CSP) header not implemented")
