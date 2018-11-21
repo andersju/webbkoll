@@ -113,18 +113,29 @@ app.get('/', async (request, response) => {
     let webbkollStatus = 200;
     let results = {};
     if (responseHeaders.status >= 200 && responseHeaders.status <= 299) {
-      logger.info('Successfully checked ' + url);
-      results = {
-        'success': true,
-        'input_url': url,
-        'final_url': finalUrl,
-        'responses': responses,
-        'response_headers': responseHeaders,
-        'cookies': cookies.cookies,
-        'localStorage': localStorage,
-        'security_info': securityInfo,
-        'content': content
-      };
+      // TODO: Use response interception when available
+      // (https://github.com/GoogleChrome/puppeteer/issues/1191)
+      if (responseHeaders['content-type'].startsWith('text/html') || responseHeaders['content-type'].startsWith('application/xhtml+xml')) {
+        logger.info('Successfully checked ' + url);
+        results = {
+          'success': true,
+          'input_url': url,
+          'final_url': finalUrl,
+          'responses': responses,
+          'response_headers': responseHeaders,
+          'cookies': cookies.cookies,
+          'localStorage': localStorage,
+          'security_info': securityInfo,
+          'content': content.substring(0, 5000000) // upper limit for sanity
+        };
+      } else {
+        logger.warn('Failed checking ' + url + ': ' + responseHeaders.status);
+        results = {
+          'success': false,
+          'reason': 'Page does not have text/html Content-Type',
+        };
+        webbkollStatus = 500;
+      }
     } else {
       logger.warn('Failed checking ' + url + ': ' + responseHeaders.status);
       results = {
