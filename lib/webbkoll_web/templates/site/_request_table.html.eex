@@ -13,7 +13,7 @@
       <%= for {host, data} <- @unique_third_parties do %>
         <tr>
           <td><%= host %></td>
-          <td><%= data["ip"] %></td>
+          <td><a class="external" href="https://tools.keycdn.com/geo?host=<%= data["ip"] %>"><%= data["ip"] %></a></td>
           <td><%= data["country"] %></td>
           <td><%= Webbkoll.Trackers.check(PublicSuffix.registrable_domain(host, ignore_private: true)) %></td>
         </tr>

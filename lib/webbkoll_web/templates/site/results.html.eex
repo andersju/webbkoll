@@ -7,6 +7,10 @@
 
   <%= render "_referrers.html", site: @site %>
 
+  <%= render "_sri.html", site: @site %>
+
+  <%= render "_headers.html", site: @site %>
+
   <%= render "_cookies.html", site: @site %>
 
   <%= render "_localstorage.html", site: @site %>

@@ -40,6 +40,17 @@ code {
   padding: 0.1rem 0.3rem;
 }
 
+table {
+  width: auto;
+  tbody {
+    font-size: 0.9em;
+  }
+}
+
+ul {
+  margin-bottom: 0.75rem;
+}
+
 a.external::after {
   content: "\f35d";
   display: inline-block;
@@ -356,13 +367,6 @@ section > .url {
 
 section.third-party {
   margin-bottom: 0;
-}
-
-table {
-  width: auto;
-  tbody {
-    font-size: 0.9em;
-  }
 }
 
 .requests-list {

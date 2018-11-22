@@ -1,0 +1,35 @@
+<section class="result">
+  <h3 id="csp">
+    <%= if @site.sri.pass do %>
+    <%= icon(:pass2) %>
+    <% else %>
+    <%= icon(:fail) %>
+    <% end %>
+    Subresource Integrity (SRI)
+  </h3>
+
+  <p>
+    <%= case @site.sri.result do %>
+      <% "sri-implemented-and-all-scripts-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) is implemented and all scripts are loaded from a similar origin.") %>
+      <% "sri-implemented-and-external-scripts-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) is implemented and all scripts are loaded securely.") %>
+      <% "sri-not-implemented-but-no-scripts-loaded" -> %> <%= gettext("Subresource Integrity (SRI) is not needed since site contains no script tags.") %>
+      <% "sri-not-implemented-but-all-scripts-loaded-from-secure-origin" -> %> <%= gettext("Subresource Integrity (SRI) not implemented, but all scripts are loaded from a similar origin.") %>
+      <% "sri-not-implemented-but-external-scripts-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) not implemented, but all external scripts are loaded over HTTPS") %>
+      <% "sri-implemented-but-external-scripts-not-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) implemented, but external scripts are loaded over HTTP or use protocol-relative URLs via src=\"//...\"") %>
+      <% "sri-not-implemented-and-external-scripts-not-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) not implemented, and external scripts are loaded over HTTP or use protocol-relative URLs via src=\"//...\".") %>
+      <% _ -> %> <%= "" %>
+    <% end %>
+  </p>
+
+  <%= if not @site.sri.pass do %>
+    <p>The following third-party resources are not loaded using SRI:</p>
+
+    <ul>
+    <%= for resource <- Enum.filter(@site.sri.data, fn x -> x.secureorigin == false && (x.crossorigin == nil || x.integrity == nil) end) do %>
+      <li><code><%= resource.src %></code></li>
+    <% end %>
+    </ul>
+  <% end %>
+  
+    <p>The Subresource Integrity test above is based on the one from the <a href="https://github.com/mozilla/http-observatory">Mozilla HTTP Observatory</a> scanner/grader project (<a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. Any mistakes or inaccuracies are our fault.</p>
+</section>

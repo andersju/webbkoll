@@ -151,7 +151,7 @@ defmodule Webbkoll.Worker do
         services: check_services(third_party_requests),
         security: json["security_info"],
         sri: ContentAnalysis.check_sri(json["content"], reg_domain, url.scheme)
-      }
+      }|>IO.inspect
     end
   end
 

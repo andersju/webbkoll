@@ -93,10 +93,6 @@ defmodule Webbkoll.Helpers do
 
   def headers_to_check do
     %{
-      "Strict-Transport-Security" =>
-        gettext(
-          ~s{<a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a> is an excellent feature to support on your site and strengthens your implementation of TLS by getting the User Agent to enforce the use of HTTPS.}
-        ),
       "X-Frame-Options" =>
         gettext(
           ~s{<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">X-Frame-Options</a> tells the browser whether you want to allow your site to be framed or not. By preventing a browser from framing your site you can defend against attacks like clickjacking.}
@@ -108,10 +104,6 @@ defmodule Webbkoll.Helpers do
       "X-Content-Type-Options" =>
         gettext(
           ~s{<a href="http://stackoverflow.com/questions/18337630/what-is-x-content-type-options-nosniff">X-Content-Type-Options</a> stops a browser from trying to MIME-sniff the content type and forces it to stick with the declared content-type. This helps to reduce the danger of drive-by downloads. The only valid value for this header is "X-Content-Type-Options: nosniff".}
-        ),
-      "Referrer-Policy" =>
-        gettext(
-          ~s{<a href="https://scotthelme.co.uk/a-new-security-header-referrer-policy/">Referrer-Policy</a> is a new header that allows a site to control how much information the browser includes with navigations away from a document (or when loading external resources) and should be set by all sites. (It can also be set using a meta element; see above.)}
         )
     }
   end
