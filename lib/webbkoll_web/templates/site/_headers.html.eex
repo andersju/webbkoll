@@ -19,15 +19,9 @@
       </div>
       <div class="beta">
         <%= if @site.headers[String.downcase(header)] do %>
-
-            <span>
-              <i class="icon-times"></i><%= gettext "NO, header is set to" %> <code><%= @site.headers[String.downcase(header)] %></code> <%= gettext "which disables HSTS" %>
-            </span>
-
             <span>
               <i class="icon-check"></i><%= gettext "YES," %> <code><%= @site.headers[String.downcase(header)] %></code>
             </span>
-
         <% else %>
           <span>
             <i class="icon-times"></i>
