@@ -172,7 +172,7 @@ WantedBy=multi-user.target
 ## Credits & licenses
 Frontend:
   * [Phoenix Framework](http://www.phoenixframework.org/) (MIT license) by Chris McCord
-  * Header analysis code in `lib/webbkoll/header_analysis.ex` and `test/webkoll/csp_test.exs` is based on work by April King for [Mozilla HTTP Observatory](https://github.com/mozilla/http-observatory), Mozilla Public License Version 2.0
+  * Header/content analysis code in `lib/webbkoll/header_analysis.ex`, `lib/webbkoll/content_analysis.ex`, `test/webkoll/csp_test.exs`, `test/webkoll/sri_test.exs` is based on work by April King for [Mozilla HTTP Observatory](https://github.com/mozilla/http-observatory), Mozilla Public License Version 2.0
   * [Bourbon](https://github.com/thoughtbot/bourbon), [Neat](https://github.com/thoughtbot/neat), [Bitters](https://github.com/thoughtbot/bitters), [Refills](https://github.com/thoughtbot/refills) (`assets/scss/{base,bourbon,neat}`) (MIT license) by thoughtbot
   * [tablesort](https://github.com/tristen/tablesort) (`assets/static/js/tablesort.min.js` and `assets/scss/tablesort.css`) (MIT license) by Tristen Brown
   * [A11y Toggle](https://github.com/edenspiekermann/a11y-toggle) (`assets/static/js/a11y-toggle.min.js`) (MIT license) by Edenspiekermann

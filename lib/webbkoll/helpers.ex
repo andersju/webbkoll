@@ -162,4 +162,11 @@ defmodule Webbkoll.Helpers do
       {_, v} -> {:ok, v}
     end
   end
+
+  def get_registerable_domain(host) do
+    case PublicSuffix.matches_explicit_rule?(host) do
+      true -> PublicSuffix.registrable_domain(host)
+      false -> host
+    end
+  end
 end

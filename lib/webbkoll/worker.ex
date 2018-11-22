@@ -1,5 +1,6 @@
 defmodule Webbkoll.Worker do
   alias Webbkoll.HeaderAnalysis, as: HeaderAnalysis
+  alias Webbkoll.ContentAnalysis, as: ContentAnalysis
   import Webbkoll.Helpers
 
   @max_attempts Application.get_env(:webbkoll, :max_attempts)
@@ -148,20 +149,14 @@ defmodule Webbkoll.Worker do
         header_hsts: check_hsts(headers["strict-transport-security"], url.host, reg_domain),
         referrer: %{header: header_referrer, http_equiv: http_equiv_referrer, meta: meta_referrer, status: check_referrer_policy(referrer_policy_in_use)},
         services: check_services(third_party_requests),
-        security: json["security_info"]
+        security: json["security_info"],
+        sri: ContentAnalysis.check_sri(json["content"], reg_domain, url.scheme)
       }
     end
   end
 
   defp save(data, id) do
     update_site(id, Map.merge(%{status: "done"}, data))
-  end
-
-  defp get_registerable_domain(host) do
-    case PublicSuffix.matches_explicit_rule?(host) do
-      true -> PublicSuffix.registrable_domain(host)
-      false -> host
-    end
   end
 
   defp get_insecure_first_party_requests(requests, registerable_domain) do
