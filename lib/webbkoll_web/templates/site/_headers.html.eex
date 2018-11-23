@@ -20,12 +20,11 @@
       <div class="beta">
         <%= if @site.headers[String.downcase(header)] do %>
             <span>
-              <i class="icon-check"></i><%= gettext "YES," %> <code><%= @site.headers[String.downcase(header)] %></code>
+              <%= icon(:pass) %> <%= gettext "YES," %> <code><%= @site.headers[String.downcase(header)] %></code>
             </span>
         <% else %>
           <span>
-            <i class="icon-times"></i>
-            <%= gettext "NO" %>
+            <%= icon(:fail) %> <%= gettext "NO" %>
           </span>
         <% end %>
         <p><%= raw(description) %></p>

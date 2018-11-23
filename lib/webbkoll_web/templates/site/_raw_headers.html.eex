@@ -3,8 +3,10 @@
 
   <table>
     <thead>
-      <th>Header</th>
-      <th>Value</th>
+      <tr>
+        <th>Header</th>
+        <th>Value</th>
+      </tr>
     </thead>
     <tbody>
       <%= for {header, value} <- @site.headers do %>

@@ -18,10 +18,12 @@
 
     <table>
       <thead>
-        <th>State</th>
-        <th>Title</th>
-        <th>Summary</th>
-        <th>Description</th>
+        <tr>
+          <th>State</th>
+          <th>Title</th>
+          <th>Summary</th>
+          <th>Description</th>
+        </tr>
       </thead>
       <tbody>
         <%= for explanation <- @site.security["explanations"] do %>
@@ -42,8 +44,6 @@
         <% end %>
       </tbody>
     </table>
-  </div>
-
 </section>
 
 <%= if @site.scheme == "https" do %>

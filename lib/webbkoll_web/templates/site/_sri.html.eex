@@ -1,5 +1,5 @@
 <section class="result">
-  <h3 id="csp">
+  <h3 id="sri">
     <%= if @site.sri.pass do %>
     <%= icon(:pass2) %>
     <% else %>

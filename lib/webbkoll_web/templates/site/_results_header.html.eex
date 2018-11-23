@@ -13,8 +13,8 @@
       </h2>
     </div>
     <div class="beta">
-      <a class="button" href="<%= Routes.site_path(@conn, :check, @conn.assigns.locale, url: @site.input_url, refresh: "on") %>"><i class="icon-refresh"></i><%= gettext("Check again") %></a>
-      <i class="icon-clock-o"></i><%= format_site_time(@site.updated_at) %>
+      <a class="button" href="<%= Routes.site_path(@conn, :check, @conn.assigns.locale, url: @site.input_url, refresh: "on") %>"><i class="fas fa-redo"></i><%= gettext("Check again") %></a>
+      <i class="fas fa-clock"></i><%= format_site_time(@site.updated_at) %>
     </div>
   </section>
 
