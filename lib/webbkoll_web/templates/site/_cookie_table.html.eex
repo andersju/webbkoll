@@ -1,5 +1,5 @@
 <div id="<%= @id %>">
-  <h4><%= @label %></h4>
+  <h4><%= @label %> (<%= @amount %>)</h4>
   <table class="cookies data" data-sortable>
     <thead>
       <tr>

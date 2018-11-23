@@ -3,6 +3,8 @@
 <div class="results">
   <%= render "_https.html", site: @site %>
 
+  <%= render "_hsts.html", site: @site %>
+
   <%= render "_csp.html", site: @site %>
 
   <%= render "_referrers.html", site: @site %>
@@ -20,4 +22,6 @@
   <%= render "_geolocation.html", site: @site, conn: @conn %>
 
   <%= render "_raw_headers.html", site: @site %>
+
+  <%= render "_what.html" %>
 </div>

@@ -1,19 +1,19 @@
 <section class="result">
-  <h3 id="cookies"><i class="fas fa-cookie-bite fa-fw"></i> <%= gettext "Cookies" %></h3>
-  <p><%= ngettext("<strong>1</strong> first-party cookie.", "<strong>%{count}</strong> first-party cookies.", @site.cookie_count.first_party) |> raw %></p>
-  <p><%= ngettext("<strong>1</strong> third-party cookie.", "<strong>%{count}</strong> third-party cookies.", @site.cookie_count.third_party) |> raw %></p>
+  <h3 id="cookies"><%= gettext "Cookies" %></h3>
 
   <%= if @site.cookie_count.first_party > 0 do %>
-    <%= render "_cookie_table.html", cookies: @site.cookies.first_party, label: "First-party cookies", id: "cookies-first" %>
+    <%= render "_cookie_table.html", amount: @site.cookie_count.first_party, cookies: @site.cookies.first_party, label: "First-party cookies", id: "cookies-first" %>
   <% end %>
 
   <%= if @site.cookie_count.third_party > 0 do %>
-    <%= render "_cookie_table.html", cookies: @site.cookies.third_party, label: "Third-party cookies", id: "cookies-third" %>
+    <%= render "_cookie_table.html", amount: @site.cookie_count.third_party , cookies: @site.cookies.third_party, label: "Third-party cookies", id: "cookies-third" %>
   <% end %>
 
   <%= if (@site.cookie_count.first_party + @site.cookie_count.third_party) > 0 do %>
     <p><strong>HttpOnly</strong> means that the cookie can only be read by the server, and not by JavaScript on the client. This can mitigate XSS (cross-site scripting) attacks.</p>
     <p><strong>Secure</strong> means that the cookie will only be sent over a secure channel (HTTPS). This can mitigate MITM (man-in-the-middle) attacks.</p>
     <p><strong>SameSite</strong> can be used to instruct the browser to only send the cookie when the request is originating from the same site. This can mitigate CSRF (cross-site request forgery) attacks.</p>
+  <% else %>
+    <p>No cookies detected.</p>
   <% end %>
 </section>

@@ -1,0 +1,9 @@
+<section class="result">
+  <h3 id="what">What this tool checks (and doesn't check)</h3>
+
+  <p>This tool attempts to simulate what happens when a user visits a specified page with a typical browser. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled, since this is the default setting in most browsers.</p><p>External files such as images, scripts and CSS are loaded, but the tool performs no interactions with the page — no links are clicked, no forms are submitted.</p>
+
+  <p><i>Disclaimer: The results presented here might not be 100% correct. Bugs happen. This tool is meant to be used by site owners as a starting point for improvements, not as a rigorous analysis.</i></p>
+
+  <p>The HTTP header descriptions are based on the ones from <a href="https://securityheaders.com/">securityheaders.com</a> by Scott Helme, <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.en_GB">CC-BY-SA 4.0</a>. Text about HTTPS partly adapted from the CIO Council's <a href="https://https.cio.gov/">The HTTPS-Only Standard</a> (public domain). <a href="http://www.maxmind.com">MaxMind's</a> GeoLite2 country database (CC-BY-SA 4.0) is used for GeoIP lookups.</p>
+</section>

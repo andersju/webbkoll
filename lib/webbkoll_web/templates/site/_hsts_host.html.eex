@@ -1,17 +1,17 @@
-<p><%= gettext(~s|HSTS policy for https://%{host}: <code>%{value}</code>.|, host: @host, value: safe_to_string(html_escape(@hsts.data))) |> raw %></p>
+<p>
+  <%= gettext(~s|HSTS policy for https://%{host}:|, host: @host) %><br/>
+  <code><%= safe_to_string(html_escape(@hsts.data)) %></code>
+</p>
 
 <table class="hsts data">
   <thead>
     <tr>
-      <th class="test"><%= gettext "Test" %></th>
       <th class="pass"><%= gettext "Pass" %></th>
+      <th class="test"><%= gettext "Test" %></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>
-        <code>max-age</code> set to at least 6 months
-      </td>
       <td>
         <%= if @hsts.pass do %>
         <%= icon(:pass) %>
@@ -19,11 +19,11 @@
         <%= icon(:fail) %>
         <% end %>
       </td>
+      <td>
+        <code>max-age</code> set to at least 6 months
+      </td>
     </tr>
     <tr>
-      <td>
-        <code>includeSubDomains</code> &mdash; policy also applies to subdomains
-      </td>
       <td>
         <%= if @hsts.includesubdomains do %>
         <%= icon(:pass) %>
@@ -31,14 +31,11 @@
         <%= icon(:fail) %>
         <% end %>
       </td>
+      <td>
+        <code>includeSubDomains</code> &mdash; policy also applies to subdomains
+      </td>
     </tr>
     <tr>
-      <td>
-        <code>preload</code> - requests inclusion in preload lists
-        <%= if not @is_base do %>
-          [only relevant for base domain]
-        <% end %>
-      </td>
       <td>
         <%= if @is_base do %>
           <%= if @hsts.preload do %>
@@ -48,6 +45,12 @@
           <% end %>
         <% else %>
           <%= icon(:optional) %>
+        <% end %>
+      </td>
+      <td>
+        <code>preload</code> - requests inclusion in preload lists
+        <%= if not @is_base do %>
+          [only relevant for base domain.]
         <% end %>
       </td>
     </tr>

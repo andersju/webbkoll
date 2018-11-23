@@ -45,36 +45,3 @@
       </tbody>
     </table>
 </section>
-
-<%= if @site.scheme == "https" do %>
-  <section class="result">
-    <%= if @site.header_hsts.host.set do %>
-      <h3 id="hsts">
-        <%= if @site.header_hsts.host.pass do %>
-          <%= icon(:pass2) %>
-        <% else %>
-          <%= icon(:fail) %>
-        <% end %>
-        HTTP Strict Transport Security (HSTS)
-      </h3>
-
-      <%= render "_hsts_host.html", host: @site.host, hsts: @site.header_hsts.host, is_base: (@site.host == @site.reg_domain)  %>
-
-      <%= if @site.host != @site.reg_domain do %>
-        <%= if Map.has_key?(@site.header_hsts, :base) do %>
-          <%= if @site.header_hsts.base.set do %>
-            <%= render "_hsts_host.html", host: @site.reg_domain, hsts: @site.header_hsts.base, is_base: true %>
-          <% else %>
-            <p><%= icon(:warn) %> HSTS not set on base domain https://<%= @site.reg_domain %>.</p>
-          <% end %>
-        <% else %>
-          <p>Base domain (https://<%= @site.reg_domain %>) HSTS status unknown.</p>
-        <% end %>
-      <% end %>
-
-    <% else %>
-      <h3 id="hsts"><%= icon(:fail) %> Strict Transport Security</h3>
-      <p>HTTP Strict Transport Security (HSTS) not implemented.</p>
-    <% end %>
-  </section>
-<% end %>

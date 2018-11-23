@@ -19,9 +19,9 @@
             <%= for request <- data do %>
             <li>
               <%= if String.starts_with?(request.url, "https") do %>
-                <i class="icon-lock"></i>
+                <i class="fas fa-lock fa-fw"></i>
               <% else %>
-                <i class="icon-unlock-alt"></i>
+                <i class="fas fa-lock-open fa-fw"></i>
               <% end %>
             <%= link "#{truncate(request.url, 70)}", to: request.url %>
             </li>
@@ -31,7 +31,7 @@
         <td><a class="external" href="https://tools.keycdn.com/geo?host=<%= host_info.ip %>"><%= host_info.ip %></a></td>
         <td><%= host_info.country %></td>
         <td><%= Webbkoll.Trackers.check(PublicSuffix.registrable_domain(host, ignore_private: true)) %></td>
-        <td class="info"><span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="host-<%= counter %>">Show</span></td>
+        <td class="info"><span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="host-<%= counter %>">Show (<%= Enum.count(data) %>) </span></td>
       </tr>
     <% end %>
   </tbody>

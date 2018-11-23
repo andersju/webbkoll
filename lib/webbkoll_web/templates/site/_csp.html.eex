@@ -8,53 +8,58 @@
     Content Security Policy
   </h3>
 
-  <%= if @site.header_csp do %>
-  <p>Content Security Policy set in HTTP header: <code><%= @site.header_csp %></code></p>
-  <% end %>
+  <div class="alpha">
+    <%= if @site.header_csp do %>
+    <p>Content Security Policy set in HTTP header: <code><%= @site.header_csp %></code></p>
+    <% end %>
 
-  <%= if @site.meta_csp do %>
-  <p>Content Security Policy set in meta element: <code><%= @site.meta_csp %></code></p>
-  <% end %>
+    <%= if @site.meta_csp do %>
+    <p>Content Security Policy set in meta element: <code><%= @site.meta_csp %></code></p>
+    <% end %>
 
+    <p><%= Webbkoll.HeaderAnalysis.csp_result_text(@site.csp.result) |> raw %></p>
 
-  <p><%= Webbkoll.HeaderAnalysis.csp_result_text(@site.csp.result) |> raw %></p>
-
-  <%= if @site.csp.policy do %>
-    <table class="csp data" data-sortable>
-      <thead>
-        <tr>
-          <th class="test" data-sort-default><%= gettext "Test" %></th>
-          <th class="pass"><%= gettext "Pass" %></th>
-          <th class="info"><%= gettext "Info" %></th>
-        </tr>
-      </thead>
-      <tbody>
-        <%= for {policy, value} <- @site.csp.policy do %>
-          <% {test, pass, info, optional} = csp_policy(policy, value) %>
+    <%= if @site.csp.policy do %>
+      <table class="csp data" data-sortable>
+        <thead>
           <tr>
-            <td class="test">
-              <%= raw(test) %>
-              <p id="<%= Atom.to_string(policy) %>">
-                <%= raw(info) %>
-              </p>
-            </td>
-            <td class="pass">
-              <%= if pass do %>
-              <%= icon(:pass) %>
-              <% else %>
-                <%= if optional do %>
-                <%= icon(:optional) %>
-                <% else %>
-                <%= icon(:fail) %>
-                <% end %>
-              <% end %>
-            </td>
-            <td class="info"><span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="<%= Atom.to_string(policy) %>">Show</span></td>
+            <th class="pass" data-sort-default><%= gettext "Pass" %></th>
+            <th class="test"><%= gettext "Test" %></th>
+            <th class="info"><%= gettext "Info" %></th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <%= for {policy, value} <- @site.csp.policy do %>
+            <% {test, pass, info, optional} = csp_policy(policy, value) %>
+            <tr>
+              <td class="pass">
+                <%= if pass do %>
+                <%= icon(:pass) %>
+                <% else %>
+                  <%= if optional do %>
+                  <%= icon(:optional) %>
+                  <% else %>
+                  <%= icon(:fail) %>
+                  <% end %>
+                <% end %>
+              </td>
+              <td class="test">
+                <%= raw(test) %>
+                <p id="<%= Atom.to_string(policy) %>">
+                  <%= raw(info) %>
+                </p>
+              </td>
 
-    <p>The Content Security Policy tests above are based on the ones from the <a href="https://github.com/mozilla/http-observatory">Mozilla HTTP Observatory</a> scanner/grader project (<a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href="https://observatory.mozilla.org/">Observatory by Mozilla</a> website, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</a>. Any mistakes or inaccuracies are our fault.</p>
-  <% end %>
+              <td class="info"><span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="<%= Atom.to_string(policy) %>">Show</span></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+  <div class="beta">
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP">Content Security Policy</a> is an effective measure to protect your site from <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">XSS</a> attacks. By whitelisting sources of approved content, you can prevent the browser from loading malicious assets. It can also help prevent information leakage.</p>
+    
+    <p>The Content Security Policy tests are based on the ones from the <a href="https://github.com/mozilla/http-observatory">Mozilla HTTP Observatory</a> scanner/grader project (<a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href="https://observatory.mozilla.org/">Observatory by Mozilla</a> website, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</a>. Any mistakes or inaccuracies are our fault.</p>
+  </div>
 </section>
