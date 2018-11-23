@@ -1,7 +1,7 @@
 <%# TODO: Move logic to helper? %>
 
 <section class="result">
-  <h3 id="headers"><%= icon(:pass2) %> <%= gettext "HTTP headers" %></h3>
+  <h3 id="headers"><%= gettext "HTTP headers" %></h3>
 
   <div class="header-item heading">
     <div class="alpha">

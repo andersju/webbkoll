@@ -77,7 +77,7 @@ Start the Phoenix endpoint with `mix phx.server` (or to get an interactive shell
 
 Now you can visit [`localhost:4000`](http://localhost:4000) in your browser.
 
-The [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2/geolite2/) (for GeoIP lookups) is downloaded automatically from MaxMind (to change source, edit `config/dev.exs` and/or `config/prod.exs`) upon start if the file doesn't already exist. It is then refreshed once per week (interval can be changed in `config/config.exs`).
+The [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2/geolite2/) (for GeoIP lookups) is downloaded automatically from MaxMind (to change source, edit `config/dev.exs` and/or `config/prod.exs`) upon start if the file doesn't already exist (should be `priv/GeoLite2-Country.mmdb.gz`). It is then refreshed once per week (interval can be changed in `config/config.exs`).
 
 ### Production
 

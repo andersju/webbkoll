@@ -17,14 +17,16 @@ defmodule Webbkoll.Helpers do
   def check_services(nil), do: []
 
   def check_services(requests) do
-    requests
+    urls = for {_host, value} <- requests, request <- value, do: request.url
+
+    urls
     |> Enum.reduce([], &check_services/2)
     |> List.flatten()
     |> Enum.uniq()
   end
 
-  defp check_services(request, results) do
-    for {k, v} <- services(), String.contains?(request["url"], v["pattern"]), into: results do
+  defp check_services(url, results) do
+    for {k, v} <- services(), String.contains?(url, v["pattern"]), into: results do
       [k | results]
     end
   end

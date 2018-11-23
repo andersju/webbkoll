@@ -23,8 +23,8 @@
     </p>
     <p><%= gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.reg_domain) |> raw %></p>
 
-    <%= render "_request_table.html", unique_third_parties: @site.unique_third_parties, id: "table-requests" %>
+    <%= render "_request_table.html", requests: @site.third_party_requests, id: "table-requests" %>
 
-    <%= render "_request_urls.html", requests: @site.third_party_requests, id: "requests-list" %>
+    <%= #render "_request_urls.html", requests: @site.third_party_requests, id: "requests-list" %>
   <% end %>
 </section>

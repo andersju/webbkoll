@@ -1,25 +1,40 @@
-<div id="<%= @id %>" data-a11y-toggle-open>
-  <h4>Third-party hosts contacted</h4>
-  <table class="requests data" data-sortable>
-    <thead>
+<table class="requests data" data-sortable>
+  <thead>
+    <tr>
+      <th class="host" data-sort-default><%= gettext "Host" %></th>
+      <th><%= gettext "IP" %></th>
+      <th><%= gettext "Country" %></th>
+      <th><%= gettext "Classification" %></th>
+      <th><%= gettext "URLs" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= for {{host, data}, counter} <- Enum.with_index(@requests) do %>
+    <% host_info = List.first(data) %>
       <tr>
-        <th data-sort-default><%= gettext "Host" %></th>
-        <th><%= gettext "IP" %></th>
-        <th><%= gettext "Country" %></th>
-        <th><%= gettext "Classification" %></th>
-      </tr>
-    </thead>
-    <tbody>
-      <%= for {host, data} <- @unique_third_parties do %>
-        <tr>
-          <td><%= host %></td>
-          <td><a class="external" href="https://tools.keycdn.com/geo?host=<%= data["ip"] %>"><%= data["ip"] %></a></td>
-          <td><%= data["country"] %></td>
-          <td><%= Webbkoll.Trackers.check(PublicSuffix.registrable_domain(host, ignore_private: true)) %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+        <td>
+          <%= host %>
 
-  <p><%= gettext(~s|We use Disconnect's <a href="%{url}">open source list of trackers</a> to classify hosts.|, url: "https://github.com/disconnectme/disconnect-tracking-protection") |> raw %></p>
-</div>
+          <ul id="host-<%= counter %>">
+            <%= for request <- data do %>
+            <li>
+              <%= if String.starts_with?(request.url, "https") do %>
+                <i class="icon-lock"></i>
+              <% else %>
+                <i class="icon-unlock-alt"></i>
+              <% end %>
+            <%= link "#{truncate(request.url, 70)}", to: request.url %>
+            </li>
+            <% end %>
+          </ul>
+        </td>
+        <td><a class="external" href="https://tools.keycdn.com/geo?host=<%= host_info.ip %>"><%= host_info.ip %></a></td>
+        <td><%= host_info.country %></td>
+        <td><%= Webbkoll.Trackers.check(PublicSuffix.registrable_domain(host, ignore_private: true)) %></td>
+        <td class="info"><span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="host-<%= counter %>">Show</span></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><%= gettext(~s|We use Disconnect's <a href="%{url}">open source list of trackers</a> to classify hosts.|, url: "https://github.com/disconnectme/disconnect-tracking-protection") |> raw %></p>

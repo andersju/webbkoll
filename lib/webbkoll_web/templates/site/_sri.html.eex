@@ -26,7 +26,7 @@
 
     <ul>
     <%= for resource <- Enum.filter(@site.sri.data, fn x -> x.secureorigin == false && (x.crossorigin == nil || x.integrity == nil) end) do %>
-      <li><code><%= resource.src %></code></li>
+      <li><code><%= truncate(resource.src, 100) %></code></li>
     <% end %>
     </ul>
   <% end %>

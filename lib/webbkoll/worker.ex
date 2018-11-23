@@ -140,7 +140,6 @@ defmodule Webbkoll.Worker do
         insecure_first_party_requests: insecure_first_party_requests,
         third_party_requests: third_party_requests,
         third_party_request_types: third_party_request_types,
-        unique_third_parties: get_unique_third_parties(third_party_requests),
         insecure_requests_count:
          third_party_request_types.insecure + Enum.count(insecure_first_party_requests),
         meta_csp: get_meta(json["content"], "http-equiv", "content-security-policy"),
@@ -184,19 +183,26 @@ defmodule Webbkoll.Worker do
   end
 
   defp get_third_party_requests(requests, registerable_domain) do
-    Enum.reduce(requests, [], fn request, acc ->
+    Enum.reduce(requests, %{}, fn request, acc ->
       host = URI.parse(request["url"]).host
       case host !== nil && get_registerable_domain(host) !== registerable_domain do
-        true -> [Map.put(request, "host", host) | acc]
-        false -> acc
+        true ->
+          # TODO: IP and country stored per URL rather than per host. Although they might
+          # in theory differ between requests, might be better to just store it per host?
+          new_map = %{url: request["url"], ip: request["remote_address"]["ip"], country: get_geolocation_by_ip(request["remote_address"]["ip"])}
+          Map.put(acc, host, [new_map | Map.get(acc, host, [])])
+        false ->
+          acc
       end
     end)
   end
 
   defp get_request_types(requests) do
-    total = Enum.count(requests)
-    secure = Enum.count(requests, fn request -> String.starts_with?(request["url"], "https://") end)
-    unique_hosts = requests |> get_unique_hosts("host") |> Enum.count()
+    individual_requests = for {_host, value} <- requests, request <- value, do: request
+
+    total = Enum.count(individual_requests)
+    secure = Enum.count(individual_requests, fn request -> String.starts_with?(request.url, "https://") end)
+    unique_hosts = Enum.count(requests)
 
     %{total: total, secure: secure, insecure: total - secure, unique_hosts: unique_hosts}
   end
@@ -312,11 +318,5 @@ defmodule Webbkoll.Worker do
         {:error, _} -> %{host: HeaderAnalysis.hsts(header)}
       end
     end
-  end
-
-  defp get_unique_third_parties(responses) do
-    Enum.reduce(responses, %{}, fn x, acc ->
-      Map.put_new(acc, x["host"], %{"ip" => x["remote_address"]["ip"], "country" => get_geolocation_by_ip(x["remote_address"]["ip"])})
-    end)
   end
 end
