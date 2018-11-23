@@ -1,0 +1,18 @@
+<section class="result">
+  <h3 id="raw-headers"><%= gettext "Raw headers" %></h3>
+
+  <table>
+    <thead>
+      <th>Header</th>
+      <th>Value</th>
+    </thead>
+    <tbody>
+      <%= for {header, value} <- @site.headers do %>
+      <tr>
+        <td><%= header %></td>
+        <td><%= value %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>

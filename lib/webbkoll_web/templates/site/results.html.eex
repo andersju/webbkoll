@@ -18,4 +18,6 @@
   <%= render "_requests.html", site: @site %>
 
   <%= render "_geolocation.html", site: @site, conn: @conn %>
+
+  <%= render "_raw_headers.html", site: @site %>
 </div>

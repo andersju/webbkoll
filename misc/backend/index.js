@@ -105,14 +105,12 @@ app.get('/', async (request, response) => {
 
     let title = await page.title();
     let finalUrl = await page.url();
-
     let responseHeaders = pageResponse.headers();
-    responseHeaders.status = pageResponse.status();
-    responseHeaders.remote_address = pageResponse.remoteAddress();
+    let responseStatus = pageResponse.status();
 
     let webbkollStatus = 200;
     let results = {};
-    if (responseHeaders.status >= 200 && responseHeaders.status <= 299) {
+    if (responseStatus >= 200 && responseStatus <= 299) {
       // TODO: Use response interception when available
       // (https://github.com/GoogleChrome/puppeteer/issues/1191)
       if (responseHeaders['content-type'].startsWith('text/html') || responseHeaders['content-type'].startsWith('application/xhtml+xml')) {
@@ -123,13 +121,15 @@ app.get('/', async (request, response) => {
           'final_url': finalUrl,
           'responses': responses,
           'response_headers': responseHeaders,
+          'status': responseStatus,
+          'remote_address': pageResponse.remoteAddress(),
           'cookies': cookies.cookies,
           'localStorage': localStorage,
           'security_info': securityInfo,
           'content': content.substring(0, 5000000) // upper limit for sanity
         };
       } else {
-        logger.warn('Failed checking ' + url + ': ' + responseHeaders.status);
+        logger.warn('Failed checking ' + url + ': ' + responseStatus);
         results = {
           'success': false,
           'reason': 'Page does not have text/html Content-Type',
@@ -137,10 +137,10 @@ app.get('/', async (request, response) => {
         webbkollStatus = 500;
       }
     } else {
-      logger.warn('Failed checking ' + url + ': ' + responseHeaders.status);
+      logger.warn('Failed checking ' + url + ': ' + responseStatus);
       results = {
         'success': false,
-        'reason': 'Failed to fetch this URL: ' + responseHeaders.status + ' (' + title + ')',
+        'reason': 'Failed to fetch this URL: ' + responseStatus + ' (' + title + ')',
       };
       webbkollStatus = 500;
     }

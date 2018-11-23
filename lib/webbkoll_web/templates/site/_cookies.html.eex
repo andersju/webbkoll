@@ -1,7 +1,7 @@
 <section class="result">
   <h3 id="cookies"><i class="fas fa-cookie-bite fa-fw"></i> <%= gettext "Cookies" %></h3>
-  <p><%= ngettext("<strong>One</strong> first-party cookie.", "<strong>%{count}</strong> first-party cookies.", @site.cookie_count.first_party) |> raw %></p>
-  <p><%= ngettext("<strong>One</strong> third-party cookie.", "<strong>%{count}</strong> third-party cookies.", @site.cookie_count.third_party) |> raw %></p>
+  <p><%= ngettext("<strong>1</strong> first-party cookie.", "<strong>%{count}</strong> first-party cookies.", @site.cookie_count.first_party) |> raw %></p>
+  <p><%= ngettext("<strong>1</strong> third-party cookie.", "<strong>%{count}</strong> third-party cookies.", @site.cookie_count.third_party) |> raw %></p>
 
   <%= if @site.cookie_count.first_party > 0 do %>
     <%= render "_cookie_table.html", cookies: @site.cookies.first_party, label: "First-party cookies", id: "cookies-first" %>

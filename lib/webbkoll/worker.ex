@@ -109,7 +109,7 @@ defmodule Webbkoll.Worker do
     with url = URI.parse(json["final_url"]),
          reg_domain = get_registerable_domain(url.host),
          headers = json["response_headers"],
-         host_ip = json["response_headers"]["remote_address"]["ip"],
+         host_ip = json["remote_address"]["ip"],
          cookies = get_cookies(json["cookies"], reg_domain),
          # Ignore first request in requests list, as it's by definition a first-party request;
          # fixes issue with IDN domains
