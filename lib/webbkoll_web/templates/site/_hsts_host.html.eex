@@ -50,7 +50,7 @@
       <td>
         <code>preload</code> - requests inclusion in preload lists
         <%= if not @is_base do %>
-          [only relevant for base domain.]
+          [only relevant for base domain]
         <% end %>
       </td>
     </tr>

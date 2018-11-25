@@ -18,7 +18,7 @@ defmodule Webbkoll.ContentAnalysis do
     "sri-not-implemented-but-no-resources-loaded"
   ]
 
-  def check_sri(content, reg_domain, site_scheme) do
+  def sri(content, reg_domain, site_scheme) do
     resources = check_sri_content(content, reg_domain, site_scheme)
     output = check_resources(resources)
     resources_on_foreign_origin = Enum.find(resources, &(&1.secureorigin == false)) != nil

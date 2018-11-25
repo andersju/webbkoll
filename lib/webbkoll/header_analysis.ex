@@ -341,4 +341,41 @@ defmodule Webbkoll.HeaderAnalysis do
       map
     end
   end
+
+  def x_content_type_options(nil) do
+    %{data: nil, pass: false, result: "x-frame-options-not-implemented"}
+  end
+  def x_content_type_options(header) do
+    data = String.slice(header, 0, 100)
+    output = %{
+      data: data,
+      pass: false,
+      result: nil
+    }
+
+    case data |> String.downcase() |> String.trim() do
+      "nosniff" -> %{output | pass: true, result: "x-content-type-options-nosniff"}
+      _ -> %{output | result: "x-content-type-options-header-invalid"}
+    end
+  end
+
+  def x_frame_options(nil, csp) do
+    %{data: nil, pass: false, result: "x-frame-options-not-implemented"}
+  end
+  def x_frame_options(header, csp) do
+    data = String.slice(header, 0, 100)
+    output = %{
+      data: data,
+      pass: false,
+      result: nil
+    }
+    xfo = data |> String.downcase() |> String.trim()
+
+    cond do
+      Map.has_key?(csp, "frame-ancestors") -> %{output | result: "x-frame-options-implemented-via-csp", pass: true}
+      xfo in ["deny", "sameorigin"] -> %{output | result: "x-frame-options-sameorigin-or-deny", pass: true}
+      String.starts_with(xfo, "allow-from ") -> %{output | result: "x-frame-options-allow-from-origin", pass: true}
+      true -> %{output | result: "x-frame-options-header-invalid"}
+    end
+  end
 end

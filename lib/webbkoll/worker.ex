@@ -123,7 +123,8 @@ defmodule Webbkoll.Worker do
            |> get_header("referrer-policy"),
          http_equiv_referrer = get_meta(json["content"], "http-equiv", "referrer-policy"),
          referrer_policy_in_use =
-           check_referrer_policy_in_use(meta_referrer, http_equiv_referrer, header_referrer) do
+           check_referrer_policy_in_use(meta_referrer, http_equiv_referrer, header_referrer),
+         csp = HeaderAnalysis.csp(url.scheme, get_header(headers, "content-security-policy"), get_meta(json["content"], "http-equiv", "content-security-policy")) do
       %{
         input_url: json["input_url"],
         final_url: json["final_url"],
@@ -144,12 +145,14 @@ defmodule Webbkoll.Worker do
          third_party_request_types.insecure + Enum.count(insecure_first_party_requests),
         meta_csp: get_meta(json["content"], "http-equiv", "content-security-policy"),
         header_csp: get_header(headers, "content-security-policy"),
-        csp: HeaderAnalysis.csp(url.scheme, get_header(headers, "content-security-policy"), get_meta(json["content"], "http-equiv", "content-security-policy")),
+        csp: csp,
         header_hsts: check_hsts(headers["strict-transport-security"], url.host, reg_domain),
         referrer: %{header: header_referrer, http_equiv: http_equiv_referrer, meta: meta_referrer, status: check_referrer_policy(referrer_policy_in_use)},
         services: check_services(third_party_requests),
         security: json["security_info"],
-        sri: ContentAnalysis.check_sri(json["content"], reg_domain, url.scheme)
+        sri: ContentAnalysis.sri(json["content"], reg_domain, url.scheme),
+        x_content_type_options: HeaderAnalysis.x_content_type_options(headers["x-content-type-options"]),
+        x_frame_options: HeaderAnalysis.x_frame_options(headers["x-frame-options"], csp)|>IO.inspect
       }
     end
   end
@@ -254,14 +257,6 @@ defmodule Webbkoll.Worker do
       end
     end)
     |> Enum.join(";")
-  end
-
-  defp get_geolocation_by_ip(nil), do: nil
-
-  defp get_geolocation_by_ip(ip) do
-    ip
-    |> Geolix.lookup(as: :raw, where: :country, locale: :en)
-    |> get_in([:country, :iso_code])
   end
 
   defp check_referrer_policy_in_use(meta, http_equiv_referrer, referrer_header) do

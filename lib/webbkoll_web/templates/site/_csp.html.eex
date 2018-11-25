@@ -20,10 +20,10 @@
     <p><%= Webbkoll.HeaderAnalysis.csp_result_text(@site.csp.result) |> raw %></p>
 
     <%= if @site.csp.policy do %>
-      <table class="csp data" data-sortable>
+      <table class="csp data">
         <thead>
           <tr>
-            <th class="pass" data-sort-default><%= gettext "Pass" %></th>
+            <th class="pass"><%= gettext "Pass" %></th>
             <th class="test"><%= gettext "Test" %></th>
             <th class="info"><%= gettext "Info" %></th>
           </tr>

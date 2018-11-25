@@ -14,6 +14,14 @@ defmodule Webbkoll.Helpers do
     end
   end
 
+  def get_geolocation_by_ip(nil), do: nil
+
+  def get_geolocation_by_ip(ip) do
+    ip
+    |> Geolix.lookup(as: :raw, where: :country, locale: :en)
+    |> get_in([:country, :iso_code])
+  end
+
   def check_services(nil), do: []
 
   def check_services(requests) do
