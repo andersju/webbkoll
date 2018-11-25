@@ -1,12 +1,14 @@
-<%= if @site.geolocation do %>
-  <section class="result">
-    <h3 id="server-location"><i class="fas fa-globe fa-fw"></i> <%= gettext "Server location" %></h3>
-    <div class="alpha">
+<section class="result">
+  <h3 id="server-location"><i class="fas fa-globe fa-fw"></i> <%= gettext "Server location" %></h3>
+  <div class="alpha">
+    <%= if @site.geolocation do %>
       <p><%= gettext(~s|The server <strong>%{domain}</strong> (%{host_ip}) appears to have been located in <strong>%{country}</strong> during our test.|, domain: @site.host, host_ip: @site.host_ip, country: country_from_iso(@conn.assigns.locale, @site.geolocation)) |> raw %></p>
-      <p><a class="external" href="https://tools.keycdn.com/geo?host=<%= @site.host_ip %>">See more information</a> (e.g., provider) about this IP address using KeyCDN's tool.</p>
-    </div>
-    <div class="beta">
-      <p><i class="fas fa-exclamation-circle"></i> <%= gettext(~s|Some sites use CDNs &ndash; <a class="external" href="https://en.wikipedia.org/wiki/Content_delivery_network">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France.|) |> raw %></p>
-    </div>
-  </section>
-<% end %>
+    <% else %>
+    <p><%= gettext("Server location for <strong>%{domain}</strong> (%{host_ip}) could not be determined.", domain: @site.host, host_ip: @site.host_ip) |> raw %></p>
+    <% end %>
+    <p><a class="external" href="https://tools.keycdn.com/geo?host=<%= @site.host_ip %>">See more information</a> (e.g., provider) about this IP address using KeyCDN's tool.</p>
+  </div>
+  <div class="beta">
+    <p><i class="fas fa-exclamation-circle"></i> <%= gettext(~s|Some sites use CDNs &ndash; <a class="external" href="https://en.wikipedia.org/wiki/Content_delivery_network">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France.|) |> raw %></p>
+  </div>
+</section>

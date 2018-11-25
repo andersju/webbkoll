@@ -14,7 +14,7 @@ defmodule WebbkollWeb.Endpoint do
     at: "/",
     from: :webbkoll,
     gzip: false,
-    only: ~w(css fonts images js favicon.ico robots.txt .well-known)
+    only: ~w(css flags fonts images js favicon.ico robots.txt .well-known)
   )
 
   # Code reloading can be explicitly enabled under the

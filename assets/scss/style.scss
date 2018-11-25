@@ -7,6 +7,7 @@
 @import "navigation";
 @import "tooltip";
 
+@import "flag-icon/flag-icon";
 //@import "icons";
 @import "fontawesome/fontawesome";
 @import "fontawesome/solid";
@@ -63,7 +64,7 @@ table {
 
 table.requests {
   .host {
-    min-width: 40rem;
+    min-width: 30rem;
   }
 }
 
@@ -179,7 +180,7 @@ button[data-a11y-toggle][aria-expanded="true"],
     margin-right: auto;
     margin-bottom: 2rem;
 
-    max-width: 30rem;
+    max-width: 35rem;
 
     position: relative;
 
@@ -288,7 +289,7 @@ section {
 
 section > .summary {
   @include span-columns(8);
-  span {
+  span.label {
     display: inline-block;
     width: 12rem;
   }

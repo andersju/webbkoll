@@ -180,6 +180,7 @@ Frontend:
   * [Disconnect's open source list of trackers](https://github.com/disconnectme/disconnect-tracking-protection) (`priv/services.json`) (GPLv3) by Disconnect, Inc.
   * GeoLite2 data created by MaxMind (CC BY-SA 4.0), available from [http://www.maxmind.com](http://www.maxmind.com). (Not included in the repository, but automatically downloaded to `priv/GeoLite2-Country.mmdb.gz`.)
   * JSON for ISO 3166-1 country code i18n from [node-i18n-iso-countries](https://github.com/michaelwittig/node-i18n-iso-countries) (`priv/{en,sv}.json`) (MIT license)
+  * SVG flags/CSS (`assets/scss/flag-icon`, `assets/static/flags`) from [flag-icon-css](https://github.com/lipis/flag-icon-css) (MIT license) by Panayiotis Lipiridis
 
 Backend:
   * [Puppeteer](https://github.com/GoogleChrome/puppeteer) (Apache License 2.0) by the Chrome DevTools team

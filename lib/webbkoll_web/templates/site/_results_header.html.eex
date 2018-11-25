@@ -22,7 +22,7 @@
     <div class="summary">
       <ul>
         <li>
-          <span>HTTPS by default:</span>
+          <span class="label">HTTPS by default:</span>
           <%= if @site.scheme == "https" do %>
             <%= if @site.security["securityState"] == "secure" do %>
               <%= icon(:pass) %> Yes
@@ -34,7 +34,7 @@
           <% end %>
         </li>
         <li>
-          <span>Content Security Policy:</span>
+          <span class="label">Content Security Policy:</span>
 
           <%= if @site.csp.pass do %>
             <%= icon(:pass) %> Good policy
@@ -47,7 +47,7 @@
             <% end %>
           <% end %>
         <li>
-          <span>Referrer Policy:</span>
+          <span class="label">Referrer Policy:</span>
 
           <%= case @site.referrer.status do %>
             <% "success" -> %> <%= icon(:pass) %> Referrers not leaked
@@ -57,7 +57,7 @@
           <% end %>
         </li>
         <li>
-          <span>Cookies:</span>
+          <span class="label">Cookies:</span>
           
           <strong><%= @site.cookie_count.first_party + @site.cookie_count.third_party %></strong>
           <%= if (@site.cookie_count.first_party + @site.cookie_count.third_party) > 0 do %>
@@ -65,7 +65,7 @@
           <% end %>
         </li>
         <li>
-          <span>Third-party requests:</span>
+          <span class="label">Third-party requests:</span>
 
           <strong><%= @site.third_party_request_types.total %></strong>
           <%= if @site.third_party_request_types.total > 0 do %>
@@ -73,9 +73,14 @@
           <% end %>
         </li>
         <li>
-          <span>Server location:</span>
+          <span class="label">Server location:</span>
 
-          <%= country_from_iso(@conn.assigns.locale, @site.geolocation) %> &mdash; <%= @site.host_ip %><sup><a class="external" href="https://tools.keycdn.com/geo?host=<%= @site.host_ip %>">Look up</a></sup>
+          <%= if @site.geolocation do %>
+            <span class="flag-icon flag-icon-<%= String.downcase(@site.geolocation) %>"></span> <%= country_from_iso(@conn.assigns.locale, @site.geolocation) %>
+          <% else %>
+            <%= gettext("Unknown") %>
+          <% end %>
+             &mdash; <%= @site.host_ip %><sup><a class="external" href="https://tools.keycdn.com/geo?host=<%= @site.host_ip %>">Look up</a></sup>
         </li>
       </ul>
     </div>
