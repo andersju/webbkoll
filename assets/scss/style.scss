@@ -23,6 +23,10 @@ sup {
   font-size: 0.6rem;
 }
 
+small {
+  font-size: 0.8rem;
+}
+
 /*
 .expander {
   background-color: inherit;
@@ -317,6 +321,15 @@ section > .url {
   padding-top: 2rem;
 }
 
+.result {
+  blockquote {
+    margin: 0 0 0.75rem 0;
+    padding-left: 0.5rem;
+    border-left: 1px dotted black;
+
+  }
+}
+
 .result,
 .text {
   display: block;
@@ -338,6 +351,10 @@ section > .url {
 
   > .beta {
     @include span-columns(5);
+    background-color: #f5f5f5;
+    border-radius: 2%;
+    font-size: 0.8rem;
+    padding: 1rem;
   }
 
   @include media($mobile) {
@@ -487,7 +504,7 @@ section.third-party {
   }
 }
 
-footer {
+.footer-outer > footer {
   @include outer-container;
   padding-bottom: 1rem;
   padding-left: 0.5em;

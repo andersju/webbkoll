@@ -8,28 +8,54 @@
     Subresource Integrity (SRI)
   </h3>
 
-  <p>
-    <%= case @site.sri.result do %>
-      <% "sri-implemented-and-all-scripts-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) is implemented and all scripts are loaded from a similar origin.") %>
-      <% "sri-implemented-and-external-scripts-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) is implemented and all scripts are loaded securely.") %>
-      <% "sri-not-implemented-but-no-scripts-loaded" -> %> <%= gettext("Subresource Integrity (SRI) is not needed since site contains no script tags.") %>
-      <% "sri-not-implemented-but-all-scripts-loaded-from-secure-origin" -> %> <%= gettext("Subresource Integrity (SRI) not implemented, but all scripts are loaded from a similar origin.") %>
-      <% "sri-not-implemented-but-external-scripts-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) not implemented, but all external scripts are loaded over HTTPS") %>
-      <% "sri-implemented-but-external-scripts-not-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) implemented, but external scripts are loaded over HTTP or use protocol-relative URLs via src=\"//...\"") %>
-      <% "sri-not-implemented-and-external-scripts-not-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) not implemented, and external scripts are loaded over HTTP or use protocol-relative URLs via src=\"//...\".") %>
-      <% _ -> %> <%= "" %>
-    <% end %>
-  </p>
+  <div class="alpha">
+    <p>
+      <%= case @site.sri.result do %>
+        <% "sri-implemented-and-all-resources-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) is implemented and all resources are loaded from a similar origin.") %>
+        <% "sri-implemented-and-external-resources-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) is implemented and all resources are loaded securely.") %>
+        <% "sri-not-implemented-but-no-resources-loaded" -> %> <%= gettext("Subresource Integrity (SRI) is not needed since site contains no script tags.") %>
+        <% "sri-not-implemented-but-all-resources-loaded-from-secure-origin" -> %> <%= gettext("Subresource Integrity (SRI) not implemented, but all resources are loaded from a similar origin.") %>
+        <% "sri-not-implemented-but-external-resources-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) not implemented, but all external resources are loaded over HTTPS") %>
+        <% "sri-implemented-but-external-resources-not-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) implemented, but external resources are loaded over HTTP or use protocol-relative URLs via src=\"//...\"") %>
+        <% "sri-not-implemented-and-external-resources-not-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) not implemented, and external resources are loaded over HTTP or use protocol-relative URLs via src=\"//...\".") %>
+        <% _ -> %> <%= "" %>
+      <% end %>
+    </p>
 
-  <%= if not @site.sri.pass do %>
-    <p>The following third-party resources are not loaded using SRI:</p>
+    <%= if not @site.sri.pass do %>
+      <p>The following third-party resources are not loaded using SRI:</p>
 
-    <ul>
-    <%= for resource <- Enum.filter(@site.sri.data, fn x -> x.secureorigin == false && (x.crossorigin == nil || x.integrity == nil) end) do %>
-      <li><code><%= truncate(resource.src, 100) %></code></li>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>URL</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= for resource <- Enum.filter(@site.sri.data, fn x -> x.secureorigin == false && (x.crossorigin == nil || x.integrity == nil) end) do %>
+          <tr>
+            <td><%= if resource.type == "link", do: "css", else: resource.type %></td>
+            <td><code><%= truncate(resource.src, 100) %></code></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+      </ul>
     <% end %>
-    </ul>
-  <% end %>
-  
-    <p>The Subresource Integrity test above is based on the one from the <a href="https://github.com/mozilla/http-observatory">Mozilla HTTP Observatory</a> scanner/grader project (<a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. Any mistakes or inaccuracies are our fault.</p>
+  </div>
+  <div class="beta">
+    <blockquote>
+      <p>Subresource Integrity (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a CDN) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.</p>
+      <p>Using Content Delivery Networks (CDNs) to host files such as scripts and stylesheets that are shared among multiple sites can improve site performance and conserve bandwidth. However, using CDNs also comes with a risk, in that if an attacker gains control of a CDN, the attacker can inject arbitrary malicious content into files on the CDN (or replace the files completely) and thus can also potentially attack all sites that fetch files from that CDN.</p>
+
+      <p>Subresource Integrity enables you to mitigate some risks of attacks such as this, by ensuring that the files your web application or web document fetches (from a CDN or anywhere) have been delivered without a third-party having injected any additional content into those files — and without any other changes of any kind at all having been made to those files.</p>
+      <footer>
+        &mdash; <cite>MDN, <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>, by Mozilla Contributors, <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></cite>
+      </footer>
+    </blockquote>
+    
+    
+    <p>The Subresource Integrity test is based on the one from the <a href="https://github.com/mozilla/http-observatory">Mozilla HTTP Observatory</a> scanner/grader project (<a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. Any mistake or inaccuracy is our fault.</p>
+  </div>
 </section>

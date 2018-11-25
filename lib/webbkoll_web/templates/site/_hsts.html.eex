@@ -1,5 +1,6 @@
 <%= if @site.scheme == "https" do %>
 <section class="result">
+
   <%= if @site.header_hsts.host.set do %>
     <h3 id="hsts">
       <%= if @site.header_hsts.host.pass do %>
@@ -25,22 +26,26 @@
         <% end %>
       <% end %>
     </div>
-    <div class="beta">
-      <p><a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security" class="external">HTTP Strict Transport Security</a> (HSTS) is a simple and widely supported standard to protect visitors by ensuring that their browsers always connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from <code>http://</code> to <code>https://</code> URLs.</p>
-
-      <p>When a browser knows that a domain has enabled HSTS, it does two things:</p>
-
-      <ul class="default">
-        <li>Always uses an <code>https://</code> connection, even when clicking on an <code>http://</code> link or after typing a domain into the location bar without specifying a protocol.</li>
-        <li>Removes the ability for users to click through warnings about invalid certificates.</li>
-      </ul>
-
-      <p>A domain instructs browsers that it has enabled HSTS by returning an HTTP header over an HTTPS connection.</p>
-    </div>
 
   <% else %>
     <h3 id="hsts"><%= icon(:fail) %> Strict Transport Security</h3>
-    <p>HTTP Strict Transport Security (HSTS) not implemented.</p>
+
+    <div class="alpha">
+      <p>HTTP Strict Transport Security (HSTS) not implemented.</p>
+   </div>
   <% end %>
+
+  <div class="beta">
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security" class="external">HTTP Strict Transport Security</a> (HSTS) is a simple and widely supported standard to protect visitors by ensuring that their browsers always connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from <code>http://</code> to <code>https://</code> URLs.</p>
+
+    <p>When a browser knows that a domain has enabled HSTS, it does two things:</p>
+
+    <ul class="default">
+      <li>Always uses an <code>https://</code> connection, even when clicking on an <code>http://</code> link or after typing a domain into the location bar without specifying a protocol.</li>
+      <li>Removes the ability for users to click through warnings about invalid certificates.</li>
+    </ul>
+
+    <p>A domain instructs browsers that it has enabled HSTS by returning an HTTP header over an HTTPS connection.</p>
+  </div>
 </section>
 <% end %>

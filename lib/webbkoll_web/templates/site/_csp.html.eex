@@ -58,8 +58,17 @@
     <% end %>
   </div>
   <div class="beta">
-    <p><a href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP">Content Security Policy</a> is an effective measure to protect your site from <a href="https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting">XSS</a> attacks. By whitelisting sources of approved content, you can prevent the browser from loading malicious assets. It can also help prevent information leakage.</p>
+    <blockquote>
+      <p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement to distribution of malware.</p>
+
+      <p>A primary goal of CSP is to mitigate and report XSS attacks. XSS attacks exploit the browser's trust of the content received from the server. Malicious scripts are executed by the victim's browser because the browser trusts the source of the content, even when it's not coming from where it seems to be coming from.</p>
+
+      <p>CSP makes it possible for server administrators to reduce or eliminate the vectors by which XSS can occur by specifying the domains that the browser should consider to be valid sources of executable scripts. A CSP compatible browser will then only execute scripts loaded in source files received from those whitelisted domains, ignoring all other script (including inline scripts and event-handling HTML attributes).</p>
+      <footer>
+        &mdash; <cite>MDN, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a>, by Mozilla Contributors, <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></cite>
+      </footer>
+    </blockquote>
     
-    <p>The Content Security Policy tests are based on the ones from the <a href="https://github.com/mozilla/http-observatory">Mozilla HTTP Observatory</a> scanner/grader project (<a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href="https://observatory.mozilla.org/">Observatory by Mozilla</a> website, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</a>. Any mistakes or inaccuracies are our fault.</p>
+    <p>The Content Security Policy tests are based on the ones from the <a href="https://github.com/mozilla/http-observatory">Mozilla HTTP Observatory</a> scanner/grader project (<a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href="https://observatory.mozilla.org/">Observatory by Mozilla</a> website, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</a>. Any mistake or inaccuracy is our fault.</p>
   </div>
 </section>
