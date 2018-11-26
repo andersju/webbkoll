@@ -5,7 +5,7 @@ defmodule Webbkoll.MoreSecureHeaders do
 
   def call(conn, _default) do
     conn
-    |> put_resp_header("content-security-policy", "default-src 'self'")
-    |> put_resp_header("x-content-security-policy", "default-src 'self'")
+    |> put_resp_header("Content-Security-Policy", "default-src 'self'")
+    |> put_resp_header("Referrer-Policy", "no-referrer")
   end
 end

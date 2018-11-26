@@ -34,11 +34,10 @@
 
     <div class="howto">
       <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="howto-hsts">
-        <%= if @site.header_hsts.host.set, do: "Read more", else: "How to implement" %>
+       How to implement
       </span>
 
       <div id="howto-hsts">
-        <%= if not @site.header_hsts.host.set do %>
         <p>HSTS is just an HTTP header. In its simplest form, the policy tells a browser to enable HSTS for that exact domain or subdomain, and to remember it for a given number of seconds (the policy is refreshed every time browser sees the header again):</p>
 
         <p><code>Strict-Transport-Security: max-age=31536000;</code></p>
@@ -46,7 +45,7 @@
         <p>In its <strong>strongest and recommended form</strong>, the HSTS policy includes <strong>all subdomains</strong>, and indicates a willingness to be "preloaded" into browsers:</p>
 
         <p><code>Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</code></p>
-        <% end %>
+
         <p>Note that <code>includeSubDomains</code> should be deployed at the base domain, i.e., <code>https://example.com</code>, <em>not</em> <code>https://www.example.com</code>. While we recommend the use of <code>includeSubDomains</code>, be <strong>very</strong> careful, as it means that <strong>all subdomains</strong> associated with the parent domain <strong>must</strong> support HTTPS. (They do not have to each have their own HSTS policy.)</p>
 
         <p>For a user to take advantage of HSTS, their browser does have to see the HSTS header at least once. This means that users are not protected until after their first successful secure connection to a given domain.</p>
@@ -54,6 +53,16 @@
         <p>To solve this problem, the Chrome security team created an “HSTS preload list”: a list of domains baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit.</p>
 
         <p>Firefox, Safari, Opera, and Edge also incorporate Chrome’s HSTS preload list, making this feature shared across major browsers.</p>
+
+        <p>The Chrome security team allows anyone to <a href="https://hstspreload.org/">submit their domain to the list</a>, provided it meets a few requirements.</p>
+
+        <ul class="default">
+          <li><a href="https://https.cio.gov/hsts/">Read more about HSTS</a> [cio.gov]</li>
+          <li><a href="https://hstspreload.org/">HSTS Preload List Submission</a> [hstspreload.org]</li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">Strict-Transport-Security</a> [mozilla.org]</li>
+        </ul>
+
+        <p><small><em>Text adapted from the CIO Council's <a href="https://https.cio.gov/">The HTTPS-Only Standard</a> (public domain).</em></small></p>
       </div>
     </div>
 
@@ -61,7 +70,7 @@
 
 
   <div class="beta">
-    <p><a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security" class="external">HTTP Strict Transport Security</a> (HSTS) is a simple and widely supported standard to protect visitors by ensuring that their browsers always connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from <code>http://</code> to <code>https://</code> URLs.</p>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a> (HSTS) is a simple and <a href="https://caniuse.com/#feat=stricttransportsecurity">widely supported</a> standard to protect visitors by ensuring that their browsers always connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from <code>http://</code> to <code>https://</code> URLs.</p>
 
     <p>When a browser knows that a domain has enabled HSTS, it does two things:</p>
 

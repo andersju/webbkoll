@@ -109,3 +109,4 @@
     <script src="<%= Routes.static_path(@conn, "/js/tablesort.min.js") %>"></script>
     <script src="<%= Routes.static_path(@conn, "/js/a11y-toggle.min.js") %>"></script>
     <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZLAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>

@@ -44,7 +44,7 @@
         </tbody>
       </table>
 
-        <p>For more information:</p>
+        <p>More information about the site's TLS/SSL configuration:</p>
         <ul class="default">
           <li><%= link gettext("Analyze %{host} on SSL Labs", host: @site.host), to: "https://www.ssllabs.com/ssltest/analyze.html?d=#{@site.host}&hideResults=on" %> (web)</li>
           <li><a href="https://observatory.mozilla.org/">Observatory by Mozilla</a> (web)</li>
@@ -54,6 +54,7 @@
 
     <% else %>
       <p><%= raw(gettext "<code>%{domain}</code> does <strong>not</strong> use HTTPS by default.", domain: @site.host) %></p>
+    <% end %>
 
       <div class="howto">
         <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="howto-https">How to implement</span>
@@ -69,7 +70,7 @@
           </ul>
         </div>
       </div>
-    <% end %>
+
   </div>
   <div class="beta">
     <p>HTTPS encrypts nearly all information sent between a client and a web service. Properly configured, it guarantees three things:</p>

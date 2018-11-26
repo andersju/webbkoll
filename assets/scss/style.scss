@@ -352,6 +352,21 @@ section > .url {
     border-radius: 5px;
     font-size: 0.8rem;
     padding: 1rem;
+
+    > div > p {
+      margin-top: 0.75em;
+    }
+  }
+
+  .howto + p {
+    margin-top: 0.75em;
+  }
+
+  .howto,
+  .beta {
+    code {
+      background-color: white;
+    }
   }
 
   /*> .alpha,
