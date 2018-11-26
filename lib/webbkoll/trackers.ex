@@ -36,7 +36,7 @@ defmodule Webbkoll.Trackers do
 
       :error ->
         if to_string(host) =~ ~r/^www\./ do
-          Regex.replace(~r/^www\./, host, "") |> check
+          check(Regex.replace(~r/^www\./, host, ""))
         else
           nil
         end

@@ -76,7 +76,8 @@ defmodule Webbkoll.CronJobs do
       end
 
     actual_md5 =
-      File.stream!(tmp_db_path, [], 2048)
+      tmp_db_path
+      |> File.stream!([], 2048)
       |> StreamGzip.gunzip()
       |> Enum.join()
       |> (&:crypto.hash(:md5, &1)).()

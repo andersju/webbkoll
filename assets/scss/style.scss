@@ -337,6 +337,13 @@ section > .url {
   margin-bottom: 3rem;
   position: relative;
 
+  .howto {
+    background-color: #f5f5f5;
+    border-radius: 2%;
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+
   /*> .alpha,
   > .beta {
     @include span-columns(6);
@@ -425,10 +432,6 @@ section > .url {
   }
 }
 
-section.third-party {
-  margin-bottom: 0;
-}
-
 .requests-list {
   font-size: 0.9em;
 
@@ -442,52 +445,6 @@ section.third-party {
 
   .icon-unlock-alt {
     color: red;
-  }
-}
-
-.header-item {
-  @include outer-container;
-
-  &.heading {
-    border-bottom: 1px solid black;
-    margin-bottom: 0.375em;
-    padding-bottom: 0.375em;
-
-    > .alpha,
-    > .beta {
-      font-weight: 600;
-    }
-  }
-
-  > .alpha {
-    @include span-columns(3);
-
-    font-weight: 700;
-  }
-
-  > .beta {
-    @include span-columns(9);
-
-    span {
-      font-weight: 600;
-    }
-
-    .icon-check {
-      color: green;
-    }
-
-    .icon-times {
-      color: red;
-    }
-  }
-
-  @include media($mobile) {
-    > .alpha {
-      @include span-columns(4);
-    }
-    > .beta {
-      @include span-columns(4);
-    }
   }
 }
 

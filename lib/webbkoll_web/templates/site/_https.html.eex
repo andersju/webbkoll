@@ -12,39 +12,46 @@
   <div class="alpha">
     <%= if @site.scheme == "https" do %>
       <p><%= raw(gettext "<code>%{domain}</code> uses HTTPS by default.", domain: @site.host) %></p>
+
+      <p>Chromium reports the following:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>State</th>
+            <th>Title</th>
+            <th>Summary</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= for explanation <- @site.security["explanations"] do %>
+            <tr>
+              <td>
+                <%= case explanation["securityState"] do %>
+                  <% "neutral" -> %> <%= icon(:warn) %>
+                  <% "insecure" -> %> <% icon(:fail) %>
+                  <% "secure" -> %> <%= icon(:pass) %>
+                  <% "info" -> %> <%= icon(:info) %>
+                  <% _ -> %> <%= icon(:unknown) %>
+                <% end %>
+              </td>
+              <td><%= explanation["title"] %></td>
+              <td><%= explanation["summary"] %></td>
+              <td><%= explanation["description"] %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
     <% else %>
       <p><%= raw(gettext "<code>%{domain}</code> does <strong>not</strong> use HTTPS by default.", domain: @site.host) %></p>
-    <% end %>
-    <p>Chromium reports the following:</p>
 
-    <table>
-      <thead>
-        <tr>
-          <th>State</th>
-          <th>Title</th>
-          <th>Summary</th>
-          <th>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <%= for explanation <- @site.security["explanations"] do %>
-          <tr>
-            <td>
-              <%= case explanation["securityState"] do %>
-                <% "neutral" -> %> <%= icon(:warn) %>
-                <% "insecure" -> %> <% icon(:fail) %>
-                <% "secure" -> %> <%= icon(:pass) %>
-                <% "info" -> %> <%= icon(:info) %>
-                <% _ -> %> <%= icon(:unknown) %>
-              <% end %>
-            </td>
-            <td><%= explanation["title"] %></td>
-            <td><%= explanation["summary"] %></td>
-            <td><%= explanation["description"] %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+      <div class="howto">
+        <p>To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning).</p>
+
+        <p><a href="https://letsencrypt.org/">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free certificates through an easy, automated process.</p>
+      </div>
+    <% end %>
   </div>
   <div class="beta">
     <p>HTTPS encrypts nearly all information sent between a client and a web service. Properly configured, it guarantees three things:</p>
@@ -53,6 +60,8 @@
       <li><strong>Authenticity</strong>. The visitor is talking to the "real" website, and not to an impersonator or through a "man-in-the-middle".</li>
       <li><strong>Integrity</strong>. The data sent between the visitor and the website has not been tampered with or modified.</li>
     </ul>
-    <p>A plain HTTP connection can be easily monitored, modified, and impersonated. Every unencrypted HTTP request reveals information about a user’s behavior, and the interception and tracking of unencrypted browsing has become commonplace.</p><p>The goal of the Internet community is to establish encryption as the norm, and to phase out unencrypted connections. See <a href="https://www.w3.org/2001/tag/doc/web-https" title="Securing the Web">W3C</a>, <a href="https://datatracker.ietf.org/doc/rfc7258/" title="Pervasive Monitoring Is an Attack">IETF</a>, <a href="https://www.iab.org/2014/11/14/iab-statement-on-internet-confidentiality/" title="IAB Statement on Internet Confidentiality">IAB</a>.</p>
+    <p>A plain HTTP connection can be easily monitored, modified, and impersonated. Every unencrypted HTTP request reveals information about a user’s behavior, and the interception and tracking of unencrypted browsing has become commonplace.</p>
+    <p>The goal of the Internet community is to establish encryption as the norm, and to phase out unencrypted connections.</p>
+
   </div>
 </section>

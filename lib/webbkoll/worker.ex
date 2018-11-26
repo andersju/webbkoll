@@ -61,14 +61,14 @@ defmodule Webbkoll.Worker do
         "on" ->
           %{
             fetch_url: url,
-            timeout: 15000
+            timeout: 15_000
           }
 
         _ ->
-          %{fetch_url: url, timeout: 15000}
+          %{fetch_url: url, timeout: 15_000}
       end
 
-    HTTPoison.get(backend_url, [], recv_timeout: 30000, params: params)
+    HTTPoison.get(backend_url, [], recv_timeout: 30_000, params: params)
   end
 
   defp handle_response({:ok, %{status_code: 200, body: body}}, _id) do
@@ -152,7 +152,8 @@ defmodule Webbkoll.Worker do
         security: json["security_info"],
         sri: ContentAnalysis.sri(json["content"], reg_domain, url.scheme),
         x_content_type_options: HeaderAnalysis.x_content_type_options(headers["x-content-type-options"]),
-        x_frame_options: HeaderAnalysis.x_frame_options(headers["x-frame-options"], csp)|>IO.inspect
+        x_frame_options: HeaderAnalysis.x_frame_options(headers["x-frame-options"], csp),
+        x_xss_protection: HeaderAnalysis.x_xss_protection(headers["x-xss-protection"], csp)
       }
     end
   end

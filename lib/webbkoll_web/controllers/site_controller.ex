@@ -154,7 +154,9 @@ defmodule WebbkollWeb.SiteController do
     input
     |> Enum.filter(&is_tuple/1)
     |> Enum.sort(fn x, y ->
-      elem(x, 1) |> Map.get(:inserted_at) > elem(y, 1) |> Map.get(:inserted_at)
+      elem(x, 1)
+      |> Map.get(:inserted_at) > elem(y, 1)
+      |> Map.get(:inserted_at)
     end)
     |> List.first()
   end

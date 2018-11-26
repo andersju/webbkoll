@@ -1,9 +1,9 @@
 # This is basically an Elixir version of April King's Python code for Mozilla HTTP Observatory
 # (https://github.com/mozilla/http-observatory), specifically httpobs/scanner/analyzer/headers.py.
+#
 # License: Mozilla Public License Version 2.0.
 #
 # Sorry about the mess.
-import WebbkollWeb.Gettext
 
 defmodule Webbkoll.HeaderAnalysis do
   @dangerously_broad [
@@ -57,7 +57,7 @@ defmodule Webbkoll.HeaderAnalysis do
       http: false,
       meta: false,
       pass: false,
-      data: nil,
+      data: %{},
       policy: nil,
       expectation: expectation
     }
@@ -92,8 +92,7 @@ defmodule Webbkoll.HeaderAnalysis do
   defp handle_csp(scheme, output, csp, csp_http, _csp_meta) do
     output = %{
       output
-      | data: nil,
-        policy: %{
+      | policy: %{
           antiClickjacking: false,
           defaultNone: false,
           insecureBaseUri: false,
@@ -211,7 +210,7 @@ defmodule Webbkoll.HeaderAnalysis do
 
   defp get_data(output, csp) do
     case [Map.keys(csp) | Map.values(csp)] |> List.to_string() |> String.length() do
-      x when x < 32768 -> Map.put(output, :data, csp)
+      x when x < 32_768 -> Map.put(output, :data, csp)
       _ -> output
     end
   end
@@ -229,11 +228,9 @@ defmodule Webbkoll.HeaderAnalysis do
   end
 
   defp update_csp_output(output, result, policy) do
-    case result do
-      nil -> output
-      _ -> Map.put_new(output, :result, result)
-    end
-    |> case do
+    output = if result, do: Map.put_new(output, :result, result), else: output
+
+    case output do
       map when is_nil(policy) -> map
       map -> put_in(map, [:policy, policy], true)
     end
@@ -268,21 +265,6 @@ defmodule Webbkoll.HeaderAnalysis do
       else
         {src, output}
       end
-    end
-  end
-
-  def csp_result_text(result) do
-    case result do
-      "csp-implemented-with-no-unsafe-default-src-none" -> gettext("Content Security Policy (CSP) implemented with <code>default-src 'none'</code> and no <code>'unsafe'</code>")
-      "csp-implemented-with-no-unsafe" -> gettext("Content Security Policy (CSP) implemented without <code>'unsafe-inline'</code> or <code>'unsafe-eval'</code>")
-      "csp-implemented-with-unsafe-inline-in-style-src-only" -> gettext("Content Security Policy (CSP) implemented with unsafe sources inside <code>style-src</code>. This includes <code>'unsafe-inline'</code>, <code>data:</code> or overly broad sources such as <code>https:</code>.")
-      "csp-implemented-with-insecure-scheme-in-passive-content-only" -> gettext("Content Security Policy (CSP) implemented, but secure site allows images or media to be loaded over HTTP")
-      "csp-implemented-with-unsafe-eval" -> gettext("Content Security Policy (CSP) implemented, but allows <code>'unsafe-eval'</code>")
-      "csp-implemented-with-unsafe-inline" -> gettext("Content Security Policy (CSP) implemented unsafely. This includes <code>'unsafe-inline'</code> or <code>data:</code> inside <code>script-src</code>, overly broad sources such as <code>https:</code> inside <code>object-src</code> or <code>script-src</code>, or not restricting the sources for <code>object-src</code> or <code>script-src</code>.")
-      "csp-implemented-with-insecure-scheme" -> gettext("Content Security Policy (CSP) implemented, but secure site allows resources to be loaded over HTTP")
-      "csp-header-invalid" -> gettext("Content Security Policy (CSP) header cannot be parsed successfully.")
-      "csp-not-implemented" -> gettext("Content Security Policy (CSP) header not implemented.")
-      _ -> ""
     end
   end
 
@@ -343,11 +325,14 @@ defmodule Webbkoll.HeaderAnalysis do
   end
 
   def x_content_type_options(nil) do
-    %{data: nil, pass: false, result: "x-frame-options-not-implemented"}
+    %{name: "X-Content-Type-Options", data: nil, pass: false, result: "x-content-type-options-not-implemented"}
   end
+
   def x_content_type_options(header) do
     data = String.slice(header, 0, 100)
+
     output = %{
+      name: "X-Content-Type-Options",
       data: data,
       pass: false,
       result: nil
@@ -359,23 +344,126 @@ defmodule Webbkoll.HeaderAnalysis do
     end
   end
 
-  def x_frame_options(nil, csp) do
-    %{data: nil, pass: false, result: "x-frame-options-not-implemented"}
+  def x_frame_options(nil, _csp) do
+    %{name: "X-Frame-Options", data: nil, pass: false, result: "x-frame-options-not-implemented"}
   end
+
   def x_frame_options(header, csp) do
     data = String.slice(header, 0, 100)
+
     output = %{
+      name: "X-Frame-Options",
       data: data,
       pass: false,
       result: nil
     }
+
     xfo = data |> String.downcase() |> String.trim()
 
     cond do
-      Map.has_key?(csp, "frame-ancestors") -> %{output | result: "x-frame-options-implemented-via-csp", pass: true}
-      xfo in ["deny", "sameorigin"] -> %{output | result: "x-frame-options-sameorigin-or-deny", pass: true}
-      String.starts_with(xfo, "allow-from ") -> %{output | result: "x-frame-options-allow-from-origin", pass: true}
-      true -> %{output | result: "x-frame-options-header-invalid"}
+      Map.has_key?(csp.data, "frame-ancestors") ->
+        %{output | result: "x-frame-options-implemented-via-csp", pass: true}
+
+      xfo in ["deny", "sameorigin"] ->
+        %{output | result: "x-frame-options-sameorigin-or-deny", pass: true}
+
+      String.starts_with?(xfo, "allow-from ") ->
+        %{output | result: "x-frame-options-allow-from-origin", pass: true}
+
+      true ->
+        %{output | result: "x-frame-options-header-invalid"}
     end
+  end
+
+  def x_xss_protection(nil, csp) do
+    check_xxssp_csp(
+      %{
+        name: "X-XSS-Protection",
+        data: nil,
+        pass: false,
+        result: "x-xss-protection-not-implemented",
+        enabled: false,
+        valid: true
+      },
+      csp
+    )
+  end
+
+  def x_xss_protection(header, csp) do
+    data = String.slice(header, 0, 100)
+
+    output = %{
+      name: "X-XSS-Protection",
+      data: data,
+      pass: false,
+      result: nil,
+      enabled: false,
+      valid: true
+    }
+
+    xxp = String.downcase(data)
+
+    output =
+      case String.at(xxp, 0) do
+        nil -> %{output | valid: false, result: "x-xss-protection-header-invalid"}
+        "1" -> %{output | enabled: true}
+        "0" -> output
+        _ -> %{output | valid: false, result: "x-xss-protection-header-invalid"}
+      end
+
+    {output, xxssp} =
+      case check_xxssp_directive(data) do
+        :error -> {%{output | result: "x-xss-protection-header-invalid", valid: false}, nil}
+        result -> {output, result}
+      end
+
+    output =
+      cond do
+        output.valid and output.enabled and Map.get(xxssp, "mode") == "block" ->
+          %{output | result: "x-xss-protection-enabled-mode-block", pass: true}
+
+        output.valid and output.enabled ->
+          %{output | result: "x-xss-protection-enabled", pass: true}
+
+        output.valid and not output.enabled ->
+          %{output | result: "x-xss-protection-disabled"}
+
+        true ->
+          output
+      end
+
+    check_xxssp_csp(output, csp)
+  end
+
+  defp check_xxssp_csp(output, csp) do
+    cond do
+      output.valid and not output.pass and csp.pass ->
+        %{output | pass: true, result: "x-xss-protection-not-needed-due-to-csp"}
+
+      true ->
+        output
+    end
+  end
+
+  def check_xxssp_directive(data) do
+    valid_directives = ["0", "1", "mode", "report"]
+    valid_modes = ["block"]
+
+    data
+    |> String.split(";")
+    |> Enum.reduce_while(%{}, fn x, acc ->
+      [k, v] =
+        case String.contains?(x, "=") do
+          true -> x |> String.split("=") |> Enum.map(&String.trim/1)
+          false -> [String.trim(x), nil]
+        end
+
+      if k not in valid_directives or (k == "mode" and v not in valid_modes) or
+           Map.has_key?(acc, k) do
+        {:halt, :error}
+      else
+        {:cont, Map.put(acc, k, v)}
+      end
+    end)
   end
 end

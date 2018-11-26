@@ -43,6 +43,8 @@
       </table>
       </ul>
     <% end %>
+
+    <p><small>The Subresource Integrity test is based on the one from the <a href="https://github.com/mozilla/http-observatory">Mozilla HTTP Observatory</a> scanner/grader project (<a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll.</small></p>
   </div>
   <div class="beta">
     <blockquote>
@@ -54,8 +56,5 @@
         &mdash; <cite>MDN, <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>, by Mozilla Contributors, <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></cite>
       </footer>
     </blockquote>
-    
-    
-    <p>The Subresource Integrity test is based on the one from the <a href="https://github.com/mozilla/http-observatory">Mozilla HTTP Observatory</a> scanner/grader project (<a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. Any mistake or inaccuracy is our fault.</p>
   </div>
 </section>

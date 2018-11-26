@@ -1,5 +1,6 @@
 # This is basically an Elixir version of April King's Python code for Mozilla HTTP Observatory
 # (https://github.com/mozilla/http-observatory), specifically httpobs/scanner/analyzer/content.py.
+#
 # License: Mozilla Public License Version 2.0.
 defmodule Webbkoll.ContentAnalysis do
   import Webbkoll.Helpers
@@ -53,7 +54,18 @@ defmodule Webbkoll.ContentAnalysis do
     Enum.reduce(resources, output, fn x, acc ->
       old_result = Map.get(acc, :result)
 
-      if not x.secureorigin do
+      if x.secureorigin do
+        cond do
+          x.integrity && x.securescheme && !Map.has_key?(acc, :result) ->
+            acc
+
+          x.integrity && x.securescheme && !acc.result ->
+            %{acc | result: "sri-implemented-and-all-resources-loaded-securely"}
+
+          true ->
+            acc
+        end
+      else
         cond do
           x.integrity && !x.securescheme ->
             Map.put(
@@ -102,17 +114,6 @@ defmodule Webbkoll.ContentAnalysis do
           true ->
             acc
         end
-      else
-        cond do
-          x.integrity && x.securescheme && !Map.has_key?(acc, :result) ->
-            acc
-
-          x.integrity && x.securescheme && !acc.result ->
-            %{acc | result: "sri-implemented-and-all-resources-loaded-securely"}
-
-          true ->
-            acc
-        end
       end
     end)
   end
@@ -123,11 +124,11 @@ defmodule Webbkoll.ContentAnalysis do
     |> Enum.reduce([], fn x, acc ->
       src =
         case elem(x, 0) do
-          "script" -> Floki.attribute(x, "src") |> List.first() || ""
-          "link" -> Floki.attribute(x, "href") |> List.first() || ""
+          "script" -> List.first(Floki.attribute(x, "src")) || ""
+          "link" -> List.first(Floki.attribute(x, "href")) || ""
         end
-      integrity = Floki.attribute(x, "integrity") |> List.first() || nil
-      crossorigin = Floki.attribute(x, "crossorigin") |> List.first() || nil
+      integrity = List.first(Floki.attribute(x, "integrity")) || nil
+      crossorigin = List.first(Floki.attribute(x, "crossorigin")) || nil
       parsed_url = URI.parse(src)
       samesld = get_registerable_domain(parsed_url.host) == reg_domain
 

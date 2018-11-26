@@ -35,6 +35,96 @@ defmodule WebbkollWeb.SiteView do
   def icon(:info), do: content_tag(:i, "", class: "fas fa-info-circle fa-fw")
   def icon(:unknown), do: content_tag(:i, "", class: "fas fa-question-circle fa-fw")
 
+  def result_text(result) do
+    case result do
+      "csp-implemented-with-no-unsafe-default-src-none" ->
+        gettext(
+          "Content Security Policy (CSP) implemented with <code>default-src 'none'</code> and no <code>'unsafe'</code>"
+        )
+
+      "csp-implemented-with-no-unsafe" ->
+        gettext(
+          "Content Security Policy (CSP) implemented without <code>'unsafe-inline'</code> or <code>'unsafe-eval'</code>"
+        )
+
+      "csp-implemented-with-unsafe-inline-in-style-src-only" ->
+        gettext(
+          "Content Security Policy (CSP) implemented with unsafe sources inside <code>style-src</code>. This includes <code>'unsafe-inline'</code>, <code>data:</code> or overly broad sources such as <code>https:</code>."
+        )
+
+      "csp-implemented-with-insecure-scheme-in-passive-content-only" ->
+        gettext(
+          "Content Security Policy (CSP) implemented, but secure site allows images or media to be loaded over HTTP"
+        )
+
+      "csp-implemented-with-unsafe-eval" ->
+        gettext(
+          "Content Security Policy (CSP) implemented, but allows <code>'unsafe-eval'</code>"
+        )
+
+      "csp-implemented-with-unsafe-inline" ->
+        gettext(
+          "Content Security Policy (CSP) implemented unsafely. This includes <code>'unsafe-inline'</code> or <code>data:</code> inside <code>script-src</code>, overly broad sources such as <code>https:</code> inside <code>object-src</code> or <code>script-src</code>, or not restricting the sources for <code>object-src</code> or <code>script-src</code>."
+        )
+
+      "csp-implemented-with-insecure-scheme" ->
+        gettext(
+          "Content Security Policy (CSP) implemented, but secure site allows resources to be loaded over HTTP"
+        )
+
+      "csp-header-invalid" ->
+        gettext("Content Security Policy (CSP) header cannot be parsed successfully.")
+
+      "csp-not-implemented" ->
+        gettext("Content Security Policy (CSP) header not implemented.")
+
+      "x-content-type-options-nosniff" ->
+        gettext("X-Content-Type-Options header set to \"nosniff\"")
+
+      "x-content-type-options-not-implemented" ->
+        gettext("X-Content-Type-Options header not implemented")
+
+      "x-content-type-options-header-invalid" ->
+        gettext("X-Content-Type-Options header cannot be recognized")
+
+      "x-frame-options-implemented-via-csp" ->
+        gettext("X-Frame-Options (XFO) implemented via the CSP frame-ancestors directive")
+
+      "x-frame-options-sameorigin-or-deny" ->
+        gettext("X-Frame-Options (XFO) header set to SAMEORIGIN or DENY")
+
+      "x-frame-options-allow-from-origin" ->
+        gettext("X-Frame-Options (XFO) header uses ALLOW-FROM uri directive")
+
+      "x-frame-options-not-implemented" ->
+        gettext("X-Frame-Options (XFO) header not implemented")
+
+      "x-frame-options-header-invalid" ->
+        gettext("X-Frame-Options (XFO) header cannot be recognized")
+
+      "x-xss-protection-enabled-mode-block" ->
+        gettext("X-XSS-Protection header set to \"1; mode=block\"")
+
+      "x-xss-protection-enabled" ->
+        gettext("X-XSS-Protection header set to \"1\"")
+    
+      "x-xss-protection-not-needed-due-to-csp" ->
+        gettext("X-XSS-Protection header not needed due to strong Content Security Policy (CSP) header")
+
+      "x-xss-protection-disabled" ->
+        gettext("X-XSS-Protection header set to \"0\" (disabled)")
+
+      "x-xss-protection-not-implemented" ->
+        gettext("X-XSS-Protection header not implemented")
+
+      "x-xss-protection-header-invalid" ->
+        gettext("X-XSS-Protection header cannot be recognized")
+
+      _ ->
+        ""
+    end
+  end
+
   def csp_policy(policy, value) do
     pass =
       if policy in [:insecureBaseUri, :insecureFormAction, :insecureSchemeActive, :insecureSchemePassive, :unsafeEval, :unsafeInline, :unsafeInlineStyle, :unsafeObjects], do: !value, else: value

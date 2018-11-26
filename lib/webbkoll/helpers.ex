@@ -101,23 +101,6 @@ defmodule Webbkoll.Helpers do
     }
   end
 
-  def headers_to_check do
-    %{
-      "X-Frame-Options" =>
-        gettext(
-          ~s{<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">X-Frame-Options</a> tells the browser whether you want to allow your site to be framed or not. By preventing a browser from framing your site you can defend against attacks like clickjacking.}
-        ),
-      "X-Xss-Protection" =>
-        gettext(
-          ~s{<a href="http://stackoverflow.com/questions/9090577/what-is-the-http-header-x-xss-protection">X-XSS-Protection</a> sets the configuration for the cross-site scripting filters built into most browsers. The best configuration is "X-XSS-Protection: 1; mode=block".}
-        ),
-      "X-Content-Type-Options" =>
-        gettext(
-          ~s{<a href="http://stackoverflow.com/questions/18337630/what-is-x-content-type-options-nosniff">X-Content-Type-Options</a> stops a browser from trying to MIME-sniff the content type and forces it to stick with the declared content-type. This helps to reduce the danger of drive-by downloads. The only valid value for this header is "X-Content-Type-Options: nosniff".}
-        )
-    }
-  end
-
   def get_unique_hosts(data, field_name) do
     data
     |> Enum.map(&(&1[field_name]))

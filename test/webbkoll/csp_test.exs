@@ -1,6 +1,7 @@
 # These tests were copied from April King's Mozilla HTTP Observatory
 # (https://github.com/mozilla/http-observatory), specifically
 # httpobs/tests/unittests/test_headers.py, and Elixir-ified.
+#
 # License: Mozilla Public License Version 2.0
 defmodule Webbkoll.CSPTest do
   use WebbkollWeb.ConnCase

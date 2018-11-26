@@ -17,7 +17,7 @@
     <p>Content Security Policy set in meta element: <code><%= @site.meta_csp %></code></p>
     <% end %>
 
-    <p><%= Webbkoll.HeaderAnalysis.csp_result_text(@site.csp.result) |> raw %></p>
+    <p><%= result_text(@site.csp.result) |> raw %></p>
 
     <%= if @site.csp.policy do %>
       <table class="csp data">
