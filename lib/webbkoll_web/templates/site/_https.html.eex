@@ -43,13 +43,31 @@
           <% end %>
         </tbody>
       </table>
+
+        <p>For more information:</p>
+        <ul class="default">
+          <li><%= link gettext("Analyze %{host} on SSL Labs", host: @site.host), to: "https://www.ssllabs.com/ssltest/analyze.html?d=#{@site.host}&hideResults=on" %> (web)</li>
+          <li><a href="https://observatory.mozilla.org/">Observatory by Mozilla</a> (web)</li>
+          <li><a href="https://github.com/mozilla/tls-observatory">Mozilla TLS Observatory</a> (CLI tool)</li>
+          <li><a href="https://testssl.sh/">testssl.sh</a> (CLI tool)</li>
+        </ul>
+
     <% else %>
       <p><%= raw(gettext "<code>%{domain}</code> does <strong>not</strong> use HTTPS by default.", domain: @site.host) %></p>
 
       <div class="howto">
-        <p>To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning).</p>
+        <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="howto-https">How to implement</span>
+        <div id="howto-https">
+          <p>To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning).</p>
 
-        <p><a href="https://letsencrypt.org/">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free certificates through an easy, automated process.</p>
+          <p><a href="https://letsencrypt.org/">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free certificates through an easy, automated process. You can set it up yourself, or use one of the many hosting providers who have built-in support for Let's Encrypt.</p>
+
+          <ul class="default">
+            <li><a href="https://letsencrypt.org/getting-started/">Get started with Let's Encrypt</a></li>
+            <li><a href="https://mozilla.github.io/server-side-tls/ssl-config-generator/">Mozilla SSL/TLS Configuration Generator</a> [for advanced users]</li>
+            <li>For checking the configuration of a server, try <a href="https://www.ssllabs.com/ssltest/">SSL Labs SSL Server Test</a> (web), <a href="https://testssl.sh/">testssl.sh</a> (CLI tool), <a href="https://github.com/mozilla/tls-observatory">Mozilla TLS Observatory</a> (CLI tool) or <a href="https://observatory.mozilla.org/">Observatory by Mozilla</a> (web).</li>
+          </ul>
+        </div>
       </div>
     <% end %>
   </div>

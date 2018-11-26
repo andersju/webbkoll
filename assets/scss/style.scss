@@ -43,9 +43,10 @@ small {
 */
 
 ul.default {
+  list-style-position: inside;
   list-style-type: disc;
   margin-bottom: .75em;
-  padding-left: 1.5em;
+  padding-left: 0;
 }
 
 code {
@@ -93,10 +94,17 @@ a.external::after {
   display: none;
 }
 
+.non-button-toggle {
+  color: #1565c0;
+  font-weight: bold;
+}
+
 button[data-a11y-toggle][aria-expanded="false"],
 .non-button-toggle[data-a11y-toggle][aria-expanded="false"] {
   &::before {
-    content: "\25BA";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f055";
     margin-right: 0.5em;
   }
 }
@@ -104,7 +112,9 @@ button[data-a11y-toggle][aria-expanded="false"],
 button[data-a11y-toggle][aria-expanded="true"],
 .non-button-toggle[data-a11y-toggle][aria-expanded="true"] {
   &::before {
-    content: "\25BC";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f056";
     margin-right: 0.5em;
   }
 }
@@ -339,7 +349,7 @@ section > .url {
 
   .howto {
     background-color: #f5f5f5;
-    border-radius: 2%;
+    border-radius: 5px;
     font-size: 0.8rem;
     padding: 1rem;
   }
@@ -360,7 +370,7 @@ section > .url {
   > .beta {
     @include span-columns(5);
     background-color: #f5f5f5;
-    border-radius: 2%;
+    border-radius: 5px;
     font-size: 0.8rem;
     padding: 1rem;
   }

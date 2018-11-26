@@ -44,6 +44,18 @@
       </ul>
     <% end %>
 
+    <%= if not @site.sri.pass or @site.sri.result == "sri-not-implemented-but-all-resources-loaded-from-secure-origin" do %>
+    <div class="howto">
+      <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="howto-sri">
+        How to implement
+      </span>
+
+      <div id="howto-sri">
+        TODO.
+      </div>
+    </div>
+    <% end %>
+
     <p><small>The Subresource Integrity test is based on the one from the <a href="https://github.com/mozilla/http-observatory">Mozilla HTTP Observatory</a> scanner/grader project (<a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll.</small></p>
   </div>
   <div class="beta">

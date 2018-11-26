@@ -26,7 +26,27 @@
     <p>Referrer Policy not set. This means that the default value <code>no-referrer-when-downgrade</code>, leaking referrers in many situations, is used.</p>
     <% end %>
 
-    <p><small><em>If a referrer policy is delivered via both Referrer-Policy header and meta element, the meta element's policy takes precedence. If multiple policy values are specified, the browser will use the last one, ignoring unknown values (fallback values should thus appear first).</em></small></p>
+    <div class="howto">
+      <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="howto-referrer">
+        How to implement
+      </span>
+
+      <div id="howto-referrer">
+        <p>A referrer policy can easily be set with a &lt;meta&gt; element in your HTML. Simply include this inside the &lt;head&gt; section:</p>
+
+        <p><code>&lt;meta name="referrer" content="no-referrer"&gt;</code></p>
+
+        <p>Alternatively, set the <code>Referrer-Policy</code> HTTP header, e.g.:</p>
+
+        <p><code>Referrer-Policy: no-referrer</code></p>
+
+        <p>If a referrer policy is delivered via both Referrer-Policy header and meta element, the meta element's policy takes precedence.</p>
+
+        <p>If multiple policy values are specified, the browser will use the last one, ignoring unknown values (fallback values should thus appear first). Multiple values should be separated by commas, e.g..:</p>
+
+        <p><code>&lt;meta name="referrer" content="no-referrer, same-origin"&gt;</code></p>
+      </div>
+    </div>
   </div>
   <div class="beta">
     <p>When you click a link, your browser will typically send the HTTP referer [sic] header to the webserver where the destination webpage is at. The header contains the full URL of the page you came from. This lets sites see where traffic comes from. The header is also sent when external resources (such as images, fonts, JS and CSS) are loaded.</p>

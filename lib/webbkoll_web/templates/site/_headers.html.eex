@@ -25,6 +25,16 @@
       </tbody>
     </table>
 
+    <div class="howto">
+      <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="howto-headers">
+        How to implement
+      </span>
+
+      <div id="howto-headers">
+        TODO.
+      </div>
+    </div>
+
     <p><small>The header tests are based on the ones from the <a href="https://github.com/mozilla/http-observatory">Mozilla HTTP Observatory</a> scanner/grader project (<a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href="https://observatory.mozilla.org/">Observatory by Mozilla</a> website, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</a>.</small></p>
   </div>
 
