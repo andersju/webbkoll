@@ -31,7 +31,22 @@
       </span>
 
       <div id="howto-headers">
-        TODO.
+        <p>To enable these headers you'll need to add them to your web server configuration. This is a simple change. Exactly how you do it depends on what server you use. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">This page</a> [developer.mozilla.org] has configuration examples for Apache, Nginx and IIS.</p>
+
+        <p><code>X-Content-Type-Options</code> should be set to <code>nosniff</code>, which is the only valid value.</p>
+
+        <p><code>X-Frame-Options</code> can be set to <code>deny</code> (page can never be loaded in a frame), <code>sameorigin</code> (page can only be loaded in a frame only if the origin is the same), or <code>allow-from &lt;URI&gt;</code> (page can only be loaded in a frame on a page on the specified origin).</p>
+
+        <p><code>X-XSS-Protection</code> should be set to <code>1</code> or <code>1; mode=block</code>.</p>
+
+        <ul class="default">
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options">X-Content-Type-Options</a> [developer.mozilla.org]</li>
+          <li><a href="https://www.keycdn.com/support/x-content-type-options">X-Content-Type-Options HTTP Header</a> [keycdn.com]</li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">X-Frame-Options</a> [developer.mozilla.org]</li>
+          <li><a href="https://www.keycdn.com/blog/x-frame-options">X-Frame-Options – How to Combat Clickjacking</a> [keycdn.com]</li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection">X-XSS-Protection</a> [developer.mozilla.org]</li>
+          <li><a href="https://www.keycdn.com/blog/x-xss-protection">X-XSS-Protection – Preventing Cross-Site Scripting Attacks</a> [keycdn.com]</li>
+        </ul>
       </div>
     </div>
 

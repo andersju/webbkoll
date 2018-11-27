@@ -1,6 +1,6 @@
 <%= render "_results_header.html", site: @site, conn: @conn %>
 
-<div class="results">
+<div id="results">
   <%= render "_https.html", site: @site %>
 
   <%= render "_hsts.html", site: @site %>

@@ -13,11 +13,12 @@
 @import "fontawesome/solid";
 
 body {
+  background-color: #3b4255;
   margin: 0;
 }
 
 main {
-  padding-top: 1rem;
+  background-color: white;
 }
 
 sup {
@@ -149,9 +150,8 @@ button[data-a11y-toggle][aria-expanded="true"],
 
 .index-search {
   //background-color: #f5f5f5;
-  margin-bottom: 2rem;
-  margin-top: -1rem;
-  padding-bottom: 4em;
+
+  padding-bottom: 4rem;
   padding-top: 4rem;
 
   h1 {
@@ -236,8 +236,6 @@ button[data-a11y-toggle][aria-expanded="true"],
   background-color: #3b4255; // #5c5857;
   border-bottom: 1px solid #2f2e2d;
   color: white;
-  margin-bottom: 2rem;
-  margin-top: -1rem;
   padding-bottom: 2rem;
   padding-top: 2rem;
   -webkit-font-smoothing: antialiased;
@@ -341,10 +339,14 @@ section > .url {
   }
 }
 
+.text {
+  padding-top: 2rem;
+}
+
 .result,
 .text {
   display: block;
-  margin-bottom: 3rem;
+  padding-bottom: 2rem;
   position: relative;
 
   .howto {
