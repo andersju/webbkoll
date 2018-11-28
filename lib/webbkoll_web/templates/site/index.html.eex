@@ -1,6 +1,6 @@
 <div class="index-search">
   <section>
-    <h1><%= gettext "How privacy-friendly is your site?" %></h1>
+    <h1><%= gettext "Check your site!" %></h1>
 
     <form class="search-bar" role="search" method="get" action="/<%= @conn.assigns.locale %>/check">
       <input name="url" type="search" required=true placeholder="example.com" aria-describedby="urlHelpText">
@@ -14,7 +14,7 @@
 
     <p class="notes">
       <%= gettext(~s|Please note:|) %>
-      <ol>
+      <ol class="default">
         <li><%= gettext(~s|This tool simulates a normal browser visit with Do Not Track disabled (browser default) and with no add-ons.|) %></li>
         <li><%= gettext(~s|Even if you enter https://, http:// will be checked, to see if it redirects to https:// automatically (redirects are followed).|) %></li>
         <li><%= gettext(~s|Generally things work, but some sites (sometimes) don't work for various reasons.|) %></li>

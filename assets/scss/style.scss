@@ -1,3 +1,7 @@
+/* Here be dragons */
+
+$magic-number: 1.5rem;
+
 @import "bourbon/bourbon";
 @import "grid-settings";
 @import "neat/neat";
@@ -27,6 +31,7 @@ sup {
 
 small {
   font-size: 0.8rem;
+  line-height: $magic-number*0.75;
 }
 
 /*
@@ -46,7 +51,14 @@ small {
 ul.default {
   list-style-position: inside;
   list-style-type: disc;
-  margin-bottom: .75em;
+  margin-bottom: $small-spacing;
+  padding-left: 0;
+}
+
+ol.default {
+  list-style-position: inside;
+  list-style-type: decimal;
+  margin-bottom: $small-spacing;
   padding-left: 0;
 }
 
@@ -59,14 +71,60 @@ code {
 table {
   margin-top: 0;
   width: auto;
+
   tbody {
     font-size: 0.9em;
+  }
+
+  td {
+    @include overflow-wrap;
   }
 }
 
 table.requests {
   .host {
     min-width: 30rem;
+  }
+
+  @include media($tablet) {
+    .host {
+      min-width: auto;
+    }
+  }
+}
+
+/* Based on https://allthingssmitty.com/2016/10/03/responsive-table-layout/ */
+@include media($mobile) {
+  table {
+    width: 100%;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    text-align: right;
+  }
+  
+  table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    float: left;
   }
 }
 
@@ -151,15 +209,15 @@ button[data-a11y-toggle][aria-expanded="true"],
 .index-search {
   //background-color: #f5f5f5;
 
-  padding-bottom: 4rem;
-  padding-top: 4rem;
+  padding-bottom: $magic-number*2;
+  padding-top: $magic-number*2;
 
   h1 {
     font-family: $font-stack-system;
     font-weight: 600;
     font-size: modular-scale(4);
     letter-spacing: -1px;
-    margin-bottom: 2rem;
+    margin-bottom: $magic-number;
     text-align: center;
   }
 
@@ -177,18 +235,19 @@ button[data-a11y-toggle][aria-expanded="true"],
 
   form.search-bar {
     ///////////////////////////////////////////////////////////////////////////////////
-    $base-spacing: 1.5em !default;
+    $base-spacing: 1.5rem !default;
     $base-border-color: gainsboro !default;
-    $base-line-height: 1.5em !default;
+    $base-line-height: 1.5rem !default;
     //////////////////////////////////////////////////////////////////////////////////
 
     $search-bar-border-color: $base-border-color;
     $search-bar-border: 1px solid $search-bar-border-color;
     $search-bar-background: lighten($search-bar-border-color, 10%);
 
+    height: $magic-number*2;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2rem;
+    margin-bottom: $magic-number/2;
 
     max-width: 35rem;
 
@@ -200,19 +259,21 @@ button[data-a11y-toggle][aria-expanded="true"],
       border: 1px solid $base-border-color;
       box-sizing: border-box;
       display: block;
-      font-size: 1em;
+      font-size: $magic-number*0.75;
       font-style: italic;
       margin: 0;
       padding: ($base-spacing / 3) ($base-spacing / 3);
       position: relative;
       transition: border-color;
       width: 100%;
+      height: $magic-number*1.5;
     }
 
     button[type=submit] {
       @include position(absolute, 0 0 0 null);
       outline: none;
       padding: 5px 10px;
+      height: $magic-number*1.5;
 
       img {
         height: 12px;
@@ -223,8 +284,8 @@ button[data-a11y-toggle][aria-expanded="true"],
 
 
   @include media($mobile) {
-    padding-bottom: 2rem;
-    padding-top: 2rem;
+    padding-bottom: $magic-number;
+    padding-top: $magic-number;
 
     h1 {
       font-size: modular-scale(2);
@@ -236,8 +297,8 @@ button[data-a11y-toggle][aria-expanded="true"],
   background-color: #3b4255; // #5c5857;
   border-bottom: 1px solid #2f2e2d;
   color: white;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
+  padding-bottom: $magic-number;
+  padding-top: $magic-number;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -245,21 +306,31 @@ button[data-a11y-toggle][aria-expanded="true"],
     color: white;
   }
 
-  #results-title a {
-    text-decoration: underline;
+  @include media($mobile) {
+    padding-bottom: $magic-number/4;
+    padding-top: $magic-number/4;
+
+    h2 {
+      line-height: $magic-number*1.5;
+    }
+  }
+}
+
+#results-title {
+  a {
+      text-decoration: underline;
   }
 
   h2 {
     font-family: $font-stack-system;
   }
-}
 
-#results-title {
   > .alpha {
     @include span-columns(8);
 
     > h2 {
-      margin-bottom: 0.25rem;
+      @include overflow-wrap;
+      margin-bottom: $magic-number/4;
     }
   }
 
@@ -282,8 +353,58 @@ button[data-a11y-toggle][aria-expanded="true"],
     }
     > .beta {
       @include span-columns(4);
-      margin-bottom: 0.25rem;
+      margin-bottom: $magic-number/4;
       text-align: left;
+    }
+  }
+}
+
+#results-summary {
+  > .summary {
+    @include span-columns(8);
+    span.label {
+      display: inline-block;
+      width: 12rem;
+    }
+
+    ul {
+      margin-bottom: 0;
+    }
+
+    li {
+      border-bottom: 1px solid transparentize(white, 0.9);
+      padding-bottom: $magic-number/8;
+      padding-top: $magic-number/8;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+
+  > .url {
+    @include span-columns(4);
+    @include overflow-wrap;
+    color: transparentize(white, 0.4);
+    padding-top: 1rem;
+    text-align: right;
+  }
+
+  @include media($mobile) {
+    > .summary {
+      @include span-columns(4);
+
+      span.label {
+        display: block;
+      }
+    }
+    > .url {
+      @include span-columns(4);
+      text-align: left;
+
+      span {
+        display: block;
+      }
     }
   }
 }
@@ -294,40 +415,9 @@ section {
   padding-right: 0.5rem;
 }
 
-
-section > .summary {
-  @include span-columns(8);
-  span.label {
-    display: inline-block;
-    width: 12rem;
-  }
-
-  ul {
-    margin-bottom: 0;
-  }
-
-  li {
-    border-bottom: 1px solid transparentize(white, 0.9);
-    padding-bottom: 0.2rem;
-    padding-top: 0.2rem;
-  }
-
-  li:last-child {
-    border-bottom: none;
-  }
-}
-
-
-section > .url {
-  @include span-columns(4);
-  color: transparentize(white, 0.4);
-  padding-top: 1rem;
-  text-align: right;
-}
-
 #results {
   //border-top: 1px solid #e0dbda;
-  padding-top: 2rem;
+  padding-top: $magic-number;
 }
 
 .result {
@@ -340,20 +430,21 @@ section > .url {
 }
 
 .text {
-  padding-top: 2rem;
+  padding-top: $magic-number;
 }
 
 .result,
 .text {
   display: block;
-  padding-bottom: 2rem;
+  padding-bottom: $magic-number;
   position: relative;
 
   .howto {
     background-color: #f5f5f5;
     border-radius: 5px;
     font-size: 0.8rem;
-    padding: 1rem;
+    line-height: $magic-number*0.75;
+    padding: $small-spacing;
 
     > div > p {
       margin-top: 0.75em;
@@ -371,17 +462,12 @@ section > .url {
     }
   }
 
-  /*> .alpha,
-  > .beta {
-    @include span-columns(6);
-  }*/
-
-  > .half {
-    @include span-columns(6);
-  }
-
   > .alpha {
     @include span-columns(7);
+
+    @include media($mobile) {
+      margin-bottom: 0.7rem;
+    }
   }
 
   > .beta {
@@ -389,13 +475,19 @@ section > .url {
     background-color: #f5f5f5;
     border-radius: 5px;
     font-size: 0.8rem;
-    padding: 1rem;
+    line-height: $magic-number*0.75;
+    padding: $small-spacing;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 
   @include media($mobile) {
     > .alpha,
     > .beta {
       @include span-columns(4);
+      padding: 0;
     }
   }
 
@@ -403,60 +495,14 @@ section > .url {
     max-width: 50em;
   }
 
+  p:last-child {
+    margin-bottom: 0;
+  }
+
   strong {
     font-weight: 600;
   }
 
-  &:before {
-    content: "";
-    //background-color: red;
-    display: block;
-    width: 8px;
-    height: 100%;
-    position: absolute;
-    left: -1rem;
-    top: 0;
-  }
-
-  &.success:before {
-    background-color: green;
-  }
-
-  &.alert:before {
-    background-color: red;
-  }
-
-  &.warning:before {
-    background-color: gold;
-  }
-
-  @include media($mobile) {
-    padding-left: 0.8rem;
-
-    &:before {
-      content: "";
-      display: block;
-      width: 6px;
-      height: 100%;
-      position: absolute;
-      left: 0rem;
-      top: 0;
-    }
-  }
-
-  @include media($large) {
-    padding-left: 0.8rem;
-
-    &:before {
-      content: "";
-      display: block;
-      width: 6px;
-      height: 100%;
-      position: absolute;
-      left: 0rem;
-      top: 0;
-    }
-  }
 }
 
 .requests-list {
@@ -479,8 +525,8 @@ section > .url {
   background-color: #3b4255; //#f5f5f5;
   border-top: 1px solid #1e222b;
   color: white;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  padding-bottom: $magic-number*0.75;
+  padding-top: $magic-number*0.75;
   //flex-shrink: 0;
   width: 100%;
 

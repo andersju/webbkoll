@@ -15,15 +15,15 @@
     <tbody>
       <%= for cookie <- @cookies do %>
         <tr>
-          <td><%= cookie["domain"] %></td>
-          <td><%= cookie["name"] %></td>
-          <td><%= truncate(cookie["value"], 20) %></td>
-          <td>
+          <td data-label="<%= gettext "Domain" %>"><%= cookie["domain"] %></td>
+          <td data-label="<%= gettext "Name" %>"><%= cookie["name"] %></td>
+          <td data-label="<%= gettext "Value" %>"><%= truncate(cookie["value"], 20) %></td>
+          <td data-label="<%= gettext "Expires on" %>">
             <%= if cookie["session"] == true, do: "session", else: format_timestamp(cookie["expires"]) %>
           </td>
-          <td><%= if cookie["httpOnly"], do: icon(:pass), else: icon(:fail) %></td>
-          <td><%= if cookie["secure"], do: icon(:pass), else: icon(:fail) %></td>
-          <td>
+          <td data-label="HttpOnly"><%= if cookie["httpOnly"], do: icon(:pass), else: icon(:fail) %></td>
+          <td data-label="Secure"><%= if cookie["secure"], do: icon(:pass), else: icon(:fail) %></td>
+          <td data-label="Name">
             <%= if cookie["sameSite"] do %>
               <%= icon(:pass) %>
               (<code><%= cookie["sameSite"] %></code>)

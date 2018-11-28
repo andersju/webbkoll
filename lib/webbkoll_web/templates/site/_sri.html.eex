@@ -35,8 +35,8 @@
         <tbody>
           <%= for resource <- Enum.filter(@site.sri.data, fn x -> x.secureorigin == false && (x.crossorigin == nil || x.integrity == nil) end) do %>
           <tr>
-            <td><%= if resource.type == "link", do: "css", else: resource.type %></td>
-            <td><code><%= truncate(resource.src, 100) %></code></td>
+            <td data-label="Type"><%= if resource.type == "link", do: "css", else: resource.type %></td>
+            <td data-label="URL"><code><%= truncate(resource.src, 100) %></code></td>
           </tr>
           <% end %>
         </tbody>

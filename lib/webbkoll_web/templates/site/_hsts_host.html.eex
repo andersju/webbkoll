@@ -12,31 +12,31 @@
   </thead>
   <tbody>
     <tr>
-      <td>
+      <td data-label="Pass">
         <%= if @hsts.pass do %>
         <%= icon(:pass) %>
         <% else %>
         <%= icon(:fail) %>
         <% end %>
       </td>
-      <td>
+      <td data-label="Test">
         <code>max-age</code> set to at least 6 months
       </td>
     </tr>
     <tr>
-      <td>
+      <td data-label="Pass">
         <%= if @hsts.includesubdomains do %>
         <%= icon(:pass) %>
         <% else %>
         <%= icon(:fail) %>
         <% end %>
       </td>
-      <td>
+      <td data-label="Test">
         <code>includeSubDomains</code> &mdash; policy also applies to subdomains
       </td>
     </tr>
     <tr>
-      <td>
+      <td data-label="Pass">
         <%= if @is_base do %>
           <%= if @hsts.preload do %>
           <%= icon(:pass) %>
@@ -47,7 +47,7 @@
           <%= icon(:optional) %>
         <% end %>
       </td>
-      <td>
+      <td data-label="Test">
         <code>preload</code> - requests inclusion in preload lists
         <%= if not @is_base do %>
           [only relevant for base domain]

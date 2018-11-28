@@ -27,7 +27,7 @@
         <tbody>
           <%= for explanation <- @site.security["explanations"] do %>
             <tr>
-              <td>
+              <td data-label="State">
                 <%= case explanation["securityState"] do %>
                   <% "neutral" -> %> <%= icon(:warn) %>
                   <% "insecure" -> %> <% icon(:fail) %>
@@ -36,9 +36,9 @@
                   <% _ -> %> <%= icon(:unknown) %>
                 <% end %>
               </td>
-              <td><%= explanation["title"] %></td>
-              <td><%= explanation["summary"] %></td>
-              <td><%= explanation["description"] %></td>
+              <td data-label="Title"><%= explanation["title"] %></td>
+              <td data-label="Summary"><%= explanation["summary"] %></td>
+              <td data-label="Description"><%= explanation["description"] %></td>
             </tr>
           <% end %>
         </tbody>

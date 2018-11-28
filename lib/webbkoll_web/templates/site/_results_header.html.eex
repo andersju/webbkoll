@@ -18,7 +18,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="results-summary">
     <div class="summary">
       <ul>
         <li>
@@ -86,8 +86,8 @@
     </div>
     <div class="url">
       <ul>
-        <li><%= gettext "Input URL:" %> <%= link @site.input_url, to: @site.input_url, rel: "nofollow" %></li>
-        <li><%= gettext "Final URL:" %> <%= link @site.final_url, to: @site.final_url, rel: "nofollow" %></li>
+        <li><span><%= gettext "Checked URL:" %></span> <%= link @site.input_url, to: @site.input_url, rel: "nofollow" %></li>
+        <li><span><%= gettext "Final URL:" %></span> <%= link @site.final_url, to: @site.final_url, rel: "nofollow" %></li>
       </ul>
     </div>
   </section>

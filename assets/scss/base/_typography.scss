@@ -1,9 +1,14 @@
 html {
   color: $base-font-color;
   font-family: $base-font-family;
-  //font-size: 100%;
-  font-size: 1.125em;
+  font-size: 18px;
   line-height: $base-line-height;
+}
+
+@include media($mobile) {
+  html {
+    font-size: 16px;
+  }
 }
 
 h1,
@@ -16,19 +21,22 @@ h6 {
   font-size: modular-scale(1);
   font-weight: normal;
   line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
+  margin: 0 0 $magic-number/2;
 }
 
 h1 {
   font-size: modular-scale(4);
+  line-height: $magic-number*2;
 }
 
 h2 {
   font-size: modular-scale(3);
+  line-height: $magic-number*2;
 }
 
 h3 {
   font-size: modular-scale(2);
+  line-height: $magic-number*1.25;
 }
 
 h4 {
@@ -36,7 +44,13 @@ h4 {
 }
 
 p {
-  margin: 0 0 $small-spacing;
+  margin: 0 0 $magic-number/2;
+}
+
+p + h2,
+p + h3,
+p + h4 {
+  margin-top: $magic-number;
 }
 
 a {

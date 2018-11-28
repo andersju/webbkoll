@@ -9,12 +9,12 @@ $base-font-family: $font-stack-system;
 $heading-font-family: $font-stack-serif;
 
 // Line height
-$base-line-height: 1.5;
+$base-line-height: $magic-number;
 $heading-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 3px;
-$base-spacing: 1.5em;
+$base-spacing: $magic-number;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 

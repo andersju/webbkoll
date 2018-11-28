@@ -16,10 +16,10 @@
       <tbody>
         <%= for header <- [@site.x_content_type_options, @site.x_frame_options, @site.x_xss_protection] do %>
           <tr>
-            <td><%= if header.pass, do: icon(:pass), else: icon(:fail) %></td>
-            <td><%= header.name %></td>
-            <td><%= header.data %></td>
-            <td><%= result_text(header.result) %></td>
+            <td data-label="Pass"><%= if header.pass, do: icon(:pass), else: icon(:fail) %></td>
+            <td data-label="Header"><%= header.name %></td>
+            <td data-label="Value"><%= header.data %></td>
+            <td data-label="Result"><%= result_text(header.result) %></td>
           </tr>
         <% end %>
       </tbody>

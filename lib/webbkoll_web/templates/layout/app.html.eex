@@ -37,7 +37,7 @@
           <ul id="js-navigation-menu" class="navigation-menu show">
             <li class="nav-link logo">
               <a href="/<%= @conn.assigns.locale %>">
-                <i class="icon-eye-slash"></i>
+                <i class="fas fa-eye-slash"></i>
                 <span>webbkoll</span> | <span class="ds-orange">dataskydd</span><span class="semibold">.net</span>
               </a>
             </li>
@@ -59,14 +59,14 @@
                 <%= link "English", to: Routes.site_path(@conn, @conn.private[:phoenix_action], "en", @conn.query_params) %>
               <% end %>
             </li>
-          -->
+          
             <li id="js-navigation-more" class="nav-link more"><a href="javascript:void(0)"><i class="icon-flag"></i> Language</a>
               <ul class="submenu">
                 <li><a href="javascript:void(0)">English</a></li>
                 <li><a href="javascript:void(0)">Svenska</a></li>
                 <li><a href="javascript:void(0)">Français</a></li>
               </ul>
-            </li>
+            </li>-->
           </ul>
         </nav>
 
@@ -75,7 +75,7 @@
            <form role="search" method="get" action="/<%= @conn.assigns.locale %>/check">
               <input name="url" type="search" placeholder="example.com">
               <button type="submit">
-                <i class="icon-search"></i>
+                <i class="fas fa-search"></i>
               </button>
             </form>
           </div>
