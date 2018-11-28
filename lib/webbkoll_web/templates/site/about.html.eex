@@ -1,4 +1,4 @@
-<section class="text">
+<article class="text">
   <h2><%= gettext "Welcome to the Web Privacy Check by Dataskydd.net!" %></h2>
 
   <p><%= gettext "Web Privacy Check monitors privacy enhancing features on websites, and helps you find out who is letting you exercise control over your privacy. We check to what extent a website monitors your behaviour and how much they gossip about the monitoring to third parties. We’ve also compiled a set of recommendations for web designers and managers on how to not track or gossip in digital environments. We also suggest questions and feature requests from users of websites who want to alert webmasters to the opportunity of improvement." %></p>
@@ -67,3 +67,4 @@
   <p><%= gettext "The one responsible for the website is responsible for adherence to these principles." %></p>
 
   <p><%= gettext "Since responsibility can be a difficult burden, the Web Privacy Check of Dataskydd.net has a large set of recommendations for data protection which may go further than what one could be legally liable for. We want to enable the best possible data protection with the least amount of administrative burdens. One of the reasons the rules of the data protection regulation make it seem bureaucratic and boring not to data minimise, is so that each actor in society who wishes to influence others has to consider carefully the way in which they use such power." %></p>
+</article>

@@ -36,6 +36,5 @@
 
     <%= render "_request_table.html", requests: @site.third_party_requests, id: "table-requests" %>
 
-    <%= #render "_request_urls.html", requests: @site.third_party_requests, id: "requests-list" %>
   <% end %>
 </section>

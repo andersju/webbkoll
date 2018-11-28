@@ -34,32 +34,23 @@ small {
   line-height: $magic-number*0.75;
 }
 
-/*
-.expander {
-  background-color: inherit;
-  border: none;
-  color: inherit;
-  padding: 0;
-
-  &:hover {
-    background-color: inherit;
-    color: inherit;
-  }
-}
-*/
-
 ul.default {
-  list-style-position: inside;
   list-style-type: disc;
-  margin-bottom: $small-spacing;
-  padding-left: 0;
 }
 
 ol.default {
-  list-style-position: inside;
   list-style-type: decimal;
+}
+
+ul.default,
+ol.default {
+  list-style-position: inside;
   margin-bottom: $small-spacing;
   padding-left: 0;
+
+  > li {
+    margin-bottom: $magic-number/4;
+  }
 }
 
 code {
@@ -423,7 +414,8 @@ button[data-a11y-toggle][aria-expanded="true"],
   }
 }
 
-section {
+section,
+article.text {
   @include outer-container;
   padding-left: 0.5rem;
   padding-right: 0.5rem;

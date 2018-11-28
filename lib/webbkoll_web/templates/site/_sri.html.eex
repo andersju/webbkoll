@@ -45,7 +45,7 @@
       </ul>
     <% end %>
 
-    <div class="howto">
+    <aside class="howto">
       <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="howto-sri">
         How to implement
       </span>
@@ -83,11 +83,11 @@
           <li><a href="https://caniuse.com/#feat=subresource-integrity">Browser support</a> [caniuse.com]</li>
         </ul>
       </div>
-    </div>
+    </aside>
 
     <p><small>The Subresource Integrity test is based on the one from the <a href="https://github.com/mozilla/http-observatory">Mozilla HTTP Observatory</a> scanner/grader project (<a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll.</small></p>
   </div>
-  <div class="beta">
+  <aside class="beta">
     <blockquote>
       <p>Subresource Integrity (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a CDN) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.</p>
 
@@ -98,5 +98,5 @@
         &mdash; <cite>MDN, <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>, by Mozilla Contributors, <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></cite>
       </footer>
     </blockquote>
-  </div>
+  </aside>
 </section>

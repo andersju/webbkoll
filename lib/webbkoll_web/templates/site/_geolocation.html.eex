@@ -12,7 +12,7 @@
     <% end %>
     <p><a class="external" href="https://tools.keycdn.com/geo?host=<%= @site.host_ip %>">See more information</a> (e.g., provider) about this IP address using KeyCDN's tool.</p>
   </div>
-  <div class="beta">
+  <aside class="beta">
     <p><i class="fas fa-exclamation-circle"></i> <%= gettext(~s|Some sites use CDNs &ndash; <a class="external" href="https://en.wikipedia.org/wiki/Content_delivery_network">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France.|) |> raw %></p>
-  </div>
+  </aside>
 </section>

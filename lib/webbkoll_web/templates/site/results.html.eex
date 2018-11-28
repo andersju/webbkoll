@@ -1,27 +1,29 @@
-<%= render "_results_header.html", site: @site, conn: @conn %>
+<article>
+  <%= render "_results_header.html", site: @site, conn: @conn %>
 
-<div id="results">
-  <%= render "_https.html", site: @site %>
+  <div id="results">
+    <%= render "_https.html", site: @site %>
 
-  <%= render "_hsts.html", site: @site %>
+    <%= render "_hsts.html", site: @site %>
 
-  <%= render "_csp.html", site: @site %>
+    <%= render "_csp.html", site: @site %>
 
-  <%= render "_referrers.html", site: @site %>
+    <%= render "_referrers.html", site: @site %>
 
-  <%= render "_sri.html", site: @site %>
+    <%= render "_sri.html", site: @site %>
 
-  <%= render "_headers.html", site: @site %>
+    <%= render "_headers.html", site: @site %>
 
-  <%= render "_cookies.html", site: @site %>
+    <%= render "_cookies.html", site: @site %>
 
-  <%= render "_localstorage.html", site: @site %>
+    <%= render "_localstorage.html", site: @site %>
 
-  <%= render "_requests.html", site: @site %>
+    <%= render "_requests.html", site: @site %>
 
-  <%= render "_geolocation.html", site: @site, conn: @conn %>
+    <%= render "_geolocation.html", site: @site, conn: @conn %>
 
-  <%= render "_raw_headers.html", site: @site %>
+    <%= render "_raw_headers.html", site: @site %>
 
-  <%= render "_what.html" %>
-</div>
+    <%= render "_what.html" %>
+  </div>
+</article>

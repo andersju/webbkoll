@@ -12,9 +12,6 @@
   <%= anchor_link("https") %>
   </h3>
 
-<!--
-<a class="anchorjs-link " href="#hsts" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
--->
   <div class="alpha">
     <%= if @site.scheme == "https" do %>
       <p><%= raw(gettext "<code>%{domain}</code> uses HTTPS by default.", domain: @site.host) %></p>
@@ -62,7 +59,7 @@
       <p><%= raw(gettext "<code>%{domain}</code> does <strong>not</strong> use HTTPS by default.", domain: @site.host) %></p>
     <% end %>
 
-      <div class="howto">
+      <aside class="howto">
         <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="howto-https">How to implement</span>
         <div id="howto-https">
           <p>To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning).</p>
@@ -75,10 +72,10 @@
             <li>For checking the configuration of a server, try <a href="https://www.ssllabs.com/ssltest/">SSL Labs SSL Server Test</a> (web), <a href="https://testssl.sh/">testssl.sh</a> (CLI tool), <a href="https://github.com/mozilla/tls-observatory">Mozilla TLS Observatory</a> (CLI tool) or <a href="https://observatory.mozilla.org/">Observatory by Mozilla</a> (web).</li>
           </ul>
         </div>
-      </div>
+      </aside>
 
   </div>
-  <div class="beta">
+  <aside class="beta">
     <p>HTTPS encrypts nearly all information sent between a client and a web service. Properly configured, it guarantees three things:</p>
     <ul class="default">
       <li><strong>Confidentiality</strong>. The visitor's connection is encrypted, obscuring URLs, cookies, and other sensitive metadata.</li>
@@ -88,5 +85,5 @@
     <p>A plain HTTP connection can be easily monitored, modified, and impersonated. Every unencrypted HTTP request reveals information about a user’s behavior, and the interception and tracking of unencrypted browsing has become commonplace.</p>
     <p>The goal of the Internet community is to establish encryption as the norm, and to phase out unencrypted connections.</p>
 
-  </div>
+  </aside>
 </section>

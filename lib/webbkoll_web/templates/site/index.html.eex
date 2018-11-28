@@ -3,7 +3,7 @@
     <h1><%= gettext "Check your site!" %></h1>
 
     <form class="search-bar" role="search" method="get" action="/<%= @conn.assigns.locale %>/check">
-      <input name="url" type="search" required=true placeholder="example.com" aria-describedby="urlHelpText">
+      <input name="url" type="search" required=true placeholder="example.com" aria-label="URL to check">
       <button type="submit"><%= gettext "Check" %></button>
     </form>
 

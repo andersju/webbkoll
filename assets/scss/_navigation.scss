@@ -112,6 +112,8 @@ header.navigation {
       vertical-align: sub;
     }
 
+    /* Dropdown based on https://css-tricks.com/solved-with-css-dropdown-menus/
+       by Una Kravets */
     ul {
       background: $navigation-background;
       visibility: hidden;

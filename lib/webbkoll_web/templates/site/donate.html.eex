@@ -1,4 +1,4 @@
-<section class="text">
+<article class="text">
   <h2><%= gettext "Donate" %></h2>
 
   <p><%= gettext(~s|Webbkoll is a project by <a href="https://dataskydd.net/">Dataskydd.net Sverige</a>, a Swedish non-governmental organization (organization number 802495-4797) working on making data protection easy in law and in practice. We are not affiliated with any political party.|) |> raw %></p>
@@ -32,4 +32,4 @@
   </p>
 
   <p><%= gettext "At the moment we cannot accept Bitcoin or any other cryptocurrency." %></p>
-</section>
+</article>

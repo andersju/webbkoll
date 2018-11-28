@@ -33,7 +33,7 @@
     <p>HTTP Strict Transport Security (HSTS) not implemented.</p>
   <% end %>
 
-    <div class="howto">
+    <aside class="howto">
       <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="howto-hsts">
        How to implement
       </span>
@@ -65,12 +65,12 @@
 
         <p><small><em>Text adapted from the CIO Council's <a href="https://https.cio.gov/">The HTTPS-Only Standard</a> (public domain).</em></small></p>
       </div>
-    </div>
+    </aside>
 
   </div>
 
 
-  <div class="beta">
+  <aside class="beta">
     <p><a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a> (HSTS) is a simple and <a href="https://caniuse.com/#feat=stricttransportsecurity">widely supported</a> standard to protect visitors by ensuring that their browsers always connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from <code>http://</code> to <code>https://</code> URLs.</p>
 
     <p>When a browser knows that a domain has enabled HSTS, it does two things:</p>
@@ -81,6 +81,6 @@
     </ul>
 
     <p>A domain instructs browsers that it has enabled HSTS by returning an HTTP header over an HTTPS connection.</p>
-  </div>
+  </aside>
 </section>
 <% end %>

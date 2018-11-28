@@ -1,4 +1,4 @@
-<section class="text">
+<article class="text">
   <h2><%= gettext "Failed" %></h2>
 
   <p><%= gettext "Processing %{url} failed at %{time}.", url: @site.input_url, time: format_site_time(@site.updated_at) %></p>
@@ -16,4 +16,4 @@
   <p><%= link gettext("Try again?"), to: Routes.site_path(@conn, :check, @conn.assigns.locale, url: @site.input_url, refresh: "on") %></p>
 
   <p><%= gettext(~s|<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href="mailto:info@dataskydd.net">send us an email</a> (and tell us what URL you tried)! You can also try <a href="https://privacyscore.org/">PrivacyScore</a> as an alternative.|) |> raw %></p>
-</section>
+</article>

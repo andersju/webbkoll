@@ -1,4 +1,4 @@
-<section class="text">
+<article class="text">
   <h2><%= gettext "Technology we use" %></h2>
 
   <p><%= gettext "This tool attempts to simulate what happens when a user visits a specified page with a typical browser, without clicking on anything. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled, since this is the default setting in most browsers." %></p>
@@ -8,4 +8,4 @@
   <p><%= gettext(~s|We don't provide an API as we have limited resources and PhantomJS is rather resource-intensive, but <a href="https://github.com/andersju/webbkoll">the code is available</a> under the MIT license.|) |> raw %></p>
 
   <p><%= gettext(~s|Please note, however, that this tool is mainly meant to be used as a starting point for web developers. For more rigorous and systematic testing we recommend that you check out <a href="https://github.com/citp/OpenWPM">OpenWPM</a>, which we used to analyze the websites of Sweden's municipalities (<a href="https://dataskydd.net/kommuner/">site</a>, <a href="https://github.com/andersju/municipality-privacy">code</a>). You might also want to have a look at <a href="https://privacyscore.org/">PrivacyScore</a>, which is a bit more comprehensive than Webbkoll (additionally checks e.g. email and TLS/SSL configuration) and also lets you compare/rank lists of sites.|) |> raw %></p>
-</section>
+</article>
