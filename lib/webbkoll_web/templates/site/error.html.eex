@@ -1,4 +1,4 @@
-<section>
+<section class="text">
   <h2><%= gettext "An error occurred" %></h2>
 
   <p><%= @error_message %></p>

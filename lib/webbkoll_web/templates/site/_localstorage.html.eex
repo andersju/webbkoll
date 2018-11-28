@@ -8,26 +8,35 @@
     <%= gettext "localStorage" %>
   </h3>
 
-  <%= if Enum.empty?(@site.localStorage) do %>
-    <p>localStorage not used.</p>
-  <% else %>
-    <p>localStorage used:</p>
+  <div class="alpha">
+    <%= if Enum.empty?(@site.localStorage) do %>
+      <p>localStorage not used.</p>
+    <% else %>
+      <p>localStorage used:</p>
 
-    <table class="localstorage">
-      <thead>
-        <tr>
-          <th>Key</th>
-          <th>Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <%= for {key, value} <- @site.localStorage do %>
-        <tr>
-          <td><%= truncate(key, 50) %></td>
-          <td><%= truncate(value, 50) %></td>
-        </tr>
-        <% end %>
-      </tbody>
-    </table>
-  <% end %>
+      <table class="localstorage">
+        <thead>
+          <tr>
+            <th>Key</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= for {key, value} <- @site.localStorage do %>
+          <tr>
+            <td><%= truncate(key, 50) %></td>
+            <td><%= truncate(value, 50) %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+  <div class="beta">
+    <p>Like with cookies, <strong><a href="https://html.spec.whatwg.org/multipage/webstorage.html">web storage</a></strong> can be used to store data in a user's browser. Unlike cookies, web storage data is not sent with HTTP requests: it can only be directly set and accessed by the user's browser (through JavaScript). Compared to cookies, the storage capacity is much larger.</p>
+
+    <p>There are two types: <code>localStorage</code> data is persistent (not removed when the browser is closed) and never expires, while <code>sessionStorage</code> data is removed when the page session ends (unlike with session cookies, a sessionStorage session is <em>per window/tab</em>).</p>
+
+    <p>This can be used to track and profile users by simply using JavaScript to read a user's storage data and send it to a server.</p>
+  </div>
 </section>

@@ -1,11 +1,11 @@
-<section>
+<section class="text">
   <h2><%= gettext "Hang tight..." %></h2>
 
   <p><img src="/images/ajax-loader.gif"></p>
 
   <ul>
     <li><strong><%= gettext "ID:" %></strong> <%= @id %></li>
-    <li><strong><%= gettext "Input URL:" %></strong> <%= @site.input_url %></li>
+    <li><strong><%= gettext "Checked URL:" %></strong> <%= @site.input_url %></li>
     <li><strong><%= gettext "Status:" %></strong> <%= @site.status %></li>
   </ul>
 </section>

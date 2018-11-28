@@ -1,4 +1,4 @@
-<section>
+<section class="text">
   <h2><%= gettext "Failed" %></h2>
 
   <p><%= gettext "Processing %{url} failed at %{time}.", url: @site.input_url, time: format_site_time(@site.updated_at) %></p>
