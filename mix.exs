@@ -37,7 +37,7 @@ defmodule Webbkoll.Mixfile do
         :jumbo,
         :download
       ],
-      included_applications: [:ex2ms, :floki, :phoenix_slime, :public_suffix, :uuid]
+      included_applications: [:ex2ms, :floki, :public_suffix, :uuid]
     ]
   end
 
@@ -55,7 +55,7 @@ defmodule Webbkoll.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
-      {:plug_cowboy, "~> 1.0"},
+      {:plug_cowboy, "~> 2.0"},
       {:plug, "~> 1.7"},
       {:httpoison, "~> 1.0"},
       {:floki, "~> 0.8"},
@@ -63,7 +63,6 @@ defmodule Webbkoll.Mixfile do
       {:quantum, ">= 2.2.1"},
       {:ex_machina, "~> 2.0", only: :test},
       {:public_suffix, "~> 0.4"},
-      {:phoenix_slime, "~> 0.8"},
       {:timex, "~> 3.0"},
       {:hackney, "~> 1.8"},
       {:geolix, "~> 0.13"},
