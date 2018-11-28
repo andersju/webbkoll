@@ -22,7 +22,7 @@
     <div class="summary">
       <ul>
         <li>
-          <span class="label">HTTPS by default:</span>
+          <span class="label"><a href="#https">HTTPS by default:</a></span>
           <%= if @site.scheme == "https" do %>
             <%= if @site.security["securityState"] == "secure" do %>
               <%= icon(:pass) %> Yes
@@ -34,7 +34,7 @@
           <% end %>
         </li>
         <li>
-          <span class="label">Content Security Policy:</span>
+          <span class="label"><a href="#csp">Content Security Policy:</a></span>
 
           <%= if @site.csp.pass do %>
             <%= icon(:pass) %> Good policy
@@ -47,7 +47,7 @@
             <% end %>
           <% end %>
         <li>
-          <span class="label">Referrer Policy:</span>
+          <span class="label"><a href="#referrers">Referrer Policy:</a></span>
 
           <%= case @site.referrer.status do %>
             <% "success" -> %> <%= icon(:pass) %> Referrers not leaked
@@ -57,7 +57,7 @@
           <% end %>
         </li>
         <li>
-          <span class="label">Cookies:</span>
+          <span class="label"><a href="#cookies">Cookies:</a></span>
           
           <strong><%= @site.cookie_count.first_party + @site.cookie_count.third_party %></strong>
           <%= if (@site.cookie_count.first_party + @site.cookie_count.third_party) > 0 do %>
@@ -65,7 +65,7 @@
           <% end %>
         </li>
         <li>
-          <span class="label">Third-party requests:</span>
+          <span class="label"><a href="#requests">Third-party requests:</a></span>
 
           <strong><%= @site.third_party_request_types.total %></strong>
           <%= if @site.third_party_request_types.total > 0 do %>
@@ -73,7 +73,7 @@
           <% end %>
         </li>
         <li>
-          <span class="label">Server location:</span>
+          <span class="label"><a href="#server-location">Server location:</a></span>
 
           <%= if @site.geolocation do %>
             <span class="flag-icon flag-icon-<%= String.downcase(@site.geolocation) %>"></span> <%= country_from_iso(@conn.assigns.locale, @site.geolocation) %>

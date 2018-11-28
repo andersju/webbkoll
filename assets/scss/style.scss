@@ -81,6 +81,16 @@ table {
   }
 }
 
+.anchor-link {
+  font-size: 1rem;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+h3:hover .anchor-link {
+  visibility: visible;
+}
+
 table.requests {
   .host {
     min-width: 30rem;
@@ -365,6 +375,10 @@ button[data-a11y-toggle][aria-expanded="true"],
     span.label {
       display: inline-block;
       width: 12rem;
+    }
+
+    span.label a {
+      text-decoration: none;
     }
 
     ul {

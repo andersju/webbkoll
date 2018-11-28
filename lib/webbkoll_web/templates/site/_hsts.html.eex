@@ -9,6 +9,7 @@
         <%= icon(:fail) %>
       <% end %>
       HTTP Strict Transport Security (HSTS)
+      <%= anchor_link("hsts") %>
     </h3>
   <% else %>
     <h3 id="hsts"><%= icon(:fail) %> Strict Transport Security</h3>

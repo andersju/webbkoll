@@ -6,6 +6,7 @@
     <%= icon(:fail) %>
     <% end %>
     Content Security Policy
+    <%= anchor_link("csp") %>
   </h3>
 
   <div class="alpha">

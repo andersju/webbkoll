@@ -1,7 +1,8 @@
-<%# TODO: Move logic to helper? %>
-
 <section class="result">
-  <h3 id="headers"><%= gettext "HTTP headers" %></h3>
+  <h3 id="headers">
+    <%= gettext "HTTP headers" %>
+    <%= anchor_link("headers") %>
+  </h3>
 
   <div class="alpha">
     <table>

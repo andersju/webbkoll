@@ -1,5 +1,8 @@
 <section class="result">
-  <h3 id="cookies"><%= gettext "Cookies" %></h3>
+  <h3 id="cookies">
+    <%= gettext "Cookies" %>
+    <%= anchor_link("cookies") %>
+  </h3>
 
   <%= if @site.cookie_count.first_party > 0 do %>
     <%= render "_cookie_table.html", amount: @site.cookie_count.first_party, cookies: @site.cookies.first_party, label: "First-party cookies", id: "cookies-first" %>

@@ -1,5 +1,8 @@
 <section class="result">
-  <h3 id="raw-headers"><%= gettext "Raw headers" %></h3>
+  <h3 id="raw-headers">
+    <%= gettext "Raw headers" %>
+    <%= anchor_link("raw-headers") %>
+  </h3>
 
   <table>
     <thead>

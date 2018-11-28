@@ -5,7 +5,8 @@
     <% else %>
       <%= icon(:warn) %>
     <% end %>
-    <%= gettext "localStorage" %>
+    localStorage
+    <%= anchor_link("localstorage") %>
   </h3>
 
   <div class="alpha">

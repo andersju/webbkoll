@@ -6,6 +6,7 @@
     <%= icon(:fail) %>
     <% end %>
     Subresource Integrity (SRI)
+    <%= anchor_link("sri") %>
   </h3>
 
   <div class="alpha">
@@ -50,7 +51,7 @@
       </span>
 
       <div id="howto-sri">
-        <p>SRI can be used with <code>script</code> and <script>link</script> elements. To enable SRI on an element, you need to add <code>integrity</code> and <code>crossorigin</code> attributes to it.</p>
+        <p>SRI can be used with <code>script</code> and <code>link</code> elements. To enable SRI on an element, you need to add <code>integrity</code> and <code>crossorigin</code> attributes to it.</p>
 
         <p><code>integrity</code> should contain integrity metadata: a string describing the <a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">cryptographic hash function used</a> (currently sha256, sha384, or sha512), followed by a dash, followed by the <a href="https://en.wikipedia.org/wiki/Base64">base64</a>-encoded hash of the file.</p>
 

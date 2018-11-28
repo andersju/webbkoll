@@ -1,14 +1,20 @@
 <section class="result">
+  <h3 id="https">
   <%= if @site.scheme == "https" do %>
     <%= if @site.security["securityState"] == "secure" do %>
-      <h3 id="https"><%= icon(:pass2) %> <%= gettext "HTTPS by default" %></h3>
+      <%= icon(:pass2) %> <%= gettext "HTTPS by default" %>
     <% else %>
-      <h3 id="https"><%= icon(:warn) %> <%= gettext "HTTPS by default, but with issues" %></h3>
+      <%= icon(:warn) %> <%= gettext "HTTPS by default, but with issues" %>
     <% end %>
   <% else %>
-    <h3 id="https"><%= icon(:fail) %> <%= gettext "Insecure: HTTPS not used by default" %></h3>
+    <%= icon(:fail) %> <%= gettext "Insecure: HTTPS not used by default" %>
   <% end %>
+  <%= anchor_link("https") %>
+  </h3>
 
+<!--
+<a class="anchorjs-link " href="#hsts" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
+-->
   <div class="alpha">
     <%= if @site.scheme == "https" do %>
       <p><%= raw(gettext "<code>%{domain}</code> uses HTTPS by default.", domain: @site.host) %></p>

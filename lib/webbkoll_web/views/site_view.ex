@@ -27,6 +27,10 @@ defmodule WebbkollWeb.SiteView do
     end
   end
 
+  def anchor_link(id) do
+    ~E(<a href="#<%= id %>" aria-label="Anchor" class="anchor-link"><i class="fas fa-link"></i></a>)
+  end
+
   def icon(:pass), do: content_tag(:i, "", class: "fas fa-check fa-fw success")
   def icon(:pass2), do: content_tag(:i, "", class: "fas fa-check-square fa-fw success")
   def icon(:fail), do: content_tag(:i, "", class: "fas fa-times fa-fw alert")

@@ -1,5 +1,9 @@
 <section class="result">
-  <h3 id="server-location"><i class="fas fa-globe fa-fw"></i> <%= gettext "Server location" %></h3>
+  <h3 id="server-location">
+    <i class="fas fa-globe fa-fw"></i>
+    <%= gettext "Server location" %>
+    <%= anchor_link("server-location") %>
+  </h3>
   <div class="alpha">
     <%= if @site.geolocation do %>
       <p><%= gettext(~s|The server <strong>%{domain}</strong> (%{host_ip}) appears to have been located in <strong>%{country}</strong> during our test.|, domain: @site.host, host_ip: @site.host_ip, country: country_from_iso(@conn.assigns.locale, @site.geolocation)) |> raw %></p>

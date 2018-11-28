@@ -1,5 +1,8 @@
 <section class="result">
-  <h3 id="what">What this tool checks (and doesn't check)</h3>
+  <h3 id="what">
+    What this tool checks (and doesn't check)
+    <%= anchor_link("what") %>
+  </h3>
 
   <p>This tool attempts to simulate what happens when a user visits a specified page with a typical browser. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled, since this is the default setting in most browsers.</p><p>External files such as images, scripts and CSS are loaded, but the tool performs no interactions with the page — no links are clicked, no forms are submitted.</p>
 
