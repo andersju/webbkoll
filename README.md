@@ -10,8 +10,9 @@ browser having no particular extensions installed, and with Do Not Track
 
 In short: this tool, which runs the user-facing web service (built with
 [Elixir](https://elixir-lang.org/) and [Phoenix](http://phoenixframework.org/)),
-asks a simple Node.js backend to visit a page with Chromium. The Node.js backend
-uses [Puppeteer](https://github.com/GoogleChrome/puppeteer) to control Chromium; it
+asks [a simple Node.js backend](https://github.com/andersju/webbkoll-backend)
+to visit a page with Chromium. The backend uses
+[Puppeteer](https://github.com/GoogleChrome/puppeteer) to control Chromium; it
 visits and renders the page, collects various data (requests made, cookies,
 response headers, etc.), and sends it back as JSON to this tool which
 then analyzes the data and presents the results on a webpage along with
@@ -43,13 +44,7 @@ This is a project by [Dataskydd.net](https://dataskydd.net). We received initial
 
 ## Backend
 
-We've switched from PhearJS/PhantomJS to a tiny script that makes use of [Puppeteer](https://github.com/GoogleChrome/puppeteer). You'll find it in `misc/backend`. Node.js 8.x LTS required. Simply run `npm install`, which should install everything necessary, including a local copy of Chromium; and then `npm start` or (`nodejs index.js`) to start.
-
-Make sure you have all necessary system dependencies; see [Puppeteer's troubleshooting page](https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md) for e.g. a list of necessary Ubuntu/Debian packages.
-
-The backend listens to port 8100 by default. Output is logged to `webbkoll-backend.log`. Note that this script should be considered highly experimental, and it has NO throttling whatsoever -- this needs to be handled elsewhere (for Webbkoll the frontend handles this).
-
-Inspired by [Puppeteer as a Service](https://github.com/GoogleChromeLabs/pptraas.com).
+We've switched from PhearJS/PhantomJS to a tiny script that makes use of [Puppeteer](https://github.com/GoogleChrome/puppeteer). You'll find it [in this repo](https://github.com/andersju/webbkoll-backend).
 
 ## Frontend (this app!)
 
@@ -136,26 +131,6 @@ WantedBy=multi-user.target
 
 Run `systemctl daemon-reload` for good measure, and then try `systemctl start webbkoll`. (And `systemctl enable webbkoll` to have it started automatically.)
 
-### Keeping the backend running
-
-To make sure the backend keeps running, you can have systemd unit file like this:
-
-```
-[Unit]
-Description=Webbkoll-backend
-
-[Service]
-Type=simple
-ExecStart=/usr/bin/npm start
-WorkingDirectory=/home/foobar/webbkoll/misc/backend
-User=foobar
-Group=foobar
-Restart=always
-
-[Install]
-WantedBy=multi-user.target
-```
-
 ## TODO/ideas
   * Add more suggestions for privacy-friendly alternatives to popular services
   * Optionally visit a number of randomly selected internal pages and let the results be based on the collective data from all the pages
@@ -170,7 +145,6 @@ WantedBy=multi-user.target
   * More? Let me know!
 
 ## Credits & licenses
-Frontend:
   * [Phoenix Framework](http://www.phoenixframework.org/) (MIT license) by Chris McCord
   * Header/content analysis code in `lib/webbkoll/header_analysis.ex`, `lib/webbkoll/content_analysis.ex`, `test/webkoll/csp_test.exs`, `test/webkoll/sri_test.exs` is based on work by April King for [Mozilla HTTP Observatory](https://github.com/mozilla/http-observatory), Mozilla Public License Version 2.0
   * [Bourbon](https://github.com/thoughtbot/bourbon), [Neat](https://github.com/thoughtbot/neat), [Bitters](https://github.com/thoughtbot/bitters), [Refills](https://github.com/thoughtbot/refills) (`assets/scss/{base,bourbon,neat}`) (MIT license) by thoughtbot
@@ -181,10 +155,6 @@ Frontend:
   * GeoLite2 data created by MaxMind (CC BY-SA 4.0), available from [http://www.maxmind.com](http://www.maxmind.com). (Not included in the repository, but automatically downloaded to `priv/GeoLite2-Country.mmdb.gz`.)
   * JSON for ISO 3166-1 country code i18n from [node-i18n-iso-countries](https://github.com/michaelwittig/node-i18n-iso-countries) (`priv/{en,sv}.json`) (MIT license)
   * SVG flags/CSS (`assets/scss/flag-icon`, `assets/static/flags`) from [flag-icon-css](https://github.com/lipis/flag-icon-css) (MIT license) by Panayiotis Lipiridis
-
-Backend:
-  * [Puppeteer](https://github.com/GoogleChrome/puppeteer) (Apache License 2.0) by the Chrome DevTools team
-  * [Express](https://github.com/expressjs) (MIT license)
 
 For the project code in general (things not noted above):
 
