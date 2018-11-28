@@ -1,8 +1,16 @@
-## This file is a PO Template file. `msgid`s here are often extracted from
-## source code; add new translations manually only if they're dynamic
-## translations that can't be statically extracted. Run `mix
-## gettext.extract` to bring this file up to date. Leave `msgstr`s empty as
-## changing them here as no effect; edit them in PO (`.po`) files instead.
+## `msgid`s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove `msgid`s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use `mix gettext.extract --merge` or `mix gettext.merge`
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: fr\n"
+"Plural-Forms: nplurals=2\n"
+
 #: lib/webbkoll_web/templates/site/index.html.eex:7
 msgid "Check"
 msgstr ""
@@ -1040,7 +1048,7 @@ msgstr ""
 msgid "Check your site!"
 msgstr ""
 
-#, elixir-format
+#, elixir-format, fuzzy
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:89
 #: lib/webbkoll_web/templates/site/status.html.eex:8
 msgid "Checked URL:"
@@ -1096,7 +1104,7 @@ msgstr ""
 msgid "Content Security Policy (CSP) implemented, but secure site allows resources to be loaded over HTTP"
 msgstr ""
 
-#, elixir-format
+#, elixir-format, fuzzy
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:3
 msgid "Cookies"
 msgstr ""
@@ -1209,7 +1217,7 @@ msgstr ""
 msgid "Server location for <strong>%{domain}</strong> (%{host_ip}) could not be determined."
 msgstr ""
 
-#, elixir-format
+#, elixir-format, fuzzy
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:16
 msgid "Some sites use CDNs &ndash; <a class=\"external\" href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France."
 msgstr ""

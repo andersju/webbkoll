@@ -15,8 +15,6 @@ config :webbkoll,
     {Webbkoll.Queue.Q1, %{concurrency: 5, logger_tag: "queue 1", url: "http://localhost:8100/"}}
   ],
   max_attempts: 2,
-  locales: ~w(en sv),
-  default_locale: "sv",
   # validate_urls: If true, only check URLs with a valid domain name
   # (i.e. ones with a TLD in the Public Suffix List),
   # and only the standard HTTP/HTTPS ports.

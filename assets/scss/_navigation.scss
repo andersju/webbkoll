@@ -20,6 +20,7 @@ header.navigation {
 
   background-color: $navigation-background;
   border-bottom: 1px solid darken($navigation-background, 10);
+  color: white;
   min-height: $navigation-height;
   width: 100%;
   z-index: 999;
@@ -86,6 +87,7 @@ header.navigation {
     line-height: $navigation-height;
     text-decoration: none;
     width: auto;
+    position: relative;
 
     a {
       color: $navigation-color;
@@ -108,6 +110,43 @@ header.navigation {
       font-size: modular-scale(1);
       padding-right: 0.4rem;
       vertical-align: sub;
+    }
+
+    ul {
+      background: $navigation-background;
+      visibility: hidden;
+      opacity: 0;
+      min-width: 5rem;
+      position: absolute;
+      transition: all 0.5s ease;
+      margin-top: 1rem;
+      left: 0;
+      display: none;
+      margin: 0;
+      text-align: left;
+    }
+
+    &:hover > ul,
+    &:focus-within > ul,
+    ul:hover,
+    ul:focus {
+       visibility: visible;
+       opacity: 1;
+       display: block;
+    }
+
+    ul li {
+      clear: both;
+      padding-left: 1rem;
+      width: 100%;
+    }
+
+    .language-select::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f0dd";
+      padding-right: 0.5rem;
+      vertical-align: top;
     }
 
     @include media($mobile) {
@@ -167,6 +206,10 @@ header.navigation {
         margin: 0;
         padding: 0.5em 0.8em;
         width: 100%;
+
+        &::placeholder {
+          color: rgba(255,255,255,0.8);
+        }
       }
 
       button[type=submit] {

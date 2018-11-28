@@ -34,7 +34,7 @@
     <header class="navigation">
       <div class="navigation-wrapper">
         <nav>
-          <ul id="js-navigation-menu" class="navigation-menu show">
+          <ul class="navigation-menu">
             <li class="nav-link logo">
               <a href="/<%= @conn.assigns.locale %>">
                 <i class="fas fa-eye-slash"></i>
@@ -50,23 +50,19 @@
             <li class="nav-link">
               <%= link gettext("Donate"), to: Routes.site_path(@conn, :donate, @conn.assigns.locale) %>
             </li>
-            <!--
+
+            <% current_lang = @conn.assigns.locale %>
+
             <li class="nav-link">
-              <i class="icon-flag"></i>
-              <%= if @conn.assigns.locale == "en" do %>
-                <%= link "Svenska", to: Routes.site_path(@conn, @conn.private[:phoenix_action], "sv", @conn.query_params) %>
-              <% else %>
-                <%= link "English", to: Routes.site_path(@conn, @conn.private[:phoenix_action], "en", @conn.query_params) %>
-              <% end %>
-            </li>
-          
-            <li id="js-navigation-more" class="nav-link more"><a href="javascript:void(0)"><i class="icon-flag"></i> Language</a>
-              <ul class="submenu">
-                <li><a href="javascript:void(0)">English</a></li>
-                <li><a href="javascript:void(0)">Svenska</a></li>
-                <li><a href="javascript:void(0)">Français</a></li>
+              <%= link language_from_code(current_lang), to: Routes.site_path(@conn, @conn.private[:phoenix_action], current_lang, @conn.query_params), aria_haspopup: "true", class: "language-select" %>
+              <ul class="dropdown" aria-label="submenu">
+                <%= for lang <- Application.get_env(:webbkoll, :locales) |> Enum.reject(& &1 == current_lang) do %>
+                <li>
+                  <%= link language_from_code(lang), to: Routes.site_path(@conn, @conn.private[:phoenix_action], lang, @conn.query_params) %>
+                </li>
+                <% end %>
               </ul>
-            </li>-->
+            </li>
           </ul>
         </nav>
 

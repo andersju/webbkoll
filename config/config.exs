@@ -6,7 +6,9 @@
 use Mix.Config
 
 # General application configuration
-config :webbkoll, ecto_repos: [Webbkoll.Repo]
+config :webbkoll,
+  locales: ~w(en sv fr),
+  default_locale: "en"
 
 # Configures the endpoint
 config :webbkoll, WebbkollWeb.Endpoint,
@@ -22,7 +24,7 @@ config :webbkoll, WebbkollWeb.Endpoint,
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id],
-  level: :info
+  level: :error
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

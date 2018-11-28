@@ -8,11 +8,15 @@ defmodule Webbkoll.Helpers do
               end).()
 
   def country_from_iso(locale, country_code) do
-    case Map.fetch(@countries[locale], country_code) do
+    case Map.fetch(@countries[locale]["countries"], country_code) do
       :error -> nil
       {:ok, country} -> country
     end
   end
+
+  def language_from_code("en"), do: "English"
+  def language_from_code("sv"), do: "Svenska"
+  def language_from_code("fr"), do: "Français"
 
   def get_geolocation_by_ip(nil), do: nil
 

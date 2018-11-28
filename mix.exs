@@ -73,7 +73,8 @@ defmodule Webbkoll.Mixfile do
       {:jumbo, "~> 1.0"},
       {:download, "~> 0.0.4"},
       {:stream_gzip, "~> 0.3.1"},
-      {:jason, "~> 1.0"}
+      {:jason, "~> 1.0"},
+      {:credo, "~> 1.0.0", only: [:dev, :test], runtime: false}
     ]
   end
 end
