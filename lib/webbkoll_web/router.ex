@@ -26,6 +26,7 @@ defmodule WebbkollWeb.Router do
     # Use the default browser stack
     pipe_through(:browser)
 
+    get("/news", SiteController, :news)
     get("/about", SiteController, :about)
     get("/tech", SiteController, :tech)
     get("/donate", SiteController, :donate)
