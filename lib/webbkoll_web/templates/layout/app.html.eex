@@ -42,15 +42,14 @@
               </a>
             </li>
             <li class="nav-link">
-              <%= link gettext("FAQ"), to: Routes.site_path(@conn, :about, @conn.assigns.locale) %>
+              <%= link gettext("News"), to: Routes.site_path(@conn, :news, @conn.assigns.locale) %>
             </li>
             <li class="nav-link">
               <%= link gettext("Tech"), to: Routes.site_path(@conn, :tech, @conn.assigns.locale) %>
             </li>
             <li class="nav-link">
-              <%= link gettext("Donate"), to: Routes.site_path(@conn, :donate, @conn.assigns.locale) %>
+              <%= link gettext("FAQ"), to: Routes.site_path(@conn, :about, @conn.assigns.locale) %>
             </li>
-
             <% current_lang = @conn.assigns.locale %>
 
             <li class="nav-link">
@@ -97,7 +96,7 @@
         <div class="beta">
           <p><%= gettext("The code is <a href=\"https://github.com/andersju/webbkoll\">available on GitHub</a>.") |> raw %></p>
           <p><%= gettext("Feedback? Questions? <a href=\"mailto:info@dataskydd.net\">info@dataskydd.net</a>") |> raw %></p>
-          <p><%= gettext("All text, except quotes and where noted, is available under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>.") |> raw %></p>
+          <p><%= link gettext("Support us"), to: Routes.site_path(@conn, :donate, @conn.assigns.locale) %></p>
         </div>
       </footer>
     </div>

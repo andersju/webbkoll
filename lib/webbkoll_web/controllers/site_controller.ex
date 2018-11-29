@@ -30,6 +30,19 @@ defmodule WebbkollWeb.SiteController do
 
   def indexi18n(conn, params), do: index(conn, params)
 
+  def news(conn, _params) do
+    render(
+      conn,
+      "news.html",
+      locale: conn.assigns.locale,
+      page_title: gettext("News"),
+      page_description:
+        gettext(
+          "Recent changes on Webbkoll."
+        )
+    )
+  end
+
   def about(conn, _params) do
     render(
       conn,

@@ -1,0 +1,43 @@
+<section class="text">
+  <h2><%= gettext "News" %></h2>
+
+  <p>This page lists user-visible changes to Webbkoll. For the time before 2018-11-30 (when this page was added), only a few notable events are listed. For the full history, see the <a href="https://github.com/andersju/webbkoll/commits/">commits on GitHub</a>.</p>
+
+  <article>
+    <h3>2018-11-30</h3>
+    <p>New version of Webbkoll launched, thanks to a small grant from <a href="https://digitalrights.fund/">Digital Rights Fund</a>. Changes/additions:</p>
+
+    <ul class="default">
+      <li>Redesigned a bit to hopefully make things a bit more clear and navigable. Better separation between results and general information/advice. Separate boxes for "what is this" and "how do you do this". Hide some things between expandable text boxes. Now works better on mobile.</li>
+      <li>Added Content Security Policy (CSP) analysis, Subresource Integrity (SRI) analysis, and improved X-Content-Type-Options/X-Frame-Options/X-XSS-Protection/HSTS checks. This code was ported from Mozilla's <a href="https://github.com/mozilla/http-observatory">Observatory</a>.</li>
+      <li>More cooke information shown (HttpOnly, Secure, SameSite)</li>
+      <li>localStorage usage shown</li>
+      <li>IP address and country (with flags!) shown for every third-party host</li>
+      <li>Chromium's security state information shown</li>
+      <li>Information/technical advice rewritten (sometimes quoted from <a href="https://developer.mozilla.org/en-US/">MDN</a></li>
+      <li>Many references to relevant articles and recitals in the GDPR added</li>
+      <li>Lots of work to make things a bit cleaner internally</li>
+    </ul>
+  </article>
+
+  <article>
+    <h3>2018-07-08</h3>
+    <ul class="default">
+      <li>Switch from PhantomJS to Chromium in the backend, fixing many issues</li>
+    </ul>
+  </article>
+
+  <article>
+    <h3>2016-06-25</h3>
+    <ul class="default">
+      <li>Code published to GitHub</li>
+    </ul>
+  </article>
+
+  <article>
+    <h3>2016-05-10</h3>
+    <ul class="default">
+      <li>Beta version made public</li>
+    </ul>
+  </article>
+</section>

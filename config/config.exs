@@ -7,7 +7,7 @@ use Mix.Config
 
 # General application configuration
 config :webbkoll,
-  locales: ~w(en sv fr),
+  locales: ~w(en sv),
   default_locale: "en"
 
 # Configures the endpoint

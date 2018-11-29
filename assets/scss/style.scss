@@ -470,6 +470,10 @@ article.text {
     margin-top: 0.75em;
   }
 
+  article + article {
+    margin-top: $magic-number;
+  }
+
   .howto,
   .beta {
     code {
@@ -506,8 +510,9 @@ article.text {
     }
   }
 
-  p {
-    max-width: 50em;
+  p,
+  ul li {
+    max-width: 50rem;
   }
 
   p:last-child {
