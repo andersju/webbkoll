@@ -16,7 +16,7 @@
       <%= for cookie <- @cookies do %>
         <tr>
           <td data-label="<%= gettext "Domain" %>"><%= cookie["domain"] %></td>
-          <td data-label="<%= gettext "Name" %>"><%= cookie["name"] %></td>
+          <td data-label="<%= gettext "Name" %>"><%= truncate(cookie["name"], 20) %></td>
           <td data-label="<%= gettext "Value" %>"><%= truncate(cookie["value"], 20) %></td>
           <td data-label="<%= gettext "Expires on" %>">
             <%= if cookie["session"] == true, do: "session", else: format_timestamp(cookie["expires"]) %>

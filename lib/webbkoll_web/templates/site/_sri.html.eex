@@ -98,5 +98,10 @@
         &mdash; <cite>MDN, <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>, by Mozilla Contributors, <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></cite>
       </footer>
     </blockquote>
+
+    <p>
+      <%= icon(:law) %> GDPR: Rec. 83, Art. 5.1.f, Art. 25, Art. 32.2.<br>
+      This is an easy measure to take against unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed.
+    </p>
   </aside>
 </section>

@@ -103,8 +103,9 @@
     </blockquote>
 
     <p>
-      <%= icon(:law) %> GDPR: Rec. 83, Art. 5.1.f, Art. 25, Art. 32.2.<br>
-      GDPR Art. 32.2 makes clear that measures should be taken against unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed. CSP is a relatively simple way of ensuring that your web visitors do not end up being put in contact with someone that either they - or you did - not anticipate for them to contact.
+      <%= icon(:law) %>
+      <%= gettext "GDPR: " %> <%= raw(gdpr(:rec, 83)) %>, <%= raw(gdpr(:art, 5, "5.1.f")) %>, <%= raw(gdpr(:art, 25)) %>, <%= raw(gdpr(:art, 32, "32.2")) %><br>
+      <%= gettext(~s|GDPR Art. %{art_32_2} makes clear that measures should be taken against unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed. CSP is a relatively simple way of ensuring that your web visitors do not end up being put in contact with someone that either they - or you - did not anticipate for them to contact.|, art_32_2: gdpr(:art, 32, "32.2")) |> raw %>
     </p>
   </aside>
 </section>

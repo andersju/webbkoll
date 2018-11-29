@@ -177,4 +177,24 @@ defmodule WebbkollWeb.SiteView do
       _ -> {test, pass, info, false}
     end
   end
+
+  # Yes, this is ugly.
+  # TODO: Replace with links to locally hosted version of the GDPR.
+  def gdpr(type, number, text \\ nil) do
+    text = if text, do: text, else: Integer.to_string(number)
+    case Gettext.get_locale(WebbkollWeb.Gettext) do
+      "en" ->
+        case type do
+          :art -> link(gettext("Art. ") <> text, to: "https://gdpr-info.eu/art-#{number}-gdpr/")
+          :rec -> link(gettext("Rec. ") <> text, to: "https://gdpr-info.eu/recitals/no-#{number}/")
+        end
+      "sv" ->
+        case type do
+          :art -> link(gettext("Art. ") <> text, to: "https://www.datainspektionen.se/lagar--regler/dataskyddsforordningen/dataskyddsforordningen---fulltext/##{number}")
+          :rec -> link(gettext("Rec. ") <> text, to: "https://www.datainspektionen.se/lagar--regler/dataskyddsforordningen/dataskyddsforordningens-beaktandesatser/##{number}")
+        end
+    end
+    |> safe_to_string()
+  end
+
 end

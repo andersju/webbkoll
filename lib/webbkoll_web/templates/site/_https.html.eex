@@ -85,7 +85,10 @@
     <p>A plain HTTP connection can be easily monitored, modified, and impersonated. Every unencrypted HTTP request reveals information about a user’s behavior, and the interception and tracking of unencrypted browsing has become commonplace.</p>
     <p>The goal of the Internet community is to establish encryption as the norm, and to phase out unencrypted connections.</p>
 
-    <p><%= icon(:law) %> GDPR: Rec. 83, Art. 5.1.f, Art. 25, Art. 32.1.<br />By GDPR Art. 25, a controller is responsible for implementing state of the art data protection by design and by default. Encrypted connections are a well-established technology to protect the privacy of web visitors against eavesdroppers on the wire.</p>
-
+    <p>
+      <%= icon(:law) %>
+      <%= gettext("GDPR:") %> <%= raw(gdpr(:rec, 83)) %>, <%= raw(gdpr(:art, 5, "5.1.f")) %>, <%= raw(gdpr(:art, 25)) %>, <%= raw(gdpr(:art, 32, "32.1")) %>.<br>
+      <%= gettext(~s|By GDPR %{art_25}, a controller is responsible for implementing state of the art data protection by design and by default. Encrypted connections are a well-established technology to protect the privacy of web visitors against eavesdroppers on the wire.|, art_25: gdpr(:art, 25)) |> raw() %>
+    </p>
   </aside>
 </section>

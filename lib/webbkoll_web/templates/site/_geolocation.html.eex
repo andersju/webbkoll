@@ -14,5 +14,16 @@
   </div>
   <aside class="beta">
     <p><i class="fas fa-exclamation-circle"></i> <%= gettext(~s|Some sites use CDNs &ndash; <a class="external" href="https://en.wikipedia.org/wiki/Content_delivery_network">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France.|) |> raw %></p>
+
+    <p><%= icon(:law) %> <%= gettext(~s|Under the GDPR, all EU countries are considered equally trustworthy, so there is no particular reason under the GDPR to consider any EU country more or less reliable or desirable than any other. The importance of the location of a server comes into play only under GDPR %{art_23}, Restrictions, where member states may invoke a number of reasons, notably national security, that enable them to void protections for visitors or web service providers."|, art_23: gdpr(:art, 23)) |> raw() %></p>
+
+    <p>
+      <%= gettext(~s|For non-EU territories, it depends (GDPR %{art_44}). For a website, transfers will probably have to rely on adequacy decisions (%{art_45}) made by the European Commission when a third territory has been deemed to have appropriate data protection safe guards in its legislation. However, adequacy decisions cannot always be trusted, as demonstrated in the EU Court of Justice 2015 (C-362/14). Binding corporate rules (%{art_47}) or standard clauses (%{art_46}) may also be used to transfer data, but in the absence of rulings by courts and data protection authorities this is still legally uncertain territory.|,
+      art_44: gdpr(:art, 44),
+      art_45: gdpr(:art, 45),
+      art_46: gdpr(:art, 46),
+      art_47: gdpr(:art, 47),
+      ) |> raw() %>
+    </p>
   </aside>
 </section>

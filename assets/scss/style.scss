@@ -69,6 +69,7 @@ table {
 
   td {
     @include overflow-wrap;
+    word-break: break-all;
   }
 }
 
