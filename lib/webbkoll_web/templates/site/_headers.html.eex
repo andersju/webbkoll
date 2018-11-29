@@ -68,7 +68,7 @@
     </blockquote>
     <p>
       <%= icon(:law) %>
-      <%= gettext "GDPR: " %> <%= raw(gdpr(:art, 5, "5.1.c")) %>, <%= raw(gdpr(:art, 5, "5.1.f")) %>, <%= raw(gdpr(:art, 25)) %>, <%= raw(gdpr(:art, 32, "32.1-2")) %><br>
+      <%= gettext "GDPR: " %> <%= [~w|art 5 5.1.c|, ~w|art 5 5.1.f|, ~w|art 25|, ~w|art 32 32.1-2|] |> gdpr() |> raw() %>.<br>
       These headers can help minimize data disclosures.
     </p>
   </aside>

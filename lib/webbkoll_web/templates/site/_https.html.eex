@@ -87,8 +87,8 @@
 
     <p>
       <%= icon(:law) %>
-      <%= gettext("GDPR:") %> <%= raw(gdpr(:rec, 83)) %>, <%= raw(gdpr(:art, 5, "5.1.f")) %>, <%= raw(gdpr(:art, 25)) %>, <%= raw(gdpr(:art, 32, "32.1")) %>.<br>
-      <%= gettext(~s|By GDPR %{art_25}, a controller is responsible for implementing state of the art data protection by design and by default. Encrypted connections are a well-established technology to protect the privacy of web visitors against eavesdroppers on the wire.|, art_25: gdpr(:art, 25)) |> raw() %>
+      <%= gettext("GDPR:") %> <%= [~w|rec 83|, ~w|art 5 5.1.f|, ~w|art 25|, ~w|art 32 32.1|] |> gdpr() |> raw() %><br>
+      <%= gettext(~s|By GDPR %{art_25}, a controller is responsible for implementing state of the art data protection by design and by default. Encrypted connections are a well-established technology to protect the privacy of web visitors against eavesdroppers on the wire.|, art_25: gdpr(~w|art 25|)) |> raw() %>
     </p>
   </aside>
 </section>

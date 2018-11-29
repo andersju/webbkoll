@@ -38,5 +38,5 @@
 
   <% end %>
 
-  <p><%= icon(:law) %> GDPR: Rec. 69-70, Art. 5.1.b-c, Art. 25.</p>
+  <p><%= icon(:law) %> GDPR: <%= [~w|rec 69|, ~w|rec 70|, ~w|art 5 5.1.b-c|, ~w|art 25|] |> gdpr() |> raw() %>.</p>
 </section>

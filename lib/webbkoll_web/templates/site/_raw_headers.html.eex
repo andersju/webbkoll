@@ -14,8 +14,8 @@
     <tbody>
       <%= for {header, value} <- @site.headers do %>
       <tr>
-        <td data-label="Header"><%= header %></td>
-        <td data-label="Value"><%= value %></td>
+        <td data-label="Header" class="userdata"><%= header %></td>
+        <td data-label="Value" class="userdata"><%= value %></td>
       </tr>
       <% end %>
     </tbody>

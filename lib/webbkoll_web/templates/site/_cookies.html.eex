@@ -19,5 +19,43 @@
   <% else %>
     <p>No cookies detected.</p>
   <% end %>
-  <p><%= icon(:law) %> GDPR: Rec. 69-70, Art. 5.1.b-c, Art. 25.</p>
+  <div class="info-large">
+    <p><%= icon(:law) %> GDPR: <%= [~w|rec 60|, ~w|rec 61|, ~w|rec 69|, ~w|rec 70|, ~w|rec 75|, ~w|rec 78|, ~w|art 5 5.1.a|, ~w|art 5 5.1.c|, ~w|art 5 5.1.e|, ~w|art 21|, ~w|art 22|, ~w|art 32|] |> gdpr() |> raw() %>.</p>
+
+    <p><%= link "e-PD (2002/58/EC)", to: "https://eur-lex.europa.eu/eli/dir/2002/58/oj" %>. Rec. 24, 25, Art. 5.2.</p>
+
+    <p><%= link "e-PD revised (2009/136/EC)", to: "https://eur-lex.europa.eu/eli/dir/2009/136/oj" %>. Rec. 65, 66.</p>
+
+    <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="cookie-text">
+      Read more
+    </span>
+
+    <div id="cookie-text">
+      <p>
+        <%= gettext(~s|<strong>First-party cookies</strong> are placed by the web site owner in some register on their visitors' device in order to be able to re-identify the visitor once the page reloads. First-party cookies can be related to technical features on a web site (such as remembering language settings or the contents of a shopping basket), or related to commercial features of the web site owners' activities (such as being able to trace a visitors' behaviour over the duration of their visit, or over much longer time periods, often for years, in order to be able to serve advertisements to the users or to get usage statistics to guide later changes to the web site that are envisaged to make the web site more attractive to recurring users). First-party cookies may come from services provided by the web site owner (language settings in a Content Management System) or from services used by the web site owner (analytics tools).|) |> raw() %>
+      </p>
+
+      <p>
+        <%= gettext(~s|<strong>Third-party cookies</strong> are placed by a service affiliated with the web site owner on the devices of visitors to the web site in order to be able to re-identity the visitor once the page reloads. Third-party cookies are related to commercial features of a web site owners' activities, usually advertising, but may also relate to technical feature in plug-ins used by a web site (such as language settings).|) |> raw() %>
+      </p>
+
+      <p>
+        <%= gettext(~s|Storing information or gaining access to information stored in the visitors' devices, for instance in the form of cookies, has been subject to sui generis legislation in the European Union (<a href="%{epd}">ePD, Art. 5.3</a>). These sui generis laws have tried to make a distinction between information stored to support technical features and information stored to support commercial features. In practice, poor enforcement of these rules has made the legal landscape unclear. Because there exists no legal duty for citizens to receive better targeted advertisement, nor a legal duty for citizens to assist web developers in improving web sites, it's doubtful that a legal basis exists for storing information to support commercial features without the consent of the web visitor (GDPR %{gdpr_art_7}). It is argued that the legitimate interests of a web site owner (%{gdpr_art_6_1_f}, %{gdpr_art_6_4}) may nevertheless enable them to subject a visitor to targeted ads or cause a visitor to assist the web developers. Then there must exist relevant and appropriate relationship between the web visitor and the web site owner in situations (GDPR %{gdpr_rec_47}), which calls into question the use of third-party service first-party cookies. In either case, if the legitimate interest legal basis for processing is invoked, adequate security measures must be undertaken (GDPR %{gdpr_art_32}).|,
+        epd: "https://eur-lex.europa.eu/eli/dir/2002/58/oj",
+        gdpr_art_7: gdpr(~w|art 7|),
+        gdpr_art_6_1_f: gdpr(~w|art 6 6.1.f|),
+        gdpr_art_6_4: gdpr(~w|art 6 6.4|),
+        gdpr_rec_47: gdpr(~w|rec 46 47|),
+        gdpr_art_32: gdpr(~w|art 32|)
+        ) |> raw() %>
+      </p>
+
+      <p>
+        <%= gettext(~s|Particular care must be taken with regards to the period of storage (GDPR %{gdpr_art_5_1_e}). While it is technically easy for a web site owner to set the duration of a information stored in the form of cookies to a long period time, the principle of storage limitation implies a balancing act between the interest of tracking a visitors' behaviour and the interest of the visitor to keep their behaviour private. It's been established that a reasonable storage period does not exceed <a href="%{ec_cookies}">one year</a>.|,
+        gdpr_art_5_1_e: gdpr(~w|art 5 5.1.e|),
+        ec_cookies: "http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm"
+        ) |> raw() %>
+      </p>
+    </div>
+  </div>
 </section>

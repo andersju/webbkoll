@@ -67,7 +67,7 @@ table {
     font-size: 0.9em;
   }
 
-  td {
+  td.userdata {
     @include overflow-wrap;
     word-break: break-all;
   }
@@ -445,6 +445,14 @@ article.text {
   display: block;
   padding-bottom: $magic-number;
   position: relative;
+
+  .info-large {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    line-height: $magic-number*0.75;
+    padding: $small-spacing;
+  }
 
   .howto {
     background-color: #f5f5f5;

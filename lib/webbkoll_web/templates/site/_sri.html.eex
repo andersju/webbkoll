@@ -37,7 +37,7 @@
           <%= for resource <- Enum.filter(@site.sri.data, fn x -> x.secureorigin == false && (x.crossorigin == nil || x.integrity == nil) end) do %>
           <tr>
             <td data-label="Type"><%= if resource.type == "link", do: "css", else: resource.type %></td>
-            <td data-label="URL"><code><%= truncate(resource.src, 100) %></code></td>
+            <td data-label="URL" class="userdata"><code><%= truncate(resource.src, 100) %></code></td>
           </tr>
           <% end %>
         </tbody>
@@ -100,7 +100,7 @@
     </blockquote>
 
     <p>
-      <%= icon(:law) %> GDPR: Rec. 83, Art. 5.1.f, Art. 25, Art. 32.2.<br>
+      <%= gettext "GDPR: " %> <%= [~w|rec 83|, ~w|art 5 5.1.f|, ~w|art 25|, ~w|art 32 32.2|] |> gdpr() |> raw() %><br>
       This is an easy measure to take against unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed.
     </p>
   </aside>

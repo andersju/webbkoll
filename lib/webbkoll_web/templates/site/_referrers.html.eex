@@ -67,8 +67,8 @@
 
     <p>
       <%= icon(:law) %>
-      <%= gettext "GDPR: " %> <%= raw(gdpr(:rec, 83)) %>, <%= raw(gdpr(:art, 5, "5.1.c")) %>, <%= raw(gdpr(:art, 25)) %>, <%= raw(gdpr(:art, 32, "32.2")) %>.<br>
-      <%= gettext(~s|Setting referrer policy is an easy way to do data minimization (%{art_5_1_f}) and help ensure that you don't transfer or disclose personal data needlessly (%{art_32_2}).|, art_5_1_f: gdpr(:art, 5, "5.1.f"), art_32_2: gdpr(:art, 32, "32.2")) |> raw() %>
+      <%= gettext "GDPR: " %> <%= [~w|rec 83|, ~w|art 5 5.1.c|, ~w|art 25|, ~w|art 32 32.2|] |> gdpr() |> raw() %><br>
+      <%= gettext(~s|Setting referrer policy is an easy way to do data minimization (%{art_5_1_f}) and help ensure that you don't transfer or disclose personal data needlessly (%{art_32_2}).|, art_5_1_f: gdpr(~w|art 5 5.1.f|), art_32_2: gdpr(~w|art 32 32.2|)) |> raw() %>
     </p>
   </aside>
 </section>
