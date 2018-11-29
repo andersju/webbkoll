@@ -37,4 +37,6 @@
     <%= render "_request_table.html", requests: @site.third_party_requests, id: "table-requests" %>
 
   <% end %>
+
+  <p><%= icon(:law) %> GDPR: Rec. 69-70, Art. 5.1.b-c, Art. 25.</p>
 </section>

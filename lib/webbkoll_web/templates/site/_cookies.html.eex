@@ -19,4 +19,5 @@
   <% else %>
     <p>No cookies detected.</p>
   <% end %>
+  <p><%= icon(:law) %> GDPR: Rec. 69-70, Art. 5.1.b-c, Art. 25.</p>
 </section>

@@ -38,6 +38,7 @@ defmodule WebbkollWeb.SiteView do
   def icon(:optional), do: content_tag(:i, "", class: "fas fa-minus fa-fw")
   def icon(:info), do: content_tag(:i, "", class: "fas fa-info-circle fa-fw")
   def icon(:unknown), do: content_tag(:i, "", class: "fas fa-question-circle fa-fw")
+  def icon(:law), do: content_tag(:i, "", class: "fas fa-gavel fa-fw")
 
   def result_text(result) do
     case result do
