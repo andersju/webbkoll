@@ -13,11 +13,11 @@
   <% end %>
 
   <%= if (@site.cookie_count.first_party + @site.cookie_count.third_party) > 0 do %>
-    <p><strong>HttpOnly</strong> means that the cookie can only be read by the server, and not by JavaScript on the client. This can mitigate XSS (cross-site scripting) attacks.</p>
-    <p><strong>Secure</strong> means that the cookie will only be sent over a secure channel (HTTPS). This can mitigate MITM (man-in-the-middle) attacks.</p>
-    <p><strong>SameSite</strong> can be used to instruct the browser to only send the cookie when the request is originating from the same site. This can mitigate CSRF (cross-site request forgery) attacks.</p>
+    <p><%= gettext(~s|<strong>HttpOnly</strong> means that the cookie can only be read by the server, and not by JavaScript on the client. This can mitigate XSS (cross-site scripting) attacks.|) |> raw() %></p>
+    <p><%= gettext(~s|<strong>Secure</strong> means that the cookie will only be sent over a secure channel (HTTPS). This can mitigate MITM (man-in-the-middle) attacks.|) |> raw() %></p>
+    <p><%= gettext(~s|<strong>SameSite</strong> can be used to instruct the browser to only send the cookie when the request is originating from the same site. This can mitigate CSRF (cross-site request forgery) attacks.|) |> raw() %></p>
   <% else %>
-    <p>No cookies detected.</p>
+    <p><%= gettext(~s|No cookies detected.|) %></p>
   <% end %>
   <div class="info-large">
     <p><%= icon(:law) %> GDPR: <%= [~w|rec 60|, ~w|rec 61|, ~w|rec 69|, ~w|rec 70|, ~w|rec 75|, ~w|rec 78|, ~w|art 5 5.1.a|, ~w|art 5 5.1.c|, ~w|art 5 5.1.e|, ~w|art 21|, ~w|art 22|, ~w|art 32|] |> gdpr() |> raw() %>.</p>

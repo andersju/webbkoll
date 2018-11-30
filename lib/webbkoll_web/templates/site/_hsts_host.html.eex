@@ -20,7 +20,7 @@
         <% end %>
       </td>
       <td data-label="Test">
-        <code>max-age</code> set to at least 6 months
+        <%= gettext(~s|<code>max-age</code> set to at least 6 months|) |> raw() %>
       </td>
     </tr>
     <tr>
@@ -32,7 +32,7 @@
         <% end %>
       </td>
       <td data-label="Test">
-        <code>includeSubDomains</code> &mdash; policy also applies to subdomains
+        <%= gettext(~s|<code>includeSubDomains</code> &mdash; policy also applies to subdomains|) |> raw() %>
       </td>
     </tr>
     <tr>
@@ -48,9 +48,9 @@
         <% end %>
       </td>
       <td data-label="Test">
-        <code>preload</code> - requests inclusion in preload lists
+        <%= gettext(~s|<code>preload</code> - requests inclusion in preload lists|) |> raw() %>
         <%= if not @is_base do %>
-          [only relevant for base domain]
+          <%= gettext("[only relevant for base domain]") %>
         <% end %>
       </td>
     </tr>

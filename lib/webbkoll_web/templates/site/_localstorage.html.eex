@@ -11,22 +11,22 @@
 
   <div class="alpha">
     <%= if Enum.empty?(@site.localStorage) do %>
-      <p>localStorage not used.</p>
+      <p><%= gettext("localStorage not used.") %></p>
     <% else %>
-      <p>localStorage used:</p>
+      <p><%= gettext("localStorage used:") %></p>
 
       <table class="localstorage">
         <thead>
           <tr>
-            <th>Key</th>
-            <th>Value</th>
+            <th><%= gettext("Key") %></th>
+            <th><%= gettext("Value") %></th>
           </tr>
         </thead>
         <tbody>
           <%= for {key, value} <- @site.localStorage do %>
           <tr>
-            <td data-label="<%= gettext "Key" %>"><%= truncate(key, 50) %></td>
-            <td data-label="<%= gettext "Value" %>"><%= truncate(value, 50) %></td>
+            <td data-label="<%= gettext("Key") %>"><%= truncate(key, 50) %></td>
+            <td data-label="<%= gettext("Value") %>"><%= truncate(value, 50) %></td>
           </tr>
           <% end %>
         </tbody>
@@ -34,12 +34,12 @@
     <% end %>
   </div>
   <aside class="beta">
-    <p>Like with cookies, <strong><a href="https://html.spec.whatwg.org/multipage/webstorage.html">web storage</a></strong> can be used to store data in a user's browser. Unlike cookies, web storage data is not sent with HTTP requests: it can only be directly set and accessed by the user's browser (through JavaScript). Compared to cookies, the storage capacity is much larger.</p>
+    <p><%= gettext(~s|Like with cookies, <strong><a href="https://html.spec.whatwg.org/multipage/webstorage.html">web storage</a></strong> can be used to store data in a user's browser. Unlike cookies, web storage data is not sent with HTTP requests: it can only be directly set and accessed by the user's browser (through JavaScript). Compared to cookies, the storage capacity is much larger.|) |> raw() %></p>
 
-    <p>There are two types: <code>localStorage</code> data is persistent (not removed when the browser is closed) and never expires, while <code>sessionStorage</code> data is removed when the page session ends (unlike with session cookies, a sessionStorage session is <em>per window/tab</em>).</p>
+    <p><%= gettext(~s|There are two types: <code>localStorage</code> data is persistent (not removed when the browser is closed) and never expires, while <code>sessionStorage</code> data is removed when the page session ends (unlike with session cookies, a sessionStorage session is <em>per window/tab</em>).|) |> raw() %></p>
 
-    <p>This can be used to track and profile users by simply using JavaScript to read a user's storage data and send it to a server.</p>
+    <p><%= gettext("This can be used to track and profile users by simply using JavaScript to read a user's storage data and send it to a server.") %></p>
 
-    <p><%= icon(:law) %> GDPR: Same as for <a href="#cookies">cookies</a> above.</p>
+    <p><%= icon(:law) %> <%= gettext(~s|GDPR: Same as for <a href="#cookies">cookies</a> above.|) |> raw() %></p>
   </aside>
 </section>

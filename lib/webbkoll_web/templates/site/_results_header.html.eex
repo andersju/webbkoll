@@ -22,50 +22,50 @@
     <div class="summary">
       <ul>
         <li>
-          <span class="label"><a href="#https">HTTPS by default:</a></span>
+          <span class="label"><a href="#https"><%= gettext("HTTPS by default:") %></a></span>
           <%= if @site.scheme == "https" do %>
             <%= if @site.security["securityState"] == "secure" do %>
-              <%= icon(:pass) %> Yes
+              <%= icon(:pass) %> <%= gettext("Yes") %>
             <% else %>
-              <%= icon(:warn) %> Yes, but has issues
+              <%= icon(:warn) %> <%= gettext("Yes, but has issues") %>
             <% end %>
           <% else %>
-            <%= icon(:fail) %> No; insecure
+            <%= icon(:fail) %> <%= gettext("No; insecure") %>
           <% end %>
         </li>
         <li>
           <span class="label"><a href="#csp">Content Security Policy:</a></span>
 
           <%= if @site.csp.pass do %>
-            <%= icon(:pass) %> Good policy
+            <%= icon(:pass) %> <%= gettext("Good policy") %>
           <% else %>
             <%= icon(:fail) %>
             <%= case @site.csp.result do %>
-              <% "csp-header-invalid" -> %> Invalid header
-              <% "csp-not-implemented" -> %> Not implemented
-              <% _ -> %> Implemented, but has problems
+              <% "csp-header-invalid" -> %> <%= gettext("Invalid header") %>
+              <% "csp-not-implemented" -> %> <%= gettext("Not implemented") %>
+              <% _ -> %> <%= gettext("Implemented, but has problems") %>
             <% end %>
           <% end %>
         <li>
           <span class="label"><a href="#referrers">Referrer Policy:</a></span>
 
           <%= case @site.referrer.status do %>
-            <% "success" -> %> <%= icon(:pass) %> Referrers not leaked
-            <% "warning" -> %> <%= icon(:warn) %> Referrers partially leaked
-            <% "alert" -> %> <%= icon(:fail) %> Referrers leaked
-            <% _ -> %> Unknown
+            <% "success" -> %> <%= icon(:pass) %> <%= gettext("Referrers not leaked") %>
+            <% "warning" -> %> <%= icon(:warn) %> <%= gettext("Referrers partially leaked") %>
+            <% "alert" -> %> <%= icon(:fail) %> <%= gettext("Referrers leaked") %>
+            <% _ -> %> <%= gettext("Unknown") %>
           <% end %>
         </li>
         <li>
-          <span class="label"><a href="#cookies">Cookies:</a></span>
+          <span class="label"><a href="#cookies"><%= gettext("Cookies:") %></a></span>
           
           <strong><%= @site.cookie_count.first_party + @site.cookie_count.third_party %></strong>
           <%= if (@site.cookie_count.first_party + @site.cookie_count.third_party) > 0 do %>
-          (<%= @site.cookie_count.first_party %> first-party; <%= @site.cookie_count.third_party %> third-party)
+          (<%= gettext(~s|%{first_party} first-party; %{third_party} third-party|, first_party: @site.cookie_count.first_party, third_party: @site.cookie_count.third_party) %>)
           <% end %>
         </li>
         <li>
-          <span class="label"><a href="#requests">Third-party requests:</a></span>
+          <span class="label"><a href="#requests"><%= gettext("Third-party requests:") %></a></span>
 
           <strong><%= @site.third_party_request_types.total %></strong>
           <%= if @site.third_party_request_types.total > 0 do %>
@@ -73,14 +73,14 @@
           <% end %>
         </li>
         <li>
-          <span class="label"><a href="#server-location">Server location:</a></span>
+          <span class="label"><a href="#server-location"><%= gettext("Server location:") %></a></span>
 
           <%= if @site.geolocation do %>
             <span class="flag-icon flag-icon-<%= String.downcase(@site.geolocation) %>"></span> <%= country_from_iso(@conn.assigns.locale, @site.geolocation) %>
           <% else %>
             <%= gettext("Unknown") %>
           <% end %>
-             &mdash; <%= @site.host_ip %><sup><a class="external" href="https://tools.keycdn.com/geo?host=<%= @site.host_ip %>">Look up</a></sup>
+             &mdash; <%= @site.host_ip %><sup><a class="external" href="https://tools.keycdn.com/geo?host=<%= @site.host_ip %>"><%= gettext("Look up") %></a></sup>
         </li>
       </ul>
     </div>

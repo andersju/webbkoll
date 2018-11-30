@@ -11,11 +11,11 @@
 
   <div class="alpha">
     <%= if @site.header_csp do %>
-    <p>Content Security Policy set in HTTP header: <code><%= @site.header_csp %></code></p>
+    <p><%= gettext("Content Security Policy set in HTTP header:") %> <code><%= @site.header_csp %></code></p>
     <% end %>
 
     <%= if @site.meta_csp do %>
-    <p>Content Security Policy set in meta element: <code><%= @site.meta_csp %></code></p>
+    <p><%= gettext("Content Security Policy set in meta element:") %> <code><%= @site.meta_csp %></code></p>
     <% end %>
 
     <p><%= result_text(@site.csp.result) |> raw %></p>
@@ -51,7 +51,7 @@
                 </p>
               </td>
 
-              <td class="info" data-label="Info"><span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="<%= Atom.to_string(policy) %>">Show</span></td>
+              <td class="info" data-label="Info"><span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="<%= Atom.to_string(policy) %>"><%= gettext("Show") %></span></td>
             </tr>
           <% end %>
         </tbody>
@@ -59,21 +59,21 @@
     <% end %>
     <aside class="howto">
       <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="howto-csp">
-        How to implement
+        <%= gettext("How to implement") %>
       </span>
 
       <div id="howto-csp">
-        <p>The recommended way to enable Content Security Policy is with the <code>Content-Security-Policy</code> HTTP header, e.g.:</p>
+        <p><%= gettext(~s|The recommended way to enable Content Security Policy is with the <code>Content-Security-Policy</code> HTTP header, e.g.:|) |> raw() %></p>
 
         <p><code>Content-Security-Policy: default-src 'self'</code></p>
 
-        <p>It can also be enabled with an HTML &lt;meta&gt; element:</p>
+        <p><%= gettext(~s|It can also be enabled with an HTML <code>&lt;meta&gt;</code> element:|) |> raw() %></p>
 
         <p><code>&lt;meta http-equiv="Content-Security-Policy" content="script-src 'self'"&gt;</code></p>
 
-        <p>CSP is a powerful mechanism that we strongly recommend. It allows for very fine-grained control. However, creating a good policy (or adjusting your site to work with a good policy) can take some time and effort. To make this easier, it's possible to use CSP in report-only mode.</p>
+        <p><%= gettext("CSP is a powerful mechanism that we strongly recommend. It allows for very fine-grained control. However, creating a good policy (or adjusting your site to work with a good policy) can take some time and effort. To make this easier, it's possible to use CSP in report-only mode.") %></p>
 
-        <p>See the following pages for more information:</p>
+        <p><%= gettext("See the following pages for more information:") %></p>
 
         <ul class="default">
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a> [developerz.mozilla.org]</li>
@@ -88,17 +88,21 @@
       </div>
     </aside>
 
-    <p><small>The Content Security Policy tests are based on the ones from the <a href="https://github.com/mozilla/http-observatory">Mozilla HTTP Observatory</a> scanner/grader project (<a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href="https://observatory.mozilla.org/">Observatory by Mozilla</a> website, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</a>. Any mistake or inaccuracy is our fault.</small></p>
+    <p>
+      <small>
+      <%= gettext(~s|The Content Security Policy tests are based on the ones from the <a href="https://github.com/mozilla/http-observatory">Mozilla HTTP Observatory</a> scanner/grader project (<a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href="https://observatory.mozilla.org/">Observatory by Mozilla</a> website, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</a>. Any mistake or inaccuracy in the results is our fault.|) |> raw() %>
+      </small>
+    </p>
   </div>
   <aside class="beta">
     <blockquote>
-      <p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement to distribution of malware.</p>
+      <p><%= gettext("Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement to distribution of malware.") %></p>
 
-      <p>A primary goal of CSP is to mitigate and report XSS attacks. XSS attacks exploit the browser's trust of the content received from the server. Malicious scripts are executed by the victim's browser because the browser trusts the source of the content, even when it's not coming from where it seems to be coming from.</p>
+      <p><%= gettext("A primary goal of CSP is to mitigate and report XSS attacks. XSS attacks exploit the browser's trust of the content received from the server. Malicious scripts are executed by the victim's browser because the browser trusts the source of the content, even when it's not coming from where it seems to be coming from.") %></p>
 
-      <p>CSP makes it possible for server administrators to reduce or eliminate the vectors by which XSS can occur by specifying the domains that the browser should consider to be valid sources of executable scripts. A CSP compatible browser will then only execute scripts loaded in source files received from those whitelisted domains, ignoring all other script (including inline scripts and event-handling HTML attributes).</p>
+      <p><%= gettext("CSP makes it possible for server administrators to reduce or eliminate the vectors by which XSS can occur by specifying the domains that the browser should consider to be valid sources of executable scripts. A CSP compatible browser will then only execute scripts loaded in source files received from those whitelisted domains, ignoring all other script (including inline scripts and event-handling HTML attributes).") %></p>
       <footer>
-        &mdash; <cite>MDN, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a>, by Mozilla Contributors, <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></cite>
+        &mdash; <cite>MDN: <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a>, Mozilla Contributors, <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></cite>
       </footer>
     </blockquote>
 

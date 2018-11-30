@@ -24,6 +24,6 @@
 
     <%= render "_raw_headers.html", site: @site %>
 
-    <%= render "_what.html" %>
+    <%= render "_what.html", conn: @conn %>
   </div>
 </article>

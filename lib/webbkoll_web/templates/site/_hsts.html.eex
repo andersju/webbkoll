@@ -23,47 +23,47 @@
           <%= if @site.header_hsts.base.set do %>
             <%= render "_hsts_host.html", host: @site.reg_domain, hsts: @site.header_hsts.base, is_base: true %>
           <% else %>
-            <p><%= icon(:warn) %> HSTS not set on base domain https://<%= @site.reg_domain %>.</p>
+            <p><%= icon(:warn) %> <%= gettext("HSTS not set on base domain https://%{domain}", domain: @site.reg_domain) %>.</p>
           <% end %>
         <% else %>
-          <p>Base domain (https://<%= @site.reg_domain %>) HSTS status unknown.</p>
+          <p><%= gettext("Base domain (https://%{domain}) HSTS status unknown.", domain: @site.reg_domain) %></p>
         <% end %>
       <% end %>
   <% else %>
-    <p>HTTP Strict Transport Security (HSTS) not implemented.</p>
+    <p><%= gettext("HTTP Strict Transport Security (HSTS) not implemented.") %></p>
   <% end %>
 
     <aside class="howto">
       <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="howto-hsts">
-       How to implement
+      <%= gettext("How to implement") %>
       </span>
 
       <div id="howto-hsts">
-        <p>HSTS is just an HTTP header. In its simplest form, the policy tells a browser to enable HSTS for that exact domain or subdomain, and to remember it for a given number of seconds (the policy is refreshed every time browser sees the header again):</p>
+        <p><%= gettext("HSTS is just an HTTP header. In its simplest form, the policy tells a browser to enable HSTS for that exact domain or subdomain, and to remember it for a given number of seconds (the policy is refreshed every time browser sees the header again):") %></p>
 
         <p><code>Strict-Transport-Security: max-age=31536000;</code></p>
 
-        <p>In its <strong>strongest and recommended form</strong>, the HSTS policy includes <strong>all subdomains</strong>, and indicates a willingness to be "preloaded" into browsers:</p>
+        <p><%= gettext(~s|In its <strong>strongest and recommended form</strong>, the HSTS policy includes <strong>all subdomains</strong>, and indicates a willingness to be "preloaded" into browsers:|) |> raw() %></p>
 
         <p><code>Strict-Transport-Security: max-age=31536000; includeSubDomains; preload</code></p>
 
-        <p>Note that <code>includeSubDomains</code> should be deployed at the base domain, i.e., <code>https://example.com</code>, <em>not</em> <code>https://www.example.com</code>. While we recommend the use of <code>includeSubDomains</code>, be <strong>very</strong> careful, as it means that <strong>all subdomains</strong> associated with the parent domain <strong>must</strong> support HTTPS. (They do not have to each have their own HSTS policy.)</p>
+        <p><%= gettext(~s|Note that <code>includeSubDomains</code> should be deployed at the base domain, i.e., <code>https://example.com</code>, <em>not</em> <code>https://www.example.com</code>. While we recommend the use of <code>includeSubDomains</code>, be <strong>very</strong> careful, as it means that <strong>all subdomains</strong> associated with the parent domain <strong>must</strong> support HTTPS. (They do not have to each have their own HSTS policy.)|) |> raw() %></p>
 
-        <p>For a user to take advantage of HSTS, their browser does have to see the HSTS header at least once. This means that users are not protected until after their first successful secure connection to a given domain.</p>
+        <p><%= gettext("For a user to take advantage of HSTS, their browser does have to see the HSTS header at least once. This means that users are not protected until after their first successful secure connection to a given domain.") %></p>
 
-        <p>To solve this problem, the Chrome security team created an “HSTS preload list”: a list of domains baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit.</p>
+        <p><%= gettext(~s|To solve this problem, the Chrome security team created an "HSTS preload list": a list of domains baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit.|) %></p>
 
-        <p>Firefox, Safari, Opera, and Edge also incorporate Chrome’s HSTS preload list, making this feature shared across major browsers.</p>
+        <p><%= gettext("Firefox, Safari, Opera, and Edge also incorporate Chrome’s HSTS preload list, making this feature shared across major browsers.") %></p>
 
-        <p>The Chrome security team allows anyone to <a href="https://hstspreload.org/">submit their domain to the list</a>, provided it meets a few requirements.</p>
+        <p><%= gettext(~s|The Chrome security team allows anyone to <a href="https://hstspreload.org/">submit their domain to the list</a>, provided it meets a few requirements.|) |> raw() %></p>
 
         <ul class="default">
-          <li><a href="https://https.cio.gov/hsts/">Read more about HSTS</a> [cio.gov]</li>
+          <li><a href="https://https.cio.gov/hsts/">HTTP Strict Transport Security</a> [cio.gov]</li>
           <li><a href="https://hstspreload.org/">HSTS Preload List Submission</a> [hstspreload.org]</li>
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">Strict-Transport-Security</a> [mozilla.org]</li>
         </ul>
 
-        <p><small><em>Text adapted from the CIO Council's <a href="https://https.cio.gov/">The HTTPS-Only Standard</a> (public domain).</em></small></p>
+        <p><small><em><%= gettext(~s|Text adapted from the CIO Council's <a href="https://https.cio.gov/">The HTTPS-Only Standard</a> (public domain).|) |> raw() %></em></small></p>
       </div>
     </aside>
 
@@ -71,16 +71,16 @@
 
 
   <aside class="beta">
-    <p><a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a> (HSTS) is a simple and <a href="https://caniuse.com/#feat=stricttransportsecurity">widely supported</a> standard to protect visitors by ensuring that their browsers always connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from <code>http://</code> to <code>https://</code> URLs.</p>
+    <p><%= gettext(~s|<a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a> (HSTS) is a simple and <a href="https://caniuse.com/#feat=stricttransportsecurity">widely supported</a> standard to protect visitors by ensuring that their browsers always connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from <code>http://</code> to <code>https://</code> URLs.|) |> raw() %></p>
 
-    <p>When a browser knows that a domain has enabled HSTS, it does two things:</p>
+    <p><%= gettext("When a browser knows that a domain has enabled HSTS, it does two things:") %></p>
 
     <ul class="default">
-      <li>Always uses an <code>https://</code> connection, even when clicking on an <code>http://</code> link or after typing a domain into the location bar without specifying a protocol.</li>
-      <li>Removes the ability for users to click through warnings about invalid certificates.</li>
+      <li><%= gettext(~s|Always uses an <code>https://</code> connection, even when clicking on an <code>http://</code> link or after typing a domain into the location bar without specifying a protocol.|) |> raw() %></li>
+      <li><%= gettext(~s|Removes the ability for users to click through warnings about invalid certificates.|) %></li>
     </ul>
 
-    <p>A domain instructs browsers that it has enabled HSTS by returning an HTTP header over an HTTPS connection.</p>
+    <p><%= gettext("A domain instructs browsers that it has enabled HSTS by returning an HTTP header over an HTTPS connection.") %></p>
   </aside>
 </section>
 <% end %>
