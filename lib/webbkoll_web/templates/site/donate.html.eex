@@ -5,7 +5,7 @@
 
   <p><%= gettext "We operate on a very small budget, and servers are usually our main expense; most work is done in our free time. Every euro (or krona) counts!" %></p>
 
-  <p><%= gettext "If you would like to make a contribution to the general funds of Dataskydd.net (helping both Webbkoll and our other activities), you can transfer money to the following bank account:" %></p>
+  <p><%= gettext("<strong>If you would like to make a contribution</strong> to the general funds of Dataskydd.net (helping both Webbkoll as well as our other activities), you can transfer money to the following bank account:") |> raw() %></p>
 
   <ul>
     <li>Bank: SEB (Skandinaviska Enskilda Banken)</li>

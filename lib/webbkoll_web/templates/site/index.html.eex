@@ -1,5 +1,10 @@
 <div class="index-search">
   <section>
+
+    <div class="flash-notice">
+      <span><small>Welcome to the new version of Webbkoll! See <a href="/en/news">here</a> for changes. If a site can't be checked or you find some other bug, please email <a href="mailto:info@dataskydd.net">info@dataskydd.net</a> or <a href="https://github.com/andersju/webbkoll/issues">open an issue on GitHub</a>.</small></span>
+    </div>
+
     <h1><%= gettext "Check your site!" %></h1>
 
     <form class="search-bar" role="search" method="get" action="/<%= @conn.assigns.locale %>/check">

@@ -142,6 +142,7 @@ Run `systemctl daemon-reload` for good measure, and then try `systemctl start we
   * IPv6 support
   * Check whether site is in HSTS preload list?
   * More translations?
+  * Generate good HTML versions of the GDPR (based on [XML sources](https://github.com/andersju/gdpr-xml)) and host locally instead of linking to third-parties of varying quality
   * More? Let me know!
 
 ## Credits & licenses

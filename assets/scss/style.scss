@@ -325,6 +325,10 @@ button[data-a11y-toggle][aria-expanded="true"],
 
   h2 {
     font-family: $font-stack-system;
+
+    @include media($mobile) {
+      font-size: modular-scale(2);
+    }
   }
 
   > .alpha {
@@ -506,7 +510,7 @@ article.text {
     > .alpha,
     > .beta {
       @include span-columns(4);
-      padding: 0;
+      //padding: $small-spacing/2;
     }
   }
 
@@ -595,4 +599,15 @@ article.text {
       text-align: left;
     }
   }
+}
+
+.flash-notice {
+  background-color: #e5edf8;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: $base-spacing;
+  max-width: 40rem;
+  padding: $base-spacing / 2;
+  text-align: center;
 }

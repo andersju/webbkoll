@@ -18,6 +18,8 @@
 
   <p><%= gettext(~s|We don't provide an API as we have limited resources, but <a href="https://github.com/andersju/webbkoll">the code is available</a> under the MIT license. See also the options below.|) |> raw %></p>
 
+  <p><%= gettext(~s|The initial development of Webbkoll was funded by <a href="https://www.internetfonden.se">Internetfonden</a> / <a href="https://www.iis.se">IIS</a> in 2016. In late 2018 we received a small grant from <a href="https://digitalrights.fund/">Digital Rights Fund</a>. Other than that, we maintain this tool in our spare time. You can <a href="%{donate}">support our work</a>, if you wish.|, donate: Routes.site_path(@conn, :donate, @conn.assigns.locale)) |> raw() %></p>
+
   <h3 id="alternatives"><%= gettext "Alternatives and resources" %></h3>
   <p><%= gettext(~s|The only other similar service that we are aware of <em>that uses a real browser for testing</em> is <a href="https://privacyscore.org/">PrivacyScore</a> (open source). It does many of the same checks as Webbkoll, but additionally also checks e.g. TLS, and lets you create a list of sites to check (and rank).|) |> raw() %></p>
 

@@ -58,6 +58,10 @@ header.navigation {
     min-height: $navigation-height;
     z-index: 9999999;
     float: left;
+
+    @include media($mobile) {
+      float: none;
+    }
   }
 
   ul.navigation-menu {
@@ -156,6 +160,7 @@ header.navigation {
         clear: both;
         display: block;
         float: none;
+        text-align: left;
       }
 
       padding-right: 0;

@@ -63,7 +63,7 @@ defmodule WebbkollWeb.SiteController do
       locale: conn.assigns.locale,
       page_title: gettext("About"),
       page_description:
-        gettext("How our web privacy check tool works and how you can run your own instance.")
+        gettext("How Webbkoll works, who made it, and alternative services.")
     )
   end
 
