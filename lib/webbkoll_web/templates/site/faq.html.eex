@@ -1,0 +1,68 @@
+<article class="text">
+  <h2><%= gettext "FAQ" %></h2>
+
+  <h3><%= gettext "What is data protection?" %></h3>
+
+  <p><%= gettext "Data protection is a human right in the European Union. It’s a collection of administrative and formal requirements for how to collect, process and use data relating to individuals. The purpose of this protection is to provide individuals with the means necessary to exercise their right to privacy. Data protection law guarantees transparency, choice and knowledge for individuals with regards to who influences them, and under which conditions." %></p>
+
+  <p><%= gettext "In May 2018 a new law about data protection will enter into force in the European Union. It is a regulation and will apply equally in all the 28 member states." %></p>
+
+  <h3><%= gettext "What is ”behavioural monitoring”?" %></h3>
+
+  <p><%= gettext "Behavioural monitoring, or ”profiling”, is when someone monitors how a given person, or set of persons, typically behave. This includes monitoring whether a particular group, say young people or women of a median income, frequently visit certain deeplinks, have to look up certain vocabulary or that they end up on the website through using a particular search engine or social platform. Behavioural monitoring is used to discover what certain classes of people may be assumed to find interesting, difficult or funny." %></p>
+
+  <p><%= gettext "It is also the categorisation of individuals into these groups. Once a web visitor is stuffed into a particular category, they may be positively or negatively discriminated against because of the categorisation." %></p>
+
+  <p><%= gettext "Profiling is mostly used in the advertisement industry to decide which type of advertisements a particular individual should be exposed to. Parents of small children, or people who know parents of small children, may receive ads for nappies, prams or family vacations. Increasingly, profiling is used to determine what contents are served by newspapers. The above mentioned groups may for instance receive short articles about new-borns if they are queueing (and have little time) or longer articles about new-borns if they are on a train (and have more time)." %></p>
+
+  <p><%= gettext "Profiling may additionally be used to shape political opinions, for instance through targetting specific groups with political information, or to enact measures against groups based on their assumed characteristics. This form of political work is called ”nudging” and may also be deployed to increase acceptance of specific measures (like the construction of a public park) in specific groups (such as the individuals living near the envisaged park)." %></p>
+
+  <h3><%= gettext "What do you mean by ”gossiping to third-parties”?" %></h3>
+
+  <p><%= gettext "We use the word gossiping to mean that information about somebody’s behaviour, reading habits or preferences is handed over to somebody other than the actor responsible for the website." %></p>
+
+  <p><%= gettext "In modern web development, it’s become common for a website not to be run from only one location. When you visit a website, you’re not only entering into contact with those running the website, but also all the businesses and organisations which collaborate with the managers of the websites. These may be internet service providers, script providers, font providers, analytics tools providers and a range of other providers. If the manager of the websites hands over information about visitors to any of these third-parties, it is a form of gossiping since it is usually not evident to the visitors that this type of information is being handed over." %></p>
+
+  <p><%= gettext "A webstore may for instance hand over the task of profiling visitors to an advertisement agency, and a public authority may have constructed its website in a way that automatically hands over behavioural data to advertisers. Advertisers are the most common and least transparent form of third parties." %></p>
+
+  <h3><%= gettext "What are the principles of the EU general data protection regulation?" %></h3>
+
+  <p><%= gettext(~s|The <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679">general data protection regulation of the European Union</a> enters into force on the 25th of May 2018 and concerns the balancing of power being those influencing individuals (typically companies and public authorities) and the individuals themselves. The Web Privacy Check is a tool to find out who is collecting information about individuals, and what can be done to stop invisible tracking.|) |> raw %></p>
+
+  <h4><%= gettext "Lawfulness, fairness and transparency" %></h4>
+  <p><%= gettext "An individual should be able to understand the terms of interactions with others. (5(1)(a))." %></p>
+
+  <p><%= gettext "The Dataskydd.net Web Privacy Check see lawfulness, fairness and transparency as a requirement that individuals should understand with whom they are in contact by visiting a website. If an advertisement agency or some other company, such as an internet service provider, has easy access to behavioural data the individual should know. If an individual may be influenced by these parties, again they should be able to know. An individual should not have to master web development or  have a need for advanced technical tools to find this out. While the principle of transparency is simple, permissible deviations from transparency are listed in articles 13-20 of the regulation." %></p>
+
+  <p><%= gettext "Transparency also means a right to find out when something gone wrong: if you’ve collected information about individuals which have leaked or disappeared, the individual has a right to know. This is called ”personal data breach notification” and specific rules are in article 34 of the regulation." %></p>
+
+  <h4><%= gettext "Purpose limitation" %></h4>
+  <p><%= gettext "Data collection should occur only for specific and limited purposes. These purposes should be explicit and understandable. (5(1)(b))" %></p>
+
+  <p><%= gettext "The purpose for collecting data may be interpreted broadly, and means anything from marketing to improving the web. At Dataskydd.net Web Privacy Check we prefer methods of improving the web that do not include collecting data from private persons. That’s why we’ve compiled a large number of recommendations and tools which minimise data collection." %></p>
+
+  <h4><%= gettext "Data minimisation" %></h4>
+  <p><%= gettext "As little data as possible to achieve the purpose should be collected .(5(1)(c))" %></p>
+
+  <p><%= gettext "Depending on the purposes for collecting personal data, data minimisation may mean different things. The Web Privacy Check makes it easy to find out how not to collect personal data and how not to inadvertently leak personal data. Should one want to collect personal data anyway, one needs to be transparent about such collection and one also needs to follow the rules in chapter 4 of the regulation. The rules of how to collect and process personal data are in place to ensure that anyone who chooses a purpose for data collection also reflects on the consequences of such choices." %></p>
+
+  <h4><%= gettext "Accuracy" %></h4>
+  <p><%= gettext "Personal data shall be accurate, and if they aren’t, there must be a procedure to correct them." %></p>
+
+  <p><%= gettext "This principle above all concerns information registered by public authorities or companies, for instance in the credit check industry. In web development, it is more common with ”fuzzy” data sets, and the consequences of being erroneously categorised in a given profiling operation is normally not worse than that one receives online advertisement which is not specifically targetted to ones own group." %></p>
+
+  <h4><%= gettext "Storage limitation" %></h4>
+  <p><%= gettext "Personal data should not be saved or stored longer than necessary." %></p>
+
+  <p><%= gettext "This right ties into purpose limitation and data minisation. If one follows the recommendation of the Dataskydd.net Web Privacy Check, one does not have to concern oneself so much with this principle." %></p>
+
+  <h4><%= gettext "Integrity and confidentiality" %></h4>
+  <p><%= gettext "Data should be processed in a secure way, both organisatorially and technically." %></p>
+
+  <p><%= gettext "The Dataskydd.net Web Privacy Check makes it easy to see which technical protection mechanisms for data protection are in place in a given website. We have identified measures which should not require large organisational changes, or increase web management costs. Most of our recommendations are simple enough to implement, and they are cost neutral. Our goal is to make it as easy as possible for individuals to exercise their rights to privacy and data protection, and also to provide web designers and managers with simple ”rules of thumb” to help individuals exercise these rights." %></p>
+
+  <h4><%= gettext "Accountability" %></h4>
+  <p><%= gettext "The one responsible for the website is responsible for adherence to these principles." %></p>
+
+  <p><%= gettext "Since responsibility can be a difficult burden, the Web Privacy Check of Dataskydd.net has a large set of recommendations for data protection which may go further than what one could be legally liable for. We want to enable the best possible data protection with the least amount of administrative burdens. One of the reasons the rules of the data protection regulation make it seem bureaucratic and boring not to data minimise, is so that each actor in society who wishes to influence others has to consider carefully the way in which they use such power." %></p>
+</article>

@@ -9,7 +9,6 @@
 
     <p class="desc">
       <%= gettext "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. " %>
-      <%= link gettext("Read more."), to: Routes.site_path(@conn, :about, @conn.assigns.locale) %>
     </p>
 
     <p class="notes">

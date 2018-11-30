@@ -43,12 +43,12 @@ defmodule WebbkollWeb.SiteController do
     )
   end
 
-  def about(conn, _params) do
+  def faq(conn, _params) do
     render(
       conn,
-      "about.html",
+      "faq.html",
       locale: conn.assigns.locale,
-      page_title: gettext("About"),
+      page_title: gettext("FAQ"),
       page_description:
         gettext(
           "The what and why of data protection and the principles of the EU general data protection regulation."
@@ -56,12 +56,12 @@ defmodule WebbkollWeb.SiteController do
     )
   end
 
-  def tech(conn, _params) do
+  def about(conn, _params) do
     render(
       conn,
-      "tech.html",
+      "about.html",
       locale: conn.assigns.locale,
-      page_title: gettext("Tech"),
+      page_title: gettext("About"),
       page_description:
         gettext("How our web privacy check tool works and how you can run your own instance.")
     )

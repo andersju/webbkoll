@@ -45,10 +45,10 @@
               <%= link gettext("News"), to: Routes.site_path(@conn, :news, @conn.assigns.locale) %>
             </li>
             <li class="nav-link">
-              <%= link gettext("Tech"), to: Routes.site_path(@conn, :tech, @conn.assigns.locale) %>
+              <%= link gettext("About"), to: Routes.site_path(@conn, :about, @conn.assigns.locale) %>
             </li>
             <li class="nav-link">
-              <%= link gettext("FAQ"), to: Routes.site_path(@conn, :about, @conn.assigns.locale) %>
+              <%= link gettext("FAQ"), to: Routes.site_path(@conn, :faq, @conn.assigns.locale) %>
             </li>
             <% current_lang = @conn.assigns.locale %>
 

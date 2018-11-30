@@ -27,8 +27,8 @@ defmodule WebbkollWeb.Router do
     pipe_through(:browser)
 
     get("/news", SiteController, :news)
+    get("/faq", SiteController, :faq)
     get("/about", SiteController, :about)
-    get("/tech", SiteController, :tech)
     get("/donate", SiteController, :donate)
     get("/check", SiteController, :check)
     get("/status", SiteController, :status)
