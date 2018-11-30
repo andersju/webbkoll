@@ -39,13 +39,6 @@ msgstr[0] ""
 msgstr[1] ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:72
-msgid "request to 1 unique host"
-msgid_plural "requests to %{count} unique hosts."
-msgstr[0] ""
-msgstr[1] ""
-
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:33
 msgid "unique"
 msgid_plural "unique"
@@ -1799,3 +1792,10 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:16
 msgid "localStorage used:"
 msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:72
+msgid "request to 1 unique host."
+msgid_plural "requests to %{count} unique hosts."
+msgstr[0] ""
+msgstr[1] ""

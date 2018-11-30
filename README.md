@@ -19,6 +19,8 @@ then analyzes the data and presents the results on a webpage along with
 explanations and advice.
 
 Webbkoll is multilingual and currently supports English and Swedish.
+If you want to help us translate Webbkoll into more languages, see
+[TRANSLATIONS.md](https://github.com/andersju/webbkoll/blob/master/TRANSLATIONS.md).
 
 [Jumbo](https://github.com/mspanc/jumbo) is used for job processing, and
 some basic rate limiting is done with [ex_rated](https://github.com/grempe/ex_rated).
@@ -39,8 +41,7 @@ You might also want to have a look at [PrivacyScore](https://privacyscore.org/),
 which is a bit more comprehensive than Webbkoll (additionally checks e.g. email and TLS/SSL
 configuration) and also lets you compare/rank lists of sites.
 
-This is a project by [Dataskydd.net](https://dataskydd.net). We received initial funding from
-[Internetfonden](https://www.internetfonden.se/) / [IIS](https://www.iis.se) (The Internet Foundation in Sweden).
+This is a project by [Dataskydd.net](https://dataskydd.net). See [Webbkoll's About page](https://webbkoll.dataskydd.net/en/about) for more information.
 
 ## Backend
 

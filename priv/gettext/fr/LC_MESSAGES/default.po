@@ -40,13 +40,6 @@ msgstr[0] ""
 msgstr[1] ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:72
-msgid "request to 1 unique host"
-msgid_plural "requests to %{count} unique hosts."
-msgstr[0] ""
-msgstr[1] ""
-
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:33
 msgid "unique"
 msgid_plural "unique"
@@ -1373,17 +1366,17 @@ msgstr ""
 msgid "Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement to distribution of malware."
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:14
 msgid "Content Security Policy set in HTTP header:"
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:18
 msgid "Content Security Policy set in meta element:"
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:60
 msgid "Cookies:"
 msgstr ""
@@ -1454,7 +1447,7 @@ msgstr ""
 msgid "HTTP Strict Transport Security (HSTS) not implemented."
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:25
 msgid "HTTPS by default:"
 msgstr ""
@@ -1464,7 +1457,7 @@ msgstr ""
 msgid "HTTPS encrypts nearly all information sent between a client and a web service. Properly configured, it guarantees three things:"
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_raw_headers.html.eex:10
 msgid "Header"
 msgstr ""
@@ -1528,7 +1521,7 @@ msgstr ""
 msgid "No cookies detected."
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:33
 msgid "No; insecure"
 msgstr ""
@@ -1578,7 +1571,7 @@ msgstr ""
 msgid "See the following pages for more information:"
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:76
 msgid "Server location:"
 msgstr ""
@@ -1589,7 +1582,7 @@ msgstr ""
 msgid "Show"
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:24
 msgid "State"
 msgstr ""
@@ -1690,7 +1683,7 @@ msgstr ""
 msgid "These headers can help minimize data disclosures."
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:68
 msgid "Third-party requests:"
 msgstr ""
@@ -1741,7 +1734,7 @@ msgstr ""
 msgid "Type"
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:33
 msgid "URL"
 msgstr ""
@@ -1800,3 +1793,10 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:16
 msgid "localStorage used:"
 msgstr ""
+
+#, elixir-format, fuzzy
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:72
+msgid "request to 1 unique host."
+msgid_plural "requests to %{count} unique hosts."
+msgstr[0] ""
+msgstr[1] ""
