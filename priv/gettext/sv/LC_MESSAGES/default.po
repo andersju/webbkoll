@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2018-11-30 19:35+0000\n"
-"Last-Translator: Foo M. Bar <foobar@minorshadows.net>\n"
+"PO-Revision-Date: 2018-12-01 02:44+0000\n"
+"Last-Translator: Anders Jensen-Urstad <anders@unix.se>\n"
 "Language-Team: Swedish <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "sv/>\n"
 "Language: sv\n"
@@ -64,8 +64,8 @@ msgid "<a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> (
 msgstr ""
 "<a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> ("
 "open source) analyserar CSP, HSTS, TLS och diverse annat (några av Webbkoll-"
-"testerna är baserade på kod från Observatory). See även <a href=\"https"
-"://csp-evaluator.withgoogle.com/\">Google CSP Evaluator</a>."
+"testerna är baserade på kod från Observatory). Se även <a href=\"https://csp-"
+"evaluator.withgoogle.com/\">Google CSP Evaluator</a>."
 
 #: lib/webbkoll_web/templates/site/about.html.eex:32
 #, elixir-format
@@ -113,11 +113,26 @@ msgstr ""
 #, elixir-format
 msgid "<strong>First-party cookies</strong> are placed by the web site owner in some register on their visitors' device in order to be able to re-identify the visitor once the page reloads. First-party cookies can be related to technical features on a web site (such as remembering language settings or the contents of a shopping basket), or related to commercial features of the web site owners' activities (such as being able to trace a visitors' behaviour over the duration of their visit, or over much longer time periods, often for years, in order to be able to serve advertisements to the users or to get usage statistics to guide later changes to the web site that are envisaged to make the web site more attractive to recurring users). First-party cookies may come from services provided by the web site owner (language settings in a Content Management System) or from services used by the web site owner (analytics tools)."
 msgstr ""
+"<strong>Förstapartskakor</strong> placeras av webbplatsinnehavaren i något "
+"register på deras besökares enhet för att kunna återidentifiera besökaren "
+"när sidan laddas på nytt. Förstapartskakor kan vara relaterade till tekniska "
+"funktioner på en webbplats (t.ex. komma ihåg språkinställningar eller "
+"innehållet i en varukorg), eller relaterade till webbplatsinnehavarens egna "
+"kommersiella aktiviteter (t.ex. kunna kartlägga en besökares beteende under "
+"besökstiden, eller under mycket längre perioder, ofta åratal, för att kunna "
+"servera riktad reklam eller samla statistik för att vägleda förändringar av "
+"webbplatsen som förutses göra webbplatsen mer attraktiv för återkommande "
+"besökare). Förstaparskakor kan komma från tjänster tillhandahållna av "
+"webbplatsinnehavaren (t.ex. språkinställningar i ett CMS) eller från "
+"tredjepartstjänster som används (t.ex. analysverktyg)."
 
 #: lib/webbkoll_web/templates/site/donate.html.eex:8
 #, elixir-format
 msgid "<strong>If you would like to make a contribution</strong> to the general funds of Dataskydd.net (helping both Webbkoll as well as our other activities), you can transfer money to the following bank account:"
 msgstr ""
+"<strong>Om du ge en gåva</strong> till Dataskydd.net:s allmänna medel (och "
+"då hjälpa såväl Webbkoll som våra andra andra aktiviteter) kan du föra över "
+"pengar till följande bankkonto:"
 
 #: lib/webbkoll_web/templates/site/failed.html.eex:18
 #, elixir-format
@@ -160,12 +175,12 @@ msgstr "Korrekthet"
 #: lib/webbkoll_web/templates/site/about.html.eex:23
 #, elixir-format
 msgid "Alternatives and resources"
-msgstr ""
+msgstr "Alternativ och resurser"
 
 #: lib/webbkoll_web/templates/site/error.html.eex:2
 #, elixir-format
 msgid "An error occurred"
-msgstr ""
+msgstr "Ett fel inträffade"
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:33
 #, elixir-format
@@ -175,7 +190,7 @@ msgstr "Det ska vara tydligt för en enskild vad som gäller vid behandlingar av
 #: lib/webbkoll_web/controllers/site_controller.ex:23
 #, elixir-format
 msgid "Analyze"
-msgstr ""
+msgstr "Analysera"
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:52
 #, elixir-format
@@ -186,7 +201,7 @@ msgstr "Analysera %{host} på SSL Labs"
 #: lib/webbkoll_web/views/site_view.ex:203
 #, elixir-format
 msgid "Art. "
-msgstr ""
+msgstr "Art. "
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:45
 #, elixir-format
@@ -196,12 +211,12 @@ msgstr "Man ska inte samla in fler uppgifter än vad som är absolut nödvändig
 #: lib/webbkoll_web/templates/site/donate.html.eex:34
 #, elixir-format
 msgid "At the moment we cannot accept Bitcoin or any other cryptocurrency."
-msgstr ""
+msgstr "För stunden kan vi inte ta emot Bitcoin eller någon annan kryptovaluta."
 
 #: lib/webbkoll_web/templates/site/about.html.eex:14
 #, elixir-format
 msgid "Authors and tech"
-msgstr ""
+msgstr "Upphovspersoner och teknik"
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:12
 #, elixir-format
@@ -212,56 +227,79 @@ msgstr "Beteendekartläggning är när man tittar på hur en viss person, eller 
 #, elixir-format
 msgid "Blocking inline styles can help prevent attackers from modifying the contents or appearance of your page. Moving styles to external stylesheets can also help make your site more maintainable."
 msgstr ""
+"Att blockera inline styles kan hindra angripare från att modifiera "
+"innehåller eller utseendet på din sida. Att flytta styles till externa "
+"stylesheets kan också göra din webbplats enklare att underhålla."
 
 #: lib/webbkoll_web/views/site_view.ex:165
 #, elixir-format
 msgid "Blocking the execution of inline JavaScript provides CSP's strongest protection against cross-site scripting attacks. Moving JavaScript to external files can also help make your site more maintainable."
 msgstr ""
+"Att förhindra körning av inline-JavaScript ger CSP:s starkaste skydd mot "
+"cross-site scripting-attacker. Att flytta JavaScript till externa filer kan "
+"också göra din webbplats enklare att underhålla."
 
 #: lib/webbkoll_web/views/site_view.ex:171
 #, elixir-format
 msgid "Blocking the execution of plug-ins via <code>object-src 'none'</code> or as inherited from <code>default-src</code> can prevent attackers from loading Flash or Java in the context of your page."
 msgstr ""
+"Att blockera körning av plugins via <code>object-src 'none'</code> eller som "
+"ärvt från <code>default-src</code> kan hindra angripare från att ladda Flash "
+"eller Java i din sidas kontext."
 
 #: lib/webbkoll_web/views/site_view.ex:162
 #, elixir-format
 msgid "Blocking the use of JavaScript's <code>eval()</code> function can help prevent the execution of untrusted code."
 msgstr ""
+"Att blockera användandet av JavaScripts <code>eval()</code>-funktion kan "
+"hjälpa till att hindra körning av opålitlig kod."
 
 #: lib/webbkoll_web/views/site_view.ex:161
 #, elixir-format
 msgid "Blocks execution of JavaScript's <code>eval()</code> function by not allowing <code>'unsafe-eval'</code> inside <code>script-src</code>"
 msgstr ""
+"Blockerar körning av JavaScripts <code>eval()</code>-funktion genom att inte "
+"tillåta <code>'unsafe-eval'</code> inuti <code>script-src</code>"
 
 #: lib/webbkoll_web/views/site_view.ex:164
 #, elixir-format
 msgid "Blocks execution of inline JavaScript by not allowing <code>'unsafe-inline'</code> inside <code>script-src</code>"
 msgstr ""
+"Blockerar körning av inline-JavaScript genom att inte tillåta <code>'unsafe-"
+"inline'</code> inuti <code>script-src</code>"
 
 #: lib/webbkoll_web/views/site_view.ex:170
 #, elixir-format
 msgid "Blocks execution of plug-ins, using <code>object-src</code> restrictions"
 msgstr ""
+"Blockerar körning av plugins genom att använda <code>object-"
+"src</code>-restriktioner"
 
 #: lib/webbkoll_web/views/site_view.ex:167
 #, elixir-format
 msgid "Blocks inline styles by not allowing <code>'unsafe-inline'</code> inside <code>style-src</code>"
 msgstr ""
+"Blockerar inline styles genom att inte tillåta <code>'unsafe-inline'</code> "
+"inuti <code>style-src</code>"
 
 #: lib/webbkoll_web/views/site_view.ex:152
 #, elixir-format
 msgid "Blocks loading of active content over HTTP or FTP"
-msgstr ""
+msgstr "Blockerar laddning av aktivt innehåll över HTTP eller FTP"
 
 #: lib/webbkoll_web/views/site_view.ex:155
 #, elixir-format
 msgid "Blocks loading of passive content over HTTP or FTP"
-msgstr ""
+msgstr "Blockerar laddning av passivt innehåll över HTTP eller FTP"
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:91
 #, elixir-format
 msgid "By GDPR %{art_25}, a controller is responsible for implementing state of the art data protection by design and by default. Encrypted connections are a well-established technology to protect the privacy of web visitors against eavesdroppers on the wire."
 msgstr ""
+"Av GDPR %{art_25} är en personuppgiftsansvarig ansvarig för att implementera "
+"dataskydd per design och som standard. Krypterade anslutningar är en "
+"väletablerad teknik för att skydda besökares integritet gentemot "
+"tjuvlyssnare."
 
 #: lib/webbkoll_web/templates/site/index.html.eex:12
 #, elixir-format
@@ -276,7 +314,7 @@ msgstr "Kolla igen"
 #: lib/webbkoll_web/templates/site/index.html.eex:8
 #, elixir-format
 msgid "Check your site!"
-msgstr ""
+msgstr "Kolla din webbplats!"
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:89
 #: lib/webbkoll_web/templates/site/status.html.eex:7
@@ -293,7 +331,7 @@ msgstr "Klassificering"
 #: lib/webbkoll_web/views/site_view.ex:140
 #, elixir-format
 msgid "Clickjacking protection, using <code>frame-ancestors</code>"
-msgstr ""
+msgstr "Clickjacking-skydd genom användande av <code>frame-ancestors</code>"
 
 #: lib/webbkoll/helpers.ex:70
 #, elixir-format
@@ -303,47 +341,65 @@ msgstr "Överväg att använda en självhostad plattform."
 #: lib/webbkoll_web/views/site_view.ex:81
 #, elixir-format
 msgid "Content Security Policy (CSP) header cannot be parsed successfully."
-msgstr ""
+msgstr "Content Security Policy-headenr (CSP) kunde inte läsas."
 
 #: lib/webbkoll_web/views/site_view.ex:84
 #, elixir-format
 msgid "Content Security Policy (CSP) header not implemented."
-msgstr ""
+msgstr "Content Security Policy-header (CSP) ej implementerad."
 
 #: lib/webbkoll_web/views/site_view.ex:71
 #, elixir-format
 msgid "Content Security Policy (CSP) implemented unsafely. This includes <code>'unsafe-inline'</code> or <code>data:</code> inside <code>script-src</code>, overly broad sources such as <code>https:</code> inside <code>object-src</code> or <code>script-src</code>, or not restricting the sources for <code>object-src</code> or <code>script-src</code>."
 msgstr ""
+"Content Security Policy (CSP) implementerat på ett osäkert sätt. Detta "
+"inkluderar <code>'unsafe-inline'</code> eller <code>data:</code> inuti <code"
+">script-src</code>, alltför breda källor såsom <code>https:</code> inuti "
+"<code>object-src</code> eller <code>script-src</code>, eller att inte "
+"begränsa källorna för <code>object-src</code> eller <code>script-src</code>."
 
 #: lib/webbkoll_web/views/site_view.ex:46
 #, elixir-format
 msgid "Content Security Policy (CSP) implemented with <code>default-src 'none'</code> and no <code>'unsafe'</code>"
 msgstr ""
+"Content Security Policy (CSP) implementerat med <code>default-src "
+"'none'</code> och ingen <code>'unsafe'</code>"
 
 #: lib/webbkoll_web/views/site_view.ex:56
 #, elixir-format
 msgid "Content Security Policy (CSP) implemented with unsafe sources inside <code>style-src</code>. This includes <code>'unsafe-inline'</code>, <code>data:</code> or overly broad sources such as <code>https:</code>."
 msgstr ""
+"Content Security Policy (CSP) implementerat med osäkra källor inuti <code"
+">style-src</code>. Detta inkluderar <code>'unsafe-inline'</code>, "
+"<code>data:</code> eller alltför breda källor som <code>https:</code>."
 
 #: lib/webbkoll_web/views/site_view.ex:51
 #, elixir-format
 msgid "Content Security Policy (CSP) implemented without <code>'unsafe-inline'</code> or <code>'unsafe-eval'</code>"
 msgstr ""
+"Content Security Policy (CSP) implementerat utan <code>'unsafe-inline'</code>"
+" eller <code>'unsafe-eval'</code>"
 
 #: lib/webbkoll_web/views/site_view.ex:66
 #, elixir-format
 msgid "Content Security Policy (CSP) implemented, but allows <code>'unsafe-eval'</code>"
 msgstr ""
+"Content Security Policy (CSP) implementerat, men tillåter <code>'unsafe-"
+"eval'</code>"
 
 #: lib/webbkoll_web/views/site_view.ex:61
 #, elixir-format
 msgid "Content Security Policy (CSP) implemented, but secure site allows images or media to be loaded over HTTP"
 msgstr ""
+"Content Security Policy (CSP) implementerat, men säker webbplats tilllåter "
+"att bilder eller media laddas över HTTP"
 
 #: lib/webbkoll_web/views/site_view.ex:76
 #, elixir-format
 msgid "Content Security Policy (CSP) implemented, but secure site allows resources to be loaded over HTTP"
 msgstr ""
+"Content Security Policy (CSP) implementerat, men säker webbplats tillåter "
+"att resurser laddas över HTTP"
 
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:3
 #, elixir-format
@@ -354,7 +410,7 @@ msgstr "Kaka"
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:32
 #, elixir-format
 msgid "Country"
-msgstr ""
+msgstr "Land"
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:40
 #, elixir-format
@@ -379,12 +435,15 @@ msgstr "Personuppgifter ska behandlas på ett säkert sätt, både organisatoris
 #: lib/webbkoll_web/views/site_view.ex:143
 #, elixir-format
 msgid "Deny by default, using <code>default-src 'none'</code>"
-msgstr ""
+msgstr "Neka som standard, genom användning av <code>default-src 'none'</code>"
 
 #: lib/webbkoll_web/views/site_view.ex:144
 #, elixir-format
 msgid "Denying by default using <code>default-src 'none'</code> can ensure that your Content Security Policy doesn't allow the loading of resources you didn't intend to allow."
 msgstr ""
+"Att neka som standard genom att använda <code>default-src 'none'</code> kan "
+"se till att din Content Security Policy inte tillåter laddning av resurser "
+"som du inte avsåg skulle vara tillåtna."
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:47
 #, elixir-format
@@ -406,7 +465,7 @@ msgstr "Domän"
 #: lib/webbkoll_web/templates/site/donate.html.eex:2
 #, elixir-format
 msgid "Donate"
-msgstr ""
+msgstr "Donera"
 
 #: lib/webbkoll_web/controllers/site_controller.ex:286
 #, elixir-format
@@ -460,6 +519,9 @@ msgstr "Typsnitt kan enkelt hostas på egen server. Den fria tjänsten <a href=\
 #, elixir-format
 msgid "For more rigorous and systematic testing we recommend that you check out <a href=\"https://github.com/mozilla/OpenWPM\">OpenWPM</a>, which can be (and is) used to conduct large-scale studies."
 msgstr ""
+"För mer rigoröst och systematiskt testande rekommenderar vi att du kollar in "
+"<a href=\"https://github.com/mozilla/OpenWPM\">OpenWPM</a>, som kan användas "
+"för att genomföra storskaliga studier."
 
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:21
 #, elixir-format
