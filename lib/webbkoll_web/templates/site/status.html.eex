@@ -1,5 +1,5 @@
 <article class="text">
-  <h2><%= gettext "Hang tight..." %></h2>
+  <h2><%= gettext "Checking..." %></h2>
 
   <p><img src="/images/ajax-loader.gif"></p>
 

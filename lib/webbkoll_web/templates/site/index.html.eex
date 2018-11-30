@@ -8,16 +8,16 @@
     <h1><%= gettext "Check your site!" %></h1>
 
     <form class="search-bar" role="search" method="get" action="/<%= @conn.assigns.locale %>/check">
-      <input name="url" type="search" required=true placeholder="example.com" aria-label="<%= gettext("URL to check") %>">
+      <input name="url" type="search" required placeholder="example.com" aria-label="<%= gettext("URL to check") %>">
       <button type="submit"><%= gettext "Check" %></button>
     </form>
 
     <p class="desc">
-      <%= gettext "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. " %>
+      <%= gettext "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy." %>
     </p>
 
-    <p class="notes">
-      <%= gettext(~s|Please note:|) %>
+    <div class="notes">
+      <p><%= gettext(~s|Please note:|) %></p>
       <ol class="default">
         <li><%= gettext(~s|This tool simulates a normal browser visit with Do Not Track disabled (browser default) and with no add-ons.|) %></li>
         <li><%= gettext(~s|Even if you enter https://, http:// will be checked, to see if it redirects to https:// automatically (redirects are followed).|) %></li>
@@ -25,6 +25,6 @@
         <li><%= gettext(~s|The backend is currently running on a single server with limited resources, so in case of usage spikes, waiting times can be long. (But you can <a href="https://github.com/andersju/webbkoll">run your own instance</a>!)|) |> raw() %></li>
         <li><%= gettext(~s|Feedback is appreciated: send <a href="mailto:info@dataskydd.net">email</a> or <a href="https://github.com/andersju/webbkoll">open an issue</a>.|) |> raw() %></li>
       </ol>
-    </p>
+    </div>
   </section>
 </div>

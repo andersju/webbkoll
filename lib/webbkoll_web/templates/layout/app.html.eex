@@ -68,9 +68,9 @@
         <div class="navigation-tools">
           <div class="search-bar">
            <form role="search" method="get" action="/<%= @conn.assigns.locale %>/check">
-              <input name="url" type="search" placeholder="example.com" aria-label="URL to check">
-              <button type="submit" aria-label="Search" title="Search">
-                <i class="fas fa-search" aria-hidden></i>
+              <input name="url" type="search" placeholder="example.com" aria-label="<%= gettext("URL to check") %>">
+              <button type="submit" aria-label="<%= gettext("Search") %>" title="<%= gettext("Search") %>">
+                <i class="fas fa-search" aria-hidden="true"></i>
               </button>
             </form>
           </div>

@@ -42,7 +42,6 @@
           <% end %>
         </tbody>
       </table>
-      </ul>
     <% end %>
 
     <aside class="howto">
