@@ -1,972 +1,42 @@
-## This file is a PO Template file. `msgid`s here are often extracted from
-## source code; add new translations manually only if they're dynamic
-## translations that can't be statically extracted. Run `mix
-## gettext.extract` to bring this file up to date. Leave `msgstr`s empty as
-## changing them here as no effect; edit them in PO (`.po`) files instead.
-#: lib/webbkoll_web/templates/site/index.html.eex:7
-msgid "Check"
+## This file is a PO Template file.
+##
+## `msgid`s here are often extracted from source code.
+## Add new translations manually only if they're dynamic
+## translations that can't be statically extracted.
+##
+## Run `mix gettext.extract` to bring this file up to
+## date. Leave `msgstr`s empty as changing them here as no
+## effect: edit them in PO (`.po`) files instead.
+msgid ""
 msgstr ""
 
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:33
 msgid "%{count} insecure"
 msgid_plural "%{count} insecure"
 msgstr[0] ""
 msgstr[1] ""
 
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:33
 msgid "1 secure"
 msgid_plural "%{count} secure"
 msgstr[0] ""
 msgstr[1] ""
 
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Cookie"
-msgid_plural "Cookies"
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Third-party request"
-msgid_plural "Third-party requests"
-msgstr[0] ""
-msgstr[1] ""
-
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:33
 msgid "host"
 msgid_plural "hosts"
 msgstr[0] ""
 msgstr[1] ""
 
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:33
 msgid "request"
 msgid_plural "requests"
 msgstr[0] ""
 msgstr[1] ""
-
-#: lib/webbkoll_web/templates/site/_requests.html.eex:33
-msgid "unique"
-msgid_plural "unique"
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "...but it's not fully secure"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:16
-msgid "Check again"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_request_table.html.eex:7
-#: lib/webbkoll_web/templates/site/_request_table.html.eex:37
-msgid "Classification"
-msgstr ""
-
-#: lib/webbkoll_web/templates/layout/app.html.eex:111
-msgid "Developed by"
-msgstr ""
-
-#: lib/webbkoll_web/templates/layout/app.html.eex:117
-msgid "Feedback? Questions? <a href=\"mailto:info@dataskydd.net\">info@dataskydd.net</a>"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_headers.html.eex:3
-msgid "HTTP headers"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Insecure"
-msgstr ""
-
-#: lib/webbkoll_web/views/site_view.ex:25
-msgid "Referrers leaked"
-msgstr ""
-
-#: lib/webbkoll_web/views/site_view.ex:23
-msgid "Referrers not leaked"
-msgstr ""
-
-#: lib/webbkoll_web/views/site_view.ex:24
-msgid "Referrers partially leaked"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:5
-msgid "Results for"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Secure"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_request_table.html.eex:44
-msgid "We use Disconnect's <a href=\"%{url}\">open source list of trackers</a> to classify hosts."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_requests.html.eex:33
-msgid "to"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "<strong>One</strong> first-party cookie."
-msgid_plural "<strong>%{count}</strong> first-party cookies."
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "<strong>One</strong> third-party cookie."
-msgid_plural "<strong>%{count}</strong> third-party cookies."
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "The page loads one resource through insecure HTTP."
-msgid_plural "The page loads some resources through insecure HTTP."
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Third-party contacted"
-msgid_plural "Third-parties contacted"
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/webbkoll_web/templates/site/_https.html.eex:62
-msgid "<code>%{domain}</code> does <strong>not</strong> use HTTPS by default."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_https.html.eex:20
-msgid "<code>%{domain}</code> uses HTTPS by default."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_requests.html.eex:25
-#: lib/webbkoll_web/templates/site/_requests.html.eex:35
-msgid "A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains."
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:70
-msgid "Consider a self-hosted platform."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/failed.html.eex:2
-msgid "Failed"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "First-party cookies"
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:90
-msgid "Fonts can easily be self-hosted. The tool <a href=\"https://google-webfonts-helper.herokuapp.com/fonts\">google-webfonts-helper</a> lets you select one or more fonts, generates the proper CSS and prepares a zip file with the fonts. For a command-line alternative, the shell script <a href=\"https://github.com/neverpanic/google-font-download\">google-font-download</a> provides similar functionality."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_headers.html.slime:1
-msgid "However, unsafe attributes are used."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Insecure connection"
-msgstr ""
-
-#: lib/webbkoll_web/controllers/site_controller.ex:216
-msgid "Invalid domain: %{domain}"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_headers.html.slime:1
-msgid "NO"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "No first-party cookies without consent."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "No third-party cookies without consent."
-msgstr ""
-
-#: lib/webbkoll_web/controllers/site_controller.ex:145
-msgid "Results for %{url}"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Secure connection"
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:65
-msgid "Self-host the files."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Strict Transport Security enabled"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Strict Transport Security not enabled"
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:64
-msgid "The site is loading libraries from one or more CDN:s."
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:75
-msgid "The site is using Google Analytics. While this is a powerful tool, we think you should respect your users' privacy and not tell Google about them &mdash; at least not without your users' consent."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Third-party cookies"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_requests.html.eex:21
-#: lib/webbkoll_web/templates/site/_requests.html.eex:29
-msgid "Third-party requests"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Third-party services"
-msgstr ""
-
-#: lib/webbkoll_web/controllers/site_controller.ex:266
-msgid "Trying same host too frequently. Try again in a minute."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_headers.html.slime:1
-msgid "YES,"
-msgstr ""
-
-#: lib/webbkoll_web/controllers/site_controller.ex:252
-msgid "You're requesting too frequently. Install locally?"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/status.html.eex:2
-msgid "Hang tight..."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "See which."
-msgid_plural "See which."
-msgstr[0] ""
-msgstr[1] ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "<a href=\"https://https.cio.gov/hsts/\">Read more about HSTS</a> and how to configure it in nginx, Apache and IIS."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "<strong>Authenticity</strong>. The visitor is talking to the \"real\" website, and not to an impersonator or through a \"man-in-the-middle\"."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "<strong>Confidentiality</strong>. The visitor's connection is encrypted, obscuring URLs, cookies, and other sensitive metadata."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "<strong>Integrity</strong>. The data sent between the visitor and the website has not been tampered with or modified."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "A plain HTTP connection can be easily monitored, modified, and impersonated. Every unencrypted HTTP request reveals information about a user’s behavior, and the interception and tracking of unencrypted browsing has become commonplace."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "A user may click on an old link that mistakenly uses an <code>http://</code> URL."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "A user’s network may be hostile and actively rewrite <code>https://</code> links to <code>http://</code>."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Always uses an <code>https://</code> connection, even when clicking on an <code>http://</code> link or after typing a domain into the location bar without specifying a protocol."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_https.html.eex:55
-msgid "Analyze %{host} on SSL Labs"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Browsers support <a href=\"https://en.wikipedia.org/wiki/HTTP/2\">HTTP/2</a> &mdash; which improves page loading speeds &mdash; <em>only</em> over encrypted connections."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "DV certificates are the most common. Let's Encrypt only issues DV certificates."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Disclaimer: The results presented here might not be 100% correct. Bugs happen. This tool is meant to be used by site owners as a starting point for improvements, not as a rigorous analysis."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_cookie_table.html.eex:6
-#: lib/webbkoll_web/templates/site/_cookie_table.html.eex:18
-msgid "Domain"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/failed.html.slime:1
-msgid "Error: %{error_message}"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_cookie_table.html.eex:9
-#: lib/webbkoll_web/templates/site/_cookie_table.html.eex:21
-msgid "Expires on"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Google Chrome (<a href=\"https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure\">1</a>, <a href=\"https://www.chromium.org/Home/chromium-security/deprecating-powerful-features-on-insecure-origins\">2</a>) and Mozilla Firefox (<a href=\"https://blog.mozilla.org/security/2015/04/30/deprecating-non-secure-http/\">1</a>) will mark plain HTTP as affirmatively non-secure and make powerful features impossible to use on non-secure sites."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Google has begun to <a href=\"https://googleonlinesecurity.blogspot.com/2014/08/https-as-ranking-signal_6.html\">favor HTTPS websites in search rankings</a>."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "HSTS enabled with value <code>%{value}</code>."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "HTTP Strict Transport Security (HSTS) is a simple and widely supported standard to protect visitors by ensuring that their browsers always connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from <code>http://</code> to <code>https://</code> URLs."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "HTTPS encrypts nearly all information sent between a client and a web service. Properly configured, it guarantees three things:"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_headers.html.slime:1
-msgid "Header"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "In its <strong>strongest and recommended form</strong>, the HSTS policy <strong>includes all subdomains</strong>, and indicates a willingness to be \"preloaded\" into browsers:"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "It's also possible to use protocol-relative URLs like <code>&lt;img src=\"//example.com/images/foo.png\"&gt;</code>. However, we discourage this. If a resource is available through HTTPS, you should <em>only</em> load it over HTTPS, even on insecure pages &mdash; otherwise you make man-in-the-middle attacks easier. (Loading an HTTPS resource on an HTTP page will not generate any warnings.)"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Let's say you're logged in on Facebook. You visit a page with the URL <code>http://www.some-hospital.com/some-medical-condition</code>. On that page, you click a link to their Facebook page. Your browser then sends <code>Referer: http://www.some-hospital.com/some-medical-condition</code> to <code>facebook.com</code>, along with your Facebook cookies, allowing Facebook to associate your identity with that particular page."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Make sure all resources are loaded over HTTPS. For resources loaded from the same domain as your site, use relative URLs, e.g. <code>&lt;img src=\"/images/foo.png\"&gt;</code> instead of <code>&lt;img src=\"http://example.com/images/foo.png\"&gt;</code>."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Meta referrer is set to <code>%{value}</code>."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Modern browsers typically block at least certain types of insecure content (such as iframes, JavaScript and CSS) by default. Firefox, for example, also shows a grey warning triangle next to the green lock if insecure elements have been blocked."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_headers.html.slime:1
-msgid "NO, header is set to"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_cookie_table.html.eex:7
-#: lib/webbkoll_web/templates/site/_cookie_table.html.eex:19
-msgid "Name"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/failed.html.eex:4
-msgid "Processing %{url} failed at %{time}."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Removes the ability for users to click through warnings about invalid certificates."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_headers.html.slime:1
-msgid "Set?"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Strict Transport Security was <a href=\"https://lists.w3.org/Archives/Public/www-archive/2009Sep/att-0051/draft-hodges-strict-transport-sec-05.plain.html\">proposed in 2009</a>, motivated by <a href=\"http://www.thoughtcrime.org/software/sslstrip/\">Moxie Marlinspike's demonstration</a> of how a hostile network could downgrade visitor connections and exploit insecure redirects. It was quickly adopted by several major web browsers, and <a href=\"https://tools.ietf.org/html/rfc6797\">finalized as RFC 6797 in 2012.</a>"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Thanks to a fairly recent development, <em><a href=\"https://w3c.github.io/webappsec-referrer-policy/\">Referrer Policy</a></em>, it's finally possible for websites to tell browsers to not leak referrers. It lets you specify a policy that's applied to all links clicked, as well as all other requests generated by the page (images, JS, etc.)."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "The Chrome security team allows anyone to <a href=\"https://hstspreload.appspot.com/\">submit their domain to the list</a>, provided it meets a few requirements."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "The goal of the Internet community is to establish encryption as the norm, and to phase out unencrypted connections. See <a href=\"https://www.w3.org/2001/tag/doc/web-https\" title=\"Securing the Web\">W3C</a>, <a href=\"https://datatracker.ietf.org/doc/rfc7258/\" title=\"Pervasive Monitoring Is an Attack\">IETF</a>, <a href=\"https://www.iab.org/2014/11/14/iab-statement-on-internet-confidentiality/\" title=\"IAB Statement on Internet Confidentiality\">IAB</a>. Also:"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "The problem is made worse by the fact that many websites load resources like images and scripts from dozens of third-parties, sending referrer information to all of them, with the typical visitor having no idea that this is happening."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "The site includes content served over insecure HTTP. Such content can be intercepted and manipulated, leaving the visitor vulnerable to attacks."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "There is no difference in encryption between DV and EV certificates, but they are typically displayed differently in browsers. EV certificates generally result in the domain owner's name appearing in the browser URL bar that visitors see."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "To get a DV certificate, you only need to prove that you <span title=\"By, for example, publishing a certain file to your web server or responding to an email sent to the contact in your domain's WHOIS record\">control the domain</span>. To get an <em>Extended Validation</em> (EV) certificate, you must pass a more thorough identity verification process."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "To solve the \"first visit\" problem, the Chrome security team created an \"HSTS preload list\": a <a href=\"https://chromium.googlesource.com/chromium/src/+/master/net/http/transport_security_state_static.json\">list of domains</a> baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit. Firefox, Safari, and newer versions of Internet Explorer also incorporate Chrome’s HSTS preload list."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/failed.html.eex:16
-msgid "Try again?"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_cookie_table.html.eex:8
-#: lib/webbkoll_web/templates/site/_cookie_table.html.eex:20
-#: lib/webbkoll_web/templates/site/_localstorage.html.eex:29
-msgid "Value"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "When a browser knows that a domain has enabled HSTS, it does two things:"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "When a user types \"example.com\" into the URL bar, browsers default to using <code>http://</code>."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "When you click a link, your browser will typically send the HTTP <em>referer</em> [sic] header to the webserver where the destination webpage is at. The header contains the full URL of the page you came from. This lets sites see where traffic comes from. The header is also sent when external resources (such as images, fonts, JS and CSS) are loaded."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "While still a work in progress, Referrer Policy is now <a href=\"http://caniuse.com/referrer-policy\">supported by all major browsers</a> (except Internet Explorer, although it <em>is</em> supported by Edge, the new browser in Windows 10)."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_headers.html.slime:1
-msgid "which disables HSTS"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:90
-msgid "Final URL:"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-#: lib/webbkoll_web/templates/site/status.html.slime:1
-msgid "Input URL:"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning)."
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:69
-msgid "The site is using the Disqus comment system."
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:86
-msgid "The site loads fonts from Google Fonts. While these are hosted on resource-specific domains and no cookies are sent, Google <em>could</em> possibly cross-reference the data (IP and browser fingerprint) with other Google services to identify visitors. Do they? Their own <a href=\"https://developers.google.com/fonts/faq?hl=en#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users\">FAQ</a> is vague: <em>\"We do log records of the CSS and the font file requests, and access to this data is on a need-to-know basis and kept secure.\"</em> What \"need-to-know basis\" means is not explained."
-msgstr ""
-
-#: lib/webbkoll_web/templates/layout/app.html.eex:45
-msgid "FAQ"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/index.html.slime:1
-msgid "How privacy-friendly is your site?"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/index.html.eex:12
-msgid "Read more."
-msgstr ""
-
-#: lib/webbkoll_web/controllers/site_controller.ex:25
-msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "A referrer policy can easily be set with a <code>&lt;meta&gt;</code> element in your HTML. Simply include this inside the <code>&lt;head&gt;</code> section:"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "The referrer header is privacy nightmare as it allows websites and services to track you across the web and learn about your browsing habits (and thus possibly private, sensitive information), particularly when combined with cookies."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_request_table.html.eex:4
-#: lib/webbkoll_web/templates/site/_request_table.html.eex:15
-msgid "Host"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Full list of third-party requests:"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Please note that this tool only checks whether HTTPS is used by default. Next step is to ensure that the server is configured correctly and not susceptible to attacks due to out-of-date software, weak ciphers, etc."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/status.html.eex:9
-msgid "Status:"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Such things are out of scope for this tool, but Qualys SSL Labs provides an excellent free service that lets you check how a server is doing:"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "External files such as images, scripts and CSS are loaded, but the tool performs no interactions with the page &mdash; no links are clicked, no forms are submitted."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "This tool attempts to simulate what happens when a user visits a specified page with a typical browser. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled, since this is the default setting in most browsers."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "What this tool checks (and doesn't check)"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:28
-msgid "A webstore may for instance hand over the task of profiling visitors to an advertisement agency, and a public authority may have constructed its website in a way that automatically hands over behavioural data to advertisers. Advertisers are the most common and least transparent form of third parties."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:66
-msgid "Accountability"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:51
-msgid "Accuracy"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:35
-msgid "An individual should be able to understand the terms of interactions with others. (5(1)(a))."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:47
-msgid "As little data as possible to achieve the purpose should be collected .(5(1)(c))"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:14
-msgid "Behavioural monitoring, or ”profiling”, is when someone monitors how a given person, or set of persons, typically behave. This includes monitoring whether a particular group, say young people or women of a median income, frequently visit certain deeplinks, have to look up certain vocabulary or that they end up on the website through using a particular search engine or social platform. Behavioural monitoring is used to discover what certain classes of people may be assumed to find interesting, difficult or funny."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:42
-msgid "Data collection should occur only for specific and limited purposes. These purposes should be explicit and understandable. (5(1)(b))"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:46
-msgid "Data minimisation"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:8
-msgid "Data protection is a human right in the European Union. It’s a collection of administrative and formal requirements for how to collect, process and use data relating to individuals. The purpose of this protection is to provide individuals with the means necessary to exercise their right to privacy. Data protection law guarantees transparency, choice and knowledge for individuals with regards to who influences them, and under which conditions."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:62
-msgid "Data should be processed in a secure way, both organisatorially and technically."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:49
-msgid "Depending on the purposes for collecting personal data, data minimisation may mean different things. The Web Privacy Check makes it easy to find out how not to collect personal data and how not to inadvertently leak personal data. Should one want to collect personal data anyway, one needs to be transparent about such collection and one also needs to follow the rules in chapter 4 of the regulation. The rules of how to collect and process personal data are in place to ensure that anyone who chooses a purpose for data collection also reflects on the consequences of such choices."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:10
-msgid "In May 2018 a new law about data protection will enter into force in the European Union. It is a regulation and will apply equally in all the 28 member states."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:61
-msgid "Integrity and confidentiality"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:16
-msgid "It is also the categorisation of individuals into these groups. Once a web visitor is stuffed into a particular category, they may be positively or negatively discriminated against because of the categorisation."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:34
-msgid "Lawfulness, fairness and transparency"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:52
-msgid "Personal data shall be accurate, and if they aren’t, there must be a procedure to correct them."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:57
-msgid "Personal data should not be saved or stored longer than necessary."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:18
-msgid "Profiling is mostly used in the advertisement industry to decide which type of advertisements a particular individual should be exposed to. Parents of small children, or people who know parents of small children, may receive ads for nappies, prams or family vacations. Increasingly, profiling is used to determine what contents are served by newspapers. The above mentioned groups may for instance receive short articles about new-borns if they are queueing (and have little time) or longer articles about new-borns if they are on a train (and have more time)."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:20
-msgid "Profiling may additionally be used to shape political opinions, for instance through targetting specific groups with political information, or to enact measures against groups based on their assumed characteristics. This form of political work is called ”nudging” and may also be deployed to increase acceptance of specific measures (like the construction of a public park) in specific groups (such as the individuals living near the envisaged park)."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:41
-msgid "Purpose limitation"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:69
-msgid "Since responsibility can be a difficult burden, the Web Privacy Check of Dataskydd.net has a large set of recommendations for data protection which may go further than what one could be legally liable for. We want to enable the best possible data protection with the least amount of administrative burdens. One of the reasons the rules of the data protection regulation make it seem bureaucratic and boring not to data minimise, is so that each actor in society who wishes to influence others has to consider carefully the way in which they use such power."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:56
-msgid "Storage limitation"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:32
-msgid "The <a href=\"http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679\">general data protection regulation of the European Union</a> enters into force on the 25th of May 2018 and concerns the balancing of power being those influencing individuals (typically companies and public authorities) and the individuals themselves. The Web Privacy Check is a tool to find out who is collecting information about individuals, and what can be done to stop invisible tracking."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:64
-msgid "The Dataskydd.net Web Privacy Check makes it easy to see which technical protection mechanisms for data protection are in place in a given website. We have identified measures which should not require large organisational changes, or increase web management costs. Most of our recommendations are simple enough to implement, and they are cost neutral. Our goal is to make it as easy as possible for individuals to exercise their rights to privacy and data protection, and also to provide web designers and managers with simple ”rules of thumb” to help individuals exercise these rights."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:37
-msgid "The Dataskydd.net Web Privacy Check see lawfulness, fairness and transparency as a requirement that individuals should understand with whom they are in contact by visiting a website. If an advertisement agency or some other company, such as an internet service provider, has easy access to behavioural data the individual should know. If an individual may be influenced by these parties, again they should be able to know. An individual should not have to master web development or  have a need for advanced technical tools to find this out. While the principle of transparency is simple, permissible deviations from transparency are listed in articles 13-20 of the regulation."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:67
-msgid "The one responsible for the website is responsible for adherence to these principles."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:44
-msgid "The purpose for collecting data may be interpreted broadly, and means anything from marketing to improving the web. At Dataskydd.net Web Privacy Check we prefer methods of improving the web that do not include collecting data from private persons. That’s why we’ve compiled a large number of recommendations and tools which minimise data collection."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:54
-msgid "This principle above all concerns information registered by public authorities or companies, for instance in the credit check industry. In web development, it is more common with ”fuzzy” data sets, and the consequences of being erroneously categorised in a given profiling operation is normally not worse than that one receives online advertisement which is not specifically targetted to ones own group."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:59
-msgid "This right ties into purpose limitation and data minisation. If one follows the recommendation of the Dataskydd.net Web Privacy Check, one does not have to concern oneself so much with this principle."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:39
-msgid "Transparency also means a right to find out when something gone wrong: if you’ve collected information about individuals which have leaked or disappeared, the individual has a right to know. This is called ”personal data breach notification” and specific rules are in article 34 of the regulation."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:24
-msgid "We use the word gossiping to mean that information about somebody’s behaviour, reading habits or preferences is handed over to somebody other than the actor responsible for the website."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:4
-msgid "Web Privacy Check monitors privacy enhancing features on websites, and helps you find out who is letting you exercise control over your privacy. We check to what extent a website monitors your behaviour and how much they gossip about the monitoring to third parties. We’ve also compiled a set of recommendations for web designers and managers on how to not track or gossip in digital environments. We also suggest questions and feature requests from users of websites who want to alert webmasters to the opportunity of improvement."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:2
-msgid "Welcome to the Web Privacy Check by Dataskydd.net!"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:30
-msgid "What are the principles of the EU general data protection regulation?"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:22
-msgid "What do you mean by ”gossiping to third-parties”?"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:6
-msgid "What is data protection?"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:12
-msgid "What is ”behavioural monitoring”?"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/about.html.eex:26
-msgid "In modern web development, it’s become common for a website not to be run from only one location. When you visit a website, you’re not only entering into contact with those running the website, but also all the businesses and organisations which collaborate with the managers of the websites. These may be internet service providers, script providers, font providers, analytics tools providers and a range of other providers. If the manager of the websites hands over information about visitors to any of these third-parties, it is a form of gossiping since it is usually not evident to the visitors that this type of information is being handed over."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_requests.html.eex:24
-msgid "No third-party requests."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "The basic problem that HSTS solves is that even after a website turns on HTTPS, visitors may still end up trying to connect over plain HTTP. For example:"
-msgstr ""
-
-#: lib/webbkoll_web/controllers/site_controller.ex:51
-#: lib/webbkoll_web/templates/layout/app.html.eex:48
-msgid "Tech"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/tech.html.eex:4
-msgid "This tool attempts to simulate what happens when a user visits a specified page with a typical browser, without clicking on anything. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled, since this is the default setting in most browsers."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/tech.html.slime:1
-msgid "We built the tool with <a href=\"http://www.phoenixframework.org/\">Phoenix Framework</a> and <a href=\"https://github.com/Tomtomgo/phearjs\">PhearJS</a> (which in turn uses <a href=\"http://phantomjs.org/\">PhantomJS</a>)."
-msgstr ""
-
-#: lib/webbkoll_web/controllers/site_controller.ex:38
-msgid "About"
-msgstr ""
-
-#: lib/webbkoll_web/controllers/site_controller.ex:53
-msgid "How our web privacy check tool works and how you can run your own instance."
-msgstr ""
-
-#: lib/webbkoll_web/controllers/site_controller.ex:146
-msgid "How this website is doing with regards to privacy."
-msgstr ""
-
-#: lib/webbkoll_web/controllers/site_controller.ex:138
-msgid "Processing failed"
-msgstr ""
-
-#: lib/webbkoll_web/controllers/site_controller.ex:176
-msgid "Sorry, bots aren't allowed."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/tech.html.eex:2
-msgid "Technology we use"
-msgstr ""
-
-#: lib/webbkoll_web/controllers/site_controller.ex:40
-msgid "The what and why of data protection and the principles of the EU general data protection regulation."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/tech.html.eex:8
-msgid "We don't provide an API as we have limited resources and PhantomJS is rather resource-intensive, but <a href=\"https://github.com/andersju/webbkoll\">the code is available</a> under the MIT license."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/index.html.eex:11
-msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
-msgstr ""
-
-#: lib/webbkoll_web/controllers/site_controller.ex:273
-msgid "Error"
-msgstr ""
-
-#: lib/webbkoll_web/controllers/site_controller.ex:106
-#: lib/webbkoll_web/controllers/site_controller.ex:109
-msgid "Status"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "<em>If a referrer policy is delivered via both CSP and a meta element, the meta element's policy takes precedence.</em>"
-msgstr ""
-
-#: lib/webbkoll_web/views/site_view.ex:26
-msgid "Referrers are (probably) leaked"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Referrer directive is set to <code>%{value}</code> in <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP/CSP_policy_directives#referrer\">Content-Security-Policy (CSP) header</a>."
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:112
-msgid "<a href=\"http://stackoverflow.com/questions/18337630/what-is-x-content-type-options-nosniff\">X-Content-Type-Options</a> stops a browser from trying to MIME-sniff the content type and forces it to stick with the declared content-type. This helps to reduce the danger of drive-by downloads. The only valid value for this header is \"X-Content-Type-Options: nosniff\"."
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:108
-msgid "<a href=\"http://stackoverflow.com/questions/9090577/what-is-the-http-header-x-xss-protection\">X-XSS-Protection</a> sets the configuration for the cross-site scripting filters built into most browsers. The best configuration is \"X-XSS-Protection: 1; mode=block\"."
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:104
-msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options\">X-Frame-Options</a> tells the browser whether you want to allow your site to be framed or not. By preventing a browser from framing your site you can defend against attacks like clickjacking."
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:100
-msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security\">HTTP Strict Transport Security</a> is an excellent feature to support on your site and strengthens your implementation of TLS by getting the User Agent to enforce the use of HTTPS."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/CSP\">Content Security Policy</a> is an effective measure to protect your site from <a href=\"https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting\">XSS</a> attacks. By whitelisting sources of approved content, you can prevent the browser from loading malicious assets. It can also help prevent information leakage."
-msgstr ""
-
-#: lib/webbkoll_web/templates/layout/app.html.eex:118
-msgid "All text, except quotes and where noted, is available under <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC0</a>."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "In its simplest form, the policy tells a browser to enable HSTS for that exact domain or subdomain, and to remember it for a given number of seconds (the policy is refreshed every time browser sees the header again):"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Since it's just an HTTP header, HSTS is very easy to add to a domain."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "However, to enable HSTS for a domain via the HTTP header, the browser does have to see the header at least once. This means that users are not protected until after their first successful secure connection to a given domain."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_geolocation.html.eex:9
-msgid "The server <strong>%{domain}</strong> (%{host_ip}) appears to have been located in <strong>%{country}</strong> during our test."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "The HTTP header descriptions are based on the ones from <a href=\"https://securityheaders.com/\">securityheaders.com</a> by Scott Helme, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/deed.en_GB\">CC-BY-SA 4.0</a>. Text about HTTPS partly adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain). <a href=\"http://www.maxmind.com\">MaxMind's</a> GeoLite2 country database (CC-BY-SA 4.0) is used for GeoIP lookups."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "<a href=\"https://report-uri.io/home/tools\">report-uri.io</a> has excellent (free) tools with which you can build or analyze a Content Security Policy."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "<em>The Content-Security-Policy is delivered via both HTTP header and meta element. The HTTP header's policy takes precedence.</em>"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Content-Security-Policy HTTP header is set to <code>%{value}</code>."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Content-Security-Policy enabled"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Content-Security-Policy meta element is set to <code>%{value}</code>."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Content-Security-Policy not enabled"
-msgstr ""
-
-#: lib/webbkoll_web/controllers/site_controller.ex:23
-msgid "Analyze"
-msgstr ""
-
-#: lib/webbkoll_web/templates/layout/app.html.eex:111
-msgid "Originally funded by"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_requests.html.eex:4
-msgid "Insecure first-party requests"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/tech.html.eex:10
-msgid "Please note, however, that this tool is mainly meant to be used as a starting point for web developers. For more rigorous and systematic testing we recommend that you check out <a href=\"https://github.com/citp/OpenWPM\">OpenWPM</a>, which we used to analyze the websites of Sweden's municipalities (<a href=\"https://dataskydd.net/kommuner/\">site</a>, <a href=\"https://github.com/andersju/municipality-privacy\">code</a>). You might also want to have a look at <a href=\"https://privacyscore.org/\">PrivacyScore</a>, which is a bit more comprehensive than Webbkoll (additionally checks e.g. email and TLS/SSL configuration) and also lets you compare/rank lists of sites."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "1. Note that <code>Public-Key-Pins</code> can brick your site if something goes wrong and should only be used with great caution, if at all. See <a href=\"https://community.letsencrypt.org/t/hpkp-best-practices-if-you-choose-to-implement/4625\">1</a>, <a href=\"https://scotthelme.co.uk/im-giving-up-on-hpkp/\">2</a>, <a href=\"https://www.smashingmagazine.com/be-afraid-of-public-key-pinning/\">3</a>."
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:104
-msgid "<a href=\"https://developer.mozilla.org/en/docs/Web/Security/Public_Key_Pinning\">HTTP Public Key Pinning</a> protects your site from <a href=\"https://en.wikipedia.org/wiki/Man-in-the-middle_attack\">MiTM attacks</a> using rogue X.509 certificates. By whitelisting only the identities that the browser should trust, your users are protected in the event a certificate authority is compromised.<sup>1</sup>"
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:116
-msgid "<a href=\"https://scotthelme.co.uk/a-new-security-header-referrer-policy/\">Referrer-Policy</a> is a new header that allows a site to control how much information the browser includes with navigations away from a document (or when loading external resources) and should be set by all sites. (It can also be set using a meta element; see above.)"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "<a href=\"https://w3c.github.io/webappsec-referrer-policy/#referrer-policies\">A few different policies are offered</a>, such as <code>origin</code> (strips everything except the <a href=\"https://tools.ietf.org/html/rfc6454#section-3.2\">origin</a>) and <code>origin-when-cross-origin</code> (sends full URL with same-origin requests, otherwise stripped). We recommend <strong><code>no-referrer</code></strong>, which kills the referrer header entirely for all requests, no matter the destination; or <strong><code>same-origin</code></strong>, which kills the referrer for third-party requests but not for requests to the same origin."
-msgstr ""
-
-#: lib/webbkoll_web/templates/layout/app.html.eex:116
-msgid "The code is <a href=\"https://github.com/andersju/webbkoll\">available on GitHub</a>."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Please note that some sites use CDNs &ndash; <a href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France."
-msgstr ""
-
-#: lib/webbkoll_web/templates/layout/app.html.slime:1
-msgid "Test results are stored in memory on our server for 48 hours. We don't show a list of tested URLs. We don't use URLs or test results. We don't log accesses and we don't use cookies."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/index.html.eex:19
-msgid "Even if you enter https://, http:// will be checked, to see if it redirects to https:// automatically (redirects are followed)."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/index.html.eex:22
-msgid "Feedback is appreciated: send <a href=\"mailto:info@dataskydd.net\">email</a> or <a href=\"https://github.com/andersju/webbkoll\">open an issue</a>."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/index.html.eex:20
-msgid "Generally things work, but some sites (sometimes) don't work for various reasons."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/index.html.eex:21
-msgid "The backend is currently running on a single server with limited resources, so in case of usage spikes, waiting times can be long. (But you can <a href=\"https://github.com/andersju/webbkoll\">run your own instance</a>!)"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/index.html.eex:18
-msgid "This tool simulates a normal browser visit with Do Not Track disabled (browser default) and with no add-ons."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/index.html.eex:16
-msgid "Please note:"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free <em>domain-validated</em> (DV) certificates through an easy, automated process."
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:79
-msgid "<a href=\"https://matomo.org/\">Matomo</a> (formerly Piwik) is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:101
-msgid "Install <a href=\"https://matomo.org/\">Matomo</a> (formerly Piwik) on your own server. It's easy to install and easy to upgrade."
-msgstr ""
-
-#: lib/webbkoll/helpers.ex:97
-msgid "The site appears to use Matomo/Piwik, but not self-hosted. This means visitors are exposed to a third party."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "<em>If a referrer policy is delivered via both CSP/Referrer-Policy header and a meta element, the meta element's policy takes precedence. If multiple policy values are specified, the browser will use the last one, ignoring unknown values (fallback values should thus appear first).</em>"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/results.html.slime:1
-msgid "Referrer Policy is set to <code>%{value}</code> in <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy\">Referrer-Policy header</a>."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/donate.html.eex:34
-msgid "At the moment we cannot accept Bitcoin or any other cryptocurrency."
-msgstr ""
-
-#: lib/webbkoll_web/controllers/site_controller.ex:62
-#: lib/webbkoll_web/templates/layout/app.html.eex:51
-#: lib/webbkoll_web/templates/site/donate.html.eex:2
-msgid "Donate"
-msgstr ""
-
-#: lib/webbkoll_web/controllers/site_controller.ex:64
-msgid "How you can support our work."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/donate.html.eex:8
-msgid "If you would like to make a contribution to the general funds of Dataskydd.net (helping both Webbkoll and our other activities), you can transfer money to the following bank account:"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/donate.html.eex:18
-msgid "Our address (if necessary):"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/donate.html.eex:27
-msgid "Our bank's address (if necessary):"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/donate.html.eex:16
-msgid "Please write \"Donation\" in the message field. Any amount is much appreciated! (From a Swedish bank account, the number would be 52031057715.)"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/donate.html.eex:6
-msgid "We operate on a very small budget, and servers are usually our main expense; most work is done in our free time. Every euro (or krona) counts!"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/donate.html.eex:4
-msgid "Webbkoll is a project by <a href=\"https://dataskydd.net/\">Dataskydd.net Sverige</a>, a Swedish non-governmental organization (organization number 802495-4797) working on making data protection easy in law and in practice. We are not affiliated with any political party."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/failed.html.eex:6
-msgid "%{error_message}"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/failed.html.eex:18
-msgid "<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href=\"mailto:info@dataskydd.net\">send us an email</a> (and tell us what URL you tried)! You can also try <a href=\"https://privacyscore.org/\">PrivacyScore</a> as an alternative."
-msgstr ""
-
-#: lib/webbkoll_web/templates/layout/app.html.eex:108
-msgid "Test results are stored in memory on our server for 24 hours. We don't show a list of tested URLs. We don't use URLs or test results. We don't log accesses and we don't use cookies."
-msgstr ""
-
-#, elixir-format
-#: lib/webbkoll_web/templates/site/tech.html.eex:6
-msgid "We built the tool with <a href=\"http://www.phoenixframework.org/\">Phoenix Framework</a> and <a href=\"https://github.com/GoogleChrome/puppeteer\">Puppeteer</a> (we previously used <a href=\"https://github.com/Tomtomgo/phearjs\">PhearJS</a>+<a href=\"http://phantomjs.org/\">PhantomJS</a> instead of Puppeteer)."
-msgstr ""
 
 #, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:72
@@ -976,8 +46,108 @@ msgstr[0] ""
 msgstr[1] ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:158
+#: lib/webbkoll_web/templates/site/_requests.html.eex:33
+msgid "unique"
+msgid_plural "unique"
+msgstr[0] ""
+msgstr[1] ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/failed.html.eex:6
+msgid "%{error_message}"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll/helpers.ex:79
+msgid "<a href=\"https://matomo.org/\">Matomo</a> (formerly Piwik) is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:28
+msgid "<a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> (open source) analyzes CSP, HSTS, TLS and various other things (some of the Webbkoll tests are based on code from Observatory). See also <a href=\"https://csp-evaluator.withgoogle.com/\">Google's CSP Evaluator</a>."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:32
+msgid "<a href=\"https://report-uri.com/home/tools\">Report URI</a> has many useful tools: CSP analyzer/builder, header analyzer (<a href=\"https://securityheaders.com/\">securityheaders.com</a>), SRI hash generator, etc."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:30
+msgid "<a href=\"https://www.hardenize.com/\">Hardenize</a> is similar to Observatory, but also checks a domain's mail servers."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:34
+msgid "<a href=\"https://www.ssllabs.com/ssltest/\">Qualys SSL Server Test</a> is an excellent tool for analyzing a server's TLS/SSL configuration. <a href=\"https://testssl.sh/\">testssl.sh</a> is an open source alternative."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_https.html.eex:59
+msgid "<code>%{domain}</code> does <strong>not</strong> use HTTPS by default."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_https.html.eex:17
+msgid "<code>%{domain}</code> uses HTTPS by default."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/views/site_view.ex:159
 msgid "<code>'strict-dynamic'</code> lets you use a JavaScript shim loader to load all your site's JavaScript dynamically, without having to track <code>script-src</code> origins."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_cookies.html.eex:35
+msgid "<strong>First-party cookies</strong> are placed by the web site owner in some register on their visitors' device in order to be able to re-identify the visitor once the page reloads. First-party cookies can be related to technical features on a web site (such as remembering language settings or the contents of a shopping basket), or related to commercial features of the web site owners' activities (such as being able to trace a visitors' behaviour over the duration of their visit, or over much longer time periods, often for years, in order to be able to serve advertisements to the users or to get usage statistics to guide later changes to the web site that are envisaged to make the web site more attractive to recurring users). First-party cookies may come from services provided by the web site owner (language settings in a Content Management System) or from services used by the web site owner (analytics tools)."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/donate.html.eex:8
+msgid "<strong>If you would like to make a contribution</strong> to the general funds of Dataskydd.net (helping both Webbkoll as well as our other activities), you can transfer money to the following bank account:"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/failed.html.eex:18
+msgid "<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href=\"mailto:info@dataskydd.net\">send us an email</a> (and tell us what URL you tried)! You can also try <a href=\"https://privacyscore.org/\">PrivacyScore</a> as an alternative."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_cookies.html.eex:39
+msgid "<strong>Third-party cookies</strong> are placed by a service affiliated with the web site owner on the devices of visitors to the web site in order to be able to re-identity the visitor once the page reloads. Third-party cookies are related to commercial features of a web site owners' activities, usually advertising, but may also relate to technical feature in plug-ins used by a web site (such as language settings)."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_requests.html.eex:25
+#: lib/webbkoll_web/templates/site/_requests.html.eex:35
+msgid "A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:26
+msgid "A webstore may for instance hand over the task of profiling visitors to an advertisement agency, and a public authority may have constructed its website in a way that automatically hands over behavioural data to advertisers. Advertisers are the most common and least transparent form of third parties."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:64
+#: lib/webbkoll_web/templates/layout/app.html.eex:48
+#: lib/webbkoll_web/templates/site/about.html.eex:2
+msgid "About"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:64
+msgid "Accountability"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:49
+msgid "Accuracy"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:23
+msgid "Alternatives and resources"
 msgstr ""
 
 #, elixir-format
@@ -986,113 +156,180 @@ msgid "An error occurred"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:167
+#: lib/webbkoll_web/templates/site/faq.html.eex:33
+msgid "An individual should be able to understand the terms of interactions with others. (5(1)(a))."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:23
+msgid "Analyze"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_https.html.eex:52
+msgid "Analyze %{host} on SSL Labs"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/views/site_view.ex:198
+#: lib/webbkoll_web/views/site_view.ex:203
+msgid "Art. "
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:45
+msgid "As little data as possible to achieve the purpose should be collected .(5(1)(c))"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/donate.html.eex:34
+msgid "At the moment we cannot accept Bitcoin or any other cryptocurrency."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:14
+msgid "Authors and tech"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:12
+msgid "Behavioural monitoring, or ”profiling”, is when someone monitors how a given person, or set of persons, typically behave. This includes monitoring whether a particular group, say young people or women of a median income, frequently visit certain deeplinks, have to look up certain vocabulary or that they end up on the website through using a particular search engine or social platform. Behavioural monitoring is used to discover what certain classes of people may be assumed to find interesting, difficult or funny."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/views/site_view.ex:168
 msgid "Blocking inline styles can help prevent attackers from modifying the contents or appearance of your page. Moving styles to external stylesheets can also help make your site more maintainable."
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:164
+#: lib/webbkoll_web/views/site_view.ex:165
 msgid "Blocking the execution of inline JavaScript provides CSP's strongest protection against cross-site scripting attacks. Moving JavaScript to external files can also help make your site more maintainable."
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:170
+#: lib/webbkoll_web/views/site_view.ex:171
 msgid "Blocking the execution of plug-ins via <code>object-src 'none'</code> or as inherited from <code>default-src</code> can prevent attackers from loading Flash or Java in the context of your page."
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:161
+#: lib/webbkoll_web/views/site_view.ex:162
 msgid "Blocking the use of JavaScript's <code>eval()</code> function can help prevent the execution of untrusted code."
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:160
+#: lib/webbkoll_web/views/site_view.ex:161
 msgid "Blocks execution of JavaScript's <code>eval()</code> function by not allowing <code>'unsafe-eval'</code> inside <code>script-src</code>"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:163
+#: lib/webbkoll_web/views/site_view.ex:164
 msgid "Blocks execution of inline JavaScript by not allowing <code>'unsafe-inline'</code> inside <code>script-src</code>"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:169
+#: lib/webbkoll_web/views/site_view.ex:170
 msgid "Blocks execution of plug-ins, using <code>object-src</code> restrictions"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:166
+#: lib/webbkoll_web/views/site_view.ex:167
 msgid "Blocks inline styles by not allowing <code>'unsafe-inline'</code> inside <code>style-src</code>"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:151
+#: lib/webbkoll_web/views/site_view.ex:152
 msgid "Blocks loading of active content over HTTP or FTP"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:154
+#: lib/webbkoll_web/views/site_view.ex:155
 msgid "Blocks loading of passive content over HTTP or FTP"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/index.html.eex:3
+#: lib/webbkoll_web/templates/site/_https.html.eex:91
+msgid "By GDPR %{art_25}, a controller is responsible for implementing state of the art data protection by design and by default. Encrypted connections are a well-established technology to protect the privacy of web visitors against eavesdroppers on the wire."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/index.html.eex:12
+msgid "Check"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:16
+msgid "Check again"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/index.html.eex:8
 msgid "Check your site!"
 msgstr ""
 
 #, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:89
-#: lib/webbkoll_web/templates/site/status.html.eex:8
+#: lib/webbkoll_web/templates/site/status.html.eex:7
 msgid "Checked URL:"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:139
+#: lib/webbkoll_web/templates/site/_request_table.html.eex:7
+#: lib/webbkoll_web/templates/site/_request_table.html.eex:37
+msgid "Classification"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/views/site_view.ex:140
 msgid "Clickjacking protection, using <code>frame-ancestors</code>"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:80
+#: lib/webbkoll/helpers.ex:70
+msgid "Consider a self-hosted platform."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/views/site_view.ex:81
 msgid "Content Security Policy (CSP) header cannot be parsed successfully."
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:83
+#: lib/webbkoll_web/views/site_view.ex:84
 msgid "Content Security Policy (CSP) header not implemented."
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:70
+#: lib/webbkoll_web/views/site_view.ex:71
 msgid "Content Security Policy (CSP) implemented unsafely. This includes <code>'unsafe-inline'</code> or <code>data:</code> inside <code>script-src</code>, overly broad sources such as <code>https:</code> inside <code>object-src</code> or <code>script-src</code>, or not restricting the sources for <code>object-src</code> or <code>script-src</code>."
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:45
+#: lib/webbkoll_web/views/site_view.ex:46
 msgid "Content Security Policy (CSP) implemented with <code>default-src 'none'</code> and no <code>'unsafe'</code>"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:55
+#: lib/webbkoll_web/views/site_view.ex:56
 msgid "Content Security Policy (CSP) implemented with unsafe sources inside <code>style-src</code>. This includes <code>'unsafe-inline'</code>, <code>data:</code> or overly broad sources such as <code>https:</code>."
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:50
+#: lib/webbkoll_web/views/site_view.ex:51
 msgid "Content Security Policy (CSP) implemented without <code>'unsafe-inline'</code> or <code>'unsafe-eval'</code>"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:65
+#: lib/webbkoll_web/views/site_view.ex:66
 msgid "Content Security Policy (CSP) implemented, but allows <code>'unsafe-eval'</code>"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:60
+#: lib/webbkoll_web/views/site_view.ex:61
 msgid "Content Security Policy (CSP) implemented, but secure site allows images or media to be loaded over HTTP"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:75
+#: lib/webbkoll_web/views/site_view.ex:76
 msgid "Content Security Policy (CSP) implemented, but secure site allows resources to be loaded over HTTP"
 msgstr ""
 
@@ -1108,18 +345,146 @@ msgid "Country"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:142
-msgid "Deny by default, using <code>default-src 'none'</code>"
+#: lib/webbkoll_web/templates/site/faq.html.eex:40
+msgid "Data collection should occur only for specific and limited purposes. These purposes should be explicit and understandable. (5(1)(b))"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:44
+msgid "Data minimisation"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:6
+msgid "Data protection is a human right in the European Union. It’s a collection of administrative and formal requirements for how to collect, process and use data relating to individuals. The purpose of this protection is to provide individuals with the means necessary to exercise their right to privacy. Data protection law guarantees transparency, choice and knowledge for individuals with regards to who influences them, and under which conditions."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:60
+msgid "Data should be processed in a secure way, both organisatorially and technically."
 msgstr ""
 
 #, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:143
+msgid "Deny by default, using <code>default-src 'none'</code>"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/views/site_view.ex:144
 msgid "Denying by default using <code>default-src 'none'</code> can ensure that your Content Security Policy doesn't allow the loading of resources you didn't intend to allow."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:47
+msgid "Depending on the purposes for collecting personal data, data minimisation may mean different things. The Web Privacy Check makes it easy to find out how not to collect personal data and how not to inadvertently leak personal data. Should one want to collect personal data anyway, one needs to be transparent about such collection and one also needs to follow the rules in chapter 4 of the regulation. The rules of how to collect and process personal data are in place to ensure that anyone who chooses a purpose for data collection also reflects on the consequences of such choices."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/layout/app.html.eex:92
+msgid "Developed by"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_cookie_table.html.eex:6
+#: lib/webbkoll_web/templates/site/_cookie_table.html.eex:18
+msgid "Domain"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:75
+#: lib/webbkoll_web/templates/site/donate.html.eex:2
+msgid "Donate"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:286
+msgid "Error"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/index.html.eex:23
+msgid "Even if you enter https://, http:// will be checked, to see if it redirects to https:// automatically (redirects are followed)."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_cookie_table.html.eex:9
+#: lib/webbkoll_web/templates/site/_cookie_table.html.eex:21
+msgid "Expires on"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:51
+#: lib/webbkoll_web/templates/layout/app.html.eex:51
+#: lib/webbkoll_web/templates/site/faq.html.eex:2
+msgid "FAQ"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/failed.html.eex:2
+msgid "Failed"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/index.html.eex:26
+msgid "Feedback is appreciated: send <a href=\"mailto:info@dataskydd.net\">email</a> or <a href=\"https://github.com/andersju/webbkoll\">open an issue</a>."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/layout/app.html.eex:98
+msgid "Feedback? Questions? <a href=\"mailto:info@dataskydd.net\">info@dataskydd.net</a>"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:90
+msgid "Final URL:"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll/helpers.ex:90
+msgid "Fonts can easily be self-hosted. The tool <a href=\"https://google-webfonts-helper.herokuapp.com/fonts\">google-webfonts-helper</a> lets you select one or more fonts, generates the proper CSS and prepares a zip file with the fonts. For a command-line alternative, the shell script <a href=\"https://github.com/neverpanic/google-font-download\">google-font-download</a> provides similar functionality."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:26
+msgid "For more rigorous and systematic testing we recommend that you check out <a href=\"https://github.com/mozilla/OpenWPM\">OpenWPM</a>, which can be (and is) used to conduct large-scale studies."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:21
+msgid "For non-EU territories, it depends (GDPR %{art_44}). For a website, transfers will probably have to rely on adequacy decisions (%{art_45}) made by the European Commission when a third territory has been deemed to have appropriate data protection safe guards in its legislation. However, adequacy decisions cannot always be trusted, as demonstrated in the EU Court of Justice 2015 (C-362/14). Binding corporate rules (%{art_47}) or standard clauses (%{art_46}) may also be used to transfer data, but in the absence of rulings by courts and data protection authorities this is still legally uncertain territory."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_csp.html.eex:108
+msgid "GDPR Art. %{art_32_2} makes clear that measures should be taken against unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed. CSP is a relatively simple way of ensuring that your web visitors do not end up being put in contact with someone that either they - or you - did not anticipate for them to contact."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_https.html.eex:90
+msgid "GDPR:"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_csp.html.eex:107
+#: lib/webbkoll_web/templates/site/_headers.html.eex:71
+#: lib/webbkoll_web/templates/site/_referrers.html.eex:70
+#: lib/webbkoll_web/templates/site/_sri.html.eex:103
+msgid "GDPR: "
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/index.html.eex:24
+msgid "Generally things work, but some sites (sometimes) don't work for various reasons."
 msgstr ""
 
 #, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:2
 msgid "HSTS policy for https://%{host}:"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_headers.html.eex:3
+msgid "HTTP headers"
 msgstr ""
 
 #, elixir-format
@@ -1133,8 +498,34 @@ msgid "HTTPS by default, but with issues"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/status.html.eex:7
-msgid "ID:"
+#: lib/webbkoll_web/templates/site/status.html.eex:2
+msgid "Hang tight..."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_request_table.html.eex:4
+#: lib/webbkoll_web/templates/site/_request_table.html.eex:15
+msgid "Host"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:66
+msgid "How Webbkoll works, who made it, and alternative services."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:5
+msgid "How it works"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:159
+msgid "How this website is doing with regards to privacy."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:77
+msgid "How you can support our work."
 msgstr ""
 
 #, elixir-format
@@ -1154,8 +545,23 @@ msgid "If you get the error ERR_CERT_SYMANTEC_LEGACY, it's because the site uses
 msgstr ""
 
 #, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:8
+msgid "In May 2018 a new law about data protection will enter into force in the European Union. It is a regulation and will apply equally in all the 28 member states."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:24
+msgid "In modern web development, it’s become common for a website not to be run from only one location. When you visit a website, you’re not only entering into contact with those running the website, but also all the businesses and organisations which collaborate with the managers of the websites. These may be internet service providers, script providers, font providers, analytics tools providers and a range of other providers. If the manager of the websites hands over information about visitors to any of these third-parties, it is a form of gossiping since it is usually not evident to the visitors that this type of information is being handed over."
+msgstr ""
+
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:29
 msgid "Info"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_requests.html.eex:4
+msgid "Insecure first-party requests"
 msgstr ""
 
 #, elixir-format
@@ -1164,18 +570,86 @@ msgid "Insecure: HTTPS not used by default"
 msgstr ""
 
 #, elixir-format
+#: lib/webbkoll/helpers.ex:101
+msgid "Install <a href=\"https://matomo.org/\">Matomo</a> (formerly Piwik) on your own server. It's easy to install and easy to upgrade."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:59
+msgid "Integrity and confidentiality"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:229
+msgid "Invalid domain: %{domain}"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:14
+msgid "It is also the categorisation of individuals into these groups. Once a web visitor is stuffed into a particular category, they may be positively or negatively discriminated against because of the categorisation."
+msgstr ""
+
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:28
 msgid "Key"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:152
+#: lib/webbkoll_web/templates/site/faq.html.eex:32
+msgid "Lawfulness, fairness and transparency"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:9
+msgid "Limitations"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/views/site_view.ex:153
 msgid "Loading JavaScript or plugins can allow a man-in-the-middle to execute arbitrary code or your website. Restricting your policy and changing links to HTTPS can help prevent this."
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:149
+#: lib/webbkoll_web/views/site_view.ex:150
 msgid "Malicious JavaScript or content injection could modify where sensitive form data is submitted to or create additional forms for data exfiltration."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_cookie_table.html.eex:7
+#: lib/webbkoll_web/templates/site/_cookie_table.html.eex:19
+msgid "Name"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:38
+#: lib/webbkoll_web/templates/layout/app.html.eex:45
+#: lib/webbkoll_web/templates/site/news.html.eex:2
+msgid "News"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_requests.html.eex:24
+msgid "No third-party requests."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/layout/app.html.eex:92
+msgid "Originally funded by"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/donate.html.eex:18
+msgid "Our address (if necessary):"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/donate.html.eex:27
+msgid "Our bank's address (if necessary):"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_cookies.html.eex:54
+msgid "Particular care must be taken with regards to the period of storage (GDPR %{gdpr_art_5_1_e}). While it is technically easy for a web site owner to set the duration of a information stored in the form of cookies to a long period time, the principle of storage limitation implies a balancing act between the interest of tracking a visitors' behaviour and the interest of the visitor to keep their behaviour private. It's been established that a reasonable storage period does not exceed <a href=\"%{ec_cookies}\">one year</a>."
 msgstr ""
 
 #, elixir-format
@@ -1185,18 +659,114 @@ msgid "Pass"
 msgstr ""
 
 #, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:50
+msgid "Personal data shall be accurate, and if they aren’t, there must be a procedure to correct them."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:55
+msgid "Personal data should not be saved or stored longer than necessary."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/index.html.eex:20
+msgid "Please note:"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/donate.html.eex:16
+msgid "Please write \"Donation\" in the message field. Any amount is much appreciated! (From a Swedish bank account, the number would be 52031057715.)"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/failed.html.eex:4
+msgid "Processing %{url} failed at %{time}."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:151
+msgid "Processing failed"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:16
+msgid "Profiling is mostly used in the advertisement industry to decide which type of advertisements a particular individual should be exposed to. Parents of small children, or people who know parents of small children, may receive ads for nappies, prams or family vacations. Increasingly, profiling is used to determine what contents are served by newspapers. The above mentioned groups may for instance receive short articles about new-borns if they are queueing (and have little time) or longer articles about new-borns if they are on a train (and have more time)."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:18
+msgid "Profiling may additionally be used to shape political opinions, for instance through targetting specific groups with political information, or to enact measures against groups based on their assumed characteristics. This form of political work is called ”nudging” and may also be deployed to increase acceptance of specific measures (like the construction of a public park) in specific groups (such as the individuals living near the envisaged park)."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:39
+msgid "Purpose limitation"
+msgstr ""
+
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_raw_headers.html.eex:3
 msgid "Raw headers"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:145
+#: lib/webbkoll_web/views/site_view.ex:199
+#: lib/webbkoll_web/views/site_view.ex:204
+msgid "Rec. "
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:40
+msgid "Recent changes on Webbkoll."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/views/site_view.ex:26
+msgid "Referrers are (probably) leaked"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/views/site_view.ex:25
+msgid "Referrers leaked"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/views/site_view.ex:23
+msgid "Referrers not leaked"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/views/site_view.ex:24
+msgid "Referrers partially leaked"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/views/site_view.ex:146
 msgid "Restricts use of the <code>&lt;base&gt;</code> tag by using <code>base-uri 'none'</code>, <code>base-uri 'self'</code>, or specific origins"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:148
+#: lib/webbkoll_web/views/site_view.ex:149
 msgid "Restricts where <code>&lt;form&gt;</code> contents may be submitted by using <code>form-action 'none'</code>, <code>form-action 'self'</code>, or specific URIs"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:5
+msgid "Results for"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:158
+msgid "Results for %{url}"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:36
+msgid "See also <a href=\"https://infosec-handbook.eu/blog/online-assessment-tools/\">Pros and cons of online assessment tools for web server security</a> from InfoSec Handbook (a site that also has many other relevant articles)."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll/helpers.ex:65
+msgid "Self-host the files."
 msgstr ""
 
 #, elixir-format
@@ -1210,8 +780,44 @@ msgid "Server location for <strong>%{domain}</strong> (%{host_ip}) could not be 
 msgstr ""
 
 #, elixir-format
+#: lib/webbkoll_web/templates/site/_referrers.html.eex:71
+msgid "Setting referrer policy is an easy way to do data minimization (%{art_5_1_f}) and help ensure that you don't transfer or disclose personal data needlessly (%{art_32_2})."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:67
+msgid "Since responsibility can be a difficult burden, the Web Privacy Check of Dataskydd.net has a large set of recommendations for data protection which may go further than what one could be legally liable for. We want to enable the best possible data protection with the least amount of administrative burdens. One of the reasons the rules of the data protection regulation make it seem bureaucratic and boring not to data minimise, is so that each actor in society who wishes to influence others has to consider carefully the way in which they use such power."
+msgstr ""
+
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:16
 msgid "Some sites use CDNs &ndash; <a class=\"external\" href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:189
+msgid "Sorry, bots aren't allowed."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:119
+#: lib/webbkoll_web/controllers/site_controller.ex:122
+msgid "Status"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/status.html.eex:8
+msgid "Status:"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:54
+msgid "Storage limitation"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_cookies.html.eex:43
+msgid "Storing information or gaining access to information stored in the visitors' devices, for instance in the form of cookies, has been subject to sui generis legislation in the European Union (<a href=\"%{epd}\">ePD, Art. 5.3</a>). These sui generis laws have tried to make a distinction between information stored to support technical features and information stored to support commercial features. In practice, poor enforcement of these rules has made the legal landscape unclear. Because there exists no legal duty for citizens to receive better targeted advertisement, nor a legal duty for citizens to assist web developers in improving web sites, it's doubtful that a legal basis exists for storing information to support commercial features without the consent of the web visitor (GDPR %{gdpr_art_7}). It is argued that the legitimate interests of a web site owner (%{gdpr_art_6_1_f}, %{gdpr_art_6_4}) may nevertheless enable them to subject a visitor to targeted ads or cause a visitor to assist the web developers. Then there must exist relevant and appropriate relationship between the web visitor and the web site owner in situations (GDPR %{gdpr_rec_47}), which calls into question the use of third-party service first-party cookies. In either case, if the legitimate interest legal basis for processing is invoked, adequate security measures must be undertaken (GDPR %{gdpr_art_32})."
 msgstr ""
 
 #, elixir-format
@@ -1250,24 +856,165 @@ msgid "Subresource Integrity (SRI) not implemented, but all resources are loaded
 msgstr ""
 
 #, elixir-format
+#: lib/webbkoll_web/templates/layout/app.html.eex:99
+msgid "Support us"
+msgstr ""
+
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:28
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:10
 msgid "Test"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:146
+#: lib/webbkoll_web/templates/layout/app.html.eex:89
+msgid "Test results are stored in memory on our server for 24 hours. We don't show a list of tested URLs. We don't use URLs or test results. We don't log IP addresses and we don't use cookies."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:30
+msgid "The <a href=\"http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679\">general data protection regulation of the European Union</a> enters into force on the 25th of May 2018 and concerns the balancing of power being those influencing individuals (typically companies and public authorities) and the individuals themselves. The Web Privacy Check is a tool to find out who is collecting information about individuals, and what can be done to stop invisible tracking."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/views/site_view.ex:147
 msgid "The <code>base</code> tag can be used to trick your site into loading scripts from untrusted origins."
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:140
+#: lib/webbkoll_web/templates/site/faq.html.eex:62
+msgid "The Dataskydd.net Web Privacy Check makes it easy to see which technical protection mechanisms for data protection are in place in a given website. We have identified measures which should not require large organisational changes, or increase web management costs. Most of our recommendations are simple enough to implement, and they are cost neutral. Our goal is to make it as easy as possible for individuals to exercise their rights to privacy and data protection, and also to provide web designers and managers with simple ”rules of thumb” to help individuals exercise these rights."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:35
+msgid "The Dataskydd.net Web Privacy Check see lawfulness, fairness and transparency as a requirement that individuals should understand with whom they are in contact by visiting a website. If an advertisement agency or some other company, such as an internet service provider, has easy access to behavioural data the individual should know. If an individual may be influenced by these parties, again they should be able to know. An individual should not have to master web development or  have a need for advanced technical tools to find this out. While the principle of transparency is simple, permissible deviations from transparency are listed in articles 13-20 of the regulation."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/index.html.eex:25
+msgid "The backend is currently running on a single server with limited resources, so in case of usage spikes, waiting times can be long. (But you can <a href=\"https://github.com/andersju/webbkoll\">run your own instance</a>!)"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/layout/app.html.eex:97
+msgid "The code is <a href=\"https://github.com/andersju/webbkoll\">available on GitHub</a>."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:21
+msgid "The initial development of Webbkoll was funded by <a href=\"https://www.internetfonden.se\">Internetfonden</a> / <a href=\"https://www.iis.se\">IIS</a> in 2016. In late 2018 we received a small grant from <a href=\"https://digitalrights.fund/\">Digital Rights Fund</a>. Other than that, we maintain this tool in our spare time. You can <a href=\"%{donate}\">support our work</a>, if you wish."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:65
+msgid "The one responsible for the website is responsible for adherence to these principles."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:24
+msgid "The only other similar service that we are aware of <em>that uses a real browser for testing</em> is <a href=\"https://privacyscore.org/\">PrivacyScore</a> (open source). It does many of the same checks as Webbkoll, but additionally also checks e.g. TLS, and lets you create a list of sites to check (and rank)."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:42
+msgid "The purpose for collecting data may be interpreted broadly, and means anything from marketing to improving the web. At Dataskydd.net Web Privacy Check we prefer methods of improving the web that do not include collecting data from private persons. That’s why we’ve compiled a large number of recommendations and tools which minimise data collection."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:9
+msgid "The server <strong>%{domain}</strong> (%{host_ip}) appears to have been located in <strong>%{country}</strong> during our test."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll/helpers.ex:97
+msgid "The site appears to use Matomo/Piwik, but not self-hosted. This means visitors are exposed to a third party."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll/helpers.ex:64
+msgid "The site is loading libraries from one or more CDN:s."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll/helpers.ex:75
+msgid "The site is using Google Analytics. While this is a powerful tool, we think you should respect your users' privacy and not tell Google about them &mdash; at least not without your users' consent."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll/helpers.ex:69
+msgid "The site is using the Disqus comment system."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll/helpers.ex:86
+msgid "The site loads fonts from Google Fonts. While these are hosted on resource-specific domains and no cookies are sent, Google <em>could</em> possibly cross-reference the data (IP and browser fingerprint) with other Google services to identify visitors. Do they? Their own <a href=\"https://developers.google.com/fonts/faq?hl=en#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users\">FAQ</a> is vague: <em>\"We do log records of the CSS and the font file requests, and access to this data is on a need-to-know basis and kept secure.\"</em> What \"need-to-know basis\" means is not explained."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/views/site_view.ex:141
 msgid "The use of CSP's <code>frame-ancestors</code> directive offers fine-grained control over who can frame your site."
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:155
+#: lib/webbkoll_web/controllers/site_controller.ex:53
+msgid "The what and why of data protection and the principles of the EU general data protection regulation."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_requests.html.eex:21
+#: lib/webbkoll_web/templates/site/_requests.html.eex:29
+msgid "Third-party requests"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:52
+msgid "This principle above all concerns information registered by public authorities or companies, for instance in the credit check industry. In web development, it is more common with ”fuzzy” data sets, and the consequences of being erroneously categorised in a given profiling operation is normally not worse than that one receives online advertisement which is not specifically targetted to ones own group."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:57
+msgid "This right ties into purpose limitation and data minisation. If one follows the recommendation of the Dataskydd.net Web Privacy Check, one does not have to concern oneself so much with this principle."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/views/site_view.ex:156
 msgid "This site's Content Security Policy allows the loading of passive content such as images or videos over insecure protocols such as HTTP or FTP. Consider changing them to load them over HTTPS."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:25
+msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/index.html.eex:16
+msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy. "
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:12
+msgid "This tool is primarly meant to be used as a starting point for web developers. It can only help with one piece of the puzzle."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/index.html.eex:22
+msgid "This tool simulates a normal browser visit with Do Not Track disabled (browser default) and with no add-ons."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:37
+msgid "Transparency also means a right to find out when something gone wrong: if you’ve collected information about individuals which have leaked or disappeared, the individual has a right to know. This is called ”personal data breach notification” and specific rules are in article 34 of the regulation."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/failed.html.eex:16
+msgid "Try again?"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:279
+msgid "Trying same host too frequently. Try again in a minute."
 msgstr ""
 
 #, elixir-format
@@ -1277,81 +1024,178 @@ msgid "URLs"
 msgstr ""
 
 #, elixir-format
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:18
+msgid "Under the GDPR, all EU countries are considered equally trustworthy, so there is no particular reason under the GDPR to consider any EU country more or less reliable or desirable than any other. The importance of the location of a server comes into play only under GDPR %{art_23}, Restrictions, where member states may invoke a number of reasons, notably national security, that enable them to void protections for visitors or web service providers.\""
+msgstr ""
+
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:81
 msgid "Unknown"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:157
+#: lib/webbkoll_web/views/site_view.ex:158
 msgid "Uses CSP3's <code>'strict-dynamic'</code> directive to allow dynamic script loading (optional)"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:92
+#: lib/webbkoll_web/templates/site/_cookie_table.html.eex:8
+#: lib/webbkoll_web/templates/site/_cookie_table.html.eex:20
+#: lib/webbkoll_web/templates/site/_localstorage.html.eex:29
+msgid "Value"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:19
+msgid "We don't provide an API as we have limited resources, but <a href=\"https://github.com/andersju/webbkoll\">the code is available</a> under the MIT license. See also the options below."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/donate.html.eex:6
+msgid "We operate on a very small budget, and servers are usually our main expense; most work is done in our free time. Every euro (or krona) counts!"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_request_table.html.eex:44
+msgid "We use Disconnect's <a href=\"%{url}\">open source list of trackers</a> to classify hosts."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:22
+msgid "We use the word gossiping to mean that information about somebody’s behaviour, reading habits or preferences is handed over to somebody other than the actor responsible for the website."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:7
+msgid "Webbkoll attempts to simulate what happens when a user visits a page with a typical browser without interacting with anything. The specified page is visited with <a href=\"https://www.chromium.org/\">Chromium</a>, the browser that Google Chrome is based on; i.e., a typical end-user browser. Data (requests/responses, cookies, etc.) is collected, analyzed and presented. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled (since this is the default setting in most browsers). Nothing is clicked, no consent is given."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:10
+msgid "Webbkoll can only observe what happens when visiting a single page. It cannot tell you how the website is doing as a whole, how data is storned internally, what parties the data might be shared with, if the privacy policy is adequate, how the internal procedures are, and so on and so forth. A \"good\" Webbkoll doesn't mean that everything is well (but a \"bad\" result certainly means that not all is well)."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/donate.html.eex:4
+msgid "Webbkoll is a project by <a href=\"https://dataskydd.net/\">Dataskydd.net Sverige</a>, a Swedish non-governmental organization (organization number 802495-4797) working on making data protection easy in law and in practice. We are not affiliated with any political party."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:15
+msgid "Webbkoll is developed by <a href=\"https://anders.unix.se/\">Anders Jensen-Urstad</a> (programming, design) and <a href=\"https://twitter.com/teirdes\">Amelia Andersdotter</a> (FAQ, legislative information) of <a href=\"https://dataskydd.net/\">Dataskydd.net</a>, a Swedish non-governmental organization working on making data protection easy in law and in practice. We are not affiliated with any political party."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:3
+msgid "Webbkoll monitors privacy-enhancing features on websites, and helps you find out who is letting you exercise control over your privacy. We check to what extent a website monitors your behaviour and how much they gossip about the monitoring to third parties, based on what can be observed when visiting a given page. We’ve also compiled a set of recommendations for how to not track or gossip in digital environments."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/about.html.eex:17
+msgid "Webbkoll uses <a href=\"http://www.phoenixframework.org/\">Phoenix Framework</a> (Elixir), <a href=\"https://github.com/GoogleChrome/puppeteer\">Puppeteer</a> and numerous open source libraries; <a href=\"https://github.com/andersju/webbkoll#credits--licenses\">see here</a> for specifics."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:28
+msgid "What are the principles of the EU general data protection regulation?"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:20
+msgid "What do you mean by ”gossiping to third-parties”?"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:4
+msgid "What is data protection?"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/faq.html.eex:10
+msgid "What is ”behavioural monitoring”?"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_what.html.eex:3
+msgid "What this tool checks (and doesn't check) "
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/views/site_view.ex:93
 msgid "X-Content-Type-Options header cannot be recognized"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:89
+#: lib/webbkoll_web/views/site_view.ex:90
 msgid "X-Content-Type-Options header not implemented"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:86
+#: lib/webbkoll_web/views/site_view.ex:87
 msgid "X-Content-Type-Options header set to \"nosniff\""
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:107
+#: lib/webbkoll_web/views/site_view.ex:108
 msgid "X-Frame-Options (XFO) header cannot be recognized"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:104
+#: lib/webbkoll_web/views/site_view.ex:105
 msgid "X-Frame-Options (XFO) header not implemented"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:98
+#: lib/webbkoll_web/views/site_view.ex:99
 msgid "X-Frame-Options (XFO) header set to SAMEORIGIN or DENY"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:101
+#: lib/webbkoll_web/views/site_view.ex:102
 msgid "X-Frame-Options (XFO) header uses ALLOW-FROM uri directive"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:95
+#: lib/webbkoll_web/views/site_view.ex:96
 msgid "X-Frame-Options (XFO) implemented via the CSP frame-ancestors directive"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:125
+#: lib/webbkoll_web/views/site_view.ex:126
 msgid "X-XSS-Protection header cannot be recognized"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:122
+#: lib/webbkoll_web/views/site_view.ex:123
 msgid "X-XSS-Protection header not implemented"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:116
+#: lib/webbkoll_web/views/site_view.ex:117
 msgid "X-XSS-Protection header not needed due to strong Content Security Policy (CSP) header"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:119
+#: lib/webbkoll_web/views/site_view.ex:120
 msgid "X-XSS-Protection header set to \"0\" (disabled)"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:113
+#: lib/webbkoll_web/views/site_view.ex:114
 msgid "X-XSS-Protection header set to \"1\""
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:110
+#: lib/webbkoll_web/views/site_view.ex:111
 msgid "X-XSS-Protection header set to \"1; mode=block\""
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/controllers/site_controller.ex:265
+msgid "You're requesting too frequently. Install locally?"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_requests.html.eex:33
+msgid "to"
 msgstr ""
