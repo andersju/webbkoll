@@ -12,42 +12,42 @@
   
   <div class="alpha">
     <%= if @site.referrer.header do %>
-    <p>Referrer Policy set to <code><%= @site.referrer.header %></code> in <code>Referrer-Policy</code> HTTP header.</p>
+    <p><%= gettext(~s|Referrer Policy set to <code>%{value}</code> in <code>Referrer-Policy</code> HTTP header.|, value: @site.referrer.header) |> raw() %></p>
     <% end %>
 
     <%= if @site.referrer.http_equiv do %>
-    <p>Referrer Policy set to <code><%= @site.referrer.http_equiv %></code> in <code>meta http-equiv</code> element.</p>
+    <p><%= gettext(~s|Referrer Policy set to <code>%{value}</code> in <code>meta http-equiv</code> element.|, value: @site.referrer.http_equiv) |> raw() %></p>
     <% end %>
 
     <%= if @site.referrer.meta do %>
-    <p>Referrer Policy set to <code><%= @site.referrer.meta %></code> in <code>meta</code> element.</p>
+    <p><%= gettext(~s|Referrer Policy set to <code>%{value}</code> in <code>meta</code> element.|, value: @site.referrer.meta) |> raw() %></p>
     <% end %>
 
     <%= if !@site.referrer.header && !@site.referrer.http_equiv && !@site.referrer.meta do %>
-    <p>Referrer Policy not set. This means that the default value <code>no-referrer-when-downgrade</code>, leaking referrers in many situations, is used.</p>
+    <p><%= gettext(~s|Referrer Policy not set. This means that the default value <code>no-referrer-when-downgrade</code>, leaking referrers in many situations, is used.|) |> raw() %></p>
     <% end %>
 
     <aside class="howto">
       <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="howto-referrer">
-        How to implement
+        <%= gettext("How to implement") %>
       </span>
 
       <div id="howto-referrer">
-        <p>A referrer policy can easily be set with a &lt;meta&gt; element in your HTML. Simply include this inside the &lt;head&gt; section:</p>
+        <p><%= gettext(~s|A referrer policy can easily be set with a &lt;meta&gt; element in your HTML. Simply include this inside the &lt;head&gt; section:|) |> raw() %></p>
 
         <p><code>&lt;meta name="referrer" content="no-referrer"&gt;</code></p>
 
-        <p>Alternatively, set the <code>Referrer-Policy</code> HTTP header, e.g.:</p>
+        <p><%= gettext(~s|Alternatively, set the <code>Referrer-Policy</code> HTTP header, e.g.:|) |> raw() %></p>
 
         <p><code>Referrer-Policy: no-referrer</code></p>
 
-        <p>If a referrer policy is delivered via both Referrer-Policy header and meta element, the meta element's policy takes precedence.</p>
+        <p><%= gettext(~s|If a referrer policy is delivered via both Referrer-Policy header and meta element, the meta element's policy takes precedence.|) |> raw() %></p>
 
-        <p>If multiple policy values are specified, the browser will use the last one, ignoring unknown values (fallback values should thus appear first). Multiple values should be separated by commas, e.g..:</p>
+        <p><%= gettext("If multiple policy values are specified, the browser will use the last one, ignoring unknown values (fallback values should thus appear first). Multiple values should be separated by commas, e.g..:") %></p>
 
         <p><code>&lt;meta name="referrer" content="no-referrer, same-origin"&gt;</code></p>
 
-        <p><a href="https://www.w3.org/TR/referrer-policy/">Several policies are offered</a>, such as <code>origin</code> (strips everything except the origin) and <code>origin-when-cross-origin</code> (sends full URL with same-origin requests, otherwise stripped). We recommend <strong><code>no-referrer</code></strong>, which kills the referrer header entirely for all requests, no matter the destination; or <strong><code>same-origin</code></strong>, which kills the referrer for third-party requests but not for requests to the same origin.</p>
+        <p><%= gettext(~s|<a href="https://www.w3.org/TR/referrer-policy/">Several policies are offered</a>, such as <code>origin</code> (strips everything except the origin) and <code>origin-when-cross-origin</code> (sends full URL with same-origin requests, otherwise stripped). We recommend <strong><code>no-referrer</code></strong>, which kills the referrer header entirely for all requests, no matter the destination; or <strong><code>same-origin</code></strong>, which kills the referrer for third-party requests but not for requests to the same origin.|) |> raw() %></p>
 
         <ul class="default">
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Referrer-Policy</a> [developer.mozilla.org]</li>
@@ -59,11 +59,11 @@
     </aside>
   </div>
   <aside class="beta">
-    <p>When you click on a link, your browser will typically send the HTTP referer [sic] header to the webserver where the destination webpage is at. The header contains the full URL of the page you came from. This lets sites see where traffic comes from. The header is also sent when external resources (such as images, fonts, JS and CSS) are loaded.</p>
+    <p><%= gettext("When you click on a link, your browser will typically send the HTTP referer [sic] header to the webserver where the destination webpage is at. The header contains the full URL of the page you came from. This lets sites see where traffic comes from. The header is also sent when external resources (such as images, fonts, JS and CSS) are loaded.") %></p>
 
-    <p>The referrer header is privacy nightmare as it allows websites and services to track you across the web and learn about your browsing habits (and thus possibly private, sensitive information), particularly when combined with cookies.</p>
+    <p><%= gettext("The referrer header is privacy nightmare as it allows websites and services to track you across the web and learn about your browsing habits (and thus possibly private, sensitive information), particularly when combined with cookies.") %></p>
 
-    <p>By setting a Referrer Policy, it's possible for websites to tell browsers to not leak referrers. Referrer Policy lets you specify a policy that's applied to all links clicked, as well as all other requests generated by the page (images, JS, etc.).</p>
+    <p><%= gettext("By setting a Referrer Policy, it's possible for websites to tell browsers to not leak referrers. Referrer Policy lets you specify a policy that's applied to all links clicked, as well as all other requests generated by the page (images, JS, etc.).") %></p>
 
     <p>
       <%= icon(:law) %>

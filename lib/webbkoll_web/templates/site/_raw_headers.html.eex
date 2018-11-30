@@ -7,8 +7,8 @@
   <table>
     <thead>
       <tr>
-        <th>Header</th>
-        <th>Value</th>
+        <th><%= gettext("Header") %></th>
+        <th><%= gettext("Value") %></th>
       </tr>
     </thead>
     <tbody>

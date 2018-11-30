@@ -16,15 +16,15 @@
     <%= if @site.scheme == "https" do %>
       <p><%= raw(gettext "<code>%{domain}</code> uses HTTPS by default.", domain: @site.host) %></p>
 
-      <p>Chromium reports the following:</p>
+      <p><%= gettext("Chromium reports the following:") %></p>
 
       <table>
         <thead>
           <tr>
-            <th>State</th>
-            <th>Title</th>
-            <th>Summary</th>
-            <th>Description</th>
+            <th><%= gettext("State") %></th>
+            <th><%= gettext("Title") %></th>
+            <th><%= gettext("Summary") %></th>
+            <th><%= gettext("Description") %></th>
           </tr>
         </thead>
         <tbody>
@@ -39,20 +39,20 @@
                   <% _ -> %> <%= icon(:unknown) %>
                 <% end %>
               </td>
-              <td data-label="Title"><%= explanation["title"] %></td>
-              <td data-label="Summary"><%= explanation["summary"] %></td>
-              <td data-label="Description"><%= explanation["description"] %></td>
+              <td data-label="<%= gettext("Title") %>"><%= explanation["title"] %></td>
+              <td data-label="<%= gettext("Summary") %>"><%= explanation["summary"] %></td>
+              <td data-label="<%= gettext("Description") %>"><%= explanation["description"] %></td>
             </tr>
           <% end %>
         </tbody>
       </table>
 
-        <p>More information about the site's TLS/SSL configuration:</p>
+        <p><%= gettext("More information about the site's TLS/SSL configuration:") %></p>
         <ul class="default">
-          <li><%= link gettext("Analyze %{host} on SSL Labs", host: @site.host), to: "https://www.ssllabs.com/ssltest/analyze.html?d=#{@site.host}&hideResults=on" %> (web)</li>
-          <li><a href="https://observatory.mozilla.org/">Observatory by Mozilla</a> (web)</li>
-          <li><a href="https://github.com/mozilla/tls-observatory">Mozilla TLS Observatory</a> (CLI tool)</li>
-          <li><a href="https://testssl.sh/">testssl.sh</a> (CLI tool)</li>
+          <li><%= link gettext("Analyze %{host} on SSL Labs", host: @site.host), to: "https://www.ssllabs.com/ssltest/analyze.html?d=#{@site.host}&hideResults=on" %></li>
+          <li><a href="https://observatory.mozilla.org/">Observatory by Mozilla</a></li>
+          <li><a href="https://github.com/mozilla/tls-observatory">Mozilla TLS Observatory</a></li>
+          <li><a href="https://testssl.sh/">testssl.sh</a></li>
         </ul>
 
     <% else %>
@@ -62,28 +62,28 @@
       <aside class="howto">
         <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="howto-https">How to implement</span>
         <div id="howto-https">
-          <p>To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning).</p>
+          <p><%= gettext(~s|To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning).|) |> raw() %></p>
 
-          <p><a href="https://letsencrypt.org/">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free certificates through an easy, automated process. You can set it up yourself, or use one of the many hosting providers who have built-in support for Let's Encrypt.</p>
+          <p><%= gettext(~s|<a href="https://letsencrypt.org/">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free certificates through an easy, automated process. You can set it up yourself, or use one of the many hosting providers who have built-in support for Let's Encrypt.|) |> raw() %></p>
 
           <ul class="default">
-            <li><a href="https://letsencrypt.org/getting-started/">Get started with Let's Encrypt</a></li>
-            <li><a href="https://mozilla.github.io/server-side-tls/ssl-config-generator/">Mozilla SSL/TLS Configuration Generator</a> [for advanced users]</li>
-            <li>For checking the configuration of a server, try <a href="https://www.ssllabs.com/ssltest/">SSL Labs SSL Server Test</a> (web), <a href="https://testssl.sh/">testssl.sh</a> (CLI tool), <a href="https://github.com/mozilla/tls-observatory">Mozilla TLS Observatory</a> (CLI tool) or <a href="https://observatory.mozilla.org/">Observatory by Mozilla</a> (web).</li>
+            <li><a href="https://letsencrypt.org/getting-started/"><%= gettext("Get started with Let's Encrypt") %></a></li>
+            <li><%= gettext(~s|<a href="https://mozilla.github.io/server-side-tls/ssl-config-generator/">Mozilla SSL/TLS Configuration Generator</a> [for advanced users]|) |> raw() %></li>
+            <li><%= gettext(~s|For checking the configuration of a server, try <a href="https://www.ssllabs.com/ssltest/">SSL Labs SSL Server Test</a> (web), <a href="https://testssl.sh/">testssl.sh</a> (CLI tool), <a href="https://github.com/mozilla/tls-observatory">Mozilla TLS Observatory</a> (CLI tool) or <a href="https://observatory.mozilla.org/">Observatory by Mozilla</a> (web).|) |> raw() %></li>
           </ul>
         </div>
       </aside>
 
   </div>
   <aside class="beta">
-    <p>HTTPS encrypts nearly all information sent between a client and a web service. Properly configured, it guarantees three things:</p>
+    <p><%= gettext("HTTPS encrypts nearly all information sent between a client and a web service. Properly configured, it guarantees three things:") %></p>
     <ul class="default">
-      <li><strong>Confidentiality</strong>. The visitor's connection is encrypted, obscuring URLs, cookies, and other sensitive metadata.</li>
-      <li><strong>Authenticity</strong>. The visitor is talking to the "real" website, and not to an impersonator or through a "man-in-the-middle".</li>
-      <li><strong>Integrity</strong>. The data sent between the visitor and the website has not been tampered with or modified.</li>
+      <li><%= gettext(~s|<strong>Confidentiality</strong>. The visitor's connection is encrypted, obscuring URLs, cookies, and other sensitive metadata.|) |> raw() %></li>
+      <li><%= gettext(~s|<strong>Authenticity</strong>. The visitor is talking to the "real" website, and not to an impersonator or through a "man-in-the-middle".|) |> raw() %></li>
+      <li><%= gettext(~s|<strong>Integrity</strong>. The data sent between the visitor and the website has not been tampered with or modified.|) |> raw() %></li>
     </ul>
-    <p>A plain HTTP connection can be easily monitored, modified, and impersonated. Every unencrypted HTTP request reveals information about a user’s behavior, and the interception and tracking of unencrypted browsing has become commonplace.</p>
-    <p>The goal of the Internet community is to establish encryption as the norm, and to phase out unencrypted connections.</p>
+    <p><%= gettext("A plain HTTP connection can be easily monitored, modified, and impersonated. Every unencrypted HTTP request reveals information about a user’s behavior, and the interception and tracking of unencrypted browsing has become commonplace.") %></p>
+    <p><%= gettext("The goal of the Internet community is to establish encryption as the norm, and to phase out unencrypted connections.") %></p>
 
     <p>
       <%= icon(:law) %>

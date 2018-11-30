@@ -24,13 +24,13 @@
     </p>
 
     <%= if not @site.sri.pass do %>
-      <p>The following third-party resources are not loaded using SRI:</p>
+      <p><%= gettext("The following third-party resources are not loaded using SRI:") %></p>
 
       <table>
         <thead>
           <tr>
-            <th>Type</th>
-            <th>URL</th>
+            <th><%= gettext("Type") %></th>
+            <th><%= gettext("URL") %></th>
           </tr>
         </thead>
         <tbody>
@@ -47,34 +47,34 @@
 
     <aside class="howto">
       <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="howto-sri">
-        How to implement
+        <%= gettext("How to implement") %>
       </span>
 
       <div id="howto-sri">
-        <p>SRI can be used with <code>script</code> and <code>link</code> elements. To enable SRI on an element, you need to add <code>integrity</code> and <code>crossorigin</code> attributes to it.</p>
+        <p><%= gettext(~s|SRI can be used with <code>script</code> and <code>link</code> elements. To enable SRI on an element, you need to add <code>integrity</code> and <code>crossorigin</code> attributes to it.|) |> raw() %></p>
 
-        <p><code>integrity</code> should contain integrity metadata: a string describing the <a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">cryptographic hash function used</a> (currently sha256, sha384, or sha512), followed by a dash, followed by the <a href="https://en.wikipedia.org/wiki/Base64">base64</a>-encoded hash of the file.</p>
+        <p><%= gettext(~s|<code>integrity</code> should contain integrity metadata: a string describing the <a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">cryptographic hash function used</a> (currently sha256, sha384, or sha512), followed by a dash, followed by the <a href="https://en.wikipedia.org/wiki/Base64">base64</a>-encoded hash of the file.|) |> raw() %></p>
 
-        <p><code>crossorigin</code> must be set to <code>anonymous</code> for third-party resources when using SRI. This has to do with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS</a>.</p>
+        <p><%= gettext(~s|<code>crossorigin</code> must be set to <code>anonymous</code> for third-party resources when using SRI. This has to do with <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">CORS</a>.|) |> raw() %></p>
 
-        <p>For example, given the file <a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js</a>, we can calculate the SHA384 hash:</p>
+        <p><%= gettext(~s|For example, given the file <a href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js</a>, we can calculate the SHA384 hash:|) |> raw() %></p>
 
         <p>
           <code>$ openssl dgst -sha384 -binary jquery.min.js | openssl base64 -A<br>
             tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT</code>
         </p>
 
-        <p>The correct HTML code should then be:</p>
+        <p><%= gettext(~s|The correct HTML code should then be:|) |> raw() %></p>
 
         <p>
           <code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"&gt;&lt;/script&gt;</code>
         </p>
 
-        <p>When the browser sees this element, it will download <code>jquery.min.js</code>, calculate the SHA384 hash, compare it to the hash in the <code>integrity</code> attribute, and only run the script if the hashes match. For example, if someone were to modify <code>jquery.min.js</code> on the remote server after we calculcated the original hash, Firefox would refuse to run the script and you'd see this in the browser console:</p>
+        <p><%= gettext(~s|When the browser sees this element, it will download <code>jquery.min.js</code>, calculate the SHA384 hash, compare it to the hash in the <code>integrity</code> attribute, and only run the script if the hashes match. For example, if someone were to modify <code>jquery.min.js</code> on the remote server after we calculcated the original hash, Firefox would refuse to run the script and you'd see this in the browser console:|) |> raw() %></p>
 
-        <p><code>None of the “sha384” hashes in the integrity attribute match the content of the subresource.</code></p>
+        <p><%= gettext(~s|<code>None of the “sha384” hashes in the integrity attribute match the content of the subresource.</code>|) |> raw() %></p>
 
-        <p>To make all this easier, you can use <a href="https://www.srihash.org/">Mozilla's SRI Hash Generator.</a></p>
+        <p><%= gettext(~s|To make all this easier, you can use <a href="https://www.srihash.org/">Mozilla's SRI Hash Generator.</a>|) |> raw() %></p>
 
         <ul class="default">
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a> [developer.mozilla.org]</li>
@@ -85,23 +85,23 @@
       </div>
     </aside>
 
-    <p><small>The Subresource Integrity test is based on the one from the <a href="https://github.com/mozilla/http-observatory">Mozilla HTTP Observatory</a> scanner/grader project (<a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll.</small></p>
+    <p><small><%= gettext(~s|The Subresource Integrity test is based on the one from the <a href="https://github.com/mozilla/http-observatory">Mozilla HTTP Observatory</a> scanner/grader project (<a href="https://www.mozilla.org/en-US/MPL/2.0/">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll.|) |> raw() %></small></p>
   </div>
   <aside class="beta">
     <blockquote>
-      <p>Subresource Integrity (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a CDN) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.</p>
+      <p><%= gettext("Subresource Integrity (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a CDN) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match.") %></p>
 
-      <p>Using Content Delivery Networks (CDNs) to host files such as scripts and stylesheets that are shared among multiple sites can improve site performance and conserve bandwidth. However, using CDNs also comes with a risk, in that if an attacker gains control of a CDN, the attacker can inject arbitrary malicious content into files on the CDN (or replace the files completely) and thus can also potentially attack all sites that fetch files from that CDN.</p>
+      <p><%= gettext("Using Content Delivery Networks (CDNs) to host files such as scripts and stylesheets that are shared among multiple sites can improve site performance and conserve bandwidth. However, using CDNs also comes with a risk, in that if an attacker gains control of a CDN, the attacker can inject arbitrary malicious content into files on the CDN (or replace the files completely) and thus can also potentially attack all sites that fetch files from that CDN.") %></p>
 
-      <p>Subresource Integrity enables you to mitigate some risks of attacks such as this, by ensuring that the files your web application or web document fetches (from a CDN or anywhere) have been delivered without a third-party having injected any additional content into those files — and without any other changes of any kind at all having been made to those files.</p>
+      <p><%= gettext("Subresource Integrity enables you to mitigate some risks of attacks such as this, by ensuring that the files your web application or web document fetches (from a CDN or anywhere) have been delivered without a third-party having injected any additional content into those files — and without any other changes of any kind at all having been made to those files.") %></p>
       <footer>
-        &mdash; <cite>MDN, <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>, by Mozilla Contributors, <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></cite>
+        &mdash; <cite>MDN, <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>, Mozilla Contributors, <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></cite>
       </footer>
     </blockquote>
 
     <p>
       <%= gettext "GDPR: " %> <%= [~w|rec 83|, ~w|art 5 5.1.f|, ~w|art 25|, ~w|art 32 32.2|] |> gdpr() |> raw() %><br>
-      This is an easy measure to take against unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed.
+      <%= gettext("This is an easy measure to take against unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed.") %>
     </p>
   </aside>
 </section>
