@@ -37,7 +37,7 @@
           <ul class="navigation-menu">
             <li class="nav-link logo">
               <a href="/<%= @conn.assigns.locale %>">
-                <i class="fas fa-eye-slash"></i>
+                <i class="icon-eye-slash"></i>
                 <span>webbkoll</span> | <span class="ds-orange">dataskydd</span><span class="semibold">.net</span>
               </a>
             </li>
@@ -70,7 +70,7 @@
            <form role="search" method="get" action="/<%= @conn.assigns.locale %>/check">
               <input name="url" type="search" placeholder="example.com" aria-label="<%= gettext("URL to check") %>">
               <button type="submit" aria-label="<%= gettext("Search") %>" title="<%= gettext("Search") %>">
-                <i class="fas fa-search" aria-hidden="true"></i>
+                <i class="icon-search"></i>
               </button>
             </form>
           </div>
@@ -101,6 +101,4 @@
       </footer>
     </div>
 
-    <script src="<%= Routes.static_path(@conn, "/js/tablesort.min.js") %>"></script>
-    <script src="<%= Routes.static_path(@conn, "/js/a11y-toggle.min.js") %>"></script>
-    <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <script src="<%= Routes.static_path(@conn, "/js/webbkoll.js") %>"></script>

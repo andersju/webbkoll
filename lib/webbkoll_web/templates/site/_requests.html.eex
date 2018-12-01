@@ -17,7 +17,6 @@
 
   <%= if @site.third_party_request_types.total == 0 do %>
     <h3 id="requests">
-      <i class="fas fa-network-wired fa-fw"></i>
       <%= gettext "Third-party requests" %>
       <%= anchor_link("requests") %>
     </h3>
@@ -25,7 +24,6 @@
     <p><%= gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.reg_domain) |> raw %></p>
   <% else %>
     <h3 id="requests">
-      <i class="fas fa-network-wired fa-fw"></i>
       <%= gettext "Third-party requests" %>
       <%= anchor_link("requests") %>
     </h3>

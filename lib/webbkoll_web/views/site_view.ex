@@ -28,17 +28,17 @@ defmodule WebbkollWeb.SiteView do
   end
 
   def anchor_link(id) do
-    ~E(<a href="#<%= id %>" aria-label="Anchor" class="anchor-link"><i class="fas fa-link"></i></a>)
+    ~E(<a href="#<%= id %>" aria-label="Anchor" class="anchor-link"><i class="icon-link"></i></a>)
   end
 
-  def icon(:pass), do: content_tag(:i, "", class: "fas fa-check fa-fw success")
-  def icon(:pass2), do: content_tag(:i, "", class: "fas fa-check-square fa-fw success")
-  def icon(:fail), do: content_tag(:i, "", class: "fas fa-times fa-fw alert")
-  def icon(:warn), do: content_tag(:i, "", class: "fas fa-exclamation-circle fa-fw warning")
-  def icon(:optional), do: content_tag(:i, "", class: "fas fa-minus fa-fw")
-  def icon(:info), do: content_tag(:i, "", class: "fas fa-info-circle fa-fw")
-  def icon(:unknown), do: content_tag(:i, "", class: "fas fa-question-circle fa-fw")
-  def icon(:law), do: content_tag(:i, "", class: "fas fa-gavel fa-fw")
+  def icon(:pass), do: content_tag(:i, "", class: "icon-check success")
+  def icon(:pass2), do: content_tag(:i, "", class: "icon-check-square success")
+  def icon(:fail), do: content_tag(:i, "", class: "icon-times alert")
+  def icon(:warn), do: content_tag(:i, "", class: "icon-exclamation-circle warning")
+  def icon(:optional), do: content_tag(:i, "", class: "icon-minus")
+  def icon(:info), do: content_tag(:i, "", class: "icon-info-circle")
+  def icon(:unknown), do: content_tag(:i, "", class: "icon-question-circle")
+  def icon(:law), do: content_tag(:i, "", class: "icon-gavel")
 
   def result_text(result) do
     case result do

@@ -13,8 +13,8 @@
       </h2>
     </div>
     <div class="beta">
-      <a class="button" href="<%= Routes.site_path(@conn, :check, @conn.assigns.locale, url: @site.input_url, refresh: "on") %>"><i class="fas fa-redo"></i><%= gettext("Check again") %></a>
-      <i class="fas fa-clock"></i><%= format_site_time(@site.updated_at) %>
+      <a class="button" href="<%= Routes.site_path(@conn, :check, @conn.assigns.locale, url: @site.input_url, refresh: "on") %>"><i class="icon-redo"></i><span><%= gettext("Check again") %></span></a>
+      <i class="icon-clock"></i><%= format_site_time(@site.updated_at) %>
     </div>
   </section>
 
@@ -69,7 +69,7 @@
 
           <strong><%= @site.third_party_request_types.total %></strong>
           <%= if @site.third_party_request_types.total > 0 do %>
-          <%= ngettext("request to 1 unique host.", "requests to %{count} unique hosts.", @site.third_party_request_types.unique_hosts) %>
+          <%= ngettext("request to 1 unique host", "requests to %{count} unique hosts", @site.third_party_request_types.unique_hosts) %>
           <% end %>
         </li>
         <li>
@@ -80,7 +80,7 @@
           <% else %>
             <%= gettext("Unknown") %>
           <% end %>
-             &mdash; <%= @site.host_ip %><sup><a class="external" href="https://tools.keycdn.com/geo?host=<%= @site.host_ip %>"><%= gettext("Look up") %></a></sup>
+             &mdash; <%= @site.host_ip %><sup><a href="https://tools.keycdn.com/geo?host=<%= @site.host_ip %>"><%= gettext("Look up") %></a></sup>
         </li>
       </ul>
     </div>

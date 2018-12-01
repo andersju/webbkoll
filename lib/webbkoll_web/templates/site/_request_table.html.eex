@@ -19,9 +19,9 @@
             <%= for request <- data do %>
             <li>
               <%= if String.starts_with?(request.url, "https") do %>
-                <i class="fas fa-lock fa-fw"></i>
+                <i class="icon-lock"></i>
               <% else %>
-                <i class="fas fa-lock-open fa-fw"></i>
+                <i class="icon-unlock-alt"></i>
               <% end %>
             <%= link "#{truncate(request.url, 70)}", to: request.url %>
             </li>

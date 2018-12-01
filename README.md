@@ -66,6 +66,7 @@ Compile CSS with sassc and copy static assets (this replaces brunch and 340 node
 ```
 mkdir -p priv/static/css priv/static/fonts priv/static/images priv/static/js
 sassc --style compressed assets/scss/style.scss priv/static/css/app.css
+cat assets/static/js/* > priv/static/js/webbkoll.js
 rsync -av assets/static/*  priv/static
 ```
 
@@ -152,7 +153,7 @@ Run `systemctl daemon-reload` for good measure, and then try `systemctl start we
   * [Bourbon](https://github.com/thoughtbot/bourbon), [Neat](https://github.com/thoughtbot/neat), [Bitters](https://github.com/thoughtbot/bitters), [Refills](https://github.com/thoughtbot/refills) (`assets/scss/{base,bourbon,neat}`) (MIT license) by thoughtbot
   * [tablesort](https://github.com/tristen/tablesort) (`assets/static/js/tablesort.min.js` and `assets/scss/tablesort.css`) (MIT license) by Tristen Brown
   * [A11y Toggle](https://github.com/edenspiekermann/a11y-toggle) (`assets/static/js/a11y-toggle.min.js`) (MIT license) by Edenspiekermann
-  * [Font Awesome](https://fortawesome.github.io/Font-Awesome/) (`assets/static/fonts`) (SIL OFL 1.1) by Dave Gandy
+  * [IcoMoon](https://icomoon.io/#icons-icomoon) icons (`assets/static/fonts`) (GPL / CC-BY-4.0) by IcoMoon.io
   * [Disconnect's open source list of trackers](https://github.com/disconnectme/disconnect-tracking-protection) (`priv/services.json`) (GPLv3) by Disconnect, Inc.
   * GeoLite2 data created by MaxMind (CC BY-SA 4.0), available from [http://www.maxmind.com](http://www.maxmind.com). (Not included in the repository, but automatically downloaded to `priv/GeoLite2-Country.mmdb.gz`.)
   * JSON for ISO 3166-1 country code i18n from [node-i18n-iso-countries](https://github.com/michaelwittig/node-i18n-iso-countries) (`priv/{en,sv}.json`) (MIT license)

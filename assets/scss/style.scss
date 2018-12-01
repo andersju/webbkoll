@@ -12,9 +12,7 @@ $magic-number: 1.5rem;
 @import "tooltip";
 
 @import "flag-icon/flag-icon";
-//@import "icons";
-@import "fontawesome/fontawesome";
-@import "fontawesome/solid";
+@import "icons";
 
 body {
   background-color: #3b4255;
@@ -75,6 +73,7 @@ table {
 
 .anchor-link {
   font-size: 1rem;
+  text-decoration: none;
   vertical-align: middle;
   visibility: hidden;
 }
@@ -163,9 +162,9 @@ a.external::after {
 button[data-a11y-toggle][aria-expanded="false"],
 .non-button-toggle[data-a11y-toggle][aria-expanded="false"] {
   &::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f055";
+    font-family: 'icomoon' !important;
+    font-weight: normal;
+    content: "\ea43";
     margin-right: 0.5em;
   }
 }
@@ -173,9 +172,9 @@ button[data-a11y-toggle][aria-expanded="false"],
 button[data-a11y-toggle][aria-expanded="true"],
 .non-button-toggle[data-a11y-toggle][aria-expanded="true"] {
   &::before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f056";
+    font-family: 'icomoon' !important;
+    font-weight: normal;
+    content: "\ea41";
     margin-right: 0.5em;
   }
 }
@@ -343,6 +342,13 @@ button[data-a11y-toggle][aria-expanded="true"],
   > .beta {
     @include span-columns(4);
     text-align: right;
+
+    a {
+      text-decoration: none;
+      > span {
+        text-decoration: underline;
+      }
+    }
 
     i {
       padding-right: 0.4rem;
@@ -527,6 +533,9 @@ article.text {
     font-weight: 600;
   }
 
+  h3 > i {
+    font-size: 0.8em;
+  }
 }
 
 .requests-list {
