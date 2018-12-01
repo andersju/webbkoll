@@ -4,7 +4,7 @@
       <% "success" -> %> <%= icon(:pass2) %>
       <% "warning" -> %> <%= icon(:warn) %>
       <% "alert" -> %> <%= icon(:fail) %>
-      <% _ -> %> <%= icon(:pass) %>
+      <% _ -> %> <%= icon(:unknown) %>
     <% end %>
     Referrer Policy
     <%= anchor_link("referrers") %>

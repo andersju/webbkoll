@@ -297,7 +297,7 @@ defmodule Webbkoll.Worker do
       ] ->
         "warning"
 
-      referrer in ["no-referrer-when-down-grade", "default", "unsafe-url", "always", "", nil] ->
+      referrer in ["no-referrer-when-downgrade", "default", "unsafe-url", "always", "", nil] ->
         "alert"
 
       true ->

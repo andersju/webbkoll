@@ -89,7 +89,7 @@
             <%= gettext "Test results are stored in memory on our server for 24 hours. We don't show a list of tested URLs. We don't use URLs or test results. We don't log IP addresses and we don't use cookies." %>
           </p>
           <p>
-            <%= gettext "Developed by" %> <a class="no-decoration" href="https://dataskydd.net/"><span class="ds-orange">dataskydd</span><span class="semibold white">.net</span></a>. <%= gettext "Originally funded by" %> <a href="https://www.internetfonden.se">Internetfonden</a> / <a href="https://www.iis.se">IIS</a>.
+            <%= gettext "Developed by" %> <a class="no-decoration" href="https://dataskydd.net/"><span class="ds-orange">dataskydd</span><span class="semibold white">.net</span></a>.
           </p>
         </div>
 

@@ -14,10 +14,10 @@
       <li>localStorage usage shown</li>
       <li>IP address and country (with flags!) shown for every third-party host</li>
       <li>Chromium's security state information shown</li>
-      <li>Information/technical advice rewritten (sometimes quoted from <a href="https://developer.mozilla.org/en-US/">MDN</a></li>
+      <li>Information/technical advice rewritten (sometimes quoted from <a href="https://developer.mozilla.org/en-US/">MDN</a>)</li>
       <li>Many references to relevant articles and recitals in the GDPR added</li>
       <li>Lots of work to make things a bit cleaner internally</li>
-      <li>You can now <a href="https://github.com/andersju/webbkoll/blob/master/TRANSLATIONS.md">help translate Webbkoll</a>.</li>
+      <li>You can now <a href="https://github.com/andersju/webbkoll/blob/master/TRANSLATIONS.md">help translate Webbkoll</a>! We hope to add a few more languages, such as French and German, soon.</li>
     </ul>
   </article>
 
