@@ -80,7 +80,7 @@
           <% else %>
             <%= gettext("Unknown") %>
           <% end %>
-             &mdash; <%= @site.host_ip %><sup><a href="https://tools.keycdn.com/geo?host=<%= @site.host_ip %>"><%= gettext("Look up") %></a></sup>
+             &mdash; <%= @site.host_ip %><sup><a class="external" href="https://tools.keycdn.com/geo?host=<%= @site.host_ip %>"><%= gettext("Look up") %></a></sup>
         </li>
       </ul>
     </div>

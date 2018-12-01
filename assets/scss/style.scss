@@ -15,7 +15,7 @@ $magic-number: 1.5rem;
 @import "icons";
 
 body {
-  background-color: #3b4255;
+  background-color: white;
   margin: 0;
 }
 
@@ -138,14 +138,14 @@ a.no-decoration {
 }
 
 a.external::after {
-  content: "\f35d";
+  content: "\ea7e";
   display: inline-block;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
+  font-family: "icomoon";
+  font-weight: normal;
   margin-left: 4px;
 }
 

@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'icomoon';
   src:
-    url('../fonts/icomoon.ttf?3whmf9') format('truetype'),
-    url('../fonts/icomoon.woff?3whmf9') format('woff'),
-    url('../fonts/icomoon.svg?3whmf9#icomoon') format('svg');
+    url('../fonts/icomoon.ttf?3whmfg') format('truetype'),
+    url('../fonts/icomoon.woff?3whmfg') format('woff'),
+    url('../fonts/icomoon.svg?3whmfg#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -82,4 +82,7 @@
 }
 .icon-check-square:before {
   content: "\ea52";
+}
+.icon-new-tab:before {
+  content: "\ea7e";
 }
