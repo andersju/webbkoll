@@ -12,35 +12,35 @@ msgstr ""
 "Plural-Forms: nplurals=2\n"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_requests.html.eex:33
+#: lib/webbkoll_web/templates/site/_requests.html.eex:31
 msgid "%{count} insecure"
 msgid_plural "%{count} insecure"
 msgstr[0] ""
 msgstr[1] ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_requests.html.eex:33
+#: lib/webbkoll_web/templates/site/_requests.html.eex:31
 msgid "1 secure"
 msgid_plural "%{count} secure"
 msgstr[0] ""
 msgstr[1] ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_requests.html.eex:33
+#: lib/webbkoll_web/templates/site/_requests.html.eex:31
 msgid "host"
 msgid_plural "hosts"
 msgstr[0] ""
 msgstr[1] ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_requests.html.eex:33
+#: lib/webbkoll_web/templates/site/_requests.html.eex:31
 msgid "request"
 msgid_plural "requests"
 msgstr[0] ""
 msgstr[1] ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_requests.html.eex:33
+#: lib/webbkoll_web/templates/site/_requests.html.eex:31
 msgid "unique"
 msgid_plural "unique"
 msgstr[0] ""
@@ -87,11 +87,6 @@ msgid "<code>'strict-dynamic'</code> lets you use a JavaScript shim loader to lo
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_cookies.html.eex:35
-msgid "<strong>First-party cookies</strong> are placed by the web site owner in some register on their visitors' device in order to be able to re-identify the visitor once the page reloads. First-party cookies can be related to technical features on a web site (such as remembering language settings or the contents of a shopping basket), or related to commercial features of the web site owners' activities (such as being able to trace a visitors' behaviour over the duration of their visit, or over much longer time periods, often for years, in order to be able to serve advertisements to the users or to get usage statistics to guide later changes to the web site that are envisaged to make the web site more attractive to recurring users). First-party cookies may come from services provided by the web site owner (language settings in a Content Management System) or from services used by the web site owner (analytics tools)."
-msgstr ""
-
-#, elixir-format
 #: lib/webbkoll_web/templates/site/donate.html.eex:8
 msgid "<strong>If you would like to make a contribution</strong> to the general funds of Dataskydd.net (helping both Webbkoll as well as our other activities), you can transfer money to the following bank account:"
 msgstr ""
@@ -102,13 +97,8 @@ msgid "<strong>Note</strong>: If you are sure that you entered the URL correctly
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_cookies.html.eex:39
-msgid "<strong>Third-party cookies</strong> are placed by a service affiliated with the web site owner on the devices of visitors to the web site in order to be able to re-identity the visitor once the page reloads. Third-party cookies are related to commercial features of a web site owners' activities, usually advertising, but may also relate to technical feature in plug-ins used by a web site (such as language settings)."
-msgstr ""
-
-#, elixir-format
-#: lib/webbkoll_web/templates/site/_requests.html.eex:25
-#: lib/webbkoll_web/templates/site/_requests.html.eex:35
+#: lib/webbkoll_web/templates/site/_requests.html.eex:24
+#: lib/webbkoll_web/templates/site/_requests.html.eex:33
 msgid "A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains."
 msgstr ""
 
@@ -439,7 +429,7 @@ msgid "For more rigorous and systematic testing we recommend that you check out 
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_geolocation.html.eex:21
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:20
 msgid "For non-EU territories, it depends (GDPR %{art_44}). For a website, transfers will probably have to rely on adequacy decisions (%{art_45}) made by the European Commission when a third territory has been deemed to have appropriate data protection safe guards in its legislation. However, adequacy decisions cannot always be trusted, as demonstrated in the EU Court of Justice 2015 (C-362/14). Binding corporate rules (%{art_47}) or standard clauses (%{art_46}) may also be used to transfer data, but in the absence of rulings by courts and data protection authorities this is still legally uncertain territory."
 msgstr ""
 
@@ -574,8 +564,8 @@ msgid "It is also the categorisation of individuals into these groups. Once a we
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_localstorage.html.eex:21
-#: lib/webbkoll_web/templates/site/_localstorage.html.eex:28
+#: lib/webbkoll_web/templates/site/_localstorage.html.eex:16
+#: lib/webbkoll_web/templates/site/_localstorage.html.eex:23
 msgid "Key"
 msgstr ""
 
@@ -613,13 +603,8 @@ msgid "News"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_requests.html.eex:24
+#: lib/webbkoll_web/templates/site/_requests.html.eex:23
 msgid "No third-party requests."
-msgstr ""
-
-#, elixir-format
-#: lib/webbkoll_web/templates/layout/app.html.eex:92
-msgid "Originally funded by"
 msgstr ""
 
 #, elixir-format
@@ -758,12 +743,12 @@ msgid "Self-host the files."
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_geolocation.html.eex:4
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:3
 msgid "Server location"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_geolocation.html.eex:11
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:10
 msgid "Server location for <strong>%{domain}</strong> (%{host_ip}) could not be determined."
 msgstr ""
 
@@ -778,7 +763,7 @@ msgid "Since responsibility can be a difficult burden, the Web Privacy Check of 
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_geolocation.html.eex:16
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:15
 msgid "Some sites use CDNs &ndash; <a class=\"external\" href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France."
 msgstr ""
 
@@ -910,7 +895,7 @@ msgid "The purpose for collecting data may be interpreted broadly, and means any
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_geolocation.html.eex:9
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:8
 msgid "The server <strong>%{domain}</strong> (%{host_ip}) appears to have been located in <strong>%{country}</strong> during our test."
 msgstr ""
 
@@ -950,8 +935,8 @@ msgid "The what and why of data protection and the principles of the EU general 
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_requests.html.eex:21
-#: lib/webbkoll_web/templates/site/_requests.html.eex:29
+#: lib/webbkoll_web/templates/site/_requests.html.eex:20
+#: lib/webbkoll_web/templates/site/_requests.html.eex:27
 msgid "Third-party requests"
 msgstr ""
 
@@ -1008,7 +993,7 @@ msgid "URLs"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_geolocation.html.eex:18
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:17
 msgid "Under the GDPR, all EU countries are considered equally trustworthy, so there is no particular reason under the GDPR to consider any EU country more or less reliable or desirable than any other. The importance of the location of a server comes into play only under GDPR %{art_23}, Restrictions, where member states may invoke a number of reasons, notably national security, that enable them to void protections for visitors or web service providers.\""
 msgstr ""
 
@@ -1026,8 +1011,8 @@ msgstr ""
 #, elixir-format
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:8
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:20
-#: lib/webbkoll_web/templates/site/_localstorage.html.eex:22
-#: lib/webbkoll_web/templates/site/_localstorage.html.eex:29
+#: lib/webbkoll_web/templates/site/_localstorage.html.eex:17
+#: lib/webbkoll_web/templates/site/_localstorage.html.eex:24
 #: lib/webbkoll_web/templates/site/_raw_headers.html.eex:11
 msgid "Value"
 msgstr ""
@@ -1183,7 +1168,7 @@ msgid "You're requesting too frequently. Install locally?"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_requests.html.eex:33
+#: lib/webbkoll_web/templates/site/_requests.html.eex:31
 msgid "to"
 msgstr ""
 
@@ -1208,7 +1193,7 @@ msgid "<a href=\"https://mozilla.github.io/server-side-tls/ssl-config-generator/
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_geolocation.html.eex:13
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:12
 msgid "<a href=\"https://tools.keycdn.com/geo?host=%{ip}\">See more information</a> (e.g., provider) about this IP address using KeyCDN's tool."
 msgstr ""
 
@@ -1404,7 +1389,7 @@ msgid "For example, given the file <a href=\"https://cdnjs.cloudflare.com/ajax/l
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_localstorage.html.eex:43
+#: lib/webbkoll_web/templates/site/_localstorage.html.eex:38
 msgid "GDPR: Same as for <a href=\"#cookies\">cookies</a> above."
 msgstr ""
 
@@ -1488,7 +1473,7 @@ msgid "It can also be enabled with an HTML <code>&lt;meta&gt;</code> element:"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_localstorage.html.eex:37
+#: lib/webbkoll_web/templates/site/_localstorage.html.eex:32
 msgid "Like with cookies, <strong><a href=\"https://html.spec.whatwg.org/multipage/webstorage.html\">web storage</a></strong> can be used to store data in a user's browser. Unlike cookies, web storage data is not sent with HTTP requests: it can only be directly set and accessed by the user's browser (through JavaScript). Compared to cookies, the storage capacity is much larger."
 msgstr ""
 
@@ -1660,7 +1645,7 @@ msgid "The referrer header is privacy nightmare as it allows websites and servic
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_localstorage.html.eex:39
+#: lib/webbkoll_web/templates/site/_localstorage.html.eex:34
 msgid "There are two types: <code>localStorage</code> data is persistent (not removed when the browser is closed) and never expires, while <code>sessionStorage</code> data is removed when the page session ends (unlike with session cookies, a sessionStorage session is <em>per window/tab</em>)."
 msgstr ""
 
@@ -1675,7 +1660,7 @@ msgid "Third-party requests:"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_localstorage.html.eex:41
+#: lib/webbkoll_web/templates/site/_localstorage.html.eex:36
 msgid "This can be used to track and profile users by simply using JavaScript to read a user's storage data and send it to a server."
 msgstr ""
 
@@ -1772,28 +1757,21 @@ msgid "[only relevant for base domain]"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_localstorage.html.eex:14
+#: lib/webbkoll_web/templates/site/_localstorage.html.eex:9
 msgid "localStorage not used."
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_localstorage.html.eex:16
+#: lib/webbkoll_web/templates/site/_localstorage.html.eex:11
 msgid "localStorage used:"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:72
-msgid "request to 1 unique host."
-msgid_plural "requests to %{count} unique hosts."
-msgstr[0] ""
-msgstr[1] ""
-
-#, elixir-format, fuzzy
 #: lib/webbkoll_web/templates/site/status.html.eex:2
 msgid "Checking..."
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/webbkoll_web/templates/site/failed.html.eex:6
 msgid "Error: %{error_message}"
 msgstr ""
@@ -1802,4 +1780,21 @@ msgstr ""
 #: lib/webbkoll_web/templates/layout/app.html.eex:72
 #: lib/webbkoll_web/templates/layout/app.html.eex:72
 msgid "Search"
+msgstr ""
+
+#, elixir-format, fuzzy
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:72
+msgid "request to 1 unique host"
+msgid_plural "requests to %{count} unique hosts"
+msgstr[0] ""
+msgstr[1] ""
+
+#, elixir-format, fuzzy
+#: lib/webbkoll_web/templates/site/_cookies.html.eex:35
+msgid "<strong>First-party cookies</strong> are placed by the web site owner in some register on their visitors' device in order to be able to re-identify the visitor on subsequent page loads. First-party cookies can be related to technical features on a web site (such as remembering language settings or the contents of a shopping basket), or related to commercial features of the web site owners' activities (such as being able to trace a visitors' behaviour over the duration of their visit, or over much longer time periods, often for years, in order to be able to serve advertisements to the users or to get usage statistics to guide later changes to the web site that are envisaged to make the web site more attractive to recurring users). First-party cookies may come from services provided by the web site owner (language settings in a Content Management System) or from services used by the web site owner (analytics tools)."
+msgstr ""
+
+#, elixir-format, fuzzy
+#: lib/webbkoll_web/templates/site/_cookies.html.eex:39
+msgid "<strong>Third-party cookies</strong> are placed by a service affiliated with the web site owner on the devices of visitors to the web site in order to be able to re-identity the visitor on subsequent page loads, or across different web sites. Third-party cookies are typically related to commercial features of a web site owners' activities, usually advertising, but may also relate to technical features in scripts used by a web site (such as language settings)."
 msgstr ""
