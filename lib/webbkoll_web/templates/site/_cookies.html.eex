@@ -5,11 +5,11 @@
   </h3>
 
   <%= if @site.cookie_count.first_party > 0 do %>
-    <%= render "_cookie_table.html", amount: @site.cookie_count.first_party, cookies: @site.cookies.first_party, label: "First-party cookies", id: "cookies-first" %>
+    <%= render "_cookie_table.html", amount: @site.cookie_count.first_party, cookies: @site.cookies.first_party, label: gettext("First-party cookies"), id: "cookies-first" %>
   <% end %>
 
   <%= if @site.cookie_count.third_party > 0 do %>
-    <%= render "_cookie_table.html", amount: @site.cookie_count.third_party , cookies: @site.cookies.third_party, label: "Third-party cookies", id: "cookies-third" %>
+    <%= render "_cookie_table.html", amount: @site.cookie_count.third_party , cookies: @site.cookies.third_party, label: gettext("Third-party cookies"), id: "cookies-third" %>
   <% end %>
 
   <%= if (@site.cookie_count.first_party + @site.cookie_count.third_party) > 0 do %>
@@ -27,7 +27,7 @@
     <p><%= link "e-PD revised (2009/136/EC)", to: "https://eur-lex.europa.eu/eli/dir/2009/136/oj" %>. Rec. 65, 66.</p>
 
     <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="cookie-text">
-      Read more
+      <%= gettext("More information") %>
     </span>
 
     <div id="cookie-text">

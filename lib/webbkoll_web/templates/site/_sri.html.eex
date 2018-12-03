@@ -14,7 +14,7 @@
       <%= case @site.sri.result do %>
         <% "sri-implemented-and-all-resources-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) is implemented and all resources are loaded from a similar origin.") %>
         <% "sri-implemented-and-external-resources-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) is implemented and all resources are loaded securely.") %>
-        <% "sri-not-implemented-but-no-resources-loaded" -> %> <%= gettext("Subresource Integrity (SRI) is not needed since site contains no script tags.") %>
+        <% "sri-not-implemented-but-no-resources-loaded" -> %> <%= gettext("Subresource Integrity (SRI) is not needed since site contains no script or link tags.") %>
         <% "sri-not-implemented-but-all-resources-loaded-from-secure-origin" -> %> <%= gettext("Subresource Integrity (SRI) not implemented, but all resources are loaded from a similar origin.") %>
         <% "sri-not-implemented-but-external-resources-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) not implemented, but all external resources are loaded over HTTPS") %>
         <% "sri-implemented-but-external-resources-not-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) implemented, but external resources are loaded over HTTP or use protocol-relative URLs via src=\"//...\"") %>
@@ -71,7 +71,7 @@
 
         <p><%= gettext(~s|When the browser sees this element, it will download <code>jquery.min.js</code>, calculate the SHA384 hash, compare it to the hash in the <code>integrity</code> attribute, and only run the script if the hashes match. For example, if someone were to modify <code>jquery.min.js</code> on the remote server after we calculcated the original hash, Firefox would refuse to run the script and you'd see this in the browser console:|) |> raw() %></p>
 
-        <p><%= gettext(~s|<code>None of the “sha384” hashes in the integrity attribute match the content of the subresource.</code>|) |> raw() %></p>
+        <p><code>None of the “sha384” hashes in the integrity attribute match the content of the subresource.</code></p>
 
         <p><%= gettext(~s|To make all this easier, you can use <a href="https://www.srihash.org/">Mozilla's SRI Hash Generator.</a>|) |> raw() %></p>
 

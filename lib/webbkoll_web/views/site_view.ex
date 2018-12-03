@@ -150,7 +150,7 @@ defmodule WebbkollWeb.SiteView do
           gettext("Malicious JavaScript or content injection could modify where sensitive form data is submitted to or create additional forms for data exfiltration.")}
         :insecureSchemeActive ->
           {gettext("Blocks loading of active content over HTTP or FTP"),
-          gettext("Loading JavaScript or plugins can allow a man-in-the-middle to execute arbitrary code or your website. Restricting your policy and changing links to HTTPS can help prevent this.")}
+          gettext("Loading JavaScript or plugins can allow a man-in-the-middle to execute arbitrary code on your website. Restricting your policy and changing links to HTTPS can help prevent this.")}
         :insecureSchemePassive ->
           {gettext("Blocks loading of passive content over HTTP or FTP"),
           gettext("This site's Content Security Policy allows the loading of passive content such as images or videos over insecure protocols such as HTTP or FTP. Consider changing them to load them over HTTPS.")}

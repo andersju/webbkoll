@@ -48,7 +48,7 @@
         <% end %>
       </td>
       <td data-label="Test">
-        <%= gettext(~s|<code>preload</code> - requests inclusion in preload lists|) |> raw() %>
+        <%= gettext(~s|<code>preload</code> &mdash; requests inclusion in preload lists|) |> raw() %>
         <%= if not @is_base do %>
           <%= gettext("[only relevant for base domain]") %>
         <% end %>

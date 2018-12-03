@@ -8,19 +8,19 @@
     <table>
       <thead>
         <tr>
-          <th>Pass</th>
-          <th>Header</th>
-          <th>Value</th>
-          <th>Result</th>
+          <th><%= gettext("Pass") %></th>
+          <th><%= gettext("Header") %></th>
+          <th><%= gettext("Value") %></th>
+          <th><%= gettext("Result") %></th>
         </tr>
       </thead>
       <tbody>
         <%= for header <- [@site.x_content_type_options, @site.x_frame_options, @site.x_xss_protection] do %>
           <tr>
-            <td data-label="Pass"><%= if header.pass, do: icon(:pass), else: icon(:fail) %></td>
-            <td data-label="Header"><%= header.name %></td>
-            <td data-label="Value"><%= header.data %></td>
-            <td data-label="Result"><%= result_text(header.result) %></td>
+            <td data-label="<%= gettext("Pass") %>"><%= if header.pass, do: icon(:pass), else: icon(:fail) %></td>
+            <td data-label="<%= gettext("Header") %>"><%= header.name %></td>
+            <td data-label="<%= gettext("Value") %>"><%= header.data %></td>
+            <td data-label="<%= gettext("Result") %>"><%= result_text(header.result) %></td>
           </tr>
         <% end %>
       </tbody>
@@ -34,7 +34,7 @@
       <div id="howto-headers">
         <p><%= gettext(~s|To enable these headers you'll need to add them to your web server configuration. This is a simple change. Exactly how you do it depends on what server you use. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">This page</a> [developer.mozilla.org] has configuration examples for Apache, Nginx and IIS.|) |> raw() %></p>
 
-        <p><%= gettext(~s|<code>X-Content-Type-Options</code> should be set to <code>nosniff</code>, which is the only valid value.|) %></p>
+        <p><%= gettext(~s|<code>X-Content-Type-Options</code> should be set to <code>nosniff</code>, which is the only valid value.|) |> raw() %></p>
 
         <p><%= gettext(~s|<code>X-Frame-Options</code> can be set to <code>deny</code> (page can never be loaded in a frame), <code>sameorigin</code> (page can only be loaded in a frame only if the origin is the same), or <code>allow-from &lt;URI&gt;</code> (page can only be loaded in a frame on a page on the specified origin).|) |> raw() %></p>
 

@@ -7,7 +7,7 @@
   <p><%= gettext(~s|Webbkoll attempts to simulate what happens when a user visits a page with a typical browser without interacting with anything. The specified page is visited with <a href="https://www.chromium.org/">Chromium</a>, the browser that Google Chrome is based on; i.e., a typical end-user browser. Data (requests/responses, cookies, etc.) is collected, analyzed and presented. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled (since this is the default setting in most browsers). Nothing is clicked, no consent is given.|) |> raw() %></p>
 
   <h3 id="limitations"><%= gettext "Limitations" %></h3>
-  <p><%= gettext(~s|Webbkoll can only observe what happens when visiting a single page. It cannot tell you how the website is doing as a whole, how data is storned internally, what parties the data might be shared with, if the privacy policy is adequate, how the internal procedures are, and so on and so forth. A "good" Webbkoll doesn't mean that everything is well (but a "bad" result certainly means that not all is well).|) %></p>
+  <p><%= gettext(~s|Webbkoll can only observe what happens when visiting a single page. It cannot tell you how the website is doing as a whole, how data is stored internally, what parties the data might be shared with, if the privacy policy is adequate, how the internal procedures are, and so on and so forth. A "good" Webbkoll result doesn't mean that everything is well (but a "bad" result certainly means that not all is well).|) %></p>
 
   <p><%= gettext(~s|This tool is primarly meant to be used as a starting point for web developers. It can only help with one piece of the puzzle.|) %></p>
 

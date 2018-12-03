@@ -43,7 +43,7 @@
 
         <p><%= gettext(~s|If a referrer policy is delivered via both Referrer-Policy header and meta element, the meta element's policy takes precedence.|) |> raw() %></p>
 
-        <p><%= gettext("If multiple policy values are specified, the browser will use the last one, ignoring unknown values (fallback values should thus appear first). Multiple values should be separated by commas, e.g..:") %></p>
+        <p><%= gettext("If multiple policy values are specified, the browser will use the last one, ignoring unknown values (fallback values should thus appear first). Multiple values should be separated by commas, e.g.:") %></p>
 
         <p><code>&lt;meta name="referrer" content="no-referrer, same-origin"&gt;</code></p>
 

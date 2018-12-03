@@ -60,7 +60,7 @@
     <% end %>
 
       <aside class="howto">
-        <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="howto-https">How to implement</span>
+        <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="howto-https"><%= gettext("How to implement") %></span>
         <div id="howto-https">
           <p><%= gettext(~s|To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning).|) |> raw() %></p>
 
