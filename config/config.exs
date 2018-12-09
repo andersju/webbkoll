@@ -13,7 +13,8 @@ config :webbkoll,
     "de" => "Deutsch",
     #"fr" => "Français"
   },
-  default_locale: "en"
+  default_locale: "en",
+  version: System.cmd("git", ["log", "-1", "--format=%h %ci"]) |> elem(0) |> String.trim()
 
 # Configures the endpoint
 config :webbkoll, WebbkollWeb.Endpoint,

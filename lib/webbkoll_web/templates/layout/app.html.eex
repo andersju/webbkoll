@@ -97,6 +97,7 @@
           <p><%= gettext("The code is <a href=\"https://github.com/andersju/webbkoll\">available on GitHub</a>.") |> raw %></p>
           <p><%= gettext("Feedback? Questions? <a href=\"mailto:info@dataskydd.net\">info@dataskydd.net</a>") |> raw %></p>
           <p><%= link gettext("Support us"), to: Routes.site_path(@conn, :donate, @conn.assigns.locale) %></p>
+          <p><small><%= Application.get_env(:webbkoll, :version) %></small></p>
         </div>
       </footer>
     </div>
