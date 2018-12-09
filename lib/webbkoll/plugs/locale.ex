@@ -2,7 +2,7 @@ defmodule Webbkoll.Locale do
   # Some code/inspiration from
   # http://code.parent.co/practical-i18n-with-phoenix-and-elixir/
   import Plug.Conn
-  @locales Application.get_env(:webbkoll, :locales)
+  @locales Map.keys(Application.get_env(:webbkoll, :locales))
 
   def init(default), do: default
 

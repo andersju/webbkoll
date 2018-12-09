@@ -55,7 +55,7 @@
             <li class="nav-link">
               <%= link language_from_code(current_lang), to: Routes.site_path(@conn, @conn.private[:phoenix_action], current_lang, @conn.query_params), aria_haspopup: "true", class: "language-select" %>
               <ul class="dropdown" aria-label="submenu">
-                <%= for lang <- Application.get_env(:webbkoll, :locales) |> Enum.reject(& &1 == current_lang) do %>
+                <%= for lang <- Map.keys(Application.get_env(:webbkoll, :locales)) |> Enum.reject(& &1 == current_lang) do %>
                 <li>
                   <%= link language_from_code(lang), to: Routes.site_path(@conn, @conn.private[:phoenix_action], lang, @conn.query_params) %>
                 </li>

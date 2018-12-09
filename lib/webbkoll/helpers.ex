@@ -2,7 +2,7 @@ defmodule Webbkoll.Helpers do
   import WebbkollWeb.Gettext
 
   @countries (fn ->
-                for lang <- Application.get_env(:webbkoll, :locales), into: %{} do
+                for lang <- Map.keys(Application.get_env(:webbkoll, :locales)), into: %{} do
                   {lang, Application.app_dir(:webbkoll, "priv/#{lang}.json") |> File.read!() |> Jason.decode!()}
                 end
               end).()
@@ -14,9 +14,7 @@ defmodule Webbkoll.Helpers do
     end
   end
 
-  def language_from_code("en"), do: "English"
-  def language_from_code("sv"), do: "Svenska"
-  def language_from_code("fr"), do: "Français"
+  def language_from_code(code), do: Application.get_env(:webbkoll, :locales) |> Map.get(code)
 
   def get_geolocation_by_ip(nil), do: nil
 
