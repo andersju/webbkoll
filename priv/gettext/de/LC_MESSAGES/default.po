@@ -8,7 +8,7 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-12-09 18:04+0000\n"
+"PO-Revision-Date: 2018-12-10 22:36+0000\n"
 "Last-Translator: Tomas Jakobs <tomas.jakobs@jakobssystems.net>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
@@ -147,8 +147,8 @@ msgstr ""
 #, elixir-format
 msgid "A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains."
 msgstr ""
-"Eine Third-Party Anfrage ist ein Abruf von Ressourcen aus dem Netz, die "
-"nicht von <code>%{domain}</code> oder einer dessen Subdomain stammen."
+"Eine Drittanfrage ist ein Abruf von Ressourcen, die nicht von der "
+"Ursprungsdomain <code>%{domain}</code> oder einer Subdomain davon kommen."
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:26
 #, elixir-format
@@ -175,7 +175,7 @@ msgstr "Verantwortlichkeit"
 #: lib/webbkoll_web/templates/site/faq.html.eex:49
 #, elixir-format
 msgid "Accuracy"
-msgstr "Genauigkeit"
+msgstr "Richtigkeit"
 
 #: lib/webbkoll_web/templates/site/about.html.eex:23
 #, elixir-format
@@ -334,7 +334,7 @@ msgstr "Wiederholen"
 #: lib/webbkoll_web/templates/site/index.html.eex:8
 #, elixir-format
 msgid "Check your site!"
-msgstr "Check Deine Website!"
+msgstr "Überprüfe Deine Webseite!"
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:89
 #: lib/webbkoll_web/templates/site/status.html.eex:7
@@ -508,8 +508,8 @@ msgstr "Fehler"
 #, elixir-format
 msgid "Even if you enter https://, http:// will be checked, to see if it redirects to https:// automatically (redirects are followed)."
 msgstr ""
-"Selbst wenn Du https:// eingibst, prüfen wir auch http:// und die "
-"automatische Weiterleitung auf https:// (Weiterleitungen wird gefolgt)."
+"Auch wenn Du https:// eingibst, prüfen wir http:// und ob es automatische "
+"auf eine https:// Seite führt (Weiterleitungen wird gefolgt)."
 
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:9
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:21
@@ -573,7 +573,7 @@ msgstr ""
 #, elixir-format
 msgid "For non-EU territories, it depends (GDPR %{art_44}). For a website, transfers will probably have to rely on adequacy decisions (%{art_45}) made by the European Commission when a third territory has been deemed to have appropriate data protection safe guards in its legislation. However, adequacy decisions cannot always be trusted, as demonstrated in the EU Court of Justice 2015 (C-362/14). Binding corporate rules (%{art_47}) or standard clauses (%{art_46}) may also be used to transfer data, but in the absence of rulings by courts and data protection authorities this is still legally uncertain territory."
 msgstr ""
-"Für Nicht-EU-Gebiete hängt es von (GDPR %{art_44})  ab. Für eine Website "
+"Für Nicht-EU-Gebiete hängt es von (DSGVO %{art_44})  ab. Für eine Website "
 "sind Übertragungen wahrscheinlich auf Abwägungsentscheidungen nach "
 "(%{art_45}) der Europäischen Kommission angewiesen, wenn in einem Drittland "
 "nach ihren Rechtsvorschriften angemessene Datenschutzmaßnahmen vorgesehen "
@@ -601,7 +601,7 @@ msgstr "DSGVO: "
 #, elixir-format
 msgid "Generally things work, but some sites (sometimes) don't work for various reasons."
 msgstr ""
-"Normalerweise funktioniert die Dinge. Manchmal kann es sein, daß einzelne "
+"Normalerweise funktioniert alles. Es kann manchmal passieren, daß einzelne "
 "Seiten aus den verschiedensten Gründen nicht funktionieren."
 
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:2
@@ -795,7 +795,7 @@ msgstr "Unsere Bankverbindung (wenn erforderlich):"
 #, elixir-format
 msgid "Particular care must be taken with regards to the period of storage (GDPR %{gdpr_art_5_1_e}). While it is technically easy for a web site owner to set the duration of a information stored in the form of cookies to a long period time, the principle of storage limitation implies a balancing act between the interest of tracking a visitors' behaviour and the interest of the visitor to keep their behaviour private. It's been established that a reasonable storage period does not exceed <a href=\"%{ec_cookies}\">one year</a>."
 msgstr ""
-"Besondere Sorgfalt ist bei der Aufbewahrungsdauer geboten (GDPR "
+"Besondere Sorgfalt ist bei der Aufbewahrungsdauer geboten (DSGVO "
 "%{gdpr_art_5_1_e}). Während es für einen Website-Besitzer technisch einfach "
 "ist, die Dauer einer in Form von Cookies gespeicherten Information auf einen "
 "längeren Zeitraum festzulegen, bedeutet das Prinzip der Speicherbegrenzung "
@@ -810,7 +810,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:9
 #, elixir-format
 msgid "Pass"
-msgstr "Erledigt"
+msgstr "Status"
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:50
 #, elixir-format
@@ -836,7 +836,7 @@ msgstr "Bitte beachte:"
 msgid "Please write \"Donation\" in the message field. Any amount is much appreciated! (From a Swedish bank account, the number would be 52031057715.)"
 msgstr ""
 "Schreibe bitte \"Donation\" in das Nachrichtenfeld. Jede Zuwendung ist "
-"dankbar willkommen! (von einem schwedischen Konto sllte die Nummer "
+"dankbar willkommen! (von einem schwedischen Konto sollte die Nummer "
 "52031057715 lauten)"
 
 #: lib/webbkoll_web/templates/site/failed.html.eex:4
@@ -889,7 +889,7 @@ msgstr "Original Header"
 #: lib/webbkoll_web/views/site_view.ex:204
 #, elixir-format
 msgid "Rec. "
-msgstr ""
+msgstr "Erwägungsgrund "
 
 #: lib/webbkoll_web/controllers/site_controller.ex:40
 #, elixir-format
@@ -923,11 +923,16 @@ msgstr "Referrers werden teilweise übermittelt"
 #, elixir-format
 msgid "Restricts use of the <code>&lt;base&gt;</code> tag by using <code>base-uri 'none'</code>, <code>base-uri 'self'</code>, or specific origins"
 msgstr ""
+"Eingeschränkte Verwendung von <code>&lt;base&gt;</code> durch <code>base-uri "
+"'none'</code>, <code>base-uri 'self'</code>, oder spezifizierten Quellen"
 
 #: lib/webbkoll_web/views/site_view.ex:149
 #, elixir-format
 msgid "Restricts where <code>&lt;form&gt;</code> contents may be submitted by using <code>form-action 'none'</code>, <code>form-action 'self'</code>, or specific URIs"
 msgstr ""
+"Beschränkt die Zusendung von <code>&lt;form&gt;</code> Inhalten durch <code"
+">form-action 'none'</code>, <code>form-action 'self'</code>, oder "
+"spezifische URIs"
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:5
 #, elixir-format
@@ -943,6 +948,10 @@ msgstr "Ergebnisse für %{url}"
 #, elixir-format
 msgid "See also <a href=\"https://infosec-handbook.eu/blog/online-assessment-tools/\">Pros and cons of online assessment tools for web server security</a> from InfoSec Handbook (a site that also has many other relevant articles)."
 msgstr ""
+"Weitere Informationen auch im InfoSec Handbuch <a href=\"https://infosec-"
+"handbook.eu/blog/online-assessment-tools/\">Pros and cons of online "
+"assessment tools for web server security</a> (eine Seite mit zahlreichen "
+"Artikeln zum Thema)."
 
 #: lib/webbkoll/helpers.ex:65
 #, elixir-format
@@ -998,12 +1007,34 @@ msgstr "Status:"
 #: lib/webbkoll_web/templates/site/faq.html.eex:54
 #, elixir-format
 msgid "Storage limitation"
-msgstr "Speichergrenzen"
+msgstr "Dauer einer Speicherung"
 
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:43
 #, elixir-format
 msgid "Storing information or gaining access to information stored in the visitors' devices, for instance in the form of cookies, has been subject to sui generis legislation in the European Union (<a href=\"%{epd}\">ePD, Art. 5.3</a>). These sui generis laws have tried to make a distinction between information stored to support technical features and information stored to support commercial features. In practice, poor enforcement of these rules has made the legal landscape unclear. Because there exists no legal duty for citizens to receive better targeted advertisement, nor a legal duty for citizens to assist web developers in improving web sites, it's doubtful that a legal basis exists for storing information to support commercial features without the consent of the web visitor (GDPR %{gdpr_art_7}). It is argued that the legitimate interests of a web site owner (%{gdpr_art_6_1_f}, %{gdpr_art_6_4}) may nevertheless enable them to subject a visitor to targeted ads or cause a visitor to assist the web developers. Then there must exist relevant and appropriate relationship between the web visitor and the web site owner in situations (GDPR %{gdpr_rec_47}), which calls into question the use of third-party service first-party cookies. In either case, if the legitimate interest legal basis for processing is invoked, adequate security measures must be undertaken (GDPR %{gdpr_art_32})."
 msgstr ""
+"Die Speicherung von Informationen oder der Zugriff auf Informationen, die "
+"auf Geräten der Besucher gespeichert sind, z.B. in Form von Cookies, "
+"unterliegt in der Europäischen Union der sui generis-Gesetzgebung (<a href=\""
+"%{epd}\">ePD, Art. 5.3</a>). Diese sui generis-Gesetze unterscheiden "
+"zwischen Informationen, die technische Merkmale gespeichert haben und "
+"Informationen, die zur Unterstützung kommerzieller Merkmale gespeichert "
+"sind. In der Praxis hat die mangelnde Anwendung dieser Vorschriften die "
+"Rechtslandschaft unklar gemacht da es keine gesetzliche Verpflichtung für "
+"Bürger gibt, gezielte Werbung zu erhalten, noch eine gesetzliche "
+"Verpflichtung, Webentwickler bei der Verbesserung von Websites zu "
+"unterstützen. Es ist mehr wie fragwürdig, dass es eine Rechtsgrundlage für "
+"die Speicherung von Informationen zur Unterstützung kommerzieller Merkmale "
+"ohne Zustimmung eines Besuchers gibt (DSGVO %{gdpr_art_7}). Es wird "
+"argumentiert, dass die legitimen Interessen eines Website-Besitzers "
+"(%{gdpr_art_6_1_f}, %{gdpr_art_6_6_4}) es ihm ermöglichen, Besuchern "
+"gezielte Werbung anzubieten oder zur Unterstützung der Webentwickler zu "
+"verpflichten. Es muss dann eine angemessene Beziehung zwischen dem Besucher "
+"und Website-Betreiber bestehen (DSGVO %{gdpr_rec_47}), die jedoch eine "
+"Verwendung von First-Party-Cookies von Drittanbietern in Frage stellt. In "
+"beiden Fällen müssen unter Rückgriff auf die berechtigten Interessen einer "
+"Verarbeitung angemessene Schutzmaßnahmen ergriffen werden (DSGVO "
+"%{gdpr_art_32})."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:20
 #, elixir-format
@@ -1078,9 +1109,9 @@ msgstr ""
 msgid "The backend is currently running on a single server with limited resources, so in case of usage spikes, waiting times can be long. (But you can <a href=\"https://github.com/andersju/webbkoll\">run your own instance</a>!)"
 msgstr ""
 "Das Back-End läuft derzeit auf einem einzelnen Server mit begrenzten "
-"Ressourcen. In Spitzenzeiten kann ein Durchlauf etwas dauern. (Aber Du "
-"kannst <a href=\"https://github.com/andersju/webbkoll\">Webbkoll in einer "
-"eigenen Instanz</a> betreiben!)"
+"Ressourcen. In Spitzenzeiten kann ein Durchlauf daher etwas dauern. (Wenn Du "
+"willst kannst Du  <a href=\"https://github.com/andersju/webbkoll\">Webbkoll "
+"in einer eigenen Instanz</a> betreiben!)"
 
 #: lib/webbkoll_web/templates/layout/app.html.eex:97
 #, elixir-format
@@ -1111,11 +1142,11 @@ msgstr ""
 #, elixir-format
 msgid "The only other similar service that we are aware of <em>that uses a real browser for testing</em> is <a href=\"https://privacyscore.org/\">PrivacyScore</a> (open source). It does many of the same checks as Webbkoll, but additionally also checks e.g. TLS, and lets you create a list of sites to check (and rank)."
 msgstr ""
-"Der einzige vergleichbare Service, von dem wir wissen, daß dieser mit einem "
-"<em>echten Browser</em> testet ist <a href=\"https://privacyscore.org/\""
-">PrivacyScore</a> (Open Source). Es durchläuft vergleichbare Checks wie "
-"Webbkoll. In Ergänzung dazu überprüft es aber auch TLS und ermöglicht Dir "
-"die Organisation Deiner Checks in sortierten Listen."
+"Der einzige vergleichbare Service, von dem wir wissen, daß dieser auch mit "
+"einem <em>echten Browser</em> testet ist <a href=\"https://privacyscore.org/"
+"\">PrivacyScore</a> (Open Source). Es arbeitet wie Webbkoll, überprüft aber "
+"zusätzlich auch TLS und ermöglicht Dir die Organisation Deiner Checks in "
+"sortierten Listen."
 
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:8
 #, elixir-format
@@ -1209,7 +1240,7 @@ msgstr ""
 #, elixir-format
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."
 msgstr ""
-"Dieses Tool hilft beim Überprüfen welche datenschutzrechtlichen Maßnahmen "
+"Webbkoll hilft Dir festzustellen, welche datenschutzrechtlichen Maßnahmen "
 "eine Website ergriffen hat, um Dir die Kontrolle über Deine Privatsphäre zu "
 "geben."
 
@@ -1225,7 +1256,8 @@ msgstr ""
 msgid "This tool simulates a normal browser visit with Do Not Track disabled (browser default) and with no add-ons."
 msgstr ""
 "Dieses Tool simuliert einen normalen Browser mit ausgeschalteter \"Do Not "
-"Track\" (Standardeinstellung) und ohne Addons."
+"Track\" Funktion (ist bei den meisten die Standardeinstellung) und ohne "
+"Addons."
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:37
 #, elixir-format
@@ -1263,6 +1295,8 @@ msgstr "Unbekannt"
 #, elixir-format
 msgid "Uses CSP3's <code>'strict-dynamic'</code> directive to allow dynamic script loading (optional)"
 msgstr ""
+"Benutzt die CSP3 Direktive <code>'strict-dynamic'</code> für dynamische "
+"Scripte (optional)"
 
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:8
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:20
@@ -1279,18 +1313,18 @@ msgstr "Wert"
 #, elixir-format
 msgid "We don't provide an API as we have limited resources, but <a href=\"https://github.com/andersju/webbkoll\">the code is available</a> under the MIT license. See also the options below."
 msgstr ""
-"Wir bieten keine API da wir nur begrenzte Ressourcen haben. Aber <a href=\""
-"https://github.com/andersju/webbkoll\">der Code ist hier verfügbar</a> und "
-"steht unter einer freien MIT-Lizenz. Siehe weitere Möglichkeiten weiter "
-"unten."
+"Wir bieten keine API an da wir nur über begrenzte Ressourcen verfügen. Aber <"
+"a href=\"https://github.com/andersju/webbkoll\">der Code ist hier "
+"verfügbar</a> und steht unter einer freien MIT-Lizenz. Alternativen findest "
+"Du weiter unten."
 
 #: lib/webbkoll_web/templates/site/donate.html.eex:6
 #, elixir-format
 msgid "We operate on a very small budget, and servers are usually our main expense; most work is done in our free time. Every euro (or krona) counts!"
 msgstr ""
-"Wir betreiben alles mit einem sehr kleinen Budget und Server sind unsere "
-"größten Hauptausgaben. Die meiste Arbeit wurde in unserr Freizeit erbracht. "
-"Jeder Euro (oder Krone) zählt!"
+"Wir ermöglichen hier alles mit einem sehr kleinen Budget und die Server "
+"zählen zu unseren größten Ausgabeposten. Die meiste Arbeit wird in unserer "
+"Freizeit erbracht. Jeder Euro (oder Krone) zählt!"
 
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:44
 #, elixir-format
@@ -1303,131 +1337,168 @@ msgstr ""
 #, elixir-format
 msgid "We use the word gossiping to mean that information about somebody’s behaviour, reading habits or preferences is handed over to somebody other than the actor responsible for the website."
 msgstr ""
+"Wir verwenden das Word \"petzen\" in dem Sinne, daß Informationen über "
+"Verhalten, Lesegewohnheiten oder Präferenzen eines Besuchers an Dritte "
+"weiter gegeben  werden und nicht an den Betreiber der besuchten Website."
 
 #: lib/webbkoll_web/templates/site/about.html.eex:7
 #, elixir-format
 msgid "Webbkoll attempts to simulate what happens when a user visits a page with a typical browser without interacting with anything. The specified page is visited with <a href=\"https://www.chromium.org/\">Chromium</a>, the browser that Google Chrome is based on; i.e., a typical end-user browser. Data (requests/responses, cookies, etc.) is collected, analyzed and presented. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled (since this is the default setting in most browsers). Nothing is clicked, no consent is given."
 msgstr ""
+"Webbkoll simuliert was passiert, wenn ein Benutzer eine Seite mit einem "
+"normalen Browser besucht ohne mit dieser zu interagieren. Die angegebene "
+"Seite wird mit <a href=\"https://www.chromium.org/\">Chromium</a> besucht, "
+"einem typischen Endbenutzerbrowser, der auf Google Chrome basiert. Daten ("
+"Anfragen/Antworten, Cookies usw.) werden gesammelt, analysiert und "
+"dargestellt. Der Browser hat keine Addons/Erweiterungen installiert und die "
+"Do-Not-Track Einstellungen sind nicht aktiviert (Standardeinstellung in den "
+"meisten Browsern). Es wird nichts angeklickt und es wird keine Zustimmung "
+"erteilt."
 
 #: lib/webbkoll_web/templates/site/donate.html.eex:4
 #, elixir-format
 msgid "Webbkoll is a project by <a href=\"https://dataskydd.net/\">Dataskydd.net Sverige</a>, a Swedish non-governmental organization (organization number 802495-4797) working on making data protection easy in law and in practice. We are not affiliated with any political party."
 msgstr ""
+"Webbkoll ist ein <a href=\"https://dataskydd.net/\">Dataskydd.net Sverige</a>"
+" Projekt einer schwedischen Nichtregierungsorganisation (Nr. 802495-4797), "
+"die daran arbeitet, Datenschutz in Recht und Praxis einfach zu gestalten. "
+"Wir arbeiten überparteilich."
 
 #: lib/webbkoll_web/templates/site/about.html.eex:15
 #, elixir-format
 msgid "Webbkoll is developed by <a href=\"https://anders.unix.se/\">Anders Jensen-Urstad</a> (programming, design) and <a href=\"https://twitter.com/teirdes\">Amelia Andersdotter</a> (FAQ, legislative information) of <a href=\"https://dataskydd.net/\">Dataskydd.net</a>, a Swedish non-governmental organization working on making data protection easy in law and in practice. We are not affiliated with any political party."
 msgstr ""
+"Webbkoll wird von <a href=\"https://anders.unix.se/\">Anders Jensen-"
+"Urstad</a> (Programmierung, Design) und <a href=\"https://twitter.com/"
+"teirdes\">Amelia Andersdotter</a> (FAQ, Gesetzesinformationen) von <a href=\""
+"https://dataskydd.net/\">Dataskydd.net</a>, einer schwedischen "
+"Nichtregierungsorganisation, die sich für einen einfachen Datenschutz in "
+"Recht und Praxis einsetzt, entwickelt. Wir arbeiten überparteilich."
 
 #: lib/webbkoll_web/templates/site/about.html.eex:3
 #, elixir-format
 msgid "Webbkoll monitors privacy-enhancing features on websites, and helps you find out who is letting you exercise control over your privacy. We check to what extent a website monitors your behaviour and how much they gossip about the monitoring to third parties, based on what can be observed when visiting a given page. We’ve also compiled a set of recommendations for how to not track or gossip in digital environments."
 msgstr ""
+"Webbkoll prüft die Datenschutzfunktionen von Websites und hilft "
+"herauszufinden, wer einem die Kontrolle über Privatsphäre gibt. Wir decken "
+"auf inwieweit eine Website Ihre Besucher überwacht und wie sehr diese Daten "
+"an Dritte \"petzt\" basierend auf den Informationen, die bei einem Besuch "
+"einer Website entstehen. Wir stellen auch eine Reihe von Empfehlungen "
+"zusammen, wie Daten im digitalen Umfeld nicht weitergegeben oder gepetzt "
+"werden können."
 
 #: lib/webbkoll_web/templates/site/about.html.eex:17
 #, elixir-format
 msgid "Webbkoll uses <a href=\"http://www.phoenixframework.org/\">Phoenix Framework</a> (Elixir), <a href=\"https://github.com/GoogleChrome/puppeteer\">Puppeteer</a> and numerous open source libraries; <a href=\"https://github.com/andersju/webbkoll#credits--licenses\">see here</a> for specifics."
 msgstr ""
+"Webbkoll verwendet <a href=\"http://www.phoenixframework.org/\">Phoenix "
+"Framework</a> (Elixir), <a href=\"https://github.com/GoogleChrome/puppeteer\""
+">Puppeteer</a> und weitere Open Source Ressourcen; <a href=\"https://github."
+"com/andersju/webbkoll#credits--licenses\">weitere Informationen stehen "
+"hier.</a>."
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:28
 #, elixir-format
 msgid "What are the principles of the EU general data protection regulation?"
 msgstr ""
+"Welche Grundsätze gelten für die allgemeine Datenschutzverordnung der EU?"
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:20
 #, elixir-format
 msgid "What do you mean by ”gossiping to third-parties”?"
-msgstr ""
+msgstr "Was genau meint Ihr mit \"an Dritte petzen\" (third parties)?"
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:4
 #, elixir-format
 msgid "What is data protection?"
-msgstr ""
+msgstr "Was bedeutet Datenschutz?"
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:10
 #, elixir-format
 msgid "What is ”behavioural monitoring”?"
-msgstr ""
+msgstr "Was ist eine \"Verhaltensanalyse\"?"
 
 #: lib/webbkoll_web/templates/site/_what.html.eex:3
 #, elixir-format
 msgid "What this tool checks (and doesn't check) "
-msgstr ""
+msgstr "Was genau prüft das Tool (und was nicht) "
 
 #: lib/webbkoll_web/views/site_view.ex:93
 #, elixir-format
 msgid "X-Content-Type-Options header cannot be recognized"
-msgstr ""
+msgstr "X-Content-Type-Options Header nicht erkannt"
 
 #: lib/webbkoll_web/views/site_view.ex:90
 #, elixir-format
 msgid "X-Content-Type-Options header not implemented"
-msgstr ""
+msgstr "X-Content-Type-Options Header nicht vorhanden"
 
 #: lib/webbkoll_web/views/site_view.ex:87
 #, elixir-format
 msgid "X-Content-Type-Options header set to \"nosniff\""
-msgstr ""
+msgstr "X-Content-Type-Options Header gesetzt auf \"nosniff\""
 
 #: lib/webbkoll_web/views/site_view.ex:108
 #, elixir-format
 msgid "X-Frame-Options (XFO) header cannot be recognized"
-msgstr ""
+msgstr "X-Frame-Options (XFO) Header nicht erkannt"
 
 #: lib/webbkoll_web/views/site_view.ex:105
 #, elixir-format
 msgid "X-Frame-Options (XFO) header not implemented"
-msgstr ""
+msgstr "X-Frame-Options (XFO) Header fehlt"
 
 #: lib/webbkoll_web/views/site_view.ex:99
 #, elixir-format
 msgid "X-Frame-Options (XFO) header set to SAMEORIGIN or DENY"
-msgstr ""
+msgstr "X-Frame-Options (XFO) Header mit SAMEORIGIN oder DENY"
 
 #: lib/webbkoll_web/views/site_view.ex:102
 #, elixir-format
 msgid "X-Frame-Options (XFO) header uses ALLOW-FROM uri directive"
-msgstr ""
+msgstr "X-Frame-Options (XFO) Header verwendet ALLOW-FROM"
 
 #: lib/webbkoll_web/views/site_view.ex:96
 #, elixir-format
 msgid "X-Frame-Options (XFO) implemented via the CSP frame-ancestors directive"
-msgstr ""
+msgstr "X-Frame-Options (XFO) eingebunden über CSP frame-ancestors"
 
 #: lib/webbkoll_web/views/site_view.ex:126
 #, elixir-format
 msgid "X-XSS-Protection header cannot be recognized"
-msgstr ""
+msgstr "X-XSS-Protection Header nicht erkannt"
 
 #: lib/webbkoll_web/views/site_view.ex:123
 #, elixir-format
 msgid "X-XSS-Protection header not implemented"
-msgstr ""
+msgstr "X-XSS-Protection Header fehlt"
 
 #: lib/webbkoll_web/views/site_view.ex:117
 #, elixir-format
 msgid "X-XSS-Protection header not needed due to strong Content Security Policy (CSP) header"
 msgstr ""
+"X-XSS-Protection Header nicht benötigt wegen starker Content Security Policy "
+"(CSP)"
 
 #: lib/webbkoll_web/views/site_view.ex:120
 #, elixir-format
 msgid "X-XSS-Protection header set to \"0\" (disabled)"
-msgstr ""
+msgstr "X-XSS-Protection Header gesetzt auf \"0\" (inaktiv)"
 
 #: lib/webbkoll_web/views/site_view.ex:114
 #, elixir-format
 msgid "X-XSS-Protection header set to \"1\""
-msgstr ""
+msgstr "X-XSS-Protection Header gesetzt auf \"1\""
 
 #: lib/webbkoll_web/views/site_view.ex:111
 #, elixir-format
 msgid "X-XSS-Protection header set to \"1; mode=block\""
-msgstr ""
+msgstr "X-XSS-Protection Header gesetzt auf \"1; mode=block\""
 
 #: lib/webbkoll_web/controllers/site_controller.ex:265
 #, elixir-format
 msgid "You're requesting too frequently. Install locally?"
-msgstr ""
+msgstr "Du fragst sehr häufig an, Möchtst Du Webbkoll lokal installieren?"
 
 #: lib/webbkoll_web/templates/site/_requests.html.eex:31
 #, elixir-format
@@ -1437,27 +1508,44 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:64
 #, elixir-format
 msgid "%{first_party} first-party; %{third_party} third-party"
-msgstr ""
+msgstr "%{first_party} First-Party; %{third_party} Third-Party"
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:74
 #, elixir-format
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security\">HTTP Strict Transport Security</a> (HSTS) is a simple and <a href=\"https://caniuse.com/#feat=stricttransportsecurity\">widely supported</a> standard to protect visitors by ensuring that their browsers always connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from <code>http://</code> to <code>https://</code> URLs."
 msgstr ""
+"<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/"
+"HTTP_strict_transport_security\">HTTP Strict Transport Security</a> (HSTS) "
+"it ein <a href=\"https://caniuse.com/#feat=stricttransportsecurity\">breit "
+"unterstützter</a> Standard zum Schutz eines Besuchers indem es sicher "
+"stellt, daß der Webbrowser eine Seite immer nur über HTTPS öffnen kann. Mit "
+"HSTS entfällt die unsichere Notwendigkeit des Redirecting eines Besuchers "
+"von <code>http://</code> zu <code>https://</code> URLs."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:67
 #, elixir-format
 msgid "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free certificates through an easy, automated process. You can set it up yourself, or use one of the many hosting providers who have built-in support for Let's Encrypt."
 msgstr ""
+"<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> is eine nicht "
+"kommerzielle Zertifizierungsinstanz (gesponsert von Mozilla, EFF, Cisco, "
+"Facebook und andere), die kostenlose Zertifikate anhand eines einfacen und "
+"vollautomatierten Prozess ermöglicht. Du kannst diese für Dich selbst nutzen "
+"oder auf die vielen Hosting Provider zurückgreifen, die Let's Encrypt von "
+"Haus aus unterstützen."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:71
 #, elixir-format
 msgid "<a href=\"https://mozilla.github.io/server-side-tls/ssl-config-generator/\">Mozilla SSL/TLS Configuration Generator</a> [for advanced users]"
 msgstr ""
+"<a href=\"https://mozilla.github.io/server-side-tls/ssl-config-generator/\">"
+"Mozilla SSL/TLS Konfigurations-Generator</a> [für Fortgeschrittene]"
 
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:12
 #, elixir-format
 msgid "<a href=\"https://tools.keycdn.com/geo?host=%{ip}\">See more information</a> (e.g., provider) about this IP address using KeyCDN's tool."
 msgstr ""
+"<a href=\"https://tools.keycdn.com/geo?host=%{ip}\">Weitere Informationen</a>"
+" (z.B. Provider) zu dieser IP über KeyCDN abrufen."
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:50
 #, elixir-format
@@ -1592,7 +1680,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_csp.html.eex:14
 #, elixir-format
 msgid "Content Security Policy set in HTTP header:"
-msgstr ""
+msgstr "Gesetzte Content Security Policy im HTTP Header:"
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:18
 #, elixir-format
@@ -1608,17 +1696,23 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_https.html.eex:44
 #, elixir-format
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 #: lib/webbkoll_web/templates/site/_what.html.eex:11
 #, elixir-format
 msgid "Disclaimer: The results presented here might not be 100% correct. Bugs happen. This tool is meant to be used by site owners as a starting point for improvements, not as a rigorous analysis."
 msgstr ""
+"Hinweis: Fehler können passieren. Die Ergebnisse erheben keinen Anspruch auf "
+"100% Richtigkeit. Dieses Tool ist auch nicht als Analyse gedacht sondern "
+"eher als Ausgangspunkt für Website-Betreiber zur weiteren Verbesserung."
 
 #: lib/webbkoll_web/templates/site/_what.html.eex:9
 #, elixir-format
 msgid "External files such as images, scripts and CSS are loaded, but the tool performs no interactions with the page — no links are clicked, no forms are submitted."
 msgstr ""
+"Dateien wie Bilder, Skripte und CSS Stilvorlagen werden zwar geladen, das "
+"Tool führt jedoch keine Interaktionen mit der Website aus — es werden keine "
+"Links angeklickt und keine Formulare abgeschickt."
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:56
 #, elixir-format
@@ -1644,6 +1738,8 @@ msgstr ""
 #, elixir-format
 msgid "GDPR: Same as for <a href=\"#cookies\">cookies</a> above."
 msgstr ""
+"DSGVO: Gleiche Bestimmungen wie bei <a href=\"#cookies\">Cookies</a> weiter "
+"oben."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:70
 #, elixir-format
@@ -1735,12 +1831,12 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_https.html.eex:50
 #, elixir-format
 msgid "More information about the site's TLS/SSL configuration:"
-msgstr ""
+msgstr "Weitere Informationen zur TLS/SSL Konfiguration dieser Website:"
 
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:20
 #, elixir-format
 msgid "No cookies detected."
-msgstr ""
+msgstr "Keine Cookies gefunden."
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:33
 #, elixir-format
@@ -1795,7 +1891,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:76
 #, elixir-format
 msgid "Server location:"
-msgstr ""
+msgstr "Serverstandort:"
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:54
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:38
@@ -1806,7 +1902,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_https.html.eex:24
 #, elixir-format
 msgid "State"
-msgstr ""
+msgstr "Status"
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:91
 #, elixir-format
@@ -1822,12 +1918,17 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_https.html.eex:43
 #, elixir-format
 msgid "Summary"
-msgstr ""
+msgstr "Ergebnis"
 
 #: lib/webbkoll_web/templates/site/_what.html.eex:13
 #, elixir-format
 msgid "Text about HTTPS partly adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain). <a href=\"http://www.maxmind.com\">MaxMind's</a> GeoLite2 country database (CC-BY-SA 4.0) is used for GeoIP lookups. <a href=\"%{about}\">See here</a> for more information."
 msgstr ""
+"Texte über HTTPS teilweise übernommen aus <a href=\"https://https.cio.gov/\">"
+"The HTTPS-Only Standard</a> (Public Domain). <a href=\"http://www.maxmind."
+"com\">MaxMind's</a> GeoLite2 Länderdatenbank (CC-BY-SA 4.0) wird für die "
+"GeoIP Abfragen verwendet. Bitte <a href=\"%{about}\">hier klicken</a> für "
+"weitere Informationen."
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:66
 #, elixir-format
@@ -1903,6 +2004,7 @@ msgstr ""
 #, elixir-format
 msgid "These headers can help minimize data disclosures."
 msgstr ""
+"Diese Header helfen dabei, das Risiko eines Datenmißbrauchs zu minimieren."
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:68
 #, elixir-format
@@ -1928,7 +2030,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_https.html.eex:42
 #, elixir-format
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:65
 #, elixir-format
@@ -2103,11 +2205,25 @@ msgstr ""
 #, elixir-format
 msgid "Under the GDPR, all EU countries are considered equally trustworthy, so there is no particular reason under the GDPR to consider any EU country more or less reliable or desirable than any other. The importance of the location of a server comes into play only under GDPR %{art_23}, Restrictions, where member states may invoke a number of reasons, notably national security, that enable them to void protections for visitors or web service providers."
 msgstr ""
+"Mit der DSGVO gelten alle EU-Länder als gleichermaßen vertrauenswürdig, so "
+"dass es keinen besonderen Grund gibt, ein EU-Land als mehr oder weniger "
+"zuverlässig oder vertrauenswürdig zu betrachten. Die Bedeutung des Standorts "
+"eines Servers kommt nur im Rahmen der DSGVO %{art_23}, Beschränkung zum "
+"Tragen, bei denen sich die Mitgliedstaaten auf eine Reihe von Gründen, "
+"insbesondere auf die nationale Sicherheit, berufen können, die es ihnen "
+"ermöglicht, den Schutz für Besucher oder Website-Betreiber aufzuheben."
 
 #: lib/webbkoll_web/templates/site/about.html.eex:10
 #, elixir-format
 msgid "Webbkoll can only observe what happens when visiting a single page. It cannot tell you how the website is doing as a whole, how data is stored internally, what parties the data might be shared with, if the privacy policy is adequate, how the internal procedures are, and so on and so forth. A \"good\" Webbkoll result doesn't mean that everything is well (but a \"bad\" result certainly means that not all is well)."
 msgstr ""
+"Webbkoll überprüft nur das, was auf der ersten besuchten Website passiert. "
+"Es kann Dir nicht sagen, wie sich eine Website \"als Ganzes\" verhält, wie "
+"Daten intern gespeichert werden, mit welchen Dritten die Daten noch geteilt "
+"werden und ob der Datenschutz und die organisatorischen Abläufe ausreichend "
+"sind. Ein \"gutes\" Webbkoll Ergebnis bedeutet noch lange nicht, daß alles "
+"gut ist (aber ein \"schlechtes\" Ergebnis bedeutet, daß es defintiv nicht "
+"gut ist)."
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:62
 #, elixir-format
