@@ -9,7 +9,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2018-12-13 21:59+0000\n"
-"Last-Translator: Anders Jensen-Urstad <anders@unix.se>\n"
+"Last-Translator: Tomas Jakobs <tomas.jakobs@jakobssystems.net>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -508,8 +508,8 @@ msgstr "Fehler"
 #, elixir-format
 msgid "Even if you enter https://, http:// will be checked, to see if it redirects to https:// automatically (redirects are followed)."
 msgstr ""
-"Auch wenn Du https:// eingibst, prüfen wir http:// und ob es automatische "
-"auf eine https:// Seite führt (Weiterleitungen wird gefolgt)."
+"Auch wenn Du https:// eingibst, prüfen wir http:// und ob es automatisch auf "
+"eine https:// Seite führt (Weiterleitungen wird gefolgt)."
 
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:9
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:21
@@ -601,8 +601,9 @@ msgstr "DSGVO: "
 #, elixir-format
 msgid "Generally things work, but some sites (sometimes) don't work for various reasons."
 msgstr ""
-"Normalerweise funktioniert alles. Es kann manchmal passieren, daß einzelne "
-"Seiten aus den verschiedensten Gründen nicht funktionieren."
+"Im Allgemeinen sollte alles funktionieren, manchmal kann es jedoch "
+"vorkommen, daß einzelne Seiten aus den verschiedensten Gründen nicht "
+"funktionieren."
 
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:2
 #, elixir-format
@@ -911,7 +912,7 @@ msgstr "Referrers werden übermittelt"
 #: lib/webbkoll_web/views/site_view.ex:23
 #, elixir-format
 msgid "Referrers not leaked"
-msgstr "Referrers werden nicht übermittelt"
+msgstr "Referrer werden nicht übermittelt"
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:54
 #: lib/webbkoll_web/views/site_view.ex:24
@@ -974,7 +975,7 @@ msgstr ""
 #, elixir-format
 msgid "Setting referrer policy is an easy way to do data minimization (%{art_5_1_f}) and help ensure that you don't transfer or disclose personal data needlessly (%{art_32_2})."
 msgstr ""
-"Das Setzen einer Referer Policy ist ein schneller und einfacher Weg zur "
+"Das Setzen einer Referer Richtlinie ist ein schneller und einfacher Weg zur "
 "Datenminimierung (%{art_5_1_f}) und stellt sicher, daß Daten nicht "
 "unnötigerweise oder unzulässigerweise übermittelt werden (%{art_32_2})."
 
@@ -1550,6 +1551,14 @@ msgstr ""
 #, elixir-format
 msgid "<a href=\"https://www.w3.org/TR/referrer-policy/\">Several policies are offered</a>, such as <code>origin</code> (strips everything except the origin) and <code>origin-when-cross-origin</code> (sends full URL with same-origin requests, otherwise stripped). We recommend <strong><code>no-referrer</code></strong>, which kills the referrer header entirely for all requests, no matter the destination; or <strong><code>same-origin</code></strong>, which kills the referrer for third-party requests but not for requests to the same origin."
 msgstr ""
+"<a href=\"https://www.w3.org/TR/referrer-policy/\">Verschiedene Richtlinien "
+"werden angeboten</a> wie zum Beispiel  <code>origin</code> (entfernt alles) "
+"oder <code>origin-when-cross-origin</code> (sendet volle URL nur innerhalb "
+"der Domain, entfernt alles andere). Wir empfehlen <strong><code>no-"
+"referrer</code></strong>, das einen Referrer Header für alle Anfragen "
+"vollständig entfernt unabhängig woher diese kommt oder <strong><code>same-"
+"origin</code></strong>, das den Referer für alle Drittanfragen entfernt aber "
+"nicht für Anfragen innerhalb des Ursprungsdomain."
 
 #: lib/webbkoll_web/templates/site/_headers.html.eex:37
 #, elixir-format
@@ -1562,6 +1571,11 @@ msgstr ""
 #, elixir-format
 msgid "<code>X-Frame-Options</code> can be set to <code>deny</code> (page can never be loaded in a frame), <code>sameorigin</code> (page can only be loaded in a frame only if the origin is the same), or <code>allow-from &lt;URI&gt;</code> (page can only be loaded in a frame on a page on the specified origin)."
 msgstr ""
+"<code>X-Frame-Options</code> kann die Werte <code>deny</code> (verhindert "
+"die Anzeige in einem Frame), <code>sameorigin</code> (nur wenn der Usprung "
+"auf der eigenen Seite ist) oder <code>allow-from &lt;URI&gt;</code> (Seite "
+"kann nur als Frame angezeigt werden, wenn diese vom angegeben Urpsprungsort "
+"stammt) aufweisen."
 
 #: lib/webbkoll_web/templates/site/_headers.html.eex:41
 #, elixir-format
@@ -1629,6 +1643,9 @@ msgstr ""
 #, elixir-format
 msgid "<strong>SameSite</strong> can be used to instruct the browser to only send the cookie when the request is originating from the same site. This can mitigate CSRF (cross-site request forgery) attacks."
 msgstr ""
+"<strong>SameSite</strong> wird verwendet um dem Browser mitzuteilen, daß er "
+"nur dann Cookies senden darf, wenn die Anfrage von der gleichen Seite "
+"stammt. Das verhindert CSRF (Cross-Site Request Forgery) Angriffe."
 
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:17
 #, elixir-format
@@ -1658,41 +1675,69 @@ msgstr ""
 #, elixir-format
 msgid "A primary goal of CSP is to mitigate and report XSS attacks. XSS attacks exploit the browser's trust of the content received from the server. Malicious scripts are executed by the victim's browser because the browser trusts the source of the content, even when it's not coming from where it seems to be coming from."
 msgstr ""
+"Ein Hauptziel von CSP ist es, XSS-Angriffe zu minimieren und zu melden. XSS-"
+"Angriffe nutzen das Vertrauen des Browsers in die vom Server empfangenen "
+"Inhalte aus. Bösartige Skripte werden vom Browser des Opfers ausgeführt, "
+"weil der Browser der Quelle des Inhalts vertraut, auch wenn er nicht von "
+"dort kommt, wo er her zu kommen scheint."
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:36
 #, elixir-format
 msgid "A referrer policy can easily be set with a &lt;meta&gt; element in your HTML. Simply include this inside the &lt;head&gt; section:"
 msgstr ""
+"Eine Referrer Richtlinie kann leicht mit einem &lt;meta&gt; Tag im HTML "
+"Quelltext gesetzt werden. Füge dieses in den &lt;head&gt; Bereich ein:"
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:40
 #, elixir-format
 msgid "Alternatively, set the <code>Referrer-Policy</code> HTTP header, e.g.:"
 msgstr ""
+"Andernfalls setzte eine <code>Referrer Richtlinie</code> in den HTTP Header "
+"ein:"
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:79
 #, elixir-format
 msgid "Always uses an <code>https://</code> connection, even when clicking on an <code>http://</code> link or after typing a domain into the location bar without specifying a protocol."
 msgstr ""
+"Verwendet immer eine <code>https://</code> Verbindung, selbst wenn auf einen "
+"<code>http://</code> Link oder wenn eine Domäne in der Adressleiste ohne "
+"Protokoll eingegeben wurde."
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:29
 #, elixir-format
 msgid "Base domain (https://%{domain}) HSTS status unknown."
-msgstr ""
+msgstr "Stammdomäne (https://%{domain}) HSTS Status unbekannt."
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:66
 #, elixir-format
 msgid "By setting a Referrer Policy, it's possible for websites to tell browsers to not leak referrers. Referrer Policy lets you specify a policy that's applied to all links clicked, as well as all other requests generated by the page (images, JS, etc.)."
 msgstr ""
+"Durch die Festlegung einer Referrer Richtlinie ist es für Websites möglich, "
+"Browsern mitzuteilen, dass sie keine Referrer verlieren. Mit der Referrer-"
+"Richtlinie können Sie eine Richtlinie festlegen, die auf alle angeklickten "
+"Links sowie auf alle anderen von der Seite erzeugten Anfragen (Bilder, JS "
+"etc.) angewendet wird."
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:74
 #, elixir-format
 msgid "CSP is a powerful mechanism that we strongly recommend. It allows for very fine-grained control. However, creating a good policy (or adjusting your site to work with a good policy) can take some time and effort. To make this easier, it's possible to use CSP in report-only mode."
 msgstr ""
+"CSP ist ein leistungsstarker Mechanismus, den wir dringend empfehlen. Es "
+"ermöglicht eine sehr feinkörnige Steuerung. Die Erstellung einer guten "
+"Richtlinie (oder die Anpassung einer Website, um mit einer guten Richtlinie "
+"zusammen zu arbeiten) kann Zeit und Mühe in Anspruch nehmen. Um das zu "
+"erleichtern ist es möglich, eine CSP im reinen Report-Modus zu verwenden."
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:103
 #, elixir-format
 msgid "CSP makes it possible for server administrators to reduce or eliminate the vectors by which XSS can occur by specifying the domains that the browser should consider to be valid sources of executable scripts. A CSP compatible browser will then only execute scripts loaded in source files received from those whitelisted domains, ignoring all other script (including inline scripts and event-handling HTML attributes)."
 msgstr ""
+"CSP ermöglicht es Serveradministratoren, Angriffsvektoren durch XSS-Angriffe "
+"zu reduzieren oder zu eliminieren, indem dem Browser Domänen als gültige "
+"Quellen für ausführbare Skripte mitgeteilt werden. Ein CSP-kompatibler "
+"Browser führt dann nur noch Skripte aus, die von diesen Whitelist-Domänen "
+"empfangen wurde  und ignoriert alle anderen Skripte (einschließlich Inline-"
+"Skripte und HTML-Attribute zur Ereignisbehandlung)."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:19
 #, elixir-format
@@ -1703,6 +1748,11 @@ msgstr "Chromium hat folgendes entdeckt:"
 #, elixir-format
 msgid "Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement to distribution of malware."
 msgstr ""
+"Eine Content Security Policy (CSP) bildet eine zusätzliche Sicherheitsebene, "
+"die hilft Angriffe zu erkennen und zu entschärfen, einschließlich Cross Site "
+"Scripting (XSS) und Data Injection Angriffe. Solche Art von Angriffen sind "
+"geeignet eine Website zu verunstalten und reichen bis hin zum Datendiebstahl "
+"und Verbreitung von Malware."
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:14
 #, elixir-format
@@ -1752,6 +1802,10 @@ msgstr ""
 #, elixir-format
 msgid "For a user to take advantage of HSTS, their browser does have to see the HSTS header at least once. This means that users are not protected until after their first successful secure connection to a given domain."
 msgstr ""
+"Damit ein Benutzer die Vorteile von HSTS nutzen kann, muss sein Browser eine "
+"HSTS geschützte Seite mindestens einmal besucht haben. Erst nach der ersten "
+"erfolgreichen, sicheren Verbindung ist er für die weiteren Besuche zu dieser "
+"Domäne geschützt."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:72
 #, elixir-format
@@ -1782,7 +1836,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_https.html.eex:70
 #, elixir-format
 msgid "Get started with Let's Encrypt"
-msgstr ""
+msgstr "Erste Schritte mit Let's Encrypt"
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:40
 #, elixir-format
@@ -1836,12 +1890,15 @@ msgstr "Header"
 #: lib/webbkoll_web/templates/site/_sri.html.eex:49
 #, elixir-format
 msgid "How to implement"
-msgstr ""
+msgstr "Anleitung"
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:44
 #, elixir-format
 msgid "If a referrer policy is delivered via both Referrer-Policy header and meta element, the meta element's policy takes precedence."
 msgstr ""
+"Wird eine Referrer Richtlinie sowohl über den Referrer-Policy-Header als "
+"auch über das Meta-Element ausgeliefert, dann hat die Richtlinie des Meta-"
+"Elements Vorrang."
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:46
 #, elixir-format
@@ -1852,6 +1909,9 @@ msgstr "implementiert, aber mit Fehlern"
 #, elixir-format
 msgid "In its <strong>strongest and recommended form</strong>, the HSTS policy includes <strong>all subdomains</strong>, and indicates a willingness to be \"preloaded\" into browsers:"
 msgstr ""
+"In seiner <strong>strengsten und empfohlenen Form</strong> beinhaltet die "
+"HSTS Richtlinie <strong>all subdomains</strong> und zeigt damit einem "
+"Browser seine \"preloaded\" Bereitschaft an:"
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:44
 #, elixir-format
@@ -1862,11 +1922,19 @@ msgstr "Ungültiger Header"
 #, elixir-format
 msgid "It can also be enabled with an HTML <code>&lt;meta&gt;</code> element:"
 msgstr ""
+"Es kann auch im HTML Quelltext mit dem <code>&lt;meta&gt;</code> Element "
+"eingebunden werden:"
 
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:32
 #, elixir-format
 msgid "Like with cookies, <strong><a href=\"https://html.spec.whatwg.org/multipage/webstorage.html\">web storage</a></strong> can be used to store data in a user's browser. Unlike cookies, web storage data is not sent with HTTP requests: it can only be directly set and accessed by the user's browser (through JavaScript). Compared to cookies, the storage capacity is much larger."
 msgstr ""
+"Wie Cookies speichern <strong><a href=\"https://html.spec.whatwg.org/"
+"multipage/webstorage.html\">Web Storages</a></strong> Daten im Webbrowser "
+"eines Benutzers. Doch anders wie Cookies wird ein Web Storage nicht über "
+"HTTP Anfragen abgefragt sondern immer nur direkt durch den Browser (mit "
+"JavaScript). Im Vergleich zu Cookies können deutlich mehr Daten gespeichert "
+"werden."
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:83
 #, elixir-format
@@ -1907,21 +1975,29 @@ msgstr ""
 #, elixir-format
 msgid "Referrer Policy set to <code>%{value}</code> in <code>Referrer-Policy</code> HTTP header."
 msgstr ""
+"Referrer Richtline auf <code>%{value}</code> im <code>Referrer-Policy</code> "
+"HTTP Header gesetzt."
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:19
 #, elixir-format
 msgid "Referrer Policy set to <code>%{value}</code> in <code>meta http-equiv</code> element."
 msgstr ""
+"Referrer Richtline auf <code>%{value}</code> im <code>meta http-equiv</code> "
+"Tag gesetzt."
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:23
 #, elixir-format
 msgid "Referrer Policy set to <code>%{value}</code> in <code>meta</code> element."
 msgstr ""
+"Referrer Richtlinie auf <code>%{value}</code> im <code>meta</code> Element "
+"gesetzt."
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:80
 #, elixir-format
 msgid "Removes the ability for users to click through warnings about invalid certificates."
 msgstr ""
+"Entfernt die Möglichkeit für Benutzer, Warnungen über ungültige Zertifikate "
+"zu ignorieren."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:53
 #, elixir-format
@@ -1931,7 +2007,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_csp.html.eex:76
 #, elixir-format
 msgid "See the following pages for more information:"
-msgstr ""
+msgstr "Auf den folgenden Seiten finden Sie weitere Informationen:"
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:76
 #, elixir-format
@@ -1953,11 +2029,20 @@ msgstr "Status"
 #, elixir-format
 msgid "Subresource Integrity (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a CDN) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match."
 msgstr ""
+"Subresource Integrity (SRI) ist ein Sicherheitsmerkmal, mit dem Browser "
+"überprüfen können ob abgerufene Ressourcen (z.B. von einem CDN) ohne "
+"Manipulationen übertragen wurden. Es funktioniert, indem es Ihnen erlaubt, "
+"einen kryptographischen Hash bereitzustellen, mit dem eine geholte Ressource "
+"übereinstimmen muss."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:95
 #, elixir-format
 msgid "Subresource Integrity enables you to mitigate some risks of attacks such as this, by ensuring that the files your web application or web document fetches (from a CDN or anywhere) have been delivered without a third-party having injected any additional content into those files — and without any other changes of any kind at all having been made to those files."
 msgstr ""
+"Subresource Integrity ermöglicht es Ihnen, die Risiken solcher Angriffe zu "
+"minimieren indem Sie sicherstellen, dass Dateien Ihrer Webanwendung, die von "
+"einem CDN oder sonstigen Quellen geladen werden ohne Manipulation jeglicher "
+"Art von Dritten an diesen Dateien vorgenommen wurden."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:26
 #: lib/webbkoll_web/templates/site/_https.html.eex:43
@@ -1979,6 +2064,8 @@ msgstr ""
 #, elixir-format
 msgid "Text adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain)."
 msgstr ""
+"Texte aus den Empfehlungen <a href=\"https://https.cio.gov/\">The HTTPS-Only "
+"Standard</a> (Public Domain) entnommen."
 
 #: lib/webbkoll_web/templates/site/_headers.html.eex:59
 #, elixir-format
@@ -1994,6 +2081,9 @@ msgstr ""
 #, elixir-format
 msgid "The Chrome security team allows anyone to <a href=\"https://hstspreload.org/\">submit their domain to the list</a>, provided it meets a few requirements."
 msgstr ""
+"Das Chrome Security Team erlaubt jeden Seitenbetreiber <a href=\""
+"https://hstspreload.org/\">seine Domain auf die Preload-List hinzuzufügen</a>"
+" wenn es einige Voraussetzungen erfüllt."
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:93
 #, elixir-format
@@ -2013,17 +2103,19 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_sri.html.eex:66
 #, elixir-format
 msgid "The correct HTML code should then be:"
-msgstr ""
+msgstr "Der richtige HTML-Code:"
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:27
 #, elixir-format
 msgid "The following third-party resources are not loaded using SRI:"
-msgstr ""
+msgstr "Die folgenden Drittanbieter-Ressourcen werden ohne SRI geladen:"
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:86
 #, elixir-format
 msgid "The goal of the Internet community is to establish encryption as the norm, and to phase out unencrypted connections."
 msgstr ""
+"Ziel der Internet-Community ist es, die Verschlüsselung als Standard zu "
+"etablieren und unverschlüsselte Verbindungen abzubauen."
 
 #: lib/webbkoll_web/templates/site/_headers.html.eex:54
 #, elixir-format
@@ -2034,11 +2126,17 @@ msgstr ""
 #, elixir-format
 msgid "The recommended way to enable Content Security Policy is with the <code>Content-Security-Policy</code> HTTP header, e.g.:"
 msgstr ""
+"Empfohlen wird eine Content Security Policy mit einem <code>Content-Security-"
+"Policy</code> HTTP Header zu aktivieren:"
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:64
 #, elixir-format
 msgid "The referrer header is privacy nightmare as it allows websites and services to track you across the web and learn about your browsing habits (and thus possibly private, sensitive information), particularly when combined with cookies."
 msgstr ""
+"Referrer-Header sind ein Alptraum für die Privatsphäre, da er es Websites "
+"und Diensten ermöglicht Sie im gesamten Web zu verfolgen und Ihre "
+"Surfgewohnheiten (und damit möglicherweise private, sensible Informationen) "
+"preiszugeben, insbesondere wenn dies in Kombination mit Cookies erfolgt."
 
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:34
 #, elixir-format
@@ -2060,16 +2158,25 @@ msgstr "Drittanfragen (Third-Party):"
 #, elixir-format
 msgid "This can be used to track and profile users by simply using JavaScript to read a user's storage data and send it to a server."
 msgstr ""
+"Dies kann verwendet werden, um Benutzer zu verfolgen und Profile zu "
+"erstellen indem JavaScripte den Speicher auslesen und an einen Server senden."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:103
 #, elixir-format
 msgid "This is an easy measure to take against unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed."
 msgstr ""
+"Dies ist eine einfache Maßnahme gegen unbefugte Offenlegung oder Zugriff auf "
+"personenbezogene Daten, welche übertragen, gespeichert oder anderweitig "
+"verarbeitet werden könnten."
 
 #: lib/webbkoll_web/templates/site/_what.html.eex:7
 #, elixir-format
 msgid "This tool attempts to simulate what happens when a user visits a specified page with a typical browser. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled, since this is the default setting in most browsers."
 msgstr ""
+"Dieses Tool simuliert den Aufruf einer Webseite mit einem typischen "
+"Webbrowser. Der Browser hat keine Addons/Erweiterungen und die Do-Not-Track "
+"Einstellungen sind nicht aktiviert, da das die Standardeinstellung in den "
+"meisten Browsern ist."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:25
 #: lib/webbkoll_web/templates/site/_https.html.eex:42
@@ -2081,6 +2188,10 @@ msgstr "Titel"
 #, elixir-format
 msgid "To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning)."
 msgstr ""
+"Für HTTPS Verbindungen benötigt die Website ein <strong>Zertifikat</strong> "
+"für die Domain auf dem Webserver. Dieses kann von vertrauenswürdigen "
+"Zertifikatsstellen ausgegeben werden, denen der Webbrowser vertraut. "
+"Andernfalls sieht der Besucher eine Zertifikats-Warnung."
 
 #: lib/webbkoll_web/templates/site/_headers.html.eex:35
 #, elixir-format
@@ -2096,6 +2207,9 @@ msgstr ""
 #, elixir-format
 msgid "To solve this problem, the Chrome security team created an \"HSTS preload list\": a list of domains baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit."
 msgstr ""
+"Um dieses Problem zu lösen, hat das Chrome-Sicherheitsteam eine HSTS-Preload-"
+"Liste erstellt. Eine in Chrome hard-codierte Liste, die Strict Transport "
+"Security automatisch aktivieren, auch beim ersten Besuch."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:32
 #, elixir-format
@@ -2117,6 +2231,11 @@ msgstr "URL zum Prüfen"
 #, elixir-format
 msgid "Using Content Delivery Networks (CDNs) to host files such as scripts and stylesheets that are shared among multiple sites can improve site performance and conserve bandwidth. However, using CDNs also comes with a risk, in that if an attacker gains control of a CDN, the attacker can inject arbitrary malicious content into files on the CDN (or replace the files completely) and thus can also potentially attack all sites that fetch files from that CDN."
 msgstr ""
+"Die Verwendung von Content Delivery Networks (CDNs) zum Hosten von Dateien "
+"wie Skripte oder Stilvorlagen kann die Leistung einer Website verbessern und "
+"die Bandbreite reduzieren. Die Verwendung von CDNs birgt jedoch auch das "
+"Risiko, daß wenn ein Angreifer die Kontrolle über ein CDN erlangt, er "
+"beliebige bösartige Inhalte in eine Website injizieren kann."
 
 #: lib/webbkoll_web/templates/site/index.html.eex:5
 #, elixir-format
@@ -2145,6 +2264,11 @@ msgstr ""
 #, elixir-format
 msgid "When you click on a link, your browser will typically send the HTTP referer [sic] header to the webserver where the destination webpage is at. The header contains the full URL of the page you came from. This lets sites see where traffic comes from. The header is also sent when external resources (such as images, fonts, JS and CSS) are loaded."
 msgstr ""
+"Wenn Sie auf einen Link klicken, sendet Ihr Browser in der Regel den HTTP "
+"Referer - also die Adresse von wo aus sie herkommen - an den Webserver, auf "
+"dem sich die Ziel-Webseite befindet. Auf diese Weise können Websites sehen, "
+"woher ein BEsucher kommt. Der Header wird auch gesendet, wenn externe "
+"Ressourcen (wie Bilder, Schriften, JS und CSS) geladen werden."
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:28
 #, elixir-format
@@ -2164,12 +2288,12 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:9
 #, elixir-format
 msgid "localStorage not used."
-msgstr ""
+msgstr "Kein LocalStorage."
 
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:11
 #, elixir-format
 msgid "localStorage used:"
-msgstr ""
+msgstr "LocalStorage verwendet:"
 
 #: lib/webbkoll_web/templates/site/status.html.eex:2
 #, elixir-format
@@ -2213,6 +2337,16 @@ msgstr ""
 #, elixir-format
 msgid "Depending on the purposes for collecting personal data, data minimisation may mean different things. Webbkoll makes it easy to find out how not to collect personal data and how not to inadvertently leak personal data. Should one want to collect personal data anyway, one needs to be transparent about such collection and one also needs to follow the rules in chapter 4 of the regulation. The rules of how to collect and process personal data are in place to ensure that anyone who chooses a purpose for data collection also reflects on the consequences of such choices."
 msgstr ""
+"Je nachdem, zu welchem Zweck personenbezogene Daten erhoben werden, kann "
+"Datenminimierung unterschiedliche Bedeutungen haben. Mit Webbkoll ist es "
+"einfach herauszufinden, wie man keine personenbezogenen Daten sammelt und "
+"wie man nicht versehentlich personenbezogene Daten verliert. Sollte man "
+"dennoch personenbezogene Daten erheben wollen, muss man über eine solche "
+"Erhebung transparent sein und auch die Regeln in Kapitel 4 der Verordnung "
+"befolgen. Die Regeln für die Erhebung und Verarbeitung personenbezogener "
+"Daten gelten, um sicherzustellen, dass jeder, der sich für einen Zweck der "
+"Datenerfassung entscheidet, auch über die Folgen seiner Entscheidungen "
+"nachdenkt."
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:112
 #, elixir-format
@@ -2228,6 +2362,10 @@ msgstr ""
 #, elixir-format
 msgid "Loading JavaScript or plugins can allow a man-in-the-middle to execute arbitrary code on your website. Restricting your policy and changing links to HTTPS can help prevent this."
 msgstr ""
+"Das Laden von JavaScript oder Plugins kann es einem Man-in-the-Middle "
+"ermöglichen, beliebigen Code auf Ihrer Website auszuführen. Die "
+"Einschränkung durch eine Richtlinie und die Verschlüsselung von Links zu "
+"HTTPS verhindert das."
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:67
 #, elixir-format
@@ -2238,6 +2376,8 @@ msgstr ""
 #, elixir-format
 msgid "Subresource Integrity (SRI) is not needed since site contains no script or link tags."
 msgstr ""
+"Subresource Integrity (SRI) wird nicht benötigt da auf der Seite keine "
+"Skripte oder Links enthalten sind."
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:30
 #, elixir-format
@@ -2248,6 +2388,11 @@ msgstr ""
 #, elixir-format
 msgid "The purpose for collecting data may be interpreted broadly, and means anything from marketing to improving the web. At Dataskydd.net's Webbkoll we prefer methods of improving the web that do not include collecting data from private persons. That’s why we’ve compiled a large number of recommendations and tools which minimise data collection."
 msgstr ""
+"Der Zweck der Datenerhebung kann weit gefasst werden und alles vom Marketing "
+"bis zur Verbesserung des Webs umfassen. Bei Webbkoll bevorzugen wir Methoden "
+"zur Verbesserung des Webs, die keine Daten von Privatpersonen sammeln. Im "
+"Sinne dieser Datenminimierung haben wir eine Vielzahl von Empfehlungen und "
+"Tools hier zusammengestellt."
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:57
 #, elixir-format
