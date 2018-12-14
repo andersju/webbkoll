@@ -8,7 +8,7 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-12-13 21:59+0000\n"
+"PO-Revision-Date: 2018-12-17 03:13+0000\n"
 "Last-Translator: Tomas Jakobs <tomas.jakobs@jakobssystems.net>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
@@ -547,7 +547,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:90
 #, elixir-format
 msgid "Final URL:"
-msgstr "Wahre URL:"
+msgstr "Weitergeleitet:"
 
 #: lib/webbkoll/helpers.ex:90
 #, elixir-format
@@ -1330,8 +1330,8 @@ msgstr ""
 #, elixir-format
 msgid "We use Disconnect's <a href=\"%{url}\">open source list of trackers</a> to classify hosts."
 msgstr ""
-"Wir verwenden Disconnect's <a href=\"%{url}\">open source list of "
-"trackers</a> zur Erkennung von Hosts."
+"Wir nutzen die <a href=\"%{url}\">Open Source Trackerliste</a> von "
+"Disconnect zur Identifizierung."
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:22
 #, elixir-format
@@ -1603,6 +1603,11 @@ msgstr ""
 #, elixir-format
 msgid "<code>integrity</code> should contain integrity metadata: a string describing the <a href=\"https://en.wikipedia.org/wiki/Cryptographic_hash_function\">cryptographic hash function used</a> (currently sha256, sha384, or sha512), followed by a dash, followed by the <a href=\"https://en.wikipedia.org/wiki/Base64\">base64</a>-encoded hash of the file."
 msgstr ""
+"<code>Integrität</code> beinhaltet eine Zeichenkette mit der verwendeten <a "
+"href=\"https://de.wikipedia.org/wiki/Kryptographische_Hashfunktion\">"
+"kryptografischen Hashfunktion</a> (aktuell sha256, sha384, oder sha512), "
+"gefolgt von einem Bindestrich und dem <a href=\"https://de.wikipedia.org/"
+"wiki/Base64\">Base64</a>-kodierten Hashwert der eingebundenen Ressource."
 
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:23
 #, elixir-format
@@ -1965,11 +1970,21 @@ msgstr "fehlt"
 #, elixir-format
 msgid "Note that <code>includeSubDomains</code> should be deployed at the base domain, i.e., <code>https://example.com</code>, <em>not</em> <code>https://www.example.com</code>. While we recommend the use of <code>includeSubDomains</code>, be <strong>very</strong> careful, as it means that <strong>all subdomains</strong> associated with the parent domain <strong>must</strong> support HTTPS. (They do not have to each have their own HSTS policy.)"
 msgstr ""
+"Beachte, daß <code>includeSubDomains</code> auf der Hauptdomain eingebunden "
+"sein sollte z.B. <code>https://example.com</code>, <em>nicht</em> auf einer "
+"Subdomain wie <code>https://www.example.com</code>. Auch wenn wir die "
+"Verwendung von <code>includeSubDomains</code> sehr empfehlen, so ist zu "
+"beachten, daß diese für <strong>alle Subdomains</strong> gilt. Diese "
+"<strong>müssen</strong> HTTPS Verbindungen unterstützen (eine HSTS "
+"Richtlinie für jede einzelne wird nicht benötigt)."
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:27
 #, elixir-format
 msgid "Referrer Policy not set. This means that the default value <code>no-referrer-when-downgrade</code>, leaking referrers in many situations, is used."
 msgstr ""
+"Referrer Richtline nicht gesetzt. Das bedeutet, daß vom Standardwert <code"
+">no-referrer-when-downgrade</code> ausgegangen wird, was eine Preisgabe des "
+"Referrer in vielen Situationen bedeutet."
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:15
 #, elixir-format
@@ -2003,6 +2018,9 @@ msgstr ""
 #, elixir-format
 msgid "SRI can be used with <code>script</code> and <code>link</code> elements. To enable SRI on an element, you need to add <code>integrity</code> and <code>crossorigin</code> attributes to it."
 msgstr ""
+"SRI kann auf <code>script</code> und <code>link</code> Tags angewendet "
+"werden. Zum Einrichten von SRI muß ein <code>integrity</code> und "
+"<code>crossorigin</code> Attribut dem Tag hinzugefügt werden."
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:76
 #, elixir-format
@@ -2039,10 +2057,9 @@ msgstr ""
 #, elixir-format
 msgid "Subresource Integrity enables you to mitigate some risks of attacks such as this, by ensuring that the files your web application or web document fetches (from a CDN or anywhere) have been delivered without a third-party having injected any additional content into those files — and without any other changes of any kind at all having been made to those files."
 msgstr ""
-"Subresource Integrity ermöglicht es Ihnen, die Risiken solcher Angriffe zu "
-"minimieren indem Sie sicherstellen, dass Dateien Ihrer Webanwendung, die von "
-"einem CDN oder sonstigen Quellen geladen werden ohne Manipulation jeglicher "
-"Art von Dritten an diesen Dateien vorgenommen wurden."
+"Subresource Integrity minimiert das Risko solcher Angriffe. Es stellt "
+"sicher, daß Dateien einer Webanwendung, die von CDN oder sonstigen Quellen "
+"stammen auch ohne Manipulationen geladen werden können."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:26
 #: lib/webbkoll_web/templates/site/_https.html.eex:43
@@ -2071,11 +2088,22 @@ msgstr ""
 #, elixir-format
 msgid "The <strong><code>X-Content-Type-Options</code></strong> response HTTP header is a marker used by the server to indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed. This allows to opt-out of MIME type sniffing, or, in other words, it is a way to say that the webmasters knew what they were doing."
 msgstr ""
+"Ein <strong><code>X-Content-Type-Options</code></strong> HTTP Header eines "
+"Servers gibt an, daß der jeweils gesendete MIME Content-Type einer Datei "
+"nicht verändert werden kann. Das Verhindert ein Ausspähen durch "
+"manipulierten MIME-Types oder in anderen Worten: Der Webmaster weiß, was "
+"sein Server genau macht."
 
 #: lib/webbkoll_web/templates/site/_headers.html.eex:61
 #, elixir-format
 msgid "The <strong><code>X-Frame-Options</code></strong> HTTP response header can be used to indicate whether or not a browser should be allowed to render a page in a <code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code> or <code>&lt;object&gt;</code>. Sites can use this to avoid <a href=\"https://en.wikipedia.org/wiki/clickjacking\">clickjacking</a> attacks, by ensuring that their content is not embedded into other sites."
 msgstr ""
+"Ein <strong><code>X-Frame-Options</code></strong> HTTP Antwortheader wird "
+"verwendet einem Browser mitzuteilen, ob eine Seite in einem "
+"<code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code> oder "
+"<code>&lt;object&gt;</code>. Websites können dieses nutzen, um <a href=\""
+"https://de.wikipedia.org/wiki/clickjacking\">Clickjacking-Angriffe</a> zu "
+"verhindern."
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:58
 #, elixir-format
@@ -2089,16 +2117,36 @@ msgstr ""
 #, elixir-format
 msgid "The Content Security Policy tests are based on the ones from the <a href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP Observatory</a> scanner/grader project (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> website, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</a>. Any mistake or inaccuracy in the results is our fault."
 msgstr ""
+"Die Tests für Content Security Richtlinen basieren auf dem Scanner des <a "
+"href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP "
+"Observatory</a> Projektes (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\""
+">Mozilla Public License 2.0</a>) von April King, von uns für Webbkoll "
+"implementiert. Die Beschreibungstexte sind von der <a href=\""
+"https://observatory.mozilla.org/\">Mozilla Observatory Webseite</a> "
+"entnommen, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-"
+"SA 3.0</a>. Für Fehler oder Ungenauigkeiten sind wir verantwortlich."
 
 #: lib/webbkoll_web/templates/site/_headers.html.eex:63
 #, elixir-format
 msgid "The HTTP <strong><code>X-XSS-Protection</code></strong> response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. Although these protections are largely unnecessary in modern browsers when sites implement a strong <code>Content-Security-Policy</code> that disables the use of inline JavaScript (<code>'unsafe-inline'</code>), they can still provide protections for users of older web browsers that don't yet support CSP."
 msgstr ""
+"Der HTTP <strong><code>X-XSS-Protection</code></strong> Antwort-Header ist "
+"ein Feature des Internet Explorers, Chrome und Safari das ein Nachladen bei "
+"einer entdeckten Cross-Site Scripting (XSS) Attacke verhindert. Gleichwohl "
+"ist dieser Header heute weniger wichtiger  wenn moderne Browser eine strenge "
+"<code>Content-Security-Policy</code> implementiert haben, die Inline "
+"JavaScripts (<code>'unsafe-inline'</code>) verhindert. Es kann aber "
+"weiterhin einen gewissen Schutz für ältere Browser darstellen, die keine CSP "
+"unterstützen."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:87
 #, elixir-format
 msgid "The Subresource Integrity test is based on the one from the <a href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP Observatory</a> scanner/grader project (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll."
 msgstr ""
+"Der Subresource Integrity Test basiert auf dem <a href=\"https://github.com/"
+"mozilla/http-observatory\">Mozilla HTTP Observatory</a> Scanner (<a href=\""
+"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) von "
+"April King, von uns für Webkoll implementiert."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:66
 #, elixir-format
@@ -2121,6 +2169,13 @@ msgstr ""
 #, elixir-format
 msgid "The header tests are based on the ones from the <a href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP Observatory</a> scanner/grader project (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> website, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</a>."
 msgstr ""
+"Der Header-Test basiert auf dem <a href=\"https://github.com/mozilla/http-"
+"observatory\">Mozilla HTTP Observatory</a> Scanner (<a href=\""
+"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) von "
+"April King, von uns für Webbkoll implementiert. Die BEschreibungstexte sind "
+"von der <a href=\"https://observatory.mozilla.org/\">Mozilla Observatory "
+"Website</a> entnommen, <a href=\"https://creativecommons.org/licenses/by-sa/"
+"3.0/\">CC-BY-SA 3.0</a>."
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:66
 #, elixir-format
@@ -2142,6 +2197,11 @@ msgstr ""
 #, elixir-format
 msgid "There are two types: <code>localStorage</code> data is persistent (not removed when the browser is closed) and never expires, while <code>sessionStorage</code> data is removed when the page session ends (unlike with session cookies, a sessionStorage session is <em>per window/tab</em>)."
 msgstr ""
+"Es gibt zwei Arten: <code>LocalStorage</code> mit dauerhaft gespeicherten "
+"Daten (auch wenn der Browser geschlossen wird) und "
+"<code>SessionStorage</code>, das gelöscht wird sobald die Session einer "
+"Website beendet wird (anders Verhalten wie Session Cookies). Eine "
+"SessionStorage Sitzung gilt immer <em>pro Fenster/Tab</em>."
 
 #: lib/webbkoll_web/templates/site/_headers.html.eex:72
 #, elixir-format
@@ -2197,11 +2257,18 @@ msgstr ""
 #, elixir-format
 msgid "To enable these headers you'll need to add them to your web server configuration. This is a simple change. Exactly how you do it depends on what server you use. <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options\">This page</a> [developer.mozilla.org] has configuration examples for Apache, Nginx and IIS."
 msgstr ""
+"Diese Header sind in der Webserver-Konfiguration einzurichten. Die Änderung "
+"ist relativ einfach, abhängig von der Art Deines Webservers. Du findest "
+"einige Konfigurationsbeispiele für Apache, Nginx and IIS <a href=\""
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options\">"
+"auf dieser Seite</a>."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:76
 #, elixir-format
 msgid "To make all this easier, you can use <a href=\"https://www.srihash.org/\">Mozilla's SRI Hash Generator.</a>"
 msgstr ""
+"Der <a href=\"https://www.srihash.org/\">Mozilla SRI Hash Generator</a> "
+"vereinfacht das Erstellen von Hashwerten."
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:54
 #, elixir-format
@@ -2259,6 +2326,13 @@ msgstr ""
 #, elixir-format
 msgid "When the browser sees this element, it will download <code>jquery.min.js</code>, calculate the SHA384 hash, compare it to the hash in the <code>integrity</code> attribute, and only run the script if the hashes match. For example, if someone were to modify <code>jquery.min.js</code> on the remote server after we calculcated the original hash, Firefox would refuse to run the script and you'd see this in the browser console:"
 msgstr ""
+"Sieht ein Browser dieses Element, startet er den Download von "
+"<code>jquery.min.js</code>, berechnet den SHA384 Hashwert und vergleicht "
+"diesen mit dem angegebenen Hash im <code>integrity</code> Attribut. Das "
+"Script wird nur ausgeführt, wenn die HAshwerte miteinander passen. Das "
+"verhindert, daß falls das <code>jquery.min.js</code> auf dem fremden Server "
+"von jemanden verändert wird, der Browser die Ausführung verhindern und "
+"folgende Meldung im Browser-Konsolenfenster ausgeben:"
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:62
 #, elixir-format
@@ -2283,7 +2357,7 @@ msgstr "Ja, aber hat Mängel"
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:53
 #, elixir-format
 msgid "[only relevant for base domain]"
-msgstr ""
+msgstr "[nur für die Hauptdomain relevant]"
 
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:9
 #, elixir-format
@@ -2322,16 +2396,34 @@ msgstr[1] ""
 #, elixir-format
 msgid "<strong>First-party cookies</strong> are placed by the web site owner in some register on their visitors' device in order to be able to re-identify the visitor on subsequent page loads. First-party cookies can be related to technical features on a web site (such as remembering language settings or the contents of a shopping basket), or related to commercial features of the web site owners' activities (such as being able to trace a visitors' behaviour over the duration of their visit, or over much longer time periods, often for years, in order to be able to serve advertisements to the users or to get usage statistics to guide later changes to the web site that are envisaged to make the web site more attractive to recurring users). First-party cookies may come from services provided by the web site owner (language settings in a Content Management System) or from services used by the web site owner (analytics tools)."
 msgstr ""
+"<strong>Firstparty-Cookies</strong> werden vom Website-Besitzer auf dem "
+"Gerät des Besuchers platziert, um bei späteren Seitenaufrufen diesen wieder "
+"zu identifizieren. First-Party-Cookies können mit technischen Merkmalen auf "
+"einer Website in Verbindung gebracht werden (z.B. Spracheinstellungen oder "
+"den Inhalt eines Warenkorbs) oder das Verhalten eines Besuchers über die "
+"Dauer des Besuches oder über einen deutlich längeren Zeitraum von mehreren "
+"Jahren zu verfolgen, um Werbung zukommen zu lassen oder um "
+"Nutzungsstatistiken zu erhalten. So können Verbesserungen an der Website "
+"vorgenommen werden damit diese für wiederkehrende Nutzer attraktiver sein "
+"kann. Cookies von Drittanbietern können von Diensten stammen, die vom "
+"Website-Besitzer eingebunden werden (z.B. Spracheinstellungen in einem "
+"Content-Management-System oder Analysetools)."
 
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:39
 #, elixir-format
 msgid "<strong>Third-party cookies</strong> are placed by a service affiliated with the web site owner on the devices of visitors to the web site in order to be able to re-identity the visitor on subsequent page loads, or across different web sites. Third-party cookies are typically related to commercial features of a web site owners' activities, usually advertising, but may also relate to technical features in scripts used by a web site (such as language settings)."
 msgstr ""
+"<strong>Third-party Cookies</strong> werden von Diensten gesetzt, die vom "
+"Website-Betreiber eingebunden wurden. So kann ein Besucher bei nachfolgenden "
+"Seitenaufrufen verschiedener Websites wieder identifiziert werden. Cookies "
+"von Drittanbietern werden in der Regel kommerziell genutzt, meistens für "
+"Werbung, sie können aber technische Merkmale beinhalten wie ein Dienst oder "
+"Website verwendet werden (z.B. Spracheinstellungen)."
 
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:51
 #, elixir-format
 msgid "<code>preload</code> &mdash; requests inclusion in preload lists"
-msgstr ""
+msgstr "<code>preload</code> &mdash; fordert Einbindung in der Preload-Liste an"
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:47
 #, elixir-format
@@ -2352,11 +2444,20 @@ msgstr ""
 #, elixir-format
 msgid "GDPR %{art_32_2} makes clear that measures should be taken against unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed. CSP is a relatively simple way of ensuring that your web visitors do not end up being put in contact with someone that either they - or you - did not anticipate for them to contact."
 msgstr ""
+"DSGVO %{art_32_2} stellt klar, dass Maßnahmen gegen unbefugte Weitergabe "
+"oderunbefugten Zugriff auf die übermittelten, gespeicherten oder anderweitig "
+"verarbeiteten personenbezogenen Daten zu ergreifen sind. Eine CSP ist ein "
+"relativ einfacher Weg, um sicherzustellen, dass Webbesucher nicht unerwartet "
+"mit einer Partei in Kontakt kommen."
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:46
 #, elixir-format
 msgid "If multiple policy values are specified, the browser will use the last one, ignoring unknown values (fallback values should thus appear first). Multiple values should be separated by commas, e.g.:"
 msgstr ""
+"Wenn mehrere Angaben für einen Wert vorliegen, verwendet der Browser immer "
+"der ihm zuletzt angegebenen Wert und ignoriert alle Vorhergehenden (ein "
+"Fallback sollte daher immer zuerst definiert werden). Mehrere Werte sind mit "
+"einem Komma zu separieren:"
 
 #: lib/webbkoll_web/views/site_view.ex:153
 #, elixir-format
@@ -2371,6 +2472,13 @@ msgstr ""
 #, elixir-format
 msgid "Since responsibility can be a difficult burden, Webbkoll has a large set of recommendations for data protection which may go further than what one could be legally liable for. We want to enable the best possible data protection with the least amount of administrative burdens. One of the reasons the rules of the data protection regulation make it seem bureaucratic and boring not to data minimise, is so that each actor in society who wishes to influence others has to consider carefully the way in which they use such power."
 msgstr ""
+"Verantwortung ist eine schwere Bürde. Webbkoll verfügt über eine Vielzahl "
+"von Instrumenten und Empfehlungen zum Datenschutz, die über das hinausgehen, "
+"wofür man gesetzlich haftbar gemacht wird. Wir wollen den bestmöglichen "
+"Datenschutz bei minimalem Aufwand ermöglichen. Mit ein Grund, warum die "
+"Regeln der Datenschutzgrundverordnung als bürokratisch und langweilig "
+"erscheinen und Datenverbeitungen nicht minimiert werden ist, weil jeder "
+"Akteur in der Gesellschaft, andere beeinflussen will."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:17
 #, elixir-format
@@ -2383,6 +2491,12 @@ msgstr ""
 #, elixir-format
 msgid "The <a href=\"http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679\">general data protection regulation of the European Union</a> enters into force on the 25th of May 2018 and concerns the balancing of power being those influencing individuals (typically companies and public authorities) and the individuals themselves. Webbkoll is a tool to find out who is collecting information about individuals, and what can be done to stop invisible tracking."
 msgstr ""
+"Die <a href=\"http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:"
+"32016R0679\">EU-Datenschutzgrundverordnung </a> tritt am 25, Mai 2018 in "
+"Kraft und regelt den Machtausgleich zwischen Einzelpersonen, Unternehmen und "
+"Behörden. Webbkoll ist ein Werkzeug, um herauszufinden, wer genau "
+"Informationen sammelt und was getan werden kann, um die Verfolgung zu "
+"stoppen."
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:42
 #, elixir-format
