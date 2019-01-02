@@ -8,7 +8,7 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-12-17 03:13+0000\n"
+"PO-Revision-Date: 2019-01-08 14:26+0000\n"
 "Last-Translator: Tomas Jakobs <tomas.jakobs@jakobssystems.net>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
@@ -334,7 +334,7 @@ msgstr "Wiederholen"
 #: lib/webbkoll_web/templates/site/index.html.eex:8
 #, elixir-format
 msgid "Check your site!"
-msgstr "Überprüfe Deine Webseite!"
+msgstr "Überprüfe Deine Website!"
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:89
 #: lib/webbkoll_web/templates/site/status.html.eex:7
@@ -737,7 +737,7 @@ msgstr "Ungültige Domain: %{domain}"
 msgid "It is also the categorisation of individuals into these groups. Once a web visitor is stuffed into a particular category, they may be positively or negatively discriminated against because of the categorisation."
 msgstr ""
 "Es ist auch die Kategorisierung von Individuen in diese Gruppen. Sobald ein "
-"Bsucher einer bestimmten Kategorie zugeordnet wurde, kann er deswegen "
+"Besucher einer bestimmten Kategorie zugeordnet wurde, kann er deswegen "
 "positiv oder negativ diskriminiert werden."
 
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:16
@@ -860,9 +860,9 @@ msgstr ""
 "Anzeigen für Windeln, Kinderwagen oder Familienferien erhalten. Zunehmend "
 "wird ein Profiling auch genutzt, um festzustellen, welche Zeitungsinhalte "
 "angezeigt werden. Die oben genannten Gruppen können beispielsweise kurze "
-"Artikel über Neugeborene erhalten, wenn sie in unterwegs sind (und wenig "
-"Zeit haben), oder längere Artikel über Neugeborene, wenn sie in einem Zug "
-"sitzen (und mehr Zeit zum Lesen haben)."
+"Artikel über Neugeborene erhalten, wenn sie unterwegs sind (und wenig Zeit "
+"haben), oder längere Artikel über Neugeborene, wenn sie in einem Zug sitzen ("
+"und mehr Zeit zum Lesen haben)."
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:18
 #, elixir-format
@@ -1222,10 +1222,10 @@ msgid "This principle above all concerns information registered by public author
 msgstr ""
 "Dieses Prinzip betrifft vor allem Informationen, die von Behörden oder "
 "Unternehmen gesammelt werden, z.B. in der Kreditprüfungsbranche. In der "
-"Webentwicklung ist es häufiger bei \"unscharfen\" Datensätzen der Fall, und "
-"die Folgen einer fehlerhaften Kategorisierung bei einer Profilerstellung "
-"sind in der Regel nicht schlimmer als Online-Werbung, die man sieht obwohl "
-"man nicht zur Zielgruppe gehört."
+"Webentwicklung geschieht das häufig bei \"unscharfen\" Daten wo die Folgen "
+"von falschen Kategorisierungen einer Profilerstellung nicht schlimmer als "
+"fehlerhaft angezeigte Werbung ist, die man sieht auch wenn man nicht zur "
+"Zielgruppe gehört."
 
 #: lib/webbkoll_web/views/site_view.ex:156
 #, elixir-format
@@ -1313,8 +1313,8 @@ msgstr "Wert"
 #, elixir-format
 msgid "We don't provide an API as we have limited resources, but <a href=\"https://github.com/andersju/webbkoll\">the code is available</a> under the MIT license. See also the options below."
 msgstr ""
-"Wir bieten keine API an da wir nur über begrenzte Ressourcen verfügen. Aber <"
-"a href=\"https://github.com/andersju/webbkoll\">der Code ist hier "
+"Wir bieten keine API an, da wir nur über begrenzte Ressourcen verfügen. Aber "
+"<a href=\"https://github.com/andersju/webbkoll\">der Code ist hier "
 "verfügbar</a> und steht unter einer freien MIT-Lizenz. Alternativen findest "
 "Du weiter unten."
 
@@ -1381,21 +1381,21 @@ msgid "Webbkoll monitors privacy-enhancing features on websites, and helps you f
 msgstr ""
 "Webbkoll prüft die Datenschutzfunktionen von Websites und hilft "
 "herauszufinden, wer einem die Kontrolle über Privatsphäre gibt. Wir decken "
-"auf inwieweit eine Website Ihre Besucher überwacht und wie sehr diese Daten "
-"an Dritte \"petzt\" basierend auf den Informationen, die bei einem Besuch "
-"einer Website entstehen. Wir stellen auch eine Reihe von Empfehlungen "
-"zusammen, wie Daten im digitalen Umfeld nicht weitergegeben oder gepetzt "
-"werden können."
+"auf, inwieweit eine Website Ihre Besucher überwacht und\n"
+"wie sehr diese Daten an Dritte \"petzt\", basierend auf den Informationen, "
+"die bei einem Besuch einer Website entstehen. Wir stellen auch eine Reihe "
+"von Empfehlungen zusammen, wie Daten im digitalen Umfeld nicht weitergegeben "
+"oder gepetzt werden können."
 
 #: lib/webbkoll_web/templates/site/about.html.eex:17
 #, elixir-format
 msgid "Webbkoll uses <a href=\"http://www.phoenixframework.org/\">Phoenix Framework</a> (Elixir), <a href=\"https://github.com/GoogleChrome/puppeteer\">Puppeteer</a> and numerous open source libraries; <a href=\"https://github.com/andersju/webbkoll#credits--licenses\">see here</a> for specifics."
 msgstr ""
-"Webbkoll verwendet <a href=\"http://www.phoenixframework.org/\">Phoenix "
-"Framework</a> (Elixir), <a href=\"https://github.com/GoogleChrome/puppeteer\""
+"Webbkoll verwendet das <a href=\"http://www.phoenixframework.org/\">Phoenix "
+"Framework (Elixir)</a>, <a href=\"https://github.com/GoogleChrome/puppeteer\""
 ">Puppeteer</a> und weitere Open Source Ressourcen; <a href=\"https://github."
 "com/andersju/webbkoll#credits--licenses\">weitere Informationen stehen "
-"hier.</a>."
+"hier</a>."
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:28
 #, elixir-format
@@ -2122,7 +2122,7 @@ msgstr ""
 "Observatory</a> Projektes (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\""
 ">Mozilla Public License 2.0</a>) von April King, von uns für Webbkoll "
 "implementiert. Die Beschreibungstexte sind von der <a href=\""
-"https://observatory.mozilla.org/\">Mozilla Observatory Webseite</a> "
+"https://observatory.mozilla.org/\">Mozilla Observatory</a> Website "
 "entnommen, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-"
 "SA 3.0</a>. Für Fehler oder Ungenauigkeiten sind wir verantwortlich."
 
@@ -2233,7 +2233,7 @@ msgstr ""
 #, elixir-format
 msgid "This tool attempts to simulate what happens when a user visits a specified page with a typical browser. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled, since this is the default setting in most browsers."
 msgstr ""
-"Dieses Tool simuliert den Aufruf einer Webseite mit einem typischen "
+"Dieses Tool simuliert den Aufruf einer Website mit einem typischen "
 "Webbrowser. Der Browser hat keine Addons/Erweiterungen und die Do-Not-Track "
 "Einstellungen sind nicht aktiviert, da das die Standardeinstellung in den "
 "meisten Browsern ist."
@@ -2339,10 +2339,10 @@ msgstr ""
 msgid "When you click on a link, your browser will typically send the HTTP referer [sic] header to the webserver where the destination webpage is at. The header contains the full URL of the page you came from. This lets sites see where traffic comes from. The header is also sent when external resources (such as images, fonts, JS and CSS) are loaded."
 msgstr ""
 "Wenn Sie auf einen Link klicken, sendet Ihr Browser in der Regel den HTTP "
-"Referer - also die Adresse von wo aus sie herkommen - an den Webserver, auf "
-"dem sich die Ziel-Webseite befindet. Auf diese Weise können Websites sehen, "
-"woher ein BEsucher kommt. Der Header wird auch gesendet, wenn externe "
-"Ressourcen (wie Bilder, Schriften, JS und CSS) geladen werden."
+"Referer - also die Adresse von woher Sie kommen - an den Webserver, auf dem "
+"sich die Ziel-Website befindet. Auf diese Weise können Websites sehen woher "
+"Ihre Besucher kommen. Der Header wird auch gesendet, wenn externe Ressourcen "
+"(wie Bilder, Schriften, JS und CSS) geladen werden."
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:28
 #, elixir-format
@@ -2477,8 +2477,8 @@ msgstr ""
 "wofür man gesetzlich haftbar gemacht wird. Wir wollen den bestmöglichen "
 "Datenschutz bei minimalem Aufwand ermöglichen. Mit ein Grund, warum die "
 "Regeln der Datenschutzgrundverordnung als bürokratisch und langweilig "
-"erscheinen und Datenverbeitungen nicht minimiert werden ist, weil jeder "
-"Akteur in der Gesellschaft, andere beeinflussen will."
+"erscheinen und Datenverarbeitungen nicht minimiert werden, ist, daß jeder "
+"Akteur in der Gesellschaft andere beeinflussen will."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:17
 #, elixir-format
