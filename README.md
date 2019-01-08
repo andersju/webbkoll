@@ -148,6 +148,10 @@ Run `systemctl daemon-reload` for good measure, and then try `systemctl start we
   * More? Let me know!
 
 ## Credits & licenses
+### Translations
+  * German translation by [Tomas Jakobs](https://jakobssystems.net)
+
+### Software
   * [Phoenix Framework](http://www.phoenixframework.org/) (MIT license) by Chris McCord
   * Header/content analysis code in `lib/webbkoll/header_analysis.ex`, `lib/webbkoll/content_analysis.ex`, `test/webkoll/csp_test.exs`, `test/webkoll/sri_test.exs` is based on work by April King for [Mozilla HTTP Observatory](https://github.com/mozilla/http-observatory), Mozilla Public License Version 2.0
   * [Bourbon](https://github.com/thoughtbot/bourbon), [Neat](https://github.com/thoughtbot/neat), [Bitters](https://github.com/thoughtbot/bitters), [Refills](https://github.com/thoughtbot/refills) (`assets/scss/{base,bourbon,neat}`) (MIT license) by thoughtbot
