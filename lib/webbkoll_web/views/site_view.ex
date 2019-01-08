@@ -198,6 +198,11 @@ defmodule WebbkollWeb.SiteView do
           "art" -> link(gettext("Art. ") <> text, to: "https://www.datainspektionen.se/lagar--regler/dataskyddsforordningen/dataskyddsforordningen---fulltext/##{number}")
           "rec" -> link(gettext("Rec. ") <> text, to: "https://www.datainspektionen.se/lagar--regler/dataskyddsforordningen/dataskyddsforordningens-beaktandesatser/##{number}")
         end
+      "de" ->
+        case type do
+          "art" -> link(gettext("Art. ") <> text, to: "https://dsgvo-gesetz.de/art-#{number}-dsgvo/")
+          "rec" -> link(gettext("Rec. ") <> text, to: "https://dsgvo-gesetz.de/erwaegungsgruende/nr-#{number}/")
+        end
       _ ->
         case type do
           "art" -> link(gettext("Art. ") <> text, to: "https://gdpr-info.eu/art-#{number}-gdpr/")
