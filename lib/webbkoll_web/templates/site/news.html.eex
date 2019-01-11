@@ -4,6 +4,9 @@
   <p>This page lists user-visible changes to Webbkoll. For the time before 2018-11-30 (when this page was added), only a few notable events are listed. For the full history, see the <a href="https://github.com/andersju/webbkoll/commits/">commits on GitHub</a>.</p>
 
   <article>
+    <h3>2019-01-11</h3>
+    <p>Thanks to <%= link("Tomas Jakobs", to: "https://jakobssystems.net") %>, Webbkoll is <%= link("now available in German", to: "/de/") %>!</p>
+
     <h3>2018-11-30</h3>
     <p>New version of Webbkoll launched, thanks to a small grant from <a href="https://digitalrights.fund/">Digital Rights Fund</a>. Changes/additions:</p>
 

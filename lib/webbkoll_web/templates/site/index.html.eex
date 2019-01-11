@@ -2,7 +2,11 @@
   <section>
 
     <div class="flash-notice">
-      <span><small><%= gettext(~s|Welcome to the new version of Webbkoll! See <a href="/en/news">here</a> for changes. If a site can't be checked or you find some other bug, please email <a href="mailto:info@dataskydd.net">info@dataskydd.net</a> or <a href="https://github.com/andersju/webbkoll/issues">open an issue on GitHub</a>.|) |> raw() %></small></span>
+      <p><span><small><%= gettext(~s|Welcome to the new version of Webbkoll! See <a href="/en/news">here</a> for changes. If a site can't be checked or you find some other bug, please email <a href="mailto:info@dataskydd.net">info@dataskydd.net</a> or <a href="https://github.com/andersju/webbkoll/issues">open an issue on GitHub</a>.|) |> raw() %></small></span>
+        <%= if @conn.assigns.locale == "en" do %>
+          <br />
+          <span class="icon-sphere"></span> Webbkoll is now <a href="/de/">available in German (auf Deutsch)</a>!
+        <% end %>
     </div>
 
     <h1><%= gettext "Check your site!" %></h1>
