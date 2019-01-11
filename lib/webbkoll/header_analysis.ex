@@ -454,7 +454,7 @@ defmodule Webbkoll.HeaderAnalysis do
     |> Enum.reduce_while(%{}, fn x, acc ->
       [k, v] =
         case String.contains?(x, "=") do
-          true -> x |> String.split("=") |> Enum.map(&String.trim/1)
+          true -> x |> String.split("=", parts: 2) |> Enum.map(&String.trim/1)
           false -> [String.trim(x), nil]
         end
 
