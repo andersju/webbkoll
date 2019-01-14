@@ -68,7 +68,7 @@ defmodule Webbkoll.Worker do
           %{fetch_url: url, timeout: 15_000}
       end
 
-    HTTPoison.get(backend_url, [], recv_timeout: 30_000, params: params)
+    HTTPoison.get(backend_url, [], recv_timeout: 40_000, params: params)
   end
 
   defp handle_response({:ok, %{status_code: 200, body: body}}, _id) do
@@ -148,7 +148,6 @@ defmodule Webbkoll.Worker do
         csp: csp,
         header_hsts: check_hsts(headers["strict-transport-security"], url.host, reg_domain),
         referrer: %{header: header_referrer, http_equiv: http_equiv_referrer, meta: meta_referrer, status: check_referrer_policy(referrer_policy_in_use)},
-        services: check_services(third_party_requests),
         security: json["security_info"],
         sri: ContentAnalysis.sri(json["content"], reg_domain, url.scheme),
         x_content_type_options: HeaderAnalysis.x_content_type_options(headers["x-content-type-options"]),
