@@ -4,6 +4,11 @@
   <p>This page lists user-visible changes to Webbkoll. For the time before 2018-11-30 (when this page was added), only a few notable events are listed. For the full history, see the <a href="https://github.com/andersju/webbkoll/commits/">commits on GitHub</a>.</p>
 
   <article>
+    <h3>2019-01-15</h3>
+    <p>We could not find any website that 1) had the consolidated version (i.e., with <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679R%2802%29">corrections</a> incorporated) of the GDPR <em>including the recitals</em>, 2) provided it in all 24 EU languages, and 3) made it easy to link to individual articles/recitals. So we hacked together one ourselves: <a href="https://gdpr.dataskydd.net/">https://gdpr.dataskydd.net/</a>. It's now used for the GDPR references on the Results page.</p>
+
+    <p>EUR-Lex <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A02016R0679-20160504">does provide a consolidated GDPR</a>, but it doesn't include the recitals (which also received corrections!). Additionally they don't make it easy to link to individual articles, unless you dig for IDs in the HTML source. So we took the XML versions of the consolidated GDPR, added the recitals, and manually applied the corrections to the recitals. All XML files and everything used to generate our GDPR site is <a href="https://github.com/andersju/gdpr-xml">available on GitHub</a> (beware: lots of ugly XSLT). Please report any mistakes.</p>
+
     <h3>2019-01-11</h3>
     <p>Thanks to <%= link("Tomas Jakobs", to: "https://jakobssystems.net") %>, Webbkoll is <%= link("now available in German", to: "/de/") %>!</p>
 
