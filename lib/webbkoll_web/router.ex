@@ -19,7 +19,7 @@ defmodule WebbkollWeb.Router do
   scope "/", WebbkollWeb do
     pipe_through(:browser)
 
-    get("/", SiteController, :index)
+    get("/", SiteController, :indexi18n)
   end
 
   scope "/:locale", WebbkollWeb do

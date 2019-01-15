@@ -15,7 +15,7 @@ defmodule WebbkollWeb.SiteController do
   plug(:check_rate_ip when action in [:check])
   plug(:check_rate_url_host when action in [:check])
 
-  def index(conn, _params) do
+  def indexi18n(conn, _params) do
     render(
       conn,
       "index.html",
@@ -27,8 +27,6 @@ defmodule WebbkollWeb.SiteController do
         )
     )
   end
-
-  def indexi18n(conn, params), do: index(conn, params)
 
   def news(conn, _params) do
     render(

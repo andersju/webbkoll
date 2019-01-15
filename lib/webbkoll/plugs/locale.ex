@@ -36,7 +36,18 @@ defmodule Webbkoll.Locale do
         path <> "?#{conn.query_string}"
       end
 
-    Phoenix.Controller.redirect(conn, to: path) |> halt
+    # If user hits / and preferred browser language isn't supported, don't
+    # redirect to /en/ - just show the English page on /. If we redirect to
+    # /en/ by default then that's what many links/bookmarks will point to,
+    # making it harder for users to discover when we DO have a relevant
+    # translation, as we also don't want to force another language on a user
+    # who's fetching an URL with a language explicitly set (such as /en/).
+    if conn.request_path == "/" and path == "/en/" do
+      Gettext.put_locale(WebbkollWeb.Gettext, "en")
+      assign(conn, :locale, "en")
+    else
+      Phoenix.Controller.redirect(conn, to: path) |> halt
+    end
   end
 
   # extract_accept_language(), parse_language_option() and ensure_language_fallbacks()
