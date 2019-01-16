@@ -10,6 +10,7 @@ defmodule WebbkollWeb.SiteController do
   plug(:check_for_bots when action in [:check])
   plug(:scrub_params, "url" when action in [:check])
   plug(:get_proper_url when action in [:check])
+  plug(:validate_domain when action in [:check] and @validate_urls)
   plug(:validate_url when action in [:check] and @validate_urls)
   plug(:check_if_site_exists when action in [:check])
   plug(:check_rate_ip when action in [:check])
@@ -212,7 +213,7 @@ defmodule WebbkollWeb.SiteController do
     assign(conn, :input_url, url)
   end
 
-  defp validate_url(conn, _params) do
+  defp validate_domain(conn, _params) do
     conn.assigns.input_url
     |> URI.parse()
     |> Map.get(:host)
@@ -225,6 +226,17 @@ defmodule WebbkollWeb.SiteController do
         render_error(
           conn,
           gettext("Invalid domain: %{domain}", domain: conn.assigns.input_url)
+        )
+    end
+  end
+
+  defp validate_url(conn, _params) do
+    case ValidUrl.validate(conn.assigns.input_url) do
+      true -> conn
+      false ->
+        render_error(
+          conn,
+          gettext("Invalid URL: %{url}", url: conn.assigns.input_url)
         )
     end
   end

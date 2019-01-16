@@ -35,7 +35,8 @@ defmodule Webbkoll.Mixfile do
         :geolix,
         :con_cache,
         :jumbo,
-        :download
+        :download,
+        :valid_url
       ],
       included_applications: [:ex2ms, :floki, :public_suffix, :uuid]
     ]
@@ -73,7 +74,7 @@ defmodule Webbkoll.Mixfile do
       {:download, "~> 0.0.4"},
       {:stream_gzip, "~> 0.3.1"},
       {:jason, "~> 1.0"},
-      {:credo, "~> 1.0.0", only: [:dev, :test], runtime: false}
+      {:valid_url, "~> 0.1.2"},
     ]
   end
 end
