@@ -15,5 +15,5 @@
 
   <p><%= link gettext("Try again?"), to: Routes.site_path(@conn, :check, @conn.assigns.locale, url: @site.input_url, refresh: "on") %></p>
 
-  <p><%= gettext(~s|<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href="mailto:info@dataskydd.net">send us an email</a> (and tell us what URL you tried)! You can also try <a href="https://privacyscore.org/">PrivacyScore</a> as an alternative.|) |> raw %></p>
+  <p><%= gettext(~s|<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href="mailto:info@dataskydd.net">send us an email</a> (and tell us what URL you tried)! You can also try <a href="%{url}#alternatives">alternative services</a>.|, url: Routes.page_path(@conn, :about, @conn.assigns.locale)) |> raw %></p>
 </article>

@@ -1,7 +1,10 @@
 defmodule Webbkoll.Helpers do
   @countries (fn ->
                 for lang <- Map.keys(Application.get_env(:webbkoll, :locales)), into: %{} do
-                  {lang, Application.app_dir(:webbkoll, "priv/#{lang}.json") |> File.read!() |> Jason.decode!()}
+                  {lang,
+                   Application.app_dir(:webbkoll, "priv/#{lang}.json")
+                   |> File.read!()
+                   |> Jason.decode!()}
                 end
               end).()
 
@@ -24,7 +27,7 @@ defmodule Webbkoll.Helpers do
 
   def get_unique_hosts(data, field_name) do
     data
-    |> Enum.map(&(&1[field_name]))
+    |> Enum.map(& &1[field_name])
     |> Enum.uniq()
   end
 
@@ -47,9 +50,11 @@ defmodule Webbkoll.Helpers do
     |> HTTPoison.head()
     |> handle_get_headers()
   end
+
   def handle_get_headers({:ok, response}) do
     {:ok, Enum.map(response.headers, fn {k, v} -> {String.downcase(k), v} end)}
   end
+
   def handle_get_headers({:error, reason}) do
     {:error, reason}
   end
@@ -59,7 +64,9 @@ defmodule Webbkoll.Helpers do
     |> get_headers()
     |> handle_find_header(header)
   end
+
   defp handle_find_header({:error, reason}, _), do: {:error, reason}
+
   defp handle_find_header({:ok, headers}, header) do
     headers
     |> Enum.find(fn {k, _} -> k == header end)

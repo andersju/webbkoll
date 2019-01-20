@@ -112,9 +112,11 @@ defmodule WebbkollWeb.SiteView do
 
       "x-xss-protection-enabled" ->
         gettext("X-XSS-Protection header set to \"1\"")
-    
+
       "x-xss-protection-not-needed-due-to-csp" ->
-        gettext("X-XSS-Protection header not needed due to strong Content Security Policy (CSP) header")
+        gettext(
+          "X-XSS-Protection header not needed due to strong Content Security Policy (CSP) header"
+        )
 
       "x-xss-protection-disabled" ->
         gettext("X-XSS-Protection header set to \"0\" (disabled)")
@@ -132,44 +134,101 @@ defmodule WebbkollWeb.SiteView do
 
   def csp_policy(policy, value) do
     pass =
-      if policy in [:insecureBaseUri, :insecureFormAction, :insecureSchemeActive, :insecureSchemePassive, :unsafeEval, :unsafeInline, :unsafeInlineStyle, :unsafeObjects], do: !value, else: value
+      if policy in [
+           :insecureBaseUri,
+           :insecureFormAction,
+           :insecureSchemeActive,
+           :insecureSchemePassive,
+           :unsafeEval,
+           :unsafeInline,
+           :unsafeInlineStyle,
+           :unsafeObjects
+         ],
+         do: !value,
+         else: value
 
     {test, info} =
       case policy do
         :antiClickjacking ->
           {gettext("Clickjacking protection, using <code>frame-ancestors</code>"),
-          gettext("The use of CSP's <code>frame-ancestors</code> directive offers fine-grained control over who can frame your site.")}
+           gettext(
+             "The use of CSP's <code>frame-ancestors</code> directive offers fine-grained control over who can frame your site."
+           )}
+
         :defaultNone ->
           {gettext("Deny by default, using <code>default-src 'none'</code>"),
-          gettext("Denying by default using <code>default-src 'none'</code> can ensure that your Content Security Policy doesn't allow the loading of resources you didn't intend to allow.")}
+           gettext(
+             "Denying by default using <code>default-src 'none'</code> can ensure that your Content Security Policy doesn't allow the loading of resources you didn't intend to allow."
+           )}
+
         :insecureBaseUri ->
-          {gettext("Restricts use of the <code>&lt;base&gt;</code> tag by using <code>base-uri 'none'</code>, <code>base-uri 'self'</code>, or specific origins"),
-          gettext("The <code>base</code> tag can be used to trick your site into loading scripts from untrusted origins.")}
+          {gettext(
+             "Restricts use of the <code>&lt;base&gt;</code> tag by using <code>base-uri 'none'</code>, <code>base-uri 'self'</code>, or specific origins"
+           ),
+           gettext(
+             "The <code>base</code> tag can be used to trick your site into loading scripts from untrusted origins."
+           )}
+
         :insecureFormAction ->
-          {gettext("Restricts where <code>&lt;form&gt;</code> contents may be submitted by using <code>form-action 'none'</code>, <code>form-action 'self'</code>, or specific URIs"),
-          gettext("Malicious JavaScript or content injection could modify where sensitive form data is submitted to or create additional forms for data exfiltration.")}
+          {gettext(
+             "Restricts where <code>&lt;form&gt;</code> contents may be submitted by using <code>form-action 'none'</code>, <code>form-action 'self'</code>, or specific URIs"
+           ),
+           gettext(
+             "Malicious JavaScript or content injection could modify where sensitive form data is submitted to or create additional forms for data exfiltration."
+           )}
+
         :insecureSchemeActive ->
           {gettext("Blocks loading of active content over HTTP or FTP"),
-          gettext("Loading JavaScript or plugins can allow a man-in-the-middle to execute arbitrary code on your website. Restricting your policy and changing links to HTTPS can help prevent this.")}
+           gettext(
+             "Loading JavaScript or plugins can allow a man-in-the-middle to execute arbitrary code on your website. Restricting your policy and changing links to HTTPS can help prevent this."
+           )}
+
         :insecureSchemePassive ->
           {gettext("Blocks loading of passive content over HTTP or FTP"),
-          gettext("This site's Content Security Policy allows the loading of passive content such as images or videos over insecure protocols such as HTTP or FTP. Consider changing them to load them over HTTPS.")}
+           gettext(
+             "This site's Content Security Policy allows the loading of passive content such as images or videos over insecure protocols such as HTTP or FTP. Consider changing them to load them over HTTPS."
+           )}
+
         :strictDynamic ->
-          {gettext("Uses CSP3's <code>'strict-dynamic'</code> directive to allow dynamic script loading (optional)"),
-          gettext("<code>'strict-dynamic'</code> lets you use a JavaScript shim loader to load all your site's JavaScript dynamically, without having to track <code>script-src</code> origins.")}
+          {gettext(
+             "Uses CSP3's <code>'strict-dynamic'</code> directive to allow dynamic script loading (optional)"
+           ),
+           gettext(
+             "<code>'strict-dynamic'</code> lets you use a JavaScript shim loader to load all your site's JavaScript dynamically, without having to track <code>script-src</code> origins."
+           )}
+
         :unsafeEval ->
-          {gettext("Blocks execution of JavaScript's <code>eval()</code> function by not allowing <code>'unsafe-eval'</code> inside <code>script-src</code>"),
-          gettext("Blocking the use of JavaScript's <code>eval()</code> function can help prevent the execution of untrusted code.")}
+          {gettext(
+             "Blocks execution of JavaScript's <code>eval()</code> function by not allowing <code>'unsafe-eval'</code> inside <code>script-src</code>"
+           ),
+           gettext(
+             "Blocking the use of JavaScript's <code>eval()</code> function can help prevent the execution of untrusted code."
+           )}
+
         :unsafeInline ->
-          {gettext("Blocks execution of inline JavaScript by not allowing <code>'unsafe-inline'</code> inside <code>script-src</code>"),
-          gettext("Blocking the execution of inline JavaScript provides CSP's strongest protection against cross-site scripting attacks. Moving JavaScript to external files can also help make your site more maintainable.")}
+          {gettext(
+             "Blocks execution of inline JavaScript by not allowing <code>'unsafe-inline'</code> inside <code>script-src</code>"
+           ),
+           gettext(
+             "Blocking the execution of inline JavaScript provides CSP's strongest protection against cross-site scripting attacks. Moving JavaScript to external files can also help make your site more maintainable."
+           )}
+
         :unsafeInlineStyle ->
-          {gettext("Blocks inline styles by not allowing <code>'unsafe-inline'</code> inside <code>style-src</code>"),
-          gettext("Blocking inline styles can help prevent attackers from modifying the contents or appearance of your page. Moving styles to external stylesheets can also help make your site more maintainable.")}
+          {gettext(
+             "Blocks inline styles by not allowing <code>'unsafe-inline'</code> inside <code>style-src</code>"
+           ),
+           gettext(
+             "Blocking inline styles can help prevent attackers from modifying the contents or appearance of your page. Moving styles to external stylesheets can also help make your site more maintainable."
+           )}
+
         :unsafeObjects ->
           {gettext("Blocks execution of plug-ins, using <code>object-src</code> restrictions"),
-          gettext("Blocking the execution of plug-ins via <code>object-src 'none'</code> or as inherited from <code>default-src</code> can prevent attackers from loading Flash or Java in the context of your page.")}
-        _ -> {"", ""}
+           gettext(
+             "Blocking the execution of plug-ins via <code>object-src 'none'</code> or as inherited from <code>default-src</code> can prevent attackers from loading Flash or Java in the context of your page."
+           )}
+
+        _ ->
+          {"", ""}
       end
 
     case policy do
@@ -182,6 +241,7 @@ defmodule WebbkollWeb.SiteView do
   # TODO: Replace with links to locally hosted version of the GDPR.
   def gdpr([type, number]), do: gdpr_link(type, number)
   def gdpr([type, number, text]), do: gdpr_link(type, number, text)
+
   def gdpr(list) when is_list(list) do
     Enum.reduce(list, [], fn x, acc ->
       [gdpr(x) | acc]
@@ -193,10 +253,21 @@ defmodule WebbkollWeb.SiteView do
   def gdpr_link(type, number, text \\ nil) do
     text = if text, do: text, else: number
     lang = Gettext.get_locale(WebbkollWeb.Gettext)
+
     case type do
-      "art" -> safe_to_string(link(gettext("Art. ") <> text, to: "https://gdpr.dataskydd.net/#{lang}/art/#art#{number}"))
-      "rec" -> safe_to_string(link(gettext("Rec. ") <> text, to: "https://gdpr.dataskydd.net/#{lang}/rec/#rec#{number}"))
+      "art" ->
+        safe_to_string(
+          link(gettext("Art. ") <> text,
+            to: "https://gdpr.dataskydd.net/#{lang}/art/#art#{number}"
+          )
+        )
+
+      "rec" ->
+        safe_to_string(
+          link(gettext("Rec. ") <> text,
+            to: "https://gdpr.dataskydd.net/#{lang}/rec/#rec#{number}"
+          )
+        )
     end
   end
-
 end

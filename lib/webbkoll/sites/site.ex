@@ -1,4 +1,4 @@
-defmodule WebbkollWeb.Site do
+defmodule Webbkoll.Sites.Site do
   defstruct [
     :input_url,
     :final_url,

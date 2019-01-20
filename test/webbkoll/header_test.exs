@@ -79,7 +79,12 @@ defmodule Webbkoll.HeaderTest do
   end
 
   test "X-XSS-Protection header invalid" do
-    for value <- ["foobar", "2; mode=block", "1; mode=block; mode=block", "1; mode=block, 1; mode=block"] do
+    for value <- [
+          "foobar",
+          "2; mode=block",
+          "1; mode=block; mode=block",
+          "1; mode=block, 1; mode=block"
+        ] do
       output = x_xss_protection(value, csp("", "", nil))
 
       assert output.result == "x-xss-protection-header-invalid"

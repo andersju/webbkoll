@@ -8,8 +8,8 @@ defmodule WebbkollWeb.Router do
     plug(:fetch_flash)
     plug(:protect_from_forgery)
     plug(:put_secure_browser_headers)
-    plug(Webbkoll.MoreSecureHeaders)
-    plug(Webbkoll.Locale, @default_locale)
+    plug(WebbkollWeb.Plugs.MoreSecureHeaders)
+    plug(WebbkollWeb.Plugs.Locale, @default_locale)
   end
 
   pipeline :api do
@@ -19,26 +19,21 @@ defmodule WebbkollWeb.Router do
   scope "/", WebbkollWeb do
     pipe_through(:browser)
 
-    get("/", SiteController, :indexi18n)
+    get("/", PageController, :index)
   end
 
   scope "/:locale", WebbkollWeb do
-    # Use the default browser stack
     pipe_through(:browser)
 
-    get("/news", SiteController, :news)
-    get("/faq", SiteController, :faq)
-    get("/about", SiteController, :about)
-    get("/donate", SiteController, :donate)
     get("/check", SiteController, :check)
     get("/status", SiteController, :status)
     get("/results", SiteController, :results)
 
-    get("/", SiteController, :indexi18n)
-  end
+    get("/news", PageController, :news)
+    get("/faq", PageController, :faq)
+    get("/about", PageController, :about)
+    get("/donate", PageController, :donate)
 
-  # Other scopes may use custom stacks.
-  # scope "/api", Webbkoll do
-  #   pipe_through :api
-  # end
+    get("/", PageController, :index)
+  end
 end

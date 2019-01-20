@@ -127,6 +127,7 @@ defmodule Webbkoll.ContentAnalysis do
           "script" -> List.first(Floki.attribute(x, "src")) || ""
           "link" -> List.first(Floki.attribute(x, "href")) || ""
         end
+
       integrity = List.first(Floki.attribute(x, "integrity")) || nil
       crossorigin = List.first(Floki.attribute(x, "crossorigin")) || nil
       parsed_url = URI.parse(src)

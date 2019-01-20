@@ -325,7 +325,12 @@ defmodule Webbkoll.HeaderAnalysis do
   end
 
   def x_content_type_options(nil) do
-    %{name: "X-Content-Type-Options", data: nil, pass: false, result: "x-content-type-options-not-implemented"}
+    %{
+      name: "X-Content-Type-Options",
+      data: nil,
+      pass: false,
+      result: "x-content-type-options-not-implemented"
+    }
   end
 
   def x_content_type_options(header) do

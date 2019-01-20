@@ -1,7 +1,7 @@
 defmodule WebbkollWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :webbkoll
 
-  #socket "/socket", WebbkollWeb.UserSocket, 
+  # socket "/socket", WebbkollWeb.UserSocket, 
   #  websocket: true, # or list of options
   #  longpoll: false
 

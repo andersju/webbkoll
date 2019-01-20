@@ -1,6 +1,6 @@
 defmodule WebbkollWeb.SiteController do
   use WebbkollWeb, :controller
-  alias WebbkollWeb.Site
+  alias Webbkoll.Sites
 
   @backends Application.get_env(:webbkoll, :backends)
   @rate_limit_client Application.get_env(:webbkoll, :rate_limit_client)
@@ -16,78 +16,9 @@ defmodule WebbkollWeb.SiteController do
   plug(:check_rate_ip when action in [:check])
   plug(:check_rate_url_host when action in [:check])
 
-  def indexi18n(conn, _params) do
-    render(
-      conn,
-      "index.html",
-      locale: conn.assigns.locale,
-      page_title: gettext("Analyze"),
-      page_description:
-        gettext(
-          "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."
-        )
-    )
-  end
-
-  def news(conn, _params) do
-    render(
-      conn,
-      "news.html",
-      locale: conn.assigns.locale,
-      page_title: gettext("News"),
-      page_description:
-        gettext(
-          "Recent changes on Webbkoll."
-        )
-    )
-  end
-
-  def faq(conn, _params) do
-    render(
-      conn,
-      "faq.html",
-      locale: conn.assigns.locale,
-      page_title: gettext("FAQ"),
-      page_description:
-        gettext(
-          "The what and why of data protection and the principles of the EU general data protection regulation."
-        )
-    )
-  end
-
-  def about(conn, _params) do
-    render(
-      conn,
-      "about.html",
-      locale: conn.assigns.locale,
-      page_title: gettext("About"),
-      page_description:
-        gettext("How Webbkoll works, who made it, and alternative services.")
-    )
-  end
-
-  def donate(conn, _params) do
-    render(
-      conn,
-      "donate.html",
-      locale: conn.assigns.locale,
-      page_title: gettext("Donate"),
-      page_description:
-        gettext("How you can support our work.")
-    )
-  end
-
   def check(%Plug.Conn{assigns: %{input_url: proper_url}} = conn, _params) do
-    site = %Site{
-      input_url: proper_url,
-      try_count: 0,
-      status: "queue",
-      inserted_at: System.system_time(:microsecond)
-    }
-
     id = UUID.uuid4()
-
-    ConCache.put(:site_cache, id, site)
+    Sites.add_site(id, proper_url)
 
     {queue, settings} = Enum.random(@backends)
 
@@ -104,7 +35,7 @@ defmodule WebbkollWeb.SiteController do
   def status(conn, %{"id" => id}) do
     case UUID.info(id) do
       {:error, _} -> handle_status(nil, id, conn)
-      {:ok, _} -> ConCache.get(:site_cache, id) |> handle_status(id, conn)
+      {:ok, _} -> Sites.get_site(id) |> handle_status(id, conn)
     end
   end
 
@@ -121,16 +52,20 @@ defmodule WebbkollWeb.SiteController do
         render(conn, "status.html", id: id, site: site, page_title: gettext("Status"))
 
       "failed" ->
-        redirect(conn, to: Routes.site_path(conn, :results, conn.assigns.locale, url: site.input_url))
+        redirect(conn,
+          to: Routes.site_path(conn, :results, conn.assigns.locale, url: site.input_url)
+        )
 
       "done" ->
-        redirect(conn, to: Routes.site_path(conn, :results, conn.assigns.locale, url: site.input_url))
+        redirect(conn,
+          to: Routes.site_path(conn, :results, conn.assigns.locale, url: site.input_url)
+        )
     end
   end
 
   def results(conn, %{"url" => url}) do
     url
-    |> get_latest_from_cache()
+    |> Sites.get_latest_from_cache()
     |> handle_results(conn, url)
   end
 
@@ -141,10 +76,14 @@ defmodule WebbkollWeb.SiteController do
   defp handle_results({id, site}, conn, _url) do
     case site.status do
       "queue" ->
-        redirect(conn, to: Routes.site_path(conn, :status, conn.assigns.locale, id: id, site: site))
+        redirect(conn,
+          to: Routes.site_path(conn, :status, conn.assigns.locale, id: id, site: site)
+        )
 
       "processing" ->
-        redirect(conn, to: Routes.site_path(conn, :status, conn.assigns.locale, id: id, site: site))
+        redirect(conn,
+          to: Routes.site_path(conn, :status, conn.assigns.locale, id: id, site: site)
+        )
 
       "failed" ->
         render(conn, :failed, site: site, page_title: gettext("Processing failed"))
@@ -158,19 +97,6 @@ defmodule WebbkollWeb.SiteController do
           page_description: gettext("How this website is doing with regards to privacy.")
         )
     end
-  end
-
-  defp get_latest_from_cache(url) do
-    input = :ets.match_object(ConCache.ets(:site_cache), {:_, %{input_url: url}})
-
-    input
-    |> Enum.filter(&is_tuple/1)
-    |> Enum.sort(fn x, y ->
-      elem(x, 1)
-      |> Map.get(:inserted_at) > elem(y, 1)
-      |> Map.get(:inserted_at)
-    end)
-    |> List.first()
   end
 
   # Plugs
@@ -194,12 +120,21 @@ defmodule WebbkollWeb.SiteController do
 
   defp get_proper_url(url = %URI{}) do
     case @validate_urls do
-      true -> URI.to_string(
-        %URI{host: (url.host |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase()),
-             path: url.path, query: url.query, scheme: "http"})
-      false -> URI.to_string(
-        %URI{host: (url.authority |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase()),
-             path: url.path, query: url.query, scheme: "http"})
+      true ->
+        URI.to_string(%URI{
+          host: url.host |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase(),
+          path: url.path,
+          query: url.query,
+          scheme: "http"
+        })
+
+      false ->
+        URI.to_string(%URI{
+          host: url.authority |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase(),
+          path: url.path,
+          query: url.query,
+          scheme: "http"
+        })
     end
   end
 
@@ -232,7 +167,9 @@ defmodule WebbkollWeb.SiteController do
 
   defp validate_url(conn, _params) do
     case ValidUrl.validate(conn.assigns.input_url) do
-      true -> conn
+      true ->
+        conn
+
       false ->
         render_error(
           conn,
@@ -250,7 +187,7 @@ defmodule WebbkollWeb.SiteController do
 
   defp check_site_in_cache(conn, proper_url) do
     proper_url
-    |> get_latest_from_cache()
+    |> Sites.get_latest_from_cache()
     |> handle_check_site_in_cache(conn)
   end
 

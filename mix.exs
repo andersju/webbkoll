@@ -74,7 +74,7 @@ defmodule Webbkoll.Mixfile do
       {:download, "~> 0.0.4"},
       {:stream_gzip, "~> 0.3.1"},
       {:jason, "~> 1.0"},
-      {:valid_url, "~> 0.1.2"},
+      {:valid_url, "~> 0.1.2"}
     ]
   end
 end

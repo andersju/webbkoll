@@ -10,8 +10,8 @@ config :webbkoll,
   locales: %{
     "en" => "English",
     "sv" => "Svenska",
-    "de" => "Deutsch",
-    #"fr" => "Français"
+    "de" => "Deutsch"
+    # "fr" => "Français"
   },
   default_locale: "en",
   version: System.cmd("git", ["log", "-1", "--format=%h %ci"]) |> elem(0) |> String.trim()
@@ -32,10 +32,6 @@ config :logger, :console,
   metadata: [:request_id],
   level: :error
 
-# Import environment specific config. This must remain at the bottom
-# of this file so it overrides the configuration defined above.
-import_config "#{Mix.env()}.exs"
-
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
@@ -44,15 +40,11 @@ config :phoenix, :generators,
   migration: true,
   binary_id: false
 
-config :phoenix, :template_engines,
-  slim: PhoenixSlime.Engine,
-  slime: PhoenixSlime.Engine
-
 config :webbkoll, Webbkoll.Scheduler,
   jobs: [
     {"@reboot", {Webbkoll.CronJobs, :download_geoip_if_not_exists, []}},
     {"@weekly", {Webbkoll.CronJobs, :update_geoip, []}},
-    {"* * * * *", {Webbkoll.CronJobs, :find_and_remove_stuck_records, []}},
+    {"* * * * *", {Webbkoll.CronJobs, :find_and_remove_stuck_records, []}}
   ]
 
 config :geolix,
@@ -63,3 +55,7 @@ config :geolix,
       source: "priv/GeoLite2-Country.mmdb.gz"
     }
   ]
+
+# Import environment specific config. This must remain at the bottom
+# of this file so it overrides the configuration defined above.
+import_config "#{Mix.env()}.exs"

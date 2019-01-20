@@ -1,19 +1,17 @@
 defmodule Webbkoll.Worker do
   alias Webbkoll.HeaderAnalysis, as: HeaderAnalysis
   alias Webbkoll.ContentAnalysis, as: ContentAnalysis
+  alias Webbkoll.Sites
   import Webbkoll.Helpers
 
   @max_attempts Application.get_env(:webbkoll, :max_attempts)
 
   def perform(id, url, refresh, backend_url) do
-    %{status: status} = ConCache.get(:site_cache, id)
+    %{status: status} = Sites.get_site(id)
 
     if status != "failed" do
-      update_site(id, %{status: "processing"})
-
-      ConCache.update(:site_cache, id, fn old ->
-        {:ok, old |> Map.update(:try_count, 0, &(&1 + 1))}
-      end)
+      Sites.update_site(id, %{status: "processing"})
+      Sites.increment_site_tries(id)
 
       url
       |> check_if_https_only()
@@ -44,15 +42,6 @@ defmodule Webbkoll.Worker do
     |> Map.put(:scheme, "https")
     |> Map.put(:port, 443)
     |> URI.to_string()
-  end
-
-  def update_site(id, params) do
-    ConCache.update(:site_cache, id, fn old ->
-      {
-        :ok,
-        old |> Map.merge(params) |> Map.merge(%{updated_at: System.system_time(:microsecond)})
-      }
-    end)
   end
 
   def fetch(url, refresh, backend_url) do
@@ -92,14 +81,14 @@ defmodule Webbkoll.Worker do
   end
 
   defp handle_error(reason, id) do
-    site = ConCache.get(:site_cache, id)
+    site = Sites.get_site(id)
 
     # Usually we should try again because Chrome/Chromium might not be totally stable,
     # but sometimes - e.g. when user has entered an invalid domain name - it's
     # better not to, and to instead give feedback right away.
     if site.try_count >= @max_attempts ||
          String.contains?(reason, ["404", "ERR_CONNECTION_REFUSED", "ERR_NAME_NOT_RESOLVED"]) do
-      update_site(id, %{status: "failed", status_message: reason})
+      Sites.update_site(id, %{status: "failed", status_message: reason})
     end
 
     raise reason
@@ -124,7 +113,12 @@ defmodule Webbkoll.Worker do
          http_equiv_referrer = get_meta(json["content"], "http-equiv", "referrer-policy"),
          referrer_policy_in_use =
            check_referrer_policy_in_use(meta_referrer, http_equiv_referrer, header_referrer),
-         csp = HeaderAnalysis.csp(url.scheme, get_header(headers, "content-security-policy"), get_meta(json["content"], "http-equiv", "content-security-policy")) do
+         csp =
+           HeaderAnalysis.csp(
+             url.scheme,
+             get_header(headers, "content-security-policy"),
+             get_meta(json["content"], "http-equiv", "content-security-policy")
+           ) do
       %{
         input_url: json["input_url"],
         final_url: json["final_url"],
@@ -142,15 +136,21 @@ defmodule Webbkoll.Worker do
         third_party_requests: third_party_requests,
         third_party_request_types: third_party_request_types,
         insecure_requests_count:
-         third_party_request_types.insecure + Enum.count(insecure_first_party_requests),
+          third_party_request_types.insecure + Enum.count(insecure_first_party_requests),
         meta_csp: get_meta(json["content"], "http-equiv", "content-security-policy"),
         header_csp: get_header(headers, "content-security-policy"),
         csp: csp,
         header_hsts: check_hsts(headers["strict-transport-security"], url.host, reg_domain),
-        referrer: %{header: header_referrer, http_equiv: http_equiv_referrer, meta: meta_referrer, status: check_referrer_policy(referrer_policy_in_use)},
+        referrer: %{
+          header: header_referrer,
+          http_equiv: http_equiv_referrer,
+          meta: meta_referrer,
+          status: check_referrer_policy(referrer_policy_in_use)
+        },
         security: json["security_info"],
         sri: ContentAnalysis.sri(json["content"], reg_domain, url.scheme),
-        x_content_type_options: HeaderAnalysis.x_content_type_options(headers["x-content-type-options"]),
+        x_content_type_options:
+          HeaderAnalysis.x_content_type_options(headers["x-content-type-options"]),
         x_frame_options: HeaderAnalysis.x_frame_options(headers["x-frame-options"], csp),
         x_xss_protection: HeaderAnalysis.x_xss_protection(headers["x-xss-protection"], csp)
       }
@@ -158,12 +158,14 @@ defmodule Webbkoll.Worker do
   end
 
   defp save(data, id) do
-    update_site(id, Map.merge(%{status: "done"}, data))
+    Sites.update_site(id, Map.merge(%{status: "done"}, data))
   end
 
   defp get_insecure_first_party_requests(requests, registerable_domain) do
     requests
-    |> Enum.reduce([], fn request, acc -> check_insecure_first_party(request, acc, registerable_domain) end)
+    |> Enum.reduce([], fn request, acc ->
+      check_insecure_first_party(request, acc, registerable_domain)
+    end)
     |> get_insecure_first_party_requests()
   end
 
@@ -188,12 +190,19 @@ defmodule Webbkoll.Worker do
   defp get_third_party_requests(requests, registerable_domain) do
     Enum.reduce(requests, %{}, fn request, acc ->
       host = URI.parse(request["url"]).host
+
       case host !== nil && get_registerable_domain(host) !== registerable_domain do
         true ->
           # TODO: IP and country stored per URL rather than per host. Although they might
           # in theory differ between requests, might be better to just store it per host?
-          new_map = %{url: request["url"], ip: request["remote_address"]["ip"], country: get_geolocation_by_ip(request["remote_address"]["ip"])}
+          new_map = %{
+            url: request["url"],
+            ip: request["remote_address"]["ip"],
+            country: get_geolocation_by_ip(request["remote_address"]["ip"])
+          }
+
           Map.put(acc, host, [new_map | Map.get(acc, host, [])])
+
         false ->
           acc
       end
@@ -204,7 +213,12 @@ defmodule Webbkoll.Worker do
     individual_requests = for {_host, value} <- requests, request <- value, do: request
 
     total = Enum.count(individual_requests)
-    secure = Enum.count(individual_requests, fn request -> String.starts_with?(request.url, "https://") end)
+
+    secure =
+      Enum.count(individual_requests, fn request ->
+        String.starts_with?(request.url, "https://")
+      end)
+
     unique_hosts = Enum.count(requests)
 
     %{total: total, secure: secure, insecure: total - secure, unique_hosts: unique_hosts}
@@ -213,11 +227,11 @@ defmodule Webbkoll.Worker do
   defp get_cookies(cookies, registerable_domain) do
     cookies
     |> Enum.split_with(fn cookie -> split_by_domain(cookie, registerable_domain) end)
-    |> (&(%{first_party: elem(&1, 0), third_party: elem(&1, 1)})).()
+    |> (&%{first_party: elem(&1, 0), third_party: elem(&1, 1)}).()
   end
 
   defp split_by_domain(x, registerable_domain) do
-    (x["domain"] |> String.trim(".") |> get_registerable_domain()) == registerable_domain
+    x["domain"] |> String.trim(".") |> get_registerable_domain() == registerable_domain
   end
 
   defp get_cookie_count(cookies) do
@@ -250,7 +264,8 @@ defmodule Webbkoll.Worker do
     content
     |> Floki.find("meta[http-equiv]")
     |> Enum.reduce([], fn x, acc ->
-      if (Floki.attribute(x, "http-equiv") |> Floki.text |> String.downcase) == "content-security-policy" do
+      if Floki.attribute(x, "http-equiv") |> Floki.text() |> String.downcase() ==
+           "content-security-policy" do
         acc ++ Floki.attribute(x, "content")
       else
         acc
@@ -309,8 +324,11 @@ defmodule Webbkoll.Worker do
       %{host: HeaderAnalysis.hsts(header)}
     else
       case find_header("https://#{reg_domain}", "strict-transport-security") do
-        {:ok, reg_domain_header} -> %{host: HeaderAnalysis.hsts(header), base: HeaderAnalysis.hsts(reg_domain_header)}
-        {:error, _} -> %{host: HeaderAnalysis.hsts(header)}
+        {:ok, reg_domain_header} ->
+          %{host: HeaderAnalysis.hsts(header), base: HeaderAnalysis.hsts(reg_domain_header)}
+
+        {:error, _} ->
+          %{host: HeaderAnalysis.hsts(header)}
       end
     end
   end

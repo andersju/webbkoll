@@ -18,7 +18,8 @@ defmodule Webbkoll.Trackers do
             for {category, value} <- categories, organization <- value do
               {name, org_values} = Enum.at(organization, 0)
 
-              for {url, hosts} <- org_values, String.starts_with?(url, ["http", "www."]) and is_list(hosts) do
+              for {url, hosts} <- org_values,
+                  String.starts_with?(url, ["http", "www."]) and is_list(hosts) do
                 for host <- hosts do
                   {host, "#{category} (#{name})"}
                 end

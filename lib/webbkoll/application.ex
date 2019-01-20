@@ -28,7 +28,11 @@ defmodule Webbkoll.Application do
       worker(Webbkoll.Scheduler, []),
       # Add the ConCache ETS key/value store
       supervisor(ConCache, [
-        [name: :site_cache, ttl_check_interval: :timer.seconds(60), global_ttl: :timer.seconds(86_400)]
+        [
+          name: :site_cache,
+          ttl_check_interval: :timer.seconds(60),
+          global_ttl: :timer.seconds(86_400)
+        ]
       ]),
       # Add the Jumbo job queue supervisor
       supervisor(Jumbo.QueueSupervisor, [jumbo_queues, [name: Webbkoll.QueueSupervisor]])
