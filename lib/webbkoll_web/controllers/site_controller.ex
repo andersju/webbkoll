@@ -15,6 +15,7 @@ defmodule WebbkollWeb.SiteController do
   plug(:check_if_site_exists when action in [:check])
   plug(:check_rate_ip when action in [:check])
   plug(:check_rate_url_host when action in [:check])
+  plug(:validate_id when action in [:status])
 
   def check(%Plug.Conn{assigns: %{input_url: proper_url}} = conn, _params) do
     {:ok, id} = Sites.add_site(proper_url)
@@ -32,30 +33,23 @@ defmodule WebbkollWeb.SiteController do
   end
 
   def status(conn, %{"id" => id}) do
-    case Sites.is_valid_id?(id) do
-      {:error, _} -> handle_status(nil, id, conn)
-      {:ok, _} -> Sites.get_site(id) |> handle_status(id, conn)
-    end
+    id
+    |> Sites.get_site()
+    |> handle_status(id, conn)
   end
 
-  defp handle_status(nil, _id, conn) do
-    redirect(conn, to: Routes.page_path(conn, :index, conn.assigns.locale))
+  defp handle_status(%Sites.Site{status: "done"} = site, _id, conn) do
+    redirect(conn,
+      to: Routes.site_path(conn, :results, conn.assigns.locale, url: site.input_url)
+    )
   end
 
   defp handle_status(site, id, conn) do
     case site.status do
-      "queue" ->
+      x when x in ["queue", "processing"] ->
         render(conn, "status.html", id: id, site: site, page_title: gettext("Status"))
 
-      "processing" ->
-        render(conn, "status.html", id: id, site: site, page_title: gettext("Status"))
-
-      "failed" ->
-        redirect(conn,
-          to: Routes.site_path(conn, :results, conn.assigns.locale, url: site.input_url)
-        )
-
-      "done" ->
+      x when x in ["failed", "done"] ->
         redirect(conn,
           to: Routes.site_path(conn, :results, conn.assigns.locale, url: site.input_url)
         )
@@ -74,12 +68,7 @@ defmodule WebbkollWeb.SiteController do
 
   defp handle_results({id, site}, conn, _url) do
     case site.status do
-      "queue" ->
-        redirect(conn,
-          to: Routes.site_path(conn, :status, conn.assigns.locale, id: id, site: site)
-        )
-
-      "processing" ->
+      x when x in ["queue", "processing"] ->
         redirect(conn,
           to: Routes.site_path(conn, :status, conn.assigns.locale, id: id, site: site)
         )
@@ -223,6 +212,16 @@ defmodule WebbkollWeb.SiteController do
 
       {:error, _} ->
         render_error(conn, gettext("Trying same host too frequently. Try again in a minute."))
+    end
+  end
+
+  defp validate_id(%Plug.Conn{query_params: %{"id" => id}} = conn, _params) do
+    case Sites.is_valid_id?(id) do
+      {:ok, _} ->
+        conn
+
+      {:error, _} ->
+        render_error(conn, gettext("Invalid id."))
     end
   end
 
