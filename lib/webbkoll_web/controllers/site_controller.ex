@@ -17,8 +17,7 @@ defmodule WebbkollWeb.SiteController do
   plug(:check_rate_url_host when action in [:check])
 
   def check(%Plug.Conn{assigns: %{input_url: proper_url}} = conn, _params) do
-    id = UUID.uuid4()
-    Sites.add_site(id, proper_url)
+    {:ok, id} = Sites.add_site(proper_url)
 
     {queue, settings} = Enum.random(@backends)
 
@@ -33,14 +32,14 @@ defmodule WebbkollWeb.SiteController do
   end
 
   def status(conn, %{"id" => id}) do
-    case UUID.info(id) do
+    case Sites.is_valid_id?(id) do
       {:error, _} -> handle_status(nil, id, conn)
       {:ok, _} -> Sites.get_site(id) |> handle_status(id, conn)
     end
   end
 
   defp handle_status(nil, _id, conn) do
-    redirect(conn, to: Routes.site_path(conn, :indexi18n, conn.assigns.locale))
+    redirect(conn, to: Routes.page_path(conn, :index, conn.assigns.locale))
   end
 
   defp handle_status(site, id, conn) do

@@ -1,7 +1,9 @@
 defmodule Webbkoll.Sites do
   alias Webbkoll.Sites.Site
 
-  def add_site(id, url) do
+  def add_site(url) do
+    id = UUID.uuid4()
+
     site = %Site{
       input_url: url,
       try_count: 0,
@@ -10,6 +12,8 @@ defmodule Webbkoll.Sites do
     }
 
     ConCache.put(:site_cache, id, site)
+
+    {:ok, id}
   end
 
   def update_site(id, params) do
@@ -47,5 +51,9 @@ defmodule Webbkoll.Sites do
 
   def get_sites_by(params) do
     :ets.match_object(ConCache.ets(:site_cache), {:_, params})
+  end
+
+  def is_valid_id?(id) do
+    UUID.info(id)
   end
 end
