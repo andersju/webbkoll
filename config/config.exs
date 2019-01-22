@@ -42,7 +42,7 @@ config :phoenix, :generators,
 
 config :webbkoll, Webbkoll.Scheduler,
   jobs: [
-    {"@reboot", {Webbkoll.CronJobs, :download_geoip_if_not_exists, []}},
+    {"@reboot", {Webbkoll.CronJobs, :download_geoip_if_necessary, []}},
     {"@weekly", {Webbkoll.CronJobs, :update_geoip, []}},
     {"* * * * *", {Webbkoll.CronJobs, :find_and_remove_stuck_records, []}}
   ]

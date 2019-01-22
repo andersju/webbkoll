@@ -18,7 +18,7 @@ defmodule Webbkoll.CronJobs do
     end)
   end
 
-  def download_geoip_if_not_exists do
+  def download_geoip_if_necessary do
     with [] <- Geolix.Database.Loader.loaded_databases() do
       Logger.info("GeoIP DB missing; trying to download.")
       update_geoip()
