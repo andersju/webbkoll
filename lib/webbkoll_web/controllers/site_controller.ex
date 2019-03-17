@@ -44,6 +44,10 @@ defmodule WebbkollWeb.SiteController do
     )
   end
 
+  defp handle_status(nil, id, conn) do
+    render_error(conn, gettext("Invalid ID."))
+  end
+
   defp handle_status(site, id, conn) do
     case site.status do
       x when x in ["queue", "processing"] ->

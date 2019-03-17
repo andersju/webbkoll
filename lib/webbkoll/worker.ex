@@ -241,6 +241,10 @@ defmodule Webbkoll.Worker do
     }
   end
 
+  defp get_meta(nil, _, _) do
+    nil
+  end
+
   defp get_meta(content, attribute, name) do
     content
     |> String.downcase()
