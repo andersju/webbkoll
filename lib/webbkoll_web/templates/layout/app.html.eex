@@ -13,6 +13,7 @@
     <% end %>
     <title><%= assigns[:page_title] %> | Webbkoll - dataskydd.net</title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>">
+
     <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
@@ -27,9 +28,13 @@
     <link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
     <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
-    
+
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="/images/mstile-144x144.png">
+
+    <!--[if lt IE 9]>
+      <script src="<%= Routes.static_path(@conn, "/js/html5shiv.min.js") %>></script>
+    <![endif]-->
   <body>
     <header class="navigation">
       <div class="navigation-wrapper">

@@ -44,7 +44,7 @@ defmodule WebbkollWeb.SiteController do
     )
   end
 
-  defp handle_status(nil, id, conn) do
+  defp handle_status(nil, _id, conn) do
     render_error(conn, gettext("Invalid ID."))
   end
 

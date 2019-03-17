@@ -2,6 +2,10 @@
 
 $magic-number: 1.5rem;
 
+header, footer, article, section, nav, aside {
+  display: block;
+}
+
 @import "bourbon/bourbon";
 @import "grid-settings";
 @import "neat/neat";
