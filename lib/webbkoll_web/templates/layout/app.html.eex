@@ -33,7 +33,7 @@
     <meta name="msapplication-TileImage" content="/images/mstile-144x144.png">
 
     <!--[if lt IE 9]>
-      <script src="<%= Routes.static_path(@conn, "/js/html5shiv.min.js") %>></script>
+      <script src="<%= Routes.static_path(@conn, "/js/html5shiv.min.js") %>"></script>
     <![endif]-->
   <body>
     <header class="navigation">
