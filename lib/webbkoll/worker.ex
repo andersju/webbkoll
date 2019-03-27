@@ -49,14 +49,13 @@ defmodule Webbkoll.Worker do
       case refresh do
         "on" ->
           %{
-            fetch_url: url,
+            fetch_url: :http_uri.encode(url),
             timeout: 15_000
           }
 
         _ ->
-          %{fetch_url: url, timeout: 15_000}
+          %{fetch_url: :http_uri.encode(url), timeout: 15_000}
       end
-
     HTTPoison.get(backend_url, [], recv_timeout: 40_000, params: params)
   end
 

@@ -133,8 +133,8 @@ defmodule WebbkollWeb.SiteController do
   defp get_proper_url(conn, _params) do
     url =
       case String.starts_with?(conn.params["url"], ["http://", "https://"]) do
-        true -> conn.params["url"] |> URI.parse() |> get_proper_url
-        false -> "http://#{conn.params["url"]}" |> URI.parse() |> get_proper_url
+        true -> conn.params["url"] |> URI.parse() |> get_proper_url()
+        false -> "http://#{conn.params["url"]}" |> URI.parse() |> get_proper_url()
       end
 
     assign(conn, :input_url, url)
