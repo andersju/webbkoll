@@ -9,6 +9,7 @@ The base language is English. Languages currently available for translation are:
 
 * French
 * German
+* Norwegian (Bokmål)
 * Swedish (this one we handle ourselves)
 
 If you wish to add another language, or if you have any issues, just email us at info@dataskydd.net.
