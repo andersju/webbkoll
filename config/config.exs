@@ -10,7 +10,8 @@ config :webbkoll,
   locales: %{
     "en" => "English",
     "sv" => "Svenska",
-    "de" => "Deutsch"
+    "de" => "Deutsch",
+    "no" => "Norsk"
     # "fr" => "Français"
   },
   default_locale: "en",
