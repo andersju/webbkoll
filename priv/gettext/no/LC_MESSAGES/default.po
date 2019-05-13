@@ -8,15 +8,15 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-05-13 12:43+0000\n"
+"PO-Revision-Date: 2019-05-17 23:43+0000\n"
 "Last-Translator: Tom Fredrik Blenning <bfg@efn.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.dataskydd.net/projects/"
 "webbkoll/main/nb_NO/>\n"
 "Language: no\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.4\n"
-"Content-Transfer-Encoding: 8bit\n"
 
 #: lib/webbkoll_web/templates/site/_requests.html.eex:31
 msgid "%{count} insecure"
@@ -52,10 +52,10 @@ msgstr[1] "unike"
 msgid "<a href=\"https://matomo.org/\">Matomo</a> (formerly Piwik) is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
 msgstr ""
 "Matomo (tidligere Piwik) er et utmerket alternativ. Det er fri software (PHP "
-"& MySQL) og du kjører det på din egen server, hvilket betyr at <em>du</em> "
+"& MySQL) og du kjører det på din egen tjener, hvilket betyr at <em>du</em> "
 "har kontroll på dine data. Matomo har ulike personverninnstillinger og kan, "
-"i motsetning til Google Analytics, brukes uten cookies. <em>(Mens "
-"analyseverktøy kanskje anses nødvendig for visse siter så er et annet "
+"i motsetning til Google Analytics, brukes uten informasjonskapsler. <em>("
+"Mens analyseverktøy kanskje anses nødvendig for visse siter så er et annet "
 "alternativ å <em>ikke spore mennesker bara for at du kan</em>. Besøkende har "
 "faktisk ikke noe ansvar for å hjelpe webutvikleren å optimere noe.)</em>"
 
@@ -85,7 +85,7 @@ msgstr ""
 msgid "<a href=\"https://www.ssllabs.com/ssltest/\">Qualys SSL Server Test</a> is an excellent tool for analyzing a server's TLS/SSL configuration. <a href=\"https://testssl.sh/\">testssl.sh</a> is an open source alternative."
 msgstr ""
 "<a href=\"https://www.ssllabs.com/ssltest/\">Qualys SSL Server Test</a> er "
-"et utmerket verktøy for å analysere en servers TLS-/SSL-konfiguration. <a "
+"et utmerket verktøy for å analysere en tjeners TLS-/SSL-konfiguration. <a "
 "href=\"https://testssl.sh/\">testssl.sh</a> er et åpen kildekode-alternativ."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:59
@@ -142,7 +142,6 @@ msgid "About"
 msgstr "Om"
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:64
-#, fuzzy
 msgid "Accountability"
 msgstr "Ansvar"
 
@@ -174,9 +173,8 @@ msgstr "Analyser %{host} på SSL Labs"
 
 #: lib/webbkoll_web/views/site_view.ex:198
 #: lib/webbkoll_web/views/site_view.ex:203
-#, fuzzy
 msgid "Art. "
-msgstr "Paragraf "
+msgstr "Art. "
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:45
 msgid "As little data as possible to achieve the purpose should be collected .(5(1)(c))"
@@ -196,7 +194,7 @@ msgstr "Forfattere og teknikk"
 msgid "Behavioural monitoring, or ”profiling”, is when someone monitors how a given person, or set of persons, typically behave. This includes monitoring whether a particular group, say young people or women of a median income, frequently visit certain deeplinks, have to look up certain vocabulary or that they end up on the website through using a particular search engine or social platform. Behavioural monitoring is used to discover what certain classes of people may be assumed to find interesting, difficult or funny."
 msgstr ""
 "Oppførselskartlegging er når man titter på hvordan en viss person, eller "
-"gruppe av personer oppfører sig. For eksempel at de ofte besøker visse "
+"gruppe av personer oppfører seg. For eksempel at de ofte besøker visse "
 "undersider, behøver slå opp visse ord i en ordbok eller at de havner på "
 "nettsteder gjennom å bruke en spesiell søkemotor. Oppførselskartlegging "
 "anvendes for å forutsi hva ulike kategorier mennesker kan antas å finne "
@@ -431,7 +429,7 @@ msgstr "Utløpstid"
 #: lib/webbkoll_web/templates/layout/app.html.eex:51
 #: lib/webbkoll_web/templates/site/faq.html.eex:2
 msgid "FAQ"
-msgstr "OSS"
+msgstr "Ofte Stilte Spørsmål"
 
 #: lib/webbkoll_web/templates/site/failed.html.eex:2
 msgid "Failed"
@@ -457,7 +455,7 @@ msgstr "Avsluttende URL:"
 #: lib/webbkoll/helpers.ex:88
 msgid "Fonts can easily be self-hosted. The tool <a href=\"https://google-webfonts-helper.herokuapp.com/fonts\">google-webfonts-helper</a> lets you select one or more fonts, generates the proper CSS and prepares a zip file with the fonts. For a command-line alternative, the shell script <a href=\"https://github.com/neverpanic/google-font-download\">google-font-download</a> provides similar functionality."
 msgstr ""
-"Fonter kan enkelt hostes på egen server. Gratistjenesten <a href=\"https"
+"Fonter kan enkelt hostes på egen tjener. Gratistjenesten <a href=\"https"
 "://google-webfonts-helper.herokuapp.com/fonts\">google-webfonts-helper</a> "
 "lar deg velge en eller flere fonter fra Google Fonts, genererer passende CSS "
 "og forbereder en zip-fil med de vagte fontente. For et kommandolinje "
@@ -548,9 +546,9 @@ msgstr "IP"
 msgid "If you get the error ERR_CERT_AUTHORITY_INVALID, a common issue is that the checked server has an incomplete certificate chain. <a href=\"https://www.ssllabs.com/ssltest/analyze.html?d=%{url}&hideResults=on\">Analyze the host on SSL Labs</a> for more information."
 msgstr ""
 "Om du får feilmeldingen ERR_CERT_AUTHORITY_INVALID så er et vanlig problem "
-"at serveren som testes har en ufullstendig sertifikatkjede. <a href=\""
+"at tjeneren som testes har en ufullstendig sertifikatkjede. <a href=\""
 "https://www.ssllabs.com/ssltest/analyze.html?d=%{url}&hideResults=on\">"
-"Analysera servern med SSL Labs</a> for mer informasjon."
+"Analysere tjeneren med SSL Labs</a> for mer informasjon."
 
 #: lib/webbkoll_web/templates/site/failed.html.eex:13
 msgid "If you get the error ERR_CERT_SYMANTEC_LEGACY, it's because the site uses a Symantec certificate (includes Thawte, RapidSSL and GeoTrust) that is, or soon will be, distrusted by Chrome and Firefox. More information: <a href=\"https://security.googleblog.com/2018/03/distrust-of-symantec-pki-immediate.html\">Google</a>, <a href=\"https://blog.mozilla.org/security/2018/07/30/update-on-the-distrust-of-symantec-tls-certificates/\">Mozilla</a>, <a href=\"https://blog.qualys.com/ssllabs/2017/09/26/google-and-mozilla-deprecating-existing-symantec-certificates\">Qualys</a>"
@@ -599,7 +597,7 @@ msgstr "Usikker: HTTPS anvendes ikke som standard"
 msgid "Install <a href=\"https://matomo.org/\">Matomo</a> (formerly Piwik) on your own server. It's easy to install and easy to upgrade."
 msgstr ""
 "Installere <a href=\"https://matomo.org/\">Matomo</a> (tidligere Piwik) på "
-"din egen server. Det er enkelt å installere, drifte og oppgradere."
+"din egen tjener. Det er enkelt å installere, drifte og oppgradere."
 
 #: lib/webbkoll_web/templates/site/faq.html.eex:59
 msgid "Integrity and confidentiality"
@@ -737,7 +735,7 @@ msgstr "Rå headere"
 #: lib/webbkoll_web/views/site_view.ex:199
 #: lib/webbkoll_web/views/site_view.ex:204
 msgid "Rec. "
-msgstr ""
+msgstr "Betraktninger "
 
 #: lib/webbkoll_web/controllers/site_controller.ex:40
 msgid "Recent changes on Webbkoll."
@@ -819,7 +817,7 @@ msgstr ""
 "https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery "
 "networks</a> &ndash; i så tilfelle kan tjenerlokasjonen avhenge av hvor "
 "gjesten befinner seg. Dette verktøyet, Webbkoll, kjører akkurat nå på en "
-"server i Frankrike."
+"tjener i Frankrike."
 
 #: lib/webbkoll_web/controllers/site_controller.ex:189
 msgid "Sorry, bots aren't allowed."
@@ -910,7 +908,7 @@ msgstr "Test"
 msgid "Test results are stored in memory on our server for 24 hours. We don't show a list of tested URLs. We don't use URLs or test results. We don't log IP addresses and we don't use cookies."
 msgstr ""
 "Testresultatet lagres i vår tjeneres minne  i 24 timer. Vi viser ikke en "
-"liste over testede URL'er. Vi bruker ikke URL'er elle testresultat. Vi "
+"liste over testede URL'er. Vi bruker ikke URL'er eller testresultat. Vi "
 "logger ikke IP-adresser og vi anvender ikke informasjonskapsler."
 
 #: lib/webbkoll_web/views/site_view.ex:147
@@ -922,7 +920,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/index.html.eex:25
 msgid "The backend is currently running on a single server with limited resources, so in case of usage spikes, waiting times can be long. (But you can <a href=\"https://github.com/andersju/webbkoll\">run your own instance</a>!)"
 msgstr ""
-"Backend-tjeneren kjøres akkurat nå på en enkelt server med begrensede "
+"Backend-tjeneren kjøres akkurat nå på en enkelt tjener med begrensede "
 "resurser. Hvis mange bruker tjenesten samtidig kan ventetiden bli lang. (Men "
 "du kan <a href=\"https://github.com/andersju/webbkoll\"> kjøre din egen "
 "instans</a>!)"
@@ -1100,7 +1098,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/donate.html.eex:6
 msgid "We operate on a very small budget, and servers are usually our main expense; most work is done in our free time. Every euro (or krona) counts!"
 msgstr ""
-"Vi jobber med et veldig lite budsjett og servere er vår hovedutgift; større "
+"Vi jobber med et veldig lite budsjett og tjenere er vår hovedutgift; større "
 "deler av arbeidet gjøres på vår fritid. Hver krone teller!"
 
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:44
@@ -1148,7 +1146,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/about.html.eex:3
 msgid "Webbkoll monitors privacy-enhancing features on websites, and helps you find out who is letting you exercise control over your privacy. We check to what extent a website monitors your behaviour and how much they gossip about the monitoring to third parties, based on what can be observed when visiting a given page. We’ve also compiled a set of recommendations for how to not track or gossip in digital environments."
 msgstr ""
-"Webbkoll undersøker personvernfremmende funksjoner på nettste4der og hjelper "
+"Webbkoll undersøker personvernfremmende funksjoner på nettsteder og hjelper "
 "deg å utøve makt over ditt eget privatliv. Vi hjelper dig å undersøke i "
 "hvilken gra et nettsted kartlegger din oppførsel og hvor mye det sladrer til "
 "tredjeparter, basert på hva som kan observeres ved besøk på en gitt side. Vi "
@@ -1448,7 +1446,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_csp.html.eex:103
 msgid "CSP makes it possible for server administrators to reduce or eliminate the vectors by which XSS can occur by specifying the domains that the browser should consider to be valid sources of executable scripts. A CSP compatible browser will then only execute scripts loaded in source files received from those whitelisted domains, ignoring all other script (including inline scripts and event-handling HTML attributes)."
 msgstr ""
-"CSP gjør det m ulig for serveradministratorer å redusere eller eliminere "
+"CSP gjør det mulig for tjenerradministratorer å redusere eller eliminere "
 "angrepsflatene der  XSS kan inntreffer ved å spesifiserer de domener som "
 "nettleseren skal benytte som gyldige kilder for kjørbare skript. En CSP-"
 "kompatibel nettleser kommer da bare til å utføre skript fra filer mottatt "
@@ -1496,7 +1494,7 @@ msgstr ""
 msgid "External files such as images, scripts and CSS are loaded, but the tool performs no interactions with the page — no links are clicked, no forms are submitted."
 msgstr ""
 "Eksterne filer som bilder, skript og CSS lastes, men verktøyet interagerer "
-"ikke med siden &mdash; ingen lenker klikkes, ingen skjema fylles ut."
+"ikke med siden — ingen lenker klikkes, ingen skjema fylles ut."
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:56
 msgid "Firefox, Safari, Opera, and Edge also incorporate Chrome’s HSTS preload list, making this feature shared across major browsers."
@@ -1515,7 +1513,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_https.html.eex:72
 msgid "For checking the configuration of a server, try <a href=\"https://www.ssllabs.com/ssltest/\">SSL Labs SSL Server Test</a> (web), <a href=\"https://testssl.sh/\">testssl.sh</a> (CLI tool), <a href=\"https://github.com/mozilla/tls-observatory\">Mozilla TLS Observatory</a> (CLI tool) or <a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> (web)."
 msgstr ""
-"For å kontrollere serverkonfigurasjonen, se <a href=\"https://www.ssllabs."
+"For å kontrollere tjenerkonfigurasjonen, se <a href=\"https://www.ssllabs."
 "com/ssltest/\">SSL Labs SSL Server Test</a>, <a href=\"https://testssl.sh/\""
 ">testssl.sh</a>, <a href=\"https://github.com/mozilla/tls-observatory\">"
 "Mozilla TLS Observatory</a> eller <a href=\"https://observatory.mozilla.org/"
@@ -1786,7 +1784,7 @@ msgstr ""
 "beskyttelsesmekanismene i stor grad  er unødvendige i moderne nettlesere når "
 "nettsteder implementerer en sterk <code>Content-Security-Policy</code> som "
 "deaktiverer muligheten av inline-JavaScript (<code>'unsafe-inline'</code>) "
-"så kan de gi beskyttelse för brukere av eldre nettlesere som ikke støtter "
+"så kan de gi beskyttelse for brukere av eldre nettlesere som ikke støtter "
 "CSP."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:87
@@ -1870,7 +1868,7 @@ msgstr ""
 msgid "This tool attempts to simulate what happens when a user visits a specified page with a typical browser. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled, since this is the default setting in most browsers."
 msgstr ""
 "Dette verktøyet forsøker simulere hva som skjer når en bruker besøker en "
-"gitt side med en vanlig nettleser. Nettleseren har ingen utvidelser. , og Do "
+"gitt side med en vanlig nettleser. Nettleseren har ingen utvidelser , og Do "
 "Not Track (DNT) er ikke aktivert, ettersom det er standardinnstilling i de "
 "fleste nettlesere."
 
@@ -1936,11 +1934,11 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/index.html.eex:5
 msgid "Welcome to the new version of Webbkoll! See <a href=\"/en/news\">here</a> for changes. If a site can't be checked or you find some other bug, please email <a href=\"mailto:info@dataskydd.net\">info@dataskydd.net</a> or <a href=\"https://github.com/andersju/webbkoll/issues\">open an issue on GitHub</a>."
 msgstr ""
-"Velkommen til den nye versjonen av Webbkoll! <a href=\"/sv/news\">Se hvad "
-"som er nytt</a>. Om et nettsted ikke kan sjekkes eller om du finner noen "
-"annen feil så må du gjerne gi beskjed til <a href=\"mailto:info@dataskydd."
-"net\">info@dataskydd.net</a> eller <a href=\"https://github.com/andersju/"
-"webbkoll/issues\">åpne en issue på GitHub</a>."
+"Velkommen til den nye versjonen av Webbkoll! <a href=\"/sv/news\">Se hva som "
+"er nytt</a>. Om et nettsted ikke kan sjekkes eller om du finner noen annen "
+"feil så må du gjerne gi beskjed til <a href=\"mailto:info@dataskydd.net\""
+">info@dataskydd.net</a> eller <a href=\"https://github.com/andersju/webbkoll/"
+"issues\">åpne en issue på GitHub</a>."
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:76
 msgid "When a browser knows that a domain has enabled HSTS, it does two things:"
