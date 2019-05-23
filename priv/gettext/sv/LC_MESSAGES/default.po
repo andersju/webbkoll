@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Swedish (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:39+0000\n"
-"PO-Revision-Date: 2019-05-23 23:27+0000\n"
+"PO-Revision-Date: 2019-05-24 00:01+0000\n"
 "Last-Translator: Anders Jensen-Urstad <anders@unix.se>\n"
 "Language-Team: Swedish <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "sv/>\n"
@@ -2192,8 +2192,8 @@ msgstr "Tyska:"
 msgid "Translations"
 msgstr "Översättningar"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/failed.html.eex:18
+#, elixir-format
 msgid "<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href=\"mailto:info@dataskydd.net\">send us an email</a> (and tell us what URL you tried)! You can also try <a href=\"%{url}#alternatives\">alternative services</a>."
 msgstr ""
 "<strong>OBS</strong>: Om du är säker på att du skrev in URL:en rätt, och att "
@@ -2202,8 +2202,8 @@ msgstr ""
 "försökte med)! Du kan också prova <a href=\"https://privacyscore.org/\""
 ">PrivacyScore</a> som ett alternativ."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:20
+#, elixir-format
 msgid "For non-EU/EEA territories, it depends (GDPR %{art_44}). For a website, transfers will probably have to rely on adequacy decisions (%{art_45}) made by the European Commission when a third territory has been deemed to have appropriate data protection safe guards in its legislation. However, adequacy decisions cannot always be trusted, as demonstrated in the EU Court of Justice 2015 (C-362/14). Binding corporate rules (%{art_47}) or standard clauses (%{art_46}) may also be used to transfer data, but in the absence of rulings by courts and data protection authorities this is still legally uncertain territory."
 msgstr ""
 "För områden utanför EU så beror det på (GDPR %{art_44}). För en webbplats så "
@@ -2216,33 +2216,33 @@ msgstr ""
 "att överföra data, men i avsaknad av avgöranden från domar och "
 "tillsynsmyndigheter är detta fortfarande juridiskt osäkert område."
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/site_controller.ex:48
+#, elixir-format
 msgid "Invalid ID."
-msgstr ""
+msgstr "Ogiltigt ID."
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/site_controller.ex:168
+#, elixir-format
 msgid "Invalid URL: %{url}"
-msgstr ""
+msgstr "Ogiltig URL: %{url}"
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/site_controller.ex:228
-msgid "Invalid id."
-msgstr "Ogiltig header"
-
 #, elixir-format
-#: lib/webbkoll_web/templates/page/about.html.eex:26
-msgid "Norwegian:"
-msgstr ""
+msgid "Invalid id."
+msgstr "Ogiltigt id."
 
-#, elixir-format, fuzzy
+#: lib/webbkoll_web/templates/page/about.html.eex:26
+#, elixir-format
+msgid "Norwegian:"
+msgstr "Norska:"
+
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:17
+#, elixir-format
 msgid "Under the GDPR, all EU/EEA countries are considered equally trustworthy, so there is no particular reason under the GDPR to consider any EU country more or less reliable or desirable than any other. The importance of the location of a server comes into play only under GDPR %{art_23}, Restrictions, where member states may invoke a number of reasons, notably national security, that enable them to void protections for visitors or web service providers."
 msgstr ""
-"Under GDPR betraktas alla EU-länder som lika pålitliga, så det finns ingen "
-"speciell anledning under GDPR att betrakta ett EU-land som mer eller mindre "
-"pålitligt än något annat. Betydelsen av var en server är spelar bara en roll "
-"under %{art_23}, Begränsningar, där medlemsstater kan åberopa ett antal "
-"skäl, i synnerhet nationell säkerhet, som låter dem upphäva skydd för "
-"besökare eller leverantörer.\""
+"Under GDPR betraktas alla EU/EES-länder som lika pålitliga, så det finns "
+"ingen speciell anledning under GDPR att betrakta ett EU-land som mer eller "
+"mindre pålitligt än något annat. Betydelsen av var en server är spelar bara "
+"en roll under %{art_23}, Begränsningar, där medlemsstater kan åberopa ett "
+"antal skäl, i synnerhet nationell säkerhet, som låter dem upphäva skydd för "
+"besökare eller leverantörer."
