@@ -23,6 +23,7 @@
   <h4><%= gettext "Translations" %></h4>
   <ul class="default">
     <li><%= gettext("German:") %> <%= link("Tomas Jakobs", to: "https://jakobssystems.net") %></li>
+    <li><%= gettext("Norwegian:") %> Tom Fredrik Blenning</li>
   </ul>
 
   <h3 id="alternatives"><%= gettext "Alternatives and resources" %></h3>
