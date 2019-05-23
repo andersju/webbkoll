@@ -8,8 +8,8 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-05-17 23:43+0000\n"
-"Last-Translator: Tom Fredrik Blenning <bfg@efn.no>\n"
+"PO-Revision-Date: 2019-05-24 00:01+0000\n"
+"Last-Translator: Anders Jensen-Urstad <anders@unix.se>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.dataskydd.net/projects/"
 "webbkoll/main/nb_NO/>\n"
 "Language: no\n"
@@ -2180,8 +2180,8 @@ msgstr "Tysk:"
 msgid "Translations"
 msgstr "Oversettelser"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/failed.html.eex:18
+#, elixir-format
 msgid "<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href=\"mailto:info@dataskydd.net\">send us an email</a> (and tell us what URL you tried)! You can also try <a href=\"%{url}#alternatives\">alternative services</a>."
 msgstr ""
 "<strong>OBS</strong>: Om du er sikker på at du skrev inn URL'en riktig, og "
@@ -2190,8 +2190,8 @@ msgstr ""
 "med)! Du kan også prøve <a href=\"https://privacyscore.org/\""
 ">PrivacyScore</a> som et alternativ."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:20
+#, elixir-format
 msgid "For non-EU/EEA territories, it depends (GDPR %{art_44}). For a website, transfers will probably have to rely on adequacy decisions (%{art_45}) made by the European Commission when a third territory has been deemed to have appropriate data protection safe guards in its legislation. However, adequacy decisions cannot always be trusted, as demonstrated in the EU Court of Justice 2015 (C-362/14). Binding corporate rules (%{art_47}) or standard clauses (%{art_46}) may also be used to transfer data, but in the absence of rulings by courts and data protection authorities this is still legally uncertain territory."
 msgstr ""
 "For områder utenfor EU så avhenger det av (GDPR %{art_44}).  For et nettsted "
@@ -2205,33 +2205,33 @@ msgstr ""
 "men uten avgjørelser fra dommer og tilsynsmyndigheter er dette juridisk "
 "usikkert område."
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/site_controller.ex:48
+#, elixir-format
 msgid "Invalid ID."
-msgstr ""
+msgstr "Ugyldig ID."
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/site_controller.ex:168
-msgid "Invalid URL: %{url}"
-msgstr ""
-
 #, elixir-format
+msgid "Invalid URL: %{url}"
+msgstr "Ugyldig URL: %{url}"
+
 #: lib/webbkoll_web/controllers/site_controller.ex:228
+#, elixir-format
 msgid "Invalid id."
 msgstr "Ugyldig header"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:26
+#, elixir-format
 msgid "Norwegian:"
-msgstr ""
+msgstr "Norsk:"
 
-#, elixir-format, fuzzy
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:17
+#, elixir-format
 msgid "Under the GDPR, all EU/EEA countries are considered equally trustworthy, so there is no particular reason under the GDPR to consider any EU country more or less reliable or desirable than any other. The importance of the location of a server comes into play only under GDPR %{art_23}, Restrictions, where member states may invoke a number of reasons, notably national security, that enable them to void protections for visitors or web service providers."
 msgstr ""
-"Under GDPR betraktes alle EU-land som like pålitelige, så det finnes ingen "
-"spesiell grunn under GDPR til å betrakte et EU-land som mer eller mindre "
-"pålitelig enn et annet. Betydningen av hvor en server befinner seg spiller "
-"bare en rolle under %{art_23}, Begrensninger, der medlemsstater kan påberope "
-"en spesifikk grunn, slik som nasjonal sikkerhet, som lar dem oppheve "
-"beskyttelse for besøkende og leverandører."
+"Under GDPR betraktes alle EU/EØS-land som like pålitelige, så det finnes "
+"ingen spesiell grunn under GDPR til å betrakte et EU-land som mer eller "
+"mindre pålitelig enn et annet. Betydningen av hvor en server befinner seg "
+"spiller bare en rolle under %{art_23}, Begrensninger, der medlemsstater kan "
+"påberope en spesifikk grunn, slik som nasjonal sikkerhet, som lar dem "
+"oppheve beskyttelse for besøkende og leverandører."
