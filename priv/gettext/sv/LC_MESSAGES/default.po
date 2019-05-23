@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Swedish (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:39+0000\n"
-"PO-Revision-Date: 2019-05-13 12:43+0000\n"
-"Last-Translator: Tom Fredrik Blenning <bfg@efn.no>\n"
+"PO-Revision-Date: 2019-05-23 23:27+0000\n"
+"Last-Translator: Anders Jensen-Urstad <anders@unix.se>\n"
 "Language-Team: Swedish <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "sv/>\n"
 "Language: sv\n"
@@ -924,12 +924,12 @@ msgstr ""
 "ladda skript från otillförlitliga origins."
 
 #: lib/webbkoll_web/templates/site/index.html.eex:25
-#, fuzzy
 msgid "The backend is currently running on a single server with limited resources, so in case of usage spikes, waiting times can be long. (But you can <a href=\"https://github.com/andersju/webbkoll\">run your own instance</a>!)"
 msgstr ""
 "Backend-servern körs just nu på en enda server med begränsade resurser, så i "
 "fall många använder tjänsten samtidigt kan väntetiderna bli långa. (Men du "
-"kan <a href=\"https://github.com/andersju/webbkoll\">din egen instans</a>!)"
+"kan <a href=\"https://github.com/andersju/webbkoll\">köra din egen "
+"instans</a>!)"
 
 #: lib/webbkoll_web/templates/layout/app.html.eex:97
 msgid "The code is <a href=\"https://github.com/andersju/webbkoll\">available on GitHub</a>."
@@ -2189,8 +2189,8 @@ msgstr "Resultat"
 
 #: lib/webbkoll_web/templates/site/about.html.eex:25
 msgid "German:"
-msgstr ""
+msgstr "Tyska:"
 
 #: lib/webbkoll_web/templates/site/about.html.eex:23
 msgid "Translations"
-msgstr ""
+msgstr "Översättningar"
