@@ -8,8 +8,8 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-05-24 00:07+0000\n"
-"Last-Translator: Anders Jensen-Urstad <anders@unix.se>\n"
+"PO-Revision-Date: 2019-05-24 11:20+0000\n"
+"Last-Translator: Tom Fredrik Blenning <bfg@efn.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.dataskydd.net/projects/"
 "webbkoll/main/nb_NO/>\n"
 "Language: no\n"
@@ -1028,7 +1028,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/page/index.html.eex:20
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."
 msgstr ""
-"Webbkoll hjelper deg å sjekk hvilke personverns funksjoner et nettsted "
+"Webbkoll hjelper deg å sjekke hvilke personvernsfunksjoner et nettsted "
 "anvender for å hjelpe deg å utøve makt over ditt privatliv."
 
 #: lib/webbkoll_web/templates/page/about.html.eex:12
