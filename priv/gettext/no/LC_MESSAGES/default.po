@@ -8,7 +8,7 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-05-24 11:20+0000\n"
+"PO-Revision-Date: 2019-05-26 20:19+0000\n"
 "Last-Translator: Tom Fredrik Blenning <bfg@efn.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.dataskydd.net/projects/"
 "webbkoll/main/nb_NO/>\n"
@@ -1101,7 +1101,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:44
 msgid "We use Disconnect's <a href=\"%{url}\">open source list of trackers</a> to classify hosts."
 msgstr ""
-"Vi bruker Disconnects <a href=\"%{url}\">spårningslista</a> (åpen kildekode) "
+"Vi bruker Disconnects <a href=\"%{url}\">sporingsliste</a> (åpen kildekode) "
 "for å klassifisere domener."
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:22
@@ -1803,8 +1803,8 @@ msgstr "Følgende tredjepartsresurser lastes uten SRI:"
 #: lib/webbkoll_web/templates/site/_https.html.eex:86
 msgid "The goal of the Internet community is to establish encryption as the norm, and to phase out unencrypted connections."
 msgstr ""
-"Målet for Internett fellesskapet er å etablere kryptering som normen, og "
-"fase ut ukrypterte forbindelser."
+"Målet for Internettfellesskapet er å etablere kryptering som normen, og fase "
+"ut ukrypterte forbindelser."
 
 #: lib/webbkoll_web/templates/site/_headers.html.eex:54
 msgid "The header tests are based on the ones from the <a href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP Observatory</a> scanner/grader project (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> website, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</a>."
