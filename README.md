@@ -150,7 +150,7 @@ Run `systemctl daemon-reload` for good measure, and then try `systemctl start we
 ## Credits & licenses
 ### Translations
   * German translation by [Tomas Jakobs](https://jakobssystems.net), with contributions from [André Kelpe](https://kel.pe/)
-  * Norwegian translation by Tom Fredrik Blenning
+  * Norwegian translation by [Tom Fredrik Blenning](https://efn.no/en/home/team#Blenning) - [Elektronisk Forpost Norge](https://efn.no)
 
 ### Software
   * [Phoenix Framework](http://www.phoenixframework.org/) (MIT license) by Chris McCord
