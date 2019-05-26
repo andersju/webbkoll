@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: German (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
-"PO-Revision-Date: 2019-05-24 00:01+0000\n"
+"PO-Revision-Date: 2019-05-26 20:19+0000\n"
 "Last-Translator: Anders Jensen-Urstad <anders@unix.se>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
@@ -408,7 +408,7 @@ msgstr ""
 msgid "Denying by default using <code>default-src 'none'</code> can ensure that your Content Security Policy doesn't allow the loading of resources you didn't intend to allow."
 msgstr ""
 "Alles mit der Standardeinstellung <code>default-src 'none'</code> pauschal "
-"zu verbieten, stellt sicher, daß keine unerwünschten Ressourcen in Deine "
+"zu verbieten, stellt sicher, dass keine unerwünschten Ressourcen in Deine "
 "Content Security Policy aufgenommen werden, die Du nicht wolltest."
 
 #: lib/webbkoll_web/templates/layout/app.html.eex:96
@@ -830,7 +830,7 @@ msgstr ""
 msgid "Setting referrer policy is an easy way to do data minimization (%{art_5_1_f}) and help ensure that you don't transfer or disclose personal data needlessly (%{art_32_2})."
 msgstr ""
 "Das Setzen einer Referer Richtlinie ist ein schneller und einfacher Weg zur "
-"Datenminimierung (%{art_5_1_f}) und stellt sicher, daß Daten nicht "
+"Datenminimierung (%{art_5_1_f}) und stellt sicher, dass Daten nicht "
 "unnötigerweise oder unzulässigerweise übermittelt werden (%{art_32_2})."
 
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:15
@@ -1002,9 +1002,9 @@ msgstr "Diese Seite lädt Ressourcen von einem oder mehreren CDN:s."
 msgid "The site is using Google Analytics. While this is a powerful tool, we think you should respect your users' privacy and not tell Google about them &mdash; at least not without your users' consent."
 msgstr ""
 "Diese Seite verwendet Google Analytics. Ein leistungsstarkes Tool, doch "
-"glauben wir, daß ein Betreiber die Privatsphäre seiner Besucher respektieren "
-"und nicht an Google petzten sollte. Zumindest nicht ohne zuvor eine "
-"informierte Einwilligung eingeholt zu haben."
+"glauben wir, dass ein Betreiber die Privatsphäre seiner Besucher "
+"respektieren und nicht an Google petzten sollte. Zumindest nicht ohne zuvor "
+"eine informierte Einwilligung eingeholt zu haben."
 
 #: lib/webbkoll/helpers.ex:67
 msgid "The site is using the Disqus comment system."
@@ -1400,7 +1400,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:16
 msgid "<strong>HttpOnly</strong> means that the cookie can only be read by the server, and not by JavaScript on the client. This can mitigate XSS (cross-site scripting) attacks."
 msgstr ""
-"<strong>HttpOnly</strong> bedeutet, daß Cookies nur vom Server gelesen "
+"<strong>HttpOnly</strong> bedeutet, dass Cookies nur vom Server gelesen "
 "werden können und nicht durch JavaScript im Webbrowser. Das verhindert XSS "
 "(Cross-Site Scripting) Angriffe."
 
@@ -1413,20 +1413,21 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:18
 msgid "<strong>SameSite</strong> can be used to instruct the browser to only send the cookie when the request is originating from the same site. This can mitigate CSRF (cross-site request forgery) attacks."
 msgstr ""
-"<strong>SameSite</strong> wird verwendet um dem Browser mitzuteilen, daß er "
+"<strong>SameSite</strong> wird verwendet um dem Browser mitzuteilen, dass er "
 "nur dann Cookies senden darf, wenn die Anfrage von der gleichen Seite "
 "stammt. Das verhindert CSRF (Cross-Site Request Forgery) Angriffe."
 
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:17
 msgid "<strong>Secure</strong> means that the cookie will only be sent over a secure channel (HTTPS). This can mitigate MITM (man-in-the-middle) attacks."
 msgstr ""
-"<strong>Secure</strong> bdeutet, daß ein Cookie nur über eine sichere (HTTPS)"
-" Verbindung gesendet wird. Das verhindert MITM (Man-in-the-Middle) Angriffe."
+"<strong>Secure</strong> bedeutet, dass ein Cookie nur über eine sichere "
+"(HTTPS) Verbindung gesendet wird. Das verhindert MITM (Man-in-the-Middle) "
+"Angriffe."
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:83
 msgid "A domain instructs browsers that it has enabled HSTS by returning an HTTP header over an HTTPS connection."
 msgstr ""
-"Die besuchte Domain teilt einem Webbrowser in einem HTTP Header mit, daß "
+"Die besuchte Domain teilt einem Webbrowser in einem HTTP Header mit, dass "
 "diese HSTS über HTTPS Verbindungen unterstützt."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:85
@@ -1700,7 +1701,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:27
 msgid "Referrer Policy not set. This means that the default value <code>no-referrer-when-downgrade</code>, leaking referrers in many situations, is used."
 msgstr ""
-"Referrer Richtline nicht gesetzt. Das bedeutet, daß vom Standardwert <code"
+"Referrer Richtline nicht gesetzt. Das bedeutet, dass vom Standardwert <code"
 ">no-referrer-when-downgrade</code> ausgegangen wird, was eine Preisgabe des "
 "Referrer in vielen Situationen bedeutet."
 
@@ -1996,7 +1997,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:76
 msgid "When a browser knows that a domain has enabled HSTS, it does two things:"
 msgstr ""
-"Wird dem Browser mitgeteilt, daß eine Domain HSTS nutzt, so macht er zwei "
+"Wird dem Browser mitgeteilt, dass eine Domain HSTS nutzt, so macht er zwei "
 "Dinge:"
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:72
