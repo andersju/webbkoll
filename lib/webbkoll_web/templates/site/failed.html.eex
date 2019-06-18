@@ -5,8 +5,8 @@
 
   <p><%= gettext "Error: %{error_message}", error_message: @site.status_message %></p>
 
-  <%= if String.contains?(@site.status_message, "ERR_CERT_AUTHORITY_INVALID") do %>
-    <p><%= gettext(~s|If you get the error ERR_CERT_AUTHORITY_INVALID, a common issue is that the checked server has an incomplete certificate chain. <a href="https://www.ssllabs.com/ssltest/analyze.html?d=%{url}&hideResults=on">Analyze the host on SSL Labs</a> for more information.|, url: @site.input_url) |> raw %></p>
+  <%= if String.contains?(@site.status_message, "ERR_CERT_") do %>
+    <p><%= gettext(~s|<a href="https://www.ssllabs.com/ssltest/analyze.html?d=%{url}&hideResults=on">Analyze the host on SSL Labs</a> for more information.|, url: @site.input_url) |> raw %></p>
   <% end %>
 
   <%= if String.contains?(@site.status_message, "ERR_CERT_SYMANTEC_LEGACY") do %>
