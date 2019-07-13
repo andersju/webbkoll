@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Swedish (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:39+0000\n"
-"PO-Revision-Date: 2019-05-24 00:07+0000\n"
+"PO-Revision-Date: 2019-07-13 03:05+0000\n"
 "Last-Translator: Anders Jensen-Urstad <anders@unix.se>\n"
 "Language-Team: Swedish <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "sv/>\n"
@@ -1637,7 +1637,7 @@ msgstr "Inga kakor upptäcktes."
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:33
 msgid "No; insecure"
-msgstr "%{count} säker"
+msgstr "Nej; osäker"
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:45
 msgid "Not implemented"
