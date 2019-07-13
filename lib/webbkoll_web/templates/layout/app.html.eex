@@ -57,7 +57,7 @@
             </li>
             <% current_lang = @conn.assigns.locale %>
             <li class="nav-link">
-              <%= link language_from_code(current_lang), to: path_helper(@conn, current_lang), aria_haspopup: "true", class: "language-select" %>
+              <%= link language_from_code(current_lang), to: '#!', aria_haspopup: "true", class: "language-select" %>
               <ul class="dropdown" aria-label="submenu">
                 <%= for lang <- Map.keys(Application.get_env(:webbkoll, :locales)) |> Enum.reject(& &1 == current_lang) do %>
                 <li>
