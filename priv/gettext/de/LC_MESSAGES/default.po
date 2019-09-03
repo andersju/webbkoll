@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: German (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
-"PO-Revision-Date: 2019-06-06 19:02+0000\n"
-"Last-Translator: Tomas Jakobs <tomas.jakobs@jakobssystems.net>\n"
+"PO-Revision-Date: 2019-09-03 16:34+0000\n"
+"Last-Translator: Sascha Brendel <code@lednerb.de>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -1297,11 +1297,12 @@ msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_stri
 msgstr ""
 "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/"
 "HTTP_strict_transport_security\">HTTP Strict Transport Security</a> (HSTS) "
-"it ein <a href=\"https://caniuse.com/#feat=stricttransportsecurity\">breit "
-"unterstützter</a> Standard zum Schutz eines Besuchers indem es sicher "
-"stellt, dass der Webbrowser eine Seite immer nur über HTTPS öffnen kann. Mit "
-"HSTS entfällt die unsichere Notwendigkeit des Redirecting eines Besuchers "
-"von <code>http://</code> zu <code>https://</code> URLs."
+"ist ein <a href=\"https://caniuse.com/#feat=stricttransportsecurity\""
+">etablierter</a> Standard zum Schutz eines Besuchers, indem er sicher "
+"stellt, dass der Webbrowser sich mit einer Webseite ausschließlich über "
+"HTTPS verbindet. Mit HSTS entfällt die unsichere Notwendigkeit der "
+"Weiterleitung eines Besuchers von <code>http://</code> zu "
+"<code>https://</code> URLs."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:67
 msgid "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free certificates through an easy, automated process. You can set it up yourself, or use one of the many hosting providers who have built-in support for Let's Encrypt."
@@ -1395,7 +1396,7 @@ msgstr ""
 msgid "<strong>Confidentiality</strong>. The visitor's connection is encrypted, obscuring URLs, cookies, and other sensitive metadata."
 msgstr ""
 "<strong>Vertraulichkeit</strong>. Eine Verbindung ist verschlüsselt und "
-"sensible Metadaten sind aus URLs, Cookies entfernt."
+"URLs,  Cookies und andere sensible Metadaten sind geschützt."
 
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:16
 msgid "<strong>HttpOnly</strong> means that the cookie can only be read by the server, and not by JavaScript on the client. This can mitigate XSS (cross-site scripting) attacks."
@@ -1408,7 +1409,7 @@ msgstr ""
 msgid "<strong>Integrity</strong>. The data sent between the visitor and the website has not been tampered with or modified."
 msgstr ""
 "<strong>Integrität</strong>. Zwischen einem Besucher und dem Betreiber einer "
-"Website ausgetauschte Daten wurden nicht abgefangen oder verändert."
+"Website ausgetauschte Daten wurden nicht manipuliert oder verändert."
 
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:18
 msgid "<strong>SameSite</strong> can be used to instruct the browser to only send the cookie when the request is originating from the same site. This can mitigate CSRF (cross-site request forgery) attacks."
@@ -1427,17 +1428,16 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:83
 msgid "A domain instructs browsers that it has enabled HSTS by returning an HTTP header over an HTTPS connection."
 msgstr ""
-"Die besuchte Domain teilt einem Webbrowser in einem HTTP Header mit, dass "
-"diese HSTS über HTTPS Verbindungen unterstützt."
+"Eine Domain teilt den Webbrowsern mit, dass sie HSTS aktiviert hat, indem "
+"sie einen HTTP-Header über eine HTTPS-Verbindung zurückgibt."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:85
 msgid "A plain HTTP connection can be easily monitored, modified, and impersonated. Every unencrypted HTTP request reveals information about a user’s behavior, and the interception and tracking of unencrypted browsing has become commonplace."
 msgstr ""
-"Einfache HTTP Verbindungen können leicht überwacht, verändert oder "
-"nachgeahmt werden. Jede unverschlüsselte veschickte HTTP Anfrage beinhaltet "
-"Meta-Informationen und ermöglicht Rückschlüssel auf das Verhalten. Das "
-"Mitlauschen und Nachverfolgen von unverschlüsseltem Surfen ist zur "
-"Selbstverständlichkeit geworden."
+"Eine einfache HTTP-Verbindung kann leicht überwacht, geändert und nachgeahmt "
+"werden. Jede unverschlüsselte HTTP-Anfrage enthüllt Informationen über das "
+"Verhalten eines Benutzers. Das Abfangen und Verfolgen von unverschlüsseltem "
+"Surfen ist zum Alltag geworden."
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:101
 msgid "A primary goal of CSP is to mitigate and report XSS attacks. XSS attacks exploit the browser's trust of the content received from the server. Malicious scripts are executed by the victim's browser because the browser trusts the source of the content, even when it's not coming from where it seems to be coming from."
@@ -1446,7 +1446,7 @@ msgstr ""
 "Angriffe nutzen das Vertrauen des Browsers in die vom Server empfangenen "
 "Inhalte aus. Bösartige Skripte werden vom Browser des Opfers ausgeführt, "
 "weil der Browser der Quelle des Inhalts vertraut, auch wenn er nicht von "
-"dort kommt, wo er her zu kommen scheint."
+"dort kommt, wo er herzukommen scheint."
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:36
 msgid "A referrer policy can easily be set with a &lt;meta&gt; element in your HTML. Simply include this inside the &lt;head&gt; section:"
@@ -1464,7 +1464,7 @@ msgstr ""
 msgid "Always uses an <code>https://</code> connection, even when clicking on an <code>http://</code> link or after typing a domain into the location bar without specifying a protocol."
 msgstr ""
 "Verwendet immer eine <code>https://</code> Verbindung, selbst wenn auf einen "
-"<code>http://</code> Link oder wenn eine Domäne in der Adressleiste ohne "
+"<code>http://</code> Link geklickt oder Domain in der Adressleiste ohne "
 "Protokoll eingegeben wurde."
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:29
@@ -1474,10 +1474,11 @@ msgstr "Stammdomäne (https://%{domain}) HSTS Status unbekannt."
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:66
 msgid "By setting a Referrer Policy, it's possible for websites to tell browsers to not leak referrers. Referrer Policy lets you specify a policy that's applied to all links clicked, as well as all other requests generated by the page (images, JS, etc.)."
 msgstr ""
-"Browsern mitzuteilen, dass sie keine Referrer-Informationen verbreiten. Mit "
-"der Referrer-Richtlinie können Sie eine Richtlinie festlegen, die auf alle "
+"Durch die Festlegung einer Referrer-Richtlinie ist es für Websites möglich, "
+"den Browsern zu sagen, dass sie keine Referrer preisgeben sollen. Mit der "
+"Referrer-Richtlinie können Sie eine Richtlinie festlegen, die auf alle "
 "angeklickten Links sowie auf alle anderen von der Seite erzeugten Anfragen ("
-"Bilder, JS etc.) angewendet wird."
+"Bilder, JS, etc.) angewendet wird."
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:74
 msgid "CSP is a powerful mechanism that we strongly recommend. It allows for very fine-grained control. However, creating a good policy (or adjusting your site to work with a good policy) can take some time and effort. To make this easier, it's possible to use CSP in report-only mode."
@@ -1491,12 +1492,12 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_csp.html.eex:103
 msgid "CSP makes it possible for server administrators to reduce or eliminate the vectors by which XSS can occur by specifying the domains that the browser should consider to be valid sources of executable scripts. A CSP compatible browser will then only execute scripts loaded in source files received from those whitelisted domains, ignoring all other script (including inline scripts and event-handling HTML attributes)."
 msgstr ""
-"CSP ermöglicht es Serveradministratoren, Angriffsvektoren durch XSS-Angriffe "
-"zu reduzieren oder zu eliminieren, indem dem Browser Domänen als gültige "
-"Quellen für ausführbare Skripte mitgeteilt werden. Ein CSP-kompatibler "
-"Browser führt dann nur noch Skripte aus, die von diesen Whitelist-Domänen "
-"empfangen wurde und ignoriert alle anderen Skripte (einschließlich Inline-"
-"Skripte und HTML-Attribute zur Ereignisbehandlung)."
+"Die CSP ermöglicht es Serveradministratoren, Angriffsvektoren durch XSS-"
+"Angriffe zu reduzieren oder zu eliminieren, indem dem Browser bestimmte "
+"Domains als gültige Quellen u.a. für ausführbare Skripte mitgeteilt werden. "
+"Ein CSP-kompatibler Browser führt dann nur noch Skripte aus, die von diesen "
+"Whitelist-Domänen empfangen wurde und ignoriert alle anderen Skripte ("
+"einschließlich Inline-Skripte und HTML-Attribute zur Ereignisbehandlung)."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:19
 msgid "Chromium reports the following:"
@@ -1552,9 +1553,9 @@ msgstr ""
 msgid "For a user to take advantage of HSTS, their browser does have to see the HSTS header at least once. This means that users are not protected until after their first successful secure connection to a given domain."
 msgstr ""
 "Damit ein Benutzer die Vorteile von HSTS nutzen kann, muss sein Browser eine "
-"HSTS geschützte Seite mindestens einmal besucht haben. Erst nach der ersten "
+"HSTS-geschützte Seite mindestens einmal besucht haben. Erst nach der ersten "
 "erfolgreichen, sicheren Verbindung ist er für die weiteren Besuche zu dieser "
-"Domäne geschützt."
+"Domain geschützt."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:72
 msgid "For checking the configuration of a server, try <a href=\"https://www.ssllabs.com/ssltest/\">SSL Labs SSL Server Test</a> (web), <a href=\"https://testssl.sh/\">testssl.sh</a> (CLI tool), <a href=\"https://github.com/mozilla/tls-observatory\">Mozilla TLS Observatory</a> (CLI tool) or <a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> (web)."
@@ -1591,7 +1592,7 @@ msgstr "Gute Richtlinie"
 msgid "HSTS is just an HTTP header. In its simplest form, the policy tells a browser to enable HSTS for that exact domain or subdomain, and to remember it for a given number of seconds (the policy is refreshed every time browser sees the header again):"
 msgstr ""
 "HSTS ist nur ein HTTP-Header. In seiner einfachsten Form sagt die Richtlinie "
-"einem Browser, dass er HSTS für genau diese Domäne oder Subdomäne aktivieren "
+"einem Browser, dass er HSTS für genau diese Domain oder Subdomain aktivieren "
 "und für eine bestimmte Anzahl von Sekunden speichern soll (die Richtlinie "
 "wird jedes Mal aktualisiert, wenn der Browser den Header wieder sieht):"
 
@@ -1644,7 +1645,7 @@ msgstr "implementiert, aber mit Fehlern"
 msgid "In its <strong>strongest and recommended form</strong>, the HSTS policy includes <strong>all subdomains</strong>, and indicates a willingness to be \"preloaded\" into browsers:"
 msgstr ""
 "In seiner <strong>strengsten und empfohlenen Form</strong> beinhaltet die "
-"HSTS Richtlinie <strong>all subdomains</strong> und zeigt damit einem "
+"HSTS-Richtlinie auch <strong>alle Subdomains</strong> und zeigt damit einem "
 "Browser seine \"preloaded\" Bereitschaft an:"
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:44
@@ -1726,7 +1727,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:80
 msgid "Removes the ability for users to click through warnings about invalid certificates."
 msgstr ""
-"Entfernt die Möglichkeit für Benutzer, Warnungen über ungültige Zertifikate "
+"Entfernt die Möglichkeit für Benutzer, Warnungen vor ungültigen Zertifikaten "
 "zu ignorieren."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:53
@@ -1757,10 +1758,10 @@ msgstr "Status"
 msgid "Subresource Integrity (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a CDN) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match."
 msgstr ""
 "Subresource Integrity (SRI) ist ein Sicherheitsmerkmal, mit dem Browser "
-"überprüfen können ob abgerufene Ressourcen (z.B. von einem CDN) ohne "
-"Manipulationen übertragen wurden. Es funktioniert durch den Vergleich mit "
-"einem kryptographischen Hash, mit dem eine geholte Ressource übereinstimmen "
-"muss."
+"überprüfen können, ob Ressourcen, die sie abrufen (z.B. von einem CDN), ohne "
+"unerwartete Manipulationen geliefert werden. Es funktioniert, indem es Ihnen "
+"erlaubt, einen kryptographischen Hash bereitzustellen, mit dem eine geholte "
+"Ressource übereinstimmen muss."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:95
 msgid "Subresource Integrity enables you to mitigate some risks of attacks such as this, by ensuring that the files your web application or web document fetches (from a CDN or anywhere) have been delivered without a third-party having injected any additional content into those files — and without any other changes of any kind at all having been made to those files."
@@ -1960,7 +1961,7 @@ msgid "To solve this problem, the Chrome security team created an \"HSTS preload
 msgstr ""
 "Um dieses Problem zu lösen, hat das Chrome-Sicherheitsteam eine HSTS-Preload-"
 "Liste erstellt. Eine in Chrome hard-codierte Liste, die Strict Transport "
-"Security automatisch aktivieren, auch beim ersten Besuch."
+"Security automatisch aktiviert, selbst beim ersten Besuch."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:32
 msgid "Type"
@@ -2283,7 +2284,7 @@ msgstr "Ungültige URL: %{url}"
 #: lib/webbkoll_web/controllers/site_controller.ex:228
 #, elixir-format
 msgid "Invalid id."
-msgstr "Ungültiger Header"
+msgstr "Ungültige ID."
 
 #: lib/webbkoll_web/templates/page/about.html.eex:26
 #, elixir-format
