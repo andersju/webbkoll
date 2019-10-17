@@ -25,7 +25,7 @@ config :webbkoll, WebbkollWeb.Endpoint,
   ]
 
 # Do not include metadata nor timestamps in development logs
-config :logger, :console, format: "[$level] $message\n"
+config :logger, :console, format: "[$level] $message\n", level: :info
 
 # Set a higher stacktrace during development.
 # Do not configure such in production as keeping
@@ -48,5 +48,5 @@ config :webbkoll,
   # See https://github.com/grempe/ex_rated
   rate_limit_client: %{"scale" => 60_000, "limit" => 20},
   rate_limit_host: %{"scale" => 60_000, "limit" => 5},
-  geoip_db_url: "https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.mmdb.gz",
-  geoip_db_md5_url: "https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.md5"
+  geoip_db_url: "https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz",
+  geoip_db_md5_url: "https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz.md5"

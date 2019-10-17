@@ -30,11 +30,12 @@ defmodule Webbkoll.CronJobs do
     db_url = Application.get_env(:webbkoll, :geoip_db_url)
     db_md5_url = Application.get_env(:webbkoll, :geoip_db_md5_url)
 
-    Application.app_dir(:webbkoll, "priv/GeoLite2-Country.mmdb.gz-tmp")
+    Application.app_dir(:webbkoll, "priv/GeoLite2-Country.tar.gz-tmp")
     |> geoip_clean_temp()
     |> geoip_download(db_url)
     |> geoip_check_md5(db_md5_url)
-    |> geoip_move_db_file(Application.app_dir(:webbkoll, db_file))
+    |> geoip_extract()
+    |> geoip_handle_extracted(db_file)
 
     Geolix.reload_databases()
     Logger.info("GeoIP DB reloaded.")
@@ -65,6 +66,21 @@ defmodule Webbkoll.CronJobs do
     end
   end
 
+  defp geoip_extract(tmp_db_path) do
+    :erl_tar.extract(String.to_charlist(tmp_db_path), [:compressed, :memory])
+  end
+
+  defp geoip_handle_extracted({:ok, extracted}, db_file) do
+    case Enum.find(extracted, fn {k, _v} -> k |> List.to_string() |> String.contains?("GeoLite2-Country.mmdb") end) do
+      {_, data} -> File.write!(db_file, data)
+      nil -> raise "Failed finding GeoLite2 database file in downloaded archive"
+    end
+  end
+
+  defp geoip_handle_extracted({:error, _}, _) do
+    raise "GeoIP tar.gz extraction failed"
+  end
+
   defp geoip_check_md5(tmp_db_path, url) do
     original_md5 =
       case HTTPoison.get(url) do
@@ -81,7 +97,6 @@ defmodule Webbkoll.CronJobs do
     actual_md5 =
       tmp_db_path
       |> File.stream!([], 2048)
-      |> StreamGzip.gunzip()
       |> Enum.join()
       |> (&:crypto.hash(:md5, &1)).()
       |> Base.encode16()
@@ -89,13 +104,6 @@ defmodule Webbkoll.CronJobs do
     case String.upcase(original_md5) == actual_md5 do
       true -> tmp_db_path
       false -> raise "GeoIP DB update failed: mismatched MD5"
-    end
-  end
-
-  defp geoip_move_db_file(tmp_db_path, new_path) do
-    case File.rename(tmp_db_path, new_path) do
-      :ok -> Logger.info("New GeoIP DB moved to #{new_path}")
-      {:error, reason} -> raise "Failed moving new GeoIP db file: #{reason}"
     end
   end
 end

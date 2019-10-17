@@ -26,3 +26,4 @@ erl_crash.dump
 /rel/webbkoll
 /priv/*.mmdb
 /priv/*.mmdb.gz
+/priv/GeoLite2*
