@@ -9,7 +9,7 @@
     Referrer Policy
     <%= anchor_link("referrers") %>
     </h3>
-  
+
   <div class="alpha">
     <%= if @site.referrer.header do %>
     <p><%= gettext(~s|Referrer Policy set to <code>%{value}</code> in <code>Referrer-Policy</code> HTTP header.|, value: @site.referrer.header) |> raw() %></p>

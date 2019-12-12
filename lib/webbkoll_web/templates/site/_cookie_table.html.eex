@@ -23,7 +23,7 @@
           </td>
           <td data-label="HttpOnly"><%= if cookie["httpOnly"], do: icon(:pass), else: icon(:fail) %></td>
           <td data-label="Secure"><%= if cookie["secure"], do: icon(:pass), else: icon(:fail) %></td>
-          <td data-label="Name">
+          <td data-label="SameSite">
             <%= if cookie["sameSite"] do %>
               <%= icon(:pass) %>
               (<code><%= cookie["sameSite"] %></code>)
