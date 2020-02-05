@@ -56,7 +56,7 @@ defmodule Webbkoll.Worker do
         _ ->
           %{fetch_url: :http_uri.encode(url), timeout: 45_000}
       end
-    HTTPoison.get(backend_url, [], recv_timeout: 100_000, params: params)
+    HTTPoison.get(backend_url, [], recv_timeout: 145_000, params: params)
   end
 
   defp handle_response({:ok, %{status_code: 200, body: body}}, _id) do
