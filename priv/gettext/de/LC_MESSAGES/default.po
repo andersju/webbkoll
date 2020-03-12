@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: German (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
-"PO-Revision-Date: 2020-03-12 10:43+0000\n"
-"Last-Translator: fs111 <andre@kel.pe>\n"
+"PO-Revision-Date: 2020-03-16 05:08+0000\n"
+"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -84,15 +84,14 @@ msgstr ""
 msgid "<a href=\"https://www.ssllabs.com/ssltest/\">Qualys SSL Server Test</a> is an excellent tool for analyzing a server's TLS/SSL configuration. <a href=\"https://testssl.sh/\">testssl.sh</a> is an open source alternative."
 msgstr ""
 "<a href=\"https://www.ssllabs.com/ssltest/\">Qualys SSL Server Test</a> ist "
-"ein hervorragendes Werkzeug zur Analyse der TLS/SSL Konfiguration eines "
+"ein hervorragendes Werkzeug zur Analyse der TLS-/SSL-Konfiguration eines "
 "Servers. <a href=\"https://testssl.sh/\">testssl.sh</a> ist eine Open-Source-"
 "Alternative."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:59
 msgid "<code>%{domain}</code> does <strong>not</strong> use HTTPS by default."
 msgstr ""
-"<code>%{domain}</code> verwendet standardmäßig <strong>keine</strong> HTTPS "
-"Verbindung."
+"<code>%{domain}</code> verwendet standardmäßig <strong>kein</strong> HTTPS."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:17
 msgid "<code>%{domain}</code> uses HTTPS by default."
@@ -102,24 +101,25 @@ msgstr "<code>%{domain}</code> verwendet standardmäßig HTTPS."
 msgid "<code>'strict-dynamic'</code> lets you use a JavaScript shim loader to load all your site's JavaScript dynamically, without having to track <code>script-src</code> origins."
 msgstr ""
 "<code>'strict-dynamic'</code> ermöglicht ein dynamisches Nachladen von "
-"JavaScript, ohne die Herkunft mit <code>script-src</code> prüfen zu müssen."
+"JavaScript, ohne sich um eine Herkunft in <code>script-src</code> kümmern zu "
+"müssen."
 
 #: lib/webbkoll_web/templates/page/donate.html.eex:8
 msgid "<strong>If you would like to make a contribution</strong> to the general funds of Dataskydd.net (helping both Webbkoll as well as our other activities), you can transfer money to the following bank account:"
 msgstr ""
-"<strong>Wenn Du Dataskydd.net finanziell unterstützen möchtest</strong> (für "
-"die Weiterentwicklung von Webbkoll und für unsere weiteren Aktivitäten), "
-"dann überweise bitte auf folgendes Konto:"
+"<strong>Wenn du Dataskydd.net finanziell unterstützen möchtest</strong> (für "
+"die Weiterentwicklung von Webbkoll und unsere anderen Projekte), dann "
+"überweise bitte auf folgendes Konto:"
 
 #: lib/webbkoll_web/templates/site/failed.html.eex:18
 msgid "<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href=\"mailto:info@dataskydd.net\">send us an email</a> (and tell us what URL you tried)! You can also try <a href=\"https://privacyscore.org/\">PrivacyScore</a> as an alternative."
 msgstr ""
-"<strong>Hinweis</strong>: Wenn Du sicher bist die URL richtig eingegeben zu "
-"haben und diese bei Dir funktioniert, dann könnte der Fehler bei uns liegen. "
-"In diesem Fall <a href=\"mailto:info@dataskydd.net\">schreibe uns bitte eine "
-"Email </a> (und sage uns, welche URL Du benutzt hast)! Als Alternative "
-"kannst Du auch <a href=\"https://privacyscore.org/\">PrivacyScore</a> "
-"ausprobieren."
+"<strong>Hinweis</strong>: Wenn du sicher bist die URL richtig eingegeben zu "
+"haben und diese bei dir funktioniert, dann könnte es unsere Schuld sein. In "
+"diesem Fall <a href=\"mailto:info@dataskydd.net\">schreibe uns bitte eine "
+"E-Mail</a> (und sage uns, um welche URL es sich handelt)! Du kannst "
+"hilfsweise auf <a href=\"https://privacyscore.org/\">PrivacyScore</a> "
+"ausweichen."
 
 #: lib/webbkoll_web/templates/site/_requests.html.eex:24
 #: lib/webbkoll_web/templates/site/_requests.html.eex:33
@@ -131,11 +131,11 @@ msgstr ""
 #: lib/webbkoll_web/templates/page/faq.html.eex:26
 msgid "A webstore may for instance hand over the task of profiling visitors to an advertisement agency, and a public authority may have constructed its website in a way that automatically hands over behavioural data to advertisers. Advertisers are the most common and least transparent form of third parties."
 msgstr ""
-"Ein Web-Shop kann beispielsweise die Aufgabe der Besucherprofilierung an "
-"eine Werbeagentur übergeben, und eine öffentliche Behörde kann ihre Website "
-"so aufgebaut haben, dass Verhaltensdaten automatisch an Werbetreibende "
-"weitergegeben werden. Werbetreibende sind die häufigste und am wenigsten "
-"transparente Form von Dritten."
+"Ein Webshop kann beispielsweise das Besucherprofiling einer Werbeagentur "
+"überlassen und eine Behörde kann ihren Webauftritt so aufgebaut haben, dass "
+"Verhaltensdaten automatisch an Werbetreibende weitergegeben werden. "
+"Werbetreibende sind die häufigste und am wenigsten transparente Form von "
+"Dritten."
 
 #: lib/webbkoll_web/controllers/page_controller.ex:45
 #: lib/webbkoll_web/templates/layout/app.html.eex:53
@@ -163,7 +163,7 @@ msgstr "Ein Fehler ist aufgetreten"
 msgid "An individual should be able to understand the terms of interactions with others. (5(1)(a))."
 msgstr ""
 "Ein Individuum sollte in der Lage sein, die Bedingungen der Zusammenarbeit "
-"zu verstehen (5(1)(a))."
+"zu verstehen (Art. 5 (1) a)."
 
 #: lib/webbkoll_web/controllers/page_controller.ex:9
 msgid "Analyze"
@@ -171,7 +171,7 @@ msgstr "Analysiere"
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:52
 msgid "Analyze %{host} on SSL Labs"
-msgstr "Analysiere  %{host} bei SSL Labs"
+msgstr "Analysiere %{host} bei SSL Labs"
 
 #: lib/webbkoll_web/views/site_view.ex:260
 msgid "Art. "
@@ -180,12 +180,12 @@ msgstr "Art. "
 #: lib/webbkoll_web/templates/page/faq.html.eex:45
 msgid "As little data as possible to achieve the purpose should be collected .(5(1)(c))"
 msgstr ""
-"Es sollten so wenig Daten wie möglich gesammelt werden, um den Zweck zu "
-"erfüllen. (5(1)(c))"
+"Daten sollten so wenig wie zur Erfüllung des Zwecks notwendig gesammelt "
+"werden. (Art. 5 (1) c)"
 
 #: lib/webbkoll_web/templates/page/donate.html.eex:34
 msgid "At the moment we cannot accept Bitcoin or any other cryptocurrency."
-msgstr "Wir akzeptieren aktuell keine Bitcoins oder andere Cryptowährungen."
+msgstr "Wir akzeptieren aktuell keine Bitcoins oder andere Kryptowährungen."
 
 #: lib/webbkoll_web/templates/page/about.html.eex:14
 msgid "Authors and tech"
@@ -195,12 +195,12 @@ msgstr "Autoren und Technik"
 msgid "Behavioural monitoring, or ”profiling”, is when someone monitors how a given person, or set of persons, typically behave. This includes monitoring whether a particular group, say young people or women of a median income, frequently visit certain deeplinks, have to look up certain vocabulary or that they end up on the website through using a particular search engine or social platform. Behavioural monitoring is used to discover what certain classes of people may be assumed to find interesting, difficult or funny."
 msgstr ""
 "Verhaltensüberwachung oder \"Profiling\" ist gegeben, wenn jemand überwacht, "
-"wie sich eine bestimmte Person oder eine Gruppe von Personen typischerweise "
-"verhalten. Dazu gehört auch die Überwachung, ob eine bestimmte Gruppe, z.B. "
-"Jugendliche oder Frauen mit einem mittleren Einkommen, häufig bestimmte "
-"Deeplinks besuchen, ein bestimmtes Vokabular nachschlagen müssen oder ob sie "
-"über eine bestimmte Suchmaschine oder soziale Plattform auf der Website "
-"landen. Verhaltensbeobachtung wird verwendet, um herauszufinden, was "
+"wie sich eine Person oder eine Gruppe von Personen typischerweise verhält. "
+"Dazu gehört auch die Überwachung, ob eine bestimmte Gruppe, z. B. "
+"Jugendliche oder Frauen mit einem mittleren Einkommen, häufig gewisse Deep "
+"Links besuchen, verschiedene Vokabeln nachschlagen müssen oder ob sie über "
+"eine spezielle Suchmaschine oder soziale Plattform auf dem Webauftritt "
+"landen. Verhaltensüberwachung wird verwendet, um herauszufinden, was "
 "bestimmte Gruppen von Menschen als interessant, schwierig oder lustig "
 "empfinden."
 
