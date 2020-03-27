@@ -8,7 +8,7 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-03-27 01:38+0000\n"
+"PO-Revision-Date: 2020-03-28 00:34+0000\n"
 "Last-Translator: PS <neustadt.dataskydd@neustadt.fr>\n"
 "Language-Team: French <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "fr/>\n"
@@ -49,8 +49,19 @@ msgstr[0] "unique"
 msgstr[1] "uniques"
 
 #: lib/webbkoll/helpers.ex:77
+#, fuzzy
 msgid "<a href=\"https://matomo.org/\">Matomo</a> (formerly Piwik) is an excellent alternative. It's free software (PHP & MySQL) and you run it on your own server, meaning <em>you</em> are in control of the data. It offers various privacy settings and, unlike Google Analytics, it can be used without cookies. <em>(While analytics might be considered essential by some websites, another alternative is <em>don't track people just because you can</em>. Visitors do not, in fact, have an implicit obligation to help you optimize things.)</em>"
 msgstr ""
+"<a href=\"https://matomo.org/\">Matomo</a> (anciennement Piwik) est un "
+"excellent alternatif. C'est du logiciel libre (PHP & MySQL) que pouvez "
+"l'installer sur votre propre serveur, vous garantissant ainsi une maîtrise "
+"sur vos données. Il vous propose plusieurs paramètres concernant la "
+"confidentialité et le respect de la vie privée et, à la différence de Google "
+"Analytics, peut être utilisé sans utiliser des cookies. (Alors qu'une "
+"analyse des données utilisateurs pourrait être considérée comme essentielle "
+"par certains sites, un autre alternatif est de <em>ne pas traquer des gens "
+"simplement parce que l'on en est capable</em>. Vos visiteurs n'ont pas une "
+"obligation de vous aider à optimiser les choses).</em>"
 
 #: lib/webbkoll_web/templates/page/about.html.eex:34
 msgid "<a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> (open source) analyzes CSP, HSTS, TLS and various other things (some of the Webbkoll tests are based on code from Observatory). See also <a href=\"https://csp-evaluator.withgoogle.com/\">Google's CSP Evaluator</a>."
