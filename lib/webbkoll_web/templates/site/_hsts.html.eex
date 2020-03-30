@@ -12,7 +12,10 @@
       <%= anchor_link("hsts") %>
     </h3>
   <% else %>
-    <h3 id="hsts"><%= icon(:fail) %> Strict Transport Security</h3>
+    <h3 id="hsts">
+      <%= icon(:fail) %> Strict Transport Security
+      <%= anchor_link("hsts") %>
+    </h3>
   <% end %>
   <div class="alpha">
     <%= if @site.header_hsts.host.set do %>

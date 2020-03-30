@@ -1,6 +1,6 @@
 <section class="result">
   <h3 id="cookies">
-    <%= gettext "Cookies" %>
+    <%= gettext "Cookies" %>&#32;
     <%= anchor_link("cookies") %>
   </h3>
 

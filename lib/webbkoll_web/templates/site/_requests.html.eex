@@ -1,7 +1,7 @@
 <section class="result">
   <%= if @site.scheme == "https" && Enum.count(@site.insecure_first_party_requests) > 0 do %>
     <h3 id="insecure-first-party-requests">
-      <%= gettext "Insecure first-party requests" %>
+      <%= gettext "Insecure first-party requests" %>&#32;
       <%= anchor_link("insecure-first-party-requests") %>
     </h3>
     <ul class="no-bullet requests-list">
@@ -17,14 +17,14 @@
 
   <%= if @site.third_party_request_types.total == 0 do %>
     <h3 id="requests">
-      <%= gettext "Third-party requests" %>
+      <%= gettext "Third-party requests" %>&#32;
       <%= anchor_link("requests") %>
     </h3>
     <p><%= gettext "No third-party requests." %></p>
     <p><%= gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.reg_domain) |> raw %></p>
   <% else %>
     <h3 id="requests">
-      <%= gettext "Third-party requests" %>
+      <%= gettext "Third-party requests" %>&#32;
       <%= anchor_link("requests") %>
     </h3>
     <p>

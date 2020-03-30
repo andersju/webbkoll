@@ -76,6 +76,11 @@ defmodule Webbkoll.Helpers do
     end
   end
 
+  def is_third_party_domain?(url, registrable_domain) do
+    host = URI.parse(url).host
+    host !== nil && get_registerable_domain(host) !== registrable_domain
+  end
+
   def get_registerable_domain(host) do
     case PublicSuffix.matches_explicit_rule?(host) do
       true -> PublicSuffix.registrable_domain(host)

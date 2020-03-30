@@ -6,6 +6,8 @@
 # Sorry about the mess.
 
 defmodule Webbkoll.HeaderAnalysis do
+  import Webbkoll.Helpers
+
   @dangerously_broad [
     "ftp:",
     "http:",
@@ -266,6 +268,89 @@ defmodule Webbkoll.HeaderAnalysis do
         {src, output}
       end
     end
+  end
+
+  def csp_external_report(reg_domain, csp_header, csp_report_only_header, report_to_header) do
+    parsed_csp = parse_csp(csp_header)
+    parsed_csp_report_only = parse_csp(csp_report_only_header)
+
+    %{
+      csp_report_uri: nil,
+      csp_report_only_report_uri: nil,
+      csp_report_to: nil,
+      csp_report_only_report_to: nil,
+      pass: true
+    }
+    |> check_csp_report_uri(reg_domain, parsed_csp, :csp_report_uri)
+    |> check_csp_report_uri(reg_domain, parsed_csp_report_only, :csp_report_only_report_uri)
+    |> check_csp_report_to(reg_domain, parsed_csp, report_to_header, :csp_report_to)
+    |> check_csp_report_to(
+      reg_domain,
+      parsed_csp_report_only,
+      report_to_header,
+      :csp_report_only_report_to
+    )
+  end
+
+  def check_csp_report_uri(result, _reg_domain, nil, _csp_header_name) do
+    result
+  end
+
+  def check_csp_report_uri(result, _reg_domain, csp, _csp_header_name) when not is_map(csp) do
+    result
+  end
+
+  def check_csp_report_uri(result, reg_domain, csp, csp_header_name) do
+    if Map.has_key?(csp, "report-uri") do
+      csp_external_urls = Enum.filter(csp["report-uri"], &is_third_party_domain?(&1, reg_domain))
+
+      if Enum.empty?(csp_external_urls) do
+        result
+      else
+        Map.put(result, csp_header_name, csp_external_urls) |> Map.put(:pass, false)
+      end
+    else
+      result
+    end
+  end
+
+  def check_csp_report_to(result, _reg_domain, csp, _report_to_header, _csp_header_name)
+      when not is_map(csp) do
+    result
+  end
+
+  def check_csp_report_to(result, reg_domain, csp, report_to_header, csp_header_name) do
+    if Map.has_key?(csp, "report-to") do
+      case Jason.decode("[" <> report_to_header <> "]") do
+        {:ok, json} ->
+          parse_report_to(result, reg_domain, json, csp_header_name, List.first(csp["report-to"]))
+
+        {:error, _} ->
+          result
+      end
+    else
+      result
+    end
+  end
+
+  def parse_report_to(result, reg_domain, json, header_name, report_group) do
+    Enum.reduce(json, result, fn group, acc ->
+      case Map.get(group, "group") == report_group and Map.has_key?(group, "endpoints") do
+        true ->
+          urls =
+            group["endpoints"]
+            |> Enum.map(fn x -> Map.get(x, "url", "") end)
+            |> Enum.filter(&is_third_party_domain?(&1, reg_domain))
+
+          case Enum.empty?(urls) do
+            true -> acc
+            false -> acc |> Map.put(header_name, urls) |> Map.put(:pass, false)
+          end
+
+        false ->
+          acc
+      end
+    end)
   end
 
   def hsts(nil), do: %{set: false}

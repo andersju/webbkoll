@@ -1,6 +1,6 @@
 <section class="result">
   <h3 id="raw-headers">
-    <%= gettext "Raw headers" %>
+    <%= gettext "Raw headers" %>&#32;
     <%= anchor_link("raw-headers") %>
   </h3>
 

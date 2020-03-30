@@ -117,6 +117,13 @@ defmodule Webbkoll.Worker do
              url.scheme,
              get_header(headers, "content-security-policy"),
              get_meta(json["content"], "http-equiv", "content-security-policy")
+           ),
+         csp_external_report =
+           HeaderAnalysis.csp_external_report(
+             reg_domain,
+             get_header(headers, "content-security-policy"),
+             get_header(headers, "content-security-policy-report-only"),
+             get_header(headers, "report-to")
            ) do
       %{
         input_url: json["input_url"],
@@ -139,6 +146,7 @@ defmodule Webbkoll.Worker do
         meta_csp: get_meta(json["content"], "http-equiv", "content-security-policy"),
         header_csp: get_header(headers, "content-security-policy"),
         csp: csp,
+        csp_external_report: csp_external_report,
         header_hsts: check_hsts(headers["strict-transport-security"], url.host, reg_domain),
         referrer: %{
           header: header_referrer,
