@@ -41,4 +41,4 @@
   </tbody>
 </table>
 
-<p><%= gettext(~s|We use Disconnect's <a href="%{url}">open source list of trackers</a> to classify hosts.|, url: "https://github.com/disconnectme/disconnect-tracking-protection") |> raw %></p>
+  <p><%= gettext(~s|We use <a href="%{url_mozilla}">Mozilla's version</a> of Disconnect's <a href="%{url_disconnect}">open source list of trackers</a> to classify hosts.|, url_mozilla: "https://github.com/mozilla-services/shavar-prod-lists", url_disconnect: "https://github.com/disconnectme/disconnect-tracking-protection") |> raw %></p>
