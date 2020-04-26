@@ -8,6 +8,9 @@ defmodule WebbkollWeb.Router do
     plug(:fetch_flash)
     plug(:protect_from_forgery)
     plug(:put_secure_browser_headers)
+  end
+
+  pipeline :webbkoll do
     plug(WebbkollWeb.Plugs.MoreSecureHeaders)
     plug(WebbkollWeb.Plugs.Locale, @default_locale)
   end
@@ -16,14 +19,22 @@ defmodule WebbkollWeb.Router do
     plug(:accepts, ["json"])
   end
 
+  if Mix.env() == :dev do
+    import Phoenix.LiveDashboard.Router
+    scope "/" do
+      pipe_through :browser
+      live_dashboard "/dashboard"
+    end
+  end
+
   scope "/", WebbkollWeb do
-    pipe_through(:browser)
+    pipe_through([:browser, :webbkoll])
 
     get("/", PageController, :index)
   end
 
   scope "/:locale", WebbkollWeb do
-    pipe_through(:browser)
+    pipe_through([:browser, :webbkoll])
 
     get("/check", SiteController, :check)
     get("/status", SiteController, :status)
@@ -36,4 +47,5 @@ defmodule WebbkollWeb.Router do
 
     get("/", PageController, :index)
   end
+
 end

@@ -255,6 +255,7 @@ defmodule Webbkoll.Worker do
   defp get_meta(content, attribute, name) do
     content
     |> String.downcase()
+    |> Floki.parse_document()
     |> Floki.find("meta[#{attribute}='#{name}']")
     |> Floki.attribute("content")
     |> List.last()
@@ -273,6 +274,7 @@ defmodule Webbkoll.Worker do
 
   def get_http_equiv_csp(content) do
     content
+    |> Floki.parse_document()
     |> Floki.find("meta[http-equiv]")
     |> Enum.reduce([], fn x, acc ->
       if Floki.attribute(x, "http-equiv") |> Floki.text() |> String.downcase() ==

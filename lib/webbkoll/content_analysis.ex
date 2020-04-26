@@ -120,6 +120,7 @@ defmodule Webbkoll.ContentAnalysis do
 
   defp check_sri_content(content, reg_domain, site_scheme) do
     content
+    |> Floki.parse_document()
     |> Floki.find("script[src], link[href][rel=\"stylesheet\"]")
     |> Enum.reduce([], fn x, acc ->
       src =

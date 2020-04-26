@@ -82,3 +82,5 @@ config :webbkoll,
   rate_limit_host: %{"scale" => 60_000, "limit" => 5},
   geoip_db_url: "https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.mmdb.gz",
   geoip_db_md5_url: "https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.md5"
+
+import_config "prod.secret.exs"

@@ -11,7 +11,11 @@ config :webbkoll, WebbkollWeb.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: []
+  watchers: [],
+  live_view: [
+    # LiveView is not used for anything except LiveDashboard in dev
+    signing_salt: "SECRET_SALT"
+  ]
 
 # Watch static and templates for browser reloading.
 config :webbkoll, WebbkollWeb.Endpoint,
@@ -50,3 +54,5 @@ config :webbkoll,
   rate_limit_host: %{"scale" => 60_000, "limit" => 5},
   geoip_db_url: "https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz",
   geoip_db_md5_url: "https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.tar.gz.md5"
+
+import_config "dev.secret.exs"

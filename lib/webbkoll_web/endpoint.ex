@@ -25,6 +25,9 @@ defmodule WebbkollWeb.Endpoint do
     plug(Phoenix.CodeReloader)
   end
 
+  plug Phoenix.LiveDashboard.RequestLogger,
+    param_key: "request_logger"
+    #cookie_key: "request_logger"
   plug(Plug.RequestId)
   plug(Plug.Logger)
 
@@ -41,4 +44,6 @@ defmodule WebbkollWeb.Endpoint do
   plug(Plug.Session, store: :cookie, key: "_webbkoll_key", signing_salt: "4ZOjrKOO")
 
   plug(WebbkollWeb.Router)
+
+  socket "/live", Phoenix.LiveView.Socket
 end

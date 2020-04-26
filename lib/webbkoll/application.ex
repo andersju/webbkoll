@@ -22,18 +22,19 @@ defmodule Webbkoll.Application do
       end)
 
     children = [
+      # Start the PubSub system
+      {Phoenix.PubSub, name: Webbkoll.PubSub},
       # Start the endpoint when the application starts
-      supervisor(WebbkollWeb.Endpoint, []),
+      WebbkollWeb.Endpoint,
       # Add the Quantum supervisor
-      worker(Webbkoll.Scheduler, []),
+      Webbkoll.Scheduler,
       # Add the ConCache ETS key/value store
-      supervisor(ConCache, [
-        [
-          name: :site_cache,
-          ttl_check_interval: :timer.seconds(60),
-          global_ttl: :timer.seconds(86_400)
-        ]
-      ]),
+      {ConCache,
+       [
+         name: :site_cache,
+         ttl_check_interval: :timer.seconds(60),
+         global_ttl: :timer.seconds(86_400)
+       ]},
       # Add the Jumbo job queue supervisor
       supervisor(Jumbo.QueueSupervisor, [jumbo_queues, [name: Webbkoll.QueueSupervisor]])
     ]

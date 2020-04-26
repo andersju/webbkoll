@@ -24,7 +24,7 @@ config :webbkoll, WebbkollWeb.Endpoint,
   # use cookies at all.
   secret_key_base: "Yk9QpNTp3jg15sA4KFDjBq4hgfp0eYV0o1bYO6Hxf0BUV5deh4HkwMks/Z541bCR",
   render_errors: [accepts: ~w(html json)],
-  pubsub: [name: Webbkoll.PubSub, adapter: Phoenix.PubSub.PG2],
+  pubsub_server: Webbkoll.PubSub,
   server: true
 
 # Configures Elixir's Logger

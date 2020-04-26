@@ -68,7 +68,7 @@ msgstr ""
 msgid "<code>%{domain}</code> uses HTTPS by default."
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:196
+#: lib/webbkoll_web/views/site_view.ex:197
 msgid "<code>'strict-dynamic'</code> lets you use a JavaScript shim loader to load all your site's JavaScript dynamically, without having to track <code>script-src</code> origins."
 msgstr ""
 
@@ -90,7 +90,7 @@ msgid "A webstore may for instance hand over the task of profiling visitors to a
 msgstr ""
 
 #: lib/webbkoll_web/controllers/page_controller.ex:45
-#: lib/webbkoll_web/templates/layout/app.html.eex:53
+#: lib/webbkoll_web/templates/layout/app.html.eex:54
 #: lib/webbkoll_web/templates/page/about.html.eex:2
 msgid "About"
 msgstr ""
@@ -123,7 +123,7 @@ msgstr ""
 msgid "Analyze %{host} on SSL Labs"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:260
+#: lib/webbkoll_web/views/site_view.ex:261
 msgid "Art. "
 msgstr ""
 
@@ -143,43 +143,43 @@ msgstr ""
 msgid "Behavioural monitoring, or ”profiling”, is when someone monitors how a given person, or set of persons, typically behave. This includes monitoring whether a particular group, say young people or women of a median income, frequently visit certain deeplinks, have to look up certain vocabulary or that they end up on the website through using a particular search engine or social platform. Behavioural monitoring is used to discover what certain classes of people may be assumed to find interesting, difficult or funny."
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:220
+#: lib/webbkoll_web/views/site_view.ex:221
 msgid "Blocking inline styles can help prevent attackers from modifying the contents or appearance of your page. Moving styles to external stylesheets can also help make your site more maintainable."
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:212
+#: lib/webbkoll_web/views/site_view.ex:213
 msgid "Blocking the execution of inline JavaScript provides CSP's strongest protection against cross-site scripting attacks. Moving JavaScript to external files can also help make your site more maintainable."
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:226
+#: lib/webbkoll_web/views/site_view.ex:227
 msgid "Blocking the execution of plug-ins via <code>object-src 'none'</code> or as inherited from <code>default-src</code> can prevent attackers from loading Flash or Java in the context of your page."
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:204
+#: lib/webbkoll_web/views/site_view.ex:205
 msgid "Blocking the use of JavaScript's <code>eval()</code> function can help prevent the execution of untrusted code."
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:201
+#: lib/webbkoll_web/views/site_view.ex:202
 msgid "Blocks execution of JavaScript's <code>eval()</code> function by not allowing <code>'unsafe-eval'</code> inside <code>script-src</code>"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:209
+#: lib/webbkoll_web/views/site_view.ex:210
 msgid "Blocks execution of inline JavaScript by not allowing <code>'unsafe-inline'</code> inside <code>script-src</code>"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:225
+#: lib/webbkoll_web/views/site_view.ex:226
 msgid "Blocks execution of plug-ins, using <code>object-src</code> restrictions"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:217
+#: lib/webbkoll_web/views/site_view.ex:218
 msgid "Blocks inline styles by not allowing <code>'unsafe-inline'</code> inside <code>style-src</code>"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:181
+#: lib/webbkoll_web/views/site_view.ex:182
 msgid "Blocks loading of active content over HTTP or FTP"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:187
+#: lib/webbkoll_web/views/site_view.ex:188
 msgid "Blocks loading of passive content over HTTP or FTP"
 msgstr ""
 
@@ -199,7 +199,7 @@ msgstr ""
 msgid "Check your site!"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:89
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:92
 #: lib/webbkoll_web/templates/site/status.html.eex:7
 msgid "Checked URL:"
 msgstr ""
@@ -209,7 +209,7 @@ msgstr ""
 msgid "Classification"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:153
+#: lib/webbkoll_web/views/site_view.ex:154
 msgid "Clickjacking protection, using <code>frame-ancestors</code>"
 msgstr ""
 
@@ -217,39 +217,39 @@ msgstr ""
 msgid "Consider a self-hosted platform."
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:81
+#: lib/webbkoll_web/views/site_view.ex:82
 msgid "Content Security Policy (CSP) header cannot be parsed successfully."
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:84
+#: lib/webbkoll_web/views/site_view.ex:85
 msgid "Content Security Policy (CSP) header not implemented."
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:71
+#: lib/webbkoll_web/views/site_view.ex:72
 msgid "Content Security Policy (CSP) implemented unsafely. This includes <code>'unsafe-inline'</code> or <code>data:</code> inside <code>script-src</code>, overly broad sources such as <code>https:</code> inside <code>object-src</code> or <code>script-src</code>, or not restricting the sources for <code>object-src</code> or <code>script-src</code>."
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:46
+#: lib/webbkoll_web/views/site_view.ex:47
 msgid "Content Security Policy (CSP) implemented with <code>default-src 'none'</code> and no <code>'unsafe'</code>"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:56
+#: lib/webbkoll_web/views/site_view.ex:57
 msgid "Content Security Policy (CSP) implemented with unsafe sources inside <code>style-src</code>. This includes <code>'unsafe-inline'</code>, <code>data:</code> or overly broad sources such as <code>https:</code>."
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:51
+#: lib/webbkoll_web/views/site_view.ex:52
 msgid "Content Security Policy (CSP) implemented without <code>'unsafe-inline'</code> or <code>'unsafe-eval'</code>"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:66
+#: lib/webbkoll_web/views/site_view.ex:67
 msgid "Content Security Policy (CSP) implemented, but allows <code>'unsafe-eval'</code>"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:61
+#: lib/webbkoll_web/views/site_view.ex:62
 msgid "Content Security Policy (CSP) implemented, but secure site allows images or media to be loaded over HTTP"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:76
+#: lib/webbkoll_web/views/site_view.ex:77
 msgid "Content Security Policy (CSP) implemented, but secure site allows resources to be loaded over HTTP"
 msgstr ""
 
@@ -278,15 +278,15 @@ msgstr ""
 msgid "Data should be processed in a secure way, both organisatorially and technically."
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:159
+#: lib/webbkoll_web/views/site_view.ex:160
 msgid "Deny by default, using <code>default-src 'none'</code>"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:160
+#: lib/webbkoll_web/views/site_view.ex:161
 msgid "Denying by default using <code>default-src 'none'</code> can ensure that your Content Security Policy doesn't allow the loading of resources you didn't intend to allow."
 msgstr ""
 
-#: lib/webbkoll_web/templates/layout/app.html.eex:96
+#: lib/webbkoll_web/templates/layout/app.html.eex:97
 msgid "Developed by"
 msgstr ""
 
@@ -314,7 +314,7 @@ msgid "Expires on"
 msgstr ""
 
 #: lib/webbkoll_web/controllers/page_controller.ex:32
-#: lib/webbkoll_web/templates/layout/app.html.eex:56
+#: lib/webbkoll_web/templates/layout/app.html.eex:57
 #: lib/webbkoll_web/templates/page/faq.html.eex:2
 msgid "FAQ"
 msgstr ""
@@ -327,11 +327,11 @@ msgstr ""
 msgid "Feedback is appreciated: send <a href=\"mailto:info@dataskydd.net\">email</a> or <a href=\"https://github.com/andersju/webbkoll\">open an issue</a>."
 msgstr ""
 
-#: lib/webbkoll_web/templates/layout/app.html.eex:102
+#: lib/webbkoll_web/templates/layout/app.html.eex:103
 msgid "Feedback? Questions? <a href=\"mailto:info@dataskydd.net\">info@dataskydd.net</a>"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:90
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:93
 msgid "Final URL:"
 msgstr ""
 
@@ -461,7 +461,7 @@ msgstr ""
 msgid "Limitations"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:176
+#: lib/webbkoll_web/views/site_view.ex:177
 msgid "Malicious JavaScript or content injection could modify where sensitive form data is submitted to or create additional forms for data exfiltration."
 msgstr ""
 
@@ -471,7 +471,7 @@ msgid "Name"
 msgstr ""
 
 #: lib/webbkoll_web/controllers/page_controller.ex:22
-#: lib/webbkoll_web/templates/layout/app.html.eex:50
+#: lib/webbkoll_web/templates/layout/app.html.eex:51
 #: lib/webbkoll_web/templates/page/news.html.eex:2
 msgid "News"
 msgstr ""
@@ -539,7 +539,7 @@ msgstr ""
 msgid "Raw headers"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:267
+#: lib/webbkoll_web/views/site_view.ex:268
 msgid "Rec. "
 msgstr ""
 
@@ -551,26 +551,26 @@ msgstr ""
 msgid "Referrers are (probably) leaked"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:55
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:58
 #: lib/webbkoll_web/views/site_view.ex:25
 msgid "Referrers leaked"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:53
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:56
 #: lib/webbkoll_web/views/site_view.ex:23
 msgid "Referrers not leaked"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:54
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:57
 #: lib/webbkoll_web/views/site_view.ex:24
 msgid "Referrers partially leaked"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:165
+#: lib/webbkoll_web/views/site_view.ex:166
 msgid "Restricts use of the <code>&lt;base&gt;</code> tag by using <code>base-uri 'none'</code>, <code>base-uri 'self'</code>, or specific origins"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:173
+#: lib/webbkoll_web/views/site_view.ex:174
 msgid "Restricts where <code>&lt;form&gt;</code> contents may be submitted by using <code>form-action 'none'</code>, <code>form-action 'self'</code>, or specific URIs"
 msgstr ""
 
@@ -650,7 +650,7 @@ msgstr ""
 msgid "Subresource Integrity (SRI) not implemented, but all resources are loaded from a similar origin."
 msgstr ""
 
-#: lib/webbkoll_web/templates/layout/app.html.eex:104
+#: lib/webbkoll_web/templates/layout/app.html.eex:105
 msgid "Support us"
 msgstr ""
 
@@ -659,11 +659,11 @@ msgstr ""
 msgid "Test"
 msgstr ""
 
-#: lib/webbkoll_web/templates/layout/app.html.eex:93
+#: lib/webbkoll_web/templates/layout/app.html.eex:94
 msgid "Test results are stored in memory on our server for 24 hours. We don't show a list of tested URLs. We don't use URLs or test results. We don't log IP addresses and we don't use cookies."
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:168
+#: lib/webbkoll_web/views/site_view.ex:169
 msgid "The <code>base</code> tag can be used to trick your site into loading scripts from untrusted origins."
 msgstr ""
 
@@ -671,7 +671,7 @@ msgstr ""
 msgid "The backend is currently running on a single server with limited resources, so in case of usage spikes, waiting times can be long. (But you can <a href=\"https://github.com/andersju/webbkoll\">run your own instance</a>!)"
 msgstr ""
 
-#: lib/webbkoll_web/templates/layout/app.html.eex:101
+#: lib/webbkoll_web/templates/layout/app.html.eex:102
 msgid "The code is <a href=\"https://github.com/andersju/webbkoll\">available on GitHub</a>."
 msgstr ""
 
@@ -711,7 +711,7 @@ msgstr ""
 msgid "The site loads fonts from Google Fonts. While these are hosted on resource-specific domains and no cookies are sent, Google <em>could</em> possibly cross-reference the data (IP and browser fingerprint) with other Google services to identify visitors. Do they? Their own <a href=\"https://developers.google.com/fonts/faq?hl=en#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users\">FAQ</a> is vague: <em>\"We do log records of the CSS and the font file requests, and access to this data is on a need-to-know basis and kept secure.\"</em> What \"need-to-know basis\" means is not explained."
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:154
+#: lib/webbkoll_web/views/site_view.ex:155
 msgid "The use of CSP's <code>frame-ancestors</code> directive offers fine-grained control over who can frame your site."
 msgstr ""
 
@@ -728,7 +728,7 @@ msgstr ""
 msgid "This principle above all concerns information registered by public authorities or companies, for instance in the credit check industry. In web development, it is more common with ”fuzzy” data sets, and the consequences of being erroneously categorised in a given profiling operation is normally not worse than that one receives online advertisement which is not specifically targetted to ones own group."
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:188
+#: lib/webbkoll_web/views/site_view.ex:189
 msgid "This site's Content Security Policy allows the loading of passive content such as images or videos over insecure protocols such as HTTP or FTP. Consider changing them to load them over HTTPS."
 msgstr ""
 
@@ -762,12 +762,12 @@ msgstr ""
 msgid "URLs"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:56
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:81
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:59
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:84
 msgid "Unknown"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:193
+#: lib/webbkoll_web/views/site_view.ex:194
 msgid "Uses CSP3's <code>'strict-dynamic'</code> directive to allow dynamic script loading (optional)"
 msgstr ""
 
@@ -837,59 +837,59 @@ msgstr ""
 msgid "What this tool checks (and doesn't check) "
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:93
+#: lib/webbkoll_web/views/site_view.ex:94
 msgid "X-Content-Type-Options header cannot be recognized"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:90
+#: lib/webbkoll_web/views/site_view.ex:91
 msgid "X-Content-Type-Options header not implemented"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:87
+#: lib/webbkoll_web/views/site_view.ex:88
 msgid "X-Content-Type-Options header set to \"nosniff\""
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:108
+#: lib/webbkoll_web/views/site_view.ex:109
 msgid "X-Frame-Options (XFO) header cannot be recognized"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:105
+#: lib/webbkoll_web/views/site_view.ex:106
 msgid "X-Frame-Options (XFO) header not implemented"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:99
+#: lib/webbkoll_web/views/site_view.ex:100
 msgid "X-Frame-Options (XFO) header set to SAMEORIGIN or DENY"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:102
+#: lib/webbkoll_web/views/site_view.ex:103
 msgid "X-Frame-Options (XFO) header uses ALLOW-FROM uri directive"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:96
+#: lib/webbkoll_web/views/site_view.ex:97
 msgid "X-Frame-Options (XFO) implemented via the CSP frame-ancestors directive"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:128
+#: lib/webbkoll_web/views/site_view.ex:129
 msgid "X-XSS-Protection header cannot be recognized"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:125
+#: lib/webbkoll_web/views/site_view.ex:126
 msgid "X-XSS-Protection header not implemented"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:117
+#: lib/webbkoll_web/views/site_view.ex:118
 msgid "X-XSS-Protection header not needed due to strong Content Security Policy (CSP) header"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:122
+#: lib/webbkoll_web/views/site_view.ex:123
 msgid "X-XSS-Protection header set to \"0\" (disabled)"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:114
+#: lib/webbkoll_web/views/site_view.ex:115
 msgid "X-XSS-Protection header set to \"1\""
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:111
+#: lib/webbkoll_web/views/site_view.ex:112
 msgid "X-XSS-Protection header set to \"1; mode=block\""
 msgstr ""
 
@@ -901,11 +901,11 @@ msgstr ""
 msgid "to"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:64
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:67
 msgid "%{first_party} first-party; %{third_party} third-party"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_hsts.html.eex:74
+#: lib/webbkoll_web/templates/site/_hsts.html.eex:77
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security\">HTTP Strict Transport Security</a> (HSTS) is a simple and <a href=\"https://caniuse.com/#feat=stricttransportsecurity\">widely supported</a> standard to protect visitors by ensuring that their browsers always connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from <code>http://</code> to <code>https://</code> URLs."
 msgstr ""
 
@@ -977,7 +977,7 @@ msgstr ""
 msgid "<strong>Secure</strong> means that the cookie will only be sent over a secure channel (HTTPS). This can mitigate MITM (man-in-the-middle) attacks."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_hsts.html.eex:83
+#: lib/webbkoll_web/templates/site/_hsts.html.eex:86
 msgid "A domain instructs browsers that it has enabled HSTS by returning an HTTP header over an HTTPS connection."
 msgstr ""
 
@@ -997,11 +997,11 @@ msgstr ""
 msgid "Alternatively, set the <code>Referrer-Policy</code> HTTP header, e.g.:"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_hsts.html.eex:79
+#: lib/webbkoll_web/templates/site/_hsts.html.eex:82
 msgid "Always uses an <code>https://</code> connection, even when clicking on an <code>http://</code> link or after typing a domain into the location bar without specifying a protocol."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_hsts.html.eex:29
+#: lib/webbkoll_web/templates/site/_hsts.html.eex:32
 msgid "Base domain (https://%{domain}) HSTS status unknown."
 msgstr ""
 
@@ -1033,7 +1033,7 @@ msgstr ""
 msgid "Content Security Policy set in meta element:"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:60
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:63
 msgid "Cookies:"
 msgstr ""
 
@@ -1050,11 +1050,11 @@ msgstr ""
 msgid "External files such as images, scripts and CSS are loaded, but the tool performs no interactions with the page — no links are clicked, no forms are submitted."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_hsts.html.eex:56
+#: lib/webbkoll_web/templates/site/_hsts.html.eex:59
 msgid "Firefox, Safari, Opera, and Edge also incorporate Chrome’s HSTS preload list, making this feature shared across major browsers."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_hsts.html.eex:52
+#: lib/webbkoll_web/templates/site/_hsts.html.eex:55
 msgid "For a user to take advantage of HSTS, their browser does have to see the HSTS header at least once. This means that users are not protected until after their first successful secure connection to a given domain."
 msgstr ""
 
@@ -1078,15 +1078,15 @@ msgstr ""
 msgid "Good policy"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_hsts.html.eex:42
+#: lib/webbkoll_web/templates/site/_hsts.html.eex:45
 msgid "HSTS is just an HTTP header. In its simplest form, the policy tells a browser to enable HSTS for that exact domain or subdomain, and to remember it for a given number of seconds (the policy is refreshed every time browser sees the header again):"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_hsts.html.eex:26
+#: lib/webbkoll_web/templates/site/_hsts.html.eex:29
 msgid "HSTS not set on base domain https://%{domain}"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_hsts.html.eex:33
+#: lib/webbkoll_web/templates/site/_hsts.html.eex:36
 msgid "HTTP Strict Transport Security (HSTS) not implemented."
 msgstr ""
 
@@ -1106,7 +1106,7 @@ msgstr ""
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:62
 #: lib/webbkoll_web/templates/site/_headers.html.eex:31
-#: lib/webbkoll_web/templates/site/_hsts.html.eex:38
+#: lib/webbkoll_web/templates/site/_hsts.html.eex:41
 #: lib/webbkoll_web/templates/site/_https.html.eex:63
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:32
 #: lib/webbkoll_web/templates/site/_sri.html.eex:49
@@ -1121,7 +1121,7 @@ msgstr ""
 msgid "Implemented, but has problems"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_hsts.html.eex:46
+#: lib/webbkoll_web/templates/site/_hsts.html.eex:49
 msgid "In its <strong>strongest and recommended form</strong>, the HSTS policy includes <strong>all subdomains</strong>, and indicates a willingness to be \"preloaded\" into browsers:"
 msgstr ""
 
@@ -1137,7 +1137,7 @@ msgstr ""
 msgid "Like with cookies, <strong><a href=\"https://html.spec.whatwg.org/multipage/webstorage.html\">web storage</a></strong> can be used to store data in a user's browser. Unlike cookies, web storage data is not sent with HTTP requests: it can only be directly set and accessed by the user's browser (through JavaScript). Compared to cookies, the storage capacity is much larger."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:83
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:86
 msgid "Look up"
 msgstr ""
 
@@ -1157,7 +1157,7 @@ msgstr ""
 msgid "Not implemented"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_hsts.html.eex:50
+#: lib/webbkoll_web/templates/site/_hsts.html.eex:53
 msgid "Note that <code>includeSubDomains</code> should be deployed at the base domain, i.e., <code>https://example.com</code>, <em>not</em> <code>https://www.example.com</code>. While we recommend the use of <code>includeSubDomains</code>, be <strong>very</strong> careful, as it means that <strong>all subdomains</strong> associated with the parent domain <strong>must</strong> support HTTPS. (They do not have to each have their own HSTS policy.)"
 msgstr ""
 
@@ -1177,7 +1177,7 @@ msgstr ""
 msgid "Referrer Policy set to <code>%{value}</code> in <code>meta</code> element."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_hsts.html.eex:80
+#: lib/webbkoll_web/templates/site/_hsts.html.eex:83
 msgid "Removes the ability for users to click through warnings about invalid certificates."
 msgstr ""
 
@@ -1189,7 +1189,7 @@ msgstr ""
 msgid "See the following pages for more information:"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:76
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:79
 msgid "Server location:"
 msgstr ""
 
@@ -1219,7 +1219,7 @@ msgstr ""
 msgid "Text about HTTPS partly adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain). <a href=\"http://www.maxmind.com\">MaxMind's</a> GeoLite2 country database (CC-BY-SA 4.0) is used for GeoIP lookups. <a href=\"%{about}\">See here</a> for more information."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_hsts.html.eex:66
+#: lib/webbkoll_web/templates/site/_hsts.html.eex:69
 msgid "Text adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain)."
 msgstr ""
 
@@ -1231,7 +1231,7 @@ msgstr ""
 msgid "The <strong><code>X-Frame-Options</code></strong> HTTP response header can be used to indicate whether or not a browser should be allowed to render a page in a <code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code> or <code>&lt;object&gt;</code>. Sites can use this to avoid <a href=\"https://en.wikipedia.org/wiki/clickjacking\">clickjacking</a> attacks, by ensuring that their content is not embedded into other sites."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_hsts.html.eex:58
+#: lib/webbkoll_web/templates/site/_hsts.html.eex:61
 msgid "The Chrome security team allows anyone to <a href=\"https://hstspreload.org/\">submit their domain to the list</a>, provided it meets a few requirements."
 msgstr ""
 
@@ -1279,7 +1279,7 @@ msgstr ""
 msgid "These headers can help minimize data disclosures."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:68
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:71
 msgid "Third-party requests:"
 msgstr ""
 
@@ -1312,7 +1312,7 @@ msgstr ""
 msgid "To make all this easier, you can use <a href=\"https://www.srihash.org/\">Mozilla's SRI Hash Generator.</a>"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_hsts.html.eex:54
+#: lib/webbkoll_web/templates/site/_hsts.html.eex:57
 msgid "To solve this problem, the Chrome security team created an \"HSTS preload list\": a list of domains baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit."
 msgstr ""
 
@@ -1324,7 +1324,7 @@ msgstr ""
 msgid "URL"
 msgstr ""
 
-#: lib/webbkoll_web/templates/layout/app.html.eex:75
+#: lib/webbkoll_web/templates/layout/app.html.eex:76
 #: lib/webbkoll_web/templates/page/index.html.eex:15
 msgid "URL to check"
 msgstr ""
@@ -1337,7 +1337,7 @@ msgstr ""
 msgid "Welcome to the new version of Webbkoll! See <a href=\"/en/news\">here</a> for changes. If a site can't be checked or you find some other bug, please email <a href=\"mailto:info@dataskydd.net\">info@dataskydd.net</a> or <a href=\"https://github.com/andersju/webbkoll/issues\">open an issue on GitHub</a>."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_hsts.html.eex:76
+#: lib/webbkoll_web/templates/site/_hsts.html.eex:79
 msgid "When a browser knows that a domain has enabled HSTS, it does two things:"
 msgstr ""
 
@@ -1377,12 +1377,12 @@ msgstr ""
 msgid "Error: %{error_message}"
 msgstr ""
 
-#: lib/webbkoll_web/templates/layout/app.html.eex:76
-#: lib/webbkoll_web/templates/layout/app.html.eex:76
+#: lib/webbkoll_web/templates/layout/app.html.eex:77
+#: lib/webbkoll_web/templates/layout/app.html.eex:77
 msgid "Search"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:72
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:75
 msgid "request to 1 unique host"
 msgid_plural "requests to %{count} unique hosts"
 msgstr[0] ""
@@ -1412,7 +1412,7 @@ msgstr ""
 msgid "If multiple policy values are specified, the browser will use the last one, ignoring unknown values (fallback values should thus appear first). Multiple values should be separated by commas, e.g.:"
 msgstr ""
 
-#: lib/webbkoll_web/views/site_view.ex:182
+#: lib/webbkoll_web/views/site_view.ex:183
 msgid "Loading JavaScript or plugins can allow a man-in-the-middle to execute arbitrary code on your website. Restricting your policy and changing links to HTTPS can help prevent this."
 msgstr ""
 
@@ -1510,4 +1510,60 @@ msgstr ""
 #, elixir-format
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:17
 msgid "Under the GDPR, all EU/EEA countries are considered equally trustworthy, so there is no particular reason under the GDPR to consider any EU country more or less reliable or desirable than any other. The importance of the location of a server comes into play only under GDPR %{art_23}, Restrictions, where member states may invoke a number of reasons, notably national security, that enable them to void protections for visitors or web service providers."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/failed.html.eex:9
+msgid "<a href=\"https://www.ssllabs.com/ssltest/analyze.html?d=%{url}&hideResults=on\">Analyze the host on SSL Labs</a> for more information."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_csp_report.html.eex:9
+msgid "Content Security Policy violation reports"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_csp_report.html.eex:15
+msgid "Content-Security-Policy violation reports are not sent to a third-party."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_csp_report.html.eex:17
+msgid "Content-Security-Policy violation reports are sent to a third-party."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_csp_report.html.eex:44
+#: lib/webbkoll_web/templates/site/_csp_report.html.eex:54
+msgid "See <a href=\"#raw-headers\">Raw headers</a> below for full details."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_csp_report.html.eex:28
+msgid "The <code>Content-Security-Policy-Report-Only</code> header includes the following third-party URI(s) in its <code>report-uri</code> directive:"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_csp_report.html.eex:48
+msgid "The <code>Content-Security-Policy-Report-Only</code> header's <code>report-to</code> directive, in combination with the <code>Report-To</code> header, sends violation reports to the following third-party URI(s):"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_csp_report.html.eex:20
+msgid "The <code>Content-Security-Policy</code> header includes the following third-party URI(s) in its <code>report-uri</code> directive:"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_csp_report.html.eex:38
+msgid "The <code>Content-Security-Policy</code> header's <code>report-to</code> directive, in combination with the <code>Report-To</code> header, sends violation reports to the following third-party URI(s):"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_csp_report.html.eex:62
+msgid "The Content Security Policy (CSP) directive <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri\"><code>report-uri</code></a>, or <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to\"><code>report-to</code></a> in combination with a Report-To header, instructs the user's browser to send a <a href=\"https://w3c.github.io/webappsec-csp/#report-violation\">violation report</a> to specified URI(s) if any CSP policy is violated. Each report is a JSON object containing information about the violation, including, among other things, the URL of the document where it occurred, and referrer information. While reporting is useful for developers to find and fix bugs, it can also be used for tracking purposes if different websites send reports to the same third-party endpoint."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:50
+msgid "Violation reports leaked"
 msgstr ""
