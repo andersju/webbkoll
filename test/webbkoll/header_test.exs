@@ -122,4 +122,94 @@ defmodule Webbkoll.HeaderTest do
     assert output.result == "x-xss-protection-not-needed-due-to-csp"
     assert output.pass
   end
+
+  test "Content-Security-Policy with third-party report-uri" do
+    output = external_report("dataskydd.net", "default-src https:; report-uri https://not-dataskydd.net/", "", "", "", "")
+
+    assert output.csp_report_uri == ["https://not-dataskydd.net/"]
+    assert output.csp_report_only_report_uri == nil
+    assert output.pass == false
+  end
+
+  test "Content-Security-Policy with first-party report-uri" do
+    output = external_report("dataskydd.net", "default-src https:; report-uri https://dataskydd.net/", "", "", "", "")
+
+    assert output.csp_report_uri == nil
+    assert output.pass == true
+  end
+
+  test "Content-Security-Policy-Report-Only with third-party report-uri" do
+    output = external_report("dataskydd.net", "", "default-src https:; report-uri https://not-dataskydd.net/", "", "", "")
+
+    assert output.csp_report_only_report_uri == ["https://not-dataskydd.net/"]
+    assert output.csp_report_uri == nil
+    assert output.pass == false
+  end
+
+  test "Content-Security-Policy-Report-Only with first-party report-uri" do
+    output = external_report("dataskydd.net", "", "default-src https:; report-uri https://dataskydd.net/", "", "", "")
+
+    assert output.csp_report_only_report_uri == nil
+    assert output.pass == true
+  end
+
+  test "Content-Security-Policy with third-party report-to endpoint" do
+    output = external_report("dataskydd.net", "default-src https:; report-to default", "", "", "", ~s|{"group": "default", "max_age": 2592000, "endpoints": [{"url": "https://not-dataskydd.net/"}]}|)
+
+    assert output.csp_report_to == ["https://not-dataskydd.net/"]
+    assert output.csp_report_only_report_to == nil
+    assert output.pass == false
+  end
+
+  test "Content-Security-Policy with first-party report-to endpoint" do
+    output = external_report("dataskydd.net", "default-src https:; report-to default", "", "", "", ~s|{"group": "default", "max_age": 2592000, "endpoints": [{"url": "https://dataskydd.net/"}]}|)
+
+    assert output.csp_report_to == nil
+    assert output.csp_report_only_report_to == nil
+    assert output.pass == true
+  end
+
+  test "Content-Security-Policy-Report-Only with third-party report-to endpoint" do
+    output = external_report("dataskydd.net", "", "default-src https:; report-to default", "", "", ~s|{"group": "default", "max_age": 2592000, "endpoints": [{"url": "https://not-dataskydd.net/"}]}|)
+
+    assert output.csp_report_to == nil
+    assert output.csp_report_only_report_to == ["https://not-dataskydd.net/"]
+    assert output.pass == false
+  end
+
+  test "Content-Security-Policy-Report-Only with first-party report-to endpoint" do
+    output = external_report("dataskydd.net", "", "default-src https:; report-to default", "", "", ~s|{"group": "default", "max_age": 2592000, "endpoints": [{"url": "https://dataskydd.net/"}]}|)
+
+    assert output.csp_report_to == nil
+    assert output.csp_report_only_report_to == nil
+    assert output.pass == true
+  end
+
+  test "Expect-CT with third-party report-uri" do
+    output = external_report("dataskydd.net", "", "", ~s|max-age=86400, enforce, report-uri="https://not-dataskydd.net/"|, "", "")
+
+    assert output.expect_ct == "https://not-dataskydd.net/"
+    assert output.pass == false
+  end
+
+  test "Expect-CT with first-party report-uri" do
+    output = external_report("dataskydd.net", "", "", ~s|max-age=86400, enforce, report-uri="https://dataskydd.net/"|, "", "")
+
+    assert output.expect_ct == nil
+    assert output.pass == true
+  end
+
+  test "NEL with third-party report-to endpoint" do
+    output = external_report("dataskydd.net", "", "", "", ~s|{"report_to": "default", "max_age": 2592000}|, ~s|{"group": "default", "max_age": 2592000, "endpoints": [{"url": "https://not-dataskydd.net/"}]}|)
+
+    assert output.nel == ["https://not-dataskydd.net/"]
+    assert output.pass == false
+  end
+
+  test "NEL with first-party report-to endpoint" do
+    output = external_report("dataskydd.net", "", "", "", ~s|{"report_to": "default", "max_age": 2592000}|, ~s|{"group": "default", "max_age": 2592000, "endpoints": [{"url": "https://dataskydd.net/"}]}|)
+
+    assert output.nel == nil
+    assert output.pass == true
+  end
 end

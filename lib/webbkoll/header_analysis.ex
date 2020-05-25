@@ -294,7 +294,6 @@ defmodule Webbkoll.HeaderAnalysis do
     )
     |> check_expect_ct(reg_domain, expect_ct_header)
     |> check_nel(reg_domain, nel_header, report_to_header)
-    |> IO.inspect
   end
 
   def check_expect_ct(result, _reg_domain, nil) do
