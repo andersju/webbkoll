@@ -118,11 +118,13 @@ defmodule Webbkoll.Worker do
              get_header(headers, "content-security-policy"),
              get_meta(json["content"], "http-equiv", "content-security-policy")
            ),
-         csp_external_report =
-           HeaderAnalysis.csp_external_report(
+         external_report =
+           HeaderAnalysis.external_report(
              reg_domain,
              get_header(headers, "content-security-policy"),
              get_header(headers, "content-security-policy-report-only"),
+             get_header(headers, "expect-ct"),
+             get_header(headers, "nel"),
              get_header(headers, "report-to")
            ) do
       %{
@@ -146,7 +148,7 @@ defmodule Webbkoll.Worker do
         meta_csp: get_meta(json["content"], "http-equiv", "content-security-policy"),
         header_csp: get_header(headers, "content-security-policy"),
         csp: csp,
-        csp_external_report: csp_external_report,
+        external_report: external_report,
         header_hsts: check_hsts(headers["strict-transport-security"], url.host, reg_domain),
         referrer: %{
           header: header_referrer,
@@ -255,7 +257,7 @@ defmodule Webbkoll.Worker do
   defp get_meta(content, attribute, name) do
     content
     |> String.downcase()
-    |> Floki.parse_document()
+    |> Floki.parse_document!()
     |> Floki.find("meta[#{attribute}='#{name}']")
     |> Floki.attribute("content")
     |> List.last()
@@ -274,7 +276,7 @@ defmodule Webbkoll.Worker do
 
   def get_http_equiv_csp(content) do
     content
-    |> Floki.parse_document()
+    |> Floki.parse_document!()
     |> Floki.find("meta[http-equiv]")
     |> Enum.reduce([], fn x, acc ->
       if Floki.attribute(x, "http-equiv") |> Floki.text() |> String.downcase() ==

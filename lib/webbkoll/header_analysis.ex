@@ -270,7 +270,7 @@ defmodule Webbkoll.HeaderAnalysis do
     end
   end
 
-  def csp_external_report(reg_domain, csp_header, csp_report_only_header, report_to_header) do
+  def external_report(reg_domain, csp_header, csp_report_only_header, expect_ct_header, nel_header, report_to_header) do
     parsed_csp = parse_csp(csp_header)
     parsed_csp_report_only = parse_csp(csp_report_only_header)
 
@@ -279,6 +279,8 @@ defmodule Webbkoll.HeaderAnalysis do
       csp_report_only_report_uri: nil,
       csp_report_to: nil,
       csp_report_only_report_to: nil,
+      expect_ct: nil,
+      nel: nil,
       pass: true
     }
     |> check_csp_report_uri(reg_domain, parsed_csp, :csp_report_uri)
@@ -290,6 +292,53 @@ defmodule Webbkoll.HeaderAnalysis do
       report_to_header,
       :csp_report_only_report_to
     )
+    |> check_expect_ct(reg_domain, expect_ct_header)
+    |> check_nel(reg_domain, nel_header, report_to_header)
+    |> IO.inspect
+  end
+
+  def check_expect_ct(result, _reg_domain, nil) do
+    result
+  end
+
+  def check_expect_ct(result, reg_domain, expect_ct) do
+    case Regex.run(~r/report-uri=\"([^"]*)\"/, expect_ct) do
+      [_, url] ->
+        if is_third_party_domain?(url, reg_domain) do
+          Map.put(result, :expect_ct, url) |> Map.put(:pass, false)
+        else
+          result
+        end
+
+      nil ->
+        result
+    end
+  end
+
+  def check_nel(result, _reg_domain, nil, _report_to_header) do
+    result
+  end
+
+  def check_nel(result, _reg_domain, _nel_header, nil) do
+    result
+  end
+
+  def check_nel(result, reg_domain, nel_header, report_to_header) do
+    case Jason.decode(nel_header) do
+      {:ok, nel_json} ->
+        if Map.has_key?(nel_json, "report_to") do
+          case Jason.decode("[" <> report_to_header <> "]") do
+            {:ok, report_to_json} ->
+              parse_report_to(result, reg_domain, report_to_json, :nel, nel_json["report_to"])
+            {:error, _} ->
+              result
+          end
+        else
+          result
+        end
+      {:error, _} ->
+        result
+    end
   end
 
   def check_csp_report_uri(result, _reg_domain, nil, _csp_header_name) do

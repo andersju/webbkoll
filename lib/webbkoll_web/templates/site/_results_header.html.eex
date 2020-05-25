@@ -46,8 +46,8 @@
               <% _ -> %> <%= gettext("Implemented, but has problems") %>
             <% end %>
           <% end %>
-          <%= if not @site.csp_external_report.pass do %>
-          <%= icon(:warn_strong) %> <a href="#csp-report" class="no-decoration"><%= gettext("Violation reports leaked") %></a>
+          <%= if not @site.external_report.pass do %>
+          <%= icon(:warn) %> <a href="#ext-report" class="no-decoration"><%= gettext("Reports leaked") %></a>
           <% end %>
         <li>
           <span class="label"><a href="#referrers">Referrer Policy:</a></span>
