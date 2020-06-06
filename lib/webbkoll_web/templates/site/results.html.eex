@@ -8,7 +8,7 @@
 
     <%= render "_csp.html", site: @site %>
 
-    <%= render "_csp_report.html", site: @site %>
+    <%= render "_ext_report.html", site: @site %>
 
     <%= render "_referrers.html", site: @site %>
 
