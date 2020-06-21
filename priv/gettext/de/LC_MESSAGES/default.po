@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
 "PO-Revision-Date: 2020-06-21 22:18+0000\n"
-"Last-Translator: Anders Jensen-Urstad <anders@unix.se>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -1817,6 +1817,12 @@ msgstr ""
 #, elixir-format
 msgid "The <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT\"><code>Expect-CT</code></a> header can be used to enforce <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Certificate_Transparency\">Certificate Transparency</a> requirements, and/or optionally send reports of Certificate Transparency violations to a specified URI."
 msgstr ""
+"Der <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/"
+"Expect-CT\">Expect-CT</code></a>-Header kann verwendet werden, um <a href=\""
+"https://developer.mozilla.org/en-US/docs/Web/Security/"
+"Certificate_Transparency\">Zertifikatstransparenz</a>-Anforderungen "
+"durchzusetzen, und/oder optional Berichte von Verletzungen der "
+"Zertifikatstransparenz an einen spezifischen URI zu schicken."
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:83
 #, elixir-format
