@@ -12,7 +12,7 @@
     <p><%= gettext(~s|<a href="https://tools.keycdn.com/geo?host=%{ip}">See more information</a> (e.g., provider) about this IP address using KeyCDN's tool.|, ip: @site.host_ip) |> raw() %></p>
   </div>
   <aside class="beta">
-    <p><%= icon(:warn) %> <%= gettext(~s|Some sites use CDNs &ndash; <a class="external" href="https://en.wikipedia.org/wiki/Content_delivery_network">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France.|) |> raw %></p>
+    <p><%= icon(:warn) %> <%= gettext(~s|Some sites use CDNs &ndash; <a class="external" href="https://en.wikipedia.org/wiki/Content_delivery_network">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in Finland.|) |> raw %></p>
 
     <p><%= icon(:law) %> <%= gettext(~s|Under the GDPR, all EU/EEA countries are considered equally trustworthy, so there is no particular reason under the GDPR to consider any EU country more or less reliable or desirable than any other. The importance of the location of a server comes into play only under GDPR %{art_23}, Restrictions, where member states may invoke a number of reasons, notably national security, that enable them to void protections for visitors or web service providers.|, art_23: gdpr(~w|art 23|)) |> raw() %></p>
 
