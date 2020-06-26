@@ -4,8 +4,8 @@
   <p>This page lists user-visible changes to Webbkoll. For the time before 2018-11-30 (when this page was added), only a few notable events are listed. For the full history, see the <a href="https://github.com/andersju/webbkoll/commits/">commits on GitHub</a>.</p>
 
   <article>
-    <h3>2020-05-01</h3>
-    <p>Webbkoll now checks whether Content Security Policy violation reports (<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri">report-uri</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to">report-to</a>) are sent to third-parties. Thanks <a href="https://infosec-handbook.eu/">InfoSec Handbook</a> for the suggestion and comments.</p>
+    <h3>2020-06-26</h3>
+    <p>Webbkoll now checks if reports are sent to third-parties with Content Security Policy's <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri">report-uri</a> / <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to">report-to</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT">Expect-CT's</a> report-uri, and <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Network_Error_Logging">NEL's</a> report-to. Thanks <a href="https://infosec-handbook.eu/">InfoSec Handbook</a> for the suggestion and comments.</p>
 
     <h3>2019-05-24</h3>
     <p>Thanks to <a href="https://efn.no/en/home/team#Blenning">Tom Fredrik Blenning</a> - <a href="https://efn.no">Elektronisk Forpost Norge</a>, Webbkoll is <%= link("now available in Norwegian", to: "/no/") %>!</p>
