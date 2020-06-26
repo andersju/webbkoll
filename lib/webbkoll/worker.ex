@@ -32,6 +32,7 @@ defmodule Webbkoll.Worker do
     case HTTPoison.head(url) do
       {:error, %{reason: :econnrefused}} -> get_https_url(url)
       {:error, %{reason: :connect_timeout}} -> get_https_url(url)
+      {:error, %{reason: :closed}} -> get_https_url(url)
       _ -> url
     end
   end
