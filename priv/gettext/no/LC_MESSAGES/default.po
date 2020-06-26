@@ -1589,16 +1589,6 @@ msgstr ""
 "som vil påvirke andre må overveier måten de bruker slik makt."
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_geolocation.html.eex:15
-msgid "Some sites use CDNs &ndash; <a class=\"external\" href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France."
-msgstr ""
-"Vær oppmerksom på at en del nettsteder anvender CDN'er &ndash; <a href=\""
-"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery "
-"networks</a> &ndash; i så tilfelle kan tjenerlokasjonen avhenge av hvor "
-"gjesten befinner seg. Dette verktøyet, Webbkoll, kjører akkurat nå på en "
-"tjener i Frankrike."
-
-#, elixir-format
 #: lib/webbkoll_web/controllers/site_controller.ex:106
 msgid "Sorry, bots aren't allowed."
 msgstr "Beklager, men boter tillates ikke."
@@ -2514,3 +2504,13 @@ msgstr "localStorage benyttes:"
 #: lib/webbkoll_web/templates/site/_requests.html.eex:31
 msgid "to"
 msgstr "til"
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:15
+msgid "Some sites use CDNs &ndash; <a class=\"external\" href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in Finland."
+msgstr ""
+"Vær oppmerksom på at en del nettsteder anvender CDN'er &ndash; <a href=\""
+"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery "
+"networks</a> &ndash; i så tilfelle kan tjenerlokasjonen avhenge av hvor "
+"gjesten befinner seg. Dette verktøyet, Webbkoll, kjører akkurat nå på en "
+"tjener i Finland."

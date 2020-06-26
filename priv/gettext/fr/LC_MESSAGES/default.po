@@ -1239,11 +1239,6 @@ msgid "Since responsibility can be a difficult burden, Webbkoll has a large set 
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_geolocation.html.eex:15
-msgid "Some sites use CDNs &ndash; <a class=\"external\" href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in France."
-msgstr ""
-
-#, elixir-format
 #: lib/webbkoll_web/controllers/site_controller.ex:106
 msgid "Sorry, bots aren't allowed."
 msgstr ""
@@ -1882,4 +1877,9 @@ msgstr ""
 #, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:31
 msgid "to"
+msgstr ""
+
+#, elixir-format, fuzzy
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:15
+msgid "Some sites use CDNs &ndash; <a class=\"external\" href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in Finland."
 msgstr ""
