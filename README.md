@@ -159,7 +159,7 @@ Run `systemctl daemon-reload` for good measure, and then try `systemctl start we
   * [tablesort](https://github.com/tristen/tablesort) (`assets/static/js/tablesort.min.js` and `assets/scss/tablesort.css`) (MIT license) by Tristen Brown
   * [A11y Toggle](https://github.com/edenspiekermann/a11y-toggle) (`assets/static/js/a11y-toggle.min.js`) (MIT license) by Edenspiekermann
   * [IcoMoon](https://icomoon.io/#icons-icomoon) icons (`assets/static/fonts`) (GPL / CC-BY-4.0) by IcoMoon.io
-  * [Disconnect's open source list of trackers](https://github.com/disconnectme/disconnect-tracking-protection) (`priv/services.json`) (GPLv3) by Disconnect, Inc.
+  * [Mozilla's version](https://github.com/mozilla-services/shavar-prod-lists) of [Disconnect's open source list of trackers](https://github.com/disconnectme/disconnect-tracking-protection) (`priv/services.json`) (GPLv3) by Disconnect, Inc.
   * GeoLite2 data created by MaxMind (CC BY-SA 4.0), available from [http://www.maxmind.com](http://www.maxmind.com). (Not included in the repository, but automatically downloaded to `priv/GeoLite2-Country.mmdb.gz`.)
   * JSON for ISO 3166-1 country code i18n from [node-i18n-iso-countries](https://github.com/michaelwittig/node-i18n-iso-countries) (`priv/{en,fr,no,sv}.json`) (MIT license)
   * SVG flags/CSS (`assets/scss/flag-icon`, `assets/static/flags`) from [flag-icon-css](https://github.com/lipis/flag-icon-css) (MIT license) by Panayiotis Lipiridis
