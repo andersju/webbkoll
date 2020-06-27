@@ -1836,11 +1836,6 @@ msgstr ""
 "kriterier."
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_ext_report.html.eex:77
-msgid "The Content Security Policy (CSP) directive <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri\"><code>report-uri</code></a>, or <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to\"><code>report-to</code></a> in combination with a Report-To header, instructs the user's browser to send a <a href=\"https://w3c.github.io/webappsec-csp/#report-violation\">violation report</a> to specified URI(s) if any CSP policy is violated. Each report is a JSON object containing information about the violation, including, among other things, the URL of the document where it occurred, and referrer information. While reporting is useful for developers to find and fix bugs, it can also be used for tracking purposes."
-msgstr ""
-
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:93
 msgid "The Content Security Policy tests are based on the ones from the <a href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP Observatory</a> scanner/grader project (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> website, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</a>. Any mistake or inaccuracy in the results is our fault."
 msgstr ""
@@ -2514,3 +2509,8 @@ msgstr ""
 "networks</a> &ndash; i så tilfelle kan tjenerlokasjonen avhenge av hvor "
 "gjesten befinner seg. Dette verktøyet, Webbkoll, kjører akkurat nå på en "
 "tjener i Finland."
+
+#, elixir-format, fuzzy
+#: lib/webbkoll_web/templates/site/_ext_report.html.eex:77
+msgid "The Content Security Policy (CSP) directive <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri\"><code>report-uri</code></a>, or <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to\"><code>report-to</code></a> in combination with a <code>Report-To</code> header, instructs the user's browser to send a <a href=\"https://w3c.github.io/webappsec-csp/#report-violation\">violation report</a> to specified URI(s) if the CSP is violated. Each report is a JSON object containing information about the violation, including, among other things, the URL of the document where it occurred, and referrer information. While reporting is useful for developers to find and fix bugs, it can also be used for tracking purposes."
+msgstr ""
