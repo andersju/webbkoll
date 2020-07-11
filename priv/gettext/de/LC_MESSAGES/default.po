@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
 "PO-Revision-Date: 2020-07-11 08:41+0000\n"
-"Last-Translator: Tomas Jakobs <tomas.jakobs@jakobssystems.net>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -105,8 +105,8 @@ msgstr ""
 #, elixir-format
 msgid "<a href=\"https://report-uri.com/home/tools\">Report URI</a> has many useful tools: CSP analyzer/builder, header analyzer (<a href=\"https://securityheaders.com/\">securityheaders.com</a>), SRI hash generator, etc."
 msgstr ""
-"<a href=\"https://report-uri.com/home/tools\">Report URI</a> bietet dir "
-"viele nützliche Werkzeuge: CSP Analyzer/Builder, Header Analyzer (<a href=\""
+"<a href=\"https://report-uri.com/home/tools\">Report URI</a> bietet Dir "
+"viele nützliche Tools: CSP Analyzer/Builder, Header Analyzer (<a href=\""
 "https://securityheaders.com/\">securityheaders.com</a>), SRI-Hash-Generator "
 "etc."
 
@@ -121,8 +121,8 @@ msgstr ""
 #, elixir-format
 msgid "<a href=\"https://www.hardenize.com/\">Hardenize</a> is similar to Observatory, but also checks a domain's mail servers."
 msgstr ""
-"<a href=\"https://www.hardenize.com/\">Hardenize</a> ist mit Observatory "
-"vergleichbar, prüft aber auch E-Mail-Server."
+"<a href=\"https://www.hardenize.com/\">Hardenize</a> ist vergleichbar mit "
+"Observatory, prüft aber auch E-Mail-Server."
 
 #: lib/webbkoll_web/templates/page/about.html.eex:40
 #, elixir-format
@@ -157,12 +157,13 @@ msgstr ""
 #, elixir-format
 msgid "<code>%{domain}</code> does <strong>not</strong> use HTTPS by default."
 msgstr ""
-"<code>%{domain}</code> verwendet standardmäßig <strong>kein</strong> HTTPS."
+"<code>%{domain}</code> verwendet <strong>keine</strong> HTTPS-Verbindung als "
+"Voreinstellung."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:17
 #, elixir-format
 msgid "<code>%{domain}</code> uses HTTPS by default."
-msgstr "<code>%{domain}</code> verwendet standardmäßig HTTPS."
+msgstr "<code>%{domain}</code> verwendet HTTPS als Voreinstellung."
 
 #: lib/webbkoll_web/views/site_view.ex:197
 #, elixir-format
@@ -201,8 +202,8 @@ msgstr ""
 msgid "<code>crossorigin</code> must be set to <code>anonymous</code> for third-party resources when using SRI. This has to do with <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes\">CORS</a>."
 msgstr ""
 "<code>crossorigin</code> muß auf <code>anonymous</code> für Drittressourcen "
-"gesetzt sein wenn zugleich SRI verwendet wird. Das steht im Zusammenhang mit "
-"<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/"
+"gesetzt sein, wenn zugleich SRI verwendet wird. Das steht im Zusammenhang "
+"mit <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/"
 "CORS_settings_attributes\">CORS</a>."
 
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:35
@@ -317,12 +318,12 @@ msgstr ""
 #, elixir-format
 msgid "<strong>Third-party cookies</strong> are placed by a service affiliated with the web site owner on the devices of visitors to the web site in order to be able to re-identity the visitor on subsequent page loads, or across different web sites. Third-party cookies are typically related to commercial features of a web site owners' activities, usually advertising, but may also relate to technical features in scripts used by a web site (such as language settings)."
 msgstr ""
-"<strong>Third-party Cookies</strong> werden von Diensten gesetzt, die vom "
-"Webseiten-Betreiber eingebunden wurden. So kann ein Besucher bei "
-"nachfolgenden Seitenaufrufen verschiedener Websites wieder identifiziert "
-"werden. Cookies von Drittanbietern werden in der Regel kommerziell genutzt, "
-"meistens für Werbung, sie können aber technische Merkmale beinhalten wie ein "
-"Dienst oder Website verwendet werden (z.B. Spracheinstellungen)."
+"<strong>Drittanbieter-Cookies</strong> werden von Diensten gesetzt, die vom "
+"Website-Betreiber eingebunden wurden. So kann ein Besucher bei nachfolgenden "
+"Seitenaufrufen verschiedener Websites wieder identifiziert werden. Cookies "
+"von Drittanbietern werden in der Regel kommerziell genutzt, meistens für "
+"Werbung, sie können aber auch technische Merkmale beinhalten wie ein Dienst "
+"oder eine Website verwendet werden (z.B. Spracheinstellungen)."
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:86
 #, elixir-format
@@ -335,10 +336,11 @@ msgstr ""
 #, elixir-format
 msgid "A plain HTTP connection can be easily monitored, modified, and impersonated. Every unencrypted HTTP request reveals information about a user’s behavior, and the interception and tracking of unencrypted browsing has become commonplace."
 msgstr ""
-"Eine einfache HTTP-Verbindung kann leicht überwacht, geändert und nachgeahmt "
-"werden. Jede unverschlüsselte HTTP-Anfrage enthüllt Informationen über das "
-"Verhalten eines Benutzers. Das Abfangen und Verfolgen von unverschlüsseltem "
-"Surfen ist zum Alltag geworden."
+"Einfache HTTP-Verbindungen können leicht überwacht, verändert oder "
+"nachgeahmt werden. Jede unverschlüsselte verschickte HTTP-Anfrage beinhaltet "
+"Meta-Informationen und ermöglicht Rückschlüssel auf das Verhalten. Das "
+"Mitlauschen und Nachverfolgen von unverschlüsseltem Surfen ist zur "
+"Selbstverständlichkeit geworden."
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:101
 #, elixir-format
