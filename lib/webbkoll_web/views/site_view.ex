@@ -238,8 +238,6 @@ defmodule WebbkollWeb.SiteView do
     end
   end
 
-  # Yes, this is ugly.
-  # TODO: Replace with links to locally hosted version of the GDPR.
   def gdpr([type, number]), do: gdpr_link(type, number)
   def gdpr([type, number, text]), do: gdpr_link(type, number, text)
 

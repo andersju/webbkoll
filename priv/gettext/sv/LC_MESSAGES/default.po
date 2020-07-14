@@ -1569,14 +1569,6 @@ msgid "Server location:"
 msgstr "Serverplats:"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_referrers.html.eex:71
-msgid "Setting referrer policy is an easy way to do data minimization (%{art_5_1_f}) and help ensure that you don't transfer or disclose personal data needlessly (%{art_32_2})."
-msgstr ""
-"Att sätta en referrer policy är ett enkelt sätt att idka dataminimering "
-"(%{art_5_1_f}) och bidra till att du inte överför eller avslöjar "
-"personuppgifter i onödan (%{art_32_2})."
-
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:54
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:38
 msgid "Show"
@@ -2556,7 +2548,7 @@ msgstr ""
 "beroende på var besökaren befinner sig. Det här verktyget, Webbkoll, körs "
 "just nu på en server i Finland."
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:77
 msgid "The Content Security Policy (CSP) directive <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri\"><code>report-uri</code></a>, or <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to\"><code>report-to</code></a> in combination with a <code>Report-To</code> header, instructs the user's browser to send a <a href=\"https://w3c.github.io/webappsec-csp/#report-violation\">violation report</a> to specified URI(s) if the CSP is violated. Each report is a JSON object containing information about the violation, including, among other things, the URL of the document where it occurred, and referrer information. While reporting is useful for developers to find and fix bugs, it can also be used for tracking purposes."
 msgstr ""
@@ -2572,3 +2564,11 @@ msgstr ""
 "dokumentet i fråga och referrer-information. Rapportering kan vara nyttigt "
 "för utvecklare för att hitta och fixa buggar, men kan också användas i "
 "spårningssyfte."
+
+#, elixir-format, fuzzy
+#: lib/webbkoll_web/templates/site/_referrers.html.eex:71
+msgid "Setting referrer policy is an easy way to do data minimization (%{art_5_1_c}) and help ensure that you don't transfer or disclose personal data needlessly (%{art_32_2})."
+msgstr ""
+"Att sätta en referrer policy är ett enkelt sätt att idka dataminimering "
+"(%{art_5_1_c}) och bidra till att du inte överför eller avslöjar "
+"personuppgifter i onödan (%{art_32_2})."
