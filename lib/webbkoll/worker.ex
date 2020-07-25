@@ -98,7 +98,7 @@ defmodule Webbkoll.Worker do
     with url = URI.parse(json["final_url"]),
          reg_domain = get_registerable_domain(url.host),
          headers = json["response_headers"],
-         host_ip = json["remote_address"]["ip"],
+         host_ip = get_proper_ip(json["remote_address"]["ip"]),
          cookies = get_cookies(json["cookies"], reg_domain),
          # Ignore first request in requests list, as it's by definition a first-party request;
          # fixes issue with IDN domains
@@ -207,7 +207,7 @@ defmodule Webbkoll.Worker do
           # in theory differ between requests, might be better to just store it per host?
           new_map = %{
             url: request["url"],
-            ip: request["remote_address"]["ip"],
+            ip: get_proper_ip(request["remote_address"]["ip"]),
             country: get_geolocation_by_ip(request["remote_address"]["ip"])
           }
 

@@ -17,10 +17,15 @@ defmodule Webbkoll.Helpers do
 
   def language_from_code(code), do: Application.get_env(:webbkoll, :locales) |> Map.get(code)
 
+  def get_proper_ip("[" <> rest), do: String.slice(rest, 0..-2)
+
+  def get_proper_ip(ip), do: ip
+
   def get_geolocation_by_ip(nil), do: nil
 
   def get_geolocation_by_ip(ip) do
     ip
+    |> get_proper_ip()
     |> Geolix.lookup(as: :raw, where: :country, locale: :en)
     |> get_in([:country, :iso_code])
   end
