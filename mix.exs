@@ -67,7 +67,7 @@ defmodule Webbkoll.Mixfile do
       {:public_suffix, "~> 0.4"},
       {:timex, "~> 3.0"},
       {:hackney, "~> 1.8"},
-      {:geolix, "~> 0.13"},
+      {:geolix_adapter_mmdb2, "~> 0.5.0"},
       {:idna, "~> 5.0", override: true},
       {:con_cache, "~> 0.13"},
       {:uuid, "~> 1.1"},
