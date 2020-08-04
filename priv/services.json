@@ -1,5 +1,5 @@
 {
-  "license": "Copyright 2010-2019 Disconnect, Inc. / This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. / This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. / You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.",
+  "license": "Copyright 2010-2020 Disconnect, Inc. / Licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license (the “License”). A summary of the License is available here: https://creativecommons.org/licenses/by-nc-sa/4.0/. The text version of the License is here: https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.txt. Please see the License for the specific language governing permissions and limitations under the License. Unless agreed to in writing or required by law, software distributed under the License on an \"as is\" basis without warranties or conditions of any kind, either express or implied. This license does not apply to any Disconnect logos or marks contained in this repo.",
   "categories": {
     "Advertising": [
       {
@@ -759,14 +759,6 @@
         }
       },
       {
-        "AdReady": {
-          "http://www.adready.com/": [
-            "adready.com",
-            "adreadytractions.com"
-          ]
-        }
-      },
-      {
         "AdRevolution": {
           "http://adrevolution.com/": [
             "adrevolution.com"
@@ -1053,7 +1045,6 @@
       {
         "AdYield": {
           "http://www.adyield.com/": [
-            "adxyield.com",
             "adyield.com"
           ]
         }
@@ -2616,6 +2607,14 @@
         }
       },
       {
+        "DigitalRemedy": {
+          "https://www.digitalremedy.com/": [
+            "adready.com",
+            "adreadytractions.com"
+          ]
+        }
+      },
+      {
         "Digital River": {
           "http://www.digitalriver.com/": [
             "digitalriver.com",
@@ -2756,7 +2755,9 @@
       {
         "eBay": {
           "http://www.ebay.com/": [
-            "ebay.com"
+            "ebay.com",
+            "ebayimg.com",
+            "ebaystatic.com"
           ]
         }
       },
@@ -3164,6 +3165,13 @@
         }
       },
       {
+        "Flocktory": {
+          "https://www.flocktory.com/en/": [
+            "flocktory.com"
+          ]
+        }
+      },
+      {
         "Fluct": {
           "https://corp.fluct.jp/": [
             "adingo.jp",
@@ -3436,6 +3444,8 @@
             "cc-dt.com",
             "destinationurl.com",
             "doubleclick.net",
+            "fcmatch.google.com",
+            "fcmatch.youtube.com",
             "googleadservices.com",
             "googlesyndication.com",
             "googletagservices.com",
@@ -5151,6 +5161,13 @@
         }
       },
       {
+        "Origo": {
+          "https://www.origo.hu/index.html": [
+            "origo.hu"
+          ]
+        }
+      },
+      {
         "Outbrain": {
           "http://www.outbrain.com/": [
             "outbrain.com",
@@ -6702,6 +6719,14 @@
           "http://www.traffichaus.com/": [
             "traffichaus.com",
             "traffichouse.com"
+          ]
+        }
+      },
+      {
+        "TrafficJunky": {
+          "https://www.trafficjunky.com/": [
+            "trafficjunky.com",
+            "trafficjunky.net"
           ]
         }
       },
@@ -9660,13 +9685,6 @@
         }
       },
       {
-        "Poool": {
-          "http://poool.fr/": [
-            "poool.fr"
-          ]
-        }
-      },
-      {
         "Pronunciator": {
           "http://www.pronunciator.com/": [
             "pronunciator.com",
@@ -10066,6 +10084,7 @@
       {
         "White Ops": {
           "https://www.whiteops.com/": [
+            "adxyield.com",
             "adzmath.com",
             "whiteops.com"
           ]
@@ -10591,6 +10610,13 @@
         }
       },
       {
+        "Origo": {
+          "https://www.origo.hu/index.html": [
+            "origo.hu"
+          ]
+        }
+      },
+      {
         "PaymentsMB": {
           "https://paymentsmb.com": [
             "paymentsmb.com"
@@ -10728,13 +10754,6 @@
         "Smi": {
           "http://24smi.net": [
             "24smi.net"
-          ]
-        }
-      },
-      {
-        "Socital": {
-          "https://www.socital.com": [
-            "socital.com"
           ]
         }
       },
