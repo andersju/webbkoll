@@ -62,7 +62,7 @@ defmodule Webbkoll.Mixfile do
       {:httpoison, "~> 1.0"},
       {:floki, "~> 0.8"},
       {:ex_rated, "~> 2.0"},
-      {:quantum, "~> 2.4"},
+      {:quantum, "~> 3.0"},
       {:ex_machina, "~> 2.0", only: :test},
       {:public_suffix, "~> 0.4"},
       {:timex, "~> 3.0"},
