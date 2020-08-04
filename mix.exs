@@ -73,7 +73,7 @@ defmodule Webbkoll.Mixfile do
       {:uuid, "~> 1.1"},
       {:jumbo, "~> 1.0"},
       {:download, "~> 0.0.4"},
-      {:stream_gzip, "~> 0.3.1"},
+      {:stream_gzip, "~> 0.4.1"},
       {:jason, "~> 1.0"},
       {:valid_url, "~> 0.1.2"}
     ]
