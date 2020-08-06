@@ -49,6 +49,7 @@
           <%= if not @site.external_report.pass do %>
           <%= icon(:warn) %> <a href="#ext-report" class="no-decoration"><%= gettext("Reports leaked") %></a>
           <% end %>
+        </li>
         <li>
           <span class="label"><a href="#referrers">Referrer Policy:</a></span>
 
