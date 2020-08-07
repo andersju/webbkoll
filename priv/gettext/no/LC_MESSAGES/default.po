@@ -47,7 +47,7 @@ msgstr[0] "forespørsel"
 msgstr[1] "forespørsler"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:75
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:76
 msgid "request to 1 unique host"
 msgid_plural "requests to %{count} unique hosts"
 msgstr[0] "Forespørsel til 1 unik vert"
@@ -61,7 +61,7 @@ msgstr[0] "unik"
 msgstr[1] "unike"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:67
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:68
 msgid "%{first_party} first-party; %{third_party} third-party"
 msgstr "%{first_party} førstepart; %{third_party} tredjepart"
 
@@ -430,7 +430,7 @@ msgid "Analyze %{host} on SSL Labs"
 msgstr "Analyser %{host} på SSL Labs"
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:261
+#: lib/webbkoll_web/views/site_view.ex:259
 msgid "Art. "
 msgstr "Art. "
 
@@ -588,7 +588,7 @@ msgid "Check your site!"
 msgstr "Sjekk ditt nettsted!"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:92
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:93
 #: lib/webbkoll_web/templates/site/status.html.eex:7
 msgid "Checked URL:"
 msgstr "Testet URL:"
@@ -702,7 +702,7 @@ msgid "Cookies"
 msgstr "Cookies"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:63
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:64
 msgid "Cookies:"
 msgstr "Informasjonskapsler:"
 
@@ -843,7 +843,7 @@ msgid "Failed"
 msgstr "Mislyktes"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/page/index.html.eex:30
+#: lib/webbkoll_web/templates/page/index.html.eex:29
 msgid "Feedback is appreciated: send <a href=\"mailto:info@dataskydd.net\">email</a> or <a href=\"https://github.com/andersju/webbkoll\">open an issue</a>."
 msgstr ""
 "Tilbakemeldinger settes pris på:  <a href=\"mailto:info@dataskydd.net\""
@@ -858,7 +858,7 @@ msgstr ""
 ">info@dataskydd.net</a>"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:93
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:94
 msgid "Final URL:"
 msgstr "Avsluttende URL:"
 
@@ -1227,7 +1227,7 @@ msgstr ""
 "restriktiv og å endre lenker till HTTPS kan hjelpe til med å forhindre dette."
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:86
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:87
 msgid "Look up"
 msgstr "Slå opp"
 
@@ -1395,7 +1395,7 @@ msgid "Raw headers"
 msgstr "Rå headere"
 
 #, elixir-format
-#: lib/webbkoll_web/views/site_view.ex:268
+#: lib/webbkoll_web/views/site_view.ex:266
 msgid "Rec. "
 msgstr "Betraktninger "
 
@@ -1438,19 +1438,19 @@ msgid "Referrers are (probably) leaked"
 msgstr "Henviser lekker (antakeligvis)"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:58
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:59
 #: lib/webbkoll_web/views/site_view.ex:25
 msgid "Referrers leaked"
 msgstr "Henviser lekker"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:56
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:57
 #: lib/webbkoll_web/views/site_view.ex:23
 msgid "Referrers not leaked"
 msgstr "Henviser lekker ikke"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:57
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:58
 #: lib/webbkoll_web/views/site_view.ex:24
 msgid "Referrers partially leaked"
 msgstr "Henviser lekker delvis"
@@ -1559,7 +1559,7 @@ msgstr ""
 "avgjøres."
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:79
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:80
 msgid "Server location:"
 msgstr "Tjenerlokasjon:"
 
@@ -1863,15 +1863,6 @@ msgstr ""
 "License 2.0</a>) av April King, gjenimplementert av oss for Webbkoll."
 
 #, elixir-format
-#: lib/webbkoll_web/templates/page/index.html.eex:29
-msgid "The backend is currently running on a single server with limited resources, so in case of usage spikes, waiting times can be long. (But you can <a href=\"https://github.com/andersju/webbkoll\">run your own instance</a>!)"
-msgstr ""
-"Backend-tjeneren kjøres akkurat nå på en enkelt tjener med begrensede "
-"resurser. Hvis mange bruker tjenesten samtidig kan ventetiden bli lang. (Men "
-"du kan <a href=\"https://github.com/andersju/webbkoll\"> kjøre din egen "
-"instans</a>!)"
-
-#, elixir-format
 #: lib/webbkoll_web/templates/layout/app.html.eex:102
 msgid "The code is <a href=\"https://github.com/andersju/webbkoll\">available on GitHub</a>."
 msgstr ""
@@ -2006,7 +1997,7 @@ msgid "Third-party requests"
 msgstr "Tredjepartsforespørsler"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:71
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:72
 msgid "Third-party requests:"
 msgstr "Tredjepartsforespørsler:"
 
@@ -2182,8 +2173,8 @@ msgstr ""
 "oppheve beskyttelse for besøkende og leverandører."
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:59
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:84
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:60
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:85
 msgid "Unknown"
 msgstr "Ukjent"
 
