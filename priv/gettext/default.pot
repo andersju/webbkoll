@@ -39,13 +39,6 @@ msgstr[0] ""
 msgstr[1] ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:76
-msgid "request to 1 unique host"
-msgid_plural "requests to %{count} unique hosts"
-msgstr[0] ""
-msgstr[1] ""
-
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:31
 msgid "unique"
 msgid_plural "unique"
@@ -410,7 +403,7 @@ msgid "Check your site!"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:93
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:95
 #: lib/webbkoll_web/templates/site/status.html.eex:7
 msgid "Checked URL:"
 msgstr ""
@@ -623,7 +616,7 @@ msgid "Feedback? Questions? <a href=\"mailto:info@dataskydd.net\">info@dataskydd
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:94
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:96
 msgid "Final URL:"
 msgstr ""
 
@@ -912,7 +905,7 @@ msgid "Loading JavaScript or plugins can allow a man-in-the-middle to execute ar
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:87
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:89
 msgid "Look up"
 msgstr ""
 
@@ -1186,7 +1179,7 @@ msgid "Server location for <strong>%{domain}</strong> (%{host_ip}) could not be 
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:80
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:82
 msgid "Server location:"
 msgstr ""
 
@@ -1605,7 +1598,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:60
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:85
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:87
 msgid "Unknown"
 msgstr ""
 
@@ -1846,3 +1839,17 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:71
 msgid "Setting referrer policy is an easy way to do data minimization (%{art_5_1_c}) and help ensure that you don't transfer or disclose personal data needlessly (%{art_32_2})."
 msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:78
+msgid "1 unique host"
+msgid_plural "%{count} unique hosts"
+msgstr[0] ""
+msgstr[1] ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:76
+msgid "request to"
+msgid_plural "requests to"
+msgstr[0] ""
+msgstr[1] ""

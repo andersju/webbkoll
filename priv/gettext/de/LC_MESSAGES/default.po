@@ -43,13 +43,6 @@ msgstr[0] "Anfrage"
 msgstr[1] "Anfragen"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:76
-msgid "request to 1 unique host"
-msgid_plural "requests to %{count} unique hosts"
-msgstr[0] "Anfragen an einen einzigartigen Host"
-msgstr[1] "Anfragen an %{count} einzigartige Hosts"
-
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:31
 msgid "unique"
 msgid_plural "unique"
@@ -603,7 +596,7 @@ msgid "Check your site!"
 msgstr "Überprüfe Deine Webseite!"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:93
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:95
 #: lib/webbkoll_web/templates/site/status.html.eex:7
 msgid "Checked URL:"
 msgstr "Überprüfte URL:"
@@ -882,7 +875,7 @@ msgstr ""
 ">info@dataskydd.net</a>"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:94
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:96
 msgid "Final URL:"
 msgstr "Weitergeleitet:"
 
@@ -1260,7 +1253,7 @@ msgstr ""
 "HTTPS verhindern das."
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:87
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:89
 msgid "Look up"
 msgstr "Nachschlagen"
 
@@ -1604,7 +1597,7 @@ msgstr ""
 "ermittelt werden."
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:80
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:82
 msgid "Server location:"
 msgstr "Serverstandort:"
 
@@ -2263,7 +2256,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:60
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:85
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:87
 msgid "Unknown"
 msgstr "Unbekannt"
 
@@ -2618,3 +2611,17 @@ msgstr ""
 "Das Setzen einer Referer Richtlinie ist ein schneller und einfacher Weg zur "
 "Datenminimierung (%{art_5_1_c}) und stellt sicher, dass Daten nicht "
 "unnötigerweise oder unzulässigerweise übermittelt werden (%{art_32_2})."
+
+#, elixir-format, fuzzy
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:78
+msgid "1 unique host"
+msgid_plural "%{count} unique hosts"
+msgstr[0] "einzigartigen"
+msgstr[1] "einzigartige"
+
+#, elixir-format, fuzzy
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:76
+msgid "request to"
+msgid_plural "requests to"
+msgstr[0] "Anfrage"
+msgstr[1] "Anfragen"

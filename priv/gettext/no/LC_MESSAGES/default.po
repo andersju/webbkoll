@@ -47,13 +47,6 @@ msgstr[0] "forespørsel"
 msgstr[1] "forespørsler"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:76
-msgid "request to 1 unique host"
-msgid_plural "requests to %{count} unique hosts"
-msgstr[0] "Forespørsel til 1 unik vert"
-msgstr[1] "Forespørsler til %{count} unike verter"
-
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:31
 msgid "unique"
 msgid_plural "unique"
@@ -588,7 +581,7 @@ msgid "Check your site!"
 msgstr "Sjekk ditt nettsted!"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:93
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:95
 #: lib/webbkoll_web/templates/site/status.html.eex:7
 msgid "Checked URL:"
 msgstr "Testet URL:"
@@ -858,7 +851,7 @@ msgstr ""
 ">info@dataskydd.net</a>"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:94
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:96
 msgid "Final URL:"
 msgstr "Avsluttende URL:"
 
@@ -1227,7 +1220,7 @@ msgstr ""
 "restriktiv og å endre lenker till HTTPS kan hjelpe til med å forhindre dette."
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:87
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:89
 msgid "Look up"
 msgstr "Slå opp"
 
@@ -1559,7 +1552,7 @@ msgstr ""
 "avgjøres."
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:80
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:82
 msgid "Server location:"
 msgstr "Tjenerlokasjon:"
 
@@ -2174,7 +2167,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:60
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:85
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:87
 msgid "Unknown"
 msgstr "Ukjent"
 
@@ -2505,3 +2498,17 @@ msgstr ""
 "Å sette en referrer policy er en enkel måte å indikere dataminimering "
 "(%{art_5_1_c}) og bidra til at du ikke overfører eller avslører "
 "personopplysninger unødvendig. (%{art_32_2})."
+
+#, elixir-format, fuzzy
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:78
+msgid "1 unique host"
+msgid_plural "%{count} unique hosts"
+msgstr[0] "unik"
+msgstr[1] "unike"
+
+#, elixir-format, fuzzy
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:76
+msgid "request to"
+msgid_plural "requests to"
+msgstr[0] "forespørsel"
+msgstr[1] "forespørsler"
