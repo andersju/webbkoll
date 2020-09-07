@@ -6,10 +6,12 @@ defmodule WebbkollWeb.SiteView do
   end
 
   def format_timestamp(time) do
-    time
-    |> Kernel.round()
-    |> DateTime.from_unix!()
-    |> DateTime.to_string()
+    time = if time > 253_402_300_799, do: 253_402_300_799, else: time
+
+    case DateTime.from_unix(Kernel.round(time)) do
+      {:ok, datetime} -> DateTime.to_string(datetime)
+      {:error, _} -> "invalid"
+    end
   end
 
   def format_site_time(timestamp) do
