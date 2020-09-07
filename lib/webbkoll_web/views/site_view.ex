@@ -6,18 +6,21 @@ defmodule WebbkollWeb.SiteView do
   end
 
   def format_timestamp(time) do
-    time = if time > 253_402_300_799, do: 253_402_300_799, else: time
-
-    case DateTime.from_unix(Kernel.round(time)) do
+    time
+    |> min(253_402_300_799)
+    |> round()
+    |> DateTime.from_unix()
+    |> case do
       {:ok, datetime} -> DateTime.to_string(datetime)
       {:error, _} -> "invalid"
     end
   end
 
   def format_site_time(timestamp) do
-    timestamp
-    |> DateTime.from_unix!(:microsecond)
-    |> Timex.format!("%Y-%m-%d %H:%M:%S %Z", :strftime)
+    case DateTime.from_unix(timestamp, :microsecond) do
+      {:ok, datetime} -> Timex.format!(datetime, "%Y-%m-%d %H:%M:%S %Z", :strftime)
+      {:error, _} -> "invalid"
+    end
   end
 
   def get_referrer_string(status) do
