@@ -61,13 +61,15 @@ mix deps.get
 
 Make sure the backend is running on the host/port specified in `config/dev.exs`
 
-Compile CSS with sassc and copy static assets (this replaces brunch and 340 node dependencies):
+Compile CSS with sassc, copy static assets (this replaces brunch and 340 node dependencies),
+and make sure `config/dev.secret.exs` (imported by `config/dex.exs`) exists:
 
 ```
 mkdir -p priv/static/css priv/static/fonts priv/static/images priv/static/js
 sassc --style compressed assets/scss/style.scss priv/static/css/app.css
 cat assets/static/js/webbkoll-*.js > priv/static/js/webbkoll.js
 rsync -av assets/static/*  priv/static
+touch config/dev.secret.exs
 ```
 
 Start the Phoenix endpoint with `mix phx.server` (or to get an interactive shell: `iex -S mix phx.server`)
@@ -78,14 +80,16 @@ The [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2/geolite2/) 
 
 ### Production
 
-To run in production, get and compile dependencies:
+To run in production, first get and compile dependencies, and make sure `config/prod.secret.exs`
+(imported by `config/prod.exs`) exists:
 
 ```
 mix deps.get --only prod
 MIX_ENV=prod mix compile
+touch config/prod.secret.exs
 ```
 
-Do the compile CSS/rsync files step from above, and then digest and compress static files:
+Next, do the compile CSS/rsync files step from above. Then digest and compress static files:
 
 ```
 MIX_ENV=prod mix phx.digest
@@ -169,7 +173,7 @@ For the project code in general (things not noted above):
 
     The MIT License (MIT)
 
-    Copyright (c) 2016 Anders Jensen-Urstad
+    Copyright (c) 2016-2020 Anders Jensen-Urstad
 
     Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
