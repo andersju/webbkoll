@@ -8,8 +8,8 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-07 22:46+0000\n"
-"Last-Translator: Anders Jensen-Urstad <anders@unix.se>\n"
+"PO-Revision-Date: 2020-09-22 15:20+0000\n"
+"Last-Translator: Tom Fredrik Blenning <bfg@efn.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.dataskydd.net/projects/"
 "webbkoll/main/nb_NO/>\n"
 "Language: no\n"
@@ -1751,41 +1751,72 @@ msgstr ""
 #, elixir-format
 msgid "The <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT\"><code>Expect-CT</code></a> header can be used to enforce <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Certificate_Transparency\">Certificate Transparency</a> requirements, and/or optionally send reports of Certificate Transparency violations to a specified URI."
 msgstr ""
+"Headeren <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/"
+"Expect-CT\"><code>Expect-CT</code></a>  kan brukes for å opprettholde <a "
+"href=\"https://developer.mozilla.org/en-US/docs/Web/Security/"
+"Certificate_Transparency\">Certificate Transparency</a>-krav, og/eller sende "
+"rapporter om Certificate Transparency-overtredelser till en angitt URL."
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:83
 #, elixir-format
 msgid "The <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Network_Error_Logging\"><code>NEL</code></a> (Network Error Logging) header instructs the user's browser to send reports about network errors (e.g. DNS resolution error, TCP or TLS connection failure, 4xx or 5xx HTTP responses) to a specified URI. It can also be configured to send reports about successful network requests. See <a href=\"https://w3c.github.io/network-error-logging/#privacy-considerations\">[1]</a>, <a href=\"https://w3c.github.io/reporting/#privacy\">[2]</a> for privacy considerations. "
 msgstr ""
+"Headeren <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
+"Network_Error_Logging\"><code>NEL</code></a> (Network Error Logging) "
+"instruerer brukerens nettleser til å sende rapporter om nettverksfeil (f. "
+"eks. DNS-oppslagsfeil, mislykkete oppkoblinger 4xx- eller 5xx-HTTP-svar) "
+"till en angitt URL. Den kan også konfigureres til å sende rapporter om "
+"vellykkede nettverksforespørsler. Se <a href=\"https://w3c.github.io/"
+"network-error-logging/#privacy-considerations\">[1]</a>, <a href=\""
+"https://w3c.github.io/reporting/#privacy\">[2]</a> for "
+"personvernsperspektivet på dette. "
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:28
 #, elixir-format
 msgid "The <code>Content-Security-Policy-Report-Only</code> header includes the following third-party URI(s) in its <code>report-uri</code> directive:"
 msgstr ""
+"Headeren <code>Content-Security-Policy-Report-Only</code> inkluderer "
+"følgende tredjeparts-URI(er) i direktivet <code>report-uri</code>:"
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:47
 #, elixir-format
 msgid "The <code>Content-Security-Policy-Report-Only</code> header's <code>report-to</code> directive, in combination with the <code>Report-To</code> header, sends violation reports to the following third-party URI(s):"
 msgstr ""
+"<code>Content-Security-Policy-Report-Only</code>-headerens <code>report-"
+"to</code>-direktiv, i kombinasjon med headeren <code>Report-To</code>, "
+"sender overtredelsesrapporter (violation reports) til følgende tredjeparts-"
+"URI(er):"
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:20
 #, elixir-format
 msgid "The <code>Content-Security-Policy</code> header includes the following third-party URI(s) in its <code>report-uri</code> directive:"
 msgstr ""
+"Headeren <code>Content-Security-Policy</code> inkluderer følgende "
+"tredjeparts-URI(er) i direktivet <code>report-uri</code>:"
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:38
 #, elixir-format
 msgid "The <code>Content-Security-Policy</code> header's <code>report-to</code> directive, in combination with the <code>Report-To</code> header, sends violation reports to the following third-party URI(s):"
 msgstr ""
+"<code>Content-Security-Policy</code>-headerens <code>report-to</code>-"
+"direktiv, i kombinasjon med headeren <code>Report-To</code>, sender "
+"overtredelsesrapporter (violation reports) til følgende tredjeparts-URI(er):"
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:57
 #, elixir-format
 msgid "The <code>Expect-CT</code> header's <code>report-uri</code> directive instructs the browser to send reports of Expect-CT failures to the following third-party URI:"
 msgstr ""
+"<code>Expect-CT</code>-headerens <code>report-uri</code>-direktiv instruerer "
+"nettleseren til å sende rapporter om mislykkede Expect-CT til følgende "
+"tredjeparts-URI:"
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:64
 #, elixir-format
 msgid "The <code>NEL</code> (Network Error Logging) header's <code>report-to</code> directive, in combination with the <code>Report-To</code> header, sends reports to the following third-party URI(s):"
 msgstr ""
+"<code>NEL</code>-headerens (Network Error Logging) <code>report-to</code>-"
+"direktiv, i kombinasjon med headeren <code>Report-To</code>, sender "
+"rapporter till følgende tredjeparts-URI(er):"
 
 #: lib/webbkoll_web/views/site_view.ex:169
 #, elixir-format
@@ -2219,6 +2250,8 @@ msgstr ""
 #, elixir-format
 msgid "We use <a href=\"%{url_mozilla}\">Mozilla's version</a> of Disconnect's <a href=\"%{url_disconnect}\">open source list of trackers</a> to classify hosts."
 msgstr ""
+"Vi bruker <a href=\"%{url_mozilla}\">Mozillas version</a> av Disconnects <a "
+"href=\"%{url_disconnect}\">liste over sporere</a> for å klassifisere domener."
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:22
 #, elixir-format
@@ -2493,6 +2526,18 @@ msgstr ""
 #, elixir-format
 msgid "The Content Security Policy (CSP) directive <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri\"><code>report-uri</code></a>, or <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to\"><code>report-to</code></a> in combination with a <code>Report-To</code> header, instructs the user's browser to send a <a href=\"https://w3c.github.io/webappsec-csp/#report-violation\">violation report</a> to specified URI(s) if the CSP is violated. Each report is a JSON object containing information about the violation, including, among other things, the URL of the document where it occurred, and referrer information. While reporting is useful for developers to find and fix bugs, it can also be used for tracking purposes."
 msgstr ""
+"Content Security Policy-direktivet (CSP) <a href=\"https://developer.mozilla."
+"org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri\"><code"
+">report-uri</code></a>, eller <a href=\"https://developer.mozilla.org/en-US/"
+"docs/Web/HTTP/Headers/Content-Security-Policy/report-to\"><code>report-"
+"to</code></a> i kombinasjon med en <code>Report-To</code>-header, instruerer "
+"brukerens nettleser til å sende en <a href=\"https://w3c.github.io/"
+"webappsec-csp/#report-violation\">overtredelsesrapport (violation report)</a>"
+" til en eller flere angitte URIer hvisl en CSP-policy brytes. Hver rapport "
+"er et JSON-objekt som inneholder informasjon om overtredelsen, inklusive "
+"URLen for dokumentet i forespørsel og referrer-informasjon. Rapportering kan "
+"være nyttig for utviklere for å finne og fikse feil, men kan også brukes i "
+"sporingsøyemed."
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:71
 #, elixir-format
