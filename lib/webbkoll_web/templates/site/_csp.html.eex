@@ -76,7 +76,7 @@
         <p><%= gettext("See the following pages for more information:") %></p>
 
         <ul class="default">
-          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a> [developerz.mozilla.org]</li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a> [developer.mozilla.org]</li>
           <li><a href="https://developers.google.com/web/fundamentals/security/csp/">Google Web Fundamentals: Content Security Policy</a> [developers.google.com]</li>
           <li><a href="https://scotthelme.co.uk/csp-cheat-sheet/">CSP Cheat Sheet</a> [scotthelme.co.uk]</li>
           <li><a href="https://report-uri.com/home/tools">Report URI: Tools</a> (CSP analyser, CSP builder) [report-uri.com]</li>
