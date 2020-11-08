@@ -22,7 +22,7 @@ Webbkoll is multilingual and currently supports English and Swedish.
 If you want to help us translate Webbkoll into more languages, see
 [TRANSLATIONS.md](https://github.com/andersju/webbkoll/blob/master/TRANSLATIONS.md).
 
-[Jumbo](https://github.com/mspanc/jumbo) is used for job processing, and
+[Honeydew](https://github.com/koudelka/honeydew) is used for job processing, and
 some basic rate limiting is done with [ex_rated](https://github.com/grempe/ex_rated).
 Multiple backends can be configured. [ConCache](https://github.com/sasa1977/con_cache)
 is used to store results in an in-memory [ETS](http://erlang.org/doc/man/ets.html) table
@@ -76,7 +76,22 @@ Start the Phoenix endpoint with `mix phx.server` (or to get an interactive shell
 
 Now you can visit [`localhost:4000`](http://localhost:4000) in your browser.
 
-The [GeoLite2 country database](https://dev.maxmind.com/geoip/geoip2/geolite2/) (for GeoIP lookups) is downloaded automatically from MaxMind (to change source, edit `config/dev.exs` and/or `config/prod.exs`) upon start if the file doesn't already exist (should be `priv/GeoLite2-Country.mmdb.gz`). It is then refreshed once per week (interval can be changed in `config/config.exs`).
+For Webbkoll to be able to automatically download the GeoLite2 country database (for GeoIP lookups),
+you need to create a (free) account on [MaxMind's GeoLite2 page](https://dev.maxmind.com/geoip/geoip2/geolite2/)
+and get an API key. Add this key to `config/dev.secret.exs` or `config/prod.secret.exs`),
+overriding the default value from the non-secret file:
+
+```
+use Mix.Config
+
+config :webbkoll,
+  geoip_db_url: "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=YOUR_KEY_HERE&suffix=tar.gz",
+  geoip_db_md5_url: "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=YOUR_KEY_HERE&suffix=tar.gz.md5"
+```
+
+The GeoLite2 database is downloaded upon start if the file doesn't already exist
+(should be `priv/GeoLite2-Country.mmdb`). It is then refreshed once per week
+(interval can be changed in `config/config.exs`).
 
 ### Production
 

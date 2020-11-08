@@ -12,7 +12,7 @@ config :logger, level: :warn
 
 config :webbkoll,
   backends: [
-    {Webbkoll.Queue.Q1, %{concurrency: 5, logger_tag: "queue 1", url: "http://localhost:8100/"}}
+    {Webbkoll.Queue.Q1, %{concurrency: 5, url: "http://localhost:8100/"}},
   ],
   max_attempts: 2,
   # validate_urls: If true, only check URLs with a valid domain name

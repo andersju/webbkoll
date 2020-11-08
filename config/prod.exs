@@ -68,7 +68,7 @@ config :logger, level: :info
 
 config :webbkoll,
   backends: [
-    {Webbkoll.Queue.Q1, %{concurrency: 7, logger_tag: "queue 1", url: "http://localhost:8100/"}}
+    {Webbkoll.Queue.Q1, %{concurrency: 7, url: "http://localhost:8100/"}},
   ],
   max_attempts: 2,
   # validate_urls: If true, only check URLs with a valid domain name
@@ -80,7 +80,7 @@ config :webbkoll,
   # See https://github.com/grempe/ex_rated
   rate_limit_client: %{"scale" => 60_000, "limit" => 20},
   rate_limit_host: %{"scale" => 60_000, "limit" => 5},
-  geoip_db_url: "https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.mmdb.gz",
-  geoip_db_md5_url: "https://geolite.maxmind.com/download/geoip/database/GeoLite2-Country.md5"
+  geoip_db_url: "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=YOUR_LICENSE_KEY_HERE&suffix=tar.gz",
+  geoip_db_md5_url: "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=YOUR_LICENSE_KEY_HERE&suffix=tar.gz.md5"
 
 import_config "prod.secret.exs"
