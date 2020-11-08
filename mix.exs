@@ -8,7 +8,6 @@ defmodule Webbkoll.Mixfile do
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
-      build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -20,25 +19,7 @@ defmodule Webbkoll.Mixfile do
   def application do
     [
       mod: {Webbkoll.Application, []},
-      applications: [
-        :phoenix,
-        :phoenix_pubsub,
-        :phoenix_html,
-        :cowboy,
-        :logger,
-        :gettext,
-        :httpoison,
-        :tzdata,
-        :ex_rated,
-        :quantum,
-        :timex,
-        :geolix,
-        :con_cache,
-        :jumbo,
-        :download,
-        :valid_url
-      ],
-      included_applications: [:ex2ms, :floki, :public_suffix, :uuid]
+      included_applications: [:logger, :runtime_tools, :inets, :tzdata]
     ]
   end
 
@@ -55,7 +36,7 @@ defmodule Webbkoll.Mixfile do
       {:phoenix_pubsub, "~> 2.0"},
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:phoenix_live_dashboard, "~> 0.1"},
+      {:phoenix_live_dashboard, "~> 0.3 or ~> 0.2.9"},
       {:gettext, "~> 0.11"},
       {:plug_cowboy, "~> 2.1"},
       {:plug, "~> 1.7"},
