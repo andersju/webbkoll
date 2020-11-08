@@ -5,6 +5,7 @@ defmodule Webbkoll.Worker do
   import Webbkoll.Helpers
 
   @max_attempts Application.get_env(:webbkoll, :max_attempts)
+  @validate_urls Application.get_env(:webbkoll, :validate_urls)
 
   def perform(id, url, refresh, backend_url) do
     %{status: status} = Sites.get_site(id)
@@ -51,11 +52,16 @@ defmodule Webbkoll.Worker do
         "on" ->
           %{
             fetch_url: :http_uri.encode(url),
-            timeout: 45_000
+            timeout: 45_000,
+            validate_url: @validate_urls,
           }
 
         _ ->
-          %{fetch_url: :http_uri.encode(url), timeout: 45_000}
+          %{
+            fetch_url: :http_uri.encode(url),
+            timeout: 45_000,
+            validate_url: @validate_urls,
+          }
       end
     HTTPoison.get(backend_url, [], recv_timeout: 145_000, params: params)
   end
