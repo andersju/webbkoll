@@ -122,10 +122,11 @@ defmodule WebbkollWeb.SiteController do
 
       false ->
         URI.to_string(%URI{
-          host: url.authority |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase(),
+          host: url.host |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase(),
           path: url.path,
           query: url.query,
-          scheme: "http"
+          scheme: "http",
+          port: url.port,
         })
     end
   end
