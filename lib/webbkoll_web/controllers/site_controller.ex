@@ -22,12 +22,16 @@ defmodule WebbkollWeb.SiteController do
 
     {queue, settings} = Enum.random(@backends)
 
-    Jumbo.Queue.enqueue(queue, Webbkoll.Worker, [
-      id,
-      proper_url,
-      conn.params["refresh"],
-      settings.url
-    ])
+    {
+      :perform,
+      [
+        id,
+        proper_url,
+        conn.params["refresh"],
+        settings.url
+      ]
+    }
+    |> Honeydew.async(queue)
 
     redirect(conn, to: Routes.site_path(conn, :status, conn.assigns.locale, id: id))
   end

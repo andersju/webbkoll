@@ -7,20 +7,6 @@ defmodule Webbkoll.Application do
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
   # for more information on OTP Applications
   def start(_type, _args) do
-    import Supervisor.Spec, warn: false
-
-    jumbo_queues =
-      Enum.map(@backends, fn {queue, v} ->
-        {
-          queue,
-          %Jumbo.QueueOptions{
-            concurrency: v.concurrency,
-            max_failure_count: @max_attempts,
-            logger_tag: v.logger_tag
-          }
-        }
-      end)
-
     children = [
       # Start the PubSub system
       {Phoenix.PubSub, name: Webbkoll.PubSub},
@@ -35,8 +21,6 @@ defmodule Webbkoll.Application do
          ttl_check_interval: :timer.seconds(60),
          global_ttl: :timer.seconds(86_400)
        ]},
-      # Add the Jumbo job queue supervisor
-      supervisor(Jumbo.QueueSupervisor, [jumbo_queues, [name: Webbkoll.QueueSupervisor]])
     ]
 
     # Workaround to make Geolix play nicer with Distillery
@@ -51,7 +35,23 @@ defmodule Webbkoll.Application do
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
     # for other strategies and supported options
     opts = [strategy: :one_for_one, name: Webbkoll.Supervisor]
-    Supervisor.start_link(children, opts)
+    {:ok, supervisor} = Supervisor.start_link(children, opts)
+
+    # Start job queue and workers
+    Enum.each(@backends, fn {queue, settings} ->
+      :ok =
+        Honeydew.start_queue(queue,
+          queue: Honeydew.Queue.ErlangQueue,
+          failure_mode: {
+            Honeydew.FailureMode.Retry,
+            [times: @max_attempts - 1, base: 2]
+          }
+        )
+
+      :ok = Honeydew.start_workers(queue, Webbkoll.Worker, num: settings.concurrency)
+    end)
+
+    {:ok, supervisor}
   end
 
   # Tell Phoenix to update the endpoint configuration
