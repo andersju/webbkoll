@@ -88,7 +88,14 @@ defmodule Webbkoll.Helpers do
 
   def get_registerable_domain(host) do
     case PublicSuffix.matches_explicit_rule?(host) do
-      true -> PublicSuffix.registrable_domain(host)
+      true ->
+        # Workaround to handle the fact that some entities serve content directly
+        # at the public suffix level, and we want to be able to check those too.
+        # TODO: rename get_registerable_domain to something more appropriate.
+        case PublicSuffix.registrable_domain(host) do
+          nil -> host
+          reg_domain -> reg_domain
+        end
       false -> host
     end
   end
