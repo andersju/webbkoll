@@ -115,23 +115,28 @@ defmodule WebbkollWeb.SiteController do
   defp check_user_agent([], conn), do: conn
 
   defp get_proper_url(url = %URI{}) do
-    case @validate_urls do
-      true ->
-        URI.to_string(%URI{
-          host: url.host |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase(),
-          path: url.path,
-          query: url.query,
-          scheme: "http"
-        })
+    # :idna.utf8_to_ascii() exits on invalid input, so here's a fugly workaround.
+    try do
+      case @validate_urls do
+        true ->
+          URI.to_string(%URI{
+            host: url.host |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase(),
+            path: url.path,
+            query: url.query,
+            scheme: "http"
+          })
 
-      false ->
-        URI.to_string(%URI{
-          host: url.host |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase(),
-          path: url.path,
-          query: url.query,
-          scheme: "http",
-          port: url.port,
-        })
+        false ->
+          URI.to_string(%URI{
+            host: url.host |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase(),
+            path: url.path,
+            query: url.query,
+            scheme: "http",
+            port: url.port,
+          })
+      end
+    catch
+      :exit, {:bad_label, _} -> nil
     end
   end
 
@@ -142,7 +147,15 @@ defmodule WebbkollWeb.SiteController do
         false -> "http://#{conn.params["url"]}" |> URI.parse() |> get_proper_url()
       end
 
-    assign(conn, :input_url, url)
+    case url do
+      nil ->
+        render_error(
+          conn,
+          gettext("Invalid URL: %{url}", url: conn.params["url"])
+        )
+      url ->
+        assign(conn, :input_url, url)
+    end
   end
 
   defp validate_domain(conn, _params) do
