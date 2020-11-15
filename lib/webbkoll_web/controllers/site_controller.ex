@@ -40,7 +40,7 @@ defmodule WebbkollWeb.SiteController do
   end
 
   defp handle_status(nil, _id, conn) do
-    render_error(conn, 400, gettext("Invalid ID."))
+    render_error(conn, 404, gettext("ID not found"))
   end
 
   defp handle_status(site, id, conn) do

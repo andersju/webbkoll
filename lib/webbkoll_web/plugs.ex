@@ -113,7 +113,7 @@ defmodule WebbkollWeb.Plugs do
         conn
 
       {:error, _} ->
-        ControllerHelpers.render_error(conn, 400, gettext("You're requesting too frequently. Install locally?"))
+        ControllerHelpers.render_error(conn, 429, gettext("You're requesting too frequently. Install locally?"))
     end
   end
 
@@ -127,7 +127,7 @@ defmodule WebbkollWeb.Plugs do
         conn
 
       {:error, _} ->
-        ControllerHelpers.render_error(conn, 400, gettext("Trying same host too frequently. Try again in a minute."))
+        ControllerHelpers.render_error(conn, 429, gettext("Trying same host too frequently. Try again in a minute."))
     end
   end
 
