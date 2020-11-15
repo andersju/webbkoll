@@ -5,7 +5,7 @@ defmodule WebbkollWeb.SiteController do
   alias Webbkoll.Sites
   alias Phoenix.Controller
 
-  @validate_urls Application.get_env(:webbkoll, :validate_urls)
+ @validate_urls Application.get_env(:webbkoll, :validate_urls)
 
   plug(:check_for_bots when action in [:create])
   plug(:scrub_params, "url" when action in [:create])
@@ -15,7 +15,11 @@ defmodule WebbkollWeb.SiteController do
   plug(:check_if_site_exists when action in [:create])
   plug(:check_rate_ip when action in [:create])
   plug(:check_rate_url_host when action in [:create])
+
+  plug(:scrub_params, "id" when action in [:status])
   plug(:validate_id when action in [:status])
+
+  plug(:scrub_params, "url" when action in [:results])
 
   def create(%Plug.Conn{assigns: %{input_url: proper_url}} = conn, _params) do
     %{id: id} = enqueue_site(conn, proper_url)
