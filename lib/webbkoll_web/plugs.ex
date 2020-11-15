@@ -1,6 +1,4 @@
 defmodule WebbkollWeb.Plugs do
-  #use Phoenix.Controller, namespace: WebbkollWeb
-
   import Plug.Conn
   import WebbkollWeb.Gettext
 
@@ -61,23 +59,28 @@ defmodule WebbkollWeb.Plugs do
   def check_user_agent([], conn), do: conn
 
   def get_proper_url(url = %URI{}) do
-    case @validate_urls do
-      true ->
-        URI.to_string(%URI{
-          host: url.host |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase(),
-          path: url.path,
-          query: url.query,
-          scheme: "http"
-        })
+    # :idna.utf8_to_ascii() exits on invalid input, so here's a fugly workaround.
+    try do
+      case @validate_urls do
+        true ->
+          URI.to_string(%URI{
+            host: url.host |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase(),
+            path: url.path,
+            query: url.query,
+            scheme: "http"
+          })
 
-      false ->
-        URI.to_string(%URI{
-          host: url.host |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase(),
-          path: url.path,
-          query: url.query,
-          scheme: "http",
-          port: url.port,
-        })
+        false ->
+          URI.to_string(%URI{
+            host: url.host |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase(),
+            path: url.path,
+            query: url.query,
+            scheme: "http",
+            port: url.port,
+          })
+      end
+    catch
+      :exit, {:bad_label, _} -> nil
     end
   end
 
@@ -88,7 +91,16 @@ defmodule WebbkollWeb.Plugs do
         false -> "http://#{conn.params["url"]}" |> URI.parse() |> get_proper_url()
       end
 
-    assign(conn, :input_url, url)
+    case url do
+      nil ->
+        ControllerHelpers.render_error(
+          conn,
+          400,
+          gettext("Invalid URL: %{url}", url: conn.params["url"])
+        )
+      url ->
+        assign(conn, :input_url, url)
+    end
   end
 
   def check_rate_ip(conn, _params) do
