@@ -174,7 +174,7 @@ defmodule Webbkoll.Worker do
   end
 
   defp save(data, id) do
-    Sites.update_site(id, Map.merge(%{status: "done"}, data))
+    Sites.update_site(id, %{status: "done", data: data})
   end
 
   defp get_insecure_first_party_requests(requests, registerable_domain) do

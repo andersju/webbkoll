@@ -12,7 +12,7 @@
       </tr>
     </thead>
     <tbody>
-      <%= for {header, value} <- @site.headers do %>
+      <%= for {header, value} <- @site.data.headers do %>
       <tr>
         <td data-label="Header" class="userdata"><%= header %></td>
         <td data-label="Value" class="userdata"><%= value %></td>

@@ -5,7 +5,7 @@
   </h3>
 
   <div class="alpha">
-    <%= if Enum.empty?(@site.localStorage) do %>
+    <%= if Enum.empty?(@site.data.localStorage) do %>
       <p><%= gettext("localStorage not used.") %></p>
     <% else %>
       <p><%= gettext("localStorage used:") %></p>
@@ -18,7 +18,7 @@
           </tr>
         </thead>
         <tbody>
-          <%= for {key, value} <- @site.localStorage do %>
+          <%= for {key, value} <- @site.data.localStorage do %>
           <tr>
             <td data-label="<%= gettext("Key") %>"><%= truncate(key, 50) %></td>
             <td data-label="<%= gettext("Value") %>"><%= truncate(value, 50) %></td>

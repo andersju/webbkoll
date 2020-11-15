@@ -1,11 +1,11 @@
 <section class="result">
-  <%= if @site.scheme == "https" && Enum.count(@site.insecure_first_party_requests) > 0 do %>
+  <%= if @site.data.scheme == "https" && Enum.count(@site.data.insecure_first_party_requests) > 0 do %>
     <h3 id="insecure-first-party-requests">
       <%= gettext "Insecure first-party requests" %>&#32;
       <%= anchor_link("insecure-first-party-requests") %>
     </h3>
     <ul class="no-bullet requests-list">
-      <%= for req <- @site.insecure_first_party_requests do %>
+      <%= for req <- @site.data.insecure_first_party_requests do %>
         <li>
           <i class="icon-unlock-alt"></i>
           <%= req["host"] %>
@@ -15,24 +15,24 @@
     </ul>
   <% end %>
 
-  <%= if @site.third_party_request_types.total == 0 do %>
+  <%= if @site.data.third_party_request_types.total == 0 do %>
     <h3 id="requests">
       <%= gettext "Third-party requests" %>&#32;
       <%= anchor_link("requests") %>
     </h3>
     <p><%= gettext "No third-party requests." %></p>
-    <p><%= gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.reg_domain) |> raw %></p>
+    <p><%= gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.data.reg_domain) |> raw %></p>
   <% else %>
     <h3 id="requests">
       <%= gettext "Third-party requests" %>&#32;
       <%= anchor_link("requests") %>
     </h3>
     <p>
-      <strong><%= @site.third_party_request_types.total %></strong> <%= ngettext "request", "requests", @site.third_party_request_types.total %> (<%= ngettext "1 secure", "%{count} secure", @site.third_party_request_types.secure %>, <%= ngettext "%{count} insecure", "%{count} insecure", @site.third_party_request_types.insecure %>) <%= gettext "to" %> <strong><%= @site.third_party_request_types.unique_hosts %></strong> <%= ngettext "unique", "unique", @site.third_party_request_types.unique_hosts %> <%= ngettext "host", "hosts", @site.third_party_request_types.unique_hosts %>.
+      <strong><%= @site.data.third_party_request_types.total %></strong> <%= ngettext "request", "requests", @site.data.third_party_request_types.total %> (<%= ngettext "1 secure", "%{count} secure", @site.data.third_party_request_types.secure %>, <%= ngettext "%{count} insecure", "%{count} insecure", @site.data.third_party_request_types.insecure %>) <%= gettext "to" %> <strong><%= @site.data.third_party_request_types.unique_hosts %></strong> <%= ngettext "unique", "unique", @site.data.third_party_request_types.unique_hosts %> <%= ngettext "host", "hosts", @site.data.third_party_request_types.unique_hosts %>.
     </p>
-    <p><%= gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.reg_domain) |> raw %></p>
+    <p><%= gettext("A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains.", domain: @site.data.reg_domain) |> raw %></p>
 
-    <%= render "_request_table.html", requests: @site.third_party_requests, id: "table-requests" %>
+    <%= render "_request_table.html", requests: @site.data.third_party_requests, id: "table-requests" %>
 
   <% end %>
 

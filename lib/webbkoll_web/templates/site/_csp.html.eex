@@ -1,6 +1,6 @@
 <section class="result">
   <h3 id="csp">
-    <%= if @site.csp.pass do %>
+    <%= if @site.data.csp.pass do %>
     <%= icon(:pass2) %>
     <% else %>
     <%= icon(:fail) %>
@@ -10,17 +10,17 @@
   </h3>
 
   <div class="alpha">
-    <%= if @site.header_csp do %>
-    <p><%= gettext("Content Security Policy set in HTTP header:") %> <code><%= @site.header_csp %></code></p>
+    <%= if @site.data.header_csp do %>
+    <p><%= gettext("Content Security Policy set in HTTP header:") %> <code><%= @site.data.header_csp %></code></p>
     <% end %>
 
-    <%= if @site.meta_csp do %>
-    <p><%= gettext("Content Security Policy set in meta element:") %> <code><%= @site.meta_csp %></code></p>
+    <%= if @site.data.meta_csp do %>
+    <p><%= gettext("Content Security Policy set in meta element:") %> <code><%= @site.data.meta_csp %></code></p>
     <% end %>
 
-    <p><%= result_text(@site.csp.result) |> raw %></p>
+    <p><%= result_text(@site.data.csp.result) |> raw %></p>
 
-    <%= if @site.csp.policy do %>
+    <%= if @site.data.csp.policy do %>
       <table class="csp data">
         <thead>
           <tr>
@@ -30,7 +30,7 @@
           </tr>
         </thead>
         <tbody>
-          <%= for {policy, value} <- @site.csp.policy do %>
+          <%= for {policy, value} <- @site.data.csp.policy do %>
             <% {test, pass, info, optional} = csp_policy(policy, value) %>
             <tr>
               <td class="pass" data-label="Pass">

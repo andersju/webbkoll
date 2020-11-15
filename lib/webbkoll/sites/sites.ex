@@ -5,6 +5,7 @@ defmodule Webbkoll.Sites do
     id = UUID.uuid4()
 
     site = %Site{
+      id: id,
       input_url: url,
       try_count: 0,
       status: "queue",
@@ -13,7 +14,7 @@ defmodule Webbkoll.Sites do
 
     ConCache.put(:site_cache, id, site)
 
-    {:ok, id}
+    {:ok, site}
   end
 
   def update_site(id, params) do

@@ -4,15 +4,15 @@
     <%= anchor_link("cookies") %>
   </h3>
 
-  <%= if @site.cookie_count.first_party > 0 do %>
-    <%= render "_cookie_table.html", amount: @site.cookie_count.first_party, cookies: @site.cookies.first_party, label: gettext("First-party cookies"), id: "cookies-first" %>
+  <%= if @site.data.cookie_count.first_party > 0 do %>
+    <%= render "_cookie_table.html", amount: @site.data.cookie_count.first_party, cookies: @site.data.cookies.first_party, label: gettext("First-party cookies"), id: "cookies-first" %>
   <% end %>
 
-  <%= if @site.cookie_count.third_party > 0 do %>
-    <%= render "_cookie_table.html", amount: @site.cookie_count.third_party , cookies: @site.cookies.third_party, label: gettext("Third-party cookies"), id: "cookies-third" %>
+  <%= if @site.data.cookie_count.third_party > 0 do %>
+    <%= render "_cookie_table.html", amount: @site.data.cookie_count.third_party , cookies: @site.data.cookies.third_party, label: gettext("Third-party cookies"), id: "cookies-third" %>
   <% end %>
 
-  <%= if (@site.cookie_count.first_party + @site.cookie_count.third_party) > 0 do %>
+  <%= if (@site.data.cookie_count.first_party + @site.data.cookie_count.third_party) > 0 do %>
     <p><%= gettext(~s|<strong>HttpOnly</strong> means that the cookie can only be read by the server, and not by JavaScript on the client. This can mitigate XSS (cross-site scripting) attacks.|) |> raw() %></p>
     <p><%= gettext(~s|<strong>Secure</strong> means that the cookie will only be sent over a secure channel (HTTPS). This can mitigate MITM (man-in-the-middle) attacks.|) |> raw() %></p>
     <p><%= gettext(~s|<strong>SameSite</strong> can be used to instruct the browser to only send the cookie when the request is originating from the same site. This can mitigate CSRF (cross-site request forgery) attacks.|) |> raw() %></p>

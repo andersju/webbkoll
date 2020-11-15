@@ -1,6 +1,6 @@
 <section class="result">
   <h3 id="sri">
-    <%= if @site.sri.pass do %>
+    <%= if @site.data.sri.pass do %>
     <%= icon(:pass2) %>
     <% else %>
     <%= icon(:fail) %>
@@ -11,7 +11,7 @@
 
   <div class="alpha">
     <p>
-      <%= case @site.sri.result do %>
+      <%= case @site.data.sri.result do %>
         <% "sri-implemented-and-all-resources-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) is implemented and all resources are loaded from a similar origin.") %>
         <% "sri-implemented-and-external-resources-loaded-securely" -> %> <%= gettext("Subresource Integrity (SRI) is implemented and all resources are loaded securely.") %>
         <% "sri-not-implemented-but-no-resources-loaded" -> %> <%= gettext("Subresource Integrity (SRI) is not needed since site contains no script or link tags.") %>
@@ -23,7 +23,7 @@
       <% end %>
     </p>
 
-    <%= if not @site.sri.pass do %>
+    <%= if not @site.data.sri.pass do %>
       <p><%= gettext("The following third-party resources are not loaded using SRI:") %></p>
 
       <table>
@@ -34,7 +34,7 @@
           </tr>
         </thead>
         <tbody>
-          <%= for resource <- Enum.filter(@site.sri.data, fn x -> x.secureorigin == false && (x.crossorigin == nil || x.integrity == nil) end) do %>
+          <%= for resource <- Enum.filter(@site.data.sri.data, fn x -> x.secureorigin == false && (x.crossorigin == nil || x.integrity == nil) end) do %>
           <tr>
             <td data-label="Type"><%= if resource.type == "link", do: "css", else: resource.type %></td>
             <td data-label="URL" class="userdata"><code><%= truncate(resource.src, 100) %></code></td>

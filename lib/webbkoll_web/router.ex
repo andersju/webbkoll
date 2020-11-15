@@ -1,5 +1,6 @@
 defmodule WebbkollWeb.Router do
   use WebbkollWeb, :router
+
   @default_locale Application.get_env(:webbkoll, :default_locale)
 
   pipeline :browser do
@@ -16,11 +17,19 @@ defmodule WebbkollWeb.Router do
   end
 
   pipeline :api do
-    plug(:accepts, ["json"])
+    plug(:accepts, ["json", "html"])
   end
 
   if Mix.env() == :dev do
     import Phoenix.LiveDashboard.Router
+
+    scope "/api", WebbkollWeb do
+      pipe_through(:api)
+
+      post("/check", API.SiteController, :create)
+      get("/check", API.SiteController, :show)
+    end
+
     scope "/" do
       pipe_through :browser
       live_dashboard "/dashboard"
@@ -36,7 +45,7 @@ defmodule WebbkollWeb.Router do
   scope "/:locale", WebbkollWeb do
     pipe_through([:browser, :webbkoll])
 
-    get("/check", SiteController, :check)
+    get("/check", SiteController, :create)
     get("/status", SiteController, :status)
     get("/results", SiteController, :results)
 
@@ -47,5 +56,4 @@ defmodule WebbkollWeb.Router do
 
     get("/", PageController, :index)
   end
-
 end

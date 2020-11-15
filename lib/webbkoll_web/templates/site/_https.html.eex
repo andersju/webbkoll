@@ -1,7 +1,7 @@
 <section class="result">
   <h3 id="https">
-  <%= if @site.scheme == "https" do %>
-    <%= if @site.security["securityState"] == "secure" do %>
+  <%= if @site.data.scheme == "https" do %>
+    <%= if @site.data.security["securityState"] == "secure" do %>
       <%= icon(:pass2) %> <%= gettext "HTTPS by default" %>
     <% else %>
       <%= icon(:warn) %> <%= gettext "HTTPS by default, but with issues" %>
@@ -13,8 +13,8 @@
   </h3>
 
   <div class="alpha">
-    <%= if @site.scheme == "https" do %>
-      <p><%= raw(gettext "<code>%{domain}</code> uses HTTPS by default.", domain: @site.host) %></p>
+    <%= if @site.data.scheme == "https" do %>
+      <p><%= raw(gettext "<code>%{domain}</code> uses HTTPS by default.", domain: @site.data.host) %></p>
 
       <p><%= gettext("Chromium reports the following:") %></p>
 
@@ -28,7 +28,7 @@
           </tr>
         </thead>
         <tbody>
-          <%= for explanation <- @site.security["explanations"] do %>
+          <%= for explanation <- @site.data.security["explanations"] do %>
             <tr>
               <td data-label="State">
                 <%= case explanation["securityState"] do %>
@@ -49,14 +49,14 @@
 
         <p><%= gettext("More information about the site's TLS/SSL configuration:") %></p>
         <ul class="default">
-          <li><%= link gettext("Analyze %{host} on SSL Labs", host: @site.host), to: "https://www.ssllabs.com/ssltest/analyze.html?d=#{@site.host}&hideResults=on" %></li>
+          <li><%= link gettext("Analyze %{host} on SSL Labs", host: @site.data.host), to: "https://www.ssllabs.com/ssltest/analyze.html?d=#{@site.data.host}&hideResults=on" %></li>
           <li><a href="https://observatory.mozilla.org/">Observatory by Mozilla</a></li>
           <li><a href="https://github.com/mozilla/tls-observatory">Mozilla TLS Observatory</a></li>
           <li><a href="https://testssl.sh/">testssl.sh</a></li>
         </ul>
 
     <% else %>
-      <p><%= raw(gettext "<code>%{domain}</code> does <strong>not</strong> use HTTPS by default.", domain: @site.host) %></p>
+      <p><%= raw(gettext "<code>%{domain}</code> does <strong>not</strong> use HTTPS by default.", domain: @site.data.host) %></p>
     <% end %>
 
       <aside class="howto">

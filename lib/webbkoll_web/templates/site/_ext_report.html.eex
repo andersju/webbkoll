@@ -1,7 +1,7 @@
-<%= if @site.header_csp do %>
+<%= if @site.data.header_csp do %>
   <section class="result">
     <h3 id="ext-report">
-      <%= if @site.external_report.pass do %>
+      <%= if @site.data.external_report.pass do %>
       <%= icon(:pass2) %>&#32;
       <% else %>
       <%= icon(:warn) %>&#32;
@@ -11,59 +11,59 @@
     </h3>
 
     <div class="alpha">
-      <%= if @site.external_report.pass do %>
+      <%= if @site.data.external_report.pass do %>
         <p><%= gettext("Reports are not sent to a third-party.") %></p>
       <% else %>
         <p><%= gettext("Reports are sent to a third-party.") %></p>
 
-        <%= if @site.external_report.csp_report_uri do %>
+        <%= if @site.data.external_report.csp_report_uri do %>
           <p><%= gettext(~s|The <code>Content-Security-Policy</code> header includes the following third-party URI(s) in its <code>report-uri</code> directive:|) |> raw() %></p>
           <ul class="default">
-            <%= for url <- @site.external_report.csp_report_uri do %>
+            <%= for url <- @site.data.external_report.csp_report_uri do %>
               <li><%= link "#{truncate(url, 70)}", to: url %></li>
             <% end %>
           </ul>
         <% end %>
-        <%= if @site.external_report.csp_report_only_report_uri do %>
+        <%= if @site.data.external_report.csp_report_only_report_uri do %>
           <p><%= gettext(~s|The <code>Content-Security-Policy-Report-Only</code> header includes the following third-party URI(s) in its <code>report-uri</code> directive:|) |> raw() %></p>
           <ul class="default">
-            <%= for url <- @site.external_report.csp_report_only_report_uri do %>
+            <%= for url <- @site.data.external_report.csp_report_only_report_uri do %>
               <li><%= link "#{truncate(url, 70)}", to: url %></li>
             <% end %>
           </ul>
         <% end %>
 
-        <%= if @site.external_report.csp_report_to || @site.external_report.csp_report_only_report_to do %>
-          <%= if @site.external_report.csp_report_to do %>
+        <%= if @site.data.external_report.csp_report_to || @site.data.external_report.csp_report_only_report_to do %>
+          <%= if @site.data.external_report.csp_report_to do %>
           <p><%= gettext(~s|The <code>Content-Security-Policy</code> header's <code>report-to</code> directive, in combination with the <code>Report-To</code> header, sends violation reports to the following third-party URI(s):|) |> raw() %></p>
           <ul class="default">
-            <%= for url <- @site.external_report.csp_report_to do %>
+            <%= for url <- @site.data.external_report.csp_report_to do %>
               <li><%= link "#{truncate(url, 70)}", to: url %></li>
             <% end %>
           </ul>
           <% end %>
 
-          <%= if @site.external_report.csp_report_only_report_to do %>
+          <%= if @site.data.external_report.csp_report_only_report_to do %>
           <p><%= gettext(~s|The <code>Content-Security-Policy-Report-Only</code> header's <code>report-to</code> directive, in combination with the <code>Report-To</code> header, sends violation reports to the following third-party URI(s):|) |> raw() %></p>
           <ul class="default">
-            <%= for url <- @site.external_report.csp_report_only_report_to do %>
+            <%= for url <- @site.data.external_report.csp_report_only_report_to do %>
               <li><%= link "#{truncate(url, 70)}", to: url %></li>
             <% end %>
           </ul>
           <% end %>
         <% end %>
 
-        <%= if @site.external_report.expect_ct do %>
+        <%= if @site.data.external_report.expect_ct do %>
           <p><%= gettext(~s|The <code>Expect-CT</code> header's <code>report-uri</code> directive instructs the browser to send reports of Expect-CT failures to the following third-party URI:|) |> raw() %></p>
           <ul class="default">
-            <li><%= link "#{truncate(@site.external_report.expect_ct, 70)}", to: @site.external_report.expect_ct %></li>
+            <li><%= link "#{truncate(@site.data.external_report.expect_ct, 70)}", to: @site.data.external_report.expect_ct %></li>
           </ul>
         <% end %>
 
-        <%= if @site.external_report.nel do %>
+        <%= if @site.data.external_report.nel do %>
           <p><%= gettext(~s|The <code>NEL</code> (Network Error Logging) header's <code>report-to</code> directive, in combination with the <code>Report-To</code> header, sends reports to the following third-party URI(s):|) |> raw() %></p>
           <ul class="default">
-            <%= for url <- @site.external_report.nel do %>
+            <%= for url <- @site.data.external_report.nel do %>
               <li><%= link "#{truncate(url, 70)}", to: url %></li>
             <% end %>
           </ul>

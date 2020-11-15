@@ -1,6 +1,6 @@
 <section class="result">
   <h3 id="referrers">
-    <%= case @site.referrer.status do %>
+    <%= case @site.data.referrer.status do %>
       <% "success" -> %> <%= icon(:pass2) %>
       <% "warning" -> %> <%= icon(:warn) %>
       <% "alert" -> %> <%= icon(:fail) %>
@@ -11,19 +11,19 @@
     </h3>
 
   <div class="alpha">
-    <%= if @site.referrer.header do %>
-    <p><%= gettext(~s|Referrer Policy set to <code>%{value}</code> in <code>Referrer-Policy</code> HTTP header.|, value: @site.referrer.header) |> raw() %></p>
+    <%= if @site.data.referrer.header do %>
+    <p><%= gettext(~s|Referrer Policy set to <code>%{value}</code> in <code>Referrer-Policy</code> HTTP header.|, value: @site.data.referrer.header) |> raw() %></p>
     <% end %>
 
-    <%= if @site.referrer.http_equiv do %>
-    <p><%= gettext(~s|Referrer Policy set to <code>%{value}</code> in <code>meta http-equiv</code> element.|, value: @site.referrer.http_equiv) |> raw() %></p>
+    <%= if @site.data.referrer.http_equiv do %>
+    <p><%= gettext(~s|Referrer Policy set to <code>%{value}</code> in <code>meta http-equiv</code> element.|, value: @site.data.referrer.http_equiv) |> raw() %></p>
     <% end %>
 
-    <%= if @site.referrer.meta do %>
-    <p><%= gettext(~s|Referrer Policy set to <code>%{value}</code> in <code>meta</code> element.|, value: @site.referrer.meta) |> raw() %></p>
+    <%= if @site.data.referrer.meta do %>
+    <p><%= gettext(~s|Referrer Policy set to <code>%{value}</code> in <code>meta</code> element.|, value: @site.data.referrer.meta) |> raw() %></p>
     <% end %>
 
-    <%= if !@site.referrer.header && !@site.referrer.http_equiv && !@site.referrer.meta do %>
+    <%= if !@site.data.referrer.header && !@site.data.referrer.http_equiv && !@site.data.referrer.meta do %>
     <p><%= gettext(~s|Referrer Policy not set. This means that the default value <code>no-referrer-when-downgrade</code>, leaking referrers in many situations, is used.|) |> raw() %></p>
     <% end %>
 

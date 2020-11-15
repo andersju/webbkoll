@@ -1,9 +1,9 @@
-<%= if @site.scheme == "https" do %>
+<%= if @site.data.scheme == "https" do %>
 <section class="result">
 
-  <%= if @site.header_hsts.host.set do %>
+  <%= if @site.data.header_hsts.host.set do %>
     <h3 id="hsts">
-      <%= if @site.header_hsts.host.pass do %>
+      <%= if @site.data.header_hsts.host.pass do %>
         <%= icon(:pass2) %>
       <% else %>
         <%= icon(:fail) %>
@@ -18,18 +18,18 @@
     </h3>
   <% end %>
   <div class="alpha">
-    <%= if @site.header_hsts.host.set do %>
-      <%= render "_hsts_host.html", host: @site.host, hsts: @site.header_hsts.host, is_base: (@site.host == @site.reg_domain)  %>
+    <%= if @site.data.header_hsts.host.set do %>
+      <%= render "_hsts_host.html", host: @site.data.host, hsts: @site.data.header_hsts.host, is_base: (@site.data.host == @site.data.reg_domain)  %>
 
-      <%= if @site.host != @site.reg_domain do %>
-        <%= if Map.has_key?(@site.header_hsts, :base) do %>
-          <%= if @site.header_hsts.base.set do %>
-            <%= render "_hsts_host.html", host: @site.reg_domain, hsts: @site.header_hsts.base, is_base: true %>
+      <%= if @site.data.host != @site.data.reg_domain do %>
+        <%= if Map.has_key?(@site.data.header_hsts, :base) do %>
+          <%= if @site.data.header_hsts.base.set do %>
+            <%= render "_hsts_host.html", host: @site.data.reg_domain, hsts: @site.data.header_hsts.base, is_base: true %>
           <% else %>
-            <p><%= icon(:warn) %> <%= gettext("HSTS not set on base domain https://%{domain}", domain: @site.reg_domain) %>.</p>
+            <p><%= icon(:warn) %> <%= gettext("HSTS not set on base domain https://%{domain}", domain: @site.data.reg_domain) %>.</p>
           <% end %>
         <% else %>
-          <p><%= gettext("Base domain (https://%{domain}) HSTS status unknown.", domain: @site.reg_domain) %></p>
+          <p><%= gettext("Base domain (https://%{domain}) HSTS status unknown.", domain: @site.data.reg_domain) %></p>
         <% end %>
       <% end %>
   <% else %>
