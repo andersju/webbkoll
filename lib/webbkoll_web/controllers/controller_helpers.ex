@@ -29,7 +29,6 @@ defmodule WebbkollWeb.ControllerHelpers do
   def render_error(conn, status, error_message) do
     conn
     |> put_status(status)
-    |> put_layout(false)
     |> put_view(WebbkollWeb.ErrorView)
     |> render(:"#{status}", error_message: error_message, page_title: gettext("Error"))
     |> halt()

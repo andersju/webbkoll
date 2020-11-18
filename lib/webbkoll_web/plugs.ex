@@ -80,7 +80,7 @@ defmodule WebbkollWeb.Plugs do
           })
       end
     catch
-      :exit, {:bad_label, _} -> nil
+      kind, _ when kind in [:error, :exit, :throw] -> nil
     end
   end
 
