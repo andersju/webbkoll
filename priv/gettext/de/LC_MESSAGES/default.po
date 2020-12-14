@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
 "PO-Revision-Date: 2020-12-20 09:06+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: Tomas Jakobs <tomas.jakobs@jakobssystems.net>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -1498,7 +1498,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:9
 #, elixir-format
 msgid "Reporting (CSP, Certificate Transparency, Network Error Logging)"
-msgstr "Berichte (CSP, Zertifikatstransparenz, Netzwerkfehler-Protokolle)"
+msgstr "Berichte (CSP, Zertifikat-Transparenz, Netzwerkfehler-Protokolle)"
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:15
 #, elixir-format
