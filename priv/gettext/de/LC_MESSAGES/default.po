@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: German (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
-"PO-Revision-Date: 2020-12-14 16:56+0000\n"
+"PO-Revision-Date: 2020-12-20 09:06+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
@@ -1424,7 +1424,7 @@ msgstr "Zweckbindung"
 #: lib/webbkoll_web/templates/site/_raw_headers.html.eex:3
 #, elixir-format
 msgid "Raw headers"
-msgstr "Original Kopfzeilen"
+msgstr "Originalkopfzeilen"
 
 #: lib/webbkoll_web/views/site_view.ex:266
 #, elixir-format
@@ -1448,8 +1448,8 @@ msgstr ""
 #, elixir-format
 msgid "Referrer Policy set to <code>%{value}</code> in <code>Referrer-Policy</code> HTTP header."
 msgstr ""
-"Referrer Richtlinie auf <code>%{value}</code> im <code>Referrer-Policy</code>"
-" HTTP-Header gesetzt."
+"Referrer-Richtlinie auf <code>%{value}</code> im <code>Referrer-Policy</code"
+">-HTTP-Header gesetzt."
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:19
 #, elixir-format
@@ -1526,9 +1526,9 @@ msgstr ""
 #, elixir-format
 msgid "Restricts where <code>&lt;form&gt;</code> contents may be submitted by using <code>form-action 'none'</code>, <code>form-action 'self'</code>, or specific URIs"
 msgstr ""
-"Beschränkt die Übermittlung von <code>&lt;form&gt;</code> Inhalten durch "
-"<code>form-action 'none'</code>, <code>form-action 'self'</code>, oder "
-"spezifische URIs"
+"Beschränkt die Zusendung von <code>&lt;form&gt;</code>-Inhalten durch <code"
+">form-action 'none'</code>, <code>form-action 'self'</code> oder spezifische "
+"URIs"
 
 #: lib/webbkoll_web/templates/site/_headers.html.eex:14
 #: lib/webbkoll_web/templates/site/_headers.html.eex:23
@@ -1716,14 +1716,14 @@ msgstr ""
 #, elixir-format
 msgid "Subresource Integrity (SRI) not implemented, but all external resources are loaded over HTTPS"
 msgstr ""
-"Subresource Integrity (SRI) wurde nicht eingebunden aber alle externe "
+"Subresource Integrity (SRI) wurde nicht eingebunden, aber alle externe "
 "Ressourcen werden über HTTPS geladen"
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:18
 #, elixir-format
 msgid "Subresource Integrity (SRI) not implemented, but all resources are loaded from a similar origin."
 msgstr ""
-"Subresource Integrity (SRI) wurden nicht eingebunden aber alle Ressourcen "
+"Subresource Integrity (SRI) wurden nicht eingebunden, aber alle Ressourcen "
 "laden vom gleichen Ursprungsort."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:95
