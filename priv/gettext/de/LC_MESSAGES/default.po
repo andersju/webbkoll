@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: German (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
-"PO-Revision-Date: 2020-08-07 22:46+0000\n"
-"Last-Translator: Anders Jensen-Urstad <anders@unix.se>\n"
+"PO-Revision-Date: 2020-12-14 16:56+0000\n"
+"Last-Translator: Tomas Jakobs <tomas.jakobs@jakobssystems.net>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -1148,13 +1148,12 @@ msgstr ""
 msgid "In modern web development, it’s become common for a website not to be run from only one location. When you visit a website, you’re not only entering into contact with those running the website, but also all the businesses and organisations which collaborate with the managers of the websites. These may be internet service providers, script providers, font providers, analytics tools providers and a range of other providers. If the manager of the websites hands over information about visitors to any of these third-parties, it is a form of gossiping since it is usually not evident to the visitors that this type of information is being handed over."
 msgstr ""
 "In der modernen Web-Entwicklung ist es üblich, dass eine Webseite nicht nur "
-"an einem Ort aus betrieben wird. Wenn Du eine Webseite besuchst, dann "
-"trittst Du nicht nur mit dem Betreiber in Kontakt, sondern auch mit allen "
-"Unternehmen und Organisationen, die mit dem Betreiber der Website "
-"zusammenarbeiten. Dies können Internet- oder Server-Dienstleister, Anbieter "
-"von Script-, Schriften- oder Analytics-Diensten sein. Der Betreiber reicht "
-"Deine Daten in der Regel weiter, ohne dass es für Dich sofort ersichtlich "
-"wird."
+"an einem Ort betrieben wird. Wenn Du eine Webseite besuchst, dann trittst Du "
+"nicht nur mit dem Betreiber in Kontakt, sondern auch mit allen Unternehmen "
+"und Organisationen, die mit dem Betreiber der Website zusammenarbeiten. Dies "
+"können Internet- oder Server-Dienstleister, Anbieter von Script-, Schriften- "
+"oder Analytics-Diensten sein. Der Betreiber reicht Deine Daten in der Regel "
+"weiter, ohne dass es für Dich sofort ersichtlich wird."
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:29
 #, elixir-format
@@ -1285,7 +1284,7 @@ msgstr "Name"
 #: lib/webbkoll_web/templates/layout/app.html.eex:51 lib/webbkoll_web/templates/page/news.html.eex:2
 #, elixir-format
 msgid "News"
-msgstr "Neuigkeiten"
+msgstr "News"
 
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:20
 #, elixir-format
@@ -1316,13 +1315,13 @@ msgstr "fehlt"
 #, elixir-format
 msgid "Note that <code>includeSubDomains</code> should be deployed at the base domain, i.e., <code>https://example.com</code>, <em>not</em> <code>https://www.example.com</code>. While we recommend the use of <code>includeSubDomains</code>, be <strong>very</strong> careful, as it means that <strong>all subdomains</strong> associated with the parent domain <strong>must</strong> support HTTPS. (They do not have to each have their own HSTS policy.)"
 msgstr ""
-"Beachte, dass <code>includeSubDomains</code> auf der Hauptdomain gesetzt "
+"Beachte, dass <code>includeSubDomains</code> auf der Hauptdomain eingebunden "
 "sein sollte, z. B. <code>https://beispiel.de</code>, <em>nicht</em> auf "
-"einer Subdomain wie <code>https://www.beispiel.de</code>. Wir empfehlen die "
-"Verwendung von <code>includeSubDomains</code>, jedoch ist "
-"<strong>äußerste</strong> Vorsicht geboten, da dies für <strong>alle "
-"Subdomains</strong> gilt. Diese <strong>müssen</strong> HTTPS unterstützen ("
-"eine HSTS-Richtlinie für jede einzelne Subdomain ist nicht nötig)."
+"einer Subdomain wie <code>https://www.beispiel.de</code>.Auch wenn wir die "
+"Verwendung von <code>includeSubDomains</code> sehr empfehlen, so ist zu "
+"beachten, dass diese für <strong>alle Subdomains</strong> gilt. Diese "
+"<strong>müssen</strong> HTTPS unterstützen (eine HSTS-Richtlinie für jede "
+"einzelne Subdomain wird nicht benötigt)."
 
 #: lib/webbkoll_web/templates/page/donate.html.eex:18
 #, elixir-format
@@ -1358,7 +1357,7 @@ msgstr "Status"
 #, elixir-format
 msgid "Personal data shall be accurate, and if they aren’t, there must be a procedure to correct them."
 msgstr ""
-"Personenbezogene Daten müssen richtig sein, sind sie es nicht, dann muss ein "
+"Personenbezogene Daten müssen richtig sein. Sind sie es nicht, dann muss ein "
 "Prozess zur Fehlerkorrektur existieren."
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:55
@@ -1377,9 +1376,9 @@ msgstr "Bitte beachte:"
 #, elixir-format
 msgid "Please write \"Donation\" in the message field. Any amount is much appreciated! (From a Swedish bank account, the number would be 52031057715.)"
 msgstr ""
-"Schreibe bitte \"Donation\" als Verwendungszweck. Jede Spende ist mehr als "
-"willkommen! (von einem schwedischen Konto sollte die Nummer 52031057715 "
-"lauten)"
+"Schreibe bitte \"Donation\" als Verwendungszweck. Jede Zuwendung ist sehr "
+"willkommen! (Von einem schwedischen Konto aus sollte die Nummer 52031057715 "
+"lauten.)"
 
 #: lib/webbkoll_web/templates/site/failed.html.eex:4
 #, elixir-format
@@ -1425,7 +1424,7 @@ msgstr "Zweckbindung"
 #: lib/webbkoll_web/templates/site/_raw_headers.html.eex:3
 #, elixir-format
 msgid "Raw headers"
-msgstr "Original Header"
+msgstr "Original Kopfzeilen"
 
 #: lib/webbkoll_web/views/site_view.ex:266
 #, elixir-format
@@ -1441,7 +1440,7 @@ msgstr "Letzte Änderungen bei Webbkoll."
 #, elixir-format
 msgid "Referrer Policy not set. This means that the default value <code>no-referrer-when-downgrade</code>, leaking referrers in many situations, is used."
 msgstr ""
-"Referrer Richtline nicht gesetzt. Das bedeutet, dass vom Standardwert <code"
+"Referrer-Richtlinie nicht gesetzt. Das bedeutet, dass vom Standardwert <code"
 ">no-referrer-when-downgrade</code> ausgegangen wird, was eine Preisgabe des "
 "Referrer in vielen Situationen bedeutet."
 
@@ -1449,21 +1448,21 @@ msgstr ""
 #, elixir-format
 msgid "Referrer Policy set to <code>%{value}</code> in <code>Referrer-Policy</code> HTTP header."
 msgstr ""
-"Referrer Richtline auf <code>%{value}</code> im <code>Referrer-Policy</code> "
-"HTTP Header gesetzt."
+"Referrer Richtlinie auf <code>%{value}</code> im <code>Referrer-Policy</code>"
+" HTTP-Header gesetzt."
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:19
 #, elixir-format
 msgid "Referrer Policy set to <code>%{value}</code> in <code>meta http-equiv</code> element."
 msgstr ""
-"Referrer Richtline auf <code>%{value}</code> im <code>meta http-equiv</code> "
-"Tag gesetzt."
+"Referrer-Richtlinie auf <code>%{value}</code> im <code>meta http-"
+"equiv</code>-Tag gesetzt."
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:23
 #, elixir-format
 msgid "Referrer Policy set to <code>%{value}</code> in <code>meta</code> element."
 msgstr ""
-"Referrer Richtlinie auf <code>%{value}</code> im <code>meta</code> Element "
+"Referrer-Richtlinie auf <code>%{value}</code> im <code>meta</code>-Element "
 "gesetzt."
 
 #: lib/webbkoll_web/views/site_view.ex:26
@@ -1499,9 +1498,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:9
 #, elixir-format
 msgid "Reporting (CSP, Certificate Transparency, Network Error Logging)"
-msgstr ""
-"Berichterstattung (CSP, Zertifikatstransparenz, Netzwerkfehler-"
-"Protokollierung)"
+msgstr "Berichte (CSP, Zertifikatstransparenz, Netzwerkfehler-Protokolle)"
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:15
 #, elixir-format
@@ -1554,8 +1551,8 @@ msgstr "Ergebnisse für %{url}"
 msgid "SRI can be used with <code>script</code> and <code>link</code> elements. To enable SRI on an element, you need to add <code>integrity</code> and <code>crossorigin</code> attributes to it."
 msgstr ""
 "SRI kann auf <code>script</code> und <code>link</code> Tags angewendet "
-"werden. Zum Einrichten von SRI muß ein <code>integrity</code> und "
-"<code>crossorigin</code> Attribut dem Tag hinzugefügt werden."
+"werden. Zum Einrichten von SRI müssen ein <code>integrity</code>- und "
+"<code>crossorigin</code>-Attribut dem Tag hinzugefügt werden."
 
 #: lib/webbkoll_web/templates/layout/app.html.eex:77
 #: lib/webbkoll_web/templates/layout/app.html.eex:77
@@ -1574,15 +1571,15 @@ msgstr ""
 #, elixir-format
 msgid "See also <a href=\"https://infosec-handbook.eu/blog/online-assessment-tools/\">Pros and cons of online assessment tools for web server security</a> from InfoSec Handbook (a site that also has many other relevant articles)."
 msgstr ""
-"Weitere Informationen auch im InfoSec Handbuch <a href=\"https://infosec-"
+"Weitere Informationen auch im InfoSec-Handbuch <a href=\"https://infosec-"
 "handbook.eu/blog/online-assessment-tools/\">Pros and cons of online "
 "assessment tools for web server security</a> (eine Seite mit zahlreichen "
-"Artikeln zum Thema auf Englisch)."
+"Artikeln zum Thema)."
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:76
 #, elixir-format
 msgid "See the following pages for more information:"
-msgstr "Auf den folgenden Seiten finden Sie weitere Informationen:"
+msgstr "Auf den folgenden Seiten findest Du weitere Informationen:"
 
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:3
 #, elixir-format
