@@ -21,6 +21,7 @@
     </p>
 
     <div class="notes">
+      <p><i class="icon-notification alert"></i> <strong>2021-01-14:</strong> Due to abuse Webbkoll will, until further notice, throw away query parameters and path from the URL you enter; i.e., if you enter <code>http://example.com/foo/?bar=42</code>, <code>http://example.com</code> will be checked.</p>
       <p><%= gettext(~s|Please note:|) %></p>
       <ol class="default">
         <li><%= gettext(~s|This tool simulates a normal browser visit with Do Not Track disabled (browser default) and with no add-ons.|) %></li>

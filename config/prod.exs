@@ -75,6 +75,9 @@ config :webbkoll,
   # (i.e. ones with a TLD in the Public Suffix List),
   # and only the standard HTTP/HTTPS ports.
   validate_urls: true,
+  # check_host_only: If true, throw away path and query parameters from submitted URLs
+  # before passing them on to the backend. (Only works if validate_urls is also true.)
+  check_host_only: true,
   # rate_limit_client: An IP address can make <limit> new site checks during <scale> milliseconds.
   # rate_limit_host: The tool will query a specific host no more than <limit> times during <scale> milliseconds.
   # See https://github.com/grempe/ex_rated

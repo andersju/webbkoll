@@ -8,6 +8,7 @@ defmodule WebbkollWeb.Plugs do
   @rate_limit_client Application.get_env(:webbkoll, :rate_limit_client)
   @rate_limit_host Application.get_env(:webbkoll, :rate_limit_host)
   @validate_urls Application.get_env(:webbkoll, :validate_urls)
+  @check_host_only Application.get_env(:webbkoll, :check_host_only)
 
   def validate_domain(conn, _params) do
     conn.assigns.input_url
@@ -65,8 +66,8 @@ defmodule WebbkollWeb.Plugs do
         true ->
           URI.to_string(%URI{
             host: url.host |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase(),
-            path: url.path,
-            query: url.query,
+            path: (if @check_host_only, do: nil, else: url.path),
+            query: (if @check_host_only, do: nil, else: url.query),
             scheme: "http"
           })
 
