@@ -105,8 +105,8 @@ defmodule WebbkollWeb.Plugs do
 
   def check_rate_ip(conn, _params) do
     conn.remote_ip
-    |> Tuple.to_list()
-    |> Enum.join(".")
+    |> :inet.ntoa()
+    |> to_string()
     |> ExRated.check_rate(@rate_limit_client["scale"], @rate_limit_client["limit"])
     |> case do
       {:ok, _} ->
