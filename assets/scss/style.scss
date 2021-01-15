@@ -625,3 +625,20 @@ article.text {
   padding: $base-spacing / 2;
   text-align: center;
 }
+
+.btn-link {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: normal;
+  outline: none;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.btn-link:hover {
+  background: none;
+}

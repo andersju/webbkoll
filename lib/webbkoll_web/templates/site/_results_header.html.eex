@@ -13,7 +13,13 @@
       </h2>
     </div>
     <div class="beta">
-      <a class="button" href="<%= Routes.site_path(@conn, :create, @conn.assigns.locale, url: @site.data.input_url, refresh: "on") %>"><i class="icon-redo"></i><span><%= gettext("Check again") %></span></a>
+      <div class="search-bar">
+       <%= form_for @conn, Routes.site_path(@conn, :create, @conn.assigns.locale), fn f -> %>
+         <%= hidden_input f, :url, [value: @site.data.input_url] %>
+         <%= hidden_input f, :refresh, [value: "on"] %>
+         <%= submit raw("<i class=\"icon-redo\"></i> " <> gettext("Check again")), [class: "btn-link"] %>
+       <% end %>
+      </div>
       <i class="icon-clock"></i><%= format_site_time(@site.updated_at) %>
     </div>
   </section>

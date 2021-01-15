@@ -45,7 +45,8 @@ defmodule WebbkollWeb.Router do
   scope "/:locale", WebbkollWeb do
     pipe_through([:browser, :webbkoll])
 
-    get("/check", SiteController, :create)
+    post("/check", SiteController, :create)
+    get("/check", SiteController, :redirect_to_index)
     get("/status", SiteController, :status)
     get("/results", SiteController, :results)
 

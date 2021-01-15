@@ -86,6 +86,12 @@ defmodule WebbkollWeb.SiteController do
     end
   end
 
+  def redirect_to_index(conn, %{"url" => url}) do
+    redirect(conn,
+      to: Routes.page_path(conn, :index, conn.assigns.locale, url: url)
+    )
+  end
+
   # Plugs
 
   defp check_if_site_exists(%Plug.Conn{assigns: %{input_url: proper_url}} = conn, _params) do

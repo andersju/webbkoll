@@ -72,12 +72,10 @@
 
         <div class="navigation-tools">
           <div class="search-bar">
-           <form role="search" method="get" action="/<%= @conn.assigns.locale %>/check">
-              <input name="url" type="search" placeholder="example.com" aria-label="<%= gettext("URL to check") %>">
-              <button type="submit" aria-label="<%= gettext("Search") %>" title="<%= gettext("Search") %>">
-                <i class="icon-search"></i>
-              </button>
-            </form>
+           <%= form_for @conn, Routes.site_path(@conn, :create, @conn.assigns.locale), [role: "search"], fn f -> %>
+             <%= text_input f, :url, [type: "search", required: "required", placeholder: "example.com", "aria-label": gettext("URL to check"), value: ""] %>
+             <%= submit raw("<i class=\"icon-search\"></i>"), ["aria-label": gettext("Search"), title: gettext("Search")] %>
+           <% end %>
           </div>
         </div>
       </div>
@@ -91,7 +89,7 @@
       <footer>
         <div class="alpha">
           <p id="disclaimer">
-            <%= gettext "Test results are stored in memory on our server for 24 hours. We don't show a list of tested URLs. We don't use URLs or test results. We don't log IP addresses and we don't use cookies." %>
+            <%= gettext "Test results are stored in memory on our server for 24 hours. We don't show a list of tested URLs. We don't use URLs or test results. We don't log IP addresses. We use one essential session cookie, _webbkoll_key, to prevent CSRF attacks." %>
           </p>
           <p>
             <%= gettext "Developed by" %> <a class="no-decoration" href="https://dataskydd.net/"><span class="ds-orange">dataskydd</span><span class="semibold white">.net</span></a>.
