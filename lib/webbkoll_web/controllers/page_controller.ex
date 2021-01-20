@@ -1,6 +1,8 @@
 defmodule WebbkollWeb.PageController do
   use WebbkollWeb, :controller
 
+  @check_host_only Application.get_env(:webbkoll, :check_host_only)
+
   def index(conn, _params) do
     render(
       conn,
@@ -10,7 +12,8 @@ defmodule WebbkollWeb.PageController do
       page_description:
         gettext(
           "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."
-        )
+        ),
+      check_host_only: @check_host_only
     )
   end
 
