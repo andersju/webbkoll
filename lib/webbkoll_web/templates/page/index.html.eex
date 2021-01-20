@@ -22,7 +22,7 @@
 
     <div class="notes">
       <%= if @check_host_only do %>
-        <p><i class="icon-notification alert"></i> Due to abuse Webbkoll will, until further notice, throw away query parameters and path from the URL you enter; i.e., if you enter <code>http://example.com/foo/?bar=42</code>, <code>http://example.com</code> will be checked.</p>
+        <p><i class="icon-notification alert"></i> <%= gettext(~s|Due to abuse Webbkoll will, until further notice, throw away query parameters and path from the URL you enter; i.e., if you enter <code>http://example.com/foo/?bar=42</code>, <code>http://example.com</code> will be checked.|) |> raw() %></p>
       <% end %>
       <p><%= gettext(~s|Please note:|) %></p>
       <ol class="default">
