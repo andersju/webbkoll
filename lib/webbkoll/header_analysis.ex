@@ -362,8 +362,8 @@ defmodule Webbkoll.HeaderAnalysis do
     end
   end
 
-  def check_csp_report_to(result, _reg_domain, csp, _report_to_header, _csp_header_name)
-      when not is_map(csp) do
+  def check_csp_report_to(result, _reg_domain, csp, report_to_header, _csp_header_name)
+      when not is_map(csp) or not is_binary(report_to_header) do
     result
   end
 
