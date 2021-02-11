@@ -642,3 +642,8 @@ article.text {
 .btn-link:hover {
   background: none;
 }
+
+.btn-link-dark,
+.btn-link-dark:hover {
+  color: $action-color;
+}
