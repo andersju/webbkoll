@@ -8,7 +8,7 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-03-14 11:55+0000\n"
+"PO-Revision-Date: 2021-03-25 00:07+0000\n"
 "Last-Translator: Tom Fredrik Blenning <bfg@efn.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.dataskydd.net/projects/"
 "webbkoll/main/nb_NO/>\n"
@@ -229,7 +229,7 @@ msgstr "<code>preload</code> - forespør inkludering i preload-lister"
 msgid "<strong>Authenticity</strong>. The visitor is talking to the \"real\" website, and not to an impersonator or through a \"man-in-the-middle\"."
 msgstr ""
 "<strong>Autentisitet</strong>. Gjesten prater med det \"riktige\" nettstedet "
-"og ikke men en imitator eller gjennom en \"man-in-the-middle\"."
+"og ikke med en imitator eller gjennom en \"man-in-the-middle\"."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:81
 #, elixir-format
@@ -966,7 +966,7 @@ msgstr "Kom i gang med Let's Encrypt"
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:40
 #, elixir-format
 msgid "Good policy"
-msgstr "Bra policy"
+msgstr "God policy"
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:45
 #, elixir-format
@@ -1832,7 +1832,7 @@ msgstr ""
 "HTTP-headeren <strong><code>X-Content-Type-Options</code></strong> er en "
 "markør som benyttes av tjeneren for å indikere at MIME-typene som annonseres "
 "i Content-Type-headers skal følges og ikke endres. Det lar en velge bort "
-"sniffing av MIME-typ, eller med andre ord, det er en mulighet å si at "
+"sniffing av MIME-type, eller med andre ord, det er en mulighet å si at "
 "nettstedsinnehaveren visste hva de gjorde."
 
 #: lib/webbkoll_web/templates/site/_headers.html.eex:61
