@@ -153,7 +153,7 @@ defmodule Webbkoll.Worker do
         insecure_requests_count:
           third_party_request_types.insecure + Enum.count(insecure_first_party_requests),
         meta_csp: get_meta(json["content"], "http-equiv", "content-security-policy"),
-        header_csp: get_header(headers, "content-security-policy"),
+        header_csp: String.replace(get_header(headers, "content-security-policy") || "", "\n", "; "),
         csp: csp,
         external_report: external_report,
         header_hsts: check_hsts(headers["strict-transport-security"], url.host, reg_domain),

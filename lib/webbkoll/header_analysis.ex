@@ -26,8 +26,7 @@ defmodule Webbkoll.HeaderAnalysis do
 
   def parse_csp(string) do
     string
-    |> String.replace("\n", "")
-    |> String.replace("\r", "")
+    |> String.replace("\n", ";")
     |> String.trim()
     |> String.split(";", trim: true)
     |> Enum.map(&String.trim/1)
@@ -476,7 +475,7 @@ defmodule Webbkoll.HeaderAnalysis do
       result: nil
     }
 
-    case data |> String.split(["\n", " "]) |> List.first |> String.downcase() |> String.trim() do
+    case data |> String.trim() |> String.split(["\n", " "]) |> List.first |> String.downcase() |> String.trim() do
       "nosniff" -> %{output | pass: true, result: "x-content-type-options-nosniff"}
       _ -> %{output | result: "x-content-type-options-header-invalid"}
     end
