@@ -42,7 +42,7 @@ defmodule WebbkollWeb.SiteView do
   def icon(:warn), do: content_tag(:i, "", class: "icon-notification warning")
   def icon(:warn_strong), do: content_tag(:i, "", class: "icon-notification alert")
   def icon(:optional), do: content_tag(:i, "", class: "icon-minus")
-  def icon(:info), do: content_tag(:i, "", class: "icon-info-circle")
+  def icon(:info), do: content_tag(:i, "", class: "icon-info")
   def icon(:unknown), do: content_tag(:i, "", class: "icon-question-circle")
   def icon(:law), do: content_tag(:i, "", class: "icon-gavel")
 

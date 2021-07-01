@@ -19,7 +19,7 @@
           <tr>
             <td data-label="<%= gettext("Pass") %>">
               <%= if header.name == "X-XSS-Protection" do %>
-                <%= icon(:optional) %>
+                <%= icon(:info) %>
               <% else %>
                 <%= if header.pass, do: icon(:pass), else: icon(:fail) %>
               <% end %>
