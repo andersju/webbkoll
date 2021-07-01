@@ -17,7 +17,13 @@
       <tbody>
         <%= for header <- [@site.data.x_content_type_options, @site.data.x_frame_options, @site.data.x_xss_protection] do %>
           <tr>
-            <td data-label="<%= gettext("Pass") %>"><%= if header.pass, do: icon(:pass), else: icon(:fail) %></td>
+            <td data-label="<%= gettext("Pass") %>">
+              <%= if header.name == "X-XSS-Protection" do %>
+                <%= icon(:optional) %>
+              <% else %>
+                <%= if header.pass, do: icon(:pass), else: icon(:fail) %>
+              <% end %>
+            </td>
             <td data-label="<%= gettext("Header") %>"><%= header.name %></td>
             <td data-label="<%= gettext("Value") %>"><%= header.data %></td>
             <td data-label="<%= gettext("Result") %>"><%= result_text(header.result) %></td>
@@ -38,7 +44,7 @@
 
         <p><%= gettext(~s|<code>X-Frame-Options</code> can be set to <code>deny</code> (page can never be loaded in a frame), <code>sameorigin</code> (page can only be loaded in a frame only if the origin is the same), or <code>allow-from &lt;URI&gt;</code> (page can only be loaded in a frame on a page on the specified origin).|) |> raw() %></p>
 
-        <p><%= gettext(~s|<code>X-XSS-Protection</code> should be set to <code>1</code> or <code>1; mode=block</code>.|) |> raw() %></p>
+        <p><%= gettext(~s|The old recommendation was to set <code>X-XSS-Protection</code> to <code>1</code> or <code>1; mode=block</code>. However, OWASP now recommends setting it to <code>0</code>.|) |> raw() %></p>
 
         <ul class="default">
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options">X-Content-Type-Options</a> [developer.mozilla.org]</li>
@@ -46,7 +52,7 @@
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">X-Frame-Options</a> [developer.mozilla.org]</li>
           <li><a href="https://www.keycdn.com/blog/x-frame-options">X-Frame-Options – How to Combat Clickjacking</a> [keycdn.com]</li>
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection">X-XSS-Protection</a> [developer.mozilla.org]</li>
-          <li><a href="https://www.keycdn.com/blog/x-xss-protection">X-XSS-Protection – Preventing Cross-Site Scripting Attacks</a> [keycdn.com]</li>
+          <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#x-xss-protection-header">X-XSS-Protection - OWASP Cross Site Scripting Prevention Cheat Sheet</a> [cheatsheetseries.owasp.org]</li>
         </ul>
       </div>
     </aside>
@@ -60,10 +66,16 @@
 
       <p><%= gettext(~s|The <strong><code>X-Frame-Options</code></strong> HTTP response header can be used to indicate whether or not a browser should be allowed to render a page in a <code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code> or <code>&lt;object&gt;</code>. Sites can use this to avoid <a href="https://en.wikipedia.org/wiki/clickjacking">clickjacking</a> attacks, by ensuring that their content is not embedded into other sites.|) |> raw() %></p>
 
-      <p><%= gettext(~s|The HTTP <strong><code>X-XSS-Protection</code></strong> response header is a feature of Internet Explorer, Chrome and Safari that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks. Although these protections are largely unnecessary in modern browsers when sites implement a strong <code>Content-Security-Policy</code> that disables the use of inline JavaScript (<code>'unsafe-inline'</code>), they can still provide protections for users of older web browsers that don't yet support CSP.|) |> raw() %></p>
-
       <footer>
         &mdash; <cite>MDN, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a>, Mozilla Contributors, <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></cite>
+      </footer>
+    </blockquote>
+
+    <blockquote>
+      <p><%= gettext(~s|The <strong><code>X-XSS-Protection</code></strong> header has been deprecated by modern browsers and its use can introduce <strong>additional</strong> security issues on the client side. As such, it is recommended to set the header as <code>X-XSS-Protection: 0</code> in order to disable the XSS Auditor, and not allow it to take the default behavior of the browser handling the response.|) |> raw() %></p>
+
+      <footer>
+        &mdash; <cite>OWASP Cheat Sheet Series, <a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#x-xss-protection-header">Cross Site Scripting Prevention Cheat Sheet</a>, OWASP CheatSheets Series Team, <a href="https://creativecommons.org/licenses/by/3.0/deed.en_US">CC BY 3.0</a></cite>
       </footer>
     </blockquote>
     <p>
