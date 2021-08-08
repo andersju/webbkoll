@@ -51,14 +51,14 @@ defmodule Webbkoll.Worker do
       case refresh do
         "on" ->
           %{
-            fetch_url: :http_uri.encode(url),
+            fetch_url: URI.encode_www_form(url),
             timeout: 45_000,
             validate_url: @validate_urls,
           }
 
         _ ->
           %{
-            fetch_url: :http_uri.encode(url),
+            fetch_url: URI.encode_www_form(url),
             timeout: 45_000,
             validate_url: @validate_urls,
           }

@@ -56,7 +56,7 @@ defmodule Webbkoll.Mixfile do
       {:stream_gzip, "~> 0.4.1"},
       {:jason, "~> 1.0"},
       {:valid_url, "~> 0.1.2"},
-      {:honeydew, "~> 1.4.6"},
+      {:honeydew, "~> 1.5.0"},
       {:remote_ip, "~> 0.2.1"}
     ]
   end
