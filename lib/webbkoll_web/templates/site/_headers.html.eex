@@ -18,7 +18,7 @@
         <%= for header <- [@site.data.x_content_type_options, @site.data.x_frame_options, @site.data.x_xss_protection] do %>
           <tr>
             <td data-label="<%= gettext("Pass") %>">
-              <%= if header.name == "X-XSS-Protection" do %>
+              <%= if header.name in ["X-XSS-Protection", "X-Frame-Options"] do %>
                 <%= icon(:info) %>
               <% else %>
                 <%= if header.pass, do: icon(:pass), else: icon(:fail) %>
@@ -42,7 +42,7 @@
 
         <p><%= gettext(~s|<code>X-Content-Type-Options</code> should be set to <code>nosniff</code>, which is the only valid value.|) |> raw() %></p>
 
-        <p><%= gettext(~s|<code>X-Frame-Options</code> can be set to <code>deny</code> (page can never be loaded in a frame), <code>sameorigin</code> (page can only be loaded in a frame only if the origin is the same), or <code>allow-from &lt;URI&gt;</code> (page can only be loaded in a frame on a page on the specified origin).|) |> raw() %></p>
+        <p><%= gettext(~s|<code>X-Frame-Options</code> is obsolete. Use the Content Security Policy directive <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors"><code>frame-ancestors</code></a> instead.|) |> raw() %></p>
 
         <p><%= gettext(~s|The old recommendation was to set <code>X-XSS-Protection</code> to <code>1</code> or <code>1; mode=block</code>. However, OWASP now recommends setting it to <code>0</code>.|) |> raw() %></p>
 
@@ -50,7 +50,6 @@
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options">X-Content-Type-Options</a> [developer.mozilla.org]</li>
           <li><a href="https://www.keycdn.com/support/x-content-type-options">X-Content-Type-Options HTTP Header</a> [keycdn.com]</li>
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">X-Frame-Options</a> [developer.mozilla.org]</li>
-          <li><a href="https://www.keycdn.com/blog/x-frame-options">X-Frame-Options – How to Combat Clickjacking</a> [keycdn.com]</li>
           <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection">X-XSS-Protection</a> [developer.mozilla.org]</li>
           <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html#x-xss-protection-header">X-XSS-Protection - OWASP Cross Site Scripting Prevention Cheat Sheet</a> [cheatsheetseries.owasp.org]</li>
         </ul>
@@ -64,10 +63,18 @@
     <blockquote>
       <p><%= gettext(~s|The <strong><code>X-Content-Type-Options</code></strong> response HTTP header is a marker used by the server to indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed. This allows to opt-out of MIME type sniffing, or, in other words, it is a way to say that the webmasters knew what they were doing.|) |> raw() %></p>
 
+      <footer>
+        &mdash; <cite>MDN, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options">X-Content-Type-Options</a>, Mozilla Contributors, <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></cite>
+      </footer>
+    </blockquote>
+
+    <blockquote>
       <p><%= gettext(~s|The <strong><code>X-Frame-Options</code></strong> HTTP response header can be used to indicate whether or not a browser should be allowed to render a page in a <code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code> or <code>&lt;object&gt;</code>. Sites can use this to avoid <a href="https://en.wikipedia.org/wiki/clickjacking">clickjacking</a> attacks, by ensuring that their content is not embedded into other sites.|) |> raw() %></p>
 
+      <p><%= gettext(~s|<strong>Note:</strong> The <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy"><code>Content-Security-Policy</code></a> HTTP header has a <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors"><code>frame-ancestors</code></a> directive which <a href="https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options">obsoletes</a> this header for supporting browsers.|) |> raw() %></p>
+
       <footer>
-        &mdash; <cite>MDN, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a>, Mozilla Contributors, <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></cite>
+        &mdash; <cite>MDN, <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">X-Frame-Options</a>, Mozilla Contributors, <a href="http://creativecommons.org/licenses/by-sa/2.5/">CC BY-SA 2.5</a></cite>
       </footer>
     </blockquote>
 
