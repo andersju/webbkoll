@@ -82,8 +82,6 @@ config :webbkoll,
   # rate_limit_host: The tool will query a specific host no more than <limit> times during <scale> milliseconds.
   # See https://github.com/grempe/ex_rated
   rate_limit_client: %{"scale" => 60_000, "limit" => 20},
-  rate_limit_host: %{"scale" => 60_000, "limit" => 5},
-  geoip_db_url: "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=YOUR_LICENSE_KEY_HERE&suffix=tar.gz",
-  geoip_db_md5_url: "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=YOUR_LICENSE_KEY_HERE&suffix=tar.gz.md5"
+  rate_limit_host: %{"scale" => 60_000, "limit" => 5}
 
 import_config "prod.secret.exs"

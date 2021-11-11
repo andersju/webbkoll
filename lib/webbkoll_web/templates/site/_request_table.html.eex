@@ -3,7 +3,6 @@
     <tr>
       <th class="host" data-sort-default><%= gettext "Host" %></th>
       <th><%= gettext "IP" %></th>
-      <th><%= gettext "Country" %></th>
       <th><%= gettext "Classification" %></th>
       <th><%= gettext "URLs" %></th>
     </tr>
@@ -29,11 +28,6 @@
           </ul>
         </td>
         <td data-label="<%= gettext "IP" %>"><a href="https://tools.keycdn.com/geo?host=<%= host_info.ip %>"><%= host_info.ip %></a></td>
-        <td data-label="<%= gettext "Country" %>">
-          <%= if host_info.country do %>
-            <span class="flag-icon flag-icon-<%= String.downcase(host_info.country) %>"></span> <%= host_info.country %>
-          <% end %>
-        </td>
         <td data-label="<%= gettext "Classification" %>"><%= Webbkoll.Trackers.check(PublicSuffix.registrable_domain(host, ignore_private: true)) %></td>
         <td data-label="<%= gettext "URLs" %>" class="info"><span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="host-<%= counter %>"><%= gettext("Show") %> (<%= Enum.count(data) %>) </span></td>
       </tr>

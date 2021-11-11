@@ -43,18 +43,7 @@ config :phoenix, :generators,
 
 config :webbkoll, Webbkoll.Scheduler,
   jobs: [
-    {"@reboot", {Webbkoll.CronJobs, :download_geoip_if_necessary, []}},
-    {"@weekly", {Webbkoll.CronJobs, :update_geoip, []}},
     {"* * * * *", {Webbkoll.CronJobs, :find_and_remove_stuck_records, []}}
-  ]
-
-config :geolix,
-  databases: [
-    %{
-      id: :country,
-      adapter: Geolix.Adapter.MMDB2,
-      source: "priv/GeoLite2-Country.mmdb"
-    }
   ]
 
 # Import environment specific config. This must remain at the bottom

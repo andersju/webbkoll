@@ -85,14 +85,8 @@
           <% end %>
         </li>
         <li>
-          <span class="label"><a href="#server-location"><%= gettext("Server location:") %></a></span>
-
-          <%= if @site.data.geolocation do %>
-            <span class="flag-icon flag-icon-<%= String.downcase(@site.data.geolocation) %>"></span> <%= country_from_iso(@conn.assigns.locale, @site.data.geolocation) %>
-          <% else %>
-            <%= gettext("Unknown") %>
-          <% end %>
-             &mdash; <%= @site.data.host_ip %><sup><a class="external" href="https://tools.keycdn.com/geo?host=<%= @site.data.host_ip %>"><%= gettext("Look up") %></a></sup>
+          <span class="label"><a href="#server-location"><%= gettext("IP address:") %></a></span>
+          <%= @site.data.host_ip %><sup><a class="external" href="https://tools.keycdn.com/geo?host=<%= @site.data.host_ip %>"><%= gettext("Look up") %></a></sup>
         </li>
       </ul>
     </div>

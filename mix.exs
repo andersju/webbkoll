@@ -48,7 +48,6 @@ defmodule Webbkoll.Mixfile do
       {:public_suffix, git: "https://github.com/andersju/publicsuffix-elixir.git", ref: "8937242"},
       {:timex, "~> 3.0"},
       {:hackney, "~> 1.8"},
-      {:geolix_adapter_mmdb2, "~> 0.6.0"},
       {:idna, "~> 6.0"},
       {:con_cache, "~> 0.13"},
       {:uuid, "~> 1.1"},

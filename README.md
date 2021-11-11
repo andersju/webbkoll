@@ -76,23 +76,6 @@ Start the Phoenix endpoint with `mix phx.server` (or to get an interactive shell
 
 Now you can visit [`localhost:4000`](http://localhost:4000) in your browser.
 
-For Webbkoll to be able to automatically download the GeoLite2 country database (for GeoIP lookups),
-you need to create a (free) account on [MaxMind's GeoLite2 page](https://dev.maxmind.com/geoip/geoip2/geolite2/)
-and get an API key. Add this key to `config/dev.secret.exs` or `config/prod.secret.exs`),
-overriding the default value from the non-secret file:
-
-```
-use Mix.Config
-
-config :webbkoll,
-  geoip_db_url: "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=YOUR_KEY_HERE&suffix=tar.gz",
-  geoip_db_md5_url: "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=YOUR_KEY_HERE&suffix=tar.gz.md5"
-```
-
-The GeoLite2 database is downloaded upon start if the file doesn't already exist
-(should be `priv/GeoLite2-Country.mmdb`). It is then refreshed once per week
-(interval can be changed in `config/config.exs`).
-
 ### Production
 
 To run in production, first get and compile dependencies, and make sure `config/prod.secret.exs`
@@ -179,9 +162,6 @@ Run `systemctl daemon-reload` for good measure, and then try `systemctl start we
   * [A11y Toggle](https://github.com/edenspiekermann/a11y-toggle) (`assets/static/js/a11y-toggle.min.js`) (MIT license) by Edenspiekermann
   * [IcoMoon](https://icomoon.io/#icons-icomoon) icons (`assets/static/fonts`) (GPL / CC-BY-4.0) by IcoMoon.io
   * [Mozilla's version](https://github.com/mozilla-services/shavar-prod-lists) of [Disconnect's open source list of trackers](https://github.com/disconnectme/disconnect-tracking-protection) (`priv/services.json`) (GPLv3) by Disconnect, Inc.
-  * GeoLite2 data created by MaxMind (CC BY-SA 4.0), available from [http://www.maxmind.com](http://www.maxmind.com). (Not included in the repository, but automatically downloaded to `priv/GeoLite2-Country.mmdb.gz`.)
-  * JSON for ISO 3166-1 country code i18n from [node-i18n-iso-countries](https://github.com/michaelwittig/node-i18n-iso-countries) (`priv/{en,fr,no,sv}.json`) (MIT license)
-  * SVG flags/CSS (`assets/scss/flag-icon`, `assets/static/flags`) from [flag-icon-css](https://github.com/lipis/flag-icon-css) (MIT license) by Panayiotis Lipiridis
   * [HTML5 Shiv](https://github.com/aFarkas/html5shiv) (`assets/static/js/html5shiv.min.js`) (MIT license) by Alexander Farkas
 
 For the project code in general (things not noted above):

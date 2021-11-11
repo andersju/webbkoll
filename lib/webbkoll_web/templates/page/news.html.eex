@@ -4,6 +4,9 @@
   <p>This page lists user-visible changes to Webbkoll. For the time before 2018-11-30 (when this page was added), only a few notable events are listed. For the full history, see the <a href="https://github.com/andersju/webbkoll/commits/">commits on GitHub</a>.</p>
 
   <article>
+    <h3>2021-11-11</h3>
+    <p>Removed geolocation information (estimated country) because the information is too unreliable, especially with CDNs.</p>
+
     <h3>2021-10-03</h3>
     <p>Webbkoll no longer recommends setting the <code>X-Frame-Options</code> header. It is <a href="https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options">obsoleted</a> by the Content Security Policy directive <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors"><code>frame-ancestors</code></a>, which should be used instead. Thanks Rohan Kumar.</p>
 

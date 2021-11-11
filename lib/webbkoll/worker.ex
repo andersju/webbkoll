@@ -140,7 +140,6 @@ defmodule Webbkoll.Worker do
         reg_domain: reg_domain,
         host: url.host,
         host_ip: host_ip,
-        geolocation: get_geolocation_by_ip(host_ip),
         scheme: url.scheme,
         headers: headers,
         cookies: cookies,
@@ -209,12 +208,11 @@ defmodule Webbkoll.Worker do
 
       case host !== nil && get_registerable_domain(host) !== registerable_domain do
         true ->
-          # TODO: IP and country stored per URL rather than per host. Although they might
+          # TODO: IP stored per URL rather than per host. Although they might
           # in theory differ between requests, might be better to just store it per host?
           new_map = %{
             url: request["url"],
-            ip: get_proper_ip(request["remote_address"]["ip"]),
-            country: get_geolocation_by_ip(request["remote_address"]["ip"])
+            ip: get_proper_ip(request["remote_address"]["ip"])
           }
 
           Map.put(acc, host, [new_map | Map.get(acc, host, [])])

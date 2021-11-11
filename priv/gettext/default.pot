@@ -76,11 +76,6 @@ msgid "<a href=\"https://report-uri.com/home/tools\">Report URI</a> has many use
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_geolocation.html.eex:12
-msgid "<a href=\"https://tools.keycdn.com/geo?host=%{ip}\">See more information</a> (e.g., provider) about this IP address using KeyCDN's tool."
-msgstr ""
-
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:36
 msgid "<a href=\"https://www.hardenize.com/\">Hardenize</a> is similar to Observatory, but also checks a domain's mail servers."
 msgstr ""
@@ -118,11 +113,6 @@ msgstr ""
 #, elixir-format
 #: lib/webbkoll_web/templates/site/_headers.html.eex:43
 msgid "<code>X-Content-Type-Options</code> should be set to <code>nosniff</code>, which is the only valid value."
-msgstr ""
-
-#, elixir-format
-#: lib/webbkoll_web/templates/site/_headers.html.eex:45
-msgid "<code>X-Frame-Options</code> can be set to <code>deny</code> (page can never be loaded in a frame), <code>sameorigin</code> (page can only be loaded in a frame only if the origin is the same), or <code>allow-from &lt;URI&gt;</code> (page can only be loaded in a frame on a page on the specified origin)."
 msgstr ""
 
 #, elixir-format
@@ -398,7 +388,7 @@ msgid "Check your site!"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:101
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:95
 #: lib/webbkoll_web/templates/site/status.html.eex:7
 msgid "Checked URL:"
 msgstr ""
@@ -414,8 +404,8 @@ msgid "Chromium reports the following:"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_request_table.html.eex:7
-#: lib/webbkoll_web/templates/site/_request_table.html.eex:37
+#: lib/webbkoll_web/templates/site/_request_table.html.eex:6
+#: lib/webbkoll_web/templates/site/_request_table.html.eex:31
 msgid "Classification"
 msgstr ""
 
@@ -492,12 +482,6 @@ msgstr ""
 #, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:70
 msgid "Cookies:"
-msgstr ""
-
-#, elixir-format
-#: lib/webbkoll_web/templates/site/_request_table.html.eex:6
-#: lib/webbkoll_web/templates/site/_request_table.html.eex:32
-msgid "Country"
 msgstr ""
 
 #, elixir-format
@@ -611,7 +595,7 @@ msgid "Feedback? Questions? <a href=\"mailto:info@dataskydd.net\">info@dataskydd
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:102
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:96
 msgid "Final URL:"
 msgstr ""
 
@@ -646,7 +630,7 @@ msgid "For more rigorous and systematic testing we recommend that you check out 
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_geolocation.html.eex:20
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:25
 msgid "For non-EU/EEA territories, it depends (GDPR %{art_44}). For a website, transfers will probably have to rely on adequacy decisions (%{art_45}) made by the European Commission when a third territory has been deemed to have appropriate data protection safe guards in its legislation. However, adequacy decisions cannot always be trusted, as demonstrated in the EU Court of Justice 2015 (C-362/14). Binding corporate rules (%{art_47}) or standard clauses (%{art_46}) may also be used to transfer data, but in the absence of rulings by courts and data protection authorities this is still legally uncertain territory."
 msgstr ""
 
@@ -662,7 +646,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:111
-#: lib/webbkoll_web/templates/site/_headers.html.eex:83 lib/webbkoll_web/templates/site/_referrers.html.eex:70
+#: lib/webbkoll_web/templates/site/_headers.html.eex:90 lib/webbkoll_web/templates/site/_referrers.html.eex:70
 #: lib/webbkoll_web/templates/site/_sri.html.eex:102
 msgid "GDPR: "
 msgstr ""
@@ -745,7 +729,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:4
-#: lib/webbkoll_web/templates/site/_request_table.html.eex:15
+#: lib/webbkoll_web/templates/site/_request_table.html.eex:14
 msgid "Host"
 msgstr ""
 
@@ -779,7 +763,7 @@ msgstr ""
 
 #, elixir-format
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:5
-#: lib/webbkoll_web/templates/site/_request_table.html.eex:31
+#: lib/webbkoll_web/templates/site/_request_table.html.eex:30
 msgid "IP"
 msgstr ""
 
@@ -895,7 +879,7 @@ msgid "Loading JavaScript or plugins can allow a man-in-the-middle to execute ar
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:95
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:89
 msgid "Look up"
 msgstr ""
 
@@ -1159,23 +1143,8 @@ msgid "See the following pages for more information:"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_geolocation.html.eex:3
-msgid "Server location"
-msgstr ""
-
-#, elixir-format
-#: lib/webbkoll_web/templates/site/_geolocation.html.eex:10
-msgid "Server location for <strong>%{domain}</strong> (%{host_ip}) could not be determined."
-msgstr ""
-
-#, elixir-format
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:88
-msgid "Server location:"
-msgstr ""
-
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:54
-#: lib/webbkoll_web/templates/site/_request_table.html.eex:38
+#: lib/webbkoll_web/templates/site/_request_table.html.eex:32
 msgid "Show"
 msgstr ""
 
@@ -1277,11 +1246,6 @@ msgid "Test"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_what.html.eex:13
-msgid "Text about HTTPS partly adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain). <a href=\"http://www.maxmind.com\">MaxMind's</a> GeoLite2 country database (CC-BY-SA 4.0) is used for GeoIP lookups. <a href=\"%{about}\">See here</a> for more information."
-msgstr ""
-
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:69
 msgid "Text adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain)."
 msgstr ""
@@ -1337,12 +1301,12 @@ msgid "The <code>base</code> tag can be used to trick your site into loading scr
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_headers.html.eex:65
+#: lib/webbkoll_web/templates/site/_headers.html.eex:64
 msgid "The <strong><code>X-Content-Type-Options</code></strong> response HTTP header is a marker used by the server to indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed. This allows to opt-out of MIME type sniffing, or, in other words, it is a way to say that the webmasters knew what they were doing."
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_headers.html.eex:67
+#: lib/webbkoll_web/templates/site/_headers.html.eex:72
 msgid "The <strong><code>X-Frame-Options</code></strong> HTTP response header can be used to indicate whether or not a browser should be allowed to render a page in a <code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code> or <code>&lt;object&gt;</code>. Sites can use this to avoid <a href=\"https://en.wikipedia.org/wiki/clickjacking\">clickjacking</a> attacks, by ensuring that their content is not embedded into other sites."
 msgstr ""
 
@@ -1382,7 +1346,7 @@ msgid "The goal of the Internet community is to establish encryption as the norm
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_headers.html.eex:60
+#: lib/webbkoll_web/templates/site/_headers.html.eex:59
 msgid "The header tests are based on the ones from the <a href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP Observatory</a> scanner/grader project (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> website, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</a>."
 msgstr ""
 
@@ -1417,11 +1381,6 @@ msgid "The referrer header is privacy nightmare as it allows websites and servic
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_geolocation.html.eex:8
-msgid "The server <strong>%{domain}</strong> (%{host_ip}) appears to have been located in <strong>%{country}</strong> during our test."
-msgstr ""
-
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:160
 msgid "The use of CSP's <code>frame-ancestors</code> directive offers fine-grained control over who can frame your site."
 msgstr ""
@@ -1437,7 +1396,7 @@ msgid "There are two types: <code>localStorage</code> data is persistent (not re
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_headers.html.eex:84
+#: lib/webbkoll_web/templates/site/_headers.html.eex:91
 msgid "These headers can help minimize data disclosures."
 msgstr ""
 
@@ -1566,19 +1525,18 @@ msgid "URL to check"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_request_table.html.eex:8
-#: lib/webbkoll_web/templates/site/_request_table.html.eex:38
+#: lib/webbkoll_web/templates/site/_request_table.html.eex:7
+#: lib/webbkoll_web/templates/site/_request_table.html.eex:32
 msgid "URLs"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_geolocation.html.eex:17
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:22
 msgid "Under the GDPR, all EU/EEA countries are considered equally trustworthy, so there is no particular reason under the GDPR to consider any EU country more or less reliable or desirable than any other. The importance of the location of a server comes into play only under GDPR %{art_23}, Restrictions, where member states may invoke a number of reasons, notably national security, that enable them to void protections for visitors or web service providers."
 msgstr ""
 
 #, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:66
-#: lib/webbkoll_web/templates/site/_results_header.html.eex:93
 msgid "Unknown"
 msgstr ""
 
@@ -1611,7 +1569,7 @@ msgid "We operate on a very small budget, and servers are usually our main expen
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_request_table.html.eex:44
+#: lib/webbkoll_web/templates/site/_request_table.html.eex:38
 msgid "We use <a href=\"%{url_mozilla}\">Mozilla's version</a> of Disconnect's <a href=\"%{url_disconnect}\">open source list of trackers</a> to classify hosts."
 msgstr ""
 
@@ -1806,7 +1764,7 @@ msgid "to"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_geolocation.html.eex:15
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:20
 msgid "Some sites use CDNs &ndash; <a class=\"external\" href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in Finland."
 msgstr ""
 
@@ -1850,11 +1808,51 @@ msgid "Test results are stored in memory on our server for 24 hours. We don't sh
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/site/_headers.html.eex:75
+#: lib/webbkoll_web/templates/site/_headers.html.eex:82
 msgid "The <strong><code>X-XSS-Protection</code></strong> header has been deprecated by modern browsers and its use can introduce <strong>additional</strong> security issues on the client side. As such, it is recommended to set the header as <code>X-XSS-Protection: 0</code> in order to disable the XSS Auditor, and not allow it to take the default behavior of the browser handling the response."
 msgstr ""
 
 #, elixir-format
 #: lib/webbkoll_web/templates/site/_headers.html.eex:47
 msgid "The old recommendation was to set <code>X-XSS-Protection</code> to <code>1</code> or <code>1; mode=block</code>. However, OWASP now recommends setting it to <code>0</code>."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_headers.html.eex:45
+msgid "<code>X-Frame-Options</code> is obsolete. Use the Content Security Policy directive <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors\"><code>frame-ancestors</code></a> instead."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_headers.html.eex:74
+msgid "<strong>Note:</strong> The <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy\"><code>Content-Security-Policy</code></a> HTTP header has a <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors\"><code>frame-ancestors</code></a> directive which <a href=\"https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options\">obsoletes</a> this header for supporting browsers."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:3
+msgid "IP address"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_results_header.html.eex:88
+msgid "IP address:"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_what.html.eex:13
+msgid "Text about HTTPS partly adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain). <a href=\"%{about}\">See here</a> for more information."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:7
+msgid "The server <strong>%{domain}</strong> had the IP address <strong>%{host_ip}</strong> during our test."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:17
+msgid "When using tools that do geolocation, please note that the estimated country can be wrong, especially for websites that use CDNs."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_geolocation.html.eex:9
+msgid "You can find information about this IP address using third-party tools such as the following:"
 msgstr ""

@@ -54,11 +54,6 @@ config :webbkoll,
   # <limit> times during <scale> milliseconds.
   # See https://github.com/grempe/ex_rated
   rate_limit_client: %{"scale" => 60_000, "limit" => 20},
-  rate_limit_host: %{"scale" => 60_000, "limit" => 5},
-  # For GeoIP to work, you need to create a free account on MaxMind and get a
-  # license key. See https://dev.maxmind.com/geoip/geoip2/geolite2/.
-  # You probably want to put this in dev.secret.exs.
-  geoip_db_url: "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=YOUR_LICENSE_KEY_HERE&suffix=tar.gz",
-  geoip_db_md5_url: "https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-Country&license_key=YOUR_LICENSE_KEY_HERE&suffix=tar.gz.md5"
+  rate_limit_host: %{"scale" => 60_000, "limit" => 5}
 
 import_config "dev.secret.exs"
