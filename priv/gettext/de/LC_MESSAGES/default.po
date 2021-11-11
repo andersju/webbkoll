@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: German (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
-"PO-Revision-Date: 2021-11-11 22:30+0000\n"
+"PO-Revision-Date: 2021-11-11 22:38+0000\n"
 "Last-Translator: Anders Jensen-Urstad <anders@unix.se>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
@@ -2604,11 +2604,9 @@ msgstr ""
 "weitere Informationen."
 
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:7
-#, elixir-format, fuzzy
+#, elixir-format
 msgid "The server <strong>%{domain}</strong> had the IP address <strong>%{host_ip}</strong> during our test."
 msgstr ""
-"Der Server <strong>%{domain}</strong> (%{host_ip}) scheint sich während "
-"unseres Tests in <strong>%{country}</strong> zu befinden."
 
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:17
 #, elixir-format
