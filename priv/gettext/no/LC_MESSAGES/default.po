@@ -8,7 +8,7 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-03-25 00:07+0000\n"
+"PO-Revision-Date: 2021-10-01 06:29+0000\n"
 "Last-Translator: Tom Fredrik Blenning <bfg@efn.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.dataskydd.net/projects/"
 "webbkoll/main/nb_NO/>\n"
@@ -18,48 +18,48 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.0.4\n"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:31
+#, elixir-format
 msgid "%{count} insecure"
 msgid_plural "%{count} insecure"
 msgstr[0] "%{count} usikker"
 msgstr[1] "%{count} usikre"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:31
+#, elixir-format
 msgid "1 secure"
 msgid_plural "%{count} secure"
 msgstr[0] "1 sikker"
 msgstr[1] "%{count} sikre"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:31
+#, elixir-format
 msgid "host"
 msgid_plural "hosts"
 msgstr[0] "vert"
 msgstr[1] "verter"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:31
+#, elixir-format
 msgid "request"
 msgid_plural "requests"
 msgstr[0] "forespørsel"
 msgstr[1] "forespørsler"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:31
+#, elixir-format
 msgid "unique"
 msgid_plural "unique"
 msgstr[0] "unik"
 msgstr[1] "unike"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:74
+#, elixir-format
 msgid "%{first_party} first-party; %{third_party} third-party"
 msgstr "%{first_party} førstepart; %{third_party} tredjepart"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:77
+#, elixir-format
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security\">HTTP Strict Transport Security</a> (HSTS) is a simple and <a href=\"https://caniuse.com/#feat=stricttransportsecurity\">widely supported</a> standard to protect visitors by ensuring that their browsers always connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from <code>http://</code> to <code>https://</code> URLs."
 msgstr ""
 "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/"
@@ -70,8 +70,8 @@ msgstr ""
 "eksisterer fordi den vanlige, usikre metoden å omdirigere gjester fra "
 "<code>http://</code> til <code>https://</code>-URL'er."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:67
+#, elixir-format
 msgid "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free certificates through an easy, automated process. You can set it up yourself, or use one of the many hosting providers who have built-in support for Let's Encrypt."
 msgstr ""
 "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> er en ikke-"
@@ -80,15 +80,15 @@ msgstr ""
 "Du kan ordne med sertifikat selv, eller anvende et av mange webhotell som "
 "har innebygd støttet for Let's Encrypt."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:71
+#, elixir-format
 msgid "<a href=\"https://mozilla.github.io/server-side-tls/ssl-config-generator/\">Mozilla SSL/TLS Configuration Generator</a> [for advanced users]"
 msgstr ""
 "<a href=\"https://mozilla.github.io/server-side-tls/ssl-config-generator/\">"
 "Mozilla SSL/TLS Configuration Generator</a> [for avanserte brukere]"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:34
+#, elixir-format
 msgid "<a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> (open source) analyzes CSP, HSTS, TLS and various other things (some of the Webbkoll tests are based on code from Observatory). See also <a href=\"https://csp-evaluator.withgoogle.com/\">Google's CSP Evaluator</a>."
 msgstr ""
 "<a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> ("
@@ -96,8 +96,8 @@ msgstr ""
 "testene er baset på kode fra Observatory). Se også <a href=\"https://csp-"
 "evaluator.withgoogle.com/\">Google CSP Evaluator</a>."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:38
+#, elixir-format
 msgid "<a href=\"https://report-uri.com/home/tools\">Report URI</a> has many useful tools: CSP analyzer/builder, header analyzer (<a href=\"https://securityheaders.com/\">securityheaders.com</a>), SRI hash generator, etc."
 msgstr ""
 "<a href=\"https://report-uri.com/home/tools\">Report URI</a> har mange "
@@ -105,37 +105,37 @@ msgstr ""
 "https://securityheaders.com/\">securityheaders.com</a>), SRI-hash-generator, "
 "etc."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:12
+#, elixir-format
 msgid "<a href=\"https://tools.keycdn.com/geo?host=%{ip}\">See more information</a> (e.g., provider) about this IP address using KeyCDN's tool."
 msgstr ""
 "<a href=\"https://tools.keycdn.com/geo?host=%{ip}\">Se mer informasjon</a> ("
 "f.eks. eier) for denne IP-adressen med KeyCDN's verktøy."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:36
+#, elixir-format
 msgid "<a href=\"https://www.hardenize.com/\">Hardenize</a> is similar to Observatory, but also checks a domain's mail servers."
 msgstr ""
 "<a href=\"https://www.hardenize.com/\">Hardenize</a> ligner Observatory, men "
 "sjekker også et domenes epost-tjener."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:40
+#, elixir-format
 msgid "<a href=\"https://www.ssllabs.com/ssltest/\">Qualys SSL Server Test</a> is an excellent tool for analyzing a server's TLS/SSL configuration. <a href=\"https://testssl.sh/\">testssl.sh</a> is an open source alternative."
 msgstr ""
 "<a href=\"https://www.ssllabs.com/ssltest/\">Qualys SSL Server Test</a> er "
 "et utmerket verktøy for å analysere en tjeners TLS-/SSL-konfiguration. <a "
 "href=\"https://testssl.sh/\">testssl.sh</a> er et åpen kildekode-alternativ."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/failed.html.eex:9
+#, elixir-format
 msgid "<a href=\"https://www.ssllabs.com/ssltest/analyze.html?d=%{url}&hideResults=on\">Analyze the host on SSL Labs</a> for more information."
 msgstr ""
 "<a href=\"https://www.ssllabs.com/ssltest/analyze.html?d=%{url}&hideResults="
 "on\">Analyser på SSL Labs</a> for mer informasjon."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:50
+#, elixir-format
 msgid "<a href=\"https://www.w3.org/TR/referrer-policy/\">Several policies are offered</a>, such as <code>origin</code> (strips everything except the origin) and <code>origin-when-cross-origin</code> (sends full URL with same-origin requests, otherwise stripped). We recommend <strong><code>no-referrer</code></strong>, which kills the referrer header entirely for all requests, no matter the destination; or <strong><code>same-origin</code></strong>, which kills the referrer for third-party requests but not for requests to the same origin."
 msgstr ""
 "<a href=\"https://www.w3.org/TR/referrer-policy/\">Flere policier tilbys</a>"
@@ -147,33 +147,33 @@ msgstr ""
 "origin</code></strong>, som tar bort referrer for tredjepartsforespørsler, "
 "men ikke for forespørsler til samme kilde."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:59
+#, elixir-format
 msgid "<code>%{domain}</code> does <strong>not</strong> use HTTPS by default."
 msgstr "<code>%{domain}</code> bruker <strong>ikke</strong> HTTPS som standard."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:17
+#, elixir-format
 msgid "<code>%{domain}</code> uses HTTPS by default."
 msgstr "<code>%{domain}</code> bruker HTTPS som standard."
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:202
+#, elixir-format
 msgid "<code>'strict-dynamic'</code> lets you use a JavaScript shim loader to load all your site's JavaScript dynamically, without having to track <code>script-src</code> origins."
 msgstr ""
 "<code>'strict-dynamic'</code> lar deg bruke en \"shim loader\" i JavaScript "
 "for å laste alle ditt nettsteds skript dynamisk, uten å behøve holde rede på "
 "<code>script-src</code>-origins."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_headers.html.eex:43
+#, elixir-format
 msgid "<code>X-Content-Type-Options</code> should be set to <code>nosniff</code>, which is the only valid value."
 msgstr ""
 "<code>X-Content-Type-Options</code> bør være satt till <code>nosniff</code>, "
 "som er den eneste gyldige verdien."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_headers.html.eex:45
+#, elixir-format
 msgid "<code>X-Frame-Options</code> can be set to <code>deny</code> (page can never be loaded in a frame), <code>sameorigin</code> (page can only be loaded in a frame only if the origin is the same), or <code>allow-from &lt;URI&gt;</code> (page can only be loaded in a frame on a page on the specified origin)."
 msgstr ""
 "<code>X-Frame-Options</code> kan settes til <code>deny</code> (siden kan "
@@ -182,8 +182,8 @@ msgstr ""
 "&lt;URI&gt;</code> (sider kan bare lastes i en frame på en side med en gitt "
 "kilde)."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:57
+#, elixir-format
 msgid "<code>crossorigin</code> must be set to <code>anonymous</code> for third-party resources when using SRI. This has to do with <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes\">CORS</a>."
 msgstr ""
 "<code>crossorigin</code> må være satt til <code>anonymous</code> for "
@@ -191,14 +191,14 @@ msgstr ""
 "https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes\""
 ">CORS</a> å gjøre."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:35
+#, elixir-format
 msgid "<code>includeSubDomains</code> &mdash; policy also applies to subdomains"
 msgstr ""
 "<code>includeSubDomains</code> &mdash; policy gjelder også for underdomener"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:55
+#, elixir-format
 msgid "<code>integrity</code> should contain integrity metadata: a string describing the <a href=\"https://en.wikipedia.org/wiki/Cryptographic_hash_function\">cryptographic hash function used</a> (currently sha256, sha384, or sha512), followed by a dash, followed by the <a href=\"https://en.wikipedia.org/wiki/Base64\">base64</a>-encoded hash of the file."
 msgstr ""
 "<code>integrity</code> bør inneholde integritetsmetadata: en streng som "
@@ -207,32 +207,32 @@ msgstr ""
 "sha384, eller sha512), fulgt av den <a href=\"https://en.wikipedia.org/wiki/"
 "Base64\">base64-kodede</a> hashen av filen."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:23
+#, elixir-format
 msgid "<code>max-age</code> set to at least 6 months"
 msgstr "<code>max-age</code> satt til minst 6 måneder"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:51
+#, elixir-format
 msgid "<code>preload</code> &mdash; requests inclusion in preload lists"
 msgstr "<code>preload</code> - forespør inkludering i preload-lister"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:82
+#, elixir-format
 msgid "<strong>Authenticity</strong>. The visitor is talking to the \"real\" website, and not to an impersonator or through a \"man-in-the-middle\"."
 msgstr ""
 "<strong>Autentisitet</strong>. Gjesten prater med det \"riktige\" nettstedet "
 "og ikke med en imitator eller gjennom en \"man-in-the-middle\"."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:81
+#, elixir-format
 msgid "<strong>Confidentiality</strong>. The visitor's connection is encrypted, obscuring URLs, cookies, and other sensitive metadata."
 msgstr ""
 "<strong>Konfidensialitet</strong>. Gjestens forbindelse er kryptert, hvilket "
 "skjuler URL'er og andre sensitive metadata."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:35
+#, elixir-format
 msgid "<strong>First-party cookies</strong> are placed by the web site owner in some register on their visitors' device in order to be able to re-identify the visitor on subsequent page loads. First-party cookies can be related to technical features on a web site (such as remembering language settings or the contents of a shopping basket), or related to commercial features of the web site owners' activities (such as being able to trace a visitors' behaviour over the duration of their visit, or over much longer time periods, often for years, in order to be able to serve advertisements to the users or to get usage statistics to guide later changes to the web site that are envisaged to make the web site more attractive to recurring users). First-party cookies may come from services provided by the web site owner (language settings in a Content Management System) or from services used by the web site owner (analytics tools)."
 msgstr ""
 "<strong>Førsterpartsinformasjonskapsler</strong> plaseres av "
@@ -250,31 +250,31 @@ msgstr ""
 "nettstedsinnehaveren (f.eks. språkinnstillinger i et CMS) eller fra "
 "tredjepartstjenester som benyttes (f.eks. analyseverktøy)."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:16
+#, elixir-format
 msgid "<strong>HttpOnly</strong> means that the cookie can only be read by the server, and not by JavaScript on the client. This can mitigate XSS (cross-site scripting) attacks."
 msgstr ""
-"<strong>HttpOnly</strong> innebærer at  at informasjonskapselen kun kan "
-"leses av tjeneren , og ike av JavaScript hos klienten. Dette kan motvirke "
-"XSS-angrep (cross-site scripting)."
+"<strong>HttpOnly</strong> innebærer at informasjonskapselen kun kan leses av "
+"tjeneren og ikke av JavaScript hos klienten. Dette kan motvirke XSS-angrep "
+"(cross-site scripting)."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/donate.html.eex:8
+#, elixir-format
 msgid "<strong>If you would like to make a contribution</strong> to the general funds of Dataskydd.net (helping both Webbkoll as well as our other activities), you can transfer money to the following bank account:"
 msgstr ""
 "<strong>Om du vil bidra med en gave</strong> till Dataskydd.net (og da "
 "hjelpe såvel Webbkoll som våre andre aktiviteter) kan du overføre penger til "
 "følgende bankkonto:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:83
+#, elixir-format
 msgid "<strong>Integrity</strong>. The data sent between the visitor and the website has not been tampered with or modified."
 msgstr ""
 "<strong>Integritet</strong>. Informasjonen sendes mellom gjesten og "
 "nettstedet og har ikke blitt manipulert eller modifisert."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/failed.html.eex:24
+#, elixir-format
 msgid "<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href=\"mailto:info@dataskydd.net\">send us an email</a> (and tell us what URL you tried)! You can also try <a href=\"%{url}#alternatives\">alternative services</a>."
 msgstr ""
 "<strong>OBS</strong>: Om du er sikker på at du skrev inn URL'en riktig, og "
@@ -283,24 +283,24 @@ msgstr ""
 "med)! Du kan også prøve <a href=\"https://privacyscore.org/\""
 ">PrivacyScore</a> som et alternativ."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:18
+#, elixir-format
 msgid "<strong>SameSite</strong> can be used to instruct the browser to only send the cookie when the request is originating from the same site. This can mitigate CSRF (cross-site request forgery) attacks."
 msgstr ""
 "<strong>SameSite</strong> kan benyttes for å si at nettleseren bare sender "
 "informasjonskapsler når forespørselen kommer fra det samme nettstedet. Detta "
 "kan motvirke CSRF-angrep (cross-site request forgery)."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:17
+#, elixir-format
 msgid "<strong>Secure</strong> means that the cookie will only be sent over a secure channel (HTTPS). This can mitigate MITM (man-in-the-middle) attacks."
 msgstr ""
 "<strong>Secure</strong> innebærer at informasjonskapselen bare kan sendes "
 "over en sikker kanal (HTTPS). Dette kan motvirke MITM-angrep (man-in-the-"
 "middle)."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:39
+#, elixir-format
 msgid "<strong>Third-party cookies</strong> are placed by a service affiliated with the web site owner on the devices of visitors to the web site in order to be able to re-identity the visitor on subsequent page loads, or across different web sites. Third-party cookies are typically related to commercial features of a web site owners' activities, usually advertising, but may also relate to technical features in scripts used by a web site (such as language settings)."
 msgstr ""
 "<strong>Tredjepartsinformasjonskapsler</strong> plaserers på gjestens enhet "
@@ -311,23 +311,23 @@ msgstr ""
 "funksjoner (vanligvis reklame) men kan også væra relatert til tekniske "
 "egenskaper ved skript som benyttes av nettstedet."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:86
+#, elixir-format
 msgid "A domain instructs browsers that it has enabled HSTS by returning an HTTP header over an HTTPS connection."
 msgstr ""
 "En domene instruerer en nettleser at den har HSTS aktivert, ved å returnere "
 "en HTTP-header over en HTTPS-forbindelse."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:85
+#, elixir-format
 msgid "A plain HTTP connection can be easily monitored, modified, and impersonated. Every unencrypted HTTP request reveals information about a user’s behavior, and the interception and tracking of unencrypted browsing has become commonplace."
 msgstr ""
 "En vanlig HTTP-forbindelse kan enkelt bli avlyttet, modifisert og imitert. "
 "Hver ukrypterte  HTTP-forespørsel avslører informasjon om en brukers vaner, "
 "og sporing av ukryptert lesing har blitt vanlig."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:101
+#, elixir-format
 msgid "A primary goal of CSP is to mitigate and report XSS attacks. XSS attacks exploit the browser's trust of the content received from the server. Malicious scripts are executed by the victim's browser because the browser trusts the source of the content, even when it's not coming from where it seems to be coming from."
 msgstr ""
 "Et hovedmål for CSP er å motvirke og rapportere XSS-angrep. XSS-angrep "
@@ -335,23 +335,23 @@ msgstr ""
 "skript kjøres fra offerets nettleser ettersom nettleseren stoler på "
 "innholdets kilde, selv om det ikke kommer fra stedet det virker å komme fra."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:36
+#, elixir-format
 msgid "A referrer policy can easily be set with a &lt;meta&gt; element in your HTML. Simply include this inside the &lt;head&gt; section:"
 msgstr ""
 "En referrer policy kan enkelt settes med ett &lt;meta&gt;-element i din "
 "HTML. Inkludere helt enkelt følgende i &lt;head&gt;-seksjonen:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:24
 #: lib/webbkoll_web/templates/site/_requests.html.eex:33
+#, elixir-format
 msgid "A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains."
 msgstr ""
 "En tredjepartsforespørsel er en forespørsel som ikke gjøres til "
 "<code>%{domain}</code> eller et av dens underdomener."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:26
+#, elixir-format
 msgid "A webstore may for instance hand over the task of profiling visitors to an advertisement agency, and a public authority may have constructed its website in a way that automatically hands over behavioural data to advertisers. Advertisers are the most common and least transparent form of third parties."
 msgstr ""
 "Det kan for eksempel handle om at en netthandel overdrar oppdraget å "
@@ -360,92 +360,92 @@ msgstr ""
 "till et reklameselskap. Oftest er det reklameselskap som er tredjeparter og "
 "de minst transparente tredjeparter."
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/page_controller.ex:48
 #: lib/webbkoll_web/templates/layout/app.html.eex:54 lib/webbkoll_web/templates/page/about.html.eex:2
+#, elixir-format
 msgid "About"
 msgstr "Om"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:64
+#, elixir-format
 msgid "Accountability"
 msgstr "Ansvar"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:49
+#, elixir-format
 msgid "Accuracy"
 msgstr "Korrekthet"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:40
+#, elixir-format
 msgid "Alternatively, set the <code>Referrer-Policy</code> HTTP header, e.g.:"
 msgstr ""
 "Alternativt kan du sette HTTP-headeren <code>Referrer-Policy</code>, f.eks.:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:29
+#, elixir-format
 msgid "Alternatives and resources"
 msgstr "Alternativ og resurser"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:82
+#, elixir-format
 msgid "Always uses an <code>https://</code> connection, even when clicking on an <code>http://</code> link or after typing a domain into the location bar without specifying a protocol."
 msgstr ""
 "Bruker alltid en <code>https://</code>-forbindelse, selv når man klikker på "
 "en <code>http://</code>-lenke eller etter å ha skrevet domenet i "
 "adressefeltet uten å spesifisere en protokoll."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/error/error.html.eex:2
+#, elixir-format
 msgid "An error occurred"
 msgstr "En feil inntraff"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:33
+#, elixir-format
 msgid "An individual should be able to understand the terms of interactions with others. (5(1)(a))."
 msgstr ""
 "Det skal være tydelig for enhver hva som gjelder ved behandling av "
 "personopplysninger. (5(1)(a))."
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/page_controller.ex:11
+#, elixir-format
 msgid "Analyze"
 msgstr "Analysere"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:52
+#, elixir-format
 msgid "Analyze %{host} on SSL Labs"
 msgstr "Analyser %{host} på SSL Labs"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:264
+#, elixir-format
 msgid "Art. "
 msgstr "Art. "
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:45
+#, elixir-format
 msgid "As little data as possible to achieve the purpose should be collected .(5(1)(c))"
 msgstr ""
 "Man skal ikke samle inn flere opplysninger enn hva som er absolutt nødvendig "
 "for formålet. (5(1)(c))"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/donate.html.eex:35
+#, elixir-format
 msgid "At the moment we cannot accept Bitcoin or any other cryptocurrency."
 msgstr "Forløpig kan vi ikke ta imot Bitcoin eller noen annen kryptovaluta."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:14
+#, elixir-format
 msgid "Authors and tech"
 msgstr "Forfattere og teknikk"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:32
+#, elixir-format
 msgid "Base domain (https://%{domain}) HSTS status unknown."
 msgstr "HSTS-status for basisdomenet (https://%{domain}) ukjent."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:12
+#, elixir-format
 msgid "Behavioural monitoring, or ”profiling”, is when someone monitors how a given person, or set of persons, typically behave. This includes monitoring whether a particular group, say young people or women of a median income, frequently visit certain deeplinks, have to look up certain vocabulary or that they end up on the website through using a particular search engine or social platform. Behavioural monitoring is used to discover what certain classes of people may be assumed to find interesting, difficult or funny."
 msgstr ""
 "Oppførselskartlegging er når man titter på hvordan en viss person, eller "
@@ -455,84 +455,84 @@ msgstr ""
 "anvendes for å forutsi hva ulike kategorier mennesker kan antas å finne "
 "interessant, vanskelig eller morsomt."
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:226
+#, elixir-format
 msgid "Blocking inline styles can help prevent attackers from modifying the contents or appearance of your page. Moving styles to external stylesheets can also help make your site more maintainable."
 msgstr ""
 "Å blokkere inline styles kan hindre angripere fra å modifisere innhold eller "
 "utseendet på din side. Å flytte styles till eksterne stylesheets kan også "
 "gjøre ditt nettsted enklere å vedlikeholde."
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:218
+#, elixir-format
 msgid "Blocking the execution of inline JavaScript provides CSP's strongest protection against cross-site scripting attacks. Moving JavaScript to external files can also help make your site more maintainable."
 msgstr ""
 "Å forhindre kjøring av inline-Javascript gir CSPs sterkeste beskyttelse mot "
 "cross-site scripting angrep. Å flytte JavaScript til eksterne filer kan også "
 "gjøre ditt nettsted enklere å vedlikeholde."
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:232
+#, elixir-format
 msgid "Blocking the execution of plug-ins via <code>object-src 'none'</code> or as inherited from <code>default-src</code> can prevent attackers from loading Flash or Java in the context of your page."
 msgstr ""
 "Å blokkere kjøring av plugins via <code>object-src 'none'</code> eller som "
 "arv fra <code>default-src</code> kan hindre angripere fra å laste Flash "
 "eller Java i din sides kontekst."
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:210
+#, elixir-format
 msgid "Blocking the use of JavaScript's <code>eval()</code> function can help prevent the execution of untrusted code."
 msgstr ""
 "Å blokkere bruken av JavaScripts <code>eval()</code>-funksjon kan hjelpe til "
 "å hindre kjøring av upålitelig kode."
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:207
+#, elixir-format
 msgid "Blocks execution of JavaScript's <code>eval()</code> function by not allowing <code>'unsafe-eval'</code> inside <code>script-src</code>"
 msgstr ""
 "Blokker kjøring av JavaScripts <code>eval()</code>-funksjon ved å ikke "
 "tillate <code>'unsafe-eval'</code> inne i <code>script-src</code>"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:215
+#, elixir-format
 msgid "Blocks execution of inline JavaScript by not allowing <code>'unsafe-inline'</code> inside <code>script-src</code>"
 msgstr ""
 "Blokker kjøring av inline-JavaScript gjenom å ikke tillate <code>'unsafe-"
 "inline'</code> inne i <code>script-src</code>"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:231
+#, elixir-format
 msgid "Blocks execution of plug-ins, using <code>object-src</code> restrictions"
 msgstr ""
 "Blokker kjøring av plugins ved å bruke <code>object-src</code>-restriksjoner"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:223
+#, elixir-format
 msgid "Blocks inline styles by not allowing <code>'unsafe-inline'</code> inside <code>style-src</code>"
 msgstr ""
 "Blokker inline styles ved å ikke tillate <code>'unsafe-inline'</code> inne i "
 "<code>style-src</code>"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:187
+#, elixir-format
 msgid "Blocks loading of active content over HTTP or FTP"
 msgstr "Blokkerer lasting av aktivt innhold over HTTP eller FTP"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:193
+#, elixir-format
 msgid "Blocks loading of passive content over HTTP or FTP"
 msgstr "Blokkerer lasting av passivt innhold over HTTP eller FTP"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:91
+#, elixir-format
 msgid "By GDPR %{art_25}, a controller is responsible for implementing state of the art data protection by design and by default. Encrypted connections are a well-established technology to protect the privacy of web visitors against eavesdroppers on the wire."
 msgstr ""
 "Etter GDPR %{art_25} er behandleren ansvarlig for å implementere personvern "
 "ved design og som standard. Krypterte forbindelser er en veletablert teknikk "
 "for å beskytte den besøkendes integritet mot tyvlyttere."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:66
+#, elixir-format
 msgid "By setting a Referrer Policy, it's possible for websites to tell browsers to not leak referrers. Referrer Policy lets you specify a policy that's applied to all links clicked, as well as all other requests generated by the page (images, JS, etc.)."
 msgstr ""
 "Ved å sette en Referrer Policy er det mulig for nettsteder å si til "
@@ -540,8 +540,8 @@ msgstr ""
 "som anvendes på alle lenkeklikk, såvel som på alle andre forespørsler "
 "forårsaket av siden (bilder, JS, osv.)."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:74
+#, elixir-format
 msgid "CSP is a powerful mechanism that we strongly recommend. It allows for very fine-grained control. However, creating a good policy (or adjusting your site to work with a good policy) can take some time and effort. To make this easier, it's possible to use CSP in report-only mode."
 msgstr ""
 "CSP er en kraftig mekanisme som vi sterkt anbefaler. Det tillater svært "
@@ -549,8 +549,8 @@ msgstr ""
 "å fungerer men en god policy) kan dog ta litt tid og innsats. For å forenkle "
 "dette er det mulig å anvende CSP i \"report-only\"-modus."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:103
+#, elixir-format
 msgid "CSP makes it possible for server administrators to reduce or eliminate the vectors by which XSS can occur by specifying the domains that the browser should consider to be valid sources of executable scripts. A CSP compatible browser will then only execute scripts loaded in source files received from those whitelisted domains, ignoring all other script (including inline scripts and event-handling HTML attributes)."
 msgstr ""
 "CSP gjør det mulig for tjenerradministratorer å redusere eller eliminere "
@@ -560,60 +560,60 @@ msgstr ""
 "fra disse hvitlistede domenene, og ignorerer alle andre skript  (inklusive "
 "inline-skript og event-håndterte HTML-attributter)."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/index.html.eex:16
+#, elixir-format
 msgid "Check"
 msgstr "Sjekk"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:20
+#, elixir-format
 msgid "Check again"
 msgstr "Sjekk igjen"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/index.html.eex:12
+#, elixir-format
 msgid "Check your site!"
 msgstr "Sjekk ditt nettsted!"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:101
 #: lib/webbkoll_web/templates/site/status.html.eex:7
+#, elixir-format
 msgid "Checked URL:"
 msgstr "Testet URL:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/status.html.eex:2
+#, elixir-format
 msgid "Checking..."
 msgstr "Sjekker..."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:19
+#, elixir-format
 msgid "Chromium reports the following:"
 msgstr "Chromium rapporterer følgende:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:7
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:37
+#, elixir-format
 msgid "Classification"
 msgstr "Klassifisering"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:159
+#, elixir-format
 msgid "Clickjacking protection, using <code>frame-ancestors</code>"
 msgstr "Clickjacking-beskyttelse ved å bruke <code>frame-ancestors</code>"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:87
+#, elixir-format
 msgid "Content Security Policy (CSP) header cannot be parsed successfully."
 msgstr "Content Security Policy-header (CSP) kunne ikke leses."
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:90
+#, elixir-format
 msgid "Content Security Policy (CSP) header not implemented."
 msgstr "Content Security Policy-header (CSP) ikke implementert."
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:77
+#, elixir-format
 msgid "Content Security Policy (CSP) implemented unsafely. This includes <code>'unsafe-inline'</code> or <code>data:</code> inside <code>script-src</code>, overly broad sources such as <code>https:</code> inside <code>object-src</code> or <code>script-src</code>, or not restricting the sources for <code>object-src</code> or <code>script-src</code>."
 msgstr ""
 "Content Security Policy (CSP) er implementert på et usikkert vis. Dette "
@@ -622,51 +622,51 @@ msgstr ""
 "<code>object-src</code> eller <code>script-src</code>, eller å ikke begrense "
 "kildene for <code>object-src</code> eller <code>script-src</code>."
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:52
+#, elixir-format
 msgid "Content Security Policy (CSP) implemented with <code>default-src 'none'</code> and no <code>'unsafe'</code>"
 msgstr ""
 "Content Security Policy (CSP) implementert med <code>default-src "
 "'none'</code> og ingen <code>'unsafe'</code>"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:62
+#, elixir-format
 msgid "Content Security Policy (CSP) implemented with unsafe sources inside <code>style-src</code>. This includes <code>'unsafe-inline'</code>, <code>data:</code> or overly broad sources such as <code>https:</code>."
 msgstr ""
 "Content Security Policy (CSP) implementert med usikre kilder inne i <code"
 ">style-src</code>. Dette inkluderer <code>'unsafe-inline'</code>, "
 "<code>data:</code> eller alt for vide kilder som <code>https:</code>."
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:57
+#, elixir-format
 msgid "Content Security Policy (CSP) implemented without <code>'unsafe-inline'</code> or <code>'unsafe-eval'</code>"
 msgstr ""
 "Content Security Policy (CSP) implementert uten <code>'unsafe-inline'</code> "
 "eller <code>'unsafe-eval'</code>"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:72
+#, elixir-format
 msgid "Content Security Policy (CSP) implemented, but allows <code>'unsafe-eval'</code>"
 msgstr ""
 "Content Security Policy (CSP) implementert, men tillater <code>'unsafe-"
 "eval'</code>"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:67
+#, elixir-format
 msgid "Content Security Policy (CSP) implemented, but secure site allows images or media to be loaded over HTTP"
 msgstr ""
 "Content Security Policy (CSP) implementert, men sikkert nettsted tillater "
 "bilder eller media å lastes over HTTP"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:82
+#, elixir-format
 msgid "Content Security Policy (CSP) implemented, but secure site allows resources to be loaded over HTTP"
 msgstr ""
 "Content Security Policy (CSP) implementert, men sikkert nettsted tillater "
 "resurser å lastes over HTTP"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:99
+#, elixir-format
 msgid "Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement to distribution of malware."
 msgstr ""
 "Content Security Policy (CSP) er et ekstra lag sikkerhet som hjelper med å "
@@ -674,47 +674,47 @@ msgstr ""
 "og datainjiseringsangrep. Disse angrepene benyttes for alt fra datatyveri, "
 "og\"defacement\" til distribusjon av malware."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:14
+#, elixir-format
 msgid "Content Security Policy set in HTTP header:"
 msgstr "Content Security Policy satt i HTTP-header:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:18
+#, elixir-format
 msgid "Content Security Policy set in meta element:"
 msgstr "Content Security Policy satt i meta-element:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:3
+#, elixir-format
 msgid "Cookies"
 msgstr "Cookies"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:70
+#, elixir-format
 msgid "Cookies:"
 msgstr "Informasjonskapsler:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:6
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:32
+#, elixir-format
 msgid "Country"
 msgstr "Land"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:40
+#, elixir-format
 msgid "Data collection should occur only for specific and limited purposes. These purposes should be explicit and understandable. (5(1)(b))"
 msgstr ""
 "Personopplysninger skal samles inn for spesifikke og angitte formål. Disse "
 "formålene skal være tydelige og forståelige for den enkelte. Artikkel 13-20. "
 "(5(1)(b))"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:44
+#, elixir-format
 msgid "Data minimisation"
 msgstr "Dataminimering"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:6
+#, elixir-format
 msgid "Data protection is a human right in the European Union. It’s a collection of administrative and formal requirements for how to collect, process and use data relating to individuals. The purpose of this protection is to provide individuals with the means necessary to exercise their right to privacy. Data protection law guarantees transparency, choice and knowledge for individuals with regards to who influences them, and under which conditions."
 msgstr ""
 "Personvern er en menneskerett innen den Europeiske Union. Det eksisterer en "
@@ -724,28 +724,28 @@ msgstr ""
 "Personopplysningsloven garanterer transparens, valg og kjennskap for "
 "individer med tanke på hvordan man påvirkes og under hvilke betingelser."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:60
+#, elixir-format
 msgid "Data should be processed in a secure way, both organisatorially and technically."
 msgstr ""
 "Personopplysninger skal behandles på et sikkert vis, både organisatorisk og "
 "teknisk."
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:165
+#, elixir-format
 msgid "Deny by default, using <code>default-src 'none'</code>"
 msgstr "Nekt som standard, gjennom bruk av <code>default-src 'none'</code>"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:166
+#, elixir-format
 msgid "Denying by default using <code>default-src 'none'</code> can ensure that your Content Security Policy doesn't allow the loading of resources you didn't intend to allow."
 msgstr ""
 "Å nekte som standard gjennom å bruke <code>default-src 'none'</code> kan "
 "sikre at din Content Security Policy ikke tillater lasting av ressurser som "
 "du ikke mente skulle være tillatt."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:47
+#, elixir-format
 msgid "Depending on the purposes for collecting personal data, data minimisation may mean different things. Webbkoll makes it easy to find out how not to collect personal data and how not to inadvertently leak personal data. Should one want to collect personal data anyway, one needs to be transparent about such collection and one also needs to follow the rules in chapter 4 of the regulation. The rules of how to collect and process personal data are in place to ensure that anyone who chooses a purpose for data collection also reflects on the consequences of such choices."
 msgstr ""
 "Avhengig av hvilke formål som ligger bak innsamlingen av persondata, kan "
@@ -757,19 +757,19 @@ msgstr ""
 "er der for å sikre at enhver som vil kartlegge og spore andre behøver tenke "
 "gjennom konsekvensene av slike valg."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:27
 #: lib/webbkoll_web/templates/site/_https.html.eex:44
+#, elixir-format
 msgid "Description"
 msgstr "Beskrivelse"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/layout/app.html.eex:95
+#, elixir-format
 msgid "Developed by"
 msgstr "Utviklet av"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_what.html.eex:11
+#, elixir-format
 msgid "Disclaimer: The results presented here might not be 100% correct. Bugs happen. This tool is meant to be used by site owners as a starting point for improvements, not as a rigorous analysis."
 msgstr ""
 "Vær oppmerksom: Det er mulig at resultatene som presenteres her ikke er "
@@ -777,93 +777,93 @@ msgstr ""
 "nettstedsinnehavere som et utgangspunkt for forbedringer, ikke for å gjøre "
 "rigorøse analyser."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:6
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:18
+#, elixir-format
 msgid "Domain"
 msgstr "Domene"
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/page_controller.ex:58
 #: lib/webbkoll_web/templates/page/donate.html.eex:2
+#, elixir-format
 msgid "Donate"
 msgstr "Donere"
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/controller_helpers.ex:33
+#, elixir-format
 msgid "Error"
 msgstr "Feil"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/failed.html.eex:6
+#, elixir-format
 msgid "Error: %{error_message}"
 msgstr "Feil: %{error_message}"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/index.html.eex:30
+#, elixir-format
 msgid "Even if you enter https://, http:// will be checked, to see if it redirects to https:// automatically (redirects are followed)."
 msgstr ""
 "Selv om du skriver https:// så kommer http:// til å bli sjekket, for å se om "
 "omdirigeringer til https:// automatisk blir fulgt."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:9
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:21
+#, elixir-format
 msgid "Expires on"
 msgstr "Utløpstid"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_what.html.eex:9
+#, elixir-format
 msgid "External files such as images, scripts and CSS are loaded, but the tool performs no interactions with the page — no links are clicked, no forms are submitted."
 msgstr ""
 "Eksterne filer som bilder, skript og CSS lastes, men verktøyet interagerer "
 "ikke med siden — ingen lenker klikkes, ingen skjema fylles ut."
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/page_controller.ex:35
 #: lib/webbkoll_web/templates/layout/app.html.eex:57 lib/webbkoll_web/templates/page/faq.html.eex:2
+#, elixir-format
 msgid "FAQ"
 msgstr "Ofte Stilte Spørsmål"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/failed.html.eex:2
+#, elixir-format
 msgid "Failed"
 msgstr "Mislyktes"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/index.html.eex:32
+#, elixir-format
 msgid "Feedback is appreciated: send <a href=\"mailto:info@dataskydd.net\">email</a> or <a href=\"https://github.com/andersju/webbkoll\">open an issue</a>."
 msgstr ""
 "Tilbakemeldinger settes pris på:  <a href=\"mailto:info@dataskydd.net\""
 ">epost</a> eller <a href=\"https://github.com/andersju/webbkoll\">åpne en "
 "issue på GitHub</a>."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/layout/app.html.eex:101
+#, elixir-format
 msgid "Feedback? Questions? <a href=\"mailto:info@dataskydd.net\">info@dataskydd.net</a>"
 msgstr ""
 "Kommentarer? Spørsmål? <a href=\"mailto:info@dataskydd.net\""
 ">info@dataskydd.net</a>"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:102
+#, elixir-format
 msgid "Final URL:"
 msgstr "Avsluttende URL:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:59
+#, elixir-format
 msgid "Firefox, Safari, Opera, and Edge also incorporate Chrome’s HSTS preload list, making this feature shared across major browsers."
 msgstr ""
 "Firefox, Safari, Opera and Edge inkluderer også Chromes HSTS-preload-liste, "
 "hvilket gjør at denne funksjonen deles mellom de store nettleserne."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:8
+#, elixir-format
 msgid "First-party cookies"
 msgstr "Førstepartsinformasjonskapsler"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:55
+#, elixir-format
 msgid "For a user to take advantage of HSTS, their browser does have to see the HSTS header at least once. This means that users are not protected until after their first successful secure connection to a given domain."
 msgstr ""
 "For at en bruker skal kunne dra nytte av HSTS må brukerens nettleser se HSTS-"
@@ -871,8 +871,8 @@ msgstr ""
 "gjenomfører sin første suksessfulle forbindelse sikre forbindelse til et "
 "gitt domene."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:72
+#, elixir-format
 msgid "For checking the configuration of a server, try <a href=\"https://www.ssllabs.com/ssltest/\">SSL Labs SSL Server Test</a> (web), <a href=\"https://testssl.sh/\">testssl.sh</a> (CLI tool), <a href=\"https://github.com/mozilla/tls-observatory\">Mozilla TLS Observatory</a> (CLI tool) or <a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> (web)."
 msgstr ""
 "For å kontrollere tjenerkonfigurasjonen, se <a href=\"https://www.ssllabs."
@@ -881,24 +881,24 @@ msgstr ""
 "Mozilla TLS Observatory</a> eller <a href=\"https://observatory.mozilla.org/"
 "\">Observatory by Mozilla</a>."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:59
+#, elixir-format
 msgid "For example, given the file <a href=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js\">https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js</a>, we can calculate the SHA384 hash:"
 msgstr ""
 "For eksempel: gitt filen <a href=\"https://cdnjs.cloudflare.com/ajax/libs/"
 "jquery/3.3.1/jquery.min.js\">https://cdnjs.cloudflare.com/ajax/libs/jquery/"
 "3.3.1/jquery.min.js</a> kan vi beregne følgende SHA384-hash:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:32
+#, elixir-format
 msgid "For more rigorous and systematic testing we recommend that you check out <a href=\"https://github.com/mozilla/OpenWPM\">OpenWPM</a>, which can be (and is) used to conduct large-scale studies."
 msgstr ""
 "For mer rigorøs og systematisk testing anbefaler vi at du kikker på <a href="
 "\"https://github.com/mozilla/OpenWPM\">OpenWPM</a>, som kan brukes for å "
 "gjennomføre studier i stor skala."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:20
+#, elixir-format
 msgid "For non-EU/EEA territories, it depends (GDPR %{art_44}). For a website, transfers will probably have to rely on adequacy decisions (%{art_45}) made by the European Commission when a third territory has been deemed to have appropriate data protection safe guards in its legislation. However, adequacy decisions cannot always be trusted, as demonstrated in the EU Court of Justice 2015 (C-362/14). Binding corporate rules (%{art_47}) or standard clauses (%{art_46}) may also be used to transfer data, but in the absence of rulings by courts and data protection authorities this is still legally uncertain territory."
 msgstr ""
 "For områder utenfor EU/EØS så avhenger det av (GDPR %{art_44}).  For et "
@@ -912,8 +912,8 @@ msgstr ""
 "men uten avgjørelser fra dommer og tilsynsmyndigheter er dette juridisk "
 "usikkert område."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:112
+#, elixir-format
 msgid "GDPR %{art_32_2} makes clear that measures should be taken against unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed. CSP is a relatively simple way of ensuring that your web visitors do not end up being put in contact with someone that either they - or you - did not anticipate for them to contact."
 msgstr ""
 "GDPR %{art_32_2} gjør det klart at forholdsregler må tas mot uautorisert "
@@ -922,47 +922,47 @@ msgstr ""
 "dine gjester ikke havner i kontakt med noe du - eller de - ikke forventet "
 "seg at de skulle kontakte."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:90
+#, elixir-format
 msgid "GDPR:"
 msgstr "GDPR:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:111
 #: lib/webbkoll_web/templates/site/_headers.html.eex:83 lib/webbkoll_web/templates/site/_referrers.html.eex:70
 #: lib/webbkoll_web/templates/site/_sri.html.eex:102
+#, elixir-format
 msgid "GDPR: "
 msgstr "GDPR: "
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:38
+#, elixir-format
 msgid "GDPR: Same as for <a href=\"#cookies\">cookies</a> above."
 msgstr "GDPR: Samme som for <a href=\"#cookies\">informasjonskapsler</a> over."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/index.html.eex:31
+#, elixir-format
 msgid "Generally things work, but some sites (sometimes) don't work for various reasons."
 msgstr ""
 "Vanligvis fungerer alt, men iblant kan det være problemer med visse "
 "nettsteder av ulik art."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:25
+#, elixir-format
 msgid "German:"
 msgstr "Tysk:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:70
+#, elixir-format
 msgid "Get started with Let's Encrypt"
 msgstr "Kom i gang med Let's Encrypt"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:46
+#, elixir-format
 msgid "Good policy"
 msgstr "God policy"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:45
+#, elixir-format
 msgid "HSTS is just an HTTP header. In its simplest form, the policy tells a browser to enable HSTS for that exact domain or subdomain, and to remember it for a given number of seconds (the policy is refreshed every time browser sees the header again):"
 msgstr ""
 "HSTS er bare en HTTP-header. I dens enkleste form sier policien at en "
@@ -970,111 +970,111 @@ msgstr ""
 "huske det i et gitt antall sekunder. (policien fornyes hver gang nettleseren "
 "ser headeren igjen):"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:29
+#, elixir-format
 msgid "HSTS not set on base domain https://%{domain}"
 msgstr "HSTS er ikke satt på basisdomenenet https://%{domain}"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:2
+#, elixir-format
 msgid "HSTS policy for https://%{host}:"
 msgstr "HSTS-policy for https://%{host}:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:36
+#, elixir-format
 msgid "HTTP Strict Transport Security (HSTS) not implemented."
 msgstr "HTTP Strict Transport Security (HSTS) er ikke implementert."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_headers.html.eex:3
+#, elixir-format
 msgid "HTTP headers"
 msgstr "HTTP-headers"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:5
+#, elixir-format
 msgid "HTTPS by default"
 msgstr "HTTPS som standard"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:7
+#, elixir-format
 msgid "HTTPS by default, but with issues"
 msgstr "HTTPS som standard, men med problemer"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:31
+#, elixir-format
 msgid "HTTPS by default:"
 msgstr "HTTPS som standard:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:79
+#, elixir-format
 msgid "HTTPS encrypts nearly all information sent between a client and a web service. Properly configured, it guarantees three things:"
 msgstr ""
 "HTTPS krypterer nesten all informasjon som sendes mellom en klient og en "
 "tjener. Med rett konfigurasjon garanteres tre ting:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_headers.html.eex:12
 #: lib/webbkoll_web/templates/site/_headers.html.eex:27 lib/webbkoll_web/templates/site/_raw_headers.html.eex:10
+#, elixir-format
 msgid "Header"
 msgstr "Header"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:4
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:15
+#, elixir-format
 msgid "Host"
 msgstr "Domene"
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/page_controller.ex:49
+#, elixir-format
 msgid "How Webbkoll works, who made it, and alternative services."
 msgstr "Hvordan Webbkoll fungerer, hvem som står bak og alternative tjenester."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:5
+#, elixir-format
 msgid "How it works"
 msgstr "Hvordan det fungerer"
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/site_controller.ex:84
+#, elixir-format
 msgid "How this website is doing with regards to privacy."
 msgstr "Hvordan dette nettstedet gjør det med hensyn på personvern."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:62
 #: lib/webbkoll_web/templates/site/_headers.html.eex:37 lib/webbkoll_web/templates/site/_hsts.html.eex:41
 #: lib/webbkoll_web/templates/site/_https.html.eex:63 lib/webbkoll_web/templates/site/_referrers.html.eex:32
 #: lib/webbkoll_web/templates/site/_sri.html.eex:49
+#, elixir-format
 msgid "How to implement"
 msgstr "Hvordan det kan implementeres"
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/page_controller.ex:59
+#, elixir-format
 msgid "How you can support our work."
 msgstr "Hvordan du kan støtte vårt arbeid."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:5
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:31
+#, elixir-format
 msgid "IP"
 msgstr "IP"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:44
+#, elixir-format
 msgid "If a referrer policy is delivered via both Referrer-Policy header and meta element, the meta element's policy takes precedence."
 msgstr ""
 "Om en Referrer Policy levers med både Referrer-Policy-header og et meta-"
 "element så har meta-elementets policy preferanse."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:46
+#, elixir-format
 msgid "If multiple policy values are specified, the browser will use the last one, ignoring unknown values (fallback values should thus appear first). Multiple values should be separated by commas, e.g.:"
 msgstr ""
 "Om flere policy-verdier spesifiserer så kommer nettleseren til å benytte den "
 "siste verdien og ignorere ukjente verdier (fallback-verdien bør altså listes "
 "først). Multiple verdier bør separeres med komma, f.eks.:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/failed.html.eex:13
+#, elixir-format
 msgid "If you get the error ERR_CERT_SYMANTEC_LEGACY, it's because the site uses a Symantec certificate (includes Thawte, RapidSSL and GeoTrust) that is, or soon will be, distrusted by Chrome and Firefox. More information: <a href=\"https://security.googleblog.com/2018/03/distrust-of-symantec-pki-immediate.html\">Google</a>, <a href=\"https://blog.mozilla.org/security/2018/07/30/update-on-the-distrust-of-symantec-tls-certificates/\">Mozilla</a>, <a href=\"https://blog.qualys.com/ssllabs/2017/09/26/google-and-mozilla-deprecating-existing-symantec-certificates\">Qualys</a>"
 msgstr ""
 "Om du får feilmeldingen ERR_CERT_SYMANTEC_LEGACY så er det fordi nettstedet "
@@ -1086,28 +1086,28 @@ msgstr ""
 ">Mozilla</a>, <a href=\"https://blog.qualys.com/ssllabs/2017/09/26/google-"
 "and-mozilla-deprecating-existing-symantec-certificates\">Qualys</a>"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:52
+#, elixir-format
 msgid "Implemented, but has problems"
 msgstr "Implementert, men har problemer"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:8
+#, elixir-format
 msgid "In May 2018 a new law about data protection will enter into force in the European Union. It is a regulation and will apply equally in all the 28 member states."
 msgstr ""
 "Fra og med 2018 kommer en ny lov om personvern for EU, som kommer til å være "
 "lik i hele EU. Fram til 2018 gjaldt den gamle personopplysningsloven i Norge."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:49
+#, elixir-format
 msgid "In its <strong>strongest and recommended form</strong>, the HSTS policy includes <strong>all subdomains</strong>, and indicates a willingness to be \"preloaded\" into browsers:"
 msgstr ""
 "I sin <strong>sterkeste og anbefalte variant</strong> inkluderer HSTS-"
 "policien <strong>alla underdomener</strong> og indikerer en vilje til å \""
 "frontlastes\" i nettlesere:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:24
+#, elixir-format
 msgid "In modern web development, it’s become common for a website not to be run from only one location. When you visit a website, you’re not only entering into contact with those running the website, but also all the businesses and organisations which collaborate with the managers of the websites. These may be internet service providers, script providers, font providers, analytics tools providers and a range of other providers. If the manager of the websites hands over information about visitors to any of these third-parties, it is a form of gossiping since it is usually not evident to the visitors that this type of information is being handed over."
 msgstr ""
 "I moderne webutvikling, har det blitt vanlig for et nettsted, å ikke drives "
@@ -1120,72 +1120,72 @@ msgstr ""
 "normalt er åpenbart for besøkende hvilken type informasjon som blir "
 "overlevert."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:29
+#, elixir-format
 msgid "Info"
 msgstr "Info"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:4
+#, elixir-format
 msgid "Insecure first-party requests"
 msgstr "Usikre førstepartsforespørsler"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:10
+#, elixir-format
 msgid "Insecure: HTTPS not used by default"
 msgstr "Usikker: HTTPS anvendes ikke som standard"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:59
+#, elixir-format
 msgid "Integrity and confidentiality"
 msgstr "Integritet og konfidensialitet"
 
-#, elixir-format
 #: lib/webbkoll_web/plugs.ex:40 lib/webbkoll_web/plugs.ex:100
+#, elixir-format
 msgid "Invalid URL: %{url}"
 msgstr "Ugyldig URL: %{url}"
 
-#, elixir-format
 #: lib/webbkoll_web/plugs.ex:26
+#, elixir-format
 msgid "Invalid domain: %{domain}"
 msgstr "Ugyldig domene: %{domain}"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:50
+#, elixir-format
 msgid "Invalid header"
 msgstr "Ugyldig header"
 
-#, elixir-format
 #: lib/webbkoll_web/plugs.ex:141
+#, elixir-format
 msgid "Invalid id."
 msgstr "Ugyldig header"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:70
+#, elixir-format
 msgid "It can also be enabled with an HTML <code>&lt;meta&gt;</code> element:"
 msgstr "Det kan også aktiveres med et <code>&lt;meta&gt;</code>-element i HTML:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:14
+#, elixir-format
 msgid "It is also the categorisation of individuals into these groups. Once a web visitor is stuffed into a particular category, they may be positively or negatively discriminated against because of the categorisation."
 msgstr ""
 "Profilering er når man anvender oppførselskartlegging for å sortere "
 "mennesker i ulike grupper. Vanligvis særbehandler man siden den kartlagte "
 "gruppen basert på deres forventede preferanser."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:16
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:23
+#, elixir-format
 msgid "Key"
 msgstr "Nøkkel"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:32
+#, elixir-format
 msgid "Lawfulness, fairness and transparency"
 msgstr "Lovlighet, korrekthet og åpenhet"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:32
+#, elixir-format
 msgid "Like with cookies, <strong><a href=\"https://html.spec.whatwg.org/multipage/webstorage.html\">web storage</a></strong> can be used to store data in a user's browser. Unlike cookies, web storage data is not sent with HTTP requests: it can only be directly set and accessed by the user's browser (through JavaScript). Compared to cookies, the storage capacity is much larger."
 msgstr ""
 "Akkurat som med informasjonskapsler, kan <strong><a href=\""
@@ -1196,80 +1196,80 @@ msgstr ""
 "brukerens nettleser (gjennom JavaScript). Sammenliknet med "
 "informasjonskapsler, er lagringskapasiteten mye større."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:9
+#, elixir-format
 msgid "Limitations"
 msgstr "Begrensninger"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:188
+#, elixir-format
 msgid "Loading JavaScript or plugins can allow a man-in-the-middle to execute arbitrary code on your website. Restricting your policy and changing links to HTTPS can help prevent this."
 msgstr ""
 "Lasting av JavaScript eller utvidelser kan tillate at en \"man in the "
 "middle\" kan kjøre ondartet kode på ditt nettsted. Å gjøre din policy "
 "restriktiv og å endre lenker till HTTPS kan hjelpe til med å forhindre dette."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:95
+#, elixir-format
 msgid "Look up"
 msgstr "Slå opp"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:182
+#, elixir-format
 msgid "Malicious JavaScript or content injection could modify where sensitive form data is submitted to or create additional forms for data exfiltration."
 msgstr ""
 "Skadelige JavaScript eller innholdsinjisering  kan modifisere plassen som "
 "sensitive data sendes til, eller eksfiltrere data gjennom å skape nye skjema."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:30
+#, elixir-format
 msgid "More information"
 msgstr "Mer informasjon"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:50
+#, elixir-format
 msgid "More information about the site's TLS/SSL configuration:"
 msgstr "Mer informasjon om nettstedets TLS/SSL-konfiguration:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:7
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:19
+#, elixir-format
 msgid "Name"
 msgstr "Navn"
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/page_controller.ex:25
 #: lib/webbkoll_web/templates/layout/app.html.eex:51 lib/webbkoll_web/templates/page/news.html.eex:2
+#, elixir-format
 msgid "News"
 msgstr "Nyheter"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:20
+#, elixir-format
 msgid "No cookies detected."
 msgstr "Ingen informasjonskapsler oppdages."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:23
+#, elixir-format
 msgid "No third-party requests."
 msgstr "Ingen tredjepartsforespørsler."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:39
+#, elixir-format
 msgid "No; insecure"
 msgstr "Nei; usikker"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:26
+#, elixir-format
 msgid "Norwegian:"
 msgstr "Norsk:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:51
+#, elixir-format
 msgid "Not implemented"
 msgstr "Ikke implementert"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:53
+#, elixir-format
 msgid "Note that <code>includeSubDomains</code> should be deployed at the base domain, i.e., <code>https://example.com</code>, <em>not</em> <code>https://www.example.com</code>. While we recommend the use of <code>includeSubDomains</code>, be <strong>very</strong> careful, as it means that <strong>all subdomains</strong> associated with the parent domain <strong>must</strong> support HTTPS. (They do not have to each have their own HSTS policy.)"
 msgstr ""
 "Vær oppmerksom på at <code>includeSubDomains</code> bør settes på "
@@ -1280,18 +1280,18 @@ msgstr ""
 "<strong>må</strong> støtte HTTPS. (Hver for seg behæver de ikke ha sin egen "
 "HSTS-policy.)"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/donate.html.eex:18
+#, elixir-format
 msgid "Our address (if necessary):"
 msgstr "Vår adresse (om nødvendig):"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/donate.html.eex:28
+#, elixir-format
 msgid "Our bank's address (if necessary):"
 msgstr "Vår banks adresse (om nødvendig):"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:54
+#, elixir-format
 msgid "Particular care must be taken with regards to the period of storage (GDPR %{gdpr_art_5_1_e}). While it is technically easy for a web site owner to set the duration of a information stored in the form of cookies to a long period time, the principle of storage limitation implies a balancing act between the interest of tracking a visitors' behaviour and the interest of the visitor to keep their behaviour private. It's been established that a reasonable storage period does not exceed <a href=\"%{ec_cookies}\">one year</a>."
 msgstr ""
 "Særlig hensyn må tas med hensyn på lagringstiden GDPR %{gdpr_art_5_1_e}). "
@@ -1302,49 +1302,49 @@ msgstr ""
 "er etablert at en rimelig lagringstid ikke bør overstige <a href=\""
 "%{ec_cookies}\">et år</a>."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:27
 #: lib/webbkoll_web/templates/site/_headers.html.eex:11 lib/webbkoll_web/templates/site/_headers.html.eex:20
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:9
+#, elixir-format
 msgid "Pass"
 msgstr "OK"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:50
+#, elixir-format
 msgid "Personal data shall be accurate, and if they aren’t, there must be a procedure to correct them."
 msgstr ""
 "Personopplysninger skal stemme overens med virkeligheten og oppdateres om de "
 "er feilaktige."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:55
+#, elixir-format
 msgid "Personal data should not be saved or stored longer than necessary."
 msgstr "Man skal ikke lagre opplysninger lengre enn nødvendig."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/index.html.eex:27
+#, elixir-format
 msgid "Please note:"
 msgstr "Vær oppmerksom på:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/donate.html.eex:16
+#, elixir-format
 msgid "Please write \"Donation\" in the message field. Any amount is much appreciated! (From a Swedish bank account, the number would be 52031057715.)"
 msgstr ""
 "Vennligst skriv \"Donation\" i meldingsfeltet. Alle beløp settes pris på! ("
 "Fra en svensk bankkonto er nummeret 52031057715.)"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/failed.html.eex:4
+#, elixir-format
 msgid "Processing %{url} failed at %{time}."
 msgstr "Forsøk å teste %{url} mislyktes %{time}."
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/site_controller.ex:76
+#, elixir-format
 msgid "Processing failed"
 msgstr "Kjøringen mislyktes"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:16
+#, elixir-format
 msgid "Profiling is mostly used in the advertisement industry to decide which type of advertisements a particular individual should be exposed to. Parents of small children, or people who know parents of small children, may receive ads for nappies, prams or family vacations. Increasingly, profiling is used to determine what contents are served by newspapers. The above mentioned groups may for instance receive short articles about new-borns if they are queueing (and have little time) or longer articles about new-borns if they are on a train (and have more time)."
 msgstr ""
 "Både profilering og oppførselskartlegging er vanlig i reklameindustrien. Det "
@@ -1357,8 +1357,8 @@ msgstr ""
 "man står i en kø (og har liten tid) eller lengre artikler om nyfødte barn "
 "hvis man er på et tog (og har lengre tid)."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:18
+#, elixir-format
 msgid "Profiling may additionally be used to shape political opinions, for instance through targetting specific groups with political information, or to enact measures against groups based on their assumed characteristics. This form of political work is called ”nudging” and may also be deployed to increase acceptance of specific measures (like the construction of a public park) in specific groups (such as the individuals living near the envisaged park)."
 msgstr ""
 "Profilering kan også anvendes for å påvirke den politiske opinionen, for "
@@ -1367,194 +1367,194 @@ msgstr ""
 "formen for politisk påvirkning kalles ofte for \"nudging\" og kan også "
 "anvendes for å øke aksepten i ulike grupper for visse typer avgjørelser."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:39
+#, elixir-format
 msgid "Purpose limitation"
 msgstr "Formålsbegrensning"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_raw_headers.html.eex:3
+#, elixir-format
 msgid "Raw headers"
 msgstr "Rå headere"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:271
+#, elixir-format
 msgid "Rec. "
 msgstr "Betraktninger "
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/page_controller.ex:26
+#, elixir-format
 msgid "Recent changes on Webbkoll."
 msgstr "Siste endringer på Webbkoll."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:27
+#, elixir-format
 msgid "Referrer Policy not set. This means that the default value <code>no-referrer-when-downgrade</code>, leaking referrers in many situations, is used."
 msgstr ""
 "Referrer Policy er ikke satt. Det innebærer at standardverdien <code>no-"
 "referrer-when-downgrade</code>, som lekker referrer i mange situasjoner, "
 "benyttes."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:15
+#, elixir-format
 msgid "Referrer Policy set to <code>%{value}</code> in <code>Referrer-Policy</code> HTTP header."
 msgstr ""
 "Referrer Policy satt til <code>%{value}</code> i <code>Referrer-Policy</code"
 ">-HTTP-header."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:19
+#, elixir-format
 msgid "Referrer Policy set to <code>%{value}</code> in <code>meta http-equiv</code> element."
 msgstr ""
 "Referrer Policy satt til <code>%{value}</code> i <code>meta http-"
 "equiv</code>-element."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:23
+#, elixir-format
 msgid "Referrer Policy set to <code>%{value}</code> in <code>meta</code> element."
 msgstr ""
 "Referrer Policy satt til <code>%{value}</code> i <code>meta</code>-element."
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:31
+#, elixir-format
 msgid "Referrers are (probably) leaked"
 msgstr "Henviser lekker (antakeligvis)"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:65
 #: lib/webbkoll_web/views/site_view.ex:30
+#, elixir-format
 msgid "Referrers leaked"
 msgstr "Henviser lekker"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:63
 #: lib/webbkoll_web/views/site_view.ex:28
+#, elixir-format
 msgid "Referrers not leaked"
 msgstr "Henviser lekker ikke"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:64
 #: lib/webbkoll_web/views/site_view.ex:29
+#, elixir-format
 msgid "Referrers partially leaked"
 msgstr "Henviser lekker delvis"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:83
+#, elixir-format
 msgid "Removes the ability for users to click through warnings about invalid certificates."
 msgstr ""
 "Tar bort muligheten for brukere til å klikke seg gjennom advarsler om "
 "ugyldige sertifikat."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:9
+#, elixir-format
 msgid "Reporting (CSP, Certificate Transparency, Network Error Logging)"
 msgstr "Rapportering (CSP, Certificate Transparency, Network Error Logging)"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:15
+#, elixir-format
 msgid "Reports are not sent to a third-party."
 msgstr "Rapporter sendes ikke til en tredjepart."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:17
+#, elixir-format
 msgid "Reports are sent to a third-party."
 msgstr "Rapporter sendes til en tredjepart."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:56
+#, elixir-format
 msgid "Reports leaked"
 msgstr "Rapporter lekker"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:171
+#, elixir-format
 msgid "Restricts use of the <code>&lt;base&gt;</code> tag by using <code>base-uri 'none'</code>, <code>base-uri 'self'</code>, or specific origins"
 msgstr ""
 "Begrenser anvendelsen av <code>&lt;base&gt;</code>-elementet gjennom å bruke "
 "<code>base-uri 'none'</code>, <code>base-uri 'self'</code>, eller spesifikke "
 "kilder"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:179
+#, elixir-format
 msgid "Restricts where <code>&lt;form&gt;</code> contents may be submitted by using <code>form-action 'none'</code>, <code>form-action 'self'</code>, or specific URIs"
 msgstr ""
 "Begrenser hvor <code>&lt;form&gt;</code>-innhold kan sendes gjennom å bruke "
 "<code>form-action 'none'</code>, <code>form-action 'self'</code> eller "
 "spesifikke URI'er"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_headers.html.eex:14
 #: lib/webbkoll_web/templates/site/_headers.html.eex:29
+#, elixir-format
 msgid "Result"
 msgstr "Resultat"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:5
+#, elixir-format
 msgid "Results for"
 msgstr "Resultat for"
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/site_controller.ex:83
+#, elixir-format
 msgid "Results for %{url}"
 msgstr "Resultat for %{url}"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:53
+#, elixir-format
 msgid "SRI can be used with <code>script</code> and <code>link</code> elements. To enable SRI on an element, you need to add <code>integrity</code> and <code>crossorigin</code> attributes to it."
 msgstr ""
 "SRI kan benyttes med <code>script</code>- og <code>link</code>-element. For "
 "å aktivere SRI på et element behøver du legge til attributtet "
 "<code>integrity</code> og <code>crossorigin</code>."
 
+#: lib/webbkoll_web/templates/layout/app.html.eex:77
+#: lib/webbkoll_web/templates/layout/app.html.eex:77
 #, elixir-format
-#: lib/webbkoll_web/templates/layout/app.html.eex:77
-#: lib/webbkoll_web/templates/layout/app.html.eex:77
 msgid "Search"
 msgstr "Søk"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:72
+#, elixir-format
 msgid "See <a href=\"#raw-headers\">Raw headers</a> below for full details."
 msgstr ""
 "Se <a href=\"#raw-headers\">Rå headere</a> nedenfor for mer informasjon."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:42
+#, elixir-format
 msgid "See also <a href=\"https://infosec-handbook.eu/blog/online-assessment-tools/\">Pros and cons of online assessment tools for web server security</a> from InfoSec Handbook (a site that also has many other relevant articles)."
 msgstr ""
 "Se også <a href=\"https://infosec-handbook.eu/blog/online-assessment-tools/\""
 ">Pros and cons of online assessment tools for web server security</a> fra "
 "InfoSec Handbook (et nettsted som også har mange andra relevante artikler)."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:76
+#, elixir-format
 msgid "See the following pages for more information:"
 msgstr "Se følgende sider for mer informasjon:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:3
+#, elixir-format
 msgid "Server location"
 msgstr "Tjenerlokasjon"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:10
+#, elixir-format
 msgid "Server location for <strong>%{domain}</strong> (%{host_ip}) could not be determined."
 msgstr ""
 "Tjenerlokasjon for <strong>%{domain}</strong> (%{host_ip}) kunne ikke "
 "avgjøres."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:88
+#, elixir-format
 msgid "Server location:"
 msgstr "Tjenerlokasjon:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:54
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:38
+#, elixir-format
 msgid "Show"
 msgstr "Vis"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:67
+#, elixir-format
 msgid "Since responsibility can be a difficult burden, Webbkoll has a large set of recommendations for data protection which may go further than what one could be legally liable for. We want to enable the best possible data protection with the least amount of administrative burdens. One of the reasons the rules of the data protection regulation make it seem bureaucratic and boring not to data minimise, is so that each actor in society who wishes to influence others has to consider carefully the way in which they use such power."
 msgstr ""
 "Ettersom ansvar kan være en stor byrde har Webbkoll et stort antall "
@@ -1564,33 +1564,33 @@ msgstr ""
 "det byråkratisk og kjedelig å ikke dataminimere er at hver aktør i samfunnet "
 "som vil påvirke andre må overveier måten de bruker slik makt."
 
-#, elixir-format
 #: lib/webbkoll_web/plugs.ex:55
+#, elixir-format
 msgid "Sorry, bots aren't allowed."
 msgstr "Beklager, men boter tillates ikke."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:24
+#, elixir-format
 msgid "State"
 msgstr "Status"
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/site_controller.ex:49
+#, elixir-format
 msgid "Status"
 msgstr "Status"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/status.html.eex:8
+#, elixir-format
 msgid "Status:"
 msgstr "Status:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:54
+#, elixir-format
 msgid "Storage limitation"
 msgstr "Lagringsminimering"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:43
+#, elixir-format
 msgid "Storing information or gaining access to information stored in the visitors' devices, for instance in the form of cookies, has been subject to sui generis legislation in the European Union (<a href=\"%{epd}\">ePD, Art. 5.3</a>). These sui generis laws have tried to make a distinction between information stored to support technical features and information stored to support commercial features. In practice, poor enforcement of these rules has made the legal landscape unclear. Because there exists no legal duty for citizens to receive better targeted advertisement, nor a legal duty for citizens to assist web developers in improving web sites, it's doubtful that a legal basis exists for storing information to support commercial features without the consent of the web visitor (GDPR %{gdpr_art_7}). It is argued that the legitimate interests of a web site owner (%{gdpr_art_6_1_f}, %{gdpr_art_6_4}) may nevertheless enable them to subject a visitor to targeted ads or cause a visitor to assist the web developers. Then there must exist relevant and appropriate relationship between the web visitor and the web site owner in situations (GDPR %{gdpr_rec_47}), which calls into question the use of third-party service first-party cookies. In either case, if the legitimate interest legal basis for processing is invoked, adequate security measures must be undertaken (GDPR %{gdpr_art_32})."
 msgstr ""
 "Lagring av informasjon eller tilgang til informasjon lagret på en gjests "
@@ -1613,15 +1613,15 @@ msgstr ""
 "tredjepart. Uansett må adekvate sikkerhetsforanstaltninger settes i verk på "
 "basis av at berettiget interesse påberopes ihht.  (GDPR %{gdpr_art_32})."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:20
+#, elixir-format
 msgid "Subresource Integrity (SRI) implemented, but external resources are loaded over HTTP or use protocol-relative URLs via src=\"//...\""
 msgstr ""
 "Subresource Integrity (SRI) implementert, men eksterne resurser lastes over "
 "HTTP eller bruker protokollrelative URL'er via src=\"//...\""
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:91
+#, elixir-format
 msgid "Subresource Integrity (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a CDN) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match."
 msgstr ""
 "Subresource Integrity (SRI) er en sikkerhetsfunksjon som lar nettlesere "
@@ -1629,50 +1629,50 @@ msgstr ""
 "umanipulert. Det fungerer ved at du tilbyr en kryptografisk hash som den "
 "hentede resursen må matche."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:15
+#, elixir-format
 msgid "Subresource Integrity (SRI) is implemented and all resources are loaded from a similar origin."
 msgstr ""
 "Subresource Integrity (SRI) er implementert, og alle resurser lastes fra "
 "tilsvarende kilde."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:16
+#, elixir-format
 msgid "Subresource Integrity (SRI) is implemented and all resources are loaded securely."
 msgstr ""
 "Subresource Integrity (SRI) er implementert, og alle ressurser lastes på "
 "sikkert vis."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:17
+#, elixir-format
 msgid "Subresource Integrity (SRI) is not needed since site contains no script or link tags."
 msgstr ""
 "Subresource Integrity (SRI) behøves ikke ettersom nettstedet ikke har noen "
 "script-element."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:21
+#, elixir-format
 msgid "Subresource Integrity (SRI) not implemented, and external resources are loaded over HTTP or use protocol-relative URLs via src=\"//...\"."
 msgstr ""
 "Subresource Integrity (SRI) er ikke implementert og eksterne resurser lastes "
 "over HTTP eller bruker protokolrelative URL'er via src=\"//...\"."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:19
+#, elixir-format
 msgid "Subresource Integrity (SRI) not implemented, but all external resources are loaded over HTTPS"
 msgstr ""
 "Subresource Integrity (SRI) er ikke implementert, men alla resurser lastes "
 "over HTTPS"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:18
+#, elixir-format
 msgid "Subresource Integrity (SRI) not implemented, but all resources are loaded from a similar origin."
 msgstr ""
 "Subresource Integrity (SRI) er ikke implementert, men alla resurser lastes "
 "fra en lignende kilde."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:95
+#, elixir-format
 msgid "Subresource Integrity enables you to mitigate some risks of attacks such as this, by ensuring that the files your web application or web document fetches (from a CDN or anywhere) have been delivered without a third-party having injected any additional content into those files — and without any other changes of any kind at all having been made to those files."
 msgstr ""
 "Subresource Integrity lar deg motvirke visse angrep slik som dette, gjennom "
@@ -1681,25 +1681,25 @@ msgstr ""
 "noe ekstra innhold i filene — og uten at noen andre forandringer av noe slag "
 "har blitt utført på filene."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:26
 #: lib/webbkoll_web/templates/site/_https.html.eex:43
+#, elixir-format
 msgid "Summary"
 msgstr "Sammendrag"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/layout/app.html.eex:103
+#, elixir-format
 msgid "Support us"
 msgstr "Støtt oss"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:28
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:10
+#, elixir-format
 msgid "Test"
 msgstr "Test"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_what.html.eex:13
+#, elixir-format
 msgid "Text about HTTPS partly adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain). <a href=\"http://www.maxmind.com\">MaxMind's</a> GeoLite2 country database (CC-BY-SA 4.0) is used for GeoIP lookups. <a href=\"%{about}\">See here</a> for more information."
 msgstr ""
 "Tekst om HTTPS delvis tilpasset fra CIO Council's <a href=\""
@@ -1708,15 +1708,15 @@ msgstr ""
 "BY-SA 4.0) benyttes for GeoIP-oppslag. <a href=\"%{about}\">Se her</a> for "
 "mer informasjon."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:69
+#, elixir-format
 msgid "Text adapted from the CIO Council's <a href=\"https://https.cio.gov/\">The HTTPS-Only Standard</a> (public domain)."
 msgstr ""
 "Tekst tilpasset fra CIO Council's <a href=\"https://https.cio.gov/\">The "
 "HTTPS-Only Standard</a> (public domain)."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:30
+#, elixir-format
 msgid "The <a href=\"http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679\">general data protection regulation of the European Union</a> enters into force on the 25th of May 2018 and concerns the balancing of power being those influencing individuals (typically companies and public authorities) and the individuals themselves. Webbkoll is a tool to find out who is collecting information about individuals, and what can be done to stop invisible tracking."
 msgstr ""
 "<a href=\"http://eur-lex.europa.eu/legal-content/SV/TXT/HTML/"
@@ -1727,8 +1727,8 @@ msgstr ""
 "forsøker samle inn informasjon om enkeltindivider og å hjelpe med å stoppe "
 "usynlig sporing."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:80
+#, elixir-format
 msgid "The <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT\"><code>Expect-CT</code></a> header can be used to enforce <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Certificate_Transparency\">Certificate Transparency</a> requirements, and/or optionally send reports of Certificate Transparency violations to a specified URI."
 msgstr ""
 "Headeren <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/"
@@ -1737,8 +1737,8 @@ msgstr ""
 "Certificate_Transparency\">Certificate Transparency</a>-krav, og/eller sende "
 "rapporter om Certificate Transparency-overtredelser till en angitt URL."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:83
+#, elixir-format
 msgid "The <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Network_Error_Logging\"><code>NEL</code></a> (Network Error Logging) header instructs the user's browser to send reports about network errors (e.g. DNS resolution error, TCP or TLS connection failure, 4xx or 5xx HTTP responses) to a specified URI. It can also be configured to send reports about successful network requests. See <a href=\"https://w3c.github.io/network-error-logging/#privacy-considerations\">[1]</a>, <a href=\"https://w3c.github.io/reporting/#privacy\">[2]</a> for privacy considerations. "
 msgstr ""
 "Headeren <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
@@ -1751,15 +1751,15 @@ msgstr ""
 "https://w3c.github.io/reporting/#privacy\">[2]</a> for "
 "personvernsperspektivet på dette. "
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:28
+#, elixir-format
 msgid "The <code>Content-Security-Policy-Report-Only</code> header includes the following third-party URI(s) in its <code>report-uri</code> directive:"
 msgstr ""
 "Headeren <code>Content-Security-Policy-Report-Only</code> inkluderer "
 "følgende tredjeparts-URI(er) i direktivet <code>report-uri</code>:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:47
+#, elixir-format
 msgid "The <code>Content-Security-Policy-Report-Only</code> header's <code>report-to</code> directive, in combination with the <code>Report-To</code> header, sends violation reports to the following third-party URI(s):"
 msgstr ""
 "<code>Content-Security-Policy-Report-Only</code>-headerens <code>report-"
@@ -1767,46 +1767,46 @@ msgstr ""
 "sender overtredelsesrapporter (violation reports) til følgende tredjeparts-"
 "URI(er):"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:20
+#, elixir-format
 msgid "The <code>Content-Security-Policy</code> header includes the following third-party URI(s) in its <code>report-uri</code> directive:"
 msgstr ""
 "Headeren <code>Content-Security-Policy</code> inkluderer følgende "
 "tredjeparts-URI(er) i direktivet <code>report-uri</code>:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:38
+#, elixir-format
 msgid "The <code>Content-Security-Policy</code> header's <code>report-to</code> directive, in combination with the <code>Report-To</code> header, sends violation reports to the following third-party URI(s):"
 msgstr ""
 "<code>Content-Security-Policy</code>-headerens <code>report-to</code>-"
 "direktiv, i kombinasjon med headeren <code>Report-To</code>, sender "
 "overtredelsesrapporter (violation reports) til følgende tredjeparts-URI(er):"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:57
+#, elixir-format
 msgid "The <code>Expect-CT</code> header's <code>report-uri</code> directive instructs the browser to send reports of Expect-CT failures to the following third-party URI:"
 msgstr ""
 "<code>Expect-CT</code>-headerens <code>report-uri</code>-direktiv instruerer "
 "nettleseren til å sende rapporter om mislykkede Expect-CT til følgende "
 "tredjeparts-URI:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:64
+#, elixir-format
 msgid "The <code>NEL</code> (Network Error Logging) header's <code>report-to</code> directive, in combination with the <code>Report-To</code> header, sends reports to the following third-party URI(s):"
 msgstr ""
 "<code>NEL</code>-headerens (Network Error Logging) <code>report-to</code>-"
 "direktiv, i kombinasjon med headeren <code>Report-To</code>, sender "
 "rapporter till følgende tredjeparts-URI(er):"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:174
+#, elixir-format
 msgid "The <code>base</code> tag can be used to trick your site into loading scripts from untrusted origins."
 msgstr ""
 "Elementet <code>base</code> kan brukes for å lure ditt nettsted til å laste "
 "skript fra kilder du ikke stoler på."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_headers.html.eex:65
+#, elixir-format
 msgid "The <strong><code>X-Content-Type-Options</code></strong> response HTTP header is a marker used by the server to indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed. This allows to opt-out of MIME type sniffing, or, in other words, it is a way to say that the webmasters knew what they were doing."
 msgstr ""
 "HTTP-headeren <strong><code>X-Content-Type-Options</code></strong> er en "
@@ -1815,8 +1815,8 @@ msgstr ""
 "sniffing av MIME-type, eller med andre ord, det er en mulighet å si at "
 "nettstedsinnehaveren visste hva de gjorde."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_headers.html.eex:67
+#, elixir-format
 msgid "The <strong><code>X-Frame-Options</code></strong> HTTP response header can be used to indicate whether or not a browser should be allowed to render a page in a <code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code> or <code>&lt;object&gt;</code>. Sites can use this to avoid <a href=\"https://en.wikipedia.org/wiki/clickjacking\">clickjacking</a> attacks, by ensuring that their content is not embedded into other sites."
 msgstr ""
 "HTTP-headeren <strong><code>X-Frame-Options</code></strong> kan benyttes for "
@@ -1826,16 +1826,16 @@ msgstr ""
 "innhold ikke kan bygges inn på andre nettsteder, og på dette vis unnvike <a "
 "href=\"https://en.wikipedia.org/wiki/clickjacking\">clickjacking</a>-angrep."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:61
+#, elixir-format
 msgid "The Chrome security team allows anyone to <a href=\"https://hstspreload.org/\">submit their domain to the list</a>, provided it meets a few requirements."
 msgstr ""
 "Chromes sikkerhetsteam lar hvem som helst <a href=\"https://hstspreload.org/"
 "\">sende inn sitt domene til listen</a>, forutsatt at det oppfyller visse "
 "kriterier."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:93
+#, elixir-format
 msgid "The Content Security Policy tests are based on the ones from the <a href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP Observatory</a> scanner/grader project (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> website, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</a>. Any mistake or inaccuracy in the results is our fault."
 msgstr ""
 "Content Security Policy-testen er basert på sjekkene hos <a href=\""
@@ -1847,8 +1847,8 @@ msgstr ""
 "https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</a>. Feil "
 "eller feilaktigheter i resultatet er vår feil."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:87
+#, elixir-format
 msgid "The Subresource Integrity test is based on the one from the <a href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP Observatory</a> scanner/grader project (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll."
 msgstr ""
 "Subresource Integrity-testen er basert på <a href=\"https://github.com/"
@@ -1856,32 +1856,32 @@ msgstr ""
 "projektet (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public "
 "License 2.0</a>) av April King, gjenimplementert av oss for Webbkoll."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/layout/app.html.eex:100
+#, elixir-format
 msgid "The code is <a href=\"https://github.com/andersju/webbkoll\">available on GitHub</a>."
 msgstr ""
 "Koden er <a href=\"https://github.com/andersju/webbkoll\">tilgjengelig på "
 "GitHub</a>."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:66
+#, elixir-format
 msgid "The correct HTML code should then be:"
 msgstr "Korrekt HTML-kode bør da være:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:27
+#, elixir-format
 msgid "The following third-party resources are not loaded using SRI:"
 msgstr "Følgende tredjepartsresurser lastes uten SRI:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:86
+#, elixir-format
 msgid "The goal of the Internet community is to establish encryption as the norm, and to phase out unencrypted connections."
 msgstr ""
 "Målet for Internettfellesskapet er å etablere kryptering som normen, og fase "
 "ut ukrypterte forbindelser."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_headers.html.eex:60
+#, elixir-format
 msgid "The header tests are based on the ones from the <a href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP Observatory</a> scanner/grader project (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> website, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</a>."
 msgstr ""
 "Header-testen er basert på de fra <a href=\"https://github.com/mozilla/http-"
@@ -1892,8 +1892,8 @@ msgstr ""
 "by Mozilla</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\""
 ">CC-BY-SA 3.0</a>."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:21
+#, elixir-format
 msgid "The initial development of Webbkoll was funded by <a href=\"https://www.internetfonden.se\">Internetfonden</a> / <a href=\"https://www.iis.se\">IIS</a> in 2016. In late 2018 we received a small grant from <a href=\"https://digitalrights.fund/\">Digital Rights Fund</a>. Other than that, we maintain this tool in our spare time. You can <a href=\"%{donate}\">support our work</a>, if you wish."
 msgstr ""
 "Den initielle utviklingen av Webbkoll ble finansiert av <a href=\""
@@ -1903,14 +1903,14 @@ msgstr ""
 "dette, vedlikeholder vi vektøyet i vår fritid. Du kan <a href=\"%{donate}\">"
 "støtte vårt arbeid</a>, om du vil."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:65
+#, elixir-format
 msgid "The one responsible for the website is responsible for adherence to these principles."
 msgstr ""
 "Den som er ansvarlig for nettstedet er ansvarlig for at prinsippene følges."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:30
+#, elixir-format
 msgid "The only other similar service that we are aware of <em>that uses a real browser for testing</em> is <a href=\"https://privacyscore.org/\">PrivacyScore</a> (open source). It does many of the same checks as Webbkoll, but additionally also checks e.g. TLS, and lets you create a list of sites to check (and rank)."
 msgstr ""
 "Den eneste lignende tjenesten som vi kjenner til <em>som benytter en faktisk "
@@ -1919,8 +1919,8 @@ msgstr ""
 "Webbkoll, men sjekker eksempelvis ikke TLS, og lar deg ikke lage en liste av "
 "steder du sjekker (og rangere)."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:42
+#, elixir-format
 msgid "The purpose for collecting data may be interpreted broadly, and means anything from marketing to improving the web. At Dataskydd.net's Webbkoll we prefer methods of improving the web that do not include collecting data from private persons. That’s why we’ve compiled a large number of recommendations and tools which minimise data collection."
 msgstr ""
 "Formålet med innsamlingen er et ganske vidt begrep, og kan innbefatte alt "
@@ -1929,15 +1929,15 @@ msgstr ""
 "datainnsamling fra individer. Derfor har vi masse tips på hvordan man kan "
 "forbedre sitt nettsted i en databeskyttende retning."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_csp.html.eex:66
+#, elixir-format
 msgid "The recommended way to enable Content Security Policy is with the <code>Content-Security-Policy</code> HTTP header, e.g.:"
 msgstr ""
 "Den anbefalte måten å aktivere Content Security Policy på er med HTTP-"
 "headeren <code>Content-Security-Policy</code>, f.eks.:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:64
+#, elixir-format
 msgid "The referrer header is privacy nightmare as it allows websites and services to track you across the web and learn about your browsing habits (and thus possibly private, sensitive information), particularly when combined with cookies."
 msgstr ""
 "Referrer-headeren er et personvernmareritt da den tillater nettsteder og "
@@ -1945,27 +1945,27 @@ msgstr ""
 "potensielt sensitiv informasjon om deg), spesielt om det skjer i kombinasjon "
 "med informasjonskapsler."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:8
+#, elixir-format
 msgid "The server <strong>%{domain}</strong> (%{host_ip}) appears to have been located in <strong>%{country}</strong> during our test."
 msgstr ""
 "Tjeneren <strong>%{domain}</strong> (%{host_ip}) virket å være lokalisert i "
 "<strong>%{country}</strong> under vår test."
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:160
+#, elixir-format
 msgid "The use of CSP's <code>frame-ancestors</code> directive offers fine-grained control over who can frame your site."
 msgstr ""
 "Bruken av CSP's <code>frame-ancestors</code>-direktiv gir detaljert kontroll "
 "over hvem som kan bruke ditt nettsted i en frame."
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/page_controller.ex:37
+#, elixir-format
 msgid "The what and why of data protection and the principles of the EU general data protection regulation."
 msgstr "Hva og hvorfor om databeskyttelse og prinsippene i GDPR."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:34
+#, elixir-format
 msgid "There are two types: <code>localStorage</code> data is persistent (not removed when the browser is closed) and never expires, while <code>sessionStorage</code> data is removed when the page session ends (unlike with session cookies, a sessionStorage session is <em>per window/tab</em>)."
 msgstr ""
 "Det finnes to typer: <code>localStorage</code>-data er persistent ("
@@ -1974,44 +1974,44 @@ msgstr ""
 "motsetning til sesjonsinformasjonskapsler er en sessionStorage-sesjon <em>"
 "per vindu/tab</em>)."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_headers.html.eex:84
+#, elixir-format
 msgid "These headers can help minimize data disclosures."
 msgstr "Disse headerene kan hjelpe til å minimere lekkasje av data."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:12
+#, elixir-format
 msgid "Third-party cookies"
 msgstr "Tredjepartsinformasjonskapsler"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:20
 #: lib/webbkoll_web/templates/site/_requests.html.eex:27
+#, elixir-format
 msgid "Third-party requests"
 msgstr "Tredjepartsforespørsler"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:78
+#, elixir-format
 msgid "Third-party requests:"
 msgstr "Tredjepartsforespørsler:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:36
+#, elixir-format
 msgid "This can be used to track and profile users by simply using JavaScript to read a user's storage data and send it to a server."
 msgstr ""
 "Dette kan brukes for å spore og profilere brukere gjennom å helt enkelt "
 "benytte JavaScript for å lese en brukers storage-data og sende det til "
 "tjeneren."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:103
+#, elixir-format
 msgid "This is an easy measure to take against unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed."
 msgstr ""
 "Dette er en enkel forholdsregel mot uautorisert lekkasje eller tilgang til "
 "personlig data som blir overført, lagret eller på andre vis prosessert."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:52
+#, elixir-format
 msgid "This principle above all concerns information registered by public authorities or companies, for instance in the credit check industry. In web development, it is more common with ”fuzzy” data sets, and the consequences of being erroneously categorised in a given profiling operation is normally not worse than that one receives online advertisement which is not specifically targetted to ones own group."
 msgstr ""
 "Dette prinsippet dreier seg om førstehåndsinformasjon som registreres av "
@@ -2021,24 +2021,24 @@ msgstr ""
 "nettsporer er vanligvis ikke verre enn at man får feilaktig rettet reklame "
 "når man beveger seg i online miljøer."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:57
+#, elixir-format
 msgid "This right ties into purpose limitation and data minisation. If one follows the recommendation of Webbkoll, one does not have to concern oneself so much with this principle."
 msgstr ""
 "Denne rettigheten er forbundet med formålsbegrensning og dataminimering. "
 "Dataskydd.net:s Webbkoll gjør det enkelt å ikke behøve tenke så myce på "
 "dette prinsippet."
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:194
+#, elixir-format
 msgid "This site's Content Security Policy allows the loading of passive content such as images or videos over insecure protocols such as HTTP or FTP. Consider changing them to load them over HTTPS."
 msgstr ""
 "Nettstedets Content Security Policy tillater lasting av passivt innhold ("
 "slikt som bilder og video) over usikre protokoller som HTTP eller FTP. "
 "Vurder å endre dette slik at det lastes over HTTPS."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_what.html.eex:7
+#, elixir-format
 msgid "This tool attempts to simulate what happens when a user visits a specified page with a typical browser. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled, since this is the default setting in most browsers."
 msgstr ""
 "Dette verktøyet forsøker simulere hva som skjer når en bruker besøker en "
@@ -2046,36 +2046,36 @@ msgstr ""
 "Not Track (DNT) er ikke aktivert, ettersom det er standardinnstilling i de "
 "fleste nettlesere."
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/page_controller.ex:13
 #: lib/webbkoll_web/templates/page/index.html.eex:20
+#, elixir-format
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."
 msgstr ""
 "Webbkoll hjelper deg å sjekke hvilke personvernsfunksjoner et nettsted "
 "anvender for å hjelpe deg å utøve makt over ditt privatliv."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:12
+#, elixir-format
 msgid "This tool is primarly meant to be used as a starting point for web developers. It can only help with one piece of the puzzle."
 msgstr ""
 "Dette verktøyet er primært ment som et startpunkt for webutviklere. Det kan "
 "kun hjelpe deg med en del av puslespillet."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/index.html.eex:29
+#, elixir-format
 msgid "This tool simulates a normal browser visit with Do Not Track disabled (browser default) and with no add-ons."
 msgstr ""
 "Dette verktøyet simulerer et vanlig nettleserbesøk med Do Not Track avslått "
 "(standardinnstilling) og uten noen add-ons."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:25
 #: lib/webbkoll_web/templates/site/_https.html.eex:42
+#, elixir-format
 msgid "Title"
 msgstr "Tittel"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_https.html.eex:65
+#, elixir-format
 msgid "To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning)."
 msgstr ""
 "For å benytte HTTPS på et nettsted behøves det at et "
@@ -2084,8 +2084,8 @@ msgstr ""
 "en betrodd \"certificate authority\" (ellers kommer gjestens nettleser å "
 "vise en advarsel)."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_headers.html.eex:41
+#, elixir-format
 msgid "To enable these headers you'll need to add them to your web server configuration. This is a simple change. Exactly how you do it depends on what server you use. <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options\">This page</a> [developer.mozilla.org] has configuration examples for Apache, Nginx and IIS."
 msgstr ""
 "For å aktivere disse headerene må du legge dem til i din webtjeners "
@@ -2094,28 +2094,28 @@ msgstr ""
 "org/en-US/docs/Web/HTTP/Headers/X-Frame-Options\">Denne siden</a> "
 "[developer.mozilla.org] har konfigurasjonseksempler for Apache, Nginx og IIS."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:76
+#, elixir-format
 msgid "To make all this easier, you can use <a href=\"https://www.srihash.org/\">Mozilla's SRI Hash Generator.</a>"
 msgstr ""
 "For å gjøre dette enklere kan du benytte <a href=\"https://www.srihash.org/\""
 ">Mozillas SRI Hash Generator.</a>"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:57
+#, elixir-format
 msgid "To solve this problem, the Chrome security team created an \"HSTS preload list\": a list of domains baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit."
 msgstr ""
 "For å løse dette problemet har Chromes sikkerhetsteam laget en \"HSTS "
 "preload list\": en liste over domener innbakt i Chrome som får Strict "
 "Transport Security aktivert automatisk, selv ved første besøk."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:23
+#, elixir-format
 msgid "Translations"
 msgstr "Oversettelser"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:37
+#, elixir-format
 msgid "Transparency also means a right to find out when something gone wrong: if you’ve collected information about individuals which have leaked or disappeared, the individual has a right to know. This is called ”personal data breach notification” and specific rules are in article 34 of the regulation."
 msgstr ""
 "Det innebærer også at privatpersoner skal få vite når saker går galt: om man "
@@ -2123,40 +2123,40 @@ msgstr ""
 "bør den enkelte få vite om dette.  I direktivet heter dette ”personal data "
 "breach notification” og reglene finnes iartikkel 34."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/failed.html.eex:20
+#, elixir-format
 msgid "Try again?"
 msgstr "Forsøk igjen?"
 
-#, elixir-format
 #: lib/webbkoll_web/plugs.ex:131
+#, elixir-format
 msgid "Trying same host too frequently. Try again in a minute."
 msgstr "Samme vert blir forsøkt for ofte. Prøv igjen om ett minutt."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:32
+#, elixir-format
 msgid "Type"
 msgstr "Type"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:33
+#, elixir-format
 msgid "URL"
 msgstr "URL"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/layout/app.html.eex:76
 #: lib/webbkoll_web/templates/page/index.html.eex:15
+#, elixir-format
 msgid "URL to check"
 msgstr "URL å sjekke"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:8
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:38
+#, elixir-format
 msgid "URLs"
 msgstr "URL'er"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:17
+#, elixir-format
 msgid "Under the GDPR, all EU/EEA countries are considered equally trustworthy, so there is no particular reason under the GDPR to consider any EU country more or less reliable or desirable than any other. The importance of the location of a server comes into play only under GDPR %{art_23}, Restrictions, where member states may invoke a number of reasons, notably national security, that enable them to void protections for visitors or web service providers."
 msgstr ""
 "Under GDPR betraktes alle EU/EØS-land som like pålitelige, så det finnes "
@@ -2166,21 +2166,21 @@ msgstr ""
 "påberope en spesifikk grunn, slik som nasjonal sikkerhet, som lar dem "
 "oppheve beskyttelse for besøkende og leverandører."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:66
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:93
+#, elixir-format
 msgid "Unknown"
 msgstr "Ukjent"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:199
+#, elixir-format
 msgid "Uses CSP3's <code>'strict-dynamic'</code> directive to allow dynamic script loading (optional)"
 msgstr ""
 "Anvender CSP3's <code>'strict-dynamic'</code>-direktiv for å tillate "
 "dynamisk skriptlasting (frivillig)"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:93
+#, elixir-format
 msgid "Using Content Delivery Networks (CDNs) to host files such as scripts and stylesheets that are shared among multiple sites can improve site performance and conserve bandwidth. However, using CDNs also comes with a risk, in that if an attacker gains control of a CDN, the attacker can inject arbitrary malicious content into files on the CDN (or replace the files completely) and thus can also potentially attack all sites that fetch files from that CDN."
 msgstr ""
 "Å benytte et CDN (Content Delivery Network) for å hoste filer som skript og "
@@ -2190,45 +2190,45 @@ msgstr ""
 "på CDNet (eller bytte ut filer fullstendig), og slik potensielt angripe alle "
 "sider som henter filer fra dette CDNet."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:8
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:20 lib/webbkoll_web/templates/site/_headers.html.eex:13
 #: lib/webbkoll_web/templates/site/_headers.html.eex:28 lib/webbkoll_web/templates/site/_localstorage.html.eex:17
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:24 lib/webbkoll_web/templates/site/_raw_headers.html.eex:11
+#, elixir-format
 msgid "Value"
 msgstr "Verdi"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:19
+#, elixir-format
 msgid "We don't provide an API as we have limited resources, but <a href=\"https://github.com/andersju/webbkoll\">the code is available</a> under the MIT license. See also the options below."
 msgstr ""
 "Vi tilbyr ikke API ettersom vi har begrensede resurser og PhantomJS er "
 "ganske resurskrevende., men <a href=\"https://github.com/andersju/webbkoll\">"
 "koden er tilgjengelig</a> (MIT-licens)."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/donate.html.eex:6
+#, elixir-format
 msgid "We operate on a very small budget, and servers are usually our main expense; most work is done in our free time. Every euro (or krona) counts!"
 msgstr ""
 "Vi jobber med et veldig lite budsjett og tjenere er vår hovedutgift; større "
 "deler av arbeidet gjøres på vår fritid. Hver krone teller!"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:44
+#, elixir-format
 msgid "We use <a href=\"%{url_mozilla}\">Mozilla's version</a> of Disconnect's <a href=\"%{url_disconnect}\">open source list of trackers</a> to classify hosts."
 msgstr ""
 "Vi bruker <a href=\"%{url_mozilla}\">Mozillas version</a> av Disconnects <a "
 "href=\"%{url_disconnect}\">liste over sporere</a> for å klassifisere domener."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:22
+#, elixir-format
 msgid "We use the word gossiping to mean that information about somebody’s behaviour, reading habits or preferences is handed over to somebody other than the actor responsible for the website."
 msgstr ""
 "Vi bruker sladder om at noens oppførsel, lesevaner eller preferanser blir "
 "overført til andre enn de som er ansvarlige for nettstedet."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:7
+#, elixir-format
 msgid "Webbkoll attempts to simulate what happens when a user visits a page with a typical browser without interacting with anything. The specified page is visited with <a href=\"https://www.chromium.org/\">Chromium</a>, the browser that Google Chrome is based on; i.e., a typical end-user browser. Data (requests/responses, cookies, etc.) is collected, analyzed and presented. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled (since this is the default setting in most browsers). Nothing is clicked, no consent is given."
 msgstr ""
 "Webbkoll simulerer hva som skjer når en gjest besøker en side men en vanlig "
@@ -2240,8 +2240,8 @@ msgstr ""
 "er avslått (ettersom dette er standardinnstillingen i de fleste nettlesere). "
 "Ingenting klikkes på, ingen samtykker blir gitt."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:10
+#, elixir-format
 msgid "Webbkoll can only observe what happens when visiting a single page. It cannot tell you how the website is doing as a whole, how data is stored internally, what parties the data might be shared with, if the privacy policy is adequate, how the internal procedures are, and so on and so forth. A \"good\" Webbkoll result doesn't mean that everything is well (but a \"bad\" result certainly means that not all is well)."
 msgstr ""
 "Webbkoll kan bare observere hva som skjer ved besøk på en enkelt side. Den "
@@ -2251,8 +2251,8 @@ msgstr ""
 "resultat betyr ikke nødvendigvis at alt er bra (men et \"dårlig\" resultat "
 "betyr helt klart att alt ikke er bra)."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/donate.html.eex:4
+#, elixir-format
 msgid "Webbkoll is a project by <a href=\"https://dataskydd.net/\">Dataskydd.net Sverige</a>, a Swedish non-governmental organization (organization number 802495-4797) working on making data protection easy in law and in practice. We are not affiliated with any political party."
 msgstr ""
 "Webbkoll er et prosjekt fra <a href=\"https://dataskydd.net/\">Dataskydd.net "
@@ -2260,8 +2260,8 @@ msgstr ""
 "for å gjøre databeskyttelse enklere i jusen og praksis. Vi er partipolitisk "
 "uavhengige."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:15
+#, elixir-format
 msgid "Webbkoll is developed by <a href=\"https://anders.unix.se/\">Anders Jensen-Urstad</a> (programming, design) and <a href=\"https://twitter.com/teirdes\">Amelia Andersdotter</a> (FAQ, legislative information) of <a href=\"https://dataskydd.net/\">Dataskydd.net</a>, a Swedish non-governmental organization working on making data protection easy in law and in practice. We are not affiliated with any political party."
 msgstr ""
 "Webbkoll utvilkes av <a href=\"https://anders.unix.se/\">Anders Jensen-"
@@ -2271,8 +2271,8 @@ msgstr ""
 "som jobber for å gjøre databeskyttelse enkelt juridisk og praktisk. Vi er "
 "partipolitisk uavhengige."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:62
+#, elixir-format
 msgid "Webbkoll makes it easy to see which technical protection mechanisms for data protection are in place in a given website. We have identified measures which should not require large organisational changes, or increase web management costs. Most of our recommendations are simple enough to implement, and they are cost neutral. Our goal is to make it as easy as possible for individuals to exercise their rights to privacy and data protection, and also to provide web designers and managers with simple ”rules of thumb” to help individuals exercise these rights."
 msgstr ""
 "Dataskydd.net's Webbkoll gjør det enkelt å se hvilke tekniske "
@@ -2283,8 +2283,8 @@ msgstr ""
 "utøve sine rettigheter, samtidig som de som bygger nettsteder får enkle "
 "tommelfingerregler for å hjelpe individer å benytte denne muligheten."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:3
+#, elixir-format
 msgid "Webbkoll monitors privacy-enhancing features on websites, and helps you find out who is letting you exercise control over your privacy. We check to what extent a website monitors your behaviour and how much they gossip about the monitoring to third parties, based on what can be observed when visiting a given page. We’ve also compiled a set of recommendations for how to not track or gossip in digital environments."
 msgstr ""
 "Webbkoll undersøker personvernfremmende funksjoner på nettsteder og hjelper "
@@ -2294,8 +2294,8 @@ msgstr ""
 "side. Vi har også sammenstilt anbefalinger for hvordan man som "
 "nettstedsinnehaver kan unngå å sladre i digitale miljøer."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:35
+#, elixir-format
 msgid "Webbkoll see lawfulness, fairness and transparency as a requirement that individuals should understand with whom they are in contact by visiting a website. If an advertisement agency or some other company, such as an internet service provider, has easy access to behavioural data the individual should know. If an individual may be influenced by these parties, again they should be able to know. An individual should not have to master web development or  have a need for advanced technical tools to find this out. While the principle of transparency is simple, permissible deviations from transparency are listed in articles 13-20 of the regulation."
 msgstr ""
 "På Dataskydd.net:s Webbkoll ser vi dette som at individer skal ha en "
@@ -2308,8 +2308,8 @@ msgstr ""
 "men vil man ikke være helt transparent finnes det bestemmelser om hva man "
 "ikke for lov å la være å fortelle om i direktivets artikler 13-20."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:17
+#, elixir-format
 msgid "Webbkoll uses <a href=\"http://www.phoenixframework.org/\">Phoenix Framework</a> (Elixir), <a href=\"https://github.com/GoogleChrome/puppeteer\">Puppeteer</a> and numerous open source libraries; <a href=\"https://github.com/andersju/webbkoll#credits--licenses\">see here</a> for specifics."
 msgstr ""
 "Webbkoll bruker <a href=\"http://www.phoenixframework.org/\">Phoenix "
@@ -2318,38 +2318,38 @@ msgstr ""
 "https://github.com/andersju/webbkoll#credits--licenses\">se her</a> for mer "
 "informasjon."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:28
+#, elixir-format
 msgid "What are the principles of the EU general data protection regulation?"
 msgstr "Hvilke allmenne prinsipper gjelder for GDPR?"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:20
+#, elixir-format
 msgid "What do you mean by ”gossiping to third-parties”?"
 msgstr "Hva mener dere med at et nettsted \"sladrer\" til en tredjepart?"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:4
+#, elixir-format
 msgid "What is data protection?"
 msgstr "Hva er databeskyttelse?"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:10
+#, elixir-format
 msgid "What is ”behavioural monitoring”?"
 msgstr "Hva er \"oppførselskartlegging\" og profilering?"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_what.html.eex:3
+#, elixir-format
 msgid "What this tool checks (and doesn't check) "
 msgstr "Hva sjekker dette vertøyet (og hva sjekker det ikke) "
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:79
+#, elixir-format
 msgid "When a browser knows that a domain has enabled HSTS, it does two things:"
 msgstr "Når en nettleser vet at et domene har aktivert HSTS gjør den to ting:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_sri.html.eex:72
+#, elixir-format
 msgid "When the browser sees this element, it will download <code>jquery.min.js</code>, calculate the SHA384 hash, compare it to the hash in the <code>integrity</code> attribute, and only run the script if the hashes match. For example, if someone were to modify <code>jquery.min.js</code> on the remote server after we calculcated the original hash, Firefox would refuse to run the script and you'd see this in the browser console:"
 msgstr ""
 "Når nettleseren ser dette elementet så kommer den til å laste ned "
@@ -2360,8 +2360,8 @@ msgstr ""
 "opprinnelige hashen så vil Firefox nekte å kjøre skriptet, og du vil se "
 "følgende i nettleserkonsollen:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:62
+#, elixir-format
 msgid "When you click on a link, your browser will typically send the HTTP referer [sic] header to the webserver where the destination webpage is at. The header contains the full URL of the page you came from. This lets sites see where traffic comes from. The header is also sent when external resources (such as images, fonts, JS and CSS) are loaded."
 msgstr ""
 "Når du klikker på en lenke så sender din nettleser vanligvis HTTP-headeren "
@@ -2370,117 +2370,117 @@ msgstr ""
 "Headeren sendes også når eksterne resurser (slik som bilder, fonter, skript "
 "og CSS) lastes."
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:99
+#, elixir-format
 msgid "X-Content-Type-Options header cannot be recognized"
 msgstr "X-Content-Type-Options-header kan ikke identifiseres"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:96
+#, elixir-format
 msgid "X-Content-Type-Options header not implemented"
 msgstr "X-Content-Type-Options-header er ikke implementert"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:93
+#, elixir-format
 msgid "X-Content-Type-Options header set to \"nosniff\""
 msgstr "X-Content-Type-Options-header satt til \"nosniff\""
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:114
+#, elixir-format
 msgid "X-Frame-Options (XFO) header cannot be recognized"
 msgstr "X-Frame-Options-header (XFO) kan ikke identifiseres"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:111
+#, elixir-format
 msgid "X-Frame-Options (XFO) header not implemented"
 msgstr "X-Frame-Options-header (XFO) er ikke implementert"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:105
+#, elixir-format
 msgid "X-Frame-Options (XFO) header set to SAMEORIGIN or DENY"
 msgstr "X-Frame-Options-header (XFO) er satt till SAMEORIGIN eller DENY"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:108
+#, elixir-format
 msgid "X-Frame-Options (XFO) header uses ALLOW-FROM uri directive"
 msgstr "X-Frame-Options-header (XFO) header benytter ALLOW-FROM uri-direktiv"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:102
+#, elixir-format
 msgid "X-Frame-Options (XFO) implemented via the CSP frame-ancestors directive"
 msgstr "X-Frame-Options (XFO) implementert via CSP-direktivet frame-ancestors"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:134
+#, elixir-format
 msgid "X-XSS-Protection header cannot be recognized"
 msgstr "X-XSS-Protection-header kan ikke identifiseres"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:131
+#, elixir-format
 msgid "X-XSS-Protection header not implemented"
 msgstr "X-XSS-Protection-header er ikke implementert"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:123
+#, elixir-format
 msgid "X-XSS-Protection header not needed due to strong Content Security Policy (CSP) header"
 msgstr ""
 "X-XSS-Protection-header behøves ikke grunnet sterk Content Security Policy-"
 "header (CSP)"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:128
+#, elixir-format
 msgid "X-XSS-Protection header set to \"0\" (disabled)"
 msgstr "X-XSS-Protection-header satt til \"0\" (deaktivert)"
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:120
+#, elixir-format
 msgid "X-XSS-Protection header set to \"1\""
 msgstr "X-XSS-Protection-header satt til \"1\""
 
-#, elixir-format
 #: lib/webbkoll_web/views/site_view.ex:117
+#, elixir-format
 msgid "X-XSS-Protection header set to \"1; mode=block\""
 msgstr "X-XSS-Protection-header satt til \"1; mode=block\""
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:34
+#, elixir-format
 msgid "Yes"
 msgstr "Ja"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:36
+#, elixir-format
 msgid "Yes, but has issues"
 msgstr "Ja, men har problemer"
 
-#, elixir-format
 #: lib/webbkoll_web/plugs.ex:117
+#, elixir-format
 msgid "You're requesting too frequently. Install locally?"
 msgstr ""
 "Du sender litt for mange forespørsler. Hva med å installere verktøyet lokalt "
 "istedet?"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:53
+#, elixir-format
 msgid "[only relevant for base domain]"
 msgstr "[kun relevant for basisdomener]"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:9
+#, elixir-format
 msgid "localStorage not used."
 msgstr "localStorage benyttes ikke."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:11
+#, elixir-format
 msgid "localStorage used:"
 msgstr "localStorage benyttes:"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_requests.html.eex:31
+#, elixir-format
 msgid "to"
 msgstr "til"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:15
+#, elixir-format
 msgid "Some sites use CDNs &ndash; <a class=\"external\" href=\"https://en.wikipedia.org/wiki/Content_delivery_network\">content delivery networks</a> &ndash; in which case the server location might vary depending on the location of the visitor. This tool, Webbkoll, is currently on a server in Finland."
 msgstr ""
 "Vær oppmerksom på at en del nettsteder anvender CDN'er &ndash; <a href=\""
@@ -2489,8 +2489,8 @@ msgstr ""
 "gjesten befinner seg. Dette verktøyet, Webbkoll, kjører akkurat nå på en "
 "tjener i Finland."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:77
+#, elixir-format
 msgid "The Content Security Policy (CSP) directive <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri\"><code>report-uri</code></a>, or <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to\"><code>report-to</code></a> in combination with a <code>Report-To</code> header, instructs the user's browser to send a <a href=\"https://w3c.github.io/webappsec-csp/#report-violation\">violation report</a> to specified URI(s) if the CSP is violated. Each report is a JSON object containing information about the violation, including, among other things, the URL of the document where it occurred, and referrer information. While reporting is useful for developers to find and fix bugs, it can also be used for tracking purposes."
 msgstr ""
 "Content Security Policy-direktivet (CSP) <a href=\"https://developer.mozilla."
@@ -2506,52 +2506,55 @@ msgstr ""
 "være nyttig for utviklere for å finne og fikse feil, men kan også brukes i "
 "sporingsøyemed."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:71
+#, elixir-format
 msgid "Setting referrer policy is an easy way to do data minimization (%{art_5_1_c}) and help ensure that you don't transfer or disclose personal data needlessly (%{art_32_2})."
 msgstr ""
 "Å sette en referrer policy er en enkel måte å indikere dataminimering "
 "(%{art_5_1_c}) og bidra til at du ikke overfører eller avslører "
 "personopplysninger unødvendig. (%{art_32_2})."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:84
+#, elixir-format
 msgid "1 unique host"
 msgid_plural "%{count} unique hosts"
 msgstr[0] "1 unik vert"
 msgstr[1] "%{count} unike verter"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:82
+#, elixir-format
 msgid "request to"
 msgid_plural "requests to"
 msgstr[0] "forespørsel til"
 msgstr[1] "forespørsler til"
 
-#, elixir-format
 #: lib/webbkoll_web/templates/page/index.html.eex:25
+#, elixir-format
 msgid "Due to abuse Webbkoll will, until further notice, throw away query parameters and path from the URL you enter; i.e., if you enter <code>http://example.com/foo/?bar=42</code>, <code>http://example.com</code> will be checked."
 msgstr ""
+"Grunnet misbruk vil Webbkoll inntil vider forkaste query-parametere og stier "
+"fra URLer du skriver inn. F.eks. hvis du skriver <code>http://example.com/"
+"foo/?bar=42</code>, blir  <code>http://example.com</code> sjekket."
 
-#, elixir-format
 #: lib/webbkoll_web/controllers/site_controller.ex:43
+#, elixir-format
 msgid "ID not found"
 msgstr ""
 
-#, elixir-format, fuzzy
 #: lib/webbkoll_web/templates/layout/app.html.eex:92
+#, elixir-format, fuzzy
 msgid "Test results are stored in memory on our server for 24 hours. We don't show a list of tested URLs. We don't use URLs or test results. We don't log IP addresses. We use one essential session cookie, _webbkoll_key, to prevent CSRF attacks."
 msgstr ""
 "Testresultatet lagres i vår tjeneres minne  i 24 timer. Vi viser ikke en "
 "liste over testede URL'er. Vi bruker ikke URL'er eller testresultat. Vi "
 "logger ikke IP-adresser og vi anvender ikke informasjonskapsler."
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_headers.html.eex:75
+#, elixir-format
 msgid "The <strong><code>X-XSS-Protection</code></strong> header has been deprecated by modern browsers and its use can introduce <strong>additional</strong> security issues on the client side. As such, it is recommended to set the header as <code>X-XSS-Protection: 0</code> in order to disable the XSS Auditor, and not allow it to take the default behavior of the browser handling the response."
 msgstr ""
 
-#, elixir-format
 #: lib/webbkoll_web/templates/site/_headers.html.eex:47
+#, elixir-format
 msgid "The old recommendation was to set <code>X-XSS-Protection</code> to <code>1</code> or <code>1; mode=block</code>. However, OWASP now recommends setting it to <code>0</code>."
 msgstr ""
