@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
 "PO-Revision-Date: 2022-03-30 08:22+0000\n"
-"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -114,8 +114,8 @@ msgstr ""
 msgid "<a href=\"https://www.ssllabs.com/ssltest/\">Qualys SSL Server Test</a> is an excellent tool for analyzing a server's TLS/SSL configuration. <a href=\"https://testssl.sh/\">testssl.sh</a> is an open source alternative."
 msgstr ""
 "<a href=\"https://www.ssllabs.com/ssltest/\">Qualys SSL Server Test</a> ist "
-"ein hervorragendes Werkzeug zur Analyse der TLS/SSL-Konfiguration eines "
-"Servers. <a href=\"https://testssl.sh/\">testssl.sh</a> ist eine Open-Source-"
+"ein hervorragendes Tool zur Analyse der TLS/SSL-Konfiguration eines Servers. "
+"<a href=\"https://testssl.sh/\">testssl.sh</a> ist eine Open-Source-"
 "Alternative."
 
 #: lib/webbkoll_web/templates/site/failed.html.eex:9
@@ -799,8 +799,8 @@ msgstr "Fehler: %{error_message}"
 #, elixir-format
 msgid "Even if you enter https://, http:// will be checked, to see if it redirects to https:// automatically (redirects are followed)."
 msgstr ""
-"Auch wenn Du https:// eingibst, prüfen wir http:// und ob es automatisch auf "
-"eine https://-Seite führt (Weiterleitungen wird gefolgt)."
+"Auch wenn du »https://« eingibst, wird »http://« überprüft, um zu sehen, ob "
+"es automatisch zu »https://« weiterleitet (Weiterleitungen wird gefolgt)."
 
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:9
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:21
