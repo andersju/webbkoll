@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
 "PO-Revision-Date: 2022-03-29 16:16+0000\n"
-"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -252,8 +252,8 @@ msgstr ""
 #, elixir-format
 msgid "<strong>Integrity</strong>. The data sent between the visitor and the website has not been tampered with or modified."
 msgstr ""
-"<strong>Integrität</strong>. Zwischen einem Besucher und dem Betreiber einer "
-"Website ausgetauschte Daten wurden nicht manipuliert oder verändert."
+"<strong>Integrität</strong>. Die zwischen dem Besucher und der Website "
+"übermittelten Daten wurden nicht manipuliert oder verändert."
 
 #: lib/webbkoll_web/templates/site/failed.html.eex:24
 #, elixir-format
