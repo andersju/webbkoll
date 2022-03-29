@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: German (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
-"PO-Revision-Date: 2022-03-29 15:29+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-03-29 16:10+0000\n"
+"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -204,9 +204,8 @@ msgstr "<code>preload</code> &mdash; fordert Einbindung in der Preload-Liste an"
 #, elixir-format
 msgid "<strong>Authenticity</strong>. The visitor is talking to the \"real\" website, and not to an impersonator or through a \"man-in-the-middle\"."
 msgstr ""
-"<strong>Authentizität</strong>. Ein Besucher befindet sich auf der „echten“ "
-"Website und nicht auf irgendeiner, die etwas vorgibt zu sein oder auf der "
-"eines „Man-in-the-Middle“."
+"<strong>Authentizität</strong>. Ein Besucher interagiert mit dem „echten“ "
+"Webauftritt und nicht mit einem Imitat oder über einen „Man-in-the-Middle“."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:81
 #, elixir-format
