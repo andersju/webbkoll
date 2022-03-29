@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
 "PO-Revision-Date: 2022-03-29 16:20+0000\n"
-"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -259,28 +259,27 @@ msgstr ""
 #, elixir-format
 msgid "<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href=\"mailto:info@dataskydd.net\">send us an email</a> (and tell us what URL you tried)! You can also try <a href=\"%{url}#alternatives\">alternative services</a>."
 msgstr ""
-"<strong>Hinweis</strong>: Wenn Du sicher bist die URL richtig eingegeben zu "
-"haben und diese bei Dir funktioniert, dann könnte der Fehler bei uns liegen. "
-"In diesem Fall <a href=\"mailto:info@dataskydd.net\">schreibe uns bitte eine "
-"Email </a> (und sage uns, welche URL Du benutzt hast)! Als Alternative "
-"kannst Du auch <a href=\"https://privacyscore.org/\">PrivacyScore</a> "
-"ausprobieren."
+"<strong>Hinweis</strong>: Wenn du dir sicher bist, dass du die URL richtig "
+"eingegeben hast und dass die URL bei dir funktioniert, dann könnte der "
+"Fehler bei uns liegen. Bitte <a href=\"mailto:info@dataskydd.net\">sende uns "
+"eine E-Mail</a> (und sag uns, welche URL du verwendet hast)! Du kannst auch <"
+"a href=\"%{url}#alternatives\">alternative Dienste</a> ausprobieren."
 
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:18
 #, elixir-format
 msgid "<strong>SameSite</strong> can be used to instruct the browser to only send the cookie when the request is originating from the same site. This can mitigate CSRF (cross-site request forgery) attacks."
 msgstr ""
-"<strong>SameSite</strong> wird verwendet um dem Browser mitzuteilen, dass er "
-"nur dann Cookies senden darf, wenn die Anfrage von der gleichen Seite "
-"stammt. Das verhindert CSRF (Cross-Site Request Forgery) Angriffe."
+"<strong>SameSite</strong> wird verwendet, um dem Browser mitzuteilen, dass "
+"er nur dann Cookies senden darf, wenn die Anfrage von der gleichen Seite "
+"stammt. Das verhindert CSRF-Angriffe (Cross-Site Request Forgery)."
 
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:17
 #, elixir-format
 msgid "<strong>Secure</strong> means that the cookie will only be sent over a secure channel (HTTPS). This can mitigate MITM (man-in-the-middle) attacks."
 msgstr ""
 "<strong>Secure</strong> bedeutet, dass ein Cookie nur über eine sichere "
-"(HTTPS) Verbindung gesendet wird. Das verhindert MITM (Man-in-the-Middle) "
-"Angriffe."
+"(HTTPS) Verbindung gesendet wird. Das verhindert MITM-Angriffe (Man-in-the-"
+"Middle)."
 
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:39
 #, elixir-format
