@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
 "PO-Revision-Date: 2022-03-29 15:20+0000\n"
-"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -97,10 +97,10 @@ msgstr ""
 #, elixir-format
 msgid "<a href=\"https://report-uri.com/home/tools\">Report URI</a> has many useful tools: CSP analyzer/builder, header analyzer (<a href=\"https://securityheaders.com/\">securityheaders.com</a>), SRI hash generator, etc."
 msgstr ""
-"<a href=\"https://report-uri.com/home/tools\">Report URI</a> bietet Dir "
+"<a href=\"https://report-uri.com/home/tools\">Report URI</a> verfügt über "
 "viele nützliche Tools: CSP Analyzer/Builder, Header Analyzer (<a href=\""
 "https://securityheaders.com/\">securityheaders.com</a>), SRI-Hash-Generator "
-"etc."
+"usw."
 
 #: lib/webbkoll_web/templates/page/about.html.eex:36
 #, elixir-format
@@ -133,10 +133,10 @@ msgstr ""
 "werden angeboten</a> wie zum Beispiel <code>origin</code> (entfernt alles) "
 "oder <code>origin-when-cross-origin</code> (sendet volle URL nur innerhalb "
 "der Domain, entfernt alles andere). Wir empfehlen <strong><code>no-"
-"referrer</code></strong>, das einen Referrer Header für alle Anfragen "
+"referrer</code></strong>, das einen Referrer-Header für alle Anfragen "
 "vollständig entfernt, unabhängig woher diese kommt oder <strong><code>same-"
-"origin</code></strong>, das den Referer für alle Drittanfragen entfernt aber "
-"nicht für Anfragen innerhalb des Ursprungsdomain."
+"origin</code></strong>, das den Referrer für alle Drittanfragen entfernt, "
+"aber nicht für Anfragen innerhalb der Ursprungsdomain."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:59
 #, elixir-format
