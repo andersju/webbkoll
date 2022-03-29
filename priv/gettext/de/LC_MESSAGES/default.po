@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: German (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
-"PO-Revision-Date: 2022-03-29 17:29+0000\n"
+"PO-Revision-Date: 2022-03-29 17:56+0000\n"
 "Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
@@ -540,7 +540,7 @@ msgstr ""
 "CSP ist ein leistungsstarker Mechanismus, den wir dringend empfehlen. Es "
 "ermöglicht eine sehr feinkörnige Steuerung. Die Erstellung einer guten "
 "Richtlinie (oder die Anpassung einer Website, um mit einer guten Richtlinie "
-"zusammen zu arbeiten) kann Zeit und Mühe in Anspruch nehmen. Um das zu "
+"zu funktionieren) kann Zeit und Mühe in Anspruch nehmen. Um das zu "
 "erleichtern, ist es möglich, eine CSP im reinen Report-Modus zu verwenden."
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:103
@@ -652,15 +652,15 @@ msgstr ""
 #, elixir-format
 msgid "Content Security Policy (CSP) implemented, but secure site allows images or media to be loaded over HTTP"
 msgstr ""
-"Eine Content Security Policy (CSP) gefunden, erlaubt aber das Nachladen von "
-"Bildern oder Medien über unverschlüsseltes HTTP"
+"Content Security Policy (CSP) gefunden, diese erlaubt aber das Laden von "
+"Bildern oder Medien über HTTP"
 
 #: lib/webbkoll_web/views/site_view.ex:82
 #, elixir-format
 msgid "Content Security Policy (CSP) implemented, but secure site allows resources to be loaded over HTTP"
 msgstr ""
-"Eine Content Security Policy (CSP) gefunden, diese erlaubt aber das "
-"Nachladen von Ressourcen über unverschlüsseltes HTTP"
+"Content Security Policy (CSP) gefunden, diese erlaubt aber das Laden von "
+"Ressourcen über HTTP"
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:99
 #, elixir-format
