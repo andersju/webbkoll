@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
 "PO-Revision-Date: 2022-03-29 17:29+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -204,8 +204,8 @@ msgstr "<code>preload</code> &mdash; fordert Einbindung in der Preload-Liste an"
 #, elixir-format
 msgid "<strong>Authenticity</strong>. The visitor is talking to the \"real\" website, and not to an impersonator or through a \"man-in-the-middle\"."
 msgstr ""
-"<strong>Authentizität</strong>. Ein Besucher interagiert mit dem „echten“ "
-"Webauftritt und nicht mit einem Imitat oder über einen „Man-in-the-Middle“."
+"<strong>Authentizität</strong>. Ein Besucher interagiert mit der „echten“ "
+"Website und nicht mit einem Imitat oder über einen „Man-in-the-Middle“."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:81
 #, elixir-format
@@ -221,16 +221,16 @@ msgstr ""
 "<strong>First-Party-Cookies</strong> werden vom Website-Betreiber auf dem "
 "Gerät des Besuchers platziert, um diesen bei späteren Seitenaufrufen "
 "wiedererkennen zu können. First-Party-Cookies können mit technischen "
-"Merkmalen eines Webauftritts zusammenhängen (z. B. Spracheinstellungen oder "
-"den Inhalt eines Warenkorbs merken) oder mit kommerziellen Merkmalen (z. B. "
-"das Verhalten eines Besuchers über die Dauer seines Besuchs oder über einen "
+"Merkmalen einer Website zusammenhängen (z. B. Spracheinstellungen oder den "
+"Inhalt eines Warenkorbs merken) oder mit kommerziellen Merkmalen (z. B. das "
+"Verhalten eines Besuchers über die Dauer seines Besuchs oder über einen "
 "deutlich längeren Zeitraum von mehreren Jahren zu verfolgen, um Werbung "
-"ausliefern zu können oder Nutzungsstatistiken zu erhalten, womit der "
-"Webauftritt so geändert werden kann, dass dieser für wiederkehrende Besucher "
-"attraktiver wird). First-Party-Cookies können von Diensten stammen, die vom "
-"Website-Betreiber bereitgestellt werden (Spracheinstellungen in einem "
-"Content-Management-System), oder von Diensten, die vom Website-Betreiber "
-"genutzt werden (Analysetools)."
+"ausliefern zu können oder Nutzungsstatistiken zu erhalten, womit die Website "
+"so geändert werden kann, dass diese für wiederkehrende Besucher attraktiver "
+"wird). First-Party-Cookies können von Diensten stammen, die vom Website-"
+"Betreiber bereitgestellt werden (Spracheinstellungen in einem Content-"
+"Management-System), oder von Diensten, die vom Website-Betreiber genutzt "
+"werden (Analysetools)."
 
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:16
 #, elixir-format
@@ -252,7 +252,7 @@ msgstr ""
 #, elixir-format
 msgid "<strong>Integrity</strong>. The data sent between the visitor and the website has not been tampered with or modified."
 msgstr ""
-"<strong>Integrität</strong>. Die zwischen dem Besucher und dem Webauftritt "
+"<strong>Integrität</strong>. Die zwischen dem Besucher und der Website "
 "übermittelten Daten wurden nicht manipuliert oder verändert."
 
 #: lib/webbkoll_web/templates/site/failed.html.eex:24
@@ -287,7 +287,7 @@ msgid "<strong>Third-party cookies</strong> are placed by a service affiliated w
 msgstr ""
 "<strong>Drittanbieter-Cookies</strong> werden von Diensten gesetzt, die vom "
 "Website-Betreiber eingebunden wurden. So kann ein Besucher bei späteren "
-"Seitenaufrufen oder auf verschiedenen Websites wieder identifiziert werden. "
+"Seitenaufrufen oder über verschiedene Websites hinweg wiedererkannt werden. "
 "Cookies von Drittanbietern stehen in der Regel im Zusammenhang mit "
 "kommerziellen Merkmalen, in der Regel Werbung, können sich aber auch auf "
 "technische Merkmale in den von einer Website verwendeten Skripten beziehen ("
@@ -378,8 +378,8 @@ msgstr "Alternativen und weitere Ressourcen"
 msgid "Always uses an <code>https://</code> connection, even when clicking on an <code>http://</code> link or after typing a domain into the location bar without specifying a protocol."
 msgstr ""
 "Verwendet immer eine <code>https://</code>-Verbindung, selbst wenn auf einen "
-"<code>http://</code>-Link geklickt wird oder wenn eine Domäne in der "
-"Adressleiste ohne Protokoll eingegeben wurde."
+"<code>http://</code>-Link geklickt wird oder in die Adressleiste eine Domain "
+"ohne ein Protokoll eingegeben wurde."
 
 #: lib/webbkoll_web/templates/error/error.html.eex:2
 #, elixir-format
@@ -390,8 +390,8 @@ msgstr "Ein Fehler ist aufgetreten"
 #, elixir-format
 msgid "An individual should be able to understand the terms of interactions with others. (5(1)(a))."
 msgstr ""
-"Ein Individuum sollte in der Lage sein, die Bedingungen der Zusammenarbeit "
-"zu verstehen (Art. 5 (1) a)."
+"Ein Individuum sollte in der Lage sein, die Bedingungen der "
+"Datenverarbeitung zu verstehen (Art. 5 Abs. 1 lit. a)."
 
 #: lib/webbkoll_web/controllers/page_controller.ex:11
 #, elixir-format
@@ -412,13 +412,13 @@ msgstr "Art. "
 #, elixir-format
 msgid "As little data as possible to achieve the purpose should be collected .(5(1)(c))"
 msgstr ""
-"Daten sollten so wenig wie zur Erfüllung des Zwecks notwendig gesammelt "
-"werden. (Art. 5 (1) c)"
+"Es sollten nur so viele Daten gesammelt werden, wie zur Erfüllung des Zwecks "
+"notwendig sind (Art. 5 Abs. 1 lit. c)."
 
 #: lib/webbkoll_web/templates/page/donate.html.eex:35
 #, elixir-format
 msgid "At the moment we cannot accept Bitcoin or any other cryptocurrency."
-msgstr "Wir akzeptieren aktuell keine Bitcoins oder andere Cryptowährungen."
+msgstr "Wir akzeptieren aktuell weder Bitcoin noch andere Kryptowährungen."
 
 #: lib/webbkoll_web/templates/page/about.html.eex:14
 #, elixir-format
