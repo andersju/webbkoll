@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
 "PO-Revision-Date: 2022-03-29 17:56+0000\n"
-"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -557,17 +557,17 @@ msgstr ""
 #: lib/webbkoll_web/templates/page/index.html.eex:16
 #, elixir-format
 msgid "Check"
-msgstr "Check"
+msgstr "Prüfen"
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:20
 #, elixir-format
 msgid "Check again"
-msgstr "Wiederholen"
+msgstr "Erneut prüfen"
 
 #: lib/webbkoll_web/templates/page/index.html.eex:12
 #, elixir-format
 msgid "Check your site!"
-msgstr "Überprüfe Deine Webseite!"
+msgstr "Überprüfe deine Webseite!"
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:95
 #: lib/webbkoll_web/templates/site/status.html.eex:7
@@ -666,11 +666,11 @@ msgstr ""
 #, elixir-format
 msgid "Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement to distribution of malware."
 msgstr ""
-"Eine Content Security Policy (CSP) bildet eine zusätzliche Sicherheitsebene, "
-"die hilft Angriffe zu erkennen und zu entschärfen, einschließlich Cross Site "
-"Scripting (XSS) und Data-Injection-Angriffen. Solche Art von Angriffen sind "
-"geeignet, eine Website zu verunstalten, und reichen bis hin zum "
-"Datendiebstahl und Verbreitung von Malware."
+"Eine Content Security Policy (CSP) ist eine zusätzliche Sicherheitsebene, "
+"die dazu beiträgt, bestimmte Arten von Angriffen wie Cross-Site-Scripting "
+"(XSS) und Data-Injection-Angriffe zu erkennen und zu entschärfen. Diese "
+"Angriffe werden für alles Mögliche genutzt und reichen von Datendiebstahl "
+"bis hin zur Verbreitung von Malware."
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:14
 #, elixir-format
