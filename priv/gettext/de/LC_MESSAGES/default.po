@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: German (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
-"PO-Revision-Date: 2022-03-29 17:56+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-03-29 18:19+0000\n"
+"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -668,9 +668,9 @@ msgid "Content Security Policy (CSP) is an added layer of security that helps to
 msgstr ""
 "Eine Content Security Policy (CSP) ist eine zusätzliche Sicherheitsebene, "
 "die dazu beiträgt, bestimmte Arten von Angriffen wie Cross-Site-Scripting "
-"(XSS) und Data-Injection-Angriffe zu erkennen und zu entschärfen. Diese "
-"Angriffe werden für alles Mögliche genutzt und reichen von Datendiebstahl "
-"bis hin zur Verbreitung von Malware."
+"(XSS) und Data-Injection zu erkennen und zu entschärfen. Diese Angriffe "
+"werden für alles von Website-Verunstaltung über Datendiebstahl bis hin zur "
+"Verbreitung von Malware genutzt."
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:14
 #, elixir-format
@@ -697,8 +697,8 @@ msgstr "Cookies:"
 msgid "Data collection should occur only for specific and limited purposes. These purposes should be explicit and understandable. (5(1)(b))"
 msgstr ""
 "Die Datenerhebung sollte nur für bestimmte und klar umrissene Zwecke "
-"erfolgen. Diese Zwecke sind deutlich und in leicht verständlichen Worten "
-"darzulegen. (5(1)(b))"
+"erfolgen. Diese Zwecke sind eindeutig und in leicht verständlicher Sprache "
+"darzulegen (Art. 5 Abs. 1 lit. b)."
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:44
 #, elixir-format
@@ -735,9 +735,9 @@ msgstr ""
 #, elixir-format
 msgid "Denying by default using <code>default-src 'none'</code> can ensure that your Content Security Policy doesn't allow the loading of resources you didn't intend to allow."
 msgstr ""
-"Alles mit der Standardeinstellung <code>default-src 'none'</code> pauschal "
-"zu verbieten stellt sicher, daß keine unerwünschten Ressourcen in Deine "
-"Content Security Policy aufgenommen werden, die Du nicht wolltest."
+"Alles pauschal mit der Einstellung <code>default-src 'none'</code> zu "
+"verbieten stellt sicher, dass die Content Security Policy das Laden von "
+"nicht explizit zugelassenen Ressourcen verbietet."
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:47
 #, elixir-format
