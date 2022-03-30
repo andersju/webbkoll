@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
 "PO-Revision-Date: 2022-03-30 08:43+0000\n"
-"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -866,7 +866,7 @@ msgstr ""
 "Damit ein Benutzer die Vorteile von HSTS nutzen kann, muss sein Browser eine "
 "HSTS-geschützte Seite mindestens einmal besucht haben. Erst nach der ersten "
 "erfolgreichen, sicheren Verbindung ist er für die weiteren Besuche zu dieser "
-"Domäne geschützt."
+"Domain geschützt."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:72
 #, elixir-format
@@ -914,8 +914,8 @@ msgstr ""
 #, elixir-format
 msgid "GDPR %{art_32_2} makes clear that measures should be taken against unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed. CSP is a relatively simple way of ensuring that your web visitors do not end up being put in contact with someone that either they - or you - did not anticipate for them to contact."
 msgstr ""
-"DSGVO %{art_32_2} stellt klar, daß Maßnahmen gegen unbefugte Weitergabe oder "
-"Zugriffe auf übermittelte, gespeicherte oder anderweitig verarbeitete "
+"DSGVO %{art_32_2} stellt klar, dass Maßnahmen gegen unbefugte Weitergabe "
+"oder Zugriffe auf übermittelte, gespeicherte oder anderweitig verarbeitete "
 "personenbezogene Daten zu ergreifen sind. Eine CSP ist ein relativ einfacher "
 "Weg, um sicherzustellen, dass Webbesucher nicht unerwartet mit Dritten in "
 "Kontakt kommen."
@@ -966,10 +966,11 @@ msgstr "Gute Richtlinie"
 #, elixir-format
 msgid "HSTS is just an HTTP header. In its simplest form, the policy tells a browser to enable HSTS for that exact domain or subdomain, and to remember it for a given number of seconds (the policy is refreshed every time browser sees the header again):"
 msgstr ""
-"HSTS ist nur ein HTTP-Header. In seiner einfachsten Form sagt die Richtlinie "
-"einem Browser, dass er HSTS für genau diese Domain oder Subdomain aktivieren "
-"und für eine bestimmte Anzahl von Sekunden speichern soll (die Richtlinie "
-"wird jedes Mal aktualisiert, wenn der Browser den Header wieder sieht):"
+"HSTS ist lediglich ein HTTP-Header. In der einfachsten Form weist die "
+"Richtlinie einen Browser an, HSTS für genau diese Domain oder Subdomain zu "
+"aktivieren und für eine bestimmte Anzahl von Sekunden zu speichern (die "
+"Richtlinie wird jedes Mal aktualisiert, wenn der Browser den Header erneut "
+"sieht):"
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:29
 #, elixir-format
@@ -1052,7 +1053,7 @@ msgstr "Anleitung"
 #: lib/webbkoll_web/controllers/page_controller.ex:59
 #, elixir-format
 msgid "How you can support our work."
-msgstr "Wie Du unsere Arbeit unterstützen kannst."
+msgstr "Wie du unsere Arbeit unterstützen kannst."
 
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:5
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:30
@@ -1115,13 +1116,13 @@ msgstr ""
 #, elixir-format
 msgid "In modern web development, it’s become common for a website not to be run from only one location. When you visit a website, you’re not only entering into contact with those running the website, but also all the businesses and organisations which collaborate with the managers of the websites. These may be internet service providers, script providers, font providers, analytics tools providers and a range of other providers. If the manager of the websites hands over information about visitors to any of these third-parties, it is a form of gossiping since it is usually not evident to the visitors that this type of information is being handed over."
 msgstr ""
-"In der modernen Web-Entwicklung ist es üblich, dass eine Webseite nicht nur "
-"an einem Ort betrieben wird. Wenn Du eine Webseite besuchst, dann trittst Du "
+"In der modernen Web-Entwicklung ist es üblich, dass eine Website nicht nur "
+"an einem Ort betrieben wird. Wenn du eine Website besuchst, dann trittst du "
 "nicht nur mit dem Betreiber in Kontakt, sondern auch mit allen Unternehmen "
 "und Organisationen, die mit dem Betreiber der Website zusammenarbeiten. Dies "
-"können Internet- oder Server-Dienstleister, Anbieter von Script-, Schriften- "
-"oder Analytics-Diensten sein. Der Betreiber reicht Deine Daten in der Regel "
-"weiter, ohne dass es für Dich sofort ersichtlich wird."
+"können Internet- oder Server-Dienstleister, Anbieter von Skript-, "
+"Schriftarten- oder Analytics-Diensten sein. Der Betreiber reicht deine Daten "
+"in der Regel weiter, ohne dass es für dich sofort ersichtlich wird."
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:29
 #, elixir-format
