@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: German (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
-"PO-Revision-Date: 2022-03-30 08:22+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-03-30 08:43+0000\n"
+"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -799,8 +799,8 @@ msgstr "Fehler: %{error_message}"
 #, elixir-format
 msgid "Even if you enter https://, http:// will be checked, to see if it redirects to https:// automatically (redirects are followed)."
 msgstr ""
-"Auch wenn du »https://« eingibst, wird »http://« überprüft, um zu sehen, ob "
-"es automatisch zu »https://« weiterleitet (Weiterleitungen wird gefolgt)."
+"Auch wenn du https:// eingibst, wird http:// überprüft, um zu sehen, ob es "
+"automatisch zu https:// weiterleitet (Weiterleitungen wird gefolgt)."
 
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:9
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:21
@@ -872,12 +872,12 @@ msgstr ""
 #, elixir-format
 msgid "For checking the configuration of a server, try <a href=\"https://www.ssllabs.com/ssltest/\">SSL Labs SSL Server Test</a> (web), <a href=\"https://testssl.sh/\">testssl.sh</a> (CLI tool), <a href=\"https://github.com/mozilla/tls-observatory\">Mozilla TLS Observatory</a> (CLI tool) or <a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> (web)."
 msgstr ""
-"Zur Überprüfung der Serverkonfiguration verwendet bitte <a href=\""
+"Zur Überprüfung der Serverkonfiguration verwende bitte <a href=\""
 "https://www.ssllabs.com/ssltest/\">SSL Labs SSL Server Test</a> (Web), <a "
 "href=\"https://testssl.sh/\">testssl.sh</a> (Kommandozeilentool), <a href=\""
 "https://github.com/mozilla/tls-observatory\">Mozilla TLS Observatory</a> "
 "(Kommandozeilentool) oder <a href=\"https://observatory.mozilla.org/\">"
-"Observatory by Mozilla</a> (Web)."
+"Mozillas Observatory</a> (Web)."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:59
 #, elixir-format
@@ -1107,9 +1107,9 @@ msgstr ""
 #, elixir-format
 msgid "In its <strong>strongest and recommended form</strong>, the HSTS policy includes <strong>all subdomains</strong>, and indicates a willingness to be \"preloaded\" into browsers:"
 msgstr ""
-"In seiner <strong>strengsten und empfohlenen Form</strong> beinhaltet die "
-"HSTS -Richtlinie <strong>all subdomains</strong> und zeigt damit einem "
-"Browser seine \"preloaded\" Bereitschaft an:"
+"In ihrer <strong>strengsten und empfohlenen Form</strong> beinhaltet die "
+"HSTS-Richtlinie <strong>alle Subdomains</strong> und signalisiert "
+"Bereitschaft, vorab in Browser geladen zu werden:"
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:24
 #, elixir-format
