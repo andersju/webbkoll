@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
 "PO-Revision-Date: 2022-03-31 11:37+0000\n"
-"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -1523,7 +1523,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/layout/app.html.eex:77
 #, elixir-format
 msgid "Search"
-msgstr "Suche"
+msgstr "Suchen"
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:72
 #, elixir-format
@@ -1544,7 +1544,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_csp.html.eex:76
 #, elixir-format
 msgid "See the following pages for more information:"
-msgstr "Auf den folgenden Seiten findest Du weitere Informationen:"
+msgstr "Auf den folgenden Seiten findest du weitere Informationen:"
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:54
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:32
@@ -1627,10 +1627,9 @@ msgstr ""
 msgid "Subresource Integrity (SRI) is a security feature that enables browsers to verify that resources they fetch (for example, from a CDN) are delivered without unexpected manipulation. It works by allowing you to provide a cryptographic hash that a fetched resource must match."
 msgstr ""
 "Subresource Integrity (SRI) ist ein Sicherheitsmerkmal, mit dem Browser "
-"überprüfen können, ob abgerufene Ressourcen (z.B. von einem CDN) ohne "
-"Manipulationen übertragen wurden. Es funktioniert, indem es Dir erlaubt, "
-"einen kryptographischen Hash bereitzustellen, mit dem eine geholte Ressource "
-"übereinstimmen muß."
+"überprüfen können, ob abgerufene Ressourcen (z. B. von einem CDN) ohne "
+"Manipulationen übertragen wurden. Es ermöglicht dir, einen kryptografischen "
+"Hash anzugeben, dem eine abgerufene Ressource entsprechen muss."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:15
 #, elixir-format
@@ -1711,7 +1710,7 @@ msgstr ""
 msgid "The <a href=\"http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679\">general data protection regulation of the European Union</a> enters into force on the 25th of May 2018 and concerns the balancing of power being those influencing individuals (typically companies and public authorities) and the individuals themselves. Webbkoll is a tool to find out who is collecting information about individuals, and what can be done to stop invisible tracking."
 msgstr ""
 "Die <a href=\"http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:"
-"32016R0679\">EU-Datenschutzgrundverordnung </a> tritt am 25, Mai 2018 in "
+"32016R0679\">EU-Datenschutzgrundverordnung </a> trat am 25, Mai 2018 in "
 "Kraft und regelt den Machtausgleich zwischen Einzelpersonen, Unternehmen und "
 "Behörden. Webbkoll ist ein Werkzeug, um herauszufinden, wer genau "
 "Informationen sammelt und was getan werden kann, um die Verfolgung zu "
@@ -1830,12 +1829,12 @@ msgstr ""
 #, elixir-format
 msgid "The Content Security Policy tests are based on the ones from the <a href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP Observatory</a> scanner/grader project (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> website, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</a>. Any mistake or inaccuracy in the results is our fault."
 msgstr ""
-"Die Tests für Content Security Richtlinen basieren auf dem Scanner des <a "
+"Die Tests für Content-Security-Richtlinien basieren auf dem Scanner des <a "
 "href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP "
 "Observatory</a> Projektes (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\""
 ">Mozilla Public License 2.0</a>) von April King, von uns für Webbkoll "
 "implementiert. Die Beschreibungstexte sind von der <a href=\""
-"https://observatory.mozilla.org/\">Mozilla Observatory</a> Website "
+"https://observatory.mozilla.org/\">Mozilla-Observatory</a>-Website "
 "entnommen, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-"
 "SA 3.0</a>. Für Fehler oder Ungenauigkeiten sind wir verantwortlich."
 
@@ -1909,9 +1908,9 @@ msgid "The only other similar service that we are aware of <em>that uses a real 
 msgstr ""
 "Der einzige vergleichbare Service, von dem wir wissen, welche auch mit einem "
 "<em>echten Browser</em> testet, ist <a href=\"https://privacyscore.org/\""
-">PrivacyScore</a> (Open Source). Es arbeitet wie Webbkoll, überprüft aber "
-"zusätzlich auch TLS und ermöglicht Dir die Organisation Deiner Checks in "
-"sortierten Listen."
+">PrivacyScore</a> (Open Source). Es arbeitet größtenteils wie Webbkoll, "
+"überprüft aber zusätzlich auch TLS und ermöglicht es dir, eine Liste von zu "
+"prüfenden Websites zu erstellen (und zu bewerten)."
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:42
 #, elixir-format
