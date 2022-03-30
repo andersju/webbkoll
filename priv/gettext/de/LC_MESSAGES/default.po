@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: German (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
-"PO-Revision-Date: 2022-03-30 09:51+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-03-31 11:37+0000\n"
+"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -1376,9 +1376,10 @@ msgstr ""
 "werden, z. B. durch die gezielte Ansprache bestimmter Zielgruppen mit "
 "politischen Informationen oder um Maßnahmen gegen Gruppen auf der Grundlage "
 "ihrer angenommenen Eigenschaften zu ergreifen. Diese Form der politischen "
-"Arbeit wird als »Nudging« bezeichnet und kann auch eingesetzt werden, um die "
-"Akzeptanz spezifischer Maßnahmen (z. B. den Bau eines öffentlichen Parks) in "
-"bestimmten Gruppen (z. B. die Anwohner des geplanten Parks) zu erhöhen."
+"Arbeit wird als <em>Nudging</em> bezeichnet und kann auch eingesetzt werden, "
+"um die Akzeptanz spezifischer Maßnahmen (z. B. den Bau eines öffentlichen "
+"Parks) in bestimmten Gruppen (z. B. die Anwohner des geplanten Parks) zu "
+"erhöhen."
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:39
 #, elixir-format
@@ -1462,7 +1463,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:9
 #, elixir-format
 msgid "Reporting (CSP, Certificate Transparency, Network Error Logging)"
-msgstr "Berichte (CSP, Zertifikat-Transparenz, Netzwerkfehler-Protokolle)"
+msgstr "Berichte (CSP, Zertifikats-Transparenz, Netzwerkfehler-Protokollierung)"
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:15
 #, elixir-format
@@ -1566,7 +1567,7 @@ msgstr ""
 #: lib/webbkoll_web/plugs.ex:55
 #, elixir-format
 msgid "Sorry, bots aren't allowed."
-msgstr "Sorry, Bots unerwünscht."
+msgstr "Bitte entschuldige, Bots sind unerwünscht."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:24
 #, elixir-format
@@ -1593,26 +1594,26 @@ msgstr "Dauer einer Speicherung"
 msgid "Storing information or gaining access to information stored in the visitors' devices, for instance in the form of cookies, has been subject to sui generis legislation in the European Union (<a href=\"%{epd}\">ePD, Art. 5.3</a>). These sui generis laws have tried to make a distinction between information stored to support technical features and information stored to support commercial features. In practice, poor enforcement of these rules has made the legal landscape unclear. Because there exists no legal duty for citizens to receive better targeted advertisement, nor a legal duty for citizens to assist web developers in improving web sites, it's doubtful that a legal basis exists for storing information to support commercial features without the consent of the web visitor (GDPR %{gdpr_art_7}). It is argued that the legitimate interests of a web site owner (%{gdpr_art_6_1_f}, %{gdpr_art_6_4}) may nevertheless enable them to subject a visitor to targeted ads or cause a visitor to assist the web developers. Then there must exist relevant and appropriate relationship between the web visitor and the web site owner in situations (GDPR %{gdpr_rec_47}), which calls into question the use of third-party service first-party cookies. In either case, if the legitimate interest legal basis for processing is invoked, adequate security measures must be undertaken (GDPR %{gdpr_art_32})."
 msgstr ""
 "Die Speicherung von Informationen oder der Zugriff auf Informationen, die "
-"auf Geräten der Besucher gespeichert sind, z.B. in Form von Cookies, "
-"unterliegt in der Europäischen Union der sui-generis-Gesetzgebung (<a href=\""
-"%{epd}\">ePD, Art. 5.3</a>). Diese sui-generis-Gesetze unterscheiden "
+"auf Geräten der Besucher gespeichert sind, z. B. in Form von Cookies, "
+"unterliegt in der Europäischen Union der Sui-generis-Gesetzgebung (<a href=\""
+"%{epd}\">Art. 5 Abs. 3 ePD</a>). Diese Sui-generis-Gesetze unterscheiden "
 "zwischen Informationen, die technische Merkmale gespeichert haben, und "
 "Informationen, die zur Unterstützung kommerzieller Merkmale gespeichert "
-"sind. In der Praxis hat die mangelnde Anwendung dieser Vorschriften die "
-"Rechtslandschaft unklar gemacht, da es keine gesetzliche Verpflichtung für "
-"Bürger gibt, gezielte Werbung zu erhalten, noch eine gesetzliche "
+"sind. In der Praxis hat die mangelnde Durchsetzung dieser Vorschriften die "
+"Rechtslandschaft unklar gemacht. Da es weder eine gesetzliche Verpflichtung "
+"für Bürger gibt, gezielte Werbung zu erhalten, noch eine gesetzliche "
 "Verpflichtung, Webentwickler bei der Verbesserung von Websites zu "
-"unterstützen. Es ist mehr als fragwürdig, dass es eine Rechtsgrundlage für "
-"die Speicherung von Informationen zur Unterstützung kommerzieller Merkmale "
-"ohne Zustimmung eines Besuchers gibt (DSGVO %{gdpr_art_7}). Es wird "
-"argumentiert, dass die legitimen Interessen eines Website-Besitzers "
-"(%{gdpr_art_6_1_f}, %{gdpr_art_6_4}) es ihm ermöglichen, Besuchern gezielte "
-"Werbung anzubieten oder zur Unterstützung der Webentwickler zu verpflichten. "
-"Es muss dann eine angemessene Beziehung zwischen dem Besucher und Website-"
+"unterstützen, ist es fragwürdig, dass es eine Rechtsgrundlage für die "
+"Speicherung von Informationen zur Unterstützung kommerzieller Merkmale ohne "
+"Zustimmung des Besuchers gibt (DSGVO %{gdpr_art_7}). Es wird argumentiert, "
+"dass die berechtigten Interessen eines Website-Besitzers (%{gdpr_art_6_1_f}, "
+"%{gdpr_art_6_4}) diesem ermöglichen, Besuchern gezielte Werbung auszuliefern "
+"oder zur Unterstützung der Webentwickler zu verpflichten. In diesen Fällen "
+"muss eine angemessene Beziehung zwischen dem Besucher und dem Website-"
 "Betreiber bestehen (DSGVO %{gdpr_rec_47}), die jedoch eine Verwendung von "
 "First-Party-Cookies von Drittanbietern in Frage stellt. In beiden Fällen "
-"müssen unter Rückgriff auf die berechtigten Interessen einer Verarbeitung "
-"angemessene Schutzmaßnahmen ergriffen werden (DSGVO %{gdpr_art_32})."
+"müssen angemessene Schutzmaßnahmen ergriffen werden (DSGVO %{gdpr_art_32}), "
+"sofern berechtigtes Interesse die Rechtsgrundlage der Verarbeitung darstellt."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:20
 #, elixir-format
@@ -1792,37 +1793,38 @@ msgstr ""
 #, elixir-format
 msgid "The <code>base</code> tag can be used to trick your site into loading scripts from untrusted origins."
 msgstr ""
-"Das <code>base</code> Tag kann eine Webseite austricksen, um Skripte aus "
-"nicht vertrauenswürdigen Quellen zu laden."
+"Das <code>base</code>-Tag kann deine Website austricksen, Skripte aus "
+"Quellen zu laden, denen nicht vertraut wird."
 
 #: lib/webbkoll_web/templates/site/_headers.html.eex:64
 #, elixir-format
 msgid "The <strong><code>X-Content-Type-Options</code></strong> response HTTP header is a marker used by the server to indicate that the MIME types advertised in the Content-Type headers should not be changed and be followed. This allows to opt-out of MIME type sniffing, or, in other words, it is a way to say that the webmasters knew what they were doing."
 msgstr ""
-"Ein <strong><code>X-Content-Type-Options</code></strong> HTTP Header eines "
-"Servers gibt an, dass der jeweils gesendete MIME Content-Type einer Datei "
-"nicht verändert werden kann. Das Verhindert ein Ausspähen durch "
-"manipulierten MIME-Types oder in anderen Worten: Der Webmaster weiß, was "
-"sein Server genau macht."
+"Ein <strong><code>X-Content-Type-Options</code></strong>-HTTP-Header eines "
+"Servers gibt an, dass durch den Content-Type-Header mitgeteilte MIME-Types "
+"eingehalten und nicht verändert werden sollen. Das verhindert ein Ausspähen "
+"durch manipulierte MIME-Types oder mit anderen Worten: Die Webmaster können "
+"zeigen, dass sie wissen, was sie tun."
 
 #: lib/webbkoll_web/templates/site/_headers.html.eex:72
 #, elixir-format
 msgid "The <strong><code>X-Frame-Options</code></strong> HTTP response header can be used to indicate whether or not a browser should be allowed to render a page in a <code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code> or <code>&lt;object&gt;</code>. Sites can use this to avoid <a href=\"https://en.wikipedia.org/wiki/clickjacking\">clickjacking</a> attacks, by ensuring that their content is not embedded into other sites."
 msgstr ""
-"Ein <strong><code>X-Frame-Options</code></strong> HTTP Antwort-Header wird "
+"Ein <strong><code>X-Frame-Options</code></strong>-HTTP-Antwort-Header wird "
 "verwendet, um einem Browser mitzuteilen, ob eine Seite in einem "
 "<code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code> oder "
-"<code>&lt;object&gt;</code> angezeigt werden darf. Websites können dieses "
+"<code>&lt;object&gt;</code> angezeigt werden darf. Websites können dies "
 "nutzen, um <a href=\"https://de.wikipedia.org/wiki/clickjacking\""
-">Clickjacking-Angriffe</a> zu verhindern."
+">Clickjacking-Angriffe</a> zu verhindern, indem sichergestellt wird, dass "
+"der Inhalt nicht in andere Webseiten eingebettet wird."
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:61
 #, elixir-format
 msgid "The Chrome security team allows anyone to <a href=\"https://hstspreload.org/\">submit their domain to the list</a>, provided it meets a few requirements."
 msgstr ""
-"Das Chrome Security Team erlaubt jeden Seitenbetreiber <a href=\""
-"https://hstspreload.org/\">seine Domain auf die Preload-List hinzuzufügen</a>"
-" wenn sie einige Voraussetzungen erfüllt."
+"Das Chrome-Sicherheitsteam erlaubt jeder Person <a href=\""
+"https://hstspreload.org/\">ihre Domain zur Liste hinzuzufügen</a>, sofern "
+"diese einige Voraussetzungen erfüllt."
 
 #: lib/webbkoll_web/templates/site/_csp.html.eex:93
 #, elixir-format
@@ -1841,10 +1843,10 @@ msgstr ""
 #, elixir-format
 msgid "The Subresource Integrity test is based on the one from the <a href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP Observatory</a> scanner/grader project (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll."
 msgstr ""
-"Der Subresource Integrity Test basiert auf dem <a href=\"https://github.com/"
-"mozilla/http-observatory\">Mozilla HTTP Observatory</a> Scanner (<a href=\""
+"Der Subresource-Integrity-Test basiert auf dem <a href=\"https://github.com/"
+"mozilla/http-observatory\">Mozilla-HTTP-Observatory</a>-Scanner (<a href=\""
 "https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) von "
-"April King, von uns für Webkoll implementiert."
+"April King, der von uns für Webbkoll reimplementiert wurde."
 
 #: lib/webbkoll_web/templates/layout/app.html.eex:100
 #, elixir-format
@@ -1876,12 +1878,12 @@ msgstr ""
 msgid "The header tests are based on the ones from the <a href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP Observatory</a> scanner/grader project (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> website, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</a>."
 msgstr ""
 "Der Header-Test basiert auf dem <a href=\"https://github.com/mozilla/http-"
-"observatory\">Mozilla HTTP Observatory</a> Scanner (<a href=\""
+"observatory\">Mozilla-HTTP-Observatory</a>-Scanner (<a href=\""
 "https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) von "
-"April King, von uns für Webbkoll implementiert. Die Beschreibungstexte sind "
-"von der <a href=\"https://observatory.mozilla.org/\">Mozilla Observatory "
-"Website</a> entnommen, <a href=\"https://creativecommons.org/licenses/by-sa/"
-"3.0/\">CC-BY-SA 3.0</a>."
+"April King, der von uns für Webbkoll reimplementiert wurde. Die "
+"Beschreibungstexte sind der <a href=\"https://observatory.mozilla.org/\""
+">Mozilla-Observatory</a>-Website entnommen, <a href=\""
+"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</a>."
 
 #: lib/webbkoll_web/templates/page/about.html.eex:21
 #, elixir-format
