@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
 "PO-Revision-Date: 2022-03-30 08:54+0000\n"
-"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -1175,9 +1175,9 @@ msgstr ""
 #, elixir-format
 msgid "It is also the categorisation of individuals into these groups. Once a web visitor is stuffed into a particular category, they may be positively or negatively discriminated against because of the categorisation."
 msgstr ""
-"Es ist auch die Kategorisierung von Individuen in diese Gruppen. Sobald ein "
-"Besucher einer bestimmten Kategorie zugeordnet wurde, kann er deswegen "
-"positiv oder negativ diskriminiert werden."
+"Es geht auch um die Einteilung von Personen in diese Gruppen. Sobald ein "
+"Besucher in eine bestimmte Kategorie eingeordnet ist, kann er aufgrund "
+"dieser Einordnung positiv oder negativ diskriminiert werden."
 
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:16
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:23
