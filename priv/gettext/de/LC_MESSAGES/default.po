@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
 "PO-Revision-Date: 2022-03-30 09:44+0000\n"
-"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -1194,12 +1194,12 @@ msgstr "Rechtmäßigkeit, Fairness und Transparenz"
 #, elixir-format
 msgid "Like with cookies, <strong><a href=\"https://html.spec.whatwg.org/multipage/webstorage.html\">web storage</a></strong> can be used to store data in a user's browser. Unlike cookies, web storage data is not sent with HTTP requests: it can only be directly set and accessed by the user's browser (through JavaScript). Compared to cookies, the storage capacity is much larger."
 msgstr ""
-"Wie Cookies speichern <strong><a href=\"https://html.spec.whatwg.org/"
-"multipage/webstorage.html\">Web-Storage</a></strong>-Daten im Webbrowser "
-"eines Benutzers. Doch anders als Cookies wird ein Web Storage nicht über "
-"HTTP-Anfragen abgefragt, sondern immer nur direkt durch den Browser (mit "
-"JavaScript). Im Vergleich zu Cookies können deutlich mehr Daten gespeichert "
-"werden."
+"Wie bei den Cookies kann der <strong><a href=\"https://html.spec.whatwg.org/"
+"multipage/webstorage.html\">Web-Storage</a></strong> verwendet werden, um "
+"Daten im Browser eines Benutzers zu speichern. Im Gegensatz zu Cookies wird "
+"ein Web-Storage nicht über HTTP-Anfragen abgefragt, sondern immer nur direkt "
+"durch den Browser (mit JavaScript). Im Vergleich zu Cookies können deutlich "
+"mehr Daten gespeichert werden."
 
 #: lib/webbkoll_web/templates/page/about.html.eex:9
 #, elixir-format
@@ -1347,12 +1347,12 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/failed.html.eex:4
 #, elixir-format
 msgid "Processing %{url} failed at %{time}."
-msgstr "Verarbeitung von %{url} scheiterte um %{time}."
+msgstr "Verarbeitung von %{url} ist um %{time} fehlgeschlagen."
 
 #: lib/webbkoll_web/controllers/site_controller.ex:76
 #, elixir-format
 msgid "Processing failed"
-msgstr "Verarbeitung scheiterte"
+msgstr "Verarbeitung fehlgeschlagen"
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:16
 #, elixir-format
@@ -1362,10 +1362,10 @@ msgstr ""
 "welcher Art von Werbung eine bestimmte Person ausgesetzt werden soll. Eltern "
 "von Kleinkindern oder Personen, die Eltern von Kleinkindern kennen, können "
 "Anzeigen für Windeln, Kinderwagen oder Familienferien erhalten. Zunehmend "
-"wird ein Profiling auch genutzt, um festzustellen, welche Zeitungsinhalte "
+"wird Profiling auch dazu verwendet, um festzustellen, welche Zeitungsinhalte "
 "angezeigt werden. Die oben genannten Gruppen können beispielsweise kurze "
 "Artikel über Neugeborene erhalten, wenn sie unterwegs sind (und wenig Zeit "
-"haben), oder längere Artikel über Neugeborene, wenn sie in einem Zug sitzen ("
+"haben) oder längere Artikel über Neugeborene, wenn sie in einem Zug sitzen ("
 "und mehr Zeit zum Lesen haben)."
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:18
