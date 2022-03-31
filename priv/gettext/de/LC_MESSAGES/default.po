@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: German (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
-"PO-Revision-Date: 2022-03-31 11:37+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-04-01 10:32+0000\n"
+"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -1906,11 +1906,11 @@ msgstr ""
 #, elixir-format
 msgid "The only other similar service that we are aware of <em>that uses a real browser for testing</em> is <a href=\"https://privacyscore.org/\">PrivacyScore</a> (open source). It does many of the same checks as Webbkoll, but additionally also checks e.g. TLS, and lets you create a list of sites to check (and rank)."
 msgstr ""
-"Der einzige vergleichbare Service, von dem wir wissen, welche auch mit einem "
-"<em>echten Browser</em> testet, ist <a href=\"https://privacyscore.org/\""
+"Der einzige vergleichbare Service, von dem wir wissen, der auch <em>mit "
+"einem echten Browser testet</em>, ist <a href=\"https://privacyscore.org/\""
 ">PrivacyScore</a> (Open Source). Es arbeitet größtenteils wie Webbkoll, "
-"überprüft aber zusätzlich auch TLS und ermöglicht es dir, eine Liste von zu "
-"prüfenden Websites zu erstellen (und zu bewerten)."
+"überprüft aber zusätzlich z. B. TLS und ermöglicht es dir, eine Liste von zu "
+"prüfenden Websites zu erstellen (und die Websites einzustufen)."
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:42
 #, elixir-format
@@ -1926,24 +1926,25 @@ msgstr ""
 #, elixir-format
 msgid "The recommended way to enable Content Security Policy is with the <code>Content-Security-Policy</code> HTTP header, e.g.:"
 msgstr ""
-"Empfohlen wird eine Content Security Policy mit einem <code>Content-Security-"
-"Policy</code> HTTP Header zu aktivieren:"
+"Empfohlen wird, Content Security Policy mit einem <code>Content-Security-"
+"Policy</code>-HTTP-Header zu aktivieren, z. B.:"
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:64
 #, elixir-format
 msgid "The referrer header is privacy nightmare as it allows websites and services to track you across the web and learn about your browsing habits (and thus possibly private, sensitive information), particularly when combined with cookies."
 msgstr ""
-"Referrer-Header sind ein Alptraum für die Privatsphäre, da er es Webseiten "
-"und Diensten ermöglicht, Dich im gesamten Web zu verfolgen und Deine "
+"Der Referrer-Header ist ein Alptraum für die Privatsphäre, da er es Websites "
+"und Diensten ermöglicht, dich im gesamten Web zu verfolgen und deine "
 "Surfgewohnheiten (und damit möglicherweise private, sensible Informationen) "
-"preiszugeben, insbesondere wenn dies in Kombination mit Cookies erfolgt."
+"herauszufinden, insbesondere in Kombination mit Cookies."
 
 #: lib/webbkoll_web/views/site_view.ex:160
 #, elixir-format
 msgid "The use of CSP's <code>frame-ancestors</code> directive offers fine-grained control over who can frame your site."
 msgstr ""
-"Die Verwendung der CSP <code>frame-ancestors</code> Direktive bietet eine "
-"genaue Kontrolle darüber, wer eine Seite in einem Frame verwenden darf."
+"Die Verwendung der CSP-Direktive <code>frame-ancestors</code> bietet eine "
+"detaillierte Kontrolle darüber, wer deine Seite in einem Frame verwenden "
+"darf."
 
 #: lib/webbkoll_web/controllers/page_controller.ex:37
 #, elixir-format
@@ -1956,11 +1957,11 @@ msgstr ""
 #, elixir-format
 msgid "There are two types: <code>localStorage</code> data is persistent (not removed when the browser is closed) and never expires, while <code>sessionStorage</code> data is removed when the page session ends (unlike with session cookies, a sessionStorage session is <em>per window/tab</em>)."
 msgstr ""
-"Es gibt zwei Arten: <code>LocalStorage</code> mit dauerhaft gespeicherten "
-"Daten (auch wenn der Browser geschlossen wird) und "
-"<code>SessionStorage</code>, das gelöscht wird sobald die Session einer "
-"Website beendet wird (anders Verhalten wie Session Cookies). Eine "
-"SessionStorage Sitzung gilt immer <em>pro Fenster/Tab</em>."
+"Es gibt zwei Arten: Daten des <code>localStorage</code> sind persistent ("
+"werden nicht entfernt, wenn der Browser geschlossen wird) und laufen nie ab, "
+"während Daten des <code>sessionStorage</code> entfernt werden, wenn die "
+"Webseiten-Sitzung endet (anders als bei Session-Cookies gilt eine "
+"SessionStorage-Sitzung <em>pro Fenster/Tab</em>)."
 
 #: lib/webbkoll_web/templates/site/_headers.html.eex:91
 #, elixir-format
@@ -1988,9 +1989,9 @@ msgstr "Drittanfragen (Third-Party):"
 #, elixir-format
 msgid "This can be used to track and profile users by simply using JavaScript to read a user's storage data and send it to a server."
 msgstr ""
-"Dies kann verwendet werden, um Benutzer zu verfolgen und Profile zu "
-"erstellen indem JavaScript-Code den Speicher ausliest und an einen Server "
-"sendet."
+"Dies kann verwendet werden, um Benutzer zu verfolgen und Profile über sie zu "
+"erstellen, indem JavaScript den Speicher eines Nutzers ausliest und an einen "
+"Server sendet."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:103
 #, elixir-format
@@ -2031,19 +2032,18 @@ msgstr ""
 #, elixir-format
 msgid "This tool attempts to simulate what happens when a user visits a specified page with a typical browser. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled, since this is the default setting in most browsers."
 msgstr ""
-"Dieses Tool simuliert den Aufruf einer Website mit einem typischen "
-"Webbrowser. Der Browser hat keine Addons/Erweiterungen und die Do-Not-Track "
-"Einstellungen sind nicht aktiviert, da das die Standardeinstellung in den "
-"meisten Browsern ist."
+"Dieses Tool versucht den Aufruf einer Website mit einem typischen Browser zu "
+"simulieren. Der Browser hat keine Add-ons/Erweiterungen und die Do-Not-Track-"
+"Einstellungen sind nicht aktiviert, da das die Standardeinstellung der "
+"meisten Browser ist."
 
 #: lib/webbkoll_web/controllers/page_controller.ex:13
 #: lib/webbkoll_web/templates/page/index.html.eex:20
 #, elixir-format
 msgid "This tool helps you check what data-protecting measures a site has taken to help you exercise control over your privacy."
 msgstr ""
-"Webbkoll hilft Dir festzustellen, welche datenschutzrechtlichen Maßnahmen "
-"eine Website ergriffen hat, um Dir die Kontrolle über Deine Privatsphäre zu "
-"geben."
+"Dieses Tool hilft dir zu prüfen, welche Datenschutzmaßnahmen eine Website "
+"ergriffen hat, um dir die Kontrolle über deine Privatsphäre zu geben."
 
 #: lib/webbkoll_web/templates/page/about.html.eex:12
 #, elixir-format
@@ -2056,9 +2056,8 @@ msgstr ""
 #, elixir-format
 msgid "This tool simulates a normal browser visit with Do Not Track disabled (browser default) and with no add-ons."
 msgstr ""
-"Dieses Tool simuliert einen normalen Browser mit ausgeschalteter \"Do Not "
-"Track\" Funktion (ist bei den meisten die Standardeinstellung) und ohne "
-"Erweiterungen."
+"Dieses Tool simuliert den Besuch mit einem normalen Browser mit "
+"deaktiviertem Do Not Track (Standardeinstellung) und ohne Erweiterungen."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:25
 #: lib/webbkoll_web/templates/site/_https.html.eex:42
@@ -2070,10 +2069,10 @@ msgstr "Titel"
 #, elixir-format
 msgid "To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning)."
 msgstr ""
-"Für HTTPS Verbindungen benötigt die Website ein <strong>Zertifikat</strong> "
-"für die Domain auf dem Webserver. Dieses kann von vertrauenswürdigen "
-"Zertifikatsstellen ausgegeben werden, denen der Webbrowser vertraut. "
-"Andernfalls sieht der Besucher eine Zertifikats-Warnung."
+"Für HTTPS-Verbindungen benötigt die Website ein <strong>Zertifikat</strong> "
+"für die Domain auf dem Webserver. Damit das Zertifikat für Webbrowser "
+"vertrauenswürdig ist, muss es von einer Zertifizierungsstelle stammen, denen "
+"Webbrowser vertrauen (andernfalls zeigen diese eine Warnung an)."
 
 #: lib/webbkoll_web/templates/site/_headers.html.eex:41
 #, elixir-format
