@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: German (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
-"PO-Revision-Date: 2022-04-01 10:32+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-04-02 09:15+0000\n"
+"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -1376,10 +1376,9 @@ msgstr ""
 "werden, z. B. durch die gezielte Ansprache bestimmter Zielgruppen mit "
 "politischen Informationen oder um Maßnahmen gegen Gruppen auf der Grundlage "
 "ihrer angenommenen Eigenschaften zu ergreifen. Diese Form der politischen "
-"Arbeit wird als <em>Nudging</em> bezeichnet und kann auch eingesetzt werden, "
-"um die Akzeptanz spezifischer Maßnahmen (z. B. den Bau eines öffentlichen "
-"Parks) in bestimmten Gruppen (z. B. die Anwohner des geplanten Parks) zu "
-"erhöhen."
+"Arbeit wird als „Nudging“ bezeichnet und kann auch eingesetzt werden, um die "
+"Akzeptanz spezifischer Maßnahmen (z. B. den Bau eines öffentlichen Parks) in "
+"bestimmten Gruppen (z. B. die Anwohner des geplanten Parks) zu erhöhen."
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:39
 #, elixir-format
@@ -2007,10 +2006,10 @@ msgid "This principle above all concerns information registered by public author
 msgstr ""
 "Dieses Prinzip betrifft vor allem Informationen, die von Behörden oder "
 "Unternehmen gesammelt werden, z. B. in der Kreditprüfungsbranche. In der "
-"Webentwicklung geschieht das häufig bei „unscharfen“ Daten, wo die Folgen "
-"von falschen Kategorisierungen einer Profilerstellung nicht schlimmer als "
-"fehlerhaft angezeigte Werbung ist, die man sieht, auch wenn man nicht zur "
-"Zielgruppe gehört."
+"Webentwicklung geschieht das eher bei „unscharfen“ Datensätzen, wo die "
+"Folgen falscher Kategorisierung beim Profiling normalerweise nicht schlimmer "
+"sind, als dass man Werbung erhält, die nicht an die eigene Zielgruppe "
+"gerichtet ist."
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:57
 #, elixir-format
@@ -2080,23 +2079,23 @@ msgid "To enable these headers you'll need to add them to your web server config
 msgstr ""
 "Diese Header sind in der Webserver-Konfiguration einzurichten. Die Änderung "
 "ist relativ einfach, abhängig von der Art des Webservers. Du findest einige "
-"Konfigurationsbeispiele für Apache, Nginx and IIS <a href=\""
+"Konfigurationsbeispiele für Apache, Nginx and IIS auf <a href=\""
 "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options\">"
-"auf dieser Seite</a>."
+"dieser Seite</a> [developer.mozilla.org]."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:76
 #, elixir-format
 msgid "To make all this easier, you can use <a href=\"https://www.srihash.org/\">Mozilla's SRI Hash Generator.</a>"
 msgstr ""
-"Der <a href=\"https://www.srihash.org/\">Mozilla SRI Hash Generator</a> "
-"vereinfacht das Erstellen von Hashwerten."
+"Mozillas <a href=\"https://www.srihash.org/\">SRI Hash Generator</a> "
+"vereinfacht dir all das."
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:57
 #, elixir-format
 msgid "To solve this problem, the Chrome security team created an \"HSTS preload list\": a list of domains baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit."
 msgstr ""
 "Um dieses Problem zu lösen, hat das Chrome-Sicherheitsteam eine HSTS-Preload-"
-"Liste erstellt. Eine in Chrome hard-codierte Liste, die Strict Transport "
+"Liste erstellt: eine in Chrome einprogrammierte Liste, die Strict Transport "
 "Security automatisch aktiviert, selbst beim ersten Besuch."
 
 #: lib/webbkoll_web/templates/page/about.html.eex:23
