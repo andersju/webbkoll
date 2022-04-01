@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
 "PO-Revision-Date: 2022-04-01 10:32+0000\n"
-"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
+"Last-Translator: Anonymous <noreply@weblate.org>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -1978,12 +1978,12 @@ msgstr "Cookies von Dritten"
 #: lib/webbkoll_web/templates/site/_requests.html.eex:27
 #, elixir-format
 msgid "Third-party requests"
-msgstr "Drittanfragen (Third Party)"
+msgstr "Anfragen an Drittanbieter"
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:78
 #, elixir-format
 msgid "Third-party requests:"
-msgstr "Drittanfragen (Third-Party):"
+msgstr "Anfragen an Drittanbieter:"
 
 #: lib/webbkoll_web/templates/site/_localstorage.html.eex:36
 #, elixir-format
@@ -2006,10 +2006,10 @@ msgstr ""
 msgid "This principle above all concerns information registered by public authorities or companies, for instance in the credit check industry. In web development, it is more common with ”fuzzy” data sets, and the consequences of being erroneously categorised in a given profiling operation is normally not worse than that one receives online advertisement which is not specifically targetted to ones own group."
 msgstr ""
 "Dieses Prinzip betrifft vor allem Informationen, die von Behörden oder "
-"Unternehmen gesammelt werden, z.B. in der Kreditprüfungsbranche. In der "
-"Webentwicklung geschieht das häufig bei \"unscharfen\" Daten wo die Folgen "
+"Unternehmen gesammelt werden, z. B. in der Kreditprüfungsbranche. In der "
+"Webentwicklung geschieht das häufig bei „unscharfen“ Daten, wo die Folgen "
 "von falschen Kategorisierungen einer Profilerstellung nicht schlimmer als "
-"fehlerhaft angezeigte Werbung ist, die man sieht auch wenn man nicht zur "
+"fehlerhaft angezeigte Werbung ist, die man sieht, auch wenn man nicht zur "
 "Zielgruppe gehört."
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:57
@@ -2079,8 +2079,8 @@ msgstr ""
 msgid "To enable these headers you'll need to add them to your web server configuration. This is a simple change. Exactly how you do it depends on what server you use. <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options\">This page</a> [developer.mozilla.org] has configuration examples for Apache, Nginx and IIS."
 msgstr ""
 "Diese Header sind in der Webserver-Konfiguration einzurichten. Die Änderung "
-"ist relativ einfach, abhängig von der Art Deines Webservers. Du findest "
-"einige Konfigurationsbeispiele für Apache, Nginx and IIS <a href=\""
+"ist relativ einfach, abhängig von der Art des Webservers. Du findest einige "
+"Konfigurationsbeispiele für Apache, Nginx and IIS <a href=\""
 "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options\">"
 "auf dieser Seite</a>."
 
