@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: German (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
-"PO-Revision-Date: 2022-04-02 10:08+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-04-04 15:58+0000\n"
+"Last-Translator: modified <nb9je4rkk5o1fk8w@mailban.de>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -332,8 +332,8 @@ msgstr ""
 #, elixir-format
 msgid "A third-party request is a request to a domain that's not <code>%{domain}</code> or one of its subdomains."
 msgstr ""
-"Eine „Third-Party-Anfrage“ ist eine Anfrage an eine Domain, die nicht "
-"<code>%{domain}</code> oder eine ihrer Subdomains ist."
+"Eine Third-Party- oder Drittanfrage ist eine Anfrage an eine Domain, die "
+"nicht <code>%{domain}</code> oder eine ihrer Subdomains ist."
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:26
 #, elixir-format
@@ -1132,7 +1132,7 @@ msgstr "Infos"
 #: lib/webbkoll_web/templates/site/_requests.html.eex:4
 #, elixir-format
 msgid "Insecure first-party requests"
-msgstr "Unsichere First-Party Anfragen"
+msgstr "Unsichere First-Party-Anfragen"
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:10
 #, elixir-format
@@ -1280,8 +1280,8 @@ msgstr "fehlt"
 msgid "Note that <code>includeSubDomains</code> should be deployed at the base domain, i.e., <code>https://example.com</code>, <em>not</em> <code>https://www.example.com</code>. While we recommend the use of <code>includeSubDomains</code>, be <strong>very</strong> careful, as it means that <strong>all subdomains</strong> associated with the parent domain <strong>must</strong> support HTTPS. (They do not have to each have their own HSTS policy.)"
 msgstr ""
 "Beachte, dass <code>includeSubDomains</code> auf der Hauptdomain eingesetzt "
-"werden sollte, d. h. <code>https://beispiel.de</code>, <em>nicht</em> "
-"<code>https://www.beispiel.de</code>. Auch wenn wir die Verwendung von "
+"werden sollte, d. h. <code>https://example.com</code>, <em>nicht</em> "
+"<code>https://www.example.com</code>. Auch wenn wir die Verwendung von "
 "<code>includeSubDomains</code> sehr empfehlen, so ist zu beachten, dass "
 "diese für <strong>alle Subdomains</strong> gilt. Diese "
 "<strong>müssen</strong> HTTPS unterstützen (eine HSTS-Richtlinie für jede "
@@ -1932,7 +1932,7 @@ msgstr ""
 #, elixir-format
 msgid "The referrer header is privacy nightmare as it allows websites and services to track you across the web and learn about your browsing habits (and thus possibly private, sensitive information), particularly when combined with cookies."
 msgstr ""
-"Der Referrer-Header ist ein Alptraum für die Privatsphäre, da er es Websites "
+"Der Referrer-Header ist ein Albtraum für die Privatsphäre, da er es Websites "
 "und Diensten ermöglicht, dich im gesamten Web zu verfolgen und deine "
 "Surfgewohnheiten (und damit möglicherweise private, sensible Informationen) "
 "herauszufinden, insbesondere in Kombination mit Cookies."
@@ -2219,35 +2219,34 @@ msgstr ""
 #, elixir-format
 msgid "We use the word gossiping to mean that information about somebody’s behaviour, reading habits or preferences is handed over to somebody other than the actor responsible for the website."
 msgstr ""
-"Wir verwenden das Wort „petzen“ in dem Sinne, dass Informationen über "
-"Verhalten, Lesegewohnheiten oder Präferenzen eines Besuchers an Dritte "
-"weiter gegeben werden und nicht nur an den Betreiber der besuchten Website."
+"Wir verwenden das Wort „tratschen“ in dem Sinne, dass Informationen über "
+"Verhalten, Lesegewohnheiten oder Präferenzen einer Person an jemand anderen "
+"als den Website-Betreiber weitergegeben werden."
 
 #: lib/webbkoll_web/templates/page/about.html.eex:7
 #, elixir-format
 msgid "Webbkoll attempts to simulate what happens when a user visits a page with a typical browser without interacting with anything. The specified page is visited with <a href=\"https://www.chromium.org/\">Chromium</a>, the browser that Google Chrome is based on; i.e., a typical end-user browser. Data (requests/responses, cookies, etc.) is collected, analyzed and presented. The browser has no addons/extensions installed, and Do Not Track (DNT) is not enabled (since this is the default setting in most browsers). Nothing is clicked, no consent is given."
 msgstr ""
 "Webbkoll simuliert, was passiert, wenn ein Benutzer eine Seite mit einem "
-"normalen Browser besucht ohne mit dieser zu interagieren. Die angegebene "
+"normalen Browser besucht, ohne mit dieser zu interagieren. Die angegebene "
 "Seite wird mit <a href=\"https://www.chromium.org/\">Chromium</a> besucht, "
-"einem typischen Endbenutzerbrowser, der auf Google Chrome basiert. Daten ("
+"einem typischen Browser für Endnutzer, auf dem Google Chrome basiert. Daten ("
 "Anfragen/Antworten, Cookies usw.) werden gesammelt, analysiert und "
-"dargestellt. Der Browser hat keine Addons/Erweiterungen installiert und die "
-"Do-Not-Track-Einstellungen sind nicht aktiviert (Standardeinstellung in den "
-"meisten Browsern). Es wird nichts angeklickt und es wird keine Zustimmung "
-"erteilt."
+"dargestellt. Der Browser hat keine Addons/Erweiterungen installiert und Do "
+"Not Track (DNT) ist deaktiviert (da das die Standardeinstellung der meisten "
+"Browser ist). Es wird nichts angeklickt und es wird keine Zustimmung erteilt."
 
 #: lib/webbkoll_web/templates/page/about.html.eex:10
 #, elixir-format
 msgid "Webbkoll can only observe what happens when visiting a single page. It cannot tell you how the website is doing as a whole, how data is stored internally, what parties the data might be shared with, if the privacy policy is adequate, how the internal procedures are, and so on and so forth. A \"good\" Webbkoll result doesn't mean that everything is well (but a \"bad\" result certainly means that not all is well)."
 msgstr ""
-"Webbkoll überprüft nur das, was auf der ersten besuchten Website passiert. "
-"Es kann Dir nicht sagen, wie sich eine Website \"als Ganzes\" verhält, wie "
-"Daten intern gespeichert werden, mit welchen Dritten die Daten noch geteilt "
-"werden und ob der Datenschutz und die organisatorischen Abläufe ausreichend "
-"sind. Ein \"gutes\" Webbkoll Ergebnis bedeutet noch lange nicht, dass alles "
-"gut ist (aber ein \"schlechtes\" Ergebnis bedeutet, dass es definitiv nicht "
-"gut ist)."
+"Webbkoll kann nur beobachten, was beim Besuch einer einzelnen Webseite "
+"passiert. Es kann dir nicht sagen, wie sich die Website als Ganzes verhält, "
+"wie Daten intern gespeichert werden, mit welchen Dritten die Daten "
+"möglicherweise geteilt werden, ob der Datenschutz angemessen ist, wie "
+"interne Prozesse ablaufen usw. Ein „gutes“ Webbkoll-Ergebnis bedeutet nicht, "
+"dass alles gut ist (aber ein „schlechtes“ Ergebnis bedeutet definitiv, dass "
+"nicht alles gut ist)."
 
 #: lib/webbkoll_web/templates/page/donate.html.eex:4
 #, elixir-format
@@ -2276,48 +2275,49 @@ msgstr ""
 "Mit Webbkoll ist es einfach zu erkennen, welche technischen Vorkehrungen für "
 "den Datenschutz auf einer Website unternommen wurden. Wir haben Maßnahmen "
 "identifiziert, die weder große organisatorische Veränderungen abverlangen "
-"oder die Kosten für eine Webentwicklung erhöhen. Die meisten unserer "
+"noch die Kosten für eine Webentwicklung erhöhen. Die meisten unserer "
 "Empfehlungen sind relativ einfach und kostenneutral umzusetzen. Unser Ziel "
-"ist es, Personen zu ihrem Recht auf Privatsphäre und Datenschutz zu "
-"verhelfen und Webdesignern und -betreibern einfache \"Faustregeln\" an die "
-"Hand zu geben, die dazu geeignet sind."
+"ist es, dass Personen möglichst unkompliziert von ihrem Recht auf "
+"Privatsphäre und Datenschutz Gebrauch machen können sowie Webdesignern und -"
+"betreibern einfache „Faustregeln“ an die Hand zu geben, die den Personen "
+"dies erleichtern."
 
 #: lib/webbkoll_web/templates/page/about.html.eex:3
 #, elixir-format
 msgid "Webbkoll monitors privacy-enhancing features on websites, and helps you find out who is letting you exercise control over your privacy. We check to what extent a website monitors your behaviour and how much they gossip about the monitoring to third parties, based on what can be observed when visiting a given page. We’ve also compiled a set of recommendations for how to not track or gossip in digital environments."
 msgstr ""
 "Webbkoll prüft die Datenschutzfunktionen von Websites und hilft "
-"herauszufinden, wer einem die Kontrolle über Privatsphäre gibt. Wir decken "
-"auf, inwieweit eine Website Ihre Besucher überwacht und wie sehr diese Daten "
-"an Dritte \"petzt\", basierend auf den Informationen, die bei einem Besuch "
-"einer Website entstehen. Wir stellen auch eine Reihe von Empfehlungen "
-"zusammen, wie Daten im digitalen Umfeld nicht weitergegeben oder gepetzt "
-"werden können."
+"herauszufinden, wer einem die Kontrolle über Privatsphäre gibt. Wir prüfen, "
+"inwieweit eine Website dein Verhalten überwacht und wie sehr sie darüber mit "
+"Dritten tratscht, basierend auf den Beobachtungen während eines Besuchs auf "
+"der angegeben Webseite. Wir haben außerdem eine Reihe von Empfehlungen "
+"zusammengestellt, wie man Personen im digitalen Umfeld nicht verfolgt oder "
+"über sie tratscht."
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:35
 #, elixir-format
 msgid "Webbkoll see lawfulness, fairness and transparency as a requirement that individuals should understand with whom they are in contact by visiting a website. If an advertisement agency or some other company, such as an internet service provider, has easy access to behavioural data the individual should know. If an individual may be influenced by these parties, again they should be able to know. An individual should not have to master web development or  have a need for advanced technical tools to find this out. While the principle of transparency is simple, permissible deviations from transparency are listed in articles 13-20 of the regulation."
 msgstr ""
 "Für Webbkoll sind Rechtmäßigkeit, Fairness und Transparenz eine Anforderung, "
-"die jemand bei Besuch einer Webseite vestehen sollte. Wenn eine Werbeagentur "
-"oder ein anderes Unternehmen, wie z.B. ein Internetdienstanbieter, "
-"ungehinderten Zugang zu Verhaltensdaten hat, dann sollte das dem Betroffenen "
-"deutlich werden. Wenn jemand von den genannten Parteien beeinflusst werden "
-"kann, dann sollte er das wissen. Eine Person sollte nicht die Webentwicklung "
-"beherrschen müssen oder aufwändige technischen Tools besitzen müssen, um das "
-"herauszufinden. Während der Grundsatz der Transparenz einfach ist, sind "
-"zulässige Abweichungen von der Transparenz in den Artikeln 13-20 der "
-"Verordnung aufgeführt."
+"die jemand beim Besuch einer Webseite vestehen sollte. Wenn eine "
+"Werbeagentur oder ein anderes Unternehmen, wie z. B. ein "
+"Internetdienstanbieter, ungehinderten Zugang zu Verhaltensdaten hat, dann "
+"sollte das dem Betroffenen deutlich werden. Wenn jemand von den genannten "
+"Parteien beeinflusst werden kann, dann sollte er das wissen. Eine Person "
+"sollte weder Webentwicklung beherrschen müssen noch auf komplizierte "
+"technische Tools angewiesen sein, um das herauszufinden. Während der "
+"Grundsatz der Transparenz einfach ist, sind zulässige Abweichungen von der "
+"Transparenz in den Artikeln 13–20 der Verordnung aufgeführt."
 
 #: lib/webbkoll_web/templates/page/about.html.eex:17
 #, elixir-format
 msgid "Webbkoll uses <a href=\"http://www.phoenixframework.org/\">Phoenix Framework</a> (Elixir), <a href=\"https://github.com/GoogleChrome/puppeteer\">Puppeteer</a> and numerous open source libraries; <a href=\"https://github.com/andersju/webbkoll#credits--licenses\">see here</a> for specifics."
 msgstr ""
-"Webbkoll verwendet das <a href=\"http://www.phoenixframework.org/\">Phoenix "
+"Webbkoll verwendet <a href=\"http://www.phoenixframework.org/\">Phoenix "
 "Framework (Elixir)</a>, <a href=\"https://github.com/GoogleChrome/puppeteer\""
-">Puppeteer</a> und weitere Open-Source-Ressourcen; <a href=\"https://github."
-"com/andersju/webbkoll#credits--licenses\">weitere Informationen stehen "
-"hier</a>."
+">Puppeteer</a> und weitere Open-Source-Bibliotheken; nähere Informationen <a "
+"href=\"https://github.com/andersju/webbkoll#credits--licenses\">sind hier zu "
+"finden</a>."
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:28
 #, elixir-format
@@ -2328,7 +2328,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/page/faq.html.eex:20
 #, elixir-format
 msgid "What do you mean by ”gossiping to third-parties”?"
-msgstr "Was genau meint Ihr mit \"an Dritte petzen\" (third parties)?"
+msgstr "Was bedeutet „mit Dritten tratschen“?"
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:4
 #, elixir-format
@@ -2338,7 +2338,7 @@ msgstr "Was bedeutet Datenschutz?"
 #: lib/webbkoll_web/templates/page/faq.html.eex:10
 #, elixir-format
 msgid "What is ”behavioural monitoring”?"
-msgstr "Was ist eine \"Verhaltensanalyse\"?"
+msgstr "Was ist „Verhaltensüberwachung“?"
 
 #: lib/webbkoll_web/templates/site/_what.html.eex:3
 #, elixir-format
@@ -2357,22 +2357,23 @@ msgstr ""
 msgid "When the browser sees this element, it will download <code>jquery.min.js</code>, calculate the SHA384 hash, compare it to the hash in the <code>integrity</code> attribute, and only run the script if the hashes match. For example, if someone were to modify <code>jquery.min.js</code> on the remote server after we calculcated the original hash, Firefox would refuse to run the script and you'd see this in the browser console:"
 msgstr ""
 "Sieht ein Browser dieses Element, startet er den Download von "
-"<code>jquery.min.js</code>, berechnet den SHA384-Hashwert und vergleicht "
-"diesen mit dem angegebenen Hash im <code>integrity</code>-Attribut. Das "
-"Script wird nur ausgeführt, wenn die Hashwerte übereinstimmen. Das "
-"verhindert, daß, falls das <code>jquery.min.js</code> auf dem fremden Server "
-"von jemandem verändert wird, der Browser die Ausführung verhindern und "
-"folgende Meldung im Browser-Konsolenfenster ausgeben wird:"
+"<code>jquery.min.js</code>, berechnet den SHA384-Hashwert, vergleicht diesen "
+"mit dem angegebenen Hashwert im <code>integrity</code>-Attribut und führt "
+"das Skript nur aus, wenn die Hashwerte übereinstimmen. Falls zum Beispiel "
+"jemand <code>jquery.min.js</code> auf dem fremden Server modifizierte, "
+"nachdem der ursprüngliche Hashwert berechnet wurde, verhinderte der Browser "
+"die Ausführung des Skripts und gäbe folgende Meldung in der Konsole aus:"
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:62
 #, elixir-format
 msgid "When you click on a link, your browser will typically send the HTTP referer [sic] header to the webserver where the destination webpage is at. The header contains the full URL of the page you came from. This lets sites see where traffic comes from. The header is also sent when external resources (such as images, fonts, JS and CSS) are loaded."
 msgstr ""
-"Wenn Du auf einen Link klickst, sendet Dein Browser in der Regel den HTTP-"
-"Referer - also die Adresse, von der Du kommst - an den Webserver, auf dem "
-"sich die Ziel-Website befindet. Auf diese Weise können Websites sehen, woher "
-"ihre Besucher kommen. Der Header wird auch gesendet, wenn externe Ressourcen "
-"(wie Bilder, Schriften, JS und CSS) geladen werden."
+"Wenn du auf einen Link klickst, sendet dein Browser in der Regel den HTTP-"
+"Header „referer“ [sic] an den Webserver, auf dem sich die Ziel-Website "
+"befindet. Der Header enthält die vollständige URL der Ursprungs-Webseite. "
+"Auf diese Weise können Websites sehen, woher ihre Besucher kommen. Der "
+"Header wird auch gesendet, wenn externe Ressourcen (wie Bilder, "
+"Schriftarten, JS und CSS) geladen werden."
 
 #: lib/webbkoll_web/views/site_view.ex:99
 #, elixir-format
@@ -2387,7 +2388,7 @@ msgstr "X-Content-Type-Options Header nicht vorhanden"
 #: lib/webbkoll_web/views/site_view.ex:93
 #, elixir-format
 msgid "X-Content-Type-Options header set to \"nosniff\""
-msgstr "X-Content-Type-Options Header gesetzt auf \"nosniff\""
+msgstr "X-Content-Type-Options-Header auf „nosniff“ gesetzt"
 
 #: lib/webbkoll_web/views/site_view.ex:114
 #, elixir-format
@@ -2459,7 +2460,7 @@ msgstr "Ja, aber hat Mängel"
 #: lib/webbkoll_web/plugs.ex:117
 #, elixir-format
 msgid "You're requesting too frequently. Install locally?"
-msgstr "Du fragst sehr häufig an, Möchtst Du Webbkoll lokal installieren?"
+msgstr "Du fragst zu häufig an. Webbkoll lokal installieren?"
 
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:53
 #, elixir-format
@@ -2513,9 +2514,9 @@ msgstr ""
 #, elixir-format
 msgid "Setting referrer policy is an easy way to do data minimization (%{art_5_1_c}) and help ensure that you don't transfer or disclose personal data needlessly (%{art_32_2})."
 msgstr ""
-"Das Setzen einer Referer Richtlinie ist ein schneller und einfacher Weg zur "
-"Datenminimierung (%{art_5_1_c}) und stellt sicher, dass Daten nicht "
-"unnötigerweise oder unzulässigerweise übermittelt werden (%{art_32_2})."
+"Das Setzen einer Referrer-Richtlinie ist ein einfacher Weg zur "
+"Datenminimierung (%{art_5_1_c}) und trägt dazu bei, dass personenbezogene "
+"Daten nicht unnötigerweise offengelegt werden (%{art_32_2})."
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:84
 #, elixir-format
@@ -2535,10 +2536,9 @@ msgstr[1] "Anfragen an"
 #, elixir-format
 msgid "Due to abuse Webbkoll will, until further notice, throw away query parameters and path from the URL you enter; i.e., if you enter <code>http://example.com/foo/?bar=42</code>, <code>http://example.com</code> will be checked."
 msgstr ""
-"Wegen Missbrauchs wird Webbkoll bis auf Weiteres Query-Parameter und den "
-"Pfad aus der eingegebenen URL entfernen; d. h. wenn du <code>http://example."
-"com/foo/?bar=42</code> eingibst, wird <code>http://example.com</code> "
-"geprüft."
+"Wegen Missbrauchs wird Webbkoll bis auf Weiteres Anfrageparameter und Pfad "
+"aus der eingegebenen URL entfernen; d. h. wenn du <code>http://example.com/"
+"foo/?bar=42</code> eingibst, wird <code>http://example.com</code> geprüft."
 
 #: lib/webbkoll_web/controllers/site_controller.ex:43
 #, elixir-format
