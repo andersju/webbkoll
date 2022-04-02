@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: German (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
-"PO-Revision-Date: 2022-04-02 09:15+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2022-04-02 10:08+0000\n"
+"Last-Translator: hvku889y64rm <nb9je4rkk5o1fk8w@mailban.de>\n"
 "Language-Team: German <https://weblate.dataskydd.net/projects/webbkoll/main/"
 "de/>\n"
 "Language: de\n"
@@ -2111,8 +2111,8 @@ msgstr ""
 "gelaufen ist: Wenn du Informationen über Personen sammelst und diese "
 "Informationen gestohlen wurden oder verschwunden sind, dann hat die Person "
 "ein Recht darauf, das zu erfahren. Dies wird als „Benachrichtigung über die "
-"Verletzung personenbezogener Daten“ bezeichnet und ist in Artikel 34 der "
-"Verordnung enthalten."
+"Verletzung des Schutzes personenbezogener Daten“ bezeichnet und ist in "
+"Artikel 34 der Verordnung geregelt."
 
 #: lib/webbkoll_web/templates/site/failed.html.eex:20
 #, elixir-format
@@ -2167,8 +2167,8 @@ msgstr "Unbekannt"
 #, elixir-format
 msgid "Uses CSP3's <code>'strict-dynamic'</code> directive to allow dynamic script loading (optional)"
 msgstr ""
-"Benutzt die CSP3 Direktive <code>'strict-dynamic'</code> für dynamische "
-"Skripte (optional)"
+"Benutzt die CSP3-Direktive <code>'strict-dynamic'</code>, um dynamisches "
+"Laden von Skripten zu erlauben (optional)"
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:93
 #, elixir-format
@@ -2178,7 +2178,9 @@ msgstr ""
 "wie Skripten oder Stilvorlagen kann die Leistung einer Website verbessern "
 "und die Bandbreite reduzieren. Die Verwendung von CDNs birgt jedoch auch das "
 "Risiko, dass wenn ein Angreifer die Kontrolle über ein CDN erlangt, er "
-"beliebige bösartige Inhalte in eine Website injizieren kann."
+"beliebige bösartige Inhalte in Dateien auf dem CDN injizieren (oder die "
+"Dateien komplett ersetzen) und somit potenziell alle Websites angreifen "
+"kann, die Dateien von diesem CDN abrufen."
 
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:8
 #: lib/webbkoll_web/templates/site/_cookie_table.html.eex:20 lib/webbkoll_web/templates/site/_headers.html.eex:13
@@ -2192,18 +2194,18 @@ msgstr "Wert"
 #, elixir-format
 msgid "We don't provide an API as we have limited resources, but <a href=\"https://github.com/andersju/webbkoll\">the code is available</a> under the MIT license. See also the options below."
 msgstr ""
-"Wir bieten kein API an, da wir nur über begrenzte Ressourcen verfügen. Aber <"
-"a href=\"https://github.com/andersju/webbkoll\">der Code ist hier "
-"verfügbar</a> und steht unter einer freien MIT-Lizenz. Alternativen findest "
-"Du weiter unten."
+"Wir bieten keine API an, da wir nur über begrenzte Ressourcen verfügen. Aber "
+"<a href=\"https://github.com/andersju/webbkoll\">der Quelltext ist "
+"verfügbar</a> und steht unter der MIT-Lizenz. Alternativen findest du weiter "
+"unten."
 
 #: lib/webbkoll_web/templates/page/donate.html.eex:6
 #, elixir-format
 msgid "We operate on a very small budget, and servers are usually our main expense; most work is done in our free time. Every euro (or krona) counts!"
 msgstr ""
-"Wir ermöglichen hier alles mit einem sehr kleinen Budget und die Server "
-"zählen zu unseren größten Ausgabeposten. Die meiste Arbeit wird in unserer "
-"Freizeit erbracht. Jeder Euro (oder Krone) zählt!"
+"Wir arbeiten mit einem sehr kleinen Budget und Server verursachen "
+"üblicherweise den Großteil unserer Ausgaben. Die meiste Arbeit wird in "
+"unserer Freizeit erbracht. Jeder Euro (oder jede Krone) zählt!"
 
 #: lib/webbkoll_web/templates/site/_request_table.html.eex:38
 #, elixir-format
