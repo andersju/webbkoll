@@ -15,7 +15,7 @@
 
   <p><%= gettext "Profiling is mostly used in the advertisement industry to decide which type of advertisements a particular individual should be exposed to. Parents of small children, or people who know parents of small children, may receive ads for nappies, prams or family vacations. Increasingly, profiling is used to determine what contents are served by newspapers. The above mentioned groups may for instance receive short articles about new-borns if they are queueing (and have little time) or longer articles about new-borns if they are on a train (and have more time)." %></p>
 
-  <p><%= gettext "Profiling may additionally be used to shape political opinions, for instance through targetting specific groups with political information, or to enact measures against groups based on their assumed characteristics. This form of political work is called ”nudging” and may also be deployed to increase acceptance of specific measures (like the construction of a public park) in specific groups (such as the individuals living near the envisaged park)." %></p>
+  <p><%= gettext "Profiling may additionally be used to shape political opinions, for instance through targeting specific groups with political information, or to enact measures against groups based on their assumed characteristics. This form of political work is called ”nudging” and may also be deployed to increase acceptance of specific measures (like the construction of a public park) in specific groups (such as the individuals living near the envisaged park)." %></p>
 
   <h3><%= gettext "What do you mean by ”gossiping to third-parties”?" %></h3>
 
@@ -32,7 +32,7 @@
   <h4><%= gettext "Lawfulness, fairness and transparency" %></h4>
   <p><%= gettext "An individual should be able to understand the terms of interactions with others. (5(1)(a))." %></p>
 
-  <p><%= gettext "Webbkoll see lawfulness, fairness and transparency as a requirement that individuals should understand with whom they are in contact by visiting a website. If an advertisement agency or some other company, such as an internet service provider, has easy access to behavioural data the individual should know. If an individual may be influenced by these parties, again they should be able to know. An individual should not have to master web development or  have a need for advanced technical tools to find this out. While the principle of transparency is simple, permissible deviations from transparency are listed in articles 13-20 of the regulation." %></p>
+  <p><%= gettext "Webbkoll sees lawfulness, fairness and transparency as a requirement that individuals should understand with whom they are in contact by visiting a website. If an advertisement agency or some other company, such as an internet service provider, has easy access to behavioural data the individual should know. If an individual may be influenced by these parties, again they should be able to know. An individual should not have to master web development or have a need for advanced technical tools to find this out. While the principle of transparency is simple, permissible deviations from transparency are listed in articles 13-20 of the regulation." %></p>
 
   <p><%= gettext "Transparency also means a right to find out when something gone wrong: if you’ve collected information about individuals which have leaked or disappeared, the individual has a right to know. This is called ”personal data breach notification” and specific rules are in article 34 of the regulation." %></p>
 
@@ -49,7 +49,7 @@
   <h4><%= gettext "Accuracy" %></h4>
   <p><%= gettext "Personal data shall be accurate, and if they aren’t, there must be a procedure to correct them." %></p>
 
-  <p><%= gettext "This principle above all concerns information registered by public authorities or companies, for instance in the credit check industry. In web development, it is more common with ”fuzzy” data sets, and the consequences of being erroneously categorised in a given profiling operation is normally not worse than that one receives online advertisement which is not specifically targetted to ones own group." %></p>
+  <p><%= gettext "This principle above all concerns information registered by public authorities or companies, for instance in the credit check industry. In web development, it is more common with ”fuzzy” data sets, and the consequences of being erroneously categorised in a given profiling operation is normally not worse than that one receives online advertisement which is not specifically targeted to ones own group." %></p>
 
   <h4><%= gettext "Storage limitation" %></h4>
   <p><%= gettext "Personal data should not be saved or stored longer than necessary." %></p>
