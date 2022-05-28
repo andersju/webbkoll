@@ -998,11 +998,6 @@ msgid "Profiling is mostly used in the advertisement industry to decide which ty
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/page/faq.html.eex:18
-msgid "Profiling may additionally be used to shape political opinions, for instance through targetting specific groups with political information, or to enact measures against groups based on their assumed characteristics. This form of political work is called ”nudging” and may also be deployed to increase acceptance of specific measures (like the construction of a public park) in specific groups (such as the individuals living near the envisaged park)."
-msgstr ""
-
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:39
 msgid "Purpose limitation"
 msgstr ""
@@ -1176,11 +1171,6 @@ msgstr ""
 #, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:54
 msgid "Storage limitation"
-msgstr ""
-
-#, elixir-format
-#: lib/webbkoll_web/templates/site/_cookies.html.eex:43
-msgid "Storing information or gaining access to information stored in the visitors' devices, for instance in the form of cookies, has been subject to sui generis legislation in the European Union (<a href=\"%{epd}\">ePD, Art. 5.3</a>). These sui generis laws have tried to make a distinction between information stored to support technical features and information stored to support commercial features. In practice, poor enforcement of these rules has made the legal landscape unclear. Because there exists no legal duty for citizens to receive better targeted advertisement, nor a legal duty for citizens to assist web developers in improving web sites, it's doubtful that a legal basis exists for storing information to support commercial features without the consent of the web visitor (GDPR %{gdpr_art_7}). It is argued that the legitimate interests of a web site owner (%{gdpr_art_6_1_f}, %{gdpr_art_6_4}) may nevertheless enable them to subject a visitor to targeted ads or cause a visitor to assist the web developers. Then there must exist relevant and appropriate relationship between the web visitor and the web site owner in situations (GDPR %{gdpr_rec_47}), which calls into question the use of third-party service first-party cookies. In either case, if the legitimate interest legal basis for processing is invoked, adequate security measures must be undertaken (GDPR %{gdpr_art_32})."
 msgstr ""
 
 #, elixir-format
@@ -1427,11 +1417,6 @@ msgid "This is an easy measure to take against unauthorized disclosure of, or ac
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/page/faq.html.eex:52
-msgid "This principle above all concerns information registered by public authorities or companies, for instance in the credit check industry. In web development, it is more common with ”fuzzy” data sets, and the consequences of being erroneously categorised in a given profiling operation is normally not worse than that one receives online advertisement which is not specifically targetted to ones own group."
-msgstr ""
-
-#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:57
 msgid "This right ties into purpose limitation and data minisation. If one follows the recommendation of Webbkoll, one does not have to concern oneself so much with this principle."
 msgstr ""
@@ -1606,11 +1591,6 @@ msgstr ""
 #, elixir-format
 #: lib/webbkoll_web/templates/page/about.html.eex:3
 msgid "Webbkoll monitors privacy-enhancing features on websites, and helps you find out who is letting you exercise control over your privacy. We check to what extent a website monitors your behaviour and how much they gossip about the monitoring to third parties, based on what can be observed when visiting a given page. We’ve also compiled a set of recommendations for how to not track or gossip in digital environments."
-msgstr ""
-
-#, elixir-format
-#: lib/webbkoll_web/templates/page/faq.html.eex:35
-msgid "Webbkoll see lawfulness, fairness and transparency as a requirement that individuals should understand with whom they are in contact by visiting a website. If an advertisement agency or some other company, such as an internet service provider, has easy access to behavioural data the individual should know. If an individual may be influenced by these parties, again they should be able to know. An individual should not have to master web development or  have a need for advanced technical tools to find this out. While the principle of transparency is simple, permissible deviations from transparency are listed in articles 13-20 of the regulation."
 msgstr ""
 
 #, elixir-format
@@ -1855,4 +1835,24 @@ msgstr ""
 #, elixir-format
 #: lib/webbkoll_web/templates/site/_geolocation.html.eex:9
 msgid "You can find information about this IP address using third-party tools such as the following:"
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/page/faq.html.eex:18
+msgid "Profiling may additionally be used to shape political opinions, for instance through targeting specific groups with political information, or to enact measures against groups based on their assumed characteristics. This form of political work is called ”nudging” and may also be deployed to increase acceptance of specific measures (like the construction of a public park) in specific groups (such as the individuals living near the envisaged park)."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/site/_cookies.html.eex:43
+msgid "Storing information or gaining access to information stored in the visitors' devices, for instance in the form of cookies, has been subject to sui generis legislation in the European Union (<a href=\"%{epd}\">ePD, Art. 5.3</a>). These sui generis laws have tried to make a distinction between information stored to support technical features and information stored to support commercial features. In practice, poor enforcement of these rules has made the legal landscape unclear. Because there exists no legal duty for citizens to receive better targeted advertisement, nor a legal duty for citizens to assist web developers in improving web sites, it's doubtful that a legal basis exists for storing information to support commercial features without the consent of the web visitor (GDPR %{gdpr_art_7}). It is argued that the legitimate interests of a web site owner (%{gdpr_art_6_1_f}, %{gdpr_art_6_4}) may nevertheless enable them to subject a visitor to targeted ads or cause a visitor to assist the web developers. In either case, if the legitimate interest legal basis for processing is invoked, adequate security measures must be undertaken (GDPR %{gdpr_art_32})."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/page/faq.html.eex:52
+msgid "This principle above all concerns information registered by public authorities or companies, for instance in the credit check industry. In web development, it is more common with ”fuzzy” data sets, and the consequences of being erroneously categorised in a given profiling operation is normally not worse than that one receives online advertisement which is not specifically targeted to ones own group."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/page/faq.html.eex:35
+msgid "Webbkoll sees lawfulness, fairness and transparency as a requirement that individuals should understand with whom they are in contact by visiting a website. If an advertisement agency or some other company, such as an internet service provider, has easy access to behavioural data the individual should know. If an individual may be influenced by these parties, again they should be able to know. An individual should not have to master web development or have a need for advanced technical tools to find this out. While the principle of transparency is simple, permissible deviations from transparency are listed in articles 13-20 of the regulation."
 msgstr ""
