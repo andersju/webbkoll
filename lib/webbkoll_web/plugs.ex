@@ -29,17 +29,27 @@ defmodule WebbkollWeb.Plugs do
   end
 
   def validate_url(conn, _params) do
-    case ValidUrl.validate(conn.assigns.input_url) do
+    url = URI.parse(conn.assigns.input_url)
+
+    # For validation purposes we convert back from ASCII to Unicode.
+    # TODO: Make all this less messy
+    URI.to_string(%URI{
+            host: url.host |> :idna.from_ascii() |> List.to_string() |> String.downcase(),
+            path: url.path,
+            query: url.query,
+            scheme: "http"
+      })
+    |> ValidUrl.validate()
+    |> case do
       true ->
         conn
-
       false ->
         ControllerHelpers.render_error(
           conn,
           400,
           gettext("Invalid URL: %{url}", url: conn.assigns.input_url)
         )
-    end
+      end
   end
 
   def check_for_bots(conn, _params) do
