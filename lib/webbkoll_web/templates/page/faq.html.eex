@@ -30,7 +30,7 @@
   <p><%= gettext(~s|The <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679">general data protection regulation of the European Union</a> enters into force on the 25th of May 2018 and concerns the balancing of power being those influencing individuals (typically companies and public authorities) and the individuals themselves. Webbkoll is a tool to find out who is collecting information about individuals, and what can be done to stop invisible tracking.|) |> raw %></p>
 
   <h4><%= gettext "Lawfulness, fairness and transparency" %></h4>
-  <p><%= gettext "An individual should be able to understand the terms of interactions with others. (5(1)(a))." %></p>
+  <p><%= gettext "An individual should be able to understand the terms under which their data is being processed (by others). (5(1)(a))." %></p>
 
   <p><%= gettext "Webbkoll sees lawfulness, fairness and transparency as a requirement that individuals should understand with whom they are in contact by visiting a website. If an advertisement agency or some other company, such as an internet service provider, has easy access to behavioural data the individual should know. If an individual may be influenced by these parties, again they should be able to know. An individual should not have to master web development or have a need for advanced technical tools to find this out. While the principle of transparency is simple, permissible deviations from transparency are listed in articles 13-20 of the regulation." %></p>
 

@@ -258,11 +258,6 @@ msgid "An error occurred"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/templates/page/faq.html.eex:33
-msgid "An individual should be able to understand the terms of interactions with others. (5(1)(a))."
-msgstr ""
-
-#, elixir-format
 #: lib/webbkoll_web/controllers/page_controller.ex:11
 msgid "Analyze"
 msgstr ""
@@ -823,7 +818,7 @@ msgid "Integrity and confidentiality"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/plugs.ex:40 lib/webbkoll_web/plugs.ex:100
+#: lib/webbkoll_web/plugs.ex:51 lib/webbkoll_web/plugs.ex:111
 msgid "Invalid URL: %{url}"
 msgstr ""
 
@@ -838,7 +833,7 @@ msgid "Invalid header"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/plugs.ex:141
+#: lib/webbkoll_web/plugs.ex:161
 msgid "Invalid id."
 msgstr ""
 
@@ -1149,7 +1144,7 @@ msgid "Since responsibility can be a difficult burden, Webbkoll has a large set 
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/plugs.ex:55
+#: lib/webbkoll_web/plugs.ex:66
 msgid "Sorry, bots aren't allowed."
 msgstr ""
 
@@ -1489,7 +1484,7 @@ msgid "Try again?"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/plugs.ex:131
+#: lib/webbkoll_web/plugs.ex:150
 msgid "Trying same host too frequently. Try again in a minute."
 msgstr ""
 
@@ -1719,7 +1714,7 @@ msgid "Yes, but has issues"
 msgstr ""
 
 #, elixir-format
-#: lib/webbkoll_web/plugs.ex:117
+#: lib/webbkoll_web/plugs.ex:132
 msgid "You're requesting too frequently. Install locally?"
 msgstr ""
 
@@ -1855,4 +1850,9 @@ msgstr ""
 #, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:35
 msgid "Webbkoll sees lawfulness, fairness and transparency as a requirement that individuals should understand with whom they are in contact by visiting a website. If an advertisement agency or some other company, such as an internet service provider, has easy access to behavioural data the individual should know. If an individual may be influenced by these parties, again they should be able to know. An individual should not have to master web development or have a need for advanced technical tools to find this out. While the principle of transparency is simple, permissible deviations from transparency are listed in articles 13-20 of the regulation."
+msgstr ""
+
+#, elixir-format
+#: lib/webbkoll_web/templates/page/faq.html.eex:33
+msgid "An individual should be able to understand the terms under which their data is being processed (by others). (5(1)(a))."
 msgstr ""

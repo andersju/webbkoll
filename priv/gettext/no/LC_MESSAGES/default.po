@@ -384,13 +384,6 @@ msgid "An error occurred"
 msgstr "En feil inntraff"
 
 #, elixir-format
-#: lib/webbkoll_web/templates/page/faq.html.eex:33
-msgid "An individual should be able to understand the terms of interactions with others. (5(1)(a))."
-msgstr ""
-"Det skal være tydelig for enhver hva som gjelder ved behandling av "
-"personopplysninger. (5(1)(a))."
-
-#, elixir-format
 #: lib/webbkoll_web/controllers/page_controller.ex:11
 msgid "Analyze"
 msgstr "Analysere"
@@ -1118,7 +1111,7 @@ msgid "Integrity and confidentiality"
 msgstr "Integritet og konfidensialitet"
 
 #, elixir-format
-#: lib/webbkoll_web/plugs.ex:40 lib/webbkoll_web/plugs.ex:100
+#: lib/webbkoll_web/plugs.ex:51 lib/webbkoll_web/plugs.ex:111
 msgid "Invalid URL: %{url}"
 msgstr "Ugyldig URL: %{url}"
 
@@ -1133,7 +1126,7 @@ msgid "Invalid header"
 msgstr "Ugyldig header"
 
 #, elixir-format
-#: lib/webbkoll_web/plugs.ex:141
+#: lib/webbkoll_web/plugs.ex:161
 msgid "Invalid id."
 msgstr "Ugyldig header"
 
@@ -1515,7 +1508,7 @@ msgstr ""
 "som vil påvirke andre må overveier måten de bruker slik makt."
 
 #, elixir-format
-#: lib/webbkoll_web/plugs.ex:55
+#: lib/webbkoll_web/plugs.ex:66
 msgid "Sorry, bots aren't allowed."
 msgstr "Beklager, men boter tillates ikke."
 
@@ -2027,7 +2020,7 @@ msgid "Try again?"
 msgstr "Forsøk igjen?"
 
 #, elixir-format
-#: lib/webbkoll_web/plugs.ex:131
+#: lib/webbkoll_web/plugs.ex:150
 msgid "Trying same host too frequently. Try again in a minute."
 msgstr "Samme vert blir forsøkt for ofte. Prøv igjen om ett minutt."
 
@@ -2336,7 +2329,7 @@ msgid "Yes, but has issues"
 msgstr "Ja, men har problemer"
 
 #, elixir-format
-#: lib/webbkoll_web/plugs.ex:117
+#: lib/webbkoll_web/plugs.ex:132
 msgid "You're requesting too frequently. Install locally?"
 msgstr ""
 "Du sender litt for mange forespørsler. Hva med å installere verktøyet lokalt "
@@ -2487,7 +2480,7 @@ msgstr ""
 msgid "You can find information about this IP address using third-party tools such as the following:"
 msgstr ""
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:18
 msgid "Profiling may additionally be used to shape political opinions, for instance through targeting specific groups with political information, or to enact measures against groups based on their assumed characteristics. This form of political work is called ”nudging” and may also be deployed to increase acceptance of specific measures (like the construction of a public park) in specific groups (such as the individuals living near the envisaged park)."
 msgstr ""
@@ -2497,7 +2490,7 @@ msgstr ""
 "formen for politisk påvirkning kalles ofte for \"nudging\" og kan også "
 "anvendes for å øke aksepten i ulike grupper for visse typer avgjørelser."
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:43
 msgid "Storing information or gaining access to information stored in the visitors' devices, for instance in the form of cookies, has been subject to sui generis legislation in the European Union (<a href=\"%{epd}\">ePD, Art. 5.3</a>). These sui generis laws have tried to make a distinction between information stored to support technical features and information stored to support commercial features. In practice, poor enforcement of these rules has made the legal landscape unclear. Because there exists no legal duty for citizens to receive better targeted advertisement, nor a legal duty for citizens to assist web developers in improving web sites, it's doubtful that a legal basis exists for storing information to support commercial features without the consent of the web visitor (GDPR %{gdpr_art_7}). It is argued that the legitimate interests of a web site owner (%{gdpr_art_6_1_f}, %{gdpr_art_6_4}) may nevertheless enable them to subject a visitor to targeted ads or cause a visitor to assist the web developers. In either case, if the legitimate interest legal basis for processing is invoked, adequate security measures must be undertaken (GDPR %{gdpr_art_32})."
 msgstr ""
@@ -2521,7 +2514,7 @@ msgstr ""
 "tredjepart. Uansett må adekvate sikkerhetsforanstaltninger settes i verk på "
 "basis av at berettiget interesse påberopes ihht.  (GDPR %{gdpr_art_32})."
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:52
 msgid "This principle above all concerns information registered by public authorities or companies, for instance in the credit check industry. In web development, it is more common with ”fuzzy” data sets, and the consequences of being erroneously categorised in a given profiling operation is normally not worse than that one receives online advertisement which is not specifically targeted to ones own group."
 msgstr ""
@@ -2532,7 +2525,7 @@ msgstr ""
 "nettsporer er vanligvis ikke verre enn at man får feilaktig rettet reklame "
 "når man beveger seg i online miljøer."
 
-#, elixir-format, fuzzy
+#, elixir-format
 #: lib/webbkoll_web/templates/page/faq.html.eex:35
 msgid "Webbkoll sees lawfulness, fairness and transparency as a requirement that individuals should understand with whom they are in contact by visiting a website. If an advertisement agency or some other company, such as an internet service provider, has easy access to behavioural data the individual should know. If an individual may be influenced by these parties, again they should be able to know. An individual should not have to master web development or have a need for advanced technical tools to find this out. While the principle of transparency is simple, permissible deviations from transparency are listed in articles 13-20 of the regulation."
 msgstr ""
@@ -2545,3 +2538,10 @@ msgstr ""
 "hvem som får mulighet til å påvirke en selv. Prinsippet om åpenhet er lett, "
 "men vil man ikke være helt transparent finnes det bestemmelser om hva man "
 "ikke for lov å la være å fortelle om i direktivets artikler 13-20."
+
+#, elixir-format, fuzzy
+#: lib/webbkoll_web/templates/page/faq.html.eex:33
+msgid "An individual should be able to understand the terms under which their data is being processed (by others). (5(1)(a))."
+msgstr ""
+"Det skal være tydelig for enhver hva som gjelder ved behandling av "
+"personopplysninger. (5(1)(a))."
