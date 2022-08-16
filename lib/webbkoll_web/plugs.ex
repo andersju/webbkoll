@@ -34,22 +34,23 @@ defmodule WebbkollWeb.Plugs do
     # For validation purposes we convert back from ASCII to Unicode.
     # TODO: Make all this less messy
     URI.to_string(%URI{
-            host: url.host |> :idna.from_ascii() |> List.to_string() |> String.downcase(),
-            path: url.path,
-            query: url.query,
-            scheme: "http"
-      })
+      host: url.host |> :idna.from_ascii() |> List.to_string() |> String.downcase(),
+      path: url.path,
+      query: url.query,
+      scheme: "http"
+    })
     |> ValidUrl.validate()
     |> case do
       true ->
         conn
+
       false ->
         ControllerHelpers.render_error(
           conn,
           400,
           gettext("Invalid URL: %{url}", url: conn.assigns.input_url)
         )
-      end
+    end
   end
 
   def check_for_bots(conn, _params) do
@@ -76,8 +77,8 @@ defmodule WebbkollWeb.Plugs do
         true ->
           URI.to_string(%URI{
             host: url.host |> :idna.utf8_to_ascii() |> List.to_string() |> String.downcase(),
-            path: (if @check_host_only, do: nil, else: url.path),
-            query: (if @check_host_only, do: nil, else: url.query),
+            path: if(@check_host_only, do: nil, else: url.path),
+            query: if(@check_host_only, do: nil, else: url.query),
             scheme: "http"
           })
 
@@ -87,7 +88,7 @@ defmodule WebbkollWeb.Plugs do
             path: url.path,
             query: url.query,
             scheme: "http",
-            port: url.port,
+            port: url.port
           })
       end
     catch
@@ -109,6 +110,7 @@ defmodule WebbkollWeb.Plugs do
           400,
           gettext("Invalid URL: %{url}", url: conn.params["url"])
         )
+
       url ->
         assign(conn, :input_url, url)
     end
@@ -124,7 +126,11 @@ defmodule WebbkollWeb.Plugs do
         conn
 
       {:error, _} ->
-        ControllerHelpers.render_error(conn, 429, gettext("You're requesting too frequently. Install locally?"))
+        ControllerHelpers.render_error(
+          conn,
+          429,
+          gettext("You're requesting too frequently. Install locally?")
+        )
     end
   end
 
@@ -138,7 +144,11 @@ defmodule WebbkollWeb.Plugs do
         conn
 
       {:error, _} ->
-        ControllerHelpers.render_error(conn, 429, gettext("Trying same host too frequently. Try again in a minute."))
+        ControllerHelpers.render_error(
+          conn,
+          429,
+          gettext("Trying same host too frequently. Try again in a minute.")
+        )
     end
   end
 
