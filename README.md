@@ -18,8 +18,8 @@ response headers, etc.), and sends it back as JSON to this tool which
 then analyzes the data and presents the results on a webpage along with
 explanations and advice.
 
-Webbkoll is multilingual and currently supports English and Swedish.
-If you want to help us translate Webbkoll into more languages, see
+Webbkoll is multilingual and currently supports English, Swedish, German and Norwegian.
+We use Weblate for translations; if you want to help us translate Webbkoll into more languages, see
 [TRANSLATIONS.md](https://github.com/andersju/webbkoll/blob/master/TRANSLATIONS.md).
 
 [Honeydew](https://github.com/koudelka/honeydew) is used for job processing, and
