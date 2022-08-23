@@ -8,8 +8,8 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-08-23 05:14+0000\n"
-"Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
+"PO-Revision-Date: 2022-08-24 14:16+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/webbkoll/main/fr/>"
 "\n"
 "Language: fr\n"
@@ -198,12 +198,12 @@ msgstr ""
 #, elixir-format
 msgid "<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href=\"mailto:info@dataskydd.net\">send us an email</a> (and tell us what URL you tried)! You can also try <a href=\"%{url}#alternatives\">alternative services</a>."
 msgstr ""
-"<strong>Veuillez noter</strong>: Si vous êtes certain d'avoir saisi l'URL "
-"correctement et que celle-ci fonctionne pour vous, c'est peut-être notre "
-"faut ; s'il vous plaît <a href=\"mailto:info@dataskydd.net\">envoyez-nous un "
-"email</a> (et dites-nous quelle URL vous avez essayé) ! Vous pouvez "
-"également essayer <a href=\"https://privacyscore.org/\">PrivacyScore</a> "
-"comme alternative."
+"<strong>Veuillez noter</strong> : Si vous êtes certain(e) d'avoir saisi "
+"l'URL correctement et que celle-ci fonctionne pour vous, c'est peut-être "
+"notre faut ; s'il vous plaît <a href=\"mailto:info@dataskydd.net\">envoyez-"
+"nous un courriel</a> (et dites-nous quelle URL vous avez essayé) ! Vous "
+"pouvez également essayer <a href=\"https://privacyscore.org/\">PrivacyScore</"
+"a> comme alternative."
 
 #: lib/webbkoll_web/templates/site/_cookies.html.eex:18
 #, elixir-format
@@ -615,11 +615,16 @@ msgstr "Échec"
 #, elixir-format
 msgid "Feedback is appreciated: send <a href=\"mailto:info@dataskydd.net\">email</a> or <a href=\"https://github.com/andersju/webbkoll\">open an issue</a>."
 msgstr ""
+"</a> Les commentaires sont appréciés : envoyez un courriel à <a href=\"mailto"
+":info@dataskydd.net\">ou <a href=\"https://github.com/andersju/webbkoll\""
+">ouvrez un dossier</a>."
 
 #: lib/webbkoll_web/templates/layout/app.html.eex:101
 #, elixir-format
 msgid "Feedback? Questions? <a href=\"mailto:info@dataskydd.net\">info@dataskydd.net</a>"
 msgstr ""
+"Remarques ? Questions ? <a href=\"mailto:info@dataskydd.net\">info@dataskydd."
+"net</a>"
 
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:96
 #, elixir-format
