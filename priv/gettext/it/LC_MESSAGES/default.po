@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-25 19:28+0200\n"
 "PO-Revision-Date: 2022-09-01 19:11+0000\n"
-"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
+"Last-Translator: Anders Jensen-Urstad <anders@unix.se>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/webbkoll/main/it/"
 ">\n"
 "Language: it\n"
@@ -403,7 +403,7 @@ msgstr "Analizzare %{host} su SSL Labs"
 #: lib/webbkoll_web/views/site_view.ex:264
 #, elixir-format
 msgid "Art. "
-msgstr "Art. "
+msgstr "Articolo "
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:45
 #, elixir-format
@@ -1473,8 +1473,9 @@ msgstr ""
 #, elixir-format
 msgid "Restricts where <code>&lt;form&gt;</code> contents may be submitted by using <code>form-action 'none'</code>, <code>form-action 'self'</code>, or specific URIs"
 msgstr ""
-"Limita l'invio dei contenuti del modulo <code><></code> utilizzando <code"
-">form-action 'none'</code>, <code>form-action 'self'</code>, o URI specifici"
+"Limita l'invio dei contenuti del modulo <code>&lt;form&gt;</code> "
+"utilizzando <code>form-action 'none'</code>, <code>form-action 'self'</"
+"code>, o URI specifici"
 
 #: lib/webbkoll_web/templates/site/_headers.html.eex:14
 #: lib/webbkoll_web/templates/site/_headers.html.eex:29
@@ -2127,8 +2128,8 @@ msgstr ""
 msgid "We use <a href=\"%{url_mozilla}\">Mozilla's version</a> of Disconnect's <a href=\"%{url_disconnect}\">open source list of trackers</a> to classify hosts."
 msgstr ""
 "Usiamo la <a href=\"%{url_mozilla}\">versione di Mozilla</a> dell'elenco "
-"open source di tracker <a href=\"%{url_disconnect}\"> di Disconnect <a href="
-"\"%{url_disconnect}\"> per classificare gli host."
+"open source di tracker <a href=\"%{url_disconnect}\"> di Disconnect </a> per "
+"classificare gli host."
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:22
 #, elixir-format
