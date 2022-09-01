@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-25 19:28+0200\n"
-"PO-Revision-Date: 2022-09-01 19:11+0000\n"
+"PO-Revision-Date: 2022-09-01 19:33+0000\n"
 "Last-Translator: Anders Jensen-Urstad <anders@unix.se>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/webbkoll/main/it/"
 ">\n"
@@ -150,7 +150,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_https.html.eex:17
 #, elixir-format
 msgid "<code>%{domain}</code> uses HTTPS by default."
-msgstr "<code>%{dominio}</code> utilizza HTTPS per impostazione predefinita."
+msgstr "<code>%{domain}</code> utilizza HTTPS per impostazione predefinita."
 
 #: lib/webbkoll_web/views/site_view.ex:202
 #, elixir-format
@@ -1374,7 +1374,7 @@ msgstr "Intestazioni grezze"
 #: lib/webbkoll_web/views/site_view.ex:271
 #, elixir-format
 msgid "Rec. "
-msgstr "Rec. "
+msgstr "Considerando "
 
 #: lib/webbkoll_web/controllers/page_controller.ex:26
 #, elixir-format
@@ -1751,7 +1751,7 @@ msgstr ""
 "L'intestazione di risposta HTTP <strong><code>X-Frame-Options</code></"
 "strong> può essere usata per indicare se un browser deve essere autorizzato "
 "o meno a rendere una pagina in un <code>&lt;frame&gt;</code>, "
-"<code>&lt;iframe&gt;</code> or <code>&lt;oggetto&gt;</code>.  I siti possono "
+"<code>&lt;iframe&gt;</code> or <code>&lt;object&gt;</code>. I siti possono "
 "utilizzare questa opzione per evitare attacchi di <a href=\"https://en."
 "wikipedia.org/wiki/clickjacking\">clickjacking</a>, assicurandosi che il "
 "loro contenuto non sia incorporato in altri siti."
