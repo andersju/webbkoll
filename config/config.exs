@@ -11,7 +11,8 @@ config :webbkoll,
     "en" => "English",
     "sv" => "Svenska",
     "de" => "Deutsch",
-    "no" => "Norsk"
+    "no" => "Norsk",
+    "it" => "Italiano"
     # "fr" => "Français"
   },
   default_locale: "en",

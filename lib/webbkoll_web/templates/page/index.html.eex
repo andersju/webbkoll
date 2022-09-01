@@ -4,7 +4,7 @@
     <%= if @conn.assigns.locale == "en" do %>
     <div class="flash-notice">
       <p>
-        <span class="icon-sphere"></span> Webbkoll is also available in <a href="/de/">German</a> (auf Deutsch), <a href="/no/">Norwegian</a> (norsk) and <a href="/sv/">Swedish</a> (svenska)!
+        <span class="icon-sphere"></span> Webbkoll is also available in <a href="/de/">German</a> (auf Deutsch), <a href="/no/">Norwegian</a> (norsk), <a href="/sv/">Swedish</a> (svenska) and <a href="/it/">Italian</a> (italiano)!
       </p>
     </div>
     <% end %>
