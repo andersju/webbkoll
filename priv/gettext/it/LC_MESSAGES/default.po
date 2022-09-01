@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-25 19:28+0200\n"
-"PO-Revision-Date: 2022-08-29 10:18+0000\n"
+"PO-Revision-Date: 2022-09-01 19:11+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/webbkoll/main/it/"
 ">\n"
@@ -89,6 +89,10 @@ msgstr ""
 #, elixir-format
 msgid "<a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> (open source) analyzes CSP, HSTS, TLS and various other things (some of the Webbkoll tests are based on code from Observatory). See also <a href=\"https://csp-evaluator.withgoogle.com/\">Google's CSP Evaluator</a>."
 msgstr ""
+"<a href=\"https://observatory.mozilla.org/\">Observatory di Mozilla</a> ("
+"open source) analizza CSP, HSTS, TLS e varie altre cose (alcuni dei test di "
+"Webbkoll sono basati sul codice di Observatory). Si veda anche <a href="
+"\"https://csp-evaluator.withgoogle.com/\">Google's CSP Evaluator</a>."
 
 #: lib/webbkoll_web/templates/page/about.html.eex:38
 #, elixir-format
@@ -103,6 +107,8 @@ msgstr ""
 #, elixir-format
 msgid "<a href=\"https://www.hardenize.com/\">Hardenize</a> is similar to Observatory, but also checks a domain's mail servers."
 msgstr ""
+"<a href=\"https://www.hardenize.com/\"> Hardenize</a> è simile a "
+"Observatory, ma controlla anche i server di posta di un dominio."
 
 #: lib/webbkoll_web/templates/page/about.html.eex:40
 #, elixir-format
@@ -124,6 +130,15 @@ msgstr ""
 #, elixir-format
 msgid "<a href=\"https://www.w3.org/TR/referrer-policy/\">Several policies are offered</a>, such as <code>origin</code> (strips everything except the origin) and <code>origin-when-cross-origin</code> (sends full URL with same-origin requests, otherwise stripped). We recommend <strong><code>no-referrer</code></strong>, which kills the referrer header entirely for all requests, no matter the destination; or <strong><code>same-origin</code></strong>, which kills the referrer for third-party requests but not for requests to the same origin."
 msgstr ""
+"<a href=\"https://www.w3.org/TR/referrer-policy/\">Sono disponibili diversi "
+"criteri</a>, come <code>origin</code> (elimina tutto tranne l'origine) e "
+"<code>origin-when-cross-origin</code> (invia l'URL completo con le richieste "
+"con la stessa origine, altrimenti viene eliminato). Si consiglia "
+"<strong><code>no-referrer</code></strong>, che elimina completamente "
+"l'intestazione referrer per tutte le richieste, indipendentemente dalla "
+"destinazione; oppure <strong><code>same-origin</code></strong>, che elimina "
+"il referrer per le richieste di terze parti, ma non per quelle verso la "
+"stessa origine."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:59
 #, elixir-format
@@ -939,7 +954,7 @@ msgstr "Iniziare con Let's Encrypt"
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:46
 #, elixir-format
 msgid "Good policy"
-msgstr ""
+msgstr "Buona politica"
 
 #: lib/webbkoll_web/templates/site/_hsts.html.eex:45
 #, elixir-format
@@ -1359,7 +1374,7 @@ msgstr "Intestazioni grezze"
 #: lib/webbkoll_web/views/site_view.ex:271
 #, elixir-format
 msgid "Rec. "
-msgstr ""
+msgstr "Rec. "
 
 #: lib/webbkoll_web/controllers/page_controller.ex:26
 #, elixir-format
@@ -1385,6 +1400,8 @@ msgstr ""
 #, elixir-format
 msgid "Referrer Policy set to <code>%{value}</code> in <code>meta http-equiv</code> element."
 msgstr ""
+"Criterio del referrer impostato su <code>%{value}</code> nell'elemento "
+"<code>meta http-equiv</code>."
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:23
 #, elixir-format
@@ -1619,6 +1636,12 @@ msgstr ""
 #, elixir-format
 msgid "Subresource Integrity enables you to mitigate some risks of attacks such as this, by ensuring that the files your web application or web document fetches (from a CDN or anywhere) have been delivered without a third-party having injected any additional content into those files — and without any other changes of any kind at all having been made to those files."
 msgstr ""
+"L'integrità delle risorse secondarie consente di mitigare alcuni rischi di "
+"attacchi come questo, assicurando che i file recuperati dall'applicazione "
+"Web o dal documento Web (da una rete CDN o da qualsiasi luogo) siano stati "
+"recapitati senza che una terza parte abbia iniettato contenuto aggiuntivo in "
+"tali file e senza che siano state apportate altre modifiche di alcun tipo a "
+"tali file."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:26
 #: lib/webbkoll_web/templates/site/_https.html.eex:43
@@ -1660,6 +1683,12 @@ msgstr ""
 #, elixir-format
 msgid "The <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT\"><code>Expect-CT</code></a> header can be used to enforce <a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/Certificate_Transparency\">Certificate Transparency</a> requirements, and/or optionally send reports of Certificate Transparency violations to a specified URI."
 msgstr ""
+"L'intestazione <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
+"Headers/Expect-CT\"><code>Expect-CT</code></a> può essere utilizzata per far "
+"rispettare i requisiti di <a href=\"https://developer.mozilla.org/en-US/docs/"
+"Web/Security/Certificate_Transparency\">trasparenza dei certificati</a> e/o, "
+"facoltativamente, per inviare segnalazioni di violazioni della trasparenza "
+"dei certificati a un URI specificato."
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:83
 #, elixir-format
@@ -1829,7 +1858,7 @@ msgstr ""
 "e sensibili), in particolare se combinata con i cookie."
 
 #: lib/webbkoll_web/views/site_view.ex:160
-#, elixir-format, fuzzy
+#, elixir-format
 msgid "The use of CSP's <code>frame-ancestors</code> directive offers fine-grained control over who can frame your site."
 msgstr ""
 "L'uso della direttiva <code>frame-ancestors</code> di CSP offre un controllo "
@@ -2279,26 +2308,30 @@ msgstr "Intestazione X-Frame-Options (XFO) impostata su SAMEORIGIN o DENY"
 #, elixir-format
 msgid "X-Frame-Options (XFO) header uses ALLOW-FROM uri directive"
 msgstr ""
+"L'intestazione X-Frame-Options (XFO) utilizza la direttiva ALLOW-FROM uri"
 
 #: lib/webbkoll_web/views/site_view.ex:102
 #, elixir-format
 msgid "X-Frame-Options (XFO) implemented via the CSP frame-ancestors directive"
 msgstr ""
+"X-Frame-Options (XFO) implementato tramite la direttiva CSP frame-ancestors"
 
 #: lib/webbkoll_web/views/site_view.ex:134
 #, elixir-format
 msgid "X-XSS-Protection header cannot be recognized"
-msgstr ""
+msgstr "L'intestazione X-XSS-Protection non può essere riconosciuta"
 
 #: lib/webbkoll_web/views/site_view.ex:131
 #, elixir-format
 msgid "X-XSS-Protection header not implemented"
-msgstr ""
+msgstr "Intestazione X-XSS-Protection non implementata"
 
 #: lib/webbkoll_web/views/site_view.ex:123
 #, elixir-format
 msgid "X-XSS-Protection header not needed due to strong Content Security Policy (CSP) header"
 msgstr ""
+"L'intestazione X-XSS-Protection non è necessaria a causa dell'intestazione "
+"forte di Content Security Policy (CSP)"
 
 #: lib/webbkoll_web/views/site_view.ex:128
 #, elixir-format
