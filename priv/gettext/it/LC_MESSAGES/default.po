@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-25 19:28+0200\n"
-"PO-Revision-Date: 2022-09-01 19:33+0000\n"
-"Last-Translator: Anders Jensen-Urstad <anders@unix.se>\n"
+"PO-Revision-Date: 2022-09-03 10:15+0000\n"
+"Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/webbkoll/main/it/"
 ">\n"
 "Language: it\n"
@@ -67,6 +67,13 @@ msgstr "%{first_party} prime-parti; %{third_party} terze-parti"
 #, elixir-format
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security\">HTTP Strict Transport Security</a> (HSTS) is a simple and <a href=\"https://caniuse.com/#feat=stricttransportsecurity\">widely supported</a> standard to protect visitors by ensuring that their browsers always connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from <code>http://</code> to <code>https://</code> URLs."
 msgstr ""
+"<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/"
+"HTTP_strict_transport_security\">HTTP Strict Transport Security</a> (HSTS) è "
+"uno standard <a href=\"https://caniuse.com/#feat=stricttransportsecurity\""
+">semplice e ampiamente supportato</a> per proteggere i visitatori garantendo "
+"che i loro browser si connettano sempre a un sito web tramite HTTPS. HSTS "
+"esiste per eliminare la pratica comune e insicura di reindirizzare gli "
+"utenti da <code>http://</code> a <code>https://</code> URL."
 
 #: lib/webbkoll_web/templates/site/_https.html.eex:67
 #, elixir-format
@@ -195,7 +202,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:23
 #, elixir-format
 msgid "<code>max-age</code> set to at least 6 months"
-msgstr "<code>max-age</code> è impostato su almeno 6 mesi."
+msgstr "<code>max-age</code> è impostato su almeno 6 mesi"
 
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:51
 #, elixir-format
@@ -1213,7 +1220,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_results_header.html.eex:89
 #, elixir-format
 msgid "Look up"
-msgstr ""
+msgstr "Consultare"
 
 #: lib/webbkoll_web/views/site_view.ex:182
 #, elixir-format
@@ -1310,7 +1317,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_hsts_host.html.eex:9
 #, elixir-format
 msgid "Pass"
-msgstr ""
+msgstr "Passare"
 
 #: lib/webbkoll_web/templates/page/faq.html.eex:50
 #, elixir-format
@@ -1695,36 +1702,61 @@ msgstr ""
 #, elixir-format
 msgid "The <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Network_Error_Logging\"><code>NEL</code></a> (Network Error Logging) header instructs the user's browser to send reports about network errors (e.g. DNS resolution error, TCP or TLS connection failure, 4xx or 5xx HTTP responses) to a specified URI. It can also be configured to send reports about successful network requests. See <a href=\"https://w3c.github.io/network-error-logging/#privacy-considerations\">[1]</a>, <a href=\"https://w3c.github.io/reporting/#privacy\">[2]</a> for privacy considerations. "
 msgstr ""
+"L'intestazione <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/"
+"Network_Error_Logging\"><code>NEL</code></a> (Network Error Logging) indica "
+"al browser dell'utente di inviare rapporti sugli errori di rete (ad esempio, "
+"errore di risoluzione DNS, errore di connessione TCP o TLS, risposte HTTP "
+"4xx o 5xx) a un URI specificato. Può anche essere configurato per inviare "
+"rapporti sulle richieste di rete andate a buon fine. Vedere <a href=\"https"
+"://w3c.github.io/network-error-logging/#privacy-considerations\">[1]</a>, <a "
+"href=\"https://w3c.github.io/reporting/#privacy\">[2]</a> per le "
+"considerazioni sulla privacy. "
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:28
 #, elixir-format
 msgid "The <code>Content-Security-Policy-Report-Only</code> header includes the following third-party URI(s) in its <code>report-uri</code> directive:"
 msgstr ""
+"L'intestazione <code>Content-Security-Policy-Report-Only</code> include i "
+"seguenti URI di terze parti nella direttiva <code>report-uri</code>:"
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:47
 #, elixir-format
 msgid "The <code>Content-Security-Policy-Report-Only</code> header's <code>report-to</code> directive, in combination with the <code>Report-To</code> header, sends violation reports to the following third-party URI(s):"
 msgstr ""
+"La direttiva <code>Content-Security-Policy-Report-Only</code> dell'header "
+"<code>report-to</code>, in combinazione con l'header <code>Report-To</code>, "
+"invia i rapporti di violazione ai seguenti URI di terze parti:"
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:20
 #, elixir-format
 msgid "The <code>Content-Security-Policy</code> header includes the following third-party URI(s) in its <code>report-uri</code> directive:"
 msgstr ""
+"L'intestazione <code>Content-Security-Policy</code> include i seguenti URI "
+"di terze parti nella direttiva <code>report-uri</code>:"
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:38
 #, elixir-format
 msgid "The <code>Content-Security-Policy</code> header's <code>report-to</code> directive, in combination with the <code>Report-To</code> header, sends violation reports to the following third-party URI(s):"
 msgstr ""
+"La direttiva <code>report-to</code> dell'intestazione <code>Content-Security-"
+"Policy</code>, in combinazione con l'intestazione <code>Report-To</code>, "
+"invia rapporti di violazione ai seguenti URI di terze parti:"
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:57
 #, elixir-format
 msgid "The <code>Expect-CT</code> header's <code>report-uri</code> directive instructs the browser to send reports of Expect-CT failures to the following third-party URI:"
 msgstr ""
+"La direttiva <code>Expect-CT</code> dell'intestazione <code>report-uri</"
+"code> indica al browser di inviare i rapporti sui fallimenti di Expect-CT al "
+"seguente URI di terze parti:"
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.eex:64
 #, elixir-format
 msgid "The <code>NEL</code> (Network Error Logging) header's <code>report-to</code> directive, in combination with the <code>Report-To</code> header, sends reports to the following third-party URI(s):"
 msgstr ""
+"La direttiva <code>report-to</code> dell'header <code>NEL</code> (Network "
+"Error Logging), in combinazione con l'header <code>Report-To</code>, invia "
+"rapporti ai seguenti URI di terze parti:"
 
 #: lib/webbkoll_web/views/site_view.ex:174
 #, elixir-format
@@ -1768,11 +1800,23 @@ msgstr ""
 #, elixir-format
 msgid "The Content Security Policy tests are based on the ones from the <a href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP Observatory</a> scanner/grader project (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> website, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</a>. Any mistake or inaccuracy in the results is our fault."
 msgstr ""
+"I test della Content Security Policy sono basati su quelli del progetto <a "
+"href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP "
+"Observatory</a> scanner/grader (<a href=\"https://www.mozilla.org/en-US/MPL/2"
+".0/\">Mozilla Public License 2.0</a>) di April King, da noi reimplementato "
+"per Webbkoll. I testi esplicativi sono tratti dal sito <a href=\"https"
+"://observatory.mozilla.org/\">Observatory by Mozilla</a>, <a href=\"https"
+"://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</a>. Qualsiasi "
+"errore o imprecisione nei risultati è colpa nostra."
 
 #: lib/webbkoll_web/templates/site/_sri.html.eex:87
 #, elixir-format
 msgid "The Subresource Integrity test is based on the one from the <a href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP Observatory</a> scanner/grader project (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll."
 msgstr ""
+"Il test di integrità delle risorse è basato su quello del progetto <a href="
+"\"https://github.com/mozilla/http-observatory\">Mozilla HTTP Observatory</a> "
+"scanner/grader (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla "
+"Public License 2.0</a>) di April King, reimplementato da noi per Webbkoll."
 
 #: lib/webbkoll_web/templates/layout/app.html.eex:100
 #, elixir-format
@@ -1803,6 +1847,13 @@ msgstr ""
 #, elixir-format
 msgid "The header tests are based on the ones from the <a href=\"https://github.com/mozilla/http-observatory\">Mozilla HTTP Observatory</a> scanner/grader project (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla Public License 2.0</a>) by April King, reimplemented by us for Webbkoll. The explanatory texts are from the <a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> website, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\">CC-BY-SA 3.0</a>."
 msgstr ""
+"I test delle intestazioni sono basati su quelli del progetto <a href=\"https"
+"://github.com/mozilla/http-observatory\">Mozilla HTTP Observatory</a> "
+"scanner/grader (<a href=\"https://www.mozilla.org/en-US/MPL/2.0/\">Mozilla "
+"Public License 2.0</a>) di April King, da noi reimplementato per Webbkoll. I "
+"testi esplicativi sono tratti dal sito <a href=\"https://observatory.mozilla."
+"org/\">Observatory by Mozilla</a>, <a href=\"https://creativecommons.org/"
+"licenses/by-sa/3.0/\">CC-BY-SA 3.0</a>."
 
 #: lib/webbkoll_web/templates/page/about.html.eex:21
 #, elixir-format
@@ -2398,6 +2449,18 @@ msgstr ""
 #, elixir-format
 msgid "The Content Security Policy (CSP) directive <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri\"><code>report-uri</code></a>, or <a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to\"><code>report-to</code></a> in combination with a <code>Report-To</code> header, instructs the user's browser to send a <a href=\"https://w3c.github.io/webappsec-csp/#report-violation\">violation report</a> to specified URI(s) if the CSP is violated. Each report is a JSON object containing information about the violation, including, among other things, the URL of the document where it occurred, and referrer information. While reporting is useful for developers to find and fix bugs, it can also be used for tracking purposes."
 msgstr ""
+"La direttiva Content Security Policy (CSP) <a href=\"https://developer."
+"mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri\""
+"><code>report-uri</code></a>, o <a href=\"https://developer.mozilla.org/"
+"en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to\"><code>report-"
+"to</code></a> in combinazione con un'intestazione <code>Report-To</code>, "
+"indica al browser dell'utente di inviare un report di violazione <a href="
+"\"https://w3c.github.io/webappsec-csp/#report-violation\"></a> a uno o più "
+"URI specificati se la CSP viene violata. Ogni rapporto è un oggetto JSON "
+"contenente informazioni sulla violazione, tra cui l'URL del documento in cui "
+"si è verificata e le informazioni sul referente. La segnalazione è utile "
+"agli sviluppatori per trovare e correggere i bug, ma può essere utilizzata "
+"anche per scopi di tracciamento."
 
 #: lib/webbkoll_web/templates/site/_referrers.html.eex:71
 #, elixir-format
