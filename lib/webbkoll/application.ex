@@ -1,8 +1,8 @@
 defmodule Webbkoll.Application do
   use Application
 
-  @max_attempts Application.get_env(:webbkoll, :max_attempts)
-  @backends Application.get_env(:webbkoll, :backends)
+  @max_attempts Application.compile_env(:webbkoll, :max_attempts)
+  @backends Application.compile_env(:webbkoll, :backends)
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
   # for more information on OTP Applications

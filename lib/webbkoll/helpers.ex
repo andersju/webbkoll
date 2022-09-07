@@ -1,5 +1,7 @@
 defmodule Webbkoll.Helpers do
-  def language_from_code(code), do: Application.get_env(:webbkoll, :locales) |> Map.get(code)
+  @locales Application.compile_env(:webbkoll, :locales)
+
+  def language_from_code(code), do: Map.get(@locales, code)
 
   def get_proper_ip("[" <> rest), do: String.slice(rest, 0..-2)
 

@@ -5,7 +5,7 @@ defmodule WebbkollWeb.ControllerHelpers do
 
   alias Webbkoll.Sites
 
-  @backends Application.get_env(:webbkoll, :backends)
+  @backends Application.compile_env(:webbkoll, :backends)
 
   def enqueue_site(conn, url) do
     {queue, settings} = Enum.random(@backends)

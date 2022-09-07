@@ -1,7 +1,7 @@
 defmodule WebbkollWeb.PageController do
   use WebbkollWeb, :controller
 
-  @check_host_only Application.get_env(:webbkoll, :check_host_only)
+  @check_host_only Application.compile_env(:webbkoll, :check_host_only)
 
   def index(conn, _params) do
     render(

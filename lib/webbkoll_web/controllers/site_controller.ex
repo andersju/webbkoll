@@ -5,7 +5,7 @@ defmodule WebbkollWeb.SiteController do
   alias Webbkoll.Sites
   alias Phoenix.Controller
 
-  @validate_urls Application.get_env(:webbkoll, :validate_urls)
+  @validate_urls Application.compile_env(:webbkoll, :validate_urls)
 
   plug(:check_for_bots when action in [:create])
   plug(:scrub_params, "url" when action in [:create])

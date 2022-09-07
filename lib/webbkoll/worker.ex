@@ -4,8 +4,8 @@ defmodule Webbkoll.Worker do
   alias Webbkoll.Sites
   import Webbkoll.Helpers
 
-  @max_attempts Application.get_env(:webbkoll, :max_attempts)
-  @validate_urls Application.get_env(:webbkoll, :validate_urls)
+  @max_attempts Application.compile_env(:webbkoll, :max_attempts)
+  @validate_urls Application.compile_env(:webbkoll, :validate_urls)
 
   def perform(id, url, refresh, backend_url) do
     %{status: status} = Sites.get_site(id)

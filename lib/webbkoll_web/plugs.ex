@@ -5,10 +5,10 @@ defmodule WebbkollWeb.Plugs do
   alias WebbkollWeb.ControllerHelpers
   alias Webbkoll.Sites
 
-  @rate_limit_client Application.get_env(:webbkoll, :rate_limit_client)
-  @rate_limit_host Application.get_env(:webbkoll, :rate_limit_host)
-  @validate_urls Application.get_env(:webbkoll, :validate_urls)
-  @check_host_only Application.get_env(:webbkoll, :check_host_only)
+  @rate_limit_client Application.compile_env(:webbkoll, :rate_limit_client)
+  @rate_limit_host Application.compile_env(:webbkoll, :rate_limit_host)
+  @validate_urls Application.compile_env(:webbkoll, :validate_urls)
+  @check_host_only Application.compile_env(:webbkoll, :check_host_only)
 
   def validate_domain(conn, _params) do
     conn.assigns.input_url
