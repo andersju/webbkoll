@@ -45,6 +45,6 @@
   "timex": {:hex, :timex, "3.7.6", "502d2347ec550e77fdf419bc12d15bdccd31266bb7d925b30bf478268098282f", [:mix], [{:combine, "~> 0.10", [hex: :combine, repo: "hexpm", optional: false]}, {:gettext, "~> 0.10", [hex: :gettext, repo: "hexpm", optional: false]}, {:tzdata, "~> 1.0", [hex: :tzdata, repo: "hexpm", optional: false]}], "hexpm", "a296327f79cb1ec795b896698c56e662ed7210cc9eb31f0ab365eb3a62e2c589"},
   "tzdata": {:hex, :tzdata, "1.1.0", "72f5babaa9390d0f131465c8702fa76da0919e37ba32baa90d93c583301a8359", [:mix], [{:hackney, "~> 1.17", [hex: :hackney, repo: "hexpm", optional: false]}], "hexpm", "18f453739b48d3dc5bcf0e8906d2dc112bb40baafe2c707596d89f3c8dd14034"},
   "unicode_util_compat": {:hex, :unicode_util_compat, "0.7.0", "bc84380c9ab48177092f43ac89e4dfa2c6d62b40b8bd132b1059ecc7232f9a78", [:rebar3], [], "hexpm", "25eee6d67df61960cf6a794239566599b09e17e668d3700247bc498638152521"},
-  "uuid": {:hex, :uuid, "1.1.8", "e22fc04499de0de3ed1116b770c7737779f226ceefa0badb3592e64d5cfb4eb9", [:mix], [], "hexpm", "c790593b4c3b601f5dc2378baae7efaf5b3d73c4c6456ba85759905be792f2ac"},
+  "uniq": {:hex, :uniq, "0.5.1", "58358d3f6b7e4be4e39359a1126f2d349fd2e4643b92db4b5b52c8701a3598f1", [:mix], [{:ecto, "~> 3.0", [hex: :ecto, repo: "hexpm", optional: true]}], "hexpm", "3f8ec90bff62b17f155ea9c575718ed70cb61e632cc53179bbf73b7c4cf510c5"},
   "valid_url": {:hex, :valid_url, "0.1.2", "26c75b498c9504043bc7b5e09a9b643ef21adecc834b0f04205abea649cc1cdf", [:mix], [], "hexpm", "a2a91ed52aff09487ee4a3d13eff57cd5781490965e7ecf121295906ce207c1e"},
 }

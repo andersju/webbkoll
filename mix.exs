@@ -50,7 +50,7 @@ defmodule Webbkoll.Mixfile do
       {:hackney, "~> 1.8"},
       {:idna, "~> 6.0"},
       {:con_cache, "~> 0.13"},
-      {:uuid, "~> 1.1"},
+      {:uniq, "~> 0.1"},
       {:download, "~> 0.0.4"},
       {:stream_gzip, "~> 0.4.1"},
       {:jason, "~> 1.0"},

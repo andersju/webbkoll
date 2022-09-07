@@ -2,7 +2,7 @@ defmodule Webbkoll.Sites do
   alias Webbkoll.Sites.Site
 
   def add_site(url) do
-    id = UUID.uuid4()
+    id = Uniq.UUID.uuid4()
 
     site = %Site{
       id: id,
@@ -55,6 +55,6 @@ defmodule Webbkoll.Sites do
   end
 
   def is_valid_id?(id) do
-    UUID.info(id)
+    Uniq.UUID.info(id)
   end
 end
