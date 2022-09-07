@@ -49,14 +49,12 @@ defmodule Webbkoll.Mixfile do
       {:timex, "~> 3.0"},
       {:hackney, "~> 1.8"},
       {:idna, "~> 6.0"},
-      {:con_cache, "~> 0.13"},
+      {:con_cache, "~> 1.0"},
       {:uniq, "~> 0.1"},
-      {:download, "~> 0.0.4"},
-      {:stream_gzip, "~> 0.4.1"},
       {:jason, "~> 1.0"},
       {:valid_url, "~> 0.1.2"},
       {:honeydew, "~> 1.5.0"},
-      {:remote_ip, "~> 0.2.1"}
+      {:remote_ip, "~> 1.0"}
     ]
   end
 end
