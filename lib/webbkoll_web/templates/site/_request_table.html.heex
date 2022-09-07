@@ -11,10 +11,10 @@
     <%= for {{host, data}, counter} <- Enum.with_index(@requests) do %>
     <% host_info = List.first(data) %>
       <tr>
-        <td data-label="<%= gettext "Host" %>">
+        <td data-label={gettext ~s|Host|}>
           <%= host %>
 
-          <ul id="host-<%= counter %>">
+          <ul id={"host-#{counter}"}>
             <%= for request <- data do %>
             <li>
               <%= if String.starts_with?(request.url, "https") do %>
@@ -27,9 +27,9 @@
             <% end %>
           </ul>
         </td>
-        <td data-label="<%= gettext "IP" %>"><a href="https://tools.keycdn.com/geo?host=<%= host_info.ip %>"><%= host_info.ip %></a></td>
-        <td data-label="<%= gettext "Classification" %>"><%= Webbkoll.Trackers.check(PublicSuffix.registrable_domain(host, ignore_private: true)) %></td>
-        <td data-label="<%= gettext "URLs" %>" class="info"><span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="host-<%= counter %>"><%= gettext("Show") %> (<%= Enum.count(data) %>) </span></td>
+        <td data-label={gettext ~s|IP|}><a href={"https://tools.keycdn.com/geo?host=#{host_info.ip}"}><%= host_info.ip %></a></td>
+        <td data-label={gettext ~s|Classification|}><%= Webbkoll.Trackers.check(PublicSuffix.registrable_domain(host, ignore_private: true)) %></td>
+        <td data-label={gettext ~s|URLs|} class="info"><span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle={"host-#{counter}"}><%= gettext("Show") %> (<%= Enum.count(data) %>) </span></td>
       </tr>
     <% end %>
   </tbody>

@@ -49,7 +49,7 @@ We've switched from PhearJS/PhantomJS to a tiny script that makes use of [Puppet
 
 ## Frontend (this app!)
 
-Install Erlang (>= 20) and Elixir (>= 1.7) -- see http://elixir-lang.org/install.html.
+Install Erlang (>= 25) and Elixir (>= 1.14) -- see http://elixir-lang.org/install.html.
 
 Clone this repository, cd into it.
 

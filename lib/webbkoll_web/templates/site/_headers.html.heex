@@ -17,16 +17,16 @@
       <tbody>
         <%= for header <- [@site.data.x_content_type_options, @site.data.x_frame_options, @site.data.x_xss_protection] do %>
           <tr>
-            <td data-label="<%= gettext("Pass") %>">
+            <td data-label={gettext ~s|Pass|}>
               <%= if header.name in ["X-XSS-Protection", "X-Frame-Options"] do %>
                 <%= icon(:info) %>
               <% else %>
                 <%= if header.pass, do: icon(:pass), else: icon(:fail) %>
               <% end %>
             </td>
-            <td data-label="<%= gettext("Header") %>"><%= header.name %></td>
-            <td data-label="<%= gettext("Value") %>"><%= header.data %></td>
-            <td data-label="<%= gettext("Result") %>"><%= result_text(header.result) %></td>
+            <td data-label={gettext ~s|Header|}><%= header.name %></td>
+            <td data-label={gettext ~s|Value|}><%= header.data %></td>
+            <td data-label={gettext ~s|Result|}><%= result_text(header.result) %></td>
           </tr>
         <% end %>
       </tbody>

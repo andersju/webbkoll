@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="<%= @conn.assigns.locale %>">
+<html lang={@conn.assigns.locale}>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="<%= assigns[:page_description] %>">
+    <meta name="description" content={assigns[:page_description]}>
     <meta name="author" content="Dataskydd.net">
     <meta name="referrer" content="no-referrer">
-    <meta property="og:image" content="<%= Routes.static_path(@conn, "/images/dataskydd_eye2.png") %>">
-    <%= if @view_template == "status.html" do %>
+    <meta property="og:image" content={Routes.static_path(@conn, ~s|/images/dataskydd_eye2.png|)}>
+    <%= if Phoenix.Controller.action_name(@conn) == :status do %>
       <meta http-equiv="refresh" content="5">
     <% end %>
     <title><%= assigns[:page_title] %> | Webbkoll - dataskydd.net</title>
-    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>">
+    <link rel="stylesheet" href={Routes.static_path(@conn, ~s|/css/app.css|)}>
 
     <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
@@ -31,10 +31,6 @@
 
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-TileImage" content="/images/mstile-144x144.png">
-
-    <!--[if lt IE 9]>
-      <script src="<%= Routes.static_path(@conn, "/js/html5shiv.min.js") %>"></script>
-    <![endif]-->
   </head>
   <body>
     <header class="navigation">
@@ -42,7 +38,7 @@
         <nav>
           <ul class="navigation-menu">
             <li class="nav-link logo">
-              <a href="/<%= @conn.assigns.locale %>">
+              <a href={"/#{@conn.assigns.locale}"}>
                 <i class="icon-eye-slash"></i>
                 <span>webbkoll</span> | <span class="ds-orange">dataskydd</span><span class="semibold">.net</span>
               </a>
@@ -106,7 +102,7 @@
       </footer>
     </div>
 
-    <script src="<%= Routes.static_path(@conn, "/js/webbkoll.js") %>"></script>
+    <script src={Routes.static_path(@conn, ~s|/js/webbkoll.js|)}></script>
 
   </body>
 </html>

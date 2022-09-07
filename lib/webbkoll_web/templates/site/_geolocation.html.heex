@@ -9,9 +9,9 @@
     <p><%= gettext(~s|You can find information about this IP address using third-party tools such as the following:|) %></p>
 
     <ul class="default">
-      <li><a href="https://bgp.he.net/ip/<%= @site.data.host_ip %>">bgp.he.net</a></li>
-      <li><a href="https://tools.keycdn.com/geo?host=<%= @site.data.host_ip %>">KeyCDN</a></li>
-      <li><a href="https://iplocation.io/ip/<%= @site.data.host_ip %>">iplocation.io</a></li>
+      <li><a href={"https://bgp.he.net/ip/#{@site.data.host_ip}"}>bgp.he.net</a></li>
+      <li><a href={"https://tools.keycdn.com/geo?host=#{@site.data.host_ip}"}>KeyCDN</a></li>
+      <li><a href={"https://iplocation.io/ip/#{@site.data.host_ip}"}>iplocation.io</a></li>
     </ul>
 
     <p><%= gettext(~s|When using tools that do geolocation, please note that the estimated country can be wrong, especially for websites that use CDNs.|) %></p>

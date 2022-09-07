@@ -39,9 +39,9 @@
                   <% _ -> %> <%= icon(:unknown) %>
                 <% end %>
               </td>
-              <td data-label="<%= gettext("Title") %>"><%= explanation["title"] %></td>
-              <td data-label="<%= gettext("Summary") %>"><%= explanation["summary"] %></td>
-              <td data-label="<%= gettext("Description") %>"><%= explanation["description"] %></td>
+              <td data-label={gettext ~s|Title|}><%= explanation["title"] %></td>
+              <td data-label={gettext ~s|Summary|}><%= explanation["summary"] %></td>
+              <td data-label={gettext ~s|Description|}><%= explanation["description"] %></td>
             </tr>
           <% end %>
         </tbody>

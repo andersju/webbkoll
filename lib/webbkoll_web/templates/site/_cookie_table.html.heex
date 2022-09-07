@@ -1,4 +1,4 @@
-<div id="<%= @id %>">
+<div id={@id}>
   <h4><%= @label %> (<%= @amount %>)</h4>
   <table class="cookies data" data-sortable>
     <thead>
@@ -15,10 +15,10 @@
     <tbody>
       <%= for cookie <- @cookies do %>
         <tr>
-          <td data-label="<%= gettext "Domain" %>" class="userdata"><%= cookie["domain"] %></td>
-          <td data-label="<%= gettext "Name" %>" class="userdata"><%= truncate(cookie["name"], 20) %></td>
-          <td data-label="<%= gettext "Value" %>" class="userdata"><%= truncate(cookie["value"], 20) %></td>
-          <td data-label="<%= gettext "Expires on" %>">
+          <td data-label={gettext ~s(Domain)} class="userdata"><%= cookie["domain"] %></td>
+          <td data-label={gettext ~s(Name)} class="userdata"><%= truncate(cookie["name"], 20) %></td>
+          <td data-label={gettext ~s(Value)} class="userdata"><%= truncate(cookie["value"], 20) %></td>
+          <td data-label={gettext ~s(Expires on)}>
             <%= if cookie["session"] == true, do: "session", else: format_timestamp(cookie["expires"]) %>
           </td>
           <td data-label="HttpOnly"><%= if cookie["httpOnly"], do: icon(:pass), else: icon(:fail) %></td>

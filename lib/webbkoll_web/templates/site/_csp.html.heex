@@ -46,12 +46,12 @@
               </td>
               <td class="test" data-label="Test">
                 <%= raw(test) %>
-                <p id="<%= Atom.to_string(policy) %>">
+                <p id={Atom.to_string(policy)}>
                   <%= raw(info) %>
                 </p>
               </td>
 
-              <td class="info" data-label="Info"><span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="<%= Atom.to_string(policy) %>"><%= gettext("Show") %></span></td>
+              <td class="info" data-label="Info"><span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle={Atom.to_string(policy)}><%= gettext("Show") %></span></td>
             </tr>
           <% end %>
         </tbody>

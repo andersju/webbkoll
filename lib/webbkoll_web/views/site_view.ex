@@ -33,7 +33,8 @@ defmodule WebbkollWeb.SiteView do
   end
 
   def anchor_link(id) do
-    ~E(<a href="#<%= id %>" aria-label="Anchor" class="anchor-link"><i class="icon-link"></i></a>)
+    assigns = %{} # can't use ~H without assigns defined
+    ~H|<a href={"##{id}"} aria-label="Anchor" class="anchor-link"><i class="icon-link"></i></a>|
   end
 
   def icon(:pass), do: content_tag(:i, "", class: "icon-check success")

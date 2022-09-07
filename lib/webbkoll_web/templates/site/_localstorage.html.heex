@@ -20,8 +20,8 @@
         <tbody>
           <%= for {key, value} <- @site.data.localStorage do %>
           <tr>
-            <td data-label="<%= gettext("Key") %>"><%= truncate(key, 50) %></td>
-            <td data-label="<%= gettext("Value") %>"><%= truncate(value, 50) %></td>
+            <td data-label={gettext ~s|Key|}><%= truncate(key, 50) %></td>
+            <td data-label={gettext ~s|Value|}><%= truncate(value, 50) %></td>
           </tr>
           <% end %>
         </tbody>
