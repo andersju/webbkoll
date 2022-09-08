@@ -8,7 +8,7 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-08-19 01:15+0000\n"
+"PO-Revision-Date: 2022-09-09 19:18+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "webbkoll/main/nb_NO/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14-dev\n"
+"X-Generator: Weblate 4.14.1-dev\n"
 
 #: lib/webbkoll_web/templates/site/_requests.html.heex:31
 #, elixir-format
@@ -128,11 +128,11 @@ msgstr ""
 "on\">Analyser verten på SSL Labs</a> for mer info."
 
 #: lib/webbkoll_web/templates/site/_referrers.html.heex:50
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "<a href=\"https://www.w3.org/TR/referrer-policy/\">Several policies are offered</a>, such as <code>origin</code> (strips everything except the origin) and <code>origin-when-cross-origin</code> (sends full URL with same-origin requests, otherwise stripped). We recommend <strong><code>no-referrer</code></strong>, which kills the referrer header entirely for all requests, no matter the destination; or <strong><code>same-origin</code></strong>, which kills the referrer for third-party requests but not for requests to the same origin."
 msgstr ""
 "<a href=\"https://www.w3.org/TR/referrer-policy/\">Flere praksiser tilbys</"
-"a>, f.eks. <code>origin</code> (tar bort alt utenom opphav) og <code>origin-"
+"a>, f.eks. <code>origin</code> (tar bort alt unntatt opphav) og <code>origin-"
 "when-cross-origin</code> (sender hele nettadresser med forespørsler til "
 "samme kilde, ellers som forrige). Vi anbefaler <strong><code>no-"
 "referrer</code></strong>, som tar bort referrer-hodet fullstendig for alle "
