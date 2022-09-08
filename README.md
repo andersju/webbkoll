@@ -62,7 +62,7 @@ mix deps.get
 Make sure the backend is running on the host/port specified in `config/dev.exs`
 
 Compile CSS with sassc, copy static assets (this replaces brunch and 340 node dependencies),
-and make sure `config/dev.secret.exs` (imported by `config/dex.exs`) exists:
+and make sure `config/dev.secret.exs` (imported by `config/dev.exs`) exists:
 
 ```
 mkdir -p priv/static/css priv/static/fonts priv/static/images priv/static/js
