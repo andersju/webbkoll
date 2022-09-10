@@ -1,0 +1,4 @@
+webbkoll_host: "{{ lookup('env','WEBBKOLL_HOST') or 'webbkoll.dataskydd.net' }}"
+# Set WEBBKOLL_CADDY_PREFIX to 'http://' to disable TLS in Caddy
+caddy_prefix: "{{ lookup('env','WEBBKOLL_CADDY_PREFIX') or '' }}"
+created_username: "{{ lookup('env','WEBBKOLL_ANSIBLE_USERNAME') or 'ansible' }}"

@@ -1,0 +1,15 @@
+# If caddy_prefix is empty, Caddy will try to get a TLS certificate for webbkoll_host and redirect http:// -> https://.
+# If caddy_prefix is "http://", Caddy will just listen to port 80.
+{{ caddy_prefix }}{{ webbkoll_host }} {
+    reverse_proxy 127.0.0.1:4000
+    header {
+    	-Server
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+        # Webbkoll itself sets the headers below. Kept here for reference.
+        #X-Content-Type-Options "nosniff"
+        #X-Frame-Options "DENY"
+        #Referrer-Policy "no-referrer"
+        #Content-Security-Policy "default-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'"
+    }
+}

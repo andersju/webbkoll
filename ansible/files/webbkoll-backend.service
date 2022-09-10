@@ -1,0 +1,13 @@
+[Unit]
+Description=Webbkoll-backend
+
+[Service]
+Type=simple
+ExecStart=npm start
+WorkingDirectory=/home/webbkoll/webbkoll-backend
+User=webbkoll
+Group=webbkoll
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

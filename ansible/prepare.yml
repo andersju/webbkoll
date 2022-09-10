@@ -1,0 +1,133 @@
+---
+- hosts: all
+  become: yes
+
+  vars_files:
+    - vars.yml
+
+  pre_tasks:
+    - name: Configure passwordless sudo
+      lineinfile:
+        path: /etc/sudoers
+        state: present
+        regexp: '^%sudo'
+        line: '%sudo ALL=(ALL) NOPASSWD: ALL'
+        validate: '/usr/sbin/visudo -cf %s' 
+
+    - name: Create a new regular user with sudo privileges
+      user:
+        name: "{{ created_username }}"
+        state: present
+        groups: sudo
+        shell: /bin/bash
+        append: true
+        create_home: true
+
+    - name: Set authorized key for remote user
+      ansible.posix.authorized_key:
+        user: "{{ created_username }}"
+        state: present
+        key: "{{ lookup('file', lookup('env','HOME') + '/.ssh/id_rsa.pub') }}"
+
+  # ansible-galaxy collection install devsec.hardening
+  collections:
+      - devsec.hardening
+  roles:
+    - ssh_hardening
+
+  tasks:
+    - name: Install packages
+      apt:
+        name:
+          - debian-keyring
+          - debian-archive-keyring
+          - apt-transport-https
+          - curl
+          - vim
+          - ufw
+          - unattended-upgrades
+          - chrony
+          - acl
+          - rsync
+        state: present
+        update_cache: true
+
+    - name: Ensure chrony is running and enabled
+      service:
+        name: chrony
+        state: started
+        enabled: yes
+
+    - name: UFW - Allow SSH connections
+      community.general.ufw:
+        rule: allow
+        name: OpenSSH
+
+    - name: Allow all access to TCP port 80
+      community.general.ufw:
+        rule: allow
+        port: '80'
+        proto: tcp
+
+    - name: Allow all access to TCP port 443
+      community.general.ufw:
+        rule: allow
+        port: '443'
+        proto: tcp
+
+    - name: UFW - Enable and deny by default
+      community.general.ufw:
+        state: enabled
+        default: deny
+
+    - name: Download Caddy repo signing key and dearmor it
+      shell: curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor > /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+
+    - name: Download Caddy sources.list
+      ansible.builtin.get_url:
+        url: https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt
+        dest: /etc/apt/sources.list.d/caddy-stable.list
+
+    - name: Install Caddy
+      apt:
+        name:
+          - debian-keyring
+          - debian-archive-keyring
+          - apt-transport-https
+          - caddy
+        state: present
+        update_cache: yes
+
+    - name: Copy Caddy configuration file using a template (HTTPS)
+      template:
+        src: templates/Caddyfile.j2
+        dest: /etc/caddy/Caddyfile
+        mode: 0644
+
+    - name: Ensure Caddy is (re)started and enabled
+      service:
+        name: caddy
+        state: restarted
+        enabled: yes
+
+    - name: Ensure unattended-upgrades is started and enabled
+      service:
+        name: unattended-upgrades
+        state: started
+        enabled: yes
+
+    - name: Add 'webbkoll' group
+      group:
+        name: webbkoll
+        state: present
+
+    - name: Add 'webbkoll' user
+      user:
+        name: webbkoll
+        group: webbkoll
+
+  post_tasks:
+    - name: Restart sshd
+      service:
+        name: ssh
+        state: restarted

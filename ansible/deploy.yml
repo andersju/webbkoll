@@ -1,0 +1,106 @@
+---
+- hosts: all
+  become: yes
+
+  vars_files:
+    - vars.yml
+
+  tasks:
+    - name: Install packages
+      apt:
+        name:
+          - elixir
+          - erlang-dev
+          - nodejs
+          - npm
+          - sassc
+          - libgbm-dev
+          - libasound2
+          - libasound2-dev
+        state: present
+        update_cache: true
+
+    - block:
+        - name: Clone webbkoll repo
+          git:
+            repo: 'https://github.com/andersju/webbkoll.git'
+            dest: /home/webbkoll/webbkoll
+        - name: "webbkoll: get deps and compile"
+          shell: |
+            cd /home/webbkoll/webbkoll
+            mix local.hex --force
+            mix local.rebar --force
+            mix deps.get --only prod
+            mkdir -p priv/static/css priv/static/fonts priv/static/images priv/static/js
+            sassc --style compressed assets/scss/style.scss priv/static/css/app.css
+            cat assets/static/js/webbkoll-*.js > priv/static/js/webbkoll.js
+            rsync -av assets/static/* priv/static
+            MIX_ENV=prod mix compile
+            MIX_ENV=prod mix phx.digest
+
+        - name: Clone webbkoll-backend repo
+          git:
+            repo: 'https://github.com/andersju/webbkoll-backend.git'
+            dest: /home/webbkoll/webbkoll-backend
+        - name: "webbkoll-backend: install npm deps"
+          shell: |
+            cd /home/webbkoll/webbkoll-backend
+            npm install
+      become: yes
+      become_user: webbkoll
+
+    - set_fact:
+        secret_key_base: "{{ lookup('password', '/dev/null length=64 chars=ascii_letters') }}"
+    - name: Copy systemd service file for webbkoll
+      template:
+        src: templates/webbkoll.service.j2
+        dest: /etc/systemd/system/webbkoll.service
+        owner: root
+        group: root
+
+    - name: Copy systemd service file for webbkoll-backend
+      copy:
+        src: files/webbkoll-backend.service
+        dest: /etc/systemd/system/webbkoll-backend.service
+        owner: root
+        group: root
+
+    - name: Ensure webbkoll is started and enabled
+      systemd:
+        name: webbkoll
+        state: restarted
+        enabled: yes
+        daemon-reload: true
+
+    - name: Ensure webbkoll-backend is started and enabled
+      systemd:
+        name: webbkoll-backend
+        state: restarted
+        enabled: yes
+        daemon-reload: true
+
+    - name: Empty journal file regularly
+      cron:
+        name: flush journalctl
+        minute: "25"
+        hour: "4"
+        day: "*/2"
+        user: root
+        job: "journalctl --flush --rotate > /dev/null 2>&1"
+
+    - name: Vacuum journal file regularly
+      cron:
+        name: vacuum journalctl
+        minute: "26"
+        hour: "4"
+        day: "*/2"
+        user: root
+        job: "journalctl --vacuum-time=1s > /dev/null 2>&1"
+
+    - name: "Restart node.js/Puppeteer backend regularly (sigh)"
+      cron:
+        name: restart webbkoll-backend
+        minute: "35"
+        hour: "2"
+        user: root
+        job: "systemctl restart webbkoll-backend > /dev/null 2>&1"

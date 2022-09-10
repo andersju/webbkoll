@@ -1,0 +1,17 @@
+[Unit]
+Description=Webbkoll
+
+[Service]
+Type=simple
+ExecStart=mix phx.server
+WorkingDirectory=/home/webbkoll/webbkoll
+Environment=MIX_ENV=prod
+Environment=PORT=4000
+Environment=PHX_HOST={{ webbkoll_host }}
+Environment=SECRET_KEY_BASE={{ secret_key_base }}
+User=webbkoll
+Group=webbkoll
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

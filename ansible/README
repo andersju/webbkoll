@@ -1,0 +1,18 @@
+Assumes Ubuntu 22.04.
+
+If local server, set some vars before prepare and deploy:
+
+WEBBKOLL_HOST=webbkoll.local
+WEBBKOLL_CADDY_PREFIX="http://"
+
+First:
+
+ansible-playbook -i webbkoll.local, -u root prepare.yml
+
+-u ansible thereafter:
+
+ansible-playbook -i webbkoll.local, -u ansible prepare.yml
+
+Deploy:
+
+ansible-playbook -i webbkoll.local, -u ansible deploy.yml
