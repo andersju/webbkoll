@@ -49,7 +49,7 @@ We've switched from PhearJS/PhantomJS to a tiny script that makes use of [Puppet
 
 ## Frontend (this app!)
 
-Install Erlang (>= 25) and Elixir (>= 1.14) -- see http://elixir-lang.org/install.html.
+Install Erlang (>= 24) and Elixir (>= 1.12) -- see http://elixir-lang.org/install.html.
 
 Clone this repository, cd into it.
 
@@ -61,15 +61,13 @@ mix deps.get
 
 Make sure the backend is running on the host/port specified in `config/dev.exs`
 
-Compile CSS with sassc, copy static assets (this replaces brunch and 340 node dependencies),
-and make sure `config/dev.secret.exs` (imported by `config/dev.exs`) exists:
+Compile CSS with sassc, copy static assets (this replaces brunch and 340 node dependencies):
 
 ```
 mkdir -p priv/static/css priv/static/fonts priv/static/images priv/static/js
 sassc --style compressed assets/scss/style.scss priv/static/css/app.css
 cat assets/static/js/webbkoll-*.js > priv/static/js/webbkoll.js
-rsync -av assets/static/*  priv/static
-touch config/dev.secret.exs
+rsync -av assets/static/* priv/static
 ```
 
 Start the Phoenix endpoint with `mix phx.server` (or to get an interactive shell: `iex -S mix phx.server`)
@@ -78,37 +76,37 @@ Now you can visit [`localhost:4000`](http://localhost:4000) in your browser.
 
 ### Production
 
-To run in production, first get and compile dependencies, and make sure `config/prod.secret.exs`
-(imported by `config/prod.exs`) exists:
+To run in production, first get and compile dependencies:
 
 ```
 mix deps.get --only prod
-MIX_ENV=prod mix compile
-touch config/prod.secret.exs
+MIX_ENV=prod
+mix compile
 ```
 
 Next, do the compile CSS/rsync files step from above. Then digest and compress static files:
 
 ```
-MIX_ENV=prod mix phx.digest
+MIX_ENV=prod
+mix phx.digest
 ```
 
-Start the server in the foreground (port must be specified):
+Start the server in the foreground (port must be specified; for `SECRET_KEY_BASE`, run `mix phx.gen.secret` to get a suitable value):
 
 ```
-MIX_ENV=prod PORT=4001 mix phx.server
-```
-
-Or detached:
-
-```
-MIX_ENV=prod PORT=4001 elixir --detached -S mix phx.server
+MIX_ENV=prod
+PORT=4000
+SECRET_KEY_BASE=something_random_at_least_64_bytes_sdjkljsdklfjsklfsfjsldfjksld
+mix phx.server
 ```
 
 Or in an interactive shell:
 
 ```
-MIX_ENV=prod PORT=4001 iex -S mix phx.server
+MIX_ENV=prod
+PORT=4000
+SECRET_KEY_BASE=something_random_at_least_64_bytes_sdjkljsdklfjsklfsfjsldfjksld
+iex -S mix phx.server
 ```
 
 See also the official [Phoenix deployment guides](https://hexdocs.pm/phoenix/deployment.html).
@@ -121,19 +119,21 @@ Description=Webbkoll
 
 [Service]
 Type=simple
-ExecStart=/usr/local/bin/mix phx.server
-WorkingDirectory=/home/foobar/webbkoll
+ExecStart=mix phx.server
+WorkingDirectory=/home/webbkoll/webbkoll
 Environment=MIX_ENV=prod
-Environment=PORT=4001
-User=foobar
-Group=foobar
+Environment=PORT=4000
+Environment=SECRET_KEY_BASE=something_random_at_least_64_bytes_sdjkljsdklfjsklfsfjsldfjksld
+User=webbkoll
+Group=webbkoll
 Restart=always
 
 [Install]
 WantedBy=multi-user.target
 ```
 
-Run `systemctl daemon-reload` for good measure, and then try `systemctl start webbkoll`. (And `systemctl enable webbkoll` to have it started automatically.)
+Run `systemctl daemon-reload` for good measure, and then try `systemctl start webbkoll`.
+(And `systemctl enable webbkoll` to have it started automatically.)
 
 ## TODO/ideas
   * Add more suggestions for privacy-friendly alternatives to popular services

@@ -2,20 +2,13 @@ import Config
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
-#
-# The watchers configuration can be used to run external
-# watchers to your application. For example, we use it
-# with brunch.io to recompile .js and .css sources.
 config :webbkoll, WebbkollWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: [],
-  live_view: [
-    # LiveView is not used for anything except LiveDashboard in dev
-    signing_salt: "SECRET_SALT"
-  ]
+  secret_key_base: "IvzBctBrLEScfiglXkTgxhEA8+/A6Eyyc4xYhzgAepLUnv8L7gbL7WK4cU4gx5uJ",
+  watchers: []
 
 # Watch static and templates for browser reloading.
 config :webbkoll, WebbkollWeb.Endpoint,
@@ -23,7 +16,7 @@ config :webbkoll, WebbkollWeb.Endpoint,
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
-      ~r{lib/webbkoll_web/views/.*(ex)$},
+      ~r{lib/webbkoll_web/(live|views)/.*(ex)$},
       ~r{lib/webbkoll_web/templates/.*(eex)$}
     ]
   ]
@@ -36,24 +29,5 @@ config :logger, :console, format: "[$level] $message\n", level: :warn
 # and calculating stacktraces is usually expensive.
 config :phoenix, :stacktrace_depth, 20
 
-config :webbkoll,
-  backends: [
-    {Webbkoll.Queue.Q1, %{concurrency: 5, url: "http://localhost:8100/"}},
-  ],
-  max_attempts: 2,
-  # validate_urls: If true, only check URLs with a valid domain name
-  # (i.e. ones with a TLD in the Public Suffix List),
-  # and only the standard HTTP/HTTPS ports.
-  validate_urls: false,
-  # check_host_only: If true, throw away path and query parameters from submitted URLs
-  # before passing them on to the backend. (Only works if validate_urls is also true.)
-  check_host_only: false,
-  # rate_limit_client: An IP address can make <limit> new site checks
-  # during <scale> milliseconds.
-  # rate_limit_host: The tool will query a specific host no more than
-  # <limit> times during <scale> milliseconds.
-  # See https://github.com/grempe/ex_rated
-  rate_limit_client: %{"scale" => 60_000, "limit" => 20},
-  rate_limit_host: %{"scale" => 60_000, "limit" => 5}
-
-import_config "dev.secret.exs"
+# Initialize plugs at runtime for faster development compilation
+config :phoenix, :plug_init_mode, :runtime
