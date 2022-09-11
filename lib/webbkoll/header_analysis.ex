@@ -179,7 +179,7 @@ defmodule Webbkoll.HeaderAnalysis do
       [nonempty_intersection?(form_action, @dangerously_broad), {nil, :insecureFormAction}],
       [nonempty_intersection?(object_src, @dangerously_broad), {nil, :unsafeObjects}],
       [
-        Map.get(csp, "default-src") == ["'none'"],
+        Enum.member?(Map.get(csp, "default-src", []), "'none'"),
         {"csp-implemented-with-no-unsafe-default-src-none", :defaultNone},
         {"csp-implemented-with-no-unsafe", nil}
       ]
