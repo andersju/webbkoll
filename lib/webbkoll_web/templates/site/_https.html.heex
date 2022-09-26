@@ -1,7 +1,7 @@
 <section class="result">
   <h3 id="https">
   <%= if @site.data.scheme == "https" do %>
-    <%= if @site.data.security["securityState"] == "secure" do %>
+    <%= if @site.data.mixed_content == %{} do %>
       <%= icon(:pass2) %> <%= gettext "HTTPS by default" %>
     <% else %>
       <%= icon(:warn) %> <%= gettext "HTTPS by default, but with issues" %>
@@ -16,36 +16,70 @@
     <%= if @site.data.scheme == "https" do %>
       <p><%= raw(gettext "<code>%{domain}</code> uses HTTPS by default.", domain: @site.data.host) %></p>
 
-      <p><%= gettext("Chromium reports the following:") %></p>
-
-      <table>
-        <thead>
-          <tr>
-            <th><%= gettext("State") %></th>
-            <th><%= gettext("Title") %></th>
-            <th><%= gettext("Summary") %></th>
-            <th><%= gettext("Description") %></th>
-          </tr>
-        </thead>
-        <tbody>
-          <%= for explanation <- @site.data.security["explanations"] do %>
+      <aside class="howto">
+        <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="tls-info"><%= gettext("Certificate") %></span>
+        <div id="tls-info">
+          <table>
             <tr>
-              <td data-label="State">
-                <%= case explanation["securityState"] do %>
-                  <% "neutral" -> %> <%= icon(:warn) %>
-                  <% "insecure" -> %> <% icon(:fail) %>
-                  <% "secure" -> %> <%= icon(:pass) %>
-                  <% "info" -> %> <%= icon(:info) %>
-                  <% _ -> %> <%= icon(:unknown) %>
-                <% end %>
-              </td>
-              <td data-label={gettext ~s|Title|}><%= explanation["title"] %></td>
-              <td data-label={gettext ~s|Summary|}><%= explanation["summary"] %></td>
-              <td data-label={gettext ~s|Description|}><%= explanation["description"] %></td>
+              <td><%= gettext("Subject Name:") %></td>
+              <td><%= @site.data.security["subjectName"] %></td>
             </tr>
-          <% end %>
-        </tbody>
-      </table>
+            <tr>
+              <td><%= gettext("Subject Alternative Name:") %></td>
+              <td><%= @site.data.security["subjectAlternativeNames"] %></td>
+            </tr>
+            <tr>
+              <td><%= gettext("Issuer:") %></td>
+              <td><%= @site.data.security["issuer"] %></td>
+            </tr>
+            <tr>
+              <td><%= gettext("Protocol:") %></td>
+              <td><%= @site.data.security["protocol"] %></td>
+            </tr>
+            <tr>
+              <td><%= gettext("Valid from:") %></td>
+              <td><%= format_timestamp(@site.data.security["validFrom"]) %></td>
+            </tr>
+            <tr>
+              <td><%= gettext("Valid to:") %> </td>
+              <td><%= format_timestamp(@site.data.security["validTo"]) %></td>
+            </tr>
+          </table>
+        </div>
+      </aside>
+
+      <%= if @site.data.mixed_content !== %{} do %>
+        <p><%= icon(:warn) %> <%= gettext(~s|The page contains <a href="%{mixed_content_url}">mixed content</a>:|, mixed_content_url: "https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content") |> raw() %></p>
+        <aside class="howto">
+          <span class="non-button-toggle" role="button" tabindex="0" data-a11y-toggle="mixed-content"><%= gettext("Mixed content") %></span>
+          <div id="mixed-content">
+            <ul>
+              <li>
+                <%= for {key, value} <- @site.data.mixed_content do %>
+                  <table>
+                    <tr>
+                      <td><%= gettext("Resource type:") %></td>
+                      <td><%= value["resourceType"] %></td>
+                    </tr>
+                    <tr>
+                      <td><%= gettext("Resolution status:") %></td>
+                      <td><%= value["resolutionStatus"] %></td>
+                    </tr>
+                    <tr>
+                      <td><%= gettext("Insecure URL:") %></td>
+                      <td><%= link "#{truncate(key, 70)}", to: key %></td>
+                    </tr>
+                    <tr>
+                      <td><%= gettext("Main resource URL:") %></td>
+                      <td><%= link "#{truncate(value["mainResourceURL"], 70)}", to: value["mainResourceURL"] %></td>
+                    </tr>
+                  </table>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      <% end %>
 
         <p><%= gettext("More information about the site's TLS/SSL configuration:") %></p>
         <ul class="default">

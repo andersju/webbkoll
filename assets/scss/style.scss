@@ -542,6 +542,31 @@ article.text {
   }
 }
 
+#tls-info > table {
+  margin-bottom: 0;
+}
+
+#mixed-content ul {
+  margin-bottom: 0;
+}
+
+#mixed-content table {
+  margin-bottom: 1rem;
+
+  tr {
+    border-bottom: none;
+  }
+
+  td {
+    padding-top: 0.25rem;
+    padding-bottom: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 .requests-list {
   font-size: 0.9em;
 

@@ -55,12 +55,12 @@ msgstr ""
 msgid "<a href=\"https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security\">HTTP Strict Transport Security</a> (HSTS) is a simple and <a href=\"https://caniuse.com/#feat=stricttransportsecurity\">widely supported</a> standard to protect visitors by ensuring that their browsers always connect to a website over HTTPS. HSTS exists to remove the need for the common, insecure practice of redirecting users from <code>http://</code> to <code>https://</code> URLs."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:67
+#: lib/webbkoll_web/templates/site/_https.html.heex:101
 #, elixir-autogen, elixir-format
 msgid "<a href=\"https://letsencrypt.org/\">Let's Encrypt</a> is a non-profit certificate authority (sponsored by Mozilla, EFF, Cisco, Facebook and others) providing free certificates through an easy, automated process. You can set it up yourself, or use one of the many hosting providers who have built-in support for Let's Encrypt."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:71
+#: lib/webbkoll_web/templates/site/_https.html.heex:105
 #, elixir-autogen, elixir-format
 msgid "<a href=\"https://mozilla.github.io/server-side-tls/ssl-config-generator/\">Mozilla SSL/TLS Configuration Generator</a> [for advanced users]"
 msgstr ""
@@ -95,7 +95,7 @@ msgstr ""
 msgid "<a href=\"https://www.w3.org/TR/referrer-policy/\">Several policies are offered</a>, such as <code>origin</code> (strips everything except the origin) and <code>origin-when-cross-origin</code> (sends full URL with same-origin requests, otherwise stripped). We recommend <strong><code>no-referrer</code></strong>, which kills the referrer header entirely for all requests, no matter the destination; or <strong><code>same-origin</code></strong>, which kills the referrer for third-party requests but not for requests to the same origin."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:59
+#: lib/webbkoll_web/templates/site/_https.html.heex:93
 #, elixir-autogen, elixir-format
 msgid "<code>%{domain}</code> does <strong>not</strong> use HTTPS by default."
 msgstr ""
@@ -140,12 +140,12 @@ msgstr ""
 msgid "<code>preload</code> &mdash; requests inclusion in preload lists"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:82
+#: lib/webbkoll_web/templates/site/_https.html.heex:116
 #, elixir-autogen, elixir-format
 msgid "<strong>Authenticity</strong>. The visitor is talking to the \"real\" website, and not to an impersonator or through a \"man-in-the-middle\"."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:81
+#: lib/webbkoll_web/templates/site/_https.html.heex:115
 #, elixir-autogen, elixir-format
 msgid "<strong>Confidentiality</strong>. The visitor's connection is encrypted, obscuring URLs, cookies, and other sensitive metadata."
 msgstr ""
@@ -165,7 +165,7 @@ msgstr ""
 msgid "<strong>If you would like to make a contribution</strong> to the general funds of Dataskydd.net (helping both Webbkoll as well as our other activities), you can transfer money to the following bank account:"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:83
+#: lib/webbkoll_web/templates/site/_https.html.heex:117
 #, elixir-autogen, elixir-format
 msgid "<strong>Integrity</strong>. The data sent between the visitor and the website has not been tampered with or modified."
 msgstr ""
@@ -195,7 +195,7 @@ msgstr ""
 msgid "A domain instructs browsers that it has enabled HSTS by returning an HTTP header over an HTTPS connection."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:85
+#: lib/webbkoll_web/templates/site/_https.html.heex:119
 #, elixir-autogen, elixir-format
 msgid "A plain HTTP connection can be easily monitored, modified, and impersonated. Every unencrypted HTTP request reveals information about a user’s behavior, and the interception and tracking of unencrypted browsing has become commonplace."
 msgstr ""
@@ -263,7 +263,7 @@ msgstr ""
 msgid "Analyze"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:52
+#: lib/webbkoll_web/templates/site/_https.html.heex:86
 #, elixir-autogen, elixir-format
 msgid "Analyze %{host} on SSL Labs"
 msgstr ""
@@ -348,7 +348,7 @@ msgstr ""
 msgid "Blocks loading of passive content over HTTP or FTP"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:91
+#: lib/webbkoll_web/templates/site/_https.html.heex:125
 #, elixir-autogen, elixir-format
 msgid "By GDPR %{art_25}, a controller is responsible for implementing state of the art data protection by design and by default. Encrypted connections are a well-established technology to protect the privacy of web visitors against eavesdroppers on the wire."
 msgstr ""
@@ -392,11 +392,6 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/status.html.heex:2
 #, elixir-autogen, elixir-format
 msgid "Checking..."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_https.html.heex:19
-#, elixir-autogen, elixir-format
-msgid "Chromium reports the following:"
 msgstr ""
 
 #: lib/webbkoll_web/templates/site/_request_table.html.heex:6
@@ -515,12 +510,6 @@ msgstr ""
 msgid "Depending on the purposes for collecting personal data, data minimisation may mean different things. Webbkoll makes it easy to find out how not to collect personal data and how not to inadvertently leak personal data. Should one want to collect personal data anyway, one needs to be transparent about such collection and one also needs to follow the rules in chapter 4 of the regulation. The rules of how to collect and process personal data are in place to ensure that anyone who chooses a purpose for data collection also reflects on the consequences of such choices."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:27
-#: lib/webbkoll_web/templates/site/_https.html.heex:44
-#, elixir-autogen, elixir-format
-msgid "Description"
-msgstr ""
-
 #: lib/webbkoll_web/templates/layout/app.html.heex:91
 #, elixir-autogen, elixir-format
 msgid "Developed by"
@@ -611,7 +600,7 @@ msgstr ""
 msgid "For a user to take advantage of HSTS, their browser does have to see the HSTS header at least once. This means that users are not protected until after their first successful secure connection to a given domain."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:72
+#: lib/webbkoll_web/templates/site/_https.html.heex:106
 #, elixir-autogen, elixir-format
 msgid "For checking the configuration of a server, try <a href=\"https://www.ssllabs.com/ssltest/\">SSL Labs SSL Server Test</a> (web), <a href=\"https://testssl.sh/\">testssl.sh</a> (CLI tool), <a href=\"https://github.com/mozilla/tls-observatory\">Mozilla TLS Observatory</a> (CLI tool) or <a href=\"https://observatory.mozilla.org/\">Observatory by Mozilla</a> (web)."
 msgstr ""
@@ -636,7 +625,7 @@ msgstr ""
 msgid "GDPR %{art_32_2} makes clear that measures should be taken against unauthorized disclosure of, or access to, personal data transmitted, stored or otherwise processed. CSP is a relatively simple way of ensuring that your web visitors do not end up being put in contact with someone that either they - or you - did not anticipate for them to contact."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:90
+#: lib/webbkoll_web/templates/site/_https.html.heex:124
 #, elixir-autogen, elixir-format
 msgid "GDPR:"
 msgstr ""
@@ -664,7 +653,7 @@ msgstr ""
 msgid "German:"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:70
+#: lib/webbkoll_web/templates/site/_https.html.heex:104
 #, elixir-autogen, elixir-format
 msgid "Get started with Let's Encrypt"
 msgstr ""
@@ -714,7 +703,7 @@ msgstr ""
 msgid "HTTPS by default:"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:79
+#: lib/webbkoll_web/templates/site/_https.html.heex:113
 #, elixir-autogen, elixir-format
 msgid "HTTPS encrypts nearly all information sent between a client and a web service. Properly configured, it guarantees three things:"
 msgstr ""
@@ -750,7 +739,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_csp.html.heex:62
 #: lib/webbkoll_web/templates/site/_headers.html.heex:37
 #: lib/webbkoll_web/templates/site/_hsts.html.heex:41
-#: lib/webbkoll_web/templates/site/_https.html.heex:63
+#: lib/webbkoll_web/templates/site/_https.html.heex:97
 #: lib/webbkoll_web/templates/site/_referrers.html.heex:32
 #: lib/webbkoll_web/templates/site/_sri.html.heex:49
 #, elixir-autogen, elixir-format
@@ -895,7 +884,7 @@ msgstr ""
 msgid "More information"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:50
+#: lib/webbkoll_web/templates/site/_https.html.heex:84
 #, elixir-autogen, elixir-format
 msgid "More information about the site's TLS/SSL configuration:"
 msgstr ""
@@ -1157,11 +1146,6 @@ msgstr ""
 msgid "Sorry, bots aren't allowed."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:24
-#, elixir-autogen, elixir-format
-msgid "State"
-msgstr ""
-
 #: lib/webbkoll_web/controllers/site_controller.ex:49
 #, elixir-autogen, elixir-format
 msgid "Status"
@@ -1220,12 +1204,6 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_sri.html.heex:95
 #, elixir-autogen, elixir-format
 msgid "Subresource Integrity enables you to mitigate some risks of attacks such as this, by ensuring that the files your web application or web document fetches (from a CDN or anywhere) have been delivered without a third-party having injected any additional content into those files — and without any other changes of any kind at all having been made to those files."
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_https.html.heex:26
-#: lib/webbkoll_web/templates/site/_https.html.heex:43
-#, elixir-autogen, elixir-format
-msgid "Summary"
 msgstr ""
 
 #: lib/webbkoll_web/templates/layout/app.html.heex:99
@@ -1334,7 +1312,7 @@ msgstr ""
 msgid "The following third-party resources are not loaded using SRI:"
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:86
+#: lib/webbkoll_web/templates/site/_https.html.heex:120
 #, elixir-autogen, elixir-format
 msgid "The goal of the Internet community is to establish encryption as the norm, and to phase out unencrypted connections."
 msgstr ""
@@ -1451,13 +1429,7 @@ msgstr ""
 msgid "This tool simulates a normal browser visit with Do Not Track disabled (browser default) and with no add-ons."
 msgstr ""
 
-#: lib/webbkoll_web/templates/site/_https.html.heex:25
-#: lib/webbkoll_web/templates/site/_https.html.heex:42
-#, elixir-autogen, elixir-format
-msgid "Title"
-msgstr ""
-
-#: lib/webbkoll_web/templates/site/_https.html.heex:65
+#: lib/webbkoll_web/templates/site/_https.html.heex:99
 #, elixir-autogen, elixir-format
 msgid "To enable HTTPS on a website, a <strong>certificate</strong> for the domain needs to be installed on the web server. To get a certificate that browsers will trust, you need one issued by a trusted certificate authority (otherwise a visitor's browser will show a warning)."
 msgstr ""
@@ -1867,4 +1839,69 @@ msgstr ""
 #: lib/webbkoll_web/templates/page/faq.html.heex:33
 #, elixir-autogen, elixir-format
 msgid "An individual should be able to understand the terms under which their data is being processed (by others). (5(1)(a))."
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/_https.html.heex:20
+#, elixir-autogen, elixir-format
+msgid "Certificate"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/_https.html.heex:69
+#, elixir-autogen, elixir-format
+msgid "Insecure URL:"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/_https.html.heex:32
+#, elixir-autogen, elixir-format
+msgid "Issuer:"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/_https.html.heex:73
+#, elixir-autogen, elixir-format
+msgid "Main resource URL:"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/_https.html.heex:54
+#, elixir-autogen, elixir-format
+msgid "Mixed content"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/_https.html.heex:36
+#, elixir-autogen, elixir-format
+msgid "Protocol:"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/_https.html.heex:65
+#, elixir-autogen, elixir-format
+msgid "Resolution status:"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/_https.html.heex:61
+#, elixir-autogen, elixir-format
+msgid "Resource type:"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/_https.html.heex:28
+#, elixir-autogen, elixir-format
+msgid "Subject Alternative Name:"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/_https.html.heex:24
+#, elixir-autogen, elixir-format
+msgid "Subject Name:"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/_https.html.heex:52
+#, elixir-autogen, elixir-format
+msgid "The page contains <a href=\"%{mixed_content_url}\">mixed content</a>:"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/_https.html.heex:40
+#, elixir-autogen, elixir-format
+msgid "Valid from:"
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/_https.html.heex:44
+#, elixir-autogen, elixir-format
+msgid "Valid to:"
 msgstr ""

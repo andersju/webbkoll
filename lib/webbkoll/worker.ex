@@ -163,6 +163,7 @@ defmodule Webbkoll.Worker do
           status: check_referrer_policy(referrer_policy_in_use)
         },
         security: json["security_info"],
+        mixed_content: json["mixed_content"],
         sri: ContentAnalysis.sri(json["content"], reg_domain, url.scheme),
         x_content_type_options:
           HeaderAnalysis.x_content_type_options(headers["x-content-type-options"]),

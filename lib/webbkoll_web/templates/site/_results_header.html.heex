@@ -30,7 +30,7 @@
         <li>
           <span class="label"><a href="#https"><%= gettext("HTTPS by default:") %></a></span>
           <%= if @site.data.scheme == "https" do %>
-            <%= if @site.data.security["securityState"] == "secure" do %>
+            <%= if @site.data.mixed_content == %{} do %>
               <%= icon(:pass) %> <%= gettext("Yes") %>
             <% else %>
               <%= icon(:warn) %> <%= gettext("Yes, but has issues") %>
