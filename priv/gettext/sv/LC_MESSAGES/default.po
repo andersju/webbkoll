@@ -1477,14 +1477,6 @@ msgstr "Sök"
 msgid "See <a href=\"#raw-headers\">Raw headers</a> below for full details."
 msgstr "Se <a href=\"#raw-headers\">alla headers</a> nedan för mer information."
 
-#: lib/webbkoll_web/templates/page/about.html.heex:42
-#, elixir-autogen, elixir-format
-msgid "See also <a href=\"https://infosec-handbook.eu/blog/online-assessment-tools/\">Pros and cons of online assessment tools for web server security</a> from InfoSec Handbook (a site that also has many other relevant articles)."
-msgstr ""
-"Se även <a href=\"https://infosec-handbook.eu/blog/online-assessment-tools/\""
-">Pros and cons of online assessment tools for web server security</a> från "
-"InfoSec Handbook (en sajt som också har många andra relevanta artiklar)."
-
 #: lib/webbkoll_web/templates/site/_csp.html.heex:76
 #, elixir-autogen, elixir-format
 msgid "See the following pages for more information:"
@@ -2614,4 +2606,14 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_https.html.heex:44
 #, elixir-autogen, elixir-format
 msgid "Valid to:"
+msgstr ""
+
+#: lib/webbkoll_web/templates/page/about.html.heex:44
+#, elixir-autogen, elixir-format
+msgid "<a href=\"https://check-your-website.server-daten.de/\">check-your-website</a> checks HTTPS/TLS, DNSSEC, headers, cookies, content, etc."
+msgstr ""
+
+#: lib/webbkoll_web/templates/page/about.html.heex:42
+#, elixir-autogen, elixir-format
+msgid "<a href=\"https://internet.nl/\">Internet.nl</a> checks HTTPS/TLS, DNSSEC, headers, etc."
 msgstr ""
