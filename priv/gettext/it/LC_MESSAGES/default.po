@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-25 19:28+0200\n"
-"PO-Revision-Date: 2022-09-03 10:15+0000\n"
+"PO-Revision-Date: 2022-09-30 18:21+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/webbkoll/main/it/"
 ">\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1-dev\n"
+"X-Generator: Weblate 4.14.1\n"
 
 ## This file is a PO Template file.
 ##
@@ -2633,74 +2633,80 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_https.html.heex:20
 #, elixir-autogen, elixir-format
 msgid "Certificate"
-msgstr ""
+msgstr "Certificato"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:69
 #, elixir-autogen, elixir-format
 msgid "Insecure URL:"
-msgstr ""
+msgstr "URL non sicuro:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:32
 #, elixir-autogen, elixir-format
 msgid "Issuer:"
-msgstr ""
+msgstr "Emittente:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:73
 #, elixir-autogen, elixir-format
 msgid "Main resource URL:"
-msgstr ""
+msgstr "URL della risorsa principale:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:54
 #, elixir-autogen, elixir-format
 msgid "Mixed content"
-msgstr ""
+msgstr "Contenuto misto"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:36
 #, elixir-autogen, elixir-format
 msgid "Protocol:"
-msgstr ""
+msgstr "Protocollo:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:65
 #, elixir-autogen, elixir-format
 msgid "Resolution status:"
-msgstr ""
+msgstr "Stato della risoluzione:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:61
 #, elixir-autogen, elixir-format
 msgid "Resource type:"
-msgstr ""
+msgstr "Tipo di risorsa:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:28
 #, elixir-autogen, elixir-format
 msgid "Subject Alternative Name:"
-msgstr ""
+msgstr "Nome alternativo del soggetto:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:24
 #, elixir-autogen, elixir-format
 msgid "Subject Name:"
-msgstr ""
+msgstr "Nome soggetto:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:52
 #, elixir-autogen, elixir-format
 msgid "The page contains <a href=\"%{mixed_content_url}\">mixed content</a>:"
 msgstr ""
+"La pagina contiene <a href=\"%{mixed_content_url}\">contenuto misto</a>:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:40
 #, elixir-autogen, elixir-format
 msgid "Valid from:"
-msgstr ""
+msgstr "Valido dal:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:44
 #, elixir-autogen, elixir-format
 msgid "Valid to:"
-msgstr ""
+msgstr "Valido fino a:"
 
 #: lib/webbkoll_web/templates/page/about.html.heex:44
 #, elixir-autogen, elixir-format
 msgid "<a href=\"https://check-your-website.server-daten.de/\">check-your-website</a> checks HTTPS/TLS, DNSSEC, headers, cookies, content, etc."
 msgstr ""
+"<a href=\"https://check-your-website.server-daten.de/\">controlla il tuo "
+"sito web</a> controlla HTTPS/TLS, DNSSEC, intestazioni, cookie, contenuti, "
+"ecc."
 
 #: lib/webbkoll_web/templates/page/about.html.heex:42
 #, elixir-autogen, elixir-format
 msgid "<a href=\"https://internet.nl/\">Internet.nl</a> checks HTTPS/TLS, DNSSEC, headers, etc."
 msgstr ""
+"<a href=\"https://internet.nl/\">Internet.nl</a> controlla HTTPS/TLS, "
+"DNSSEC, intestazioni, ecc."
