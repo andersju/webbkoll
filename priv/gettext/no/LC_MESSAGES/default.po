@@ -8,7 +8,7 @@
 ## to merge POT files into PO files.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-09 19:18+0000\n"
+"PO-Revision-Date: 2022-10-11 04:20+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
 "webbkoll/main/nb_NO/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1-dev\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: lib/webbkoll_web/templates/site/_requests.html.heex:31
 #, elixir-format
@@ -1607,13 +1607,13 @@ msgstr ""
 #, elixir-autogen, elixir-format
 msgid "The <a href=\"http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679\">general data protection regulation of the European Union</a> enters into force on the 25th of May 2018 and concerns the balancing of power being those influencing individuals (typically companies and public authorities) and the individuals themselves. Webbkoll is a tool to find out who is collecting information about individuals, and what can be done to stop invisible tracking."
 msgstr ""
-"<a href=\"http://eur-lex.europa.eu/legal-content/SV/TXT/HTML/"
-"?uri=CELEX:32016R0679&from=EN\">Den allmenne data beskyttelses forordningen "
-"fra EU</a> trer i kraft 25. mai 2018 og handler om å balansere makten mellom "
-"de som påvirker individer (vanligvis foretak og myndigheter) og individer "
-"selv. Dataskydd.net's Webbkoll er et verktøy for å finne ut av hvem som "
-"forsøker samle inn informasjon om enkeltindivider og å hjelpe med å stoppe "
-"usynlig sporing."
+"<a href=\"https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:"
+"32016R0679\">Den allmenne data beskyttelses forordningen fra EU</a> trer i "
+"kraft 25. mai 2018 og handler om å balansere makten mellom de som påvirker "
+"individer (vanligvis foretak og myndigheter) og individer selv. "
+"Dataskydd.net's Webbkoll er et verktøy for å finne ut av hvem som forsøker "
+"samle inn informasjon om enkeltindivider og å hjelpe med å stoppe usynlig "
+"sporing."
 
 #: lib/webbkoll_web/templates/site/_ext_report.html.heex:80
 #, elixir-autogen, elixir-format
