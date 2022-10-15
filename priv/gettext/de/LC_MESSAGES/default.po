@@ -118,13 +118,6 @@ msgstr ""
 "<a href=\"https://testssl.sh/\">testssl.sh</a> ist eine Open-Source-"
 "Alternative."
 
-#: lib/webbkoll_web/templates/site/failed.html.heex:9
-#, elixir-autogen, elixir-format
-msgid "<a href=\"https://www.ssllabs.com/ssltest/analyze.html?d=%{url}&hideResults=on\">Analyze the host on SSL Labs</a> for more information."
-msgstr ""
-"<a href=\"https://www.ssllabs.com/ssltest/analyze.html?d=%{url}&hideResults="
-"on\">Analysiere den Host mit SSL Labs</a> für mehr Informationen."
-
 #: lib/webbkoll_web/templates/site/_referrers.html.heex:50
 #, elixir-autogen, elixir-format
 msgid "<a href=\"https://www.w3.org/TR/referrer-policy/\">Several policies are offered</a>, such as <code>origin</code> (strips everything except the origin) and <code>origin-when-cross-origin</code> (sends full URL with same-origin requests, otherwise stripped). We recommend <strong><code>no-referrer</code></strong>, which kills the referrer header entirely for all requests, no matter the destination; or <strong><code>same-origin</code></strong>, which kills the referrer for third-party requests but not for requests to the same origin."
@@ -254,16 +247,6 @@ msgid "<strong>Integrity</strong>. The data sent between the visitor and the web
 msgstr ""
 "<strong>Integrität</strong>. Die zwischen dem Besucher und der Website "
 "übermittelten Daten wurden nicht manipuliert oder verändert."
-
-#: lib/webbkoll_web/templates/site/failed.html.heex:24
-#, elixir-autogen, elixir-format
-msgid "<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href=\"mailto:info@dataskydd.net\">send us an email</a> (and tell us what URL you tried)! You can also try <a href=\"%{url}#alternatives\">alternative services</a>."
-msgstr ""
-"<strong>Hinweis</strong>: Wenn du dir sicher bist, dass du die URL richtig "
-"eingegeben hast und dass die URL bei dir funktioniert, dann könnte der "
-"Fehler bei uns liegen. Bitte <a href=\"mailto:info@dataskydd.net\">sende uns "
-"eine E-Mail</a> (und sag uns, welche URL du verwendet hast)! Du kannst auch <"
-"a href=\"%{url}#alternatives\">alternative Dienste</a> ausprobieren."
 
 #: lib/webbkoll_web/templates/site/_cookies.html.heex:18
 #, elixir-autogen, elixir-format
@@ -1003,6 +986,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_headers.html.heex:12
 #: lib/webbkoll_web/templates/site/_headers.html.heex:27
 #: lib/webbkoll_web/templates/site/_raw_headers.html.heex:10
+#: lib/webbkoll_web/templates/site/failed.html.heex:38
 #, elixir-autogen, elixir-format
 msgid "Header"
 msgstr "Kopfzeile"
@@ -1065,20 +1049,6 @@ msgstr ""
 "den ihm zuletzt angegebenen Wert und ignoriert alle Vorhergehenden (ein "
 "Fallback sollte daher immer zuerst definiert werden). Mehrere Werte sind mit "
 "einem Komma zu separieren:"
-
-#: lib/webbkoll_web/templates/site/failed.html.heex:13
-#, elixir-autogen, elixir-format
-msgid "If you get the error ERR_CERT_SYMANTEC_LEGACY, it's because the site uses a Symantec certificate (includes Thawte, RapidSSL and GeoTrust) that is, or soon will be, distrusted by Chrome and Firefox. More information: <a href=\"https://security.googleblog.com/2018/03/distrust-of-symantec-pki-immediate.html\">Google</a>, <a href=\"https://blog.mozilla.org/security/2018/07/30/update-on-the-distrust-of-symantec-tls-certificates/\">Mozilla</a>, <a href=\"https://blog.qualys.com/ssllabs/2017/09/26/google-and-mozilla-deprecating-existing-symantec-certificates\">Qualys</a>"
-msgstr ""
-"Der Fehler ERR_CERT_SYMANTEC_LEGACY bedeutet, dass die Webseite ein "
-"Zertifikat von Symantec (oder einer der Symantec-Tochterfirmen Thawte, "
-"RapidSSL und GeoTrust) verwendet, welches von Chrome and Firefox bald nicht "
-"mehr vertraut wird. Weiterführende Informationen: <a href=\""
-"https://security.googleblog.com/2018/03/distrust-of-symantec-pki-immediate."
-"html\">Google</a>, <a href=\"https://blog.mozilla.org/security/2018/07/30/"
-"update-on-the-distrust-of-symantec-tls-certificates/\">Mozilla</a>, <a href="
-"\"https://blog.qualys.com/ssllabs/2017/09/26/google-and-mozilla-deprecating-"
-"existing-symantec-certificates\">Qualys</a>"
 
 #: lib/webbkoll_web/templates/site/_results_header.html.heex:52
 #, elixir-autogen, elixir-format
@@ -2030,7 +2000,7 @@ msgstr ""
 "Verletzung des Schutzes personenbezogener Daten“ bezeichnet und ist in "
 "Artikel 34 der Verordnung geregelt."
 
-#: lib/webbkoll_web/templates/site/failed.html.heex:20
+#: lib/webbkoll_web/templates/site/failed.html.heex:57
 #, elixir-autogen, elixir-format
 msgid "Try again?"
 msgstr "Wiederholen?"
@@ -2105,6 +2075,7 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_localstorage.html.heex:17
 #: lib/webbkoll_web/templates/site/_localstorage.html.heex:24
 #: lib/webbkoll_web/templates/site/_raw_headers.html.heex:11
+#: lib/webbkoll_web/templates/site/failed.html.heex:39
 #, elixir-autogen, elixir-format
 msgid "Value"
 msgstr "Wert"
@@ -2680,4 +2651,34 @@ msgstr ""
 #: lib/webbkoll_web/templates/page/about.html.heex:42
 #, elixir-autogen, elixir-format
 msgid "<a href=\"https://internet.nl/\">Internet.nl</a> checks HTTPS/TLS, DNSSEC, headers, etc."
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/failed.html.heex:29
+#, elixir-autogen, elixir-format, fuzzy
+msgid "<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href=\"mailto:info@dataskydd.net\">send us an email</a> in English or Swedish (and tell us what URL you tried)! You can also try <a href=\"%{url}#alternatives\">alternative services</a>."
+msgstr ""
+"<strong>Hinweis</strong>: Wenn du dir sicher bist, dass du die URL richtig "
+"eingegeben hast und dass die URL bei dir funktioniert, dann könnte der "
+"Fehler bei uns liegen. Bitte <a href=\"mailto:info@dataskydd.net\">sende uns "
+"eine E-Mail</a> (und sag uns, welche URL du verwendet hast)! Du kannst auch <"
+"a href=\"%{url}#alternatives\">alternative Dienste</a> ausprobieren."
+
+#: lib/webbkoll_web/templates/site/failed.html.heex:17
+#, elixir-autogen, elixir-format
+msgid "Error 403 usually means that Webbkoll is blocked from accessing the website that you are trying to check, sometimes with a captcha (that Webbkoll cannot solve). This can happen with websites that use Cloudflare and similar services that can be used to block \"suspicious\" traffic. There is nothing we can do about it."
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/failed.html.heex:10
+#, elixir-autogen, elixir-format
+msgid "Status code in response from %{url}: "
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/failed.html.heex:26
+#, elixir-autogen, elixir-format
+msgid "There is a problem with the certificate or SSL/TLS configuration of the website that you are trying to check. <a href=\"https://www.ssllabs.com/ssltest/analyze.html?d=%{url}&hideResults=on\">Analyze the host on SSL Labs</a> for more information."
+msgstr ""
+
+#: lib/webbkoll_web/templates/site/failed.html.heex:21
+#, elixir-autogen, elixir-format
+msgid "This is most likely a problem with the website that you are trying to check, not Webbkoll. To possibly reproduce this error, try the following in a terminal:"
 msgstr ""

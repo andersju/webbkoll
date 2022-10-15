@@ -75,18 +75,22 @@ defmodule Webbkoll.Worker do
   end
 
   defp handle_response({:error, %{reason: reason}}, id) do
-    handle_error(to_string(reason), id)
+    handle_error(to_string(reason), id, nil, nil)
   end
 
   defp decode_response({:ok, body}, _id) do
     body
   end
 
-  defp decode_response({:error, %{"reason" => reason}}, id) do
-    handle_error(reason, id)
+  defp decode_response({:error, %{"reason" => reason, "response_headers" => headers, "response_status" => status}}, id) do
+    handle_error(reason, id, headers, status)
   end
 
-  defp handle_error(reason, id) do
+    defp decode_response({:error, %{"reason" => reason}}, id) do
+    handle_error(reason, id, nil, nil)
+  end
+
+  defp handle_error(reason, id, headers, status) do
     site = Sites.get_site(id)
 
     # Usually we should try again because Chrome/Chromium might not be totally stable,
@@ -94,7 +98,7 @@ defmodule Webbkoll.Worker do
     # better not to, and to instead give feedback right away.
     if site.try_count >= @max_attempts ||
          String.contains?(reason, ["404", "ERR_CONNECTION_REFUSED", "ERR_NAME_NOT_RESOLVED"]) do
-      Sites.update_site(id, %{status: "failed", status_message: reason})
+      Sites.update_site(id, %{status: "failed", status_message: reason, headers: headers, response_status: status})
     end
 
     raise reason

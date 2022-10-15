@@ -9,6 +9,8 @@ defmodule Webbkoll.Sites.Site do
     :status_message,
     :data,
     :inserted_at,
-    :updated_at
+    :updated_at,
+    :headers,
+    :response_status,
   ]
 end

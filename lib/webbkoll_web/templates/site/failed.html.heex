@@ -5,12 +5,49 @@
 
   <p><%= gettext "Error: %{error_message}", error_message: @site.status_message %></p>
 
-  <%= if String.contains?(@site.status_message, "ERR_CERT_") do %>
-    <p><%= gettext(~s|<a href="https://www.ssllabs.com/ssltest/analyze.html?d=%{url}&hideResults=on">Analyze the host on SSL Labs</a> for more information.|, url: @site.input_url) |> raw %></p>
+  <%= if @site.response_status do %>
+    <p>
+      <%= gettext("Status code in response from %{url}: ", url: @site.input_url) %>
+      <%= link "#{@site.response_status} #{http_status_text(@site.response_status)}", to: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/#{@site.response_status}" %>
+    </p>
   <% end %>
 
-  <%= if String.contains?(@site.status_message, "ERR_CERT_SYMANTEC_LEGACY") do %>
-    <p><%= gettext(~s|If you get the error ERR_CERT_SYMANTEC_LEGACY, it's because the site uses a Symantec certificate (includes Thawte, RapidSSL and GeoTrust) that is, or soon will be, distrusted by Chrome and Firefox. More information: <a href="https://security.googleblog.com/2018/03/distrust-of-symantec-pki-immediate.html">Google</a>, <a href="https://blog.mozilla.org/security/2018/07/30/update-on-the-distrust-of-symantec-tls-certificates/">Mozilla</a>, <a href="https://blog.qualys.com/ssllabs/2017/09/26/google-and-mozilla-deprecating-existing-symantec-certificates">Qualys</a>|) |> raw %></p>
+  <%= cond do %>
+    <% @site.response_status == 403 -> %>
+      <p><%= gettext "Error 403 usually means that Webbkoll is blocked from accessing the website that you are trying to check, sometimes with a captcha (that Webbkoll cannot solve). This can happen with websites that use Cloudflare and similar services that can be used to block \"suspicious\" traffic. There is nothing we can do about it." %></p>
+
+    <% @site.response_status != nil -> %>
+      <p>
+        <%= gettext "This is most likely a problem with the website that you are trying to check, not Webbkoll. To possibly reproduce this error, try the following in a terminal:" %><br>
+        <code>curl -I <%= @site.input_url %></code>
+      </p>
+
+    <% String.contains?(@site.status_message, ["ERR_CERT_", "ERR_SSL"]) -> %>
+      <p><%= gettext(~s|There is a problem with the certificate or SSL/TLS configuration of the website that you are trying to check. <a href="https://www.ssllabs.com/ssltest/analyze.html?d=%{url}&hideResults=on">Analyze the host on SSL Labs</a> for more information.|, url: @site.input_url) |> raw %></p>
+
+    <% @site.response_status == nil -> %>
+      <p><%= gettext(~s|<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href="mailto:info@dataskydd.net">send us an email</a> in English or Swedish (and tell us what URL you tried)! You can also try <a href="%{url}#alternatives">alternative services</a>.|, url: Routes.page_path(@conn, :about, @conn.assigns.locale)) |> raw %></p>
+
+    <% true -> %>
+  <% end %>
+
+  <%= if @site.headers do %>
+    <table>
+      <thead>
+        <tr>
+          <th><%= gettext("Header") %></th>
+          <th><%= gettext("Value") %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= for {header, value} <- @site.headers do %>
+        <tr>
+          <td data-label="Header" class="userdata"><%= header %></td>
+          <td data-label="Value" class="userdata"><%= value %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
   <% end %>
 
   <p>
@@ -21,5 +58,4 @@
     <% end %>
   </p>
 
-  <p><%= gettext(~s|<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href="mailto:info@dataskydd.net">send us an email</a> (and tell us what URL you tried)! You can also try <a href="%{url}#alternatives">alternative services</a>.|, url: Routes.page_path(@conn, :about, @conn.assigns.locale)) |> raw %></p>
 </article>
