@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-25 19:28+0200\n"
-"PO-Revision-Date: 2022-09-30 18:21+0000\n"
+"PO-Revision-Date: 2022-10-21 20:06+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/webbkoll/main/it/"
 ">\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1\n"
+"X-Generator: Weblate 4.14.2-dev\n"
 
 # # This file is a PO Template file.
 # #
@@ -3006,7 +3006,6 @@ msgstr ""
 "DNSSEC, intestazioni, ecc."
 
 #: lib/webbkoll_web/templates/site/failed.html.heex:29
-#, fuzzy
 msgid ""
 "<strong>Note</strong>: If you are sure that you entered the URL correctly, "
 "and that the URL works for you, then this might be our fault; please <a href="
@@ -3014,11 +3013,11 @@ msgid ""
 "(and tell us what URL you tried)! You can also try <a href=\"%{url}"
 "#alternatives\">alternative services</a>."
 msgstr ""
-"<strong>Nota</strong>: Se siete sicuri di aver inserito correttamente l'URL "
-"e che l'URL funziona, potrebbe essere colpa nostra; per favore <a href="
-"\"mailto:info@dataskydd.net\">inviateci un'e-mail</a> (e diteci quale URL "
-"avete provato)! Potete anche provare <a href=\"%{url}#alternatives\">servizi "
-"alternativi</a>."
+"<strong>Nota</strong>: se sei sicuro di aver inserito l'URL correttamente e "
+"che l'URL funzioni per te, allora potrebbe essere colpa nostra; per favore "
+"<a href=\"mailto:info@dataskydd.net\">inviaci un' email</a> in inglese o "
+"svedese (e dicci quale URL hai provato)! Puoi anche provare <a href=\"%{url}#"
+"alternatives\">servizi alternativi</a>."
 
 #: lib/webbkoll_web/templates/site/failed.html.heex:17
 msgid ""
@@ -3028,10 +3027,15 @@ msgid ""
 "services that can be used to block \"suspicious\" traffic. There is nothing "
 "we can do about it."
 msgstr ""
+"L'errore 403 di solito significa che Webbkoll è bloccato dall'accesso al "
+"sito Web che stai tentando di controllare, a volte con un captcha (che "
+"Webbkoll non può risolvere). Ciò può accadere con i siti Web che utilizzano "
+"Cloudflare e servizi simili che possono essere utilizzati per bloccare il "
+"traffico \"sospetto\". Non c'è niente che possiamo fare al riguardo."
 
 #: lib/webbkoll_web/templates/site/failed.html.heex:10
 msgid "Status code in response from %{url}: "
-msgstr ""
+msgstr "Codice di stato in risposta da %{url}: "
 
 #: lib/webbkoll_web/templates/site/failed.html.heex:26
 msgid ""
@@ -3040,6 +3044,10 @@ msgid ""
 "ssltest/analyze.html?d=%{url}&hideResults=on\">Analyze the host on SSL Labs</"
 "a> for more information."
 msgstr ""
+"Si è verificato un problema con il certificato o la configurazione SSL/TLS "
+"del sito Web che stai tentando di controllare. <a href=\"https://www.ssllabs."
+"com/ssltest/analyze.html?d=%{url}&hideResults=on\">Analizza l'host su SSL "
+"Labs</a> per ulteriori informazioni."
 
 #: lib/webbkoll_web/templates/site/failed.html.heex:21
 msgid ""
@@ -3047,6 +3055,9 @@ msgid ""
 "not Webbkoll. To possibly reproduce this error, try the following in a "
 "terminal:"
 msgstr ""
+"Questo è molto probabilmente un problema con il sito Web che stai cercando "
+"di controllare, non di Webbkoll. Per riprodurre eventualmente questo errore, "
+"provare quanto segue in un terminale:"
 
 #: lib/webbkoll_web/templates/site/failed.html.heex:9
 msgid ""
