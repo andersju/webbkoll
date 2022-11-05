@@ -21,7 +21,7 @@ defmodule Webbkoll.Trackers do
                   |> Enum.filter(fn {x, _y} -> String.starts_with?(x, ["http", "www."]) end)
                   |> Enum.into(%{})
                   |> Map.values()
-                  |> List.first()
+                  |> List.first([])
                   |> Enum.reduce(hosts, fn host, hosts ->
                     if Map.has_key?(hosts, host) do
                       new_map = %{
