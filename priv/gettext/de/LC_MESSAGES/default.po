@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: German (Webbkoll)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-01-08 16:42+0000\n"
-"PO-Revision-Date: 2022-09-07 14:17+0000\n"
+"PO-Revision-Date: 2022-11-10 14:49+0000\n"
 "Last-Translator: modified <nb9je4rkk5o1fk8w@mailban.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/webbkoll/main/de/>"
 "\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.14.1-dev\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 #: lib/webbkoll_web/templates/site/_requests.html.heex:31
 #, elixir-format
@@ -953,7 +953,7 @@ msgstr "HSTS-Richtlinie für https://%{host}:"
 #: lib/webbkoll_web/templates/site/_hsts.html.heex:36
 #, elixir-autogen, elixir-format
 msgid "HTTP Strict Transport Security (HSTS) not implemented."
-msgstr "Eine HTTP Strict Transport Security (HSTS) fehlt."
+msgstr "HTTP Strict Transport Security (HSTS) nicht implementiert."
 
 #: lib/webbkoll_web/templates/site/_headers.html.heex:3
 #, elixir-autogen, elixir-format
@@ -1242,10 +1242,10 @@ msgstr ""
 "Beachte, dass <code>includeSubDomains</code> auf der Hauptdomain eingesetzt "
 "werden sollte, d. h. <code>https://example.com</code>, <em>nicht</em> "
 "<code>https://www.example.com</code>. Auch wenn wir die Verwendung von "
-"<code>includeSubDomains</code> sehr empfehlen, so ist zu beachten, dass "
-"diese für <strong>alle Subdomains</strong> gilt. Diese "
-"<strong>müssen</strong> HTTPS unterstützen (eine HSTS-Richtlinie für jede "
-"einzelne Subdomain wird nicht benötigt)."
+"<code>includeSubDomains</code> empfehlen, sei <strong>besonders</strong> "
+"vorsichtig, da das bedeutet, dass <strong>alle</strong> mit der Hauptdomain "
+"assoziierten Subdomains HTTPS unterstützen <strong>müssen</strong> (eine "
+"HSTS-Richtlinie für jede einzelne Subdomain wird nicht benötigt)."
 
 #: lib/webbkoll_web/templates/page/donate.html.heex:18
 #, elixir-autogen, elixir-format
@@ -2581,104 +2581,123 @@ msgstr ""
 #: lib/webbkoll_web/templates/site/_https.html.heex:20
 #, elixir-autogen, elixir-format
 msgid "Certificate"
-msgstr ""
+msgstr "Zertifikat"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:69
 #, elixir-autogen, elixir-format
 msgid "Insecure URL:"
-msgstr ""
+msgstr "Unsichere URL:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:32
 #, elixir-autogen, elixir-format
 msgid "Issuer:"
-msgstr ""
+msgstr "Aussteller:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:73
 #, elixir-autogen, elixir-format
 msgid "Main resource URL:"
-msgstr ""
+msgstr "URL der Hauptressource:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:54
 #, elixir-autogen, elixir-format
 msgid "Mixed content"
-msgstr ""
+msgstr "Gemischter Inhalt"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:36
 #, elixir-autogen, elixir-format
 msgid "Protocol:"
-msgstr ""
+msgstr "Protokoll:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:65
 #, elixir-autogen, elixir-format
 msgid "Resolution status:"
-msgstr ""
+msgstr "Lösungsstatus:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:61
 #, elixir-autogen, elixir-format
 msgid "Resource type:"
-msgstr ""
+msgstr "Art der Ressource:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:28
 #, elixir-autogen, elixir-format
 msgid "Subject Alternative Name:"
-msgstr ""
+msgstr "Alternativer Gegenstandsname:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:24
 #, elixir-autogen, elixir-format
 msgid "Subject Name:"
-msgstr ""
+msgstr "Gegenstandsname:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:52
 #, elixir-autogen, elixir-format
 msgid "The page contains <a href=\"%{mixed_content_url}\">mixed content</a>:"
 msgstr ""
+"Die Webseite enthält <a href=\"%{mixed_content_url}\">gemischten Inhalt</a>:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:40
 #, elixir-autogen, elixir-format
 msgid "Valid from:"
-msgstr ""
+msgstr "Gültig ab:"
 
 #: lib/webbkoll_web/templates/site/_https.html.heex:44
 #, elixir-autogen, elixir-format
 msgid "Valid to:"
-msgstr ""
+msgstr "Gültig bis:"
 
 #: lib/webbkoll_web/templates/page/about.html.heex:44
 #, elixir-autogen, elixir-format
 msgid "<a href=\"https://check-your-website.server-daten.de/\">check-your-website</a> checks HTTPS/TLS, DNSSEC, headers, cookies, content, etc."
 msgstr ""
+"<a href=\"https://check-your-website.server-daten.de/\">check-your-website</"
+"a> prüft HTTPS/TLS, DNSSEC, Header, Cookies, Inhalt etc."
 
 #: lib/webbkoll_web/templates/page/about.html.heex:42
 #, elixir-autogen, elixir-format
 msgid "<a href=\"https://internet.nl/\">Internet.nl</a> checks HTTPS/TLS, DNSSEC, headers, etc."
 msgstr ""
+"<a href=\"https://internet.nl/\">Internet.nl</a> prüft HTTPS/TLS, DNSSEC, "
+"Header etc."
 
 #: lib/webbkoll_web/templates/site/failed.html.heex:29
-#, elixir-autogen, elixir-format, fuzzy
+#, elixir-autogen, elixir-format
 msgid "<strong>Note</strong>: If you are sure that you entered the URL correctly, and that the URL works for you, then this might be our fault; please <a href=\"mailto:info@dataskydd.net\">send us an email</a> in English or Swedish (and tell us what URL you tried)! You can also try <a href=\"%{url}#alternatives\">alternative services</a>."
 msgstr ""
 "<strong>Hinweis</strong>: Wenn du dir sicher bist, dass du die URL richtig "
-"eingegeben hast und dass die URL bei dir funktioniert, dann könnte der "
-"Fehler bei uns liegen. Bitte <a href=\"mailto:info@dataskydd.net\">sende uns "
-"eine E-Mail</a> (und sag uns, welche URL du verwendet hast)! Du kannst auch <"
-"a href=\"%{url}#alternatives\">alternative Dienste</a> ausprobieren."
+"eingegeben hast und dass die URL bei dir funktioniert, dann könnte dies "
+"unser Fehler sein; bitte <a href=\"mailto:info@dataskydd.net\">sende uns "
+"eine E-Mail</a> auf Englisch oder Schwedisch (und sag uns, welche URL du "
+"verwendet hast)! Du kannst auch <a href=\"%{url}#alternatives\">alternative "
+"Dienste</a> ausprobieren."
 
 #: lib/webbkoll_web/templates/site/failed.html.heex:17
 #, elixir-autogen, elixir-format
 msgid "Error 403 usually means that Webbkoll is blocked from accessing the website that you are trying to check, sometimes with a captcha (that Webbkoll cannot solve). This can happen with websites that use Cloudflare and similar services that can be used to block \"suspicious\" traffic. There is nothing we can do about it."
 msgstr ""
+"Fehlercode 403 bedeutet normalerweise, dass Webbkoll der Zugriff auf die "
+"Website, die du prüfen willst, verwehrt wird, manchmal durch ein Captcha ("
+"das Webbkoll nicht lösen kann). Das kann bei Websites passieren, die "
+"Cloudflare oder ähnliche Dienste nutzen, welche dazu verwendet werden "
+"können, \"verdächtigen\" Traffic zu blockieren. Wir können nichts dagegen "
+"tun."
 
 #: lib/webbkoll_web/templates/site/failed.html.heex:10
 #, elixir-autogen, elixir-format
 msgid "Status code in response from %{url}: "
-msgstr ""
+msgstr "Statuscode in der Antwort von %{url}: "
 
 #: lib/webbkoll_web/templates/site/failed.html.heex:26
 #, elixir-autogen, elixir-format
 msgid "There is a problem with the certificate or SSL/TLS configuration of the website that you are trying to check. <a href=\"https://www.ssllabs.com/ssltest/analyze.html?d=%{url}&hideResults=on\">Analyze the host on SSL Labs</a> for more information."
 msgstr ""
+"Es gibt ein Problem mit dem Zertifikat oder der SSL-/TLS-Konfiguration der "
+"Website, die du prüfen willst. <a href=\"https://www.ssllabs.com/ssltest/"
+"analyze.html?d=%{url}&hideResults=on\">Analysiere den Host bei SSL Labs</a> "
+"für weitere Informationen."
 
 #: lib/webbkoll_web/templates/site/failed.html.heex:21
 #, elixir-autogen, elixir-format
 msgid "This is most likely a problem with the website that you are trying to check, not Webbkoll. To possibly reproduce this error, try the following in a terminal:"
 msgstr ""
+"Das ist wahrscheinlich ein Problem der Website, die du prüfen willst, nicht "
+"von Webbkoll. Um den Fehler möglicherweise zu reproduzieren, versuche "
+"Folgendes im Terminal:"
